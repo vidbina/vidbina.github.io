@@ -2,6 +2,8 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2013-12-29 01:54:51
+thumbnail: nil
+description: The first jekyll post I've ever made...
 categories: jekyll update
 ---
 
