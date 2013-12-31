@@ -1,0 +1,247 @@
+---
+layout: post
+title: Useful Links to Get OpenCV to Work with Android
+categories:
+- coding
+- projects
+tags:
+- android
+- android.libraries.src
+- compile error
+- ndk
+- opencv
+- problems
+status: publish
+type: post
+published: true
+meta:
+  _wpas_done_fb: '1'
+  _wpas_done_twitter: '1'
+  _thumbnail_id: '312'
+  tagazine-media: a:7:{s:7:"primary";s:83:"http://kingvidbina.files.wordpress.com/2011/06/building-libandroid-opencv-error.png";s:6:"images";a:2:{s:68:"http://kingvidbina.files.wordpress.com/2011/06/android-cmake-gui.png";a:6:{s:8:"file_url";s:68:"http://kingvidbina.files.wordpress.com/2011/06/android-cmake-gui.png";s:5:"width";s:3:"878";s:6:"height";s:3:"440";s:4:"type";s:5:"image";s:4:"area";s:6:"386320";s:9:"file_path";s:0:"";}s:83:"http://kingvidbina.files.wordpress.com/2011/06/building-libandroid-opencv-error.png";a:6:{s:8:"file_url";s:83:"http://kingvidbina.files.wordpress.com/2011/06/building-libandroid-opencv-error.png";s:5:"width";s:3:"759";s:6:"height";s:3:"684";s:4:"type";s:5:"image";s:4:"area";s:6:"519156";s:9:"file_path";s:0:"";}}s:6:"videos";a:0:{}s:11:"image_count";s:1:"2";s:6:"author";s:8:"12420381";s:7:"blog_id";s:8:"12076354";s:9:"mod_stamp";s:19:"2011-06-13
+    00:43:14";}
+  _oembed_ec0d8eb94f4c139bfa8892dc10bc02d4: ! '{{unknown}}'
+  _oembed_8bd1e02375eb1859168211527bdd5707: ! '{{unknown}}'
+  _oembed_c9bb75496b223a6b4fdbf7db1249b302: ! '{{unknown}}'
+  _oembed_d243eb51104610fff8d7f2f52ea1620d: ! '{{unknown}}'
+  _elasticsearch_indexed_on: '2011-06-13 00:35:05'
+---
+<h1>Why?</h1>
+I do too much different things and might forget what I've figured out before. So this is a public note-to-self.
+
+After playing around with open-source projects for quite a while I must add that they hardy ever work right the first time. Coders planning to attempt using any of the many wonderful open-source initiatives should be prepared to spend a fair amount of time in getting everything to work in "perfect" tandem. Although this struggle personally cost me much time I must admit that I considered it all worth the effort. On the upside, I learned a lot more of the development environment once I was unintentionally forced to digg deeper. Not to forget that there is nothing better then witnessing your code in action after a long struggle ;) -- but then again I haven't yet experienced enough in life to know for certain that there is nothing better than this.
+
+Basically I'm just summing up a set of links that helped me find the answer to my problems. Maybe they might help someone else.
+<h1>Reference android.libraries.src Not Found</h1>
+Somehow a bunch of other coders seemed to have this problem after the names to certain Android SDK files seemed to have changed after the transition between SDK levels. The fellas and dames dropped a few solutions to this problem at <a title="Issue 13024: SDK 8: Manual Ant Compile failed with : lib_rules.xml:121: Reference android.libraries.src not found" href="http://code.google.com/p/android/issues/detail?id=13024">http://code.google.com/p/android/issues/detail?id=13024</a>.
+<h1>Compile Error on NDK-build</h1>
+Apparently compiling native code resulted in some compiler errors. I've scoured the internet for solutions and was led to believe that this problem had its source at the debuggable option set to true in the manifest. At the time of writing I haven't yet found a workaround to this problem that didn't involve playing around with the debuggable option. So here goes... <a title="Internal compiler error when compiling native Android code" href="http://stackoverflow.com/questions/3441297/internal-compiler-error-when-compiling-native-android-code">http://stackoverflow.com/questions/3441297/internal-compiler-error-when-compiling-native-android-code</a>. Pretty much the same conclusion can be drawn from this post on a google thread <a title="Internal compiler error when compiling icu4c with debuggable = true" href="http://groups.google.com/group/android-ndk/browse_thread/thread/4dc0addd20cf23d0?tvc=2">http://groups.google.com/group/android-ndk/browse_thread/thread/4dc0addd20cf23d0?tvc=2</a>.
+<h1>Custom Project Checklist</h1>
+It might be helpful to remember these steps in creating a Android+OpenCV project:
+<ol>
+	<li>create jni directory</li>
+	<li>extract contents of android_opencv.tar.gz to jni dir</li>
+	<li>build jni (ndk-build)</li>
+	<li>ant-compile android project</li>
+</ol>
+<h1>Other Interesting Links</h1>
+Zixuan Wang did a project of his own using OpenCV. Just quickly glimpsing through this concisely written post gives any reader a overview of the steps involved in getting a Android+OpenCV project up and running. I found this post extremely useful and I think it's size played a significant role herein. <a title="OpenCV in Android" href="http://www.stanford.edu/~zxwang/android_opencv.html">http://www.stanford.edu/~zxwang/android_opencv.html</a>
+<h1>CMake Trouble</h1>
+Somewhere during my struggle to get my setup running I decided to go back to basic and start trying all needed tools seperately. I build a few NDK examples, which worked. Tried building a few cmake examples and got stuck at <code>android-cmake</code>. I've attempted to build the examples as instructed in the documentation with the following strange output as result.
+<code>coder@blackbox:~/src/testenv/android-cmake/hello-cmake/androidbuild$ android-cmake ..
+-- Using default android API level android-8
+-- If you prefer to use a different API level, please define the environment variable: ANDROID_LEVEL
+-- The C compiler identification is GNU
+-- The CXX compiler identification is GNU
+dpkg-architecture: warning: Unknown gcc system type arm-linux-androideabi, falling back to default (native compilation)
+-- Check for working C compiler: ~/sdks/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc
+dpkg-architecture: warning: Unknown gcc system type arm-linux-androideabi, falling back to default (native compilation)
+-- Check for working C compiler: ~/sdks/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc -- works
+-- Detecting C compiler ABI info
+dpkg-architecture: warning: Unknown gcc system type arm-linux-androideabi, falling back to default (native compilation)
+CMake Error: Could not COPY_FILE.
+OutputFile: ''
+copyFile: '~/src/testenv/android-cmake/hello-cmake/androidbuild/CMakeFiles/CMakeDetermineCompilerABI_C.bin'
+Unable to find executable for try_compile: tried "~/src/testenv/android-cmake/hello-cmake/androidbuild/CMakeFiles/CMakeTmp/cmTryCompileExec" and "~/src/testenv/android-cmake/hello-cmake/androidbuild/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec" and "~/src/testenv/android-cmake/hello-cmake/androidbuild/CMakeFiles/CMakeTmp/Development/cmTryCompileExec".
+-- Detecting C compiler ABI info - done
+CMake Error at /usr/share/cmake-2.8/Modules/CMakeDetermineCompilerABI.cmake:40 (FILE):
+file STRINGS file
+"~/src/testenv/android-cmake/hello-cmake/androidbuild/CMakeFiles/CMakeDetermineCompilerABI_C.bin"
+cannot be read.
+Call Stack (most recent call first):
+/usr/share/cmake-2.8/Modules/CMakeTestCCompiler.cmake:71 (CMAKE_DETERMINE_COMPILER_ABI)
+CMakeLists.txt:2 (project)
+-- Check for working CXX compiler: ~/sdks/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/arm-linux-androideabi-g++
+dpkg-architecture: warning: Unknown gcc system type arm-linux-androideabi, falling back to default (native compilation)
+-- Check for working CXX compiler: ~/sdks/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/arm-linux-androideabi-g++ -- works
+-- Detecting CXX compiler ABI info
+dpkg-architecture: warning: Unknown gcc system type arm-linux-androideabi, falling back to default (native compilation)
+CMake Error: Could not COPY_FILE.
+OutputFile: ''
+copyFile: '~/src/testenv/android-cmake/hello-cmake/androidbuild/CMakeFiles/CMakeDetermineCompilerABI_CXX.bin'
+Unable to find executable for try_compile: tried "~/src/testenv/android-cmake/hello-cmake/androidbuild/CMakeFiles/CMakeTmp/cmTryCompileExec" and "~/src/testenv/android-cmake/hello-cmake/androidbuild/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec" and "~/src/testenv/android-cmake/hello-cmake/androidbuild/CMakeFiles/CMakeTmp/Development/cmTryCompileExec".
+-- Detecting CXX compiler ABI info - done
+CMake Error at /usr/share/cmake-2.8/Modules/CMakeDetermineCompilerABI.cmake:40 (FILE):
+file STRINGS file
+"~/src/testenv/android-cmake/hello-cmake/androidbuild/CMakeFiles/CMakeDetermineCompilerABI_CXX.bin"
+cannot be read.
+Call Stack (most recent call first):
+/usr/share/cmake-2.8/Modules/CMakeTestCXXCompiler.cmake:64 (CMAKE_DETERMINE_COMPILER_ABI)
+CMakeLists.txt:2 (project)
+-- Configuring incomplete, errors occurred!
+coder@blackbox:~/src/testenv/android-cmake/hello-cmake/androidbuild$</code>
+After a bit of searching I attempted to do the same thing with the cmake-gui tool (as suggested in the Android CMake Dev Guide) and this amazingly seemed to work without a glitch.
+The cmake gui tool could be installed in ubuntu by executing <code>sudo apt-get install cmake-qt-gui</code>.
+As described in the guide, once the gui has been started one might click the configure button once to be confronted by some red marked entries (no need to panic). The values in the red marked entries have to be reviewed to confirm their validity after which the user could proceed by clicking configure once more to finalize configuration. After the configuration has been completed, all to be done is simply press the Generate button to finish the job.
+<a href="http://kingvidbina.files.wordpress.com/2011/06/android-cmake-gui.png"><img class="aligncenter size-full wp-image-269" title="android-cmake-gui" src="http://kingvidbina.files.wordpress.com/2011/06/android-cmake-gui.png" alt="the cmake-gui tool used to build the android-cmake example" width="594" height="297" /></a>
+Seemingly <code>android-cmake</code> does exactly the same. After the first attempt at executing, a CMakeCache.txt file is generated in the build directory. This file contains the very same variables that are displayed in the CMake tool's GUI counterpart. After having made sure that these values made sense I succeeded in successfully finish the configuration by running <code>android-cmake ..</code> from my build directory for a second time.
+After finishing up on the configuration stage all that is left to be done is to build the actual library. At this stage the project will have a vacant target-related directory in the project's libs directory and a freshly baked Makefile in the build directory. The library can be generated by making it (execute: <code>make</code>) from the build directory where the Makefile resides. Lo and behold!!! The job is done.
+I've confirmed this by building the libraries for two different arm targets (armeabi-v7a and armeabi)... it worked!!! :D
+<h1>FindAndroidOpenCV.cmake</h1>
+Another little thing I came across looked like this:
+<code>coder@blackbox:~/src/testenv/opencv/OpenCV_SAMPLE/jni$ android-cmake ..
+CMake Error at jni/CMakeLists.txt:11 (FIND_PACKAGE):
+Could not find module FindAndroidOpenCV.cmake or a configuration file for
+package AndroidOpenCV.
+</br>Adjust CMAKE_MODULE_PATH to find FindAndroidOpenCV.cmake or set
+AndroidOpenCV_DIR to the directory containing a CMake configuration file
+for AndroidOpenCV. The file will have one of the following names:
+AndroidOpenCVConfig.cmake
+androidopencv-config.cmake
+</br>-- Configuring incomplete, errors occurred!</code>
+Trouble in paradise again. Locating all cmake files in the OpenCV directory produced a list that included the absolute paths to the needed files. Mind you that there is no such thing as the FindAndroidOpenCV script that the error message suggests is lost. The CMakeLists.txt file contains the references to the real wanted files in the following lines:
+<code>set(OpenCV_DIR ${CMAKE_SOURCE_DIR}/../../build
+CACHE PATH "The path where you built opencv for android")
+set(AndroidOpenCV_DIR ${CMAKE_SOURCE_DIR}/../../android-opencv/build
+CACHE PATH "The path where you built android-opencv")</code>
+The pathnames to the wanted files are relative and <code>${CMAKE_SOURCE_DIR}</code> refers to the directory from whence CMake was fired (source: <a title="CMake Useful Variables" href="http://www.cmake.org/Wiki/CMake_Useful_Variables" target="_blank">CMake Useful Variables</a>). Unless your project files are merely two levels below the android-opencv directory this won't work. I got this problem because I copied the code from the original directories into development directories to avoid corrupting the original opencv download. This way I could always delete my development directory and copy the necessary "untouched" code from the original project when things went wrong. A bit of playing around with the <a title="CMake Documentation" href="http://www.cmake.org/cmake/help/cmake2.6docs.html#command:message" target="_blank">message</a> command could help one to analyse/debug CMake scripts. I've used it to figure out how CMake dealt with variables and to monitor which values it would pass to the <a title="CMake Documentation" href="http://www.cmake.org/cmake/help/cmake2.6docs.html#command:find_package" target="_blank">find_package</a> function. My solution to the problem involved adding a <code>OPENCV</code> environment variable and planting absolute pathnames in my CMakeLists.txt script. You can add environment variables by executing <code>export OPENCV=/home/coder/blah</code>. This <code>export</code> can be made permanent by appending it to your .bashrc script. After added the correct path the CMake tool would still cause some trouble until I removed the <code>CACHE PATH</code> parameters; the result being:
+<code>set(OpenCV_DIR $ENV{OPENCV}/android/build
+CACHE PATH "The path where you built opencv for android")
+set(AndroidOpenCV_DIR $ENV{OPENCV}/android/android-opencv/build)</code>
+
+After helping CMake find its configuration CMake scripts I ran <code>android-cmake ..</code> once more and this time it did manage to pass the configuration without a glitch.
+<code>
+coder@blackbox:~/src/testenv/opencv/OpenCV_SAMPLE/jni$ android-cmake ..
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/david/src/testenv/opencv/OpenCV_SAMPLE/jni
+</code>
+
+Now all there is left to do is generate the library which will be linked into the android app.
+<h1>Android-Opencv Libraries</h1>
+Some of the libraries necessary for building android opencv components are located in the <code>$OPENCVROOT/android/build/lib$</code> directories. The next set of errors have to do with the linker being unable to find the necessary libraries. Make sure to have build the android opencv files. The output of the make will give a indication of the libraries that will be linked in this phase.
+<code>
+coder@blackbox:~/sdks/opencv/android/build$ sudo make install
+[sudo] password for coder:
+[ 0%] Built target opencv_imgproc_pch_dephelp
+[ 1%] Built target pch_Generate_opencv_imgproc
+[ 4%] Built target zlib
+[ 5%] Built target opencv_core_pch_dephelp
+[ 5%] Built target pch_Generate_opencv_core
+[ 8%] Built target opencv_core
+[ 15%] Built target opencv_imgproc
+[ 16%] Built target opencv_calib3d_pch_dephelp
+[ 16%] Built target pch_Generate_opencv_calib3d
+[ 16%] Built target opencv_features2d_pch_dephelp
+[ 16%] Built target pch_Generate_opencv_features2d
+[ 17%] Built target opencv_flann_pch_dephelp
+[ 18%] Built target pch_Generate_opencv_flann
+[ 18%] Built target opencv_flann
+[ 24%] Built target libtiff
+[ 24%] Built target opencv_highgui_pch_dephelp
+[ 24%] Built target pch_Generate_opencv_highgui
+[ 29%] Built target libjasper
+[ 37%] Built target libjpeg
+[ 40%] Built target libpng
+[ 43%] Built target opencv_highgui
+[ 46%] Built target opencv_features2d
+[ 48%] Built target opencv_calib3d
+[ 48%] Built target opencv_test_calib3d_pch_dephelp
+[ 48%] Built target pch_Generate_opencv_test_calib3d
+[ 49%] Built target opencv_ts_pch_dephelp
+[ 50%] Built target pch_Generate_opencv_ts
+[ 50%] Built target opencv_ts
+[ 53%] Built target opencv_test_calib3d
+[ 53%] Built target opencv_test_core_pch_dephelp
+[ 53%] Built target pch_Generate_opencv_test_core
+[ 55%] Built target opencv_test_core
+[ 55%] Built target opencv_test_features2d_pch_dephelp
+[ 56%] Built target pch_Generate_opencv_test_features2d
+[ 58%] Built target opencv_test_features2d
+[ 59%] Built target opencv_test_imgproc_pch_dephelp
+[ 59%] Built target pch_Generate_opencv_test_imgproc
+[ 62%] Built target opencv_test_imgproc
+[ 62%] Built target opencv_video_pch_dephelp
+[ 62%] Built target pch_Generate_opencv_video
+[ 64%] Built target opencv_video
+[ 64%] Built target opencv_legacy_pch_dephelp
+[ 64%] Built target pch_Generate_opencv_legacy
+[ 76%] Built target opencv_legacy
+[ 76%] Built target opencv_contrib_pch_dephelp
+[ 77%] Built target pch_Generate_opencv_contrib
+[ 77%] Built target opencv_ml_pch_dephelp
+[ 77%] Built target pch_Generate_opencv_ml
+[ 80%] Built target opencv_ml
+[ 80%] Built target opencv_objdetect_pch_dephelp
+[ 81%] Built target pch_Generate_opencv_objdetect
+[ 84%] Built target opencv_objdetect
+[ 85%] Built target opencv_contrib
+[ 85%] Built target opencv_test_ml_pch_dephelp
+[ 86%] Built target pch_Generate_opencv_test_ml
+[ 87%] Built target opencv_test_ml
+[ 87%] Built target opencv_test_objdetect_pch_dephelp
+[ 87%] Built target pch_Generate_opencv_test_objdetect
+[ 88%] Built target opencv_test_objdetect
+[ 88%] Built target opencv_test_video_pch_dephelp
+[ 88%] Built target pch_Generate_opencv_test_video
+[ 89%] Built target opencv_test_video
+[ 90%] Built target opencv_haartraining_engine
+[ 92%] Built target opencv_traincascade
+[ 92%] Built target opencv_createsamples
+[ 92%] Built target opencv_haartraining
+[ 92%] Built target opencv_performance
+[ 92%] Built target opencv_gpu_pch_dephelp
+[ 92%] Built target pch_Generate_opencv_gpu
+[ 96%] Built target opencv_gpu
+[ 96%] Built target opencv_test_gpu_pch_dephelp
+[ 96%] Built target pch_Generate_opencv_test_gpu
+[100%] Built target opencv_test_gpu
+Install the project...
+</code>
+The rest of the output is not that important right now.
+
+<h1>Cannot Find -landroid-opencv</h1>
+After all my troubleshooting and seemingly solving the problems one by one I ran into another minor setback.
+<code>
+coder@blackbox:~/src/testenv/opencv/OpenCV_SAMPLE/jni$ make
+Linking CXX shared module ../../libs/armeabi-v7a/libOpenCV_SAMPLE.so
+/home/david/sdks/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/../../../../arm-linux-androideabi/bin/ld: cannot find -landroid-opencv
+collect2: ld returned 1 exit status
+make[2]: *** [../libs/armeabi-v7a/libOpenCV_SAMPLE.so] Error 1
+make[1]: *** [jni/CMakeFiles/OpenCV_SAMPLE.dir/all] Error 2
+make: *** [all] Error 2
+</code>
+
+This looks fairly simple, the <a title="Link Options - Using the GNU Compiler Collection (GCC)" href="http://gcc.gnu.org/onlinedocs/gcc-4.6.0/gcc/Link-Options.html#Link-Options" target="_blank">link option</a> requires a library which does not exist. I can't really seem to find out where things went wrong on my system. Guess the entire installation went bad... I'm not really sure. Anyways... throwing a few <code>@echo "xxx"</code>'s might help one to narrow down the region of the makefile scripts that are failing. In my case I've narrowed it down to the following statement in <code>Makefile2</code>:
+<code>@echo $(MAKE) -f jni/CMakeFiles/OpenCV_SAMPLE.dir/build.make jni/CMakeFiles/OpenCV_SAMPLE.dir/build</code>
+In such cases using the <code>--just-print</code> parameters to the make command might prove extremely useful to looking under the hood of this make device. A few handy makefile debugging tips can be found in the excerpt of the book <a title="Chapter 12 from Managing Projects with GNU Make, Third Edition" href="http://oreilly.com/catalog/make3/book/ch12.pdf">Managing Projects with GNU Make, Third Edition</a>.
+Finally I've narrowed it all down to that very file within which <code>-landroid-opencv</code> has been hardcoded somewhere in the <code>/jni/jni/CMakeFiles/OpenCV_SAMPLE.dir</code> directory (it's all in the <code>link.txt</code>).
+<code>
+/home/david/sdks/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/arm-linux-androideabi-g++ -fPIC --sysroot=/home/david/sdks/android-ndk-r5b/platforms/android-8/arch-arm/ -fPIC -DANDROID -Wno-psabi -fsigned-char -mthumb -march=armv7-a -mfloat-abi=softfp -Wl,--no-undefined -Wl,--fix-cortex-a8 -L/home/david/sdks/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/libs/armeabi-v7a -lstdc++ -lsupc++ -shared -Wl,-soname,libOpenCV_SAMPLE.so -o ../../libs/armeabi-v7a/libOpenCV_SAMPLE.so CMakeFiles/OpenCV_SAMPLE.dir/OpenCV_SAMPLEJAVA_wrap.cxx.o CMakeFiles/OpenCV_SAMPLE.dir/cvsample.cpp.o -L/usr/local/lib -L/usr/local/lib/../3rdparty/lib -L/home/david/sdks/opencv/android/build/3rdparty/lib -L/usr/local/lib/3rdparty/lib -landroid-opencv -ldl -lm -lpthread -lrt -lstdc++ -lopencv_calib3d -lopencv_objdetect -lopencv_features2d -lopencv_imgproc -lopencv_video -lopencv_highgui -lopencv_ml -lopencv_legacy -lopencv_flann -lopencv_core -llibjpeg -llibpng -llibtiff -llibjasper -lzlib -llog -ldl -lm -lpthread -lrt -lstdc++ -lopencv_calib3d -lopencv_objdetect -lopencv_features2d -lopencv_imgproc -lopencv_video -lopencv_highgui -lopencv_ml -lopencv_legacy -lopencv_flann -lopencv_core -llibjpeg -llibpng -llibtiff -llibjasper -lzlib -llog -Wl,-rpath,/usr/local/lib:/usr/local/lib/../3rdparty/lib:/home/david/sdks/opencv/android/build/3rdparty/lib:/usr/local/lib/3rdparty/lib </code>
+
+Some information about this could be found on a <a title="Issue 3 - android-opencv - After the recent restructuring, CVCamera no longer compiles - Port of OpenCV to the Android phone platform - Google Project Hosting" href="http://code.google.com/p/android-opencv/issues/detail?id=3" target="_blank">android-opencv Issues</a> post but this information wasn't really helpful to me.
+
+If all went right there might be a <code>libandroid-opencv.so</code> library file lurking somewhere in the <code>android-opencv/build</code> directorytree. That's the file we're looking for. We have two options to solve this problem:
+<ol>
+	<li>Pass the library's directory <code>-L/dir</code> to the linker</li>
+	<li>Create symlink to or copy of <code>libandroid-opencv.so</code> in a directory that's being checked by the linker</li>
+</ol>
+
+I just added a symlink to <code>libandroid-opencv.so</code> to my <code>/usr/local/lib</code> directory and that seemed to work.
+
+<code>sudo ln -s /OPENCVROOT/android/android-opencv/build/jni/libandroid-opencv.so /usr/local/lib/libandroid-opencv.so</code>
+
+<strong>NOTE</strong>: Be careful which target the library was build for. There is a significant difference between code build for the armeabi versus code build for the armeabi-v7a. In my case I build all my code for the armeabi-v7a. But the symlinked <code>libandroid-opencv.so</code> will only cause us more trouble if we intent to build code for the armeabi. You might be better of passing a project-specific <code>-L</code> directive to the linker to the directory that contains the necessary libraries for that project. That would mean messing around with that <code>links.txt</code> file instead of symlinks. Other then this I don't really have much better solutions to this problem. I'm sorry :(.
+
+<h1>Cannot Find -lpthread</h1>
+The <code>libpthread.so</code> library... I'll figure this out next weekend. :) Gotta do some homework.<a href="http://kingvidbina.files.wordpress.com/2011/06/building-libandroid-opencv-error.png"><img src="http://kingvidbina.files.wordpress.com/2011/06/building-libandroid-opencv-error.png?w=300" alt="" title="building-libandroid-opencv-error" width="300" height="270" class="aligncenter size-medium wp-image-312" /></a>

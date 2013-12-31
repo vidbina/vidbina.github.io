@@ -1,0 +1,31 @@
+---
+layout: post
+title: Eclipse-less development of Android App which Makes Use of the Google API Libraries
+categories: []
+tags: []
+status: draft
+type: post
+published: false
+meta: {}
+---
+I just did a bit of goofing around attempting to get certain parts of the Google API Java libraries working on my android-device. My findings...
+
+<h1>Importing Third-party Libraries into Android Projects</h1>
+Including libraries into Eclipse-less Android projects is as simple as copying the necessary .jar files into the libs directory in the project tree.
+
+Depending on the Google service your project might make use of, one will end up selecting a couple of packages to be used in the project.
+
+<h1>Solving Force Closes Caused after Importing Different Libraries</h1>
+Before I go around running and looking for the answers elsewhere, I first confirm that all <code>import some.code.library.Class</code> (in which some.code.library.Class may differ for each individual situation) statements are backed by the the proper library files.
+
+One can easily check the contents of jar-libraries by running the <code>jar -tf</code> command on the respective library files (e.g.: <code>jar -tf gdata-core-1.0.jar</code>). 
+
+Only after one has confirmed that the necessary library files for every imported class have been located in the correct folder (libs in the case of android) it becomes to take the search a bit further.
+
+It often happens that libraries depend on other libraries. If this situation is somehow applicable to the situation at hand it obviously doesn't have to be mentioned that the dependencies also deserve a presence in the libs directory. In some cases, determining which dependencies are mandatory might not always be as clear.
+
+The log becomes a perfect place for disclosing important information in case things end up going wrong. In such cases it might even become necessary to disable any filters set on the Log to be able to monitor all information the android-device spits back. In many cases, you will be searching for Log data carrying a <code>dalvikvm</code> tag ;).
+
+At a certain moment in time I discovered in my Log that javax.activation.Something was missing... copying the proper .jar file into the libs directory solved this little problem.
+
+I always keep a

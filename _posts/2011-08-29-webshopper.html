@@ -1,0 +1,32 @@
+---
+layout: post
+title: Webshopper
+categories:
+- coding
+tags: []
+status: draft
+type: post
+published: false
+meta: {}
+---
+<h1>A Few Thinks To Know Before You Read On</h1>
+<p>I've just landed a web dev gig that pays six-hundred big ones for a small web-shop meaning that it is about time to delve into the world of e-commerce. Being a big advocate of the open-source movement within my social circles, I naturally started on a quest to discover the available options on the market. At the moment I'm stationed in the Netherlands and therefore it seemed like the most natural move to pay some extra attention to the popular payment methods (read: <a href="http://www.mollie.nl/betaaldiensten/ideal/">iDEAL</a> and <a href="https://www.paypal-nederland.nl/landingspages/veilig_betalenb.php?kw=g;6780255122;e;paypal&amp;mpch=ads&amp;mplx=3484-54827-4958-24">Paypal</a>) we are familiar with on this side of the planet. So here goes...</p>
+
+<h1>In the Background</h1>
+<p>For the try-outs I've just decided to run everything on a VirtualBoxed Ubuntu Server running LAMP and OpenSSH. Before I opted for this great solution I started trying things out on NearlyFreeSpeech.net but they have a pro <a href="http://php.net/manual/en/features.safe-mode.php" title="PHP: Safe Mode - Manual" target="_blank">safe mode</a> policy that doesn't really sit too well with some web-shop systems. If your web-pages are stationed on a shared-hosting service, there is a large possibility that safe mode has been turned on by you admins. That brings me to the following point: <strong>be mindful to verify whether your host allows running websites with the <a href="http://php.net/manual/en/features.safe-mode.php" title="PHP: Safe Mode - Manual" target="_blank">PHP safe mode</a> disabled</strong>. That would save you a lot of headache. I've read about the good and the bad, broken packages and well written systems and so many other reason to stick with the safe mode but in the end even the developers of the web-shop systems recommend you to turn the safe mode off. Who am I not to listen...</p>
+
+<h1>Open-Source Web-shops</h1>
+<p>There is a diverse set of flavors and colors to keep any web-developer entertained. The most interesting ones are, of course, the open-source solutions and because I'm Dutch, the iDEAL-friendly sweets are even more appealing. There is a <a href="http://www.mollie.nl/betaaldiensten/ideal/modules/">list</a> of web-shop platforms which have iDEAL plug-ins/modules/extensions that work well with iDEAL -- good place to start.</p>
+
+<h2>OpenCart</h2>
+[caption id="" align="alignleft" width="440" caption="The slick-looking OpenCart webshop"]<a href="http://www.opencart.com/index.php?route=demonstration/demonstration"><img alt="A OpenCart webshop" src="http://www.opencart.com/opencart/application/view/image/screenshot_3.png" title="OpenCart webshop" width="440" height="220" /></a>[/caption]<p>The OpenCart system looked extremely slick at a first glance. Besides its obvious good looks the OpenCart system seemed to be quite easy to set-up. A bit of copy-paste work, a few <code>chmod</code>'s to set access rights and a install procedure that was pretty self-explanatory. Once configured, managing the OpenCart shop was a pleasant walk in the park. Layouts, extensions, products - all easily set to your heart's desire from the panel but there is a a thing though... OpenCart won't function on hosts that don't enable their users to disable the SAFE MODE setting for PHP. This would not always be a problem, but for some hosts that calls for a lot of hassle.</p>
+[caption id="attachment_411" align="aligncenter" width="594" caption="SAFE MODE restrictions at work in OpenCart"]<a href="http://kingvidbina.files.wordpress.com/2011/08/webshop-opencartsafe1.png"><img src="http://kingvidbina.files.wordpress.com/2011/08/webshop-opencartsafe1.png" alt="SAFE MODE Restrictions at work in OpenCart" title="webshop-opencartsafemodeerrors" width="594" height="425" class="size-full wp-image-411" /></a>[/caption]
+
+<h2>Magento</h2>
+<p>It's mentioned as an option on the <a href="https://cms.paypal.com/nl/cgi-bin/?cmd=_render-content&amp;content_ID=zakelijk_nl/webwinkel_software_providers_OLD" title="Paypal-friendly webshops" target="_blank">Paypal site</a>, it's mentioned as an option on the <a href="http://www.mollie.nl/betaaldiensten/ideal/modules/" title="iDEAL-friendly webshop" target="_blank">iDEAL site</a> which means it's to be mentioned as an option during any serious webshop screening. Magento comes with a nice little phpscript to check whether the host lives up to its expectations of a survivable habitat.</p>
+[caption id="attachment_420" align="aligncenter" width="594" caption="Checking the server configuraton for Magento-friendly settings"]<a href="http://kingvidbina.files.wordpress.com/2011/08/webshop-magento-check.png"><img src="http://kingvidbina.files.wordpress.com/2011/08/webshop-magento-check.png" alt="Checking whether the current server configuration is suitable for running the Magento web-shop" title="webshop-magento-check" width="594" height="425" class="size-full wp-image-420" /></a>[/caption]
+A few minutes after the OpenCart try-out and I'm attempting to run Magento. Package downloaded, sftp-ed to my host and I'm currently attempting the install procedure.</p>
+
+<p>Snap!!! It's 8:00 AM. Time for the first day of school after the rainy summer. Gotta run for now.</p>
+
+<p>Yup</p>

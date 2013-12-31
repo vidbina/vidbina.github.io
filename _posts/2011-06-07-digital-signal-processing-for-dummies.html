@@ -1,0 +1,39 @@
+---
+layout: post
+title: Digital Signal Processing for Dummies
+categories: []
+tags:
+- control theory
+- digital signal processing
+- dsp
+- novice
+status: draft
+type: post
+published: false
+meta: {}
+---
+<h1>Introduction</h1>
+I sometimes find myself forgetting a certain bits of information I've previously thoroughly studied and reckoned it might be useful to write quick guides to help me recall the necessary data whenever might prove necessary. This time I've decided to try writing such a note-to-self in the form of a blogpost. Who knows, maybe it end up helping someone else too ;).
+<h1>The Basics</h1>
+Every system in the real world exerts influence on its environment to certain extent. For this very reason we can think of every system in terms of incoming signals and outgoing signals.
+
+A spaghetti machine presses pasta into strings of spagetti; a chicken consumes food, in whichever form that may be, and lays eggs, chuckles, fights with its playmates in the pen or just simply tastes like chicken when well prepared and served to a lucky recipient. A computer receives data and control signals and processes these input values to generate the intended computation. A piano translates mechanical work from the player intro pleasant audible signals, depending on the skillfulness of player offcourse.
+
+As you see every system in the world can be described in terms of input and output. Quite frankly I cannot think of a single system that goes against this idea.
+
+From now on, think of every system as a black box with single or multiple inputs and outputs. Whatever the blackbox does to the input to generate the output is that which makes that blackbox so special, whether it's ciphering information for the secret service or simply heating up those cornseeds to produce popcorn by bombarding them with microwaves. The behavioral characteristic of a blackbox in relation to its input and output is called the <em>transfer function</em> of the system, the (algebraic) description of the transfer of input to output.
+
+$latex H(s)=\frac{Y(s)}{X(s)}=\frac{input}{ouput}&amp;s=4$
+<h1>Domains</h1>
+Within the field of digital signal processing we are often confronted with a concept engineers tend to refer to as <em>domains</em>. Domains are in essence paradigms within which a system can be represented.
+<h2>Time-continuous Domain</h2>
+The time continuous domains is that domain we're all familiar with. We all know time as a set of real values, ever continuing and divisible to any value, regardless how small. There are things that occur between the range of <a title="Planck Time" href="http://en.wikipedia.org/wiki/Planck_time">planck time</a> units to <a title="Yottasecond" href="http://en.wikipedia.org/wiki/Yottasecond">yottaseconds</a> or any other time units beyond this range for that matter. The point is that time in this domain is expressed as a continuous, real-number entity.
+<h2>Time-discrete Domain</h2>
+Within the time-discrete domain we only know time as a set of whole number values. One, two, five-hundred but never one-third or a half units.
+This time-domain is that domain digital systems are restricted to as they are only capable of sampling environment variables at quantized intervals.
+
+The discretization of time is in this case dependent on the sampling rate at which the digital system operates. A black box sampling information at 10 cycles per second (10 Hz) will never know what really happens between the 1/10th second intervals at which it samples its inputs. It's simply restricted by its samplerate. Approximations could be made for whatever might occur between the intervals but we would never really know sure if we only had access to that black box.
+<h2>Abstract Domains</h2>
+For ease of algebraic processing and analysis we often tend to transfer functions into abstractions of our oh-so-beloved-and-easily-understood time domain. Although these domains are abstractions they still allow us to fully represent a system.
+
+The s-domain is a familiar domain to which sytems can be transformed. The s-domain

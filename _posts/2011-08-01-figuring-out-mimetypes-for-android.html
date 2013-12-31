@@ -1,0 +1,49 @@
+---
+layout: post
+title: Figuring out Mimetypes for Android
+categories:
+- coding
+tags:
+- android
+- coding
+- developing
+- development
+- existing mimetypes
+- mimetypes
+status: publish
+type: post
+published: true
+meta:
+  _wpas_done_fb: '1'
+  _wpas_done_twitter: '1'
+  _thumbnail_id: '336'
+  tagazine-media: a:7:{s:7:"primary";s:58:"http://www.edrants.com/wp-content/uploads/2009/11/mime.jpg";s:6:"images";a:1:{s:58:"http://www.edrants.com/wp-content/uploads/2009/11/mime.jpg";a:6:{s:8:"file_url";s:58:"http://www.edrants.com/wp-content/uploads/2009/11/mime.jpg";s:5:"width";s:3:"250";s:6:"height";s:3:"357";s:4:"type";s:5:"image";s:4:"area";s:5:"89250";s:9:"file_path";s:0:"";}}s:6:"videos";a:0:{}s:11:"image_count";s:1:"1";s:6:"author";s:8:"12420381";s:7:"blog_id";s:8:"12076354";s:9:"mod_stamp";s:19:"2011-08-01
+    17:12:30";}
+  _elasticsearch_indexed_on: '2011-08-01 16:41:14'
+---
+[caption id="" align="alignleft" width="250" caption="Mime artist -- not quite what you think about when I say &quot;mimetype&quot; but yeah... they&#039;re funny in the cartoons."]<img class=" " title="Mime Artist" src="http://www.edrants.com/wp-content/uploads/2009/11/mime.jpg" alt="Mime artist -- not quite what you think about when I say mimetype but yeah... they're funny in the cartoons." width="250" height="357" />[/caption]
+<h1>Where Can I View The MimeTypes Supported By Android?</h1>
+The mimetypes for Android are stored somewhere on a database, but sadly I have not yet found a published version of this list that developers can use for reference. In most cases, the developer would at least know the extension of the file. This could actually be sufficient information to get the answer.
+
+Android has a MimeTypeMap which can be used to get a few helpful bits of information. Methods such as <code>getMimeTypeFromExtension</code>, <code>hasMimeType</code> and <code>getFileExtensionFromUrl</code> are pretty self-explanatory -- no need to waste more words on them.
+<h1>Pulling The MimeType Information From Android's Database</h1>
+This bit of code demonstrates how one could squeeze the necessary information from the map.
+<pre>import android.app.Activity;
+import android.os.Bundle;
+//...
+import android.util.Log;
+import android.webkit.MimeTypeMap;
+
+public class SqueezeMap extends Activity{
+   public static final String TAG = "MapSqueezer";
+
+   public void onCreate(Bundle icicle){
+      //... here comes the usual stuff -- invoke super.onCreate and inflate layout
+      MimeTypeMap map = MimeTypeMap.getSingleton();
+      Log.v(TAG, "your answer: " + map.getMimeTypeFromExtension(3gp));
+   }
+}</pre>
+You just need to import MimeTypeMap and insert the last two (and only significant) lines of code from the onCreate method in the snippet. The methods that can be invoked are documented in the Android Developers Reference (see <a href="http://developer.android.com/reference/android/webkit/MimeTypeMap.html">Reference</a>).
+Log or Toast the information to your liking. BTW: I've you're not using Log then there is probably little use of importing <code>android.util.Log</code> but you most likely use it for some real logging so... whatever. I haven't had and most likely will not have the time to look for a better way to get this information, there might even be a page that has all the answers on the Android Developers site which I happened to have overlooked... I'm just sayin'... could've missed it :( so keep on looking and let me know if your find the ultimate source of information regarding this topic.
+
+Happy coding ;)
