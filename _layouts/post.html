@@ -4,10 +4,22 @@ layout: default
 <article class="post">
   <header>
     <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
-    <h1>{{ page.title }}</h1>
+    <h1>
+      {% include icons-entypo.html type=page.type %}
+      {{ page.title }}
+    </h1>
   </header>
 
   <div>
     {{ content }}
   </div>
+
+  <ul class="tags">
+    {% for tag in page.tags %}
+    <li>
+      {% include icons-entypo.html type=tag %}
+      <span>{{ tag }}</span>
+    </li>
+    {% endfor %}
+  </ul>
 </article>
