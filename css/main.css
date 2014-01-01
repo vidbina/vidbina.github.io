@@ -118,6 +118,10 @@ a:visited { }
   line-height: 1.5em;
 }
 
+img {
+  max-width: 100%;
+}
+
 header {
   text-align: center;
   margin-bottom: 2em;
