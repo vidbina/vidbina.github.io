@@ -1,3 +1,4 @@
 name: Blurt
 markdown: redcarpet
 pygments: true
+paginate: 50
