@@ -1,0 +1,21 @@
+---
+layout: post
+title: Baking Android Apps Just Became Even More Fun with Gradle and Genymotion
+date: '2013-08-31T19:03:44+02:00'
+tags:
+- gradle
+- genymotion
+- androvm
+- android
+- development
+- app
+- mobile
+- engineering
+type: mobile
+tumblr_url: http://vid.bina.me/post/59908945971/baking-android-apps-just-became-even-more-fun-with
+---
+<p>While running through my to-do pile this week some Android gigs have forced me to get my hands dirty on some awesome projects &#8212; <a href="http://androvm.org/blog/">AndroVM</a> and <a href="http://tools.android.com/tech-docs/new-build-system/user-guide">gradle</a>.<!-- more --></p>
+<p><span>First of all, work has forced me to scour the web for less painful solutions to running Android apps in emulators. </span><a href="http://www.genymotion.com/">Genymotion</a><span> came to my rescue! Utilizing the VirtualBox virtualization wizardry, the Genymotion engineers have succeeded in making Android emulation something &#8220;wonderful&#8221; (coming from something painful) which is a tremendous improvement. They&#8217;re not lying&#8230; it&#8217;s lightning fast. Fast to the point it&#8217;s almost awkward (I&#8217;ll have to get used to this). The product is based on the the </span><a href="http://androvm.org/blog/">AndroVM</a><span> open source project something you&#8217;ll need to keep an eye on if you&#8217;re a Android dev.</span></p>
+<p>Furthermore, I&#8217;ve been checking my build options for some improvement. Up until now I&#8217;ve been writing custom makefiles using <code>ant</code> and <code>adb</code> to <em>clean</em>, <em>build</em>, <em>install</em>, <em>uninstall</em> and <em>log</em> my apps. I needed this because I do everything from my command line &#8212; I have an aversion to IDE&#8217;s although they are great for shielding you from the nitty gritty household magic that happens underneath the hood. A couple of months ago I ran into a nasty problem with support libraries that forced me to copy the source of one of the classes into my project (not something I was happy with). Somehow I was not getting my support libraries properly added to my build path to allow exception-less extensions of the ActionBarActivity class.</p>
+<p>Last night, while setting up another app I decided to do things <em>the right way</em>. The Android dev community seems to be making a shift to <a href="http://tools.android.com/tech-docs/new-build-system/user-guide">gradle</a> and why would I say no to something that offers dependency management? After shifting my entire project structure around a bit I got this b* (baby or bitch &#8212; either one goes) running. For a great example of how to get gradle running in Android projects check out the <a href="http://iosched%20-%20Google%20I/O%20App%20for%20Android%20-%20Google%20Project%20Hosting">Google I/O 2013 app source</a>.</p>
+<p>Some wonderful developments in Android world!</p>
