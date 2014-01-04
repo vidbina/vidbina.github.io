@@ -1,0 +1,61 @@
+{% case include.type %}
+{% when 'places' %}
+  <meta class="detail entypo-address" name="type" content="{{ include.type }}">
+{% when 'travel' %}
+  <meta class="detail entypo-direction" name="type" content="{{ include.type }}">
+{% when 'aviation', 'flight' %}
+  <meta class="detail entypo-flight" name="type" content="{{ include.type }}">
+{% when 'language', 'lingo', 'linguistics' %}
+  <meta class="detail entypo-language" name="type" content="{{ include.type }}">
+{% when 'quote', 'excerpt' %}
+  <meta class="detail entypo-quote" name="type" content="{{ include.type }}">
+{% when 'spotify', 'Spotify' %}
+  <meta class="detail entypo-spotify" name="type" content="{{ include.type }}">
+{% when 'movie', 'film', 'cinematography' %}
+  <meta class="detail entypo-video" name="type" content="{{ include.type }}">
+{% when 'music' %}
+  <meta class="detail entypo-music" name="type" content="{{ include.type }}">
+{% when 'study', 'research' %}
+  <meta class="detail entypo-book-open" name="type" content="{{ include.type }}">
+{% when 'math', 'academics', 'algebra', 'calculus', 'psychology' %}
+  <meta class="detail entypo-graduation-cap" name="type" content="{{ include.type }}">
+{% when 'art' %}
+  <meta class="detail entypo-palette" name="type" content="{{ include.type }}">
+{% when 'technology', 'science' %}
+  <meta class="detail entypo-rocket" name="type" content="{{ include.type }}">
+{% when 'engineering' %}
+  <meta class="detail entypo-cog" name="type" content="{{ include.type }}">
+{% when 'milestone', 'trophy', 'award', 'accomplishment', 'achievement' %}
+  <meta class="detail entypo-trophy" name="type" content="{{ include.type }}">
+{% when 'tools', 'tool', 'toolset' %}
+  <meta class="detail entypo-tools" name="type" content="{{ include.type }}">
+{% when 'benchmark', 'benchmarks', 'performance' %}
+  <meta class="detail entypo-chart-area" name="type" content="{{ include.type }}">
+{% when 'interview', 'conversation', 'chat', 'meeting' %}
+  <meta class="detail entypo-chat" name="type" content="{{ include.type }}">
+{% when 'design' %}
+  <meta class="detail entypo-palette" name="type" content="{{ include.type }}">
+{% when 'idea' %}
+  <meta class="detail entypo-lamp" name="type" content="{{ include.type }}">
+{% when 'news' %}
+  <meta class="detail entypo-newspaper" name="type" content="{{ include.type }}">
+{% when 'devices', 'device', 'gadget', 'gadgets', 'smartphone', 'smartphones', 'mobile' %}
+  <meta class="detail entypo-mobile" name="type" content="{{ include.type }}">
+{% when 'update', 'announcement' %}
+  <meta class="detail entypo-megaphone" name="type" content="{{ include.type }}">
+{% when 'business', 'entrepreneurship', 'entrepreneur' %}
+  <meta class="detail entypo-briefcase" name="type" content="{{ include.type }}">
+{% when 'software development', 'code', 'software', 'computer science' %}
+  <meta class="detail entypo-window" name="type" content="{{ include.type }}">
+{% when 'database', 'storage', 'db' %}
+  <meta class="detail entypo-database" name="type" content="{{ include.type }}">
+{% when 'web', 'internet', 'online' %}
+  <meta class="detail entypo-network" name="type" content="{{ include.type }}">
+{% when 'cloud', 'cluster', 'clusters' %}
+  <meta class="detail entypo-cloud-thunder" name="type" content="{{ include.type }}">
+{% when 'sensor', 'measure', 'measurement', 'measuring' %}
+  <meta class="detail entypo-thermometer" name="type" content="{{ include.type }}">
+{% when 'event', 'conference', 'festival', 'concert' %}
+  <meta class="detail entypo-ticket" name="type" content="{{ include.type }}">
+{% else %}
+{% endcase %}
