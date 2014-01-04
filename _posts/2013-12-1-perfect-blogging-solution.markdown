@@ -3,7 +3,13 @@ layout: post
 title:  "The perfect blog..."
 date:   2013-12-29 03:32:51
 thumbnail: nil
-categories: design tools
+type: tools
+tags:
+ - design
+ - code
+ - tools
+ - web
+ - devices
 description: My discoveries while rummaging through toolboxes looking for the blogging solution that works for me
 ---
 
@@ -42,22 +48,205 @@ probably suffice as well. All basically do the same thing (generate static
 websites) with minute differences.
 
 ## Design
-I'm not a designer
+I'm not a designer and therefore resorted to articles and papers to find a
+layout that worked well.
 
-## Embedded Content
-Tweets are practically copy pasted in here&hellip;
+### Text
+For reading I generally prefer _serif_ fonts. The font used in LaTeX or something 
+like [Iowan][iowan], which I first encountered in iBooks, read exceptionally
+well.
+
+My love for _serif_ fonts almost had me going in that direction until I started
+looking into some basic typography.
+
+Multiple sources mention _sans serif_ fonts having higher legiblity factors to
+their _serif_ counterparts whilst _serif_ fonts are generally known to have a
+higher readability factor.
+I&rsquo;m thinking &ldquo;readability is what I really want, should I go for
+serifs?&rdquo; I hardly care for readers finding one character understandable or 
+recognizable as I expect the significance of each and every character to drown 
+in the context of the word. The problem with _serif_&rsquo;s, however; is that they 
+are quite detailed and the many low-res devices still in use today will render 
+_serif_ fonts very unpleasant to read as put in [a TNW article][font-choice-tnw].
+The low-res screen story happens to provide the historical prologue to the
+pretense that _sans-serif_ types work best on screens.
+
+Luckily for me, not all  _sans serif_ fonts score low in readability. David 
+Jury happened to be so friendly to explain that relatively high 
+[x-heights][x-height] of _sans-serif_ types (in comparison to their _serif_ 
+counterparts) render words less readable as word shapes become less obvious. 
+If I focus on finding _sans-serif_ fonts where the types have long ascenders 
+and descenders I&rsquo;ll be fine.
+
+<div class="element">
+  <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Typography_Line_Terms.svg/500px-Typography_Line_Terms.svg.png" alt="typography terms">
+</div>
+
+So&hellip; word shapes play significant roles in the comprehension speed of
+written text. What else matters? According to David Jury type sizes between 9pt 
+to 12pt are generally considered equally readible to observers above 10 years 
+of age. I suppose my audience fits in the &ldquo;10 years and riper&rdquo; 
+category which hands us a winner&hellip; 11pts at which we should attempt to
+keep our lines limited to 60 characters ([David Jury, About Face page 74][about-face-size-serif]). 
+
+[Montserrat][montserrat] by [Julieta Ulanovsky][julieta] has a interesting 
+[history][montserrat-kickstarter], looks incredible and seems like it will fit
+the bill&hellip; untill people start complaining I will assume that it works well
+in the readability department.
+<div class="element video">
+  <iframe src="http://www.kickstarter.com/projects/julietaulanovsky/the-montserrat-typeface/widget/video.html" frameborder="0" scrolling="no"> </iframe>
+</div>
+
+### Color
+I love darkness&hellip; pun intended! I mostly work from terminal screens so I'm
+very comfortable looking at dark screens. I tried white text on a black
+background first.
+
+
+It seems that the object of our focus determines a lot in terms of perceived
+comfort. Reading white text on a dark background will have one fixated on
+white content, which happens to stimulates all three types of [cones][cones-wiki] in the
+retina. White on black is therefore quite strenuous on the human eye. Anthony
+recommended the use of black text on a light, somewhat gray-ish, background in
+his [post][darklight-text-ux]. All to reduce the amount of light reflected
+back at your delicate eyes.
+
+<blockquote>As for color, as long as there is sufficient contrast between the text and the background, many color combinations are 
+possible. However, most studies have shown that dark characters on a light background are superior to light characters 
+on a dark background (when the refresh rate is fairly high). For example, Bauer and Cavonius (1980) found that 
+participants were 26% more accurate in reading text when they read it with dark characters on a light background. 
+Moreover, a survey by Scharff, et al. (1996) revealed that the color combination perceived as being most readable is the 
+traditional black text on white background. However, it is common for websites (such as this one) to have an off-white 
+background in order to reduce the flicker and glare associated with white backgrounds.
+  <footer>Michael Bernard</footer>
+</blockquote>
+The fragment cited above is from the Michael's paper [Criteria for optimal web design (designing for usability)][optimal-web-design-criteria], which I stumbled upon through [a stackexchange question][darklight-stackexchange-ux].
+
+### Layout
+I haven&rsquo;t put too much thought into the layout. I wanted it simple. Long
+sentences, being [difficult][long-sentences-codinghorror] have been not-listed.
+A usability paper by J. Ryan Baker, titled [Is Multiple-Column Online Text Better? It Depends!][usability-columns-wichita]
+does a great job at establishing which alignment and column strategies work
+well for online documents. I have taken the liberty of assuming that some of
+the penalties for one-column texts are to be attributed the the lenght of the
+lines. Especially in the full-justified single-column text I had a hard time in
+keeping track of my position when finding my way from the end of a line to the
+beginning of its successor. A full justified two-column section, in which each
+column contains somewhere between 35 to 50 characters is a option I can back
+with common-sense and hard numbers.
+
+
+### Embedded Content
+Personally I hate scrolling through pages of only text. Somewhere along the
+line I will want to embed content into posts just to spice things up and
+provide relevant content within the same page.
+
+Nowadays any decent online service provider offers a quick way of embedding 
+content into webpages.
+
+Twitter, Youtube, Spotify and Instagram, among others, offer the ability to
+embed content in pages. My sample of nicely styled content (as in proper width
+and corresponding heights) are demonstrated beneath&hellip;
 <div class="element">
   <blockquote class="twitter-tweet" lang="en"><p>Those days when nothing seems to work :P… that’s when I abandon the code and turn to the piano <a href="https://twitter.com/search?q=%23coders&amp;src=hash">#coders</a> <a href="https://twitter.com/search?q=%23block&amp;src=hash">#block</a></p>&mdash; David Asabina (@vidbina) <a href="https://twitter.com/vidbina/statuses/417369790718959616">December 29, 2013</a></blockquote>
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
-
-&hellip;as are Youtube videos and other fascinating content.
 <div class="element video">
   <iframe src="//www.youtube.com/embed/j8cKdDkkIYY" frameborder="0" allowfullscreen></iframe>
 </div>
+<div class="element instagram">
+  <iframe src="//instagram.com/p/ahG9iTy0GM/embed/" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+</div>
+<div class="element spotify">
+  <iframe src="https://embed.spotify.com/?uri=spotify:track:32W1K50AaXGXoRBn3Zyax4" frameborder="0" allowtransparency="true"></iframe>
+</div>
+<div class="element spotify small">
+  <iframe src="https://embed.spotify.com/?uri=spotify:track:3aoDEt6zSuYQ47gzarlaVo" frameborder="0" allowtransparency="true"></iframe>
+</div>
 
-Nowadays any decent facilitator offers a quick way of embedding content into
-webpages.
+The embedded content from the different providers above is styled using a
+smart solution [documented by Marc Hinse][marchinse] which in fact is a 
+variation to the [padded box][paddedbox]. Hinse&rsquo;s method uses paddings 
+in a pseudo block element (the ```before```) to force containing divs to
+certain sizes. The content of these divs are then absolutely positioned in
+relation to the container and scaled to fill the container in terms of width
+and height. The absolute positioning ensures that the ```before``` content does
+not disrupt the layout.
+
+{% highlight css %}
+.element {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+.element > * {
+  width: 100%;
+}
+.video, .spotify, .instagram {
+  display: block;
+  position: relative;
+}
+.video *, .spotify *, .instagram * {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.video:before, .spotify:before, .instagram:before {
+  content: "";
+  display: block;
+}
+{% endhighlight %}
+
+Adding a embedded item to my page simply requires the addition of the ```iframe```&rsquo;s
+in divs of the ```.element``` class. Even with the ```width``` or ```height```
+attributes set on the ```iframe``` the styles will still ensure that the iframe
+fills up its container.
+
+{% highlight html %}
+<div class="element spotify">
+  /* copy the iframe from the embed snippet provided */
+  <iframe src="https://embed.spotify.com/?uri=blahblah" ...></iframe>
+</div>
+{% endhighlight %}
+
+The dimensions for several embedded elements are coded into the css using the
+```padding-top``` and ```padding-bottom``` properties. Spotify for instance
+displays a square record cover with a 80px control bar on top. The 
+width-to-height ratio for the image is 1:1 resulting to the ```padding-top: 100%```
+line. I want to reserve space that is at least as high as it is wide. The
+remaining 80 pixels are dealt with by the ```padding-bottom``` property.
+padding. Instagram has almost the same store but requires 98 pixes in additional
+padding for the information above and beneath the square image. My videos will
+be displayed in a 5:3 aspect ratio which coincides with Native Super 16mm film
+as listed on [wikipedia][aspectratio] and only deviates from the golden ratio
+by a percent.
+
+{% highlight css %}
+.instagram:before {
+  padding-top: 100%;
+  padding-bottom: 98px;
+}
+.spotify:before {
+  padding-top: 100%;
+  padding-bottom: 80px
+}
+.spotify.small:before {
+  padding-top: 0;
+}
+.video:before {
+  padding-top: 60%;
+  background: yellow;
+}
+{% endhighlight %}
+
+I guess I&rsquo;ve got it all covered.
+
+
+Time to start bloggin&hellip;
 
 [font-choice-tnw]: http://thenextweb.com/dd/2011/03/02/whats-the-most-readable-font-for-the-screen/#!qQBqd
 [usability-columns-wichita]: http://psychology.wichita.edu/surl/usabilitynews/72/columns.asp
@@ -70,3 +259,14 @@ webpages.
 [darklight-text-ux]: http://uxmovement.com/content/when-to-use-white-text-on-a-dark-background/
 [darklight-dosdonts]: http://www.webdesignerdepot.com/2009/08/the-dos-and-donts-of-dark-web-design/
 [ratiolock-css3]: http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+[montserrat]: http://www.google.com/fonts/specimen/Montserrat
+[montserrat-kickstarter]: http://www.kickstarter.com/projects/julietaulanovsky/the-montserrat-typeface
+[julieta]: http://zkysky.com.ar
+[iowan]: http://www.myfonts.com/fonts/bitstream/iowan-old-style/webfont_preview.html
+[about-face-size-serif]: http://books.google.nl/books?id=upqBMzlXBzsC&pg=PA74&lpg=PA74&dq=sans+serf+vs+serif+legibility&source=bl&ots=iKUnB5HvLE&sig=bLrLa6_dhUl0sVvT495glkR3RZA&hl=en&sa=X&ei=JvXGUp-SKZSQ0QWQiIDQDQ&ved=0CGgQ6AEwBQ#v=onepage&q&f=false
+[x-height]: http://en.wikipedia.org/wiki/X-height
+[cones-wiki]: http://en.wikipedia.org/wiki/Cone_cell
+[optimal-web-design-criteria]: http://uwf.edu/ddawson/d3net/documents/web_usability/optimal%20web%20design.pdf
+[paddedbox]: http://daverupert.com/2012/04/uncle-daves-ol-padded-box/
+[marchinse]: http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+[aspectratio]: http://en.wikipedia.org/wiki/Aspect_ratio_(image)
