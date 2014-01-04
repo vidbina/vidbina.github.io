@@ -16,7 +16,7 @@
 html, body { height: 100%; }
 
 body {
-  font: 15px Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 11pt Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   /*font-size: small; */
   text-align: center;
 }
@@ -80,40 +80,16 @@ a:visited { }
   width: 100%;
   display: block;
   margin: 0.5em 0;
+  overflow: hidden;
 }
-.element iframe {
+.element > * {
   width: 100%;
 }
 .video, .spotify, .instagram {
-  /*min-height: 4em;
-  max-height: 12em;*/
+  display: block;
   position: relative;
 }
-.instagram {
-  max-height: 596px;
-}
-.instagram:before {
-  content: "";
-  display: block;
-  padding-top: 130%;
-}
-.spotify:before {
-  content: "";
-  display: block;
-  padding-top: 110%;
-}
-.spotify.small:before {
-  padding-top: 80px;
-}
-
-.video:before {
-  content: "";
-  display: block;
-  padding-top: 60%;
-  background: yellow;
-}
 .video *, .spotify *, .instagram * {
-  display: block;
   top: 0;
   left: 0;
   bottom: 0;
@@ -121,6 +97,25 @@ a:visited { }
   position: absolute;
   width: 100%;
   height: 100%;
+}
+.video:before, .spotify:before, .instagram:before {
+  content: "";
+  display: block;
+}
+.instagram:before {
+  padding-top: 100%;
+  padding-bottom: 98px;
+}
+.spotify:before {
+  padding-top: 100%;
+  padding-bottom: 80px
+}
+.spotify.small:before {
+  padding-top: 0;
+}
+.video:before {
+  padding-top: 60%;
+  background: yellow;
 }
 
 .posts {
