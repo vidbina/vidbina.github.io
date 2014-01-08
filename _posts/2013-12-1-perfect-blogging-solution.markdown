@@ -18,12 +18,11 @@ has some excuses to convince me why I didn't. Last saturday was a conversation
 too many and I decided to actually give blogging a serious try this time, but
 where to start...
 
-## Needs/Requirements
 Any decent quest requires some objectives (how else would I know if I'd
 succeeded?). So here goes... I need something that:
 
  1. supports markdown
- 2. supports LaTeX-like formulas
+ 2. allows me to enter LaTeX-like formulas
  - supports embedded web content
  - runs as lean as possible
  - does not introduce new security hazzards
@@ -152,16 +151,16 @@ and corresponding heights) are demonstrated beneath&hellip;
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 <div class="element video">
-  <iframe src="//www.youtube.com/embed/j8cKdDkkIYY" frameborder="0" allowfullscreen></iframe>
+  <iframe width="420" height="315" src="//www.youtube.com/embed/MJ6IcYwVxV0" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="element instagram">
-  <iframe src="//instagram.com/p/ahG9iTy0GM/embed/" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+  <iframe src="//instagram.com/p/gICEH_Kc6b/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
 </div>
 <div class="element spotify">
   <iframe src="https://embed.spotify.com/?uri=spotify:track:32W1K50AaXGXoRBn3Zyax4" frameborder="0" allowtransparency="true"></iframe>
 </div>
 <div class="element spotify small">
-  <iframe src="https://embed.spotify.com/?uri=spotify:track:3aoDEt6zSuYQ47gzarlaVo" frameborder="0" allowtransparency="true"></iframe>
+  <iframe src="https://embed.spotify.com/?uri=spotify:track:3KsatAMRt1a7iryhWt5I8U" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 </div>
 
 The embedded content from the different providers above is styled using a
