@@ -4,6 +4,9 @@
 /*
 /*****************************************************************************/
 
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+
 /* Global Reset */
 * {
   margin: 0;
@@ -13,7 +16,7 @@
 html, body { height: 100%; }
 
 body {
-  font: 15px Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 11pt Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   /*font-size: small; */
   text-align: center;
 }
@@ -27,24 +30,44 @@ body, a, a:hover, a:visited, .logo path, svg path {
   color: #111;
 }
 
+blockquote {
+  border-left: 0.5em solid #111;
+  padding-left: 2em;
+}
+blockquote footer {
+  text-align: right;
+}
+blockquote footer:before {
+  content: "—";
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
+  font-size: 100%; 
+  font-style: none;
+}
 h1 {
   margin-top: 1.5em;
   font-size: 2.5em;
+  line-height: 1.5em;
 }
 h2 {
   margin-top: 1em;
   font-size: 2em;
+  line-height: 1.5em;
 }
 
 h3 {
   margin-top: 0.5em;
   font-size: 1.5em;
+  line-height: 1.5em;
 }
-p { margin: 1em 0; }
+p { 
+  font-size: 1em;
+  margin: 1em 0; 
+  line-height: 1.5em;
+}
 
-a         { text-decoration: none; }
+a         { text-decoration: none; font-weight: bold; font-style: italic; }
 a:hover   { }
 a:visited { }
 
@@ -53,28 +76,20 @@ a:visited { }
 /* Home
 /*
 /*****************************************************************************/
-.posts {
-  list-style-type: none;
-  margin-bottom: 2em;
-}
-
 .element {
   width: 100%;
   display: block;
+  margin: 0.5em 0;
+  overflow: hidden;
 }
-.video {
-  /*min-height: 4em;
-  max-height: 12em;*/
+.element > * {
+  width: 100%;
+}
+.video, .spotify, .instagram {
+  display: block;
   position: relative;
 }
-.video:before {
-  content: "";
-  display: block;
-  padding-top: 60%;
-  background: yellow;
-}
-.video * {
-  display: block;
+.video *, .spotify *, .instagram * {
   top: 0;
   left: 0;
   bottom: 0;
@@ -82,6 +97,37 @@ a:visited { }
   position: absolute;
   width: 100%;
   height: 100%;
+}
+.video:before, .spotify:before, .instagram:before {
+  content: "";
+  display: block;
+}
+.instagram:before {
+  padding-top: 100%;
+  padding-bottom: 98px;
+}
+.spotify:before {
+  padding-top: 100%;
+  padding-bottom: 80px
+}
+.spotify.small:before {
+  padding-top: 0;
+}
+.video:before {
+  padding-top: 60%;
+  background: yellow;
+}
+
+.posts {
+  list-style-type: none;
+  margin-bottom: 2em;
+}
+.posts > li > a {
+  font-style: normal;
+}
+.posts .detail {
+  display: block;
+  text-align: center;
 }
 .posts li {
   line-height: 1.75em;
@@ -92,6 +138,10 @@ a:visited { }
 
 .posts h1 {
   font-size: 1.5em;
+}
+
+.posts h1, .posts h2 {
+  text-align: center;
 }
 
 .posts time {
@@ -175,6 +225,7 @@ header a {
 }
 
 .footer {
+  margin: 0 10px;
   font-size: 80%;
   color: #666;
   border-top: 4px solid #666;
@@ -207,17 +258,43 @@ header a {
 /*
 /*****************************************************************************/
 
+
+.tags {
+  text-align: center!important;
+  list-style-type: none;
+  margin-top: 1em;
+  margin-left: 0!important;
+}
+.tags li {
+  display: inline-block!important;
+  font-size: 2em;
+}
+.tags span {
+  display: none;
+}
+
 /* standard */
 .post {
   padding: 10px;
   border-radius: 10px;
 }
+.post .detail {
+  display: block;
+  text-align: center;
+  margin-bottom: 0.25em;
+  line-height: 1em;
+}
+div.highlight {
+  border-radius: 2px;
+  overflow-y: scroll;
+}
 .post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
   padding: 0 .4em;
 }
-
+.pagination > * {
+  display: block;
+  text-align: center;
+}
 .post header {
 }
 .post header h1 {
@@ -231,13 +308,14 @@ header a {
 }
 
 .post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
+  border-radius: 2px;
   padding: 0 .2em;
+  color: #333;
 }
 
-.post pre code {
+.post pre > code {
   border: none;
+  background-color: none!important;
 }
 
 /* terminal */
@@ -249,4 +327,15 @@ header a {
 
 .post pre.terminal code {
   background-color: #333;
+}
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+.emoji {
+  line-height: 1em;
+  display: inline-block;
+  height: 1.5em;
+  margin-bottom: -.2em;
 }

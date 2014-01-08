@@ -1,3 +1,5 @@
 name: Blurt
 markdown: redcarpet
 pygments: true
+paginate: 50
+emoji_dir: /images/emoji
