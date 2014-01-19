@@ -1,8 +1,7 @@
 ---
 layout: post
-title:  "The perfect blog..."
+title:  The perfect blog...
 date:   2013-12-29 03:32:51
-thumbnail: nil
 type: tools
 tags:
  - design
@@ -13,12 +12,12 @@ tags:
 description: My discoveries while rummaging through toolboxes looking for the blogging solution that works for me
 ---
 
-I've had a few people ask me why I wasn't maintaining some blog and I've always
-has some excuses to convince me why I didn't. Last saturday was a conversation
+I've had a few people ask me why I was not maintaining some blog and I have always
+has some excuses to convince me why I did not. Last saturday was a conversation
 too many and I decided to actually give blogging a serious try this time, but
 where to start...
 
-Any decent quest requires some objectives (how else would I know if I'd
+Any decent quest requires some objectives (how else will I know if I have
 succeeded?). So here goes... I need something that:
 
  1. supports markdown
@@ -33,22 +32,23 @@ succeeded?). So here goes... I need something that:
  - offers me some metrics
 
 ## Machinery
-I've ignored [Wordpress][wordpress] and quickly glanced over [Ghost][ghost].
-Already partial to a solution that generates static content... that is not
-going to change anytime soon. I don't see the need for tending databases,
-maintaining a CMS, setting up authentication chains between applications and
-datasources, and scrolling through logs of bots all over the globe trying to
-bruteforce my database and CMS passwords.
+I have ignored [Wordpress][wordpress] and quickly glanced over [Ghost][ghost],
+because I am already partial to a solution that generates static content, which 
+is not going to change anytime soon. I do not see the need for tending 
+databases, maintaining a CMS, setting up authentication chains between 
+applications and datasources, and scrolling through logs containing the 
+addresses of the numerous bots which waste my resources in an effort to 
+bruteforce my passwords.
 
-I do a lot of coding in Ruby, Python, Javascript and C-ish languages so I guess
-any solution friendly to these languages will work for me. Jekyll was too easy
-to warrant moving on to test other solutions, but nanoc, DocPad and Hyde would
-probably suffice as well. All basically do the same thing (generate static
-websites) with minute differences.
+I do a lot of coding in Ruby, Python, Javascript and other C-ish languages so I 
+guess any solution friendly to these languages will work for me. Jekyll was too 
+easy to warrant moving on to test other solutions, but nanoc, DocPad and Hyde 
+would probably suffice as well. All basically do the same thing (generate 
+static websites) with minute differences.
 
 ## Design
 I'm not a designer and therefore resorted to articles and papers to find a
-layout that worked well.
+layout that would work well.
 
 ### Text
 For reading I generally prefer _serif_ fonts. The font used in LaTeX or something 
@@ -69,6 +69,9 @@ are quite detailed and the many low-res devices still in use today will render
 _serif_ fonts very unpleasant to read as put in [a TNW article][font-choice-tnw].
 The low-res screen story happens to provide the historical prologue to the
 pretense that _sans-serif_ types work best on screens.
+
+So for the sake of those ol&rsquo; skool devices let us stick with 
+_sans serif_&rsquo;s.
 
 Luckily for me, not all  _sans serif_ fonts score low in readability. David 
 Jury happened to be so friendly to explain that relatively high 
@@ -102,13 +105,13 @@ very comfortable looking at dark screens. I tried white text on a black
 background first.
 
 
-It seems that the object of our focus determines a lot in terms of perceived
-comfort. Reading white text on a dark background will have one fixated on
-white content, which happens to stimulates all three types of [cones][cones-wiki] in the
+It seems that the object of our focus determines a lot in terms of vocal comfort. 
+Reading white text on a dark background will have one fixated on
+white content, which happens to stimulate all three types of [cones][cones-wiki] in the
 retina. White on black is therefore quite strenuous on the human eye. Anthony
 recommended the use of black text on a light, somewhat gray-ish, background in
 his [post][darklight-text-ux]. All to reduce the amount of light reflected
-back at your delicate eyes.
+back at your delicate eyes. It makes sense.
 
 <blockquote>As for color, as long as there is sufficient contrast between the text and the background, many color combinations are 
 possible. However, most studies have shown that dark characters on a light background are superior to light characters 
@@ -123,29 +126,29 @@ The fragment cited above is from the Michael's paper [Criteria for optimal web d
 
 ### Layout
 I haven&rsquo;t put too much thought into the layout. I wanted it simple. Long
-sentences, being [difficult][long-sentences-codinghorror] have been not-listed.
-A usability paper by J. Ryan Baker, titled [Is Multiple-Column Online Text Better? It Depends!][usability-columns-wichita]
+sentences, being [difficult to track][long-sentences-codinghorror] have been 
+listed as _no-go_&srquo;s. A usability paper by J. Ryan Baker, titled [Is Multiple-Column Online Text Better? It Depends!][usability-columns-wichita]
 does a great job at establishing which alignment and column strategies work
 well for online documents. I have taken the liberty of assuming that some of
 the penalties for one-column texts are to be attributed the the lenght of the
 lines. Especially in the full-justified single-column text I had a hard time in
 keeping track of my position when finding my way from the end of a line to the
-beginning of its successor. A full justified two-column section, in which each
-column contains somewhere between 35 to 50 characters is a option I can back
-with common-sense and hard numbers.
+beginning of its successor. A fully justified two-column section, in which each
+column contains somewhere between 35 to 50 characters is a option I can now 
+back with common-sense and hard numbers.
 
 
 ### Embedded Content
 Personally I hate scrolling through pages of only text. Somewhere along the
-line I will want to embed content into posts just to spice things up and
+line I will need to embed content into posts just to spice things up and
 provide relevant content within the same page.
 
 Nowadays any decent online service provider offers a quick way of embedding 
 content into webpages.
 
 Twitter, Youtube, Spotify and Instagram, among others, offer the ability to
-embed content in pages. My sample of nicely styled content (as in proper width
-and corresponding heights) are demonstrated beneath&hellip;
+embed content using iframes. My sample of nicely styled content (as in proper 
+width and corresponding heights) is demonstrated beneath&hellip;
 <div class="element">
   <blockquote class="twitter-tweet" lang="en"><p>Those days when nothing seems to work :P… that’s when I abandon the code and turn to the piano <a href="https://twitter.com/search?q=%23coders&amp;src=hash">#coders</a> <a href="https://twitter.com/search?q=%23block&amp;src=hash">#block</a></p>&mdash; David Asabina (@vidbina) <a href="https://twitter.com/vidbina/statuses/417369790718959616">December 29, 2013</a></blockquote>
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -167,10 +170,17 @@ The embedded content from the different providers above is styled using a
 smart solution [documented by Marc Hinse][marchinse] which in fact is a 
 variation to the [padded box][paddedbox]. Hinse&rsquo;s method uses paddings 
 in a pseudo block element (the ```before```) to force containing divs to
-certain sizes. The content of these divs are then absolutely positioned in
-relation to the container and scaled to fill the container in terms of width
-and height. The absolute positioning ensures that the ```before``` content does
-not disrupt the layout.
+certain sizes. The contents of the containing div are then absolutely 
+positioned to ensure all containing elements start on top of each other and
+share point (0, 0) as their origin within the cathesian coordinate system. With
+all the elements lying on top of each other we simply have to render the 
+```before``` element invisible by setting its ```opacity```, ```z-index``` or
+```background``` and _inflate_ the ```before``` div to force its container to 
+the right size in terms of width and height. 
+
+This solution is most interesting because of the aspect-ratios and other 
+dimensional properties you will be able to assign to page elements but I will
+get to that in a short bit.
 
 {% highlight css %}
 .element {
@@ -212,17 +222,22 @@ fills up its container.
 </div>
 {% endhighlight %}
 
+The iframe does not support much styling unless you are willing to try your 
+hands at setting element-level styles on the ugly ducklings using javascript.
+I felt that a pure-CSS solution would be the cleanest way out for this specific
+problem.
+
 The dimensions for several embedded elements are coded into the css using the
 ```padding-top``` and ```padding-bottom``` properties. Spotify for instance
 displays a square record cover with a 80px control bar on top. The 
 width-to-height ratio for the image is 1:1 resulting to the ```padding-top: 100%```
 line. I want to reserve space that is at least as high as it is wide. The
 remaining 80 pixels are dealt with by the ```padding-bottom``` property.
-padding. Instagram has almost the same store but requires 98 pixes in additional
-padding for the information above and beneath the square image. My videos will
-be displayed in a 5:3 aspect ratio which coincides with Native Super 16mm film
-as listed on [wikipedia][aspectratio] and only deviates from the golden ratio
-by a percent.
+padding. Instagram pretty much has the same story but requires 98 pixes in 
+additional padding for the information above and beneath the square image.
+Videos will be displayed in a 5:3 aspect ratio which coincides with Native 
+Super 16mm film as listed on [wikipedia][aspectratio] and only deviates from 
+the golden ratio by a percent {{ ":wink:" | emojify }}.
 
 {% highlight css %}
 .instagram:before {
