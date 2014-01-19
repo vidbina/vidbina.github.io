@@ -13,11 +13,54 @@
   padding: 0;
 }
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 html, body { height: 100%; }
 
 body {
   font: 11pt Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  /*font-size: small; */
   text-align: center;
 }
 
@@ -85,11 +128,11 @@ a:visited { }
 .element > * {
   width: 100%;
 }
-.video, .spotify, .instagram {
+.video, .spotify, .instagram, .document {
   display: block;
   position: relative;
 }
-.video *, .spotify *, .instagram * {
+.video *, .spotify *, .instagram *, .document * {
   top: 0;
   left: 0;
   bottom: 0;
@@ -98,9 +141,21 @@ a:visited { }
   width: 100%;
   height: 100%;
 }
-.video:before, .spotify:before, .instagram:before {
+.video:before, .spotify:before, .instagram:before, .document:before {
   content: "";
   display: block;
+}
+.document.landscape:before {
+  padding-top: 75%;
+}
+.document.portrait:before {
+  padding-top: 150%;
+}
+.document.portrait-a4:before {
+  padding-top: 141.42%;
+}
+.document.landscape-a4:before {
+  padding-top: 70.71%;
 }
 .instagram:before {
   padding-top: 100%;
@@ -338,4 +393,179 @@ div.highlight {
   display: inline-block;
   height: 1.5em;
   margin-bottom: -.2em;
+}
+
+/* Impress */
+.fallback-message {
+    font-family: sans-serif;
+    line-height: 1.3;
+
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border: 1px solid #E4C652;
+    border-radius: 10px;
+    background: #EEDC94;
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
+}
+
+.impress-supported .fallback-message {
+    display: none;
+}
+body.impress-supported {
+  background-color: #111;
+  color: #bbb;
+}
+
+div#impress {
+  display: table;
+}
+.slide, #title {
+  height: 500px;
+  width: 800px;
+  font-size: 2.5em;
+  line-height: 1.5em;
+}
+.slide {
+  color: #bbb;
+  padding: 20px;
+  /*
+  background-color: #111;
+  border: 0.5em solid #bbb;
+  */
+  text-align: center;
+  position: relative;
+  display: table;
+}
+.slide img {
+  float: none!important;
+}
+.slide h1, .slide h2 {
+  margin-top: 0;
+}
+.slide ul, .slide ol {
+  display: inline-block;
+}
+.slide > h1, .slide > h2, .slide > h3, .slide > p, .slide > q, .slide > div {
+  margin: 0;
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+}
+
+.slide ul {
+  margin-top: 0.5em;
+}
+.slide li {
+  padding-bottom: 0.5em;
+}
+
+.slide q {
+  vertical-align: middle;
+  left: 0;
+  display: inline-block;
+}
+
+#title {
+  width: 2400px;
+}
+#title h1 {
+  margin: 20px 0 20px 0;
+}
+#title > h1 > span, #title > h2 > span, strong {
+  color: #111;
+  background-color: #bbb;
+}
+.impress-supported .logo {
+  display: inline-block;
+  background: #bbb;
+}
+.footnotes {
+  font-size: 0.75em;
+  margin-bottom: 20px;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+
+.step {
+  position: relative;
+}
+
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.2;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+.impress-enabled .step.active { opacity: 1 }
+
+/* turbulence  */
+@-webkit-keyframes turbulate {
+  0%   { -webkit-transform: translate(-2px, 0)    rotate(0deg)  scale(1); }
+  25%  { -webkit-transform: translate(0px, 2px)   rotate(-2deg) scale(1); }
+  50%  { -webkit-transform: translate(2px, 0)     rotate(0deg)  scale(1); }
+  75%  { -webkit-transform: translate(0px, -2px)  rotate(2deg)  scale(1); }
+  100% { -webkit-transform: translate(-2px, 0)    rotate(0deg)  scale(1); }
+}
+
+#intro b {
+  display: inline-block;
+  -webkit-transition: 0.5s;
+  -moz-transition:    0.5s;
+  -ms-transition:     0.5s;
+  -o-transition:      0.5s;
+  transition:         0.5s;
+}
+#intro.present b {
+  -webkit-animation-name: turbulate;
+  -webkit-animation-duration: 200ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+}
+#ing b {
+}
+.unhighlight, .highlight {
+  -webkit-transition: 1.5s;
+  -moz-transition:    1.5s;
+  -ms-transition:     1.5s;
+  -o-transition:      1.5s;
+  transition:         1.5s;
+
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay:    0.5s;
+  -ms-transition-delay:     0.5s;
+  -o-transition-delay:      0.5s;
+  transition-delay:         0.5s;
+}
+.present .unhighlight {
+  -webkit-transform: scale(0.5);
+  -moz-transform:    scale(0.5);
+  -ms-transform:     scale(0.5);
+  -o-transform:      scale(0.5);
+  transform:         scale(0.5);
+  text-decoration:   line-through;
+}
+.present .highlight {
+  -webkit-transform: scale(1.3);
+  -moz-transform:    scale(1.3);
+  -ms-transform:     scale(1.3);
+  -o-transform:      scale(1.3);
+  transform:         scale(1.3);
+}
+#ing.present .positioning {
+    border: 1px solid red;
+    -webkit-transform: translateY(-10px);
+    -moz-transform:    translateY(-10px);
+    -ms-transform:     translateY(-10px);
+    -o-transform:      translateY(-10px);
+    transform:         translateY(-10px);
 }
