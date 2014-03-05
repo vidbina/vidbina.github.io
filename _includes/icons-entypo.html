@@ -15,9 +15,9 @@
   <meta class="detail entypo-video" name="type" content="{{ include.type }}">
 {% when 'music' %}
   <meta class="detail entypo-music" name="type" content="{{ include.type }}">
-{% when 'study', 'research' %}
+{% when 'literature', 'writing' %}
   <meta class="detail entypo-book-open" name="type" content="{{ include.type }}">
-{% when 'math', 'academics', 'algebra', 'calculus', 'psychology' %}
+{% when 'study', 'research', 'math', 'academics', 'algebra', 'calculus', 'psychology', 'education' %}
   <meta class="detail entypo-graduation-cap" name="type" content="{{ include.type }}">
 {% when 'art' %}
   <meta class="detail entypo-palette" name="type" content="{{ include.type }}">
@@ -37,13 +37,15 @@
   <meta class="detail entypo-palette" name="type" content="{{ include.type }}">
 {% when 'idea' %}
   <meta class="detail entypo-lamp" name="type" content="{{ include.type }}">
+{% when 'price', 'award' %}
+  <meta class="detail entypo-trophy" name="type" content="{{ include.type }}">
 {% when 'news' %}
   <meta class="detail entypo-newspaper" name="type" content="{{ include.type }}">
 {% when 'devices', 'device', 'gadget', 'gadgets', 'smartphone', 'smartphones', 'mobile' %}
   <meta class="detail entypo-mobile" name="type" content="{{ include.type }}">
-{% when 'update', 'announcement' %}
+{% when 'update', 'announcement', 'talk' %}
   <meta class="detail entypo-megaphone" name="type" content="{{ include.type }}">
-{% when 'business', 'entrepreneurship', 'entrepreneur' %}
+{% when 'business', 'entrepreneurship', 'entrepreneur', 'work' %}
   <meta class="detail entypo-briefcase" name="type" content="{{ include.type }}">
 {% when 'software development', 'code', 'software', 'computer science' %}
   <meta class="detail entypo-window" name="type" content="{{ include.type }}">
@@ -55,7 +57,7 @@
   <meta class="detail entypo-cloud-thunder" name="type" content="{{ include.type }}">
 {% when 'sensor', 'measure', 'measurement', 'measuring' %}
   <meta class="detail entypo-thermometer" name="type" content="{{ include.type }}">
-{% when 'event', 'conference', 'festival', 'concert' %}
+{% when 'event', 'conference', 'festival', 'concert', 'workshop' %}
   <meta class="detail entypo-ticket" name="type" content="{{ include.type }}">
 {% else %}
 {% endcase %}
