@@ -40,7 +40,9 @@ Schiphol (EHAM) contains the following descriptions for GORLO departures:
  - GORLO 3V (from runway 36L)
  - GORLO 1Z (from runway 36L)
 
-In total there are five ways to start a GORLO departure.
+In total there are five ways to start a GORLO departure. Any one following a
+GORLO departure instruction from its designated take-off runway should end up
+heading the same direction eventually.
 
 I chose to take a look at GORLO 2N (runway 9) and got the following take-off 
 route description:
@@ -69,7 +71,7 @@ left turn after take-off and the waypoints we have to cross on our way to
 GORLO.
 
 <div class="element document portrait-a4">
-  <embed class="a4" src="http://www.ais-netherlands.nl/aim/2013-11-28-AIRAC/eAIP/html/graphics/eAIP/EH-AD-2.EHAM-SID-09.pdf?">
+  <embed class="a4" src="http://vid.bina.me/resources/aviation/departure_charts/eham_aip_rwy09_20130919.pdf">
 </div>
 
 ## VOR
@@ -124,7 +126,7 @@ On the map we have our frequencies, approach patterns and corresponding
 airspeeds and altitudes, which should be enough to keep the process 
 moving forward.
 <div class="element document portrait-a4">
-  <embed src="http://www.falkiaviation.com/Media/Downloads/approachcharts/2013-03-16/fac-approachplate-smjp.pdf">
+  <embed class="a4" src="http://vid.bina.me/resources/aviation/approach_plates/smjp_jeppesen_20120817.pdf">
 </div>
 
 Yet again, a FlightGear How-to video comes to the rescue by quickly explaining
@@ -171,3 +173,4 @@ sleep.
 [pbm]: http://www.japi-airport.com/?page_id=15
 [vor-intercept]: http://www.youtube.com/watch?v=q2ZJPD8L1Bk
 [flightgear-vordme]: http://www.youtube.com/watch?v=z8yEHyKs_JE
+[ais-eham-gorlo-rwy9]: http://www.ais-netherlands.nl/aim/2013-12-26-AIRAC/eAIP/html/graphics/eAIP/EH-AD-2.EHAM-SID-09.pdf?
