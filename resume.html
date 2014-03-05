@@ -1,0 +1,34 @@
+---
+layout: default
+title: Resume
+---
+<article class="post">
+  <header>
+    <time datetime="{{ post.date  }}">{{ post.date  }}</time>
+    <h1>
+      {% include icons-entypo.html type=page.type %}
+      {{ page.title }}
+    </h1>
+  </header>
+
+  <p>
+    Name: David Asabina
+  </p>
+  <p>
+    E-mail: <a href="mailto:as@bina.me">as at bina dot me</a>
+  </p>
+
+  <ul class="experience">
+    {% for experience in site.data.experience %}
+    {% if experience.public %}
+    <li>
+      {% include icons-entypo.html type=experience.type %}
+      <a href="{{experience.organization.url}}">{{experience.organization.name}}</a>,
+      <span>{{experience.title}}</span>
+      <p>{{experience.period}}</p>
+      <p>{{experience.description}}</p>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</article>
