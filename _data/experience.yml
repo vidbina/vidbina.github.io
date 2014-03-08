@@ -1,0 +1,155 @@
+- organization:
+    name: Laundr
+    url: https://laundr.co
+  period: 2012 - current
+  title: Co-founder/engineer
+  description: Engineer for the Laundr tech landscape. As lead-engineer my responsibilities involve the execution and management of development of the back-end and client applications (for both smartphones and web) necessary to offer a user-friendly service to the customers.
+  active: true
+  public: true
+  type: work
+  relationship: core-member
+- organization:
+    name: Ratemash
+    url: http://ratemash.com
+    country: United Kingdom
+  period: 2013
+  title: Full-stack developer
+  description: 
+  active: false
+  public: false
+  type: workshop
+  relationship: core-member
+- organization:
+    name: Startupbus
+    url: http://www.startupbus.com
+  period: 2013
+  type: event
+  title: Participant
+  description: Parttaker in the Startupbus tour in which a team of bright minds (designers, engineers/developers and business developers) had as the main goal to usher a concept into existence within 3 days en-route to the final desination. During the tour I adopted the role of technology lead for the Startup Tycoon team in order to develop a working tycoon game. We eventually ended up with a gaming logic engine which took care of the gaming mechanics for a tycoon game whilst presenting the content through text to the end-user.
+  active: true
+  public: true
+  type: workshop
+- organization:
+    name: Codename Wire
+    url: https://wire.labs.supr.nu
+  period: 2012 - current
+  title: Co-founder/engineer
+  description: 
+  active: false
+  public: false
+  type: work
+  relationship: core-member
+- organization:
+    name: Memocom
+    url: http://www.memocom.com
+  period: 2013
+  title: Free-lancer
+  description: Free-lance developer maily responsible for implementing e-mail synchronization in the Ruby-based CRM.
+  active: true
+  public: true
+  type: work
+  relationship: participant
+- organization:
+    name: LSM
+    url: http://www.leanstartupmachine.com
+  period: 2012
+  title: Participant
+  description: Parttaker in the 2012th Edition of the Lean Startup Machine workshop in Rotterdam designed to teach participants the practical applications of lean methodologies in establishing a viable business forthcoming from a concept, focussing especially on customer development. The team I was enlisted to won the first-prize for this competition.
+  active: true
+  public: true
+  type: workshop
+  relationship: participant
+- organization:
+    name: Suprnovae
+    url: http://www.supr.nu
+  period: 2012 - current
+  title: Founder/engineer
+  description: Initial founder and starting engineer of the agency, with our core-focus on helping start-ups usher ideas into the realm of reality. The company accomplishes this by assisting in the development of software (smartphone apps, web apps) and the engineering of necessary electronics.
+  active: true
+  public: true
+  type: work
+  relationship: owner
+- organization:
+    name: Metatronics
+    url: http://www.metatronics.nl
+  period: 2011 - 2012
+  title: Embedded Systems Engineering Intern
+  description: Intern charged with the development of a proof-of-concept for a home-automation system and the development of a track-and-tracing solution utilizing GPS and GPRS technology. My activities involved the engineering of the circuitry, circuit boards and software.
+  active: true
+  public: true
+  type: work
+  relationship: intern
+- organization:
+    name: Hogeschool Rotterdam (University of Rotterdam)
+    url: http://www.hro.nl
+  period: 2007 - 2012
+  title: B.Eng (Electronics Engineering, Embedded Systems)
+  description: Student of the Embedded Systems Engineering track at the Electronics department of the Engineering and Applied Sciences faculty at the university. The educational program touched on subjects varying from the conceptual design of system architectures to the construction of electronic circuitry leveraging concepts from control theory, power electornics, analog electronics and digital electronics domains. During the course of the program I parttook in the development of robots, amplifiers, control circuits and software systems During the course of the program I parttook in the development of robots, amplifiers, control circuits and software systems in the context of mandatory lab-assignments/projects.
+  active: false
+  public: true
+  type: education
+  relationship: student
+- organization:
+    name: T.U. Delft
+    url: http://www.tudelft.nl
+  period: 2007
+  title: drop-out
+  description: 
+  active: false
+  public: false
+  type: education
+  relationship: student
+- organization:
+    name: Peppered B.V.
+    url: http://www.peppered.nl
+  period: 2007 - 2010
+  title: Part-time all-around developer
+  description: Part-time developer mainly responsible for constructing the mailing templates and assisting in minor framework feature implementation sessions.
+  active: false
+  public: true
+  type: work
+  relationship: employee
+- organization:
+    name: IAMGold Rosebel Goldmines N.V.
+    country: Suriname 
+    url: http://www.iamgold.com/English/Operations/Operating-Mines/Rosebel-Gold-Mine-Suriname/default.aspx
+  period: 2006 - 2007
+  title: ICT Technician
+  description: ICT Technician primarily responsible for assisting in the maintenance of the communications infrastructure. Activities consisted of the troubleshooting of telephone links, installation of telecommunications equipment (PBX expansion boards, additional lines), troubleshooting of computer problems and repairing defective computing workstations.
+  active: false
+  public: true
+  type: work
+  relationship: employee
+- organization:
+    name: Ampies Broadcasting Corporation
+    country: Suriname 
+    url: http://www.abcsuriname.com
+  period: 2005 - 2006
+  title: Audio Engineer
+  description: Engineer during the live radio shows aired throughout my assigned shift. The job involved the management of prepared cues to be played-back on-air during the radioshows, the preparation of the studios for broadcast (placing and testing needed equipment in the studios), the live mixing of all involved aural inputs for broadcast and the assisting of hosts in technical matters (the editing of audio samples to be used in the shows).
+  active: false
+  public: true
+  type: work
+  relationship: employee
+- organization:
+    name: Mediavision N.V.
+    country: Suriname 
+    url: http://www.mediavision.sr
+  period: 2005
+  title: Network Administrator
+  description: Maintainer of a small network of approximately ten workstations with the responsibilities of troubleshooting/repairing workstations and resolving networking problems.
+  active: false
+  public: true
+  type: work
+  relationship: employee
+- organization:
+    name: Hencom Trai.
+    country: Suriname 
+    url: http://www.hencomtrai.com
+  period: 2004
+  title: Store clerk
+  description: Store clerk in the internet-cafe/print-shop with the task of assisting customers in navigating the internet and printing documents
+  active: false
+  public: true
+  type: work
+  relationship: employee
