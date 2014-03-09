@@ -14,16 +14,92 @@ description: The road I ventured from concept to almost first-shipment, basicall
 ---
 
 I believe it has been a month and a half since this idea has been floating 
-around in the start-up space. Orgeon came up with it, got the Saddle fellers 
-all too much excited about the concept and that is how the ball started rolling.
+around in the [Port][port]. Orgeon came up with the bit, got the 
+[Saddle][saddl] fellers all too much excited about the concept and that is how 
+the ball started rolling.
 
-
+<div class="element">
+  <img 
+    src="/resources/startup/laundr/landing_page_20140309.png" 
+    alt="Laundr Landing Page">
+</div>
 ## The short version
 This is the short version of the story
 
- - Orgeon starts getting people excited about the story
- - Saddle joins in on the excitement
- - The ,now Laundr fellers, start talking with people about the idea
- - The Laundr fellers get tailors excited and willing to eventually join
+<ol class="timeline">
+<li class="label">Week 1</li>
+<li>Orgeon starts getting people excited about the idea</li>
+<li>Saddle digs the idea and jumps in</li>
+<li class="label">Week 2</li>
+<li>The fellers start talking with people (local tailors, laundromats and businessmen) about the idea</li>
+<li>The Saddl team gets some UI ideas going {{ ":iphone:" | emojify }}</li>
+<li>I start working on a simple Node.js back-end {{ ":construction:" | emojify }}</li>
+<li>I jump on the plane for a two week break {{ ":sunrise:" | emojify }}</li>
+<li class="label">Week 4</li>
+<li>Break is over {{ ":rage:" |emojify }}, I start working on the web app (Cordova and Angular are my tools of choice for this mission)</li>
+<li class="label">Week 5</li>
+<li>The Saddl fellers join the development effort to help {{ ":muscle:" | emojify }} out with front-end issues leaving us with a development team at last</li>
+<li>First version of the app is ready for shipment (some issues still pending, but it works well enough to get started)</li>
+<li class="label">Week 5</li>
+<li>First pickup and delivery {{ ":gift:" | emojify }}</li>
+</ol>
 
- [laundr]: www.laundr.co
+## Lessons Learned
+The following points are things I consider learned lessons for the next 
+experiment. Most of the lessons learned during this experiment should assist
+me in being even _lean-er_ the next time I attempt another one such experiment.
+
+### Waiting for a Minor Cog
+We were setting up a pickup-and-delivery service with a plus -- we were adding
+a extra service between the pickup and delivery. As such the service is 
+already elaborate enough to be tested apart from the form intended to use in 
+communicating with our end-user. After all, the app is just a small cog in the
+machine.
+
+We spend at least 2 weeks waiting for an app. Two weeks within which we could
+have taken orders by phone {{ ":phone:" | emojify }} or e-mail 
+{{ ":computer:" | emojify }}, heck we even could have used plain ol' text 
+messages to get the ball rolling.
+
+Quick analysis attributed the higests riscs to the the third-party service 
+(the washing) and the logistics (pick-up and delivery). Because we've partnered
+up with the good fellers from [Saddl][saddl] the logistics part is pretty much
+covered, making our only real risc the laundromats we're planning to work with.
+Our situation got us to the point where we had an app running before
+we started to actually discover the pains in morphing the service into a 
+well-oiled machine -- before we picked up our first suit. Not to say that 
+isn't a solution, but my 2 cents say it would have been even better if we had
+covered that while having the app in the oven.
+
+I learned never to mistake an app for the product again, if it isn't. Even if
+team members aren't convinced of the plausibility of testing without a channel
+of lesser importance to the general service. I believe the biggest issue began
+with thinking of the app as a irreplaceable part of the service while it is
+simply a medium. We could have been able to claim with certainty how the 
+entire flow would work by the time the app was available. We didn't, but bet 
+your ass that I will make sure of it that things work differently the next 
+time.
+
+### Experimenting During Production
+Playing with new ideas and toys is best left to experimental projects executed
+by the R&D dept's of the world. Somehow we still managed to utilize a pre-alpha 
+framework in the mobile webapp being developed. Due to major updates during the 
+course of development, documentation inconsistencies and some minor bugs, we 
+were set back quite an amount of time in development as we sought to resolve 
+these issues.
+
+We were using [Ionic][ionic] and honestly, I love it. My only regret is that
+I didn't adequately accounted for the riscs in getting acquianted with a new
+framework, especially something as volatile as a alpha release product, in our 
+time-to-market estimations. Somewhere during the project I seriously considered
+pulling the plug on the Ionic branch (after many hours spend on fixing 
+{{ "shit" | emojify }}), but realized that I had already spend too much time
+in "making things work" that it would provide little resolve to venture down
+that road&hellip; so onwards we went.
+
+We made it, but it was a hell of a gamble.
+
+[laundr]: www.laundr.co
+[port]: http://startupfoundation.co/rotterdam-startup-port/
+[saddl]: www.saddl.nl
+[ionic]: http://ionicframework.com

@@ -569,3 +569,32 @@ div#impress {
     -o-transform:      translateY(-10px);
     transform:         translateY(-10px);
 }
+
+.timeline li {
+  border: 2px solid #111;
+  /*color: #bbb;*/
+  /*background: #111;*/
+  padding: 10px;
+  margin-bottom: 10px;
+  display: block;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+.timeline li.label {
+  display: inline-block;
+}
+/*
+.timeline li:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: block;
+  background: #111;
+  border: 1px solid #111;
+  -webkit-border-radius: 100px;
+     -moz-border-radius: 100px;
+          border-radius: 100px;
+}
+*/
