@@ -13,14 +13,38 @@ description: A quick glance at some of the properties of operators as commonly e
 
 ## Associativity
 The associative law basically states that the association one makes for
-a set of tokens in an equation, at the same level of precendence, is not
-influential to the outcome of the evaluation.
+a set of tokens in an equation, to be subjected to the same type of operation, 
+is not influential to the outcome of the evaluation.
 
 \\(a+b+c = a+(b+c) = (a+b)+c = (a+c)+b \\)
 
-In the former case all elements $a$, $b$ and $c$ reside at the exact same
-level of precedence. Due to this given, the order utilized in evaluating the
-equation should not result to different outcomes.
+In the former case all elements $a$, $b$ and $c$ are to be subjected to the
+same type of operation &dash; addition. The addition operator happens to be
+associative so however we influence the precedence of any of the addition
+operators, the result would remain the same. The same cannot be said for 
+exponentiation for example.
+
+### Left, Non, Right
+Operators may be left-associative, non-associative or right-associative. In the
+case of left-associative operators, one should imagine that all tokens to the
+left of the operator are evaluated prior to executing the operation. 
+For right-associative operators you just have to imagine the same as 
+left-associative operators with the left substituted for right. 
+Non-associative operators simply don't care.
+
+Addition and subtraction operators are mostly dealt with as being left 
+associative which is why $a+b-c+d$ would be evaluated as $((a+b)-c)+d$.
+Division and multiplication are also left-associative operations.
+
+Exponentiation is a right-associative operation, so we evaluate everything to
+the right of the operator prior to executing the current operation leading to 
+\\(a^{b^{c}}\\) being evaluated as \\(a^{(b^c)}\\). In many computer languages
+the exponentiation operation is represented by the (caret) ```^``` expressing
+$a^b$ as ```a^b```. Mistakingly dealing with exponents as left-associative
+would cause one to evaluate $a^{b^{c}}$ as $(a^b)^c$ which would cause
+erronous results in most cases (in the cases where $a=b=c$ you could have many
+fooled when applying the operation with a blatant disregard for associativity 
+{{ ":scream:" | emojify }}).
 
 ## Commutativity
 Commutativity is always tied to an operator. The property deals with the
