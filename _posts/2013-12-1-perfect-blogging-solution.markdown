@@ -9,6 +9,7 @@ tags:
  - tools
  - web
  - devices
+mathjax: true
 description: My discoveries while rummaging through toolboxes looking for the blogging solution that works for me
 ---
 
@@ -99,6 +100,13 @@ in the readability department.
 <div class="element video">
 <iframe src="http://www.kickstarter.com/projects/julietaulanovsky/the-montserrat-typeface/widget/video.html" frameborder="0" scrolling="no"> </iframe>
 </div>
+
+### Math
+Another matter I had not yet discussed is the presentation of mathematical
+formulae. My go-to solution for web-math is [MathJax][mathjax]. What can I say
+I'm a \\(\tex\\) guy {{ ":wink:" | emojify }}. Anyways the quadratic formula
+looks as slick as it looks in \\(\LaTex\\) documents if printed like \\(ax^2 + bx + c = 0\\).
+
 
 ### Color
 I love darkness&hellip; pun intended! I mostly work from terminal screens so I'm
@@ -290,3 +298,4 @@ Time to start bloggin&hellip;
 [paddedbox]: http://daverupert.com/2012/04/uncle-daves-ol-padded-box/
 [marchinse]: http://www.mademyday.de/css-height-equals-width-with-pure-css.html
 [aspectratio]: http://en.wikipedia.org/wiki/Aspect_ratio_(image)
+[mathjax]: http://www.mathjax.org/

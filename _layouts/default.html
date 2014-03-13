@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="/css/syntax.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
+
+    {% if page.mathjax %}
+    {% include mathjax.html %}
+    {% endif %}
   </head>
   <body>
     <div class="site">
