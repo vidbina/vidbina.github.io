@@ -93,18 +93,48 @@ song.play # object.verb
 {% endhighlight %}
 
 During a half-hour stroll I just figured that we could introduce the concept
-of contexts in our language. Within the implementation of a object the implicit
-subject is always ```self``` unless one specified one explicitly.
+of contexts in our language which isn't much different from the concept of a
+class. Within the implementation of a object the implicit the subject is 
+always ```self``` unless specified otherwise.
 
     as a cop
-      upon meeting a robber, arrest him
-      upon witnessing a felony in progress, request backup
-      upon arrest, recite the rights to the perp 
-        then take the perp into custody
-      upon shots fired, draw weapon
-      upon shot at, shoot back
-      upon confrontation, greet
-      upon being greeted, greet
+      upon meeting a robber,
+        arrest!
+      upon meeting a civilian,
+        greet!
+      upon arrest,
+        recite the rights to the perp
+        then take the perp into custody.
+      upon witnessing a felony in progress,
+        request backup.
+      upon shots fired,
+        draw weapon.
+      upon shot at,
+        shoot back.
+
+Let's look at the cop context from the perspective of traditional OOP 
+programming.
+
+{% highlight ruby %}
+class Cop
+  def meet(person)
+    greet! if person.is_a? Civilian
+    arrest! if person.is_a? Robber
+  end
+
+  def arrest
+    recite_rights and take_into_custody
+  end
+
+  def recite_rights
+    puts 'you have the right...'
+  end
+
+  def take_into_custody
+    # ...
+  end
+end
+{% endhighlight %}
 
     as a superhero
       upon meeting a villain, kick ass
@@ -116,7 +146,9 @@ subject is always ```self``` unless one specified one explicitly.
       upon confrontation with real name, ignore
       upon being greeted anonymously, greet
       upon being greeted as superhero, greet
-      upon being greeted as person, ignore or act confused if it is obviously the greeter meant me
+      upon being greeted as a person, 
+        ignore or 
+        act confused if the greeter obviously meant me
 
     agent12 is like a cop
     agent12 meets smartthief # a robber changes into a detainee once caught

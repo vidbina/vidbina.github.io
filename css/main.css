@@ -367,6 +367,9 @@ div.highlight {
   padding: 0 .2em;
   color: #333;
 }
+.post .highlight code {
+  color: #bbb;
+}
 
 .post pre > code {
   border: none;
@@ -533,6 +536,8 @@ div#impress {
 }
 #ing b {
 }
+/* TODO: rename highlight... clashes w/ impress.js classes */
+/*
 .unhighlight, .highlight {
   -webkit-transition: 1.5s;
   -moz-transition:    1.5s;
@@ -561,6 +566,7 @@ div#impress {
   -o-transform:      scale(1.3);
   transform:         scale(1.3);
 }
+*/
 #ing.present .positioning {
     border: 1px solid red;
     -webkit-transform: translateY(-10px);
