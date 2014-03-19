@@ -92,10 +92,12 @@ MusicPlayer.play(song) # subject.action(verb)
 song.play # object.verb
 {% endhighlight %}
 
-During a half-hour stroll I just figured that we could introduce the concept
+### Classes
+During a half-hour stroll I decided that we could introduce the concept
 of contexts in our language which isn't much different from the concept of a
-class. Within the implementation of a object the implicit the subject is 
-always ```self``` unless specified otherwise.
+class. Within the implementation of a object the implicit subject of the 
+methods, which we will discuss next, is always 
+```self``` unless specified otherwise.
 
     as a cop
       upon meeting a robber,
@@ -105,12 +107,6 @@ always ```self``` unless specified otherwise.
       upon arrest,
         recite the rights to the perp
         then take the perp into custody.
-      upon witnessing a felony in progress,
-        request backup.
-      upon shots fired,
-        draw weapon.
-      upon shot at,
-        shoot back.
 
 Let's look at the cop context from the perspective of traditional OOP 
 programming.
@@ -125,16 +121,78 @@ class Cop
   def arrest
     recite_rights and take_into_custody
   end
-
-  def recite_rights
-    puts 'you have the right...'
-  end
-
-  def take_into_custody
-    # ...
-  end
 end
 {% endhighlight %}
+
+In the listed Ruby-ish snippet, I've taken the liberty to express the formerly 
+listed cop context as a Ruby class. It now becomes quite clear that ```as``` or
+```as a``` phrases are used to indicate the description of a _class_ where 
+```as``` indicates the implementation of a class, while ```as a``` denotes the
+implementation for an instance of the class.
+
+    as a god
+      upon receiving a prayer
+        listen!
+      upon being blasphemed by Cartman
+        strike!
+
+The above snippet declared the ```God``` class and the necessary class methods.
+Although the context within which I've chosen to declare the class methods is
+not ideal I figure the message comes accross.
+
+#### Inheritance
+    as a god
+      when I answer
+        start thunder,
+        start lighting and
+        speak it, in a low voice
+
+    Zeus as a god
+      upon a request for name
+        answer "Krishna"
+
+    FSM as a god
+      upon a request for name
+        answer "Flying Spaghetti Monster"
+      when I answer,
+        answer and rain pastasauce
+
+### Methods
+The ```upon``` keyword is used to express a _method_. As formerly stated the
+subject is implicitly given, through the class.
+
+    as a cop # subject: a cop
+      upon meeting a robber, # event: meeting a robber
+        arrest! # action: I, being the cop, arrest!
+
+The robber is the object in the statement and the arrest action is performed
+on this object (the cop arrests the robber). The language should automatically
+apply the action to the object listed as a parameter in the method definition
+```upon meeting a robber``` (```meeting``` is the action, ```a robber``` is the
+first parameter). For the sake of readability we might want to introduce a few
+keywords (```it```, ```him``` and ```her```) as pointers to the object. In 
+case one would prefer not to use the ```arrest!``` statement (using the 
+implicit referral to the robber), one could opt for ```arrest it```, 
+```arrest him```  or ```arrest her```.
+
+The probem with ```upon``` is that we express lines as ```upon meeting x```,
+but somewhere in the code we might want to initiate a meeting between the cop
+and something/someone else using syntax like ```cop meet x```, 
+```cop do meet x```  or ```cop meets x```. If I want to use the 
+```cop meet x``` syntax I will need to teach the language how to conjugate 
+verbs {{ ":shit:" | emojify }}. We could use the ```when``` or ```when I``` 
+keywords to make things even prettier, or uglier. {{ ":bulb:" | emojify }}.
+Basically looking at the ```arrest``` action will already give us some possible
+solutions.
+
+    as a cop
+      when I arrest a robber
+        state its rights and
+        cuff him
+#### Extension
+How do we merge two method declarations into a single method (the 
+```meeting a robber``` and ```meeting a cilivian``` situations all pertain
+to the ```meeting``` action)
 
     as a superhero
       upon meeting a villain, kick ass
@@ -150,9 +208,11 @@ end
         ignore or 
         act confused if the greeter obviously meant me
 
-    agent12 is like a cop
-    agent12 meets smartthief # a robber changes into a detainee once caught
 
+In the superhero example, for instance, we decide that the ```kick ass``` 
+action is most appropriate upon ```meeting a villain```. The subject of that
+kick ass action will obviously be the superhero. This is one example of how
+subject matter is implicitly determined by the parent class.
 ### Sort
     //piki
 
