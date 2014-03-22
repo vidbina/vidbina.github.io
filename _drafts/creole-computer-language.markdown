@@ -9,8 +9,11 @@ description: An interesting experiment in developing a computer language based o
 ---
 
 I just thought of an interesting weekend project. Build a compiler for a 
-computer language that utilzed terms from creole language and uses the grammer
-of the spoken language as much as possible.
+computer language based on the vocabulary and grammar from a creole language.
+Of all creole languages, I am most acquainted with the Suriname creole 
+version, and scouring the web for some history got me a few interesting
+youtube videos that would do quite well in kicking off the start of this 
+journey.
 
 <div class="element video">
   <iframe width="420" height="315" src="//www.youtube.com/embed/_VFXoqfoi6I" frameborder="0" allowfullscreen></iframe>
@@ -21,14 +24,20 @@ of the spoken language as much as possible.
 </div>
 
 ## Constructs
-Basically I'll have to determine the basic constructs the language should 
-support.
+When I think of a language I quickly think in terms of constructs that I 
+already know from existing computer languages &dash;&dash; I am therefore 
+extremely biased and perhaps not the best candidate for concocting something 
+new.
+
+I have already though a bit about classes, methods, conditional statements, 
+looping mechanisms, basic operators and use of punctuation. 
 
 ### Conditional Statements
-Starting with the basic ```if```'s &dash; I will need a proper way to describe
-such logic. The language allows for the following grammer, which bears striking
-similarity to the grammatical structure utilized in the English language &dash;
-There is a reason they call it _neger-engels_ (Negro-English).
+Conditional logic is frequently needed in programs. I will need a proper way to 
+describe such logic. The Suriname language allows for the following grammer, 
+which bears striking similarity to the grammatical structure utilized in the 
+English language &dash; There is a reason they call it _neger-engels_ 
+(Negro-English):
 
     efu disi dan dati # if this then that
 
@@ -50,10 +59,17 @@ if (music.available?)
 end
 {% endhighlight %}
 
-Presenting the _if music is available, play music_ sentence to the Surinamese
-language would give us `efu poku de, prei poku` (`if x, y`),
-`efu poku de dan prei poku` (`if x then y`)
-but also `prei poku efu poku de` (`y if x`).
+In the Surinamese language conditional logic is often used as such:
+
+  - `efu poku de, prei poku` (`if x, y`),
+  - `efu poku de dan prei poku` (`if x then y`)
+  - but also `prei poku efu poku de` (`y if x`).
+
+If we want to support all the above methods of describing conditional logic,
+we should add the terms ```if``` and ```then``` to the list of reserved 
+keywords. We could also determine that from this moment onward, the usage of a
+comma signifies the delimiter between the condition (```x```) and the action
+(```y```).
 
 The `prei poku` phrase presents another set of challenges, if we try to 
 approximate the natural language as much as possible, because in many cases 
@@ -63,34 +79,39 @@ evident the language does not employ plurals, but simply indicates number by
 means of the article preceding the noun. This challenge will be dealt with when
 we think of the mechanism in calling functions.
 
-Back to the if's&hellip;
-
-### While
-    di disi, dati
-
-
 ### Calling
-Previously I mentioned how the `prei poku` phrase presented a challenge that
-would fit best in the function calling mechanism.
+Any decent language, should offer the ability to describe functions. This 
+allows for code reuse which is a great way to allow more with less (less 
+characters and lines) {{ ":thumbsup:" | emojify }}.
 
-In the `prei poku` phrase `prei` is the action (_play_) and `poku` is the 
-object being acted upon (_music_). As the action may be specific to the 
-object, I would assume that would fit the object-method design pattern. The
-challenge, however; is that the object-method pattern is often designed as such
-to state the object first and the action second.
+In the `prei poku` (`play music`) phrase `prei` is the action (_play_) and 
+`poku` is the object being acted upon (_music_). As the action may be specific 
+to the object &dash;&dash; the play action on a music item is quite different 
+to the play action on a mandolin or a videogame console &dash;&dash; I would 
+assume this would fit the object-method design pattern.
+The challenge, however; is that the object-method pattern is often designed as 
+such to state the object first and the action second as presented in the next
+snippet:
 
-But wait&hellip; there should be a subject, and in the case of the 
-_if music is available, play music_ bit, the subject is most likely the second
-person _you_ resulting to the phrase being understood as 
-_if music is available, you play music_ or 
-_Hey you, If music is available play it!_ However you prefer to phrase it we
-clearly have to account for the subject, action/verb and an object being acted
-upon.
+    object.action(parameters)
+
+But wait&hellip; now we need a subject as full sentences in the English 
+language contain at least a subject and a verb. In the case of the 
+`prei poku` (`play music`) bit, the subject is implicit but most likely _you_, 
+resulting to the phrase being understood as `yu prei poku` (`you play music`).
+After all, someone or something needs to do it.
 
 {% highlight ruby %}
-MusicPlayer.play(song) # subject.action(verb)
-song.play # object.verb
+music_player.play(song) # subject.action(object)
+song.play # object.action
 {% endhighlight %}
+
+The language being created should not support `object action` logic as the
+natural language does not support such grammar either. It really makes no sense
+to say _song play_, _wall paint_ or _car drive_ while _play song_, _paint wall_
+and _drive car_ do make sense. As the subject, _I_, is implied in the 
+previously mentioned phrases we will need to consider mechanism for supplying 
+a subject in case of phrases of code where the subject would be implied.
 
 ### Classes
 During a half-hour stroll I decided that we could introduce the concept
@@ -149,13 +170,17 @@ not ideal I figure the message comes accross.
 
     Zeus as a god
       upon a request for name
-        answer "Krishna"
+        answer "Zeus"
 
     FSM as a god
       upon a request for name
         answer "Flying Spaghetti Monster"
       when I answer,
         answer and rain pastasauce
+
+### While
+    di disi, dati
+
 
 ### Methods
 The ```upon``` keyword is used to express a _method_. As formerly stated the
