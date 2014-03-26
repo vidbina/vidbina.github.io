@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="/css/syntax.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
+    {% for stylesheet in page.stylesheets %}
+    <link rel="stylesheet" href="{{stylesheet}}">
+    {% endfor %}
   </head>
   <body>
     <div class="site">
@@ -109,6 +112,5 @@
 
   ga('create', 'UA-46897803-1', 'bina.me');
   ga('send', 'pageview');
-
 </script>
 </html>
