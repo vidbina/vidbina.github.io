@@ -1,17 +1,25 @@
+/*
 #basic-auth-game > div.client {
-  left: 50%; top: 50%;
+  z-index: 1000;
+}
+#basic-auth-game > div.server {
+  z-index: 100;
+}
+*/
+#basic-auth-game > div.client, #basic-auth-game div.server {
+  left: 0; top: 0;
   position: absolute;
   overflow-x: hidden;
   overflow-y: auto;
-  height: 200px; margin-top: -100px;
-  width: 250px; margin-left: -125px;
+  height: 100%;
+  width: 100%;
   display: block;
   /*color: #00FF00;*/
   font-family: Consolas, monospace;
   font-size: 0.6em;
   background: #222;
 }
-#basic-auth-game > div.client > pre {
+#basic-auth-game > div.client > pre, #basic-auth-game > div.server > pre {
   color: #DDD;
   display: block;
   position: relative;
@@ -25,7 +33,7 @@
   white-space:   -o-pre-wrap;
   word-wrap: break-word;
 }
-#basic-auth-game > div.client > pre:nth-child(odd) {
+#basic-auth-game > div.client > pre:nth-child(odd), #basic-auth-game > div.server  pre:nth-child(odd) {
   background: #333;
 }
 
