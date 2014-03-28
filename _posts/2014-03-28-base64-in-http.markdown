@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Getting to 64th Base"
+title: "64th Base in HTTP"
 description: "In sending Basic Auth credentials we Base64 encode our handles and secrets. Why?"
 type: "web"
 tags:
@@ -63,7 +63,7 @@ following example I just parse the authorization scheme descriptor followed
 by a seperator (1 or more space characters) followed by a base64 string which 
 would be a alphanumeric string ending in equal signs. As soon as I run into 
 something that does not fit the format I throw up an _invalid syntax_ 
-exception. This design makes for a healthy parser.
+exception. This design makes for a healthy parser {{ ":relaxed:" | emojify }}.
 
     GET /resource HTTP/1.1
     Host: example.com
@@ -72,5 +72,20 @@ exception. This design makes for a healthy parser.
 ## Not So Weird After All
 The idea of formatting user-supplied data to prevent weird behaviour when used
 in the context of another format is not so foreign to computing after all. 
-When dealing with SQL querries we basically do something quite similar to 
-prevent SQL-injection attacks.
+
+In many cases it has a much simpler form when named _character escaping_. When 
+dealing with SQL querries we basically do something quite similar to 
+prevent [SQL-injection][sql-injection].
+
+In url&rsquo;s we also escape characters just to comply to the set of allowed
+characters for url&rsquo;s in accordance to the standard. You must have noticed
+the `%20` phrase in some urls, which is simply the result of URL-encoding the 
+space character.
+
+Wikipedia has an article on [delimiter collision][del-collision] which deals
+with this specific problem, so we and all the pieces of software we compose can 
+all get along {{ ":sunglasses:" | emojify }}.
+
+[del-collision]: http://en.wikipedia.org/wiki/Delimiter_collision#Delimiter_collision
+[sql-injection]: http://en.wikipedia.org/wiki/SQL_injection
+[url-chars]: http://www.w3schools.com/tags/ref_urlencode.asp

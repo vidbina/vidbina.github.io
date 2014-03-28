@@ -377,6 +377,9 @@ div.highlight {
   padding: 0 .2em;
   color: #333;
 }
+.post .highlight code {
+  color: #bbb;
+}
 
 .post pre > code {
   border: none;
