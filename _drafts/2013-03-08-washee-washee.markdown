@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Animating Mr. Washee Washee (Building Laundr)
+title:  Animating Mr. Washee Washee (My Version of the Laundr Story)
 date:   2014-03-08 13:11:89
 type: start-up
 tags:
@@ -10,16 +10,24 @@ tags:
  - experiment
  - mobile
  - back-end
-description: The road I ventured from concept to almost first-shipment, basically a short review of how we got Laundr up and running.
+description: "Laundr picks up, cleans and delivers your suits when you want it, where you want it. This article chronicles the events as I experienced them. Conception, first app shipment and first actual delivery."
 ---
 
 I believe it has been a month and a half since this idea has been floating 
-around in the [Port][port]. Orgeon came up with the bit, got the 
-[Saddle][saddl] fellers all too much excited about the concept and that is how 
-the ball started rolling.
+around in the [Port][port]&hellip; a month ago {{":ghost:" | emojify }} (I just 
+undusted this post from my dusty drafts collection). Orgeon came up with the 
+bit, got the [Saddl][saddl] fellers all too much excited about the concept 
+and that is how the ball started rolling.
 
-Idea: Offer a suit dry cleaning service to blue collar workers allowing 
-user-specified pickup and delivery times and locations.
+The idea: Offer a qualitative suit dry cleaning service to blue collar workers 
+allowing user-specified pickup and delivery times and locations. Qualitative 
+as in, people should dare entrust us their expensive suits.
+{{ ":necktie:" | emojify }} {{ ":package:" | emojify }}
+
+The advantage: Don&rsquo;t ever worry about heading to the dry cleaners 
+yourself again. Now you can spend even more time stuck in your (awesome) office 
+(in the summer), having one less excuse to head out to catch a fresh whiff 
+of air {{ ":innocent:" | emojify }}.
 
 <div class="element">
   <img 
@@ -30,21 +38,27 @@ user-specified pickup and delivery times and locations.
 ## The short version
 
 <ol class="timeline">
-<li class="label">Week 1</li>
+<li class="label">Week 1<!-- week 3 of 2014 --></li>
 <li>Orgeon starts getting people excited about the idea</li>
 <li>Saddle digs the idea and jumps in</li>
-<li class="label">Week 2</li>
+<li class="label">Week 2<!-- week 4 of 2014 --></li>
 <li>The fellers start talking with people (local high-end tailors, laundromats and businessmen) about the idea</li>
 <li>The Saddl team gets some UI ideas going {{ ":iphone:" | emojify }}</li>
 <li>I start working on a simple Node.js back-end {{ ":construction:" | emojify }}</li>
-<li>I jump on the plane for a two week break {{ ":sunrise:" | emojify }}</li>
-<li class="label">Week 4</li>
+<li class="label">Week 3</li>
+<li>Get at much work done for Laundr in between the other gigs I&rsquo;s eloquently juggling</li>
+<li>Jump on the plane at the beginning of the weekend for a two week break {{ ":sunrise:" | emojify }}</li>
+<li class="label">Week 6<!-- week 8 --></li>
 <li>Break is over {{ ":rage:" |emojify }}, I start working on the web app (Cordova and Angular are my tools of choice for this mission)</li>
-<li class="label">Week 5</li>
+<li class="label">Week 7<!-- week 9 --></li>
 <li>The Saddl fellers join the development effort to help {{ ":muscle:" | emojify }} out with front-end issues leaving us with a development team at last</li>
 <li>First version of the app is ready for shipment (some issues still pending, but it works well enough to get started)</li>
-<li class="label">Week 5</li>
+<li class="label">Week 10<!-- week 12 --></li>
+<li>Bumped the version to 0.0.2, we have testing the app for a while now. Fuck it, we should just ship it! {{ ":shipit:" | emojify }}</li>
+<li class="label">Week 11</li>
 <li>First pickup and delivery {{ ":gift:" | emojify }}</li>
+<li class="label">Week 12<!-- week 14x --></li>
+<li>Submit app to the Apple app store</li>
 </ol>
 
 ## Lessons Learned
@@ -106,6 +120,10 @@ that it would provide little resolve to venture down that road&hellip; so
 onwards we went.
 
 We made it, but it was a hell of a gamble.
+
+<div class="element video">
+  <iframe width="420" height="315" src="//www.youtube.com/embed/NJCupS7bDbQ" frameborder="0" allowfullscreen></iframe>
+</div>
 
 [laundr]: www.laundr.co
 [port]: http://startupfoundation.co/rotterdam-startup-port/
