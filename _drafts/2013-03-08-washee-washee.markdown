@@ -84,7 +84,7 @@ either yet we waited much too long to accept orders through simple
 low-tech channels using bullshit excuses.
 
 <div class="element">
-  <img alt="A few mood shots of the Laundr operation" src="/img/laundr/ops-collage-042014.jpg">
+  <img alt="A few mood shots of the Laundr operation" src="/resources/startup/laundr/ops-collage-042014.jpg">
 </div>
 
 Quick analysis attributed the higests riscs to the the third-party service 
@@ -108,7 +108,7 @@ is that?!? {{ ":unamused:" | emojify }}, just because we were chasing
 perfection... yeah right? Perfection for who... ourselves?
 
 <div class="element">
-  <img alt="A few mood shots of the Laundr operation" src="/img/laundr/orgeon-home-042014.jpg">
+  <img alt="A few mood shots of the Laundr operation" src="/resources/startup/laundr/orgeon-home-042014.jpg">
 </div>
 
 George, Max and I have made some nice tweaks and there are too many issues we
