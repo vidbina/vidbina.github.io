@@ -135,14 +135,20 @@ perpetually fulfilling the recreational needs of any one human being. Although
 every experience of a piece may unearth new treasures, sometimes a complete 
 replenishing of one&rsquo;s art supply is necessary. Just try enjoying the same
 song everytime you need music and keep it up for a year &dash;&dash; Just one 
-song {{ ":scream:"| emojify}}. It will probably drive you nuts.
+song {{ ":scream:"| emojify}}. It will probably drive you nuts. Why is that?!?
+Well humans change/evolve/adapt and with this change demands and problems 
+change as well. 
+
+<!--
+The only timeless invention was death and as far as I know that was not invented by a human.
+-->
 
 ### Introducing Risks During Development
 Playing with new ideas and toys is best left to be done in the experimental 
 projects executed by the R&D deparmtments of the world, but then again all
-cool startups are R&D departments. Yet there is a difference in building 
-something new with the tools you master and building something new with the 
-tools you have just discovered {{ ":wrench:" | emojify }}. 
+cool startups are basically R&D departments executing experiments. Yet there is 
+a difference in building something new with the tools you master and building 
+something new with the tools you have just discovered {{ ":wrench:" | emojify }}. 
 
 Somehow we still managed to do the later and utilize a pre-alpha 
 framework in the mobile webapp being developed. Due to major updates during 
@@ -173,6 +179,10 @@ isn't a solution, but my 2 cents say it would have been even better if we had
 made a couple of pickups and deliveries while still having the app in the oven.
 
 
+<div class="element cta">
+  <a href="http://thesummit.co/kilimanjaro/nominees-alpha#entry-199">Vote to get Laundr to Kilimanjaro {{ ":mount_fuji:" | emojify}}</a>
+</div>
+
 Anyways, we&rsquo;ve applied for the Kilimanjaro climb (we still need to figure
 out which one of us would get to go if we get selected), but there is progress
 and this team was absolutely great in helping me obtain these experiences and
@@ -182,6 +192,18 @@ and the gates of Mordor are still a few challenges and orc encounters away.
 
 <div class="element video">
   <iframe width="420" height="315" src="//www.youtube.com/embed/NJCupS7bDbQ" frameborder="0" allowfullscreen></iframe>
+</div>
+
+Lessons learnt, moving on a bit smarter and wiser.
+
+[Do not forget to vote for us][kilimanjaro] we really appreciate any 
+**[votes][kilimanjaro]** we can muster. Ask your folks and friends to vote and 
+if grandma does not get it, help her out, but really for the love of mother 
+Earth, **[vote][kilimanjaro]** and help Laundr help you 
+{{ ":trophy:" | emojify }}.
+
+<div class="element cta">
+  <a href="http://thesummit.co/kilimanjaro/nominees-alpha#entry-199">Vote for Laundr {{ ":mount_fuji:" | emojify}}</a>
 </div>
 
 <!--
@@ -201,8 +223,7 @@ consider playing around with new tools and toys.
 -->
 
 
-Lessons learnt, moving up (for the next ones).
-
+[kilimanjaro]: http://thesummit.co/kilimanjaro/nominees-alpha#entry-199
 [laundr]: www.laundr.co
 [port]: http://startupfoundation.co/rotterdam-startup-port/
 [saddl]: www.saddl.nl
