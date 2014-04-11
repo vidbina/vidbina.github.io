@@ -13,15 +13,15 @@ tags:
 description: "Laundr picks up, cleans and delivers your suits when you want it, where you want it. This article chronicles the events as I experienced them. Conception, first app shipment and first actual delivery."
 ---
 
-I believe it has been a few month and a half since this idea has been floating 
+I believe it has been a month and a half since this idea has been floating 
 around in the [Port][port]&hellip; a month and a half ago 
 {{":ghost:" | emojify }} (I just undusted this post from my drafts 
-collection so we have time travelled into the future since then 
+collection so we have time travelled further into the future since then 
 {{ ":stuck_out_tongue_closed_eyes:" | emojify }}). Orgeon came up with the 
 bit, got the [Saddl][saddl] fellers all too much excited about the concept 
 and that is how the ball started rolling.
 
-The idea: Offer a qualitative suit dry cleaning service to blue collar workers 
+The idea: Offer a qualitative suit dry cleaning service to white collar workers 
 allowing user-specified pickup and delivery times and locations. Qualitative 
 as in, people should dare entrust us their expensive suits.
 {{ ":necktie:" | emojify }} {{ ":package:" | emojify }}
