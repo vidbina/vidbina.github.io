@@ -116,7 +116,7 @@ still want to tackle in the app, but many people don&rsquo;t see those yet. As
 a musician I often experienced gigs which I judged to be suboptimal. I either 
 made many mistakes or the band synergy just seemed to be off. The audience 
 usually seemed totally oblivious to these obvious blunders which goes to show 
-that builders look through different sets of focal lenses in comparison to the
+that builders look through different sets of lenses in comparison to the
 common folk (everybody else) and are very aware of all the blemishes and often 
 unsuccesful in relating these blemishes to the actual impact they will end up 
 having. 
@@ -136,8 +136,8 @@ every experience of a piece may unearth new treasures, sometimes a complete
 replenishing of one&rsquo;s art supply is necessary. Just try enjoying the same
 song everytime you need music and keep it up for a year &dash;&dash; Just one 
 song {{ ":scream:"| emojify}}. It will probably drive you nuts. Why is that?!?
-Well humans change/evolve/adapt and with this change demands and problems 
-change as well. 
+Well, I guess humans constantly change/evolve/adapt and with this, demands and 
+problems change as well which calls for altered solutions.
 
 <!--
 The only timeless invention was death and as far as I know that was not invented by a human.
@@ -199,8 +199,7 @@ Lessons learnt, moving on a bit smarter and wiser.
 [Do not forget to vote for us][kilimanjaro] we really appreciate any 
 **[votes][kilimanjaro]** we can muster. Ask your folks and friends to vote and 
 if grandma does not get it, help her out, but really for the love of mother 
-Earth, **[vote][kilimanjaro]** and help Laundr help you 
-{{ ":trophy:" | emojify }}.
+Earth, **[vote][kilimanjaro]** and help Laundr out {{ ":trophy:" | emojify }}.
 
 <div class="element cta">
   <a href="http://thesummit.co/kilimanjaro/nominees-alpha#entry-199">Vote for Laundr {{ ":mount_fuji:" | emojify}}</a>
