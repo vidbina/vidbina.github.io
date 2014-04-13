@@ -130,7 +130,7 @@ a:visited { }
 .element > * {
   width: 100%;
 }
-.video, .spotify, .instagram, .document, .game {
+.video, .spotify, .instagram, .document, .game, .music {
   display: block;
   position: relative;
   overflow: hidden;
@@ -147,6 +147,10 @@ a:visited { }
 .game * {
   width: 0;
   height: 0;
+}
+.music textarea {
+  display: none;
+  border: 1px solid blue;
 }
 .video:before, .spotify:before, .instagram:before, .document:before, .game:before {
   content: "";
