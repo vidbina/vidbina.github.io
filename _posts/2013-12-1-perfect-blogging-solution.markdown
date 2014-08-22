@@ -161,23 +161,23 @@ width and corresponding heights) is demonstrated beneath&hellip;
 
 <div class="element">
   <blockquote class="twitter-tweet" lang="en"><p>Those days when nothing seems to work :P… that’s when I abandon the code and turn to the piano <a href="https://twitter.com/search?q=%23coders&amp;src=hash">#coders</a> <a href="https://twitter.com/search?q=%23block&amp;src=hash">#block</a></p>&mdash; David Asabina (@vidbina) <a href="https://twitter.com/vidbina/statuses/417369790718959616">December 29, 2013</a></blockquote>
-  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"> </script>
 </div>
 
 <div class="element video">
-  <iframe width="420" height="315" src="//www.youtube.com/embed/MJ6IcYwVxV0" frameborder="0" allowfullscreen></iframe>
+  <iframe width="420" height="315" src="//www.youtube.com/embed/MJ6IcYwVxV0" frameborder="0" allowfullscreen> </iframe>
 </div>
 
 <div class="element instagram">
-  <iframe src="//instagram.com/p/gICEH_Kc6b/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+  <iframe src="//instagram.com/p/gICEH_Kc6b/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"> </iframe>
 </div>
 
 <div class="element spotify">
-  <iframe src="https://embed.spotify.com/?uri=spotify:track:32W1K50AaXGXoRBn3Zyax4" frameborder="0" allowtransparency="true"></iframe>
+  <iframe src="https://embed.spotify.com/?uri=spotify:track:32W1K50AaXGXoRBn3Zyax4" frameborder="0" allowtransparency="true"> </iframe>
 </div>
 
 <div class="element spotify small">
-  <iframe src="https://embed.spotify.com/?uri=spotify:track:3KsatAMRt1a7iryhWt5I8U" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+  <iframe src="https://embed.spotify.com/?uri=spotify:track:3KsatAMRt1a7iryhWt5I8U" width="300" height="380" frameborder="0" allowtransparency="true"> </iframe>
 </div>
 
 The embedded content from the different providers above is styled using a
@@ -232,7 +232,7 @@ fills up its container.
 {% highlight html %}
 <div class="element spotify">
   /* copy the iframe from the embed snippet provided */
-  <iframe src="https://embed.spotify.com/?uri=blahblah" ...></iframe>
+  <iframe src="https://embed.spotify.com/?uri=blahblah" ...> </iframe>
 </div>
 {% endhighlight %}
 

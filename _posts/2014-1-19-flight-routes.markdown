@@ -119,7 +119,7 @@ execute a VOR-DME approach, which has been nicely explained in a FlightGear
 tutorial I found on [youtube][flightgear-vordme].
 
 <div class="element video">
-  <iframe src="http://www.youtube.com/embed/aIJHn3iSipE" frameborder="0" allowfullscreen></iframe>
+  <iframe src="http://www.youtube.com/embed/aIJHn3iSipE" frameborder="0" allowfullscreen> </iframe>
 </div>
 
 On the map we have our frequencies, approach patterns and corresponding 
@@ -133,7 +133,7 @@ Yet again, a FlightGear How-to video comes to the rescue by quickly explaining
 some of the concepts encountered in this map. 
 
 <div class="element video">
-  <iframe src="http://www.youtube.com/embed/z8yEHyKs_JE" frameborder="0" allowfullscreen></iframe>
+  <iframe src="http://www.youtube.com/embed/z8yEHyKs_JE" frameborder="0" allowfullscreen> </iframe>
 </div>
 
 My summary of the ILS approach, 
