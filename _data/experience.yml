@@ -1,19 +1,76 @@
 - organization:
+    name: SolarSwing
+    url: https://www.solarswing.com
+  period: May 2014 - current
+  title: Engineer
+  description: Working on some things I'm not fully at liberty to discuss. I am mostly busy designing the electronics necessary to extract data from the system (using sensors, filters and amplifiers) and implement these functionalities in the firmware.
+  keywords:
+   - C/C++
+   - Analog electronics
+   - Embedded systems
+   - Spark
+  active: true
+  public: true
+  type: work
+  relationship: free-lancer
+- organization:
+    name: Muvement
+    url: https://api.muve.io
+  period: May 2014 - current
+  title: Engineer
+  description: Developing a simple platform for tracking user movements and triggering actions using geofences as markers.
+  keywords:
+   - Ruby
+   - Sinatra
+   - Ruby on Rails
+   - RabbitMQ
+   - SOA
+   - iOS
+   - geo-location
+   - geo-fencing
+  active: true
+  public: false
+  type: work
+  relationship: sole-developer
+- organization:
     name: Laundr
     url: https://laundr.co
-  period: 2014 - current
+  period: Februari 2014 - current
   title: Co-founder/engineer
   description: Engineer for the Laundr tech landscape. As lead-engineer my responsibilities involve the execution and management of development of the back-end and client applications (for both smartphones and web) necessary to offer a user-friendly service to the customers.
+  keywords:
+   - Javascript (Node.js)
+   - PostgreSQL
+   - Redis
+   - MongoDB
+   - Cordova
   active: true
   public: true
   type: work
   relationship: core-member
 - organization:
+    name: SolarSwing
+    url: https://www.solarswing.nl
+  period: May 2014 - July 2014
+  title: Engineer
+  description: Developed a sensing option for the detection of the blinds and helped to incorporate the feature into the existing firmware.
+  keywords:
+   - Analog electronics
+   - C/C++
+   - Digital Signal Processing
+  active: true
+  public: false
+  type: work
+  relationship: trial
+- organization:
     name: Ratemash
     url: http://ratemash.com
     country: United Kingdom
+  keywords:
+   - Ruby (Ruby on Rails)
+   - PostgreSQL
   period: 2013
-  title: Full-stack developer
+  title: freelancer
   description: 
   active: false
   public: false
@@ -29,6 +86,10 @@
   active: true
   public: true
   type: workshop
+  keywords:
+   - Ruby (Ruby on Rails)
+   - PostgreSQL
+  relationship: participant
 - organization:
     name: Codename Wire
     url: https://wire.labs.supr.nu
@@ -39,16 +100,24 @@
   public: false
   type: work
   relationship: core-member
+  keywords:
+   - Scala (Play)
+   - PostgreSQL
 - organization:
     name: Memocom
     url: http://www.memocom.com
-  period: 2013
+  period: June 2013 - October 2013
   title: Free-lancer
-  description: Free-lance developer maily responsible for implementing e-mail synchronization in the Ruby-based CRM.
+  description: Free-lance developer maily responsible for implementing e-mail synchronization and processing (automatic linking of related entities to e-mails) in the CRM.
   active: true
   public: true
   type: work
   relationship: participant
+  keywords:
+   - Ruby (Ruby on Rails)
+   - MySQL
+   - in-app e-mail synchronization
+   - background jobs
 - organization:
     name: LSM
     url: http://www.leanstartupmachine.com
@@ -79,6 +148,11 @@
   public: true
   type: work
   relationship: intern
+  keywords:
+   - Wifi (802.11)
+   - GPRS
+   - Radio
+   - Python (Twisted)
 - organization:
     name: Hogeschool Rotterdam (University of Rotterdam)
     url: http://www.hro.nl
@@ -89,6 +163,13 @@
   public: true
   type: education
   relationship: student
+  keywords:
+   - VHDL
+   - C/C++
+   - PLC
+   - Embedded Systems
+   - Analog Electronics
+   - Power Electronics
 - organization:
     name: T.U. Delft
     url: http://www.tudelft.nl
@@ -109,6 +190,9 @@
   public: true
   type: work
   relationship: employee
+  keywords:
+   - PHP
+   - MySQL
 - organization:
     name: IAMGold Rosebel Goldmines N.V.
     country: Suriname 

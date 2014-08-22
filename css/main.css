@@ -702,3 +702,14 @@ div#impress {
   display: block;
   width: 100%;
 }
+
+.labels span {
+  border: 1px solid black;
+  margin: 5px 5px 5px 5px;
+  padding: 0 10px 0 10px;
+  border-radius: 10px;
+  color: #bbb;
+  background-color: #111;
+  white-space: nowrap;
+  display: inline-block;
+}

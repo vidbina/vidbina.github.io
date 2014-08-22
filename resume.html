@@ -27,6 +27,9 @@ title: Resume
       <span>{{experience.title}}</span>
       <p>{{experience.period}}</p>
       <p>{{experience.description}}</p>
+      {% if experience.keywords %}
+      <p class="labels">{% for tech in experience.keywords %}<span>{{ tech }}</span>{% endfor %}</p>
+      {% endif %}
     </li>
     {% endif %}
     {% endfor %}
