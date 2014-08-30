@@ -1,11 +1,28 @@
 - organization:
+    name: Toperators
+    url: https://www.toperators.com
+    country: The Netherlands
+  period: August 2014
+  title: Engineer
+  description: Spend a weekend helping an acquaintance from Startupbus to finish and deploy the Rails application. We worked on implementing S3 storage, fixing the routing, refactoring the codebase and building and improving several core features to help in having a prototype ready in time for the IBC conference.
+  keywords:
+   - Ruby on Rails
+   - PostgreSQL
+   - S3
+  active: true
+  public: true
+  type: work
+  relationship: barter
+- organization:
     name: SolarSwing
     url: https://www.solarswing.com
+    country: The Netherlands
   period: May 2014 - current
   title: Engineer
-  description: Working on some things I'm not fully at liberty to discuss. I am mostly busy designing the electronics necessary to extract data from the system (using sensors, filters and amplifiers) and implement these functionalities in the firmware.
+  description: Working on some things I'm not fully at liberty to discuss. I am mostly busy designing the electronics necessary to extract data from the system (using sensors, filters and amplifiers) and implementing the complementary logic in the firmware.
   keywords:
    - C/C++
+   - ARM Cortex-M software development
    - Analog electronics
    - Embedded systems
    - Spark
@@ -16,6 +33,7 @@
 - organization:
     name: Muvement
     url: https://api.muve.io
+    country: The Netherlands
   period: May 2014 - current
   title: Engineer
   description: Developing a simple platform for tracking user movements and triggering actions using geofences as markers.
@@ -35,11 +53,13 @@
 - organization:
     name: Laundr
     url: https://laundr.co
+    country: The Netherlands
   period: Februari 2014 - current
   title: Co-founder/engineer
   description: Engineer for the Laundr tech landscape. As lead-engineer my responsibilities involve the execution and management of development of the back-end and client applications (for both smartphones and web) necessary to offer a user-friendly service to the customers.
   keywords:
-   - Javascript (Node.js)
+   - AngularJS
+   - Node.js
    - PostgreSQL
    - Redis
    - MongoDB
@@ -51,6 +71,7 @@
 - organization:
     name: SolarSwing
     url: https://www.solarswing.nl
+    country: The Netherlands
   period: May 2014 - July 2014
   title: Engineer
   description: Developed a sensing option for the detection of the blinds and helped to incorporate the feature into the existing firmware.
@@ -67,18 +88,21 @@
     url: http://ratemash.com
     country: United Kingdom
   keywords:
-   - Ruby (Ruby on Rails)
+   - Ruby on Rails
    - PostgreSQL
-  period: 2013
-  title: freelancer
-  description: 
+   - Run-time optimization
+   - Indexing
+  period: November 2013 - December 2013
+  title: Engineer
+  description: Spend a few days refactoring the application to accomodate more traffic. Some of the steps taken involved the configuration of indexes in the relational database and the refactoring of code for optimal performance. For some operations these steps slashed the runtime to a timespan less than a fifth of the former execution time.
   active: false
-  public: false
-  type: workshop
+  public: true
+  type: work
   relationship: core-member
 - organization:
     name: Startupbus
     url: http://www.startupbus.com
+    country: The Netherlands
   period: 2013
   type: event
   title: Participant
@@ -93,8 +117,9 @@
 - organization:
     name: Codename Wire
     url: https://wire.labs.supr.nu
+    country: The Netherlands
   period: 2012 - current
-  title: Co-founder/engineer
+  title: Co-founder/Engineer
   description: 
   active: false
   public: false
@@ -106,8 +131,9 @@
 - organization:
     name: Memocom
     url: http://www.memocom.com
+    country: The Netherlands
   period: June 2013 - October 2013
-  title: Free-lancer
+  title: Engineer
   description: Free-lance developer maily responsible for implementing e-mail synchronization and processing (automatic linking of related entities to e-mails) in the CRM.
   active: true
   public: true
@@ -121,6 +147,7 @@
 - organization:
     name: LSM
     url: http://www.leanstartupmachine.com
+    country: The Netherlands
   period: 2012
   title: Participant
   description: Parttaker in the 2012th Edition of the Lean Startup Machine workshop in Rotterdam designed to teach participants the practical applications of lean methodologies in establishing a viable business forthcoming from a concept, focussing especially on customer development. The team I was enlisted to won the first-prize for this competition.
@@ -128,11 +155,15 @@
   public: true
   type: workshop
   relationship: participant
+  keywords:
+   - Concept Validation
+   - Customer Development
 - organization:
     name: Suprnovae
     url: http://www.supr.nu
+    country: The Netherlands
   period: 2012 - current
-  title: Founder/engineer
+  title: Founder/Engineer
   description: Initial founder and starting engineer of the agency, with our core-focus on helping start-ups usher ideas into the realm of reality. The company accomplishes this by assisting in the development of software (smartphone apps, web apps) and the engineering of necessary electronics.
   active: true
   public: true
@@ -141,6 +172,7 @@
 - organization:
     name: Metatronics
     url: http://www.metatronics.nl
+    country: The Netherlands
   period: 2011 - 2012
   title: Embedded Systems Engineering Intern
   description: Intern charged with the development of a proof-of-concept for a home-automation system and the development of a track-and-tracing solution utilizing GPS and GPRS technology. My activities involved the engineering of the circuitry, circuit boards and software.
@@ -156,9 +188,10 @@
 - organization:
     name: Hogeschool Rotterdam (University of Rotterdam)
     url: http://www.hro.nl
+    country: The Netherlands
   period: 2007 - 2012
   title: B.Eng (Electronics Engineering, Embedded Systems)
-  description: Student of the Embedded Systems Engineering track at the Electronics department of the Engineering and Applied Sciences faculty at the university. The educational program touched on subjects varying from the conceptual design of system architectures to the construction of electronic circuitry leveraging concepts from control theory, power electornics, analog electronics and digital electronics domains. During the course of the program I parttook in the development of robots, amplifiers, control circuits and software systems During the course of the program I parttook in the development of robots, amplifiers, control circuits and software systems in the context of mandatory lab-assignments/projects.
+  description: Student of the Embedded Systems Engineering track at the Electronics department of the Engineering and Applied Sciences faculty at the university. The educational program touched on subjects varying from the conceptual design of system architectures to the construction of electronic circuitry leveraging concepts from control theory, power electornics, analog electronics and digital electronics domains. During the course of the program I parttook in the development of robots, amplifiers, control circuits and software systems in the context of lab-work, assignments or projects.
   active: false
   public: true
   type: education
@@ -183,6 +216,7 @@
 - organization:
     name: Peppered B.V.
     url: http://www.peppered.nl
+    country: The Netherlands
   period: 2007 - 2010
   title: Part-time all-around developer
   description: Part-time developer mainly responsible for constructing the mailing templates and assisting in minor framework feature implementation sessions.
