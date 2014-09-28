@@ -3,7 +3,13 @@ layout: default
 ---
 <article class="post">
   <header>
-    <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
+    {% if page.since %}
+    since
+    <time datetime="{{ page.since | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
+    untill
+    {% endif %}
+    <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
+
     <h1>
       {% include icons-entypo.html type=page.type %}
       {{ page.title }}
