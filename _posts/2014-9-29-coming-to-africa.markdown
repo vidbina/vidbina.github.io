@@ -1,5 +1,6 @@
 ---
 layout: post
+visible: false
 title: Coming to Africa
 date:   2014-09-27 16:11:07
 type: travel
