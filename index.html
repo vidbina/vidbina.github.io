@@ -6,6 +6,7 @@ title: Blurt
 <div id="home">
   <ul class="posts">
     {% for post in paginator.posts %}
+    {% unless post.visible == false %}
     <li>
       <a href="{{ post.url }}">
         <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
@@ -16,6 +17,7 @@ title: Blurt
         <p>{{ post.description }}</p>
       </a>
     </li>
+    {% endunless %}
     {% endfor %}
   </ul>
 
