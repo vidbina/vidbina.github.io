@@ -8,6 +8,8 @@ tags:
  - calculus
  - study
 mathjax: true
+redirect_from:
+  - /2014/03/11/op-properties.html
 description: A quick glance at some of the properties of operators as commonly encoutered in my ventures through the world of computer science and mathematics.
 ---
 

@@ -10,6 +10,8 @@ tags:
   - engineering
   - computer
   - networking
+redirect_from:
+  - /2014/03/28/base64-in-http.html
 ---
 
 The Base64 encoding scheme is used in the HTTP standard to encode some types of
