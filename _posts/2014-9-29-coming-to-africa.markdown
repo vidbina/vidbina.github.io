@@ -26,18 +26,15 @@ through in the year that passed.
   <iframe src="//instagram.com/p/f9raq7y0Lx/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
 </div>
 
-Learned from my rookie mistakes, I have {{ ":yoda:" | emojify }}. I have sunk
-to the lowest point I have ever experienced in terms and performance, joy and
-management. The promise I'm making however; is that this is the last time I'm
-playing this prank on myself... I know how to stay out of that mess now.
+Now I have hit rock bottom (in a way) and have learned a shitload about how not
+do do {{ ":shit:" | emojify }}. The promise I'm making however; is that I will
+draw every lesson there is to be learned from this experience and change it all
+for the better. Part of that change means believing in the possibility to make
+it to Africa after all, regardless of circumstances.
 
 <div class="element instagram">
   <iframe src="//instagram.com/p/gICEH_Kc6b/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"> </iframe>
 </div>
-
-Practically broke and homeless and am now looking for my opportunity to visit 
-the motherland in a journey that should be inspiring enough to get me amped and
-royally inspired for the next set of challenges that await me.
 
 ## Why?
 I have several reasons for wanting to join one of the African busses:
@@ -47,12 +44,11 @@ I&rsquo;ve heard so many stories about the continent where it
 all began. I need to experience its glory firsthand.
 ###Learning
 The last time I attempted a trip of this sort I learned so much
-more about the world than I think I had in the year before. My interactions 
-with people where quite different. Instead of shallow "how are you"&rsquo;s I
-could spend all my time on the trip dreaming, imagining and building solutions
-that could solve a problem or two experienced by at least two other souls on 
-this planet. Furthermore, seeing a bit of the world gives you a much broader
-perspective on whatever one considers reality to be.
+more about the world than I think I had in the year before. I spend my time on 
+the trip dreaming, imagining, building solutions that could solve a problem or 
+two experienced by at least two other souls on 
+this planet and HH. Furthermore, seeing a bit of the world helped me to see 
+things in live a bit different, which helps me in thinking out of the box.
 ###Giving back
 I do not have money or incredible exit stories to sell, but
 I do have a shitload of experience in engineering, staying lean, learning from
