@@ -28,21 +28,20 @@ physically exhausted but mentally empowered to the extend that it helped me drag
 through the whirlwind of gorgeous and horrendous experiences that I ventured
 through in the year that passed.
 
-<!--
-<div class="element instagram">
-  <iframe src="//instagram.com/p/f9raq7y0Lx/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-</div>
--->
-
-<div class="element instagram">
-  <iframe src="//instagram.com/p/gICEH_Kc6b/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"> </iframe>
+<div class="element video">
+  <iframe width="420" height="315" src="//www.youtube.com/embed/MJ6IcYwVxV0" frameborder="0" allowfullscreen> </iframe>
 </div>
 
 This year I am up to the challenge again and am looking for funding just to 
 spice things up this time.
 
+<div class="element instagram">
+  <iframe src="//instagram.com/p/gICEH_Kc6b/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"> </iframe>
+</div>
+
 ## Why?
-I have several reasons for wanting to join one of the African busses:
+I have several reasons for wanting to join one of the African busses.
+If you are here to read it here goes&hellip; (otherwise <a href="#who">tl;dr</a>)
 
 ###Homecoming
 I&rsquo;ve heard so many stories about the continent where it
@@ -99,7 +98,7 @@ pledges come at different costs obviously.
  {{ ":notes:" | emojify }}. I will spice things up with technology of course.
  My trusty computer will be on-stage composing music along with me during the
  performance (you have to see this {{ ":wink:" | emojify }}).
- - a {{ ":video:" | emojify }} documentary chronicalling the experiences during my trip
+ - a {{ ":video_camera:" | emojify }} documentary chronicalling the experiences during my trip
  - monthly video summaries for the year after the trip to report on my 
  activities and share the progress I have been making in the projects I am 
  involved in
@@ -111,13 +110,22 @@ pledges come at different costs obviously.
  well. I offer an opportunity to exact revenge {{ ":rage:" | emojify }}.
  - the opportunity in naming the next gizmo I hack
 
+<a name="who"></a>
 ## Who?
 I code (software), I hack (hardware) and I jam (music). Because I feel that 
 I am in need of a fresh batch of inspiration, I will be more than grateful to 
-enjoy the opportunity to travel to the largest, and currently rapidly changing,
-continent on our beloved planet.
+enjoy the opportunity to travel to the largest, and currently rapidly changing
+(in terms of entrepreneurship), continent on our beloved planet {{ ":earth_africa:" | emojify }}.
+
+<div class="element instagram">
+  <iframe src="//instagram.com/p/rHkkNiS0BQ/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+</div>
 
 It should be no surprise that I will be joining one of the busses as a coder.
+
+<div class="element instagram">
+  <iframe src="//instagram.com/p/ookjPAy0Ev/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+</div>
 
 Just to make things a bit easier I have sketched somewhat of a doodle of 
 myself. This should hopefully give you a little picture of me.
