@@ -39,43 +39,54 @@ spice things up this time.
   <iframe src="//instagram.com/p/gICEH_Kc6b/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"> </iframe>
 </div>
 
+I want to join one of the four [Ampion][ampion] busses that are set to start 
+their journey somewhere in Africa in November.
+
 ## Why?
 I have several reasons for wanting to join one of the African busses.
 If you are here to read it here goes&hellip; (otherwise <a href="#who">tl;dr</a>)
 
 ###Homecoming
-I&rsquo;ve heard so many stories about the continent where it
-all began. I need to experience its glory firsthand.
+I&rsquo;ve heard enough stories about the continent where it all began. 
+It&rsquo;s time to experience its glory firsthand. Being that Africa happens
+to be the cradle of human life makes this a trip to my roots. Genetically the
+closest match within my lineage will most likely be traceable to the west 
+African region but anywhere on the continent will do for my first visit.
 
 ###Learning
 The last time I attempted a trip of this sort I learned so much
-more about the world than I think I had in the year before. I spend my time on 
-the trip dreaming, imagining, building solutions that could solve a problem or 
-two experienced by at least two other souls on 
-this planet and HH. Furthermore, seeing a bit of the world helped me to see 
-things in live a bit different, which helps me in thinking out of the box.
+more about the world than I think I had in the year before. Furthermore, seeing
+a bit of the world helped me to view things in life a bit different, which 
+keeps me thinking out of the box in some situations.
 
 ###Giving back
 I do not have dough or incredible exit stories to share, but
 I do have a crapload of experience in engineering, staying lean, failing, 
-getting screwed, getting hurt, rebounding, getting lucky and some other things
-that may come in handy in the entrepreneurship jungle. I have been riding this
-rollercoaster for a few years now {{ ":roller_coaster:" | emojify }}.
+getting screwed, getting hurt, rebounding, getting lucky, making money, having
+fun, losing money, giving 
+200% percent and some other things that may become hallmark moments during
+anyone&rsquo;s venture through the tough jungle of entrepreneurship.
 
-I would love to get in touch with other entrepreneurs to share my experiences.
+I have been riding this rollercoaster for a few years now 
+{{ ":roller_coaster:" | emojify }}.
+
+It seems fun to get in touch with other entrepreneurs to share my experiences.
 
 ###Connecting
 Some of the great cats I have had the pleasure of connecting
-with in the past year stem from my former bustrip. I relate to the misfits,
-the goons, those buffoons with crazy ideas looming, with radical dreams 
-blooming and a unhealthy dose of energy to tackle the challenges head-on.
+with in the past year stem from my [startupbus][startupbus] adventure last year.
+I relate to the misfits, the goons, those buffoons with crazy ideas looming, 
+with radical dreams blooming and a unhealthy dose of energy to tackle the 
+challenges head-on. You usually meet these nut-jobs on these trips {{ ":grin:" | emojify }}.
 
 ###Recharging
-Sleep deprivation may be one of the culprits for exhaustion, yet this very 
-experience will most likely succeed in rejuvenating my mind -- it did last 
-year when I coasted through Europe. You see new places, meet new people,
-hear new ideas, smell new scents, hear new sounds. How can that not refuel a
-brain with an unsatiable desire for more stimuli.
+Sleep deprivation may be one of the culprits for exhaustion, yet during this 
+very adventure it will not obstruct the experience from rejuvenating my mind --
+it didn&rsquo;s last year when I coasted through Europe.
+
+You see new places, meet new people, hear new ideas, smell new scents, hear new 
+sounds&hellip; heck, how can that not refuel a brain with an unsatiable desire
+for more stimuli?!?
 
 ## How?
 Well&hellip; because I know that you are such an incredibly awesome soul I
