@@ -20,4 +20,14 @@ namespace :site do
   task :reload => [ :clean, :build, :upload ] do
     puts "uploading site changes"
   end
+
+  desc 'review'
+  task :serve do
+    exec "jekyll serve -wD"
+  end
+
+  desc 'serve'
+  task :server do
+    exec "jekyll serve -w"
+  end
 end

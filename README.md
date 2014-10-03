@@ -34,3 +34,8 @@ In order to upload your site run ```rake site:upload```.
 In order to make life easier just run ```rake site:reload``` which cleans your
 local ```_site``` directory, rebuilds your website into and uploads it 
 afterwards.
+
+There are some tasks setup to help you in getting a local server up and running
+generally ```rake site:serve``` should fire up your site as it should appear
+to your audience after an update. The ```rake site:review``` task should do
+the same thing and reveal your draft articles as well.
