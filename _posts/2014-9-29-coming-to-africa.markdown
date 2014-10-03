@@ -147,5 +147,13 @@ myself. This should hopefully give you a little picture of me.
     alt="A description of me. Born in the Netherlands, raised in Suriname. Started coding as a kid, worked in a goldmine for a year then got a job coding within a week of landing back in the Netherlands to start my engineering studies. I love music, I make music, I code, I hack, I dream.">
 </div>
 
+Just to finish things up a cool song by Herbie Hancock which I recently 
+discovered. A great song for hard times {{ ":smile:" | emojify }}. I&rsquo;m
+not giving up and I&rsquo;m imagining still&hellip;
+
+<div class="element spotify">
+  <iframe src="https://embed.spotify.com/?uri=spotify:track:6tNodrmrsA206cZ0MTJNFN" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+</div>
+
 [startupbus]: www.startupbus.com
 [ampion]: www.ampion.org
