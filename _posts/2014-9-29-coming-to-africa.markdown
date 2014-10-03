@@ -33,7 +33,25 @@ through in the year that passed.
 </div>
 
 This year I am up to the challenge again and am looking for funding just to 
-spice things up this time.
+spice things up this time. Quite frankly I need this boost after having gone
+through one of my tougher years to date. I&rsquo;ve been around 26 years and
+this was the one loaded with reality checks and oh-my-god moments. I need your 
+support to not only make this the year of my deepest lows, but also that year
+with one of my greatest highs. The way I see it, I still have 3 months to get 
+this year balanced out.
+
+Numerous people have recommended me to pick up music again after hearing me 
+speak about my music with twinkling {{":star2:" | emojify }} eyes 
+{{":eyes:" | emojify}}. Furthermore I really want to pack my bag again to 
+experience new highs on a magical busride {{ ":bus:" | emojify }}. So I&rsquo;m
+going to mix things up.
+
+<div class="element instagram">
+  <iframe src="http://instagram.com/p/gjk1-CKgOt/embed/" width="612" height="692" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+</div>
+
+How about I go on that busride to get inspired to compose new tunes for your
+enjoyment instead?!? {{ ":bulb:" | emojify }}.
 
 <div class="element instagram">
   <iframe src="//instagram.com/p/gICEH_Kc6b/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"> </iframe>
@@ -82,7 +100,11 @@ challenges head-on. You usually meet these nut-jobs on these trips {{ ":grin:" |
 ###Recharging
 Sleep deprivation may be one of the culprits for exhaustion, yet during this 
 very adventure it will not obstruct the experience from rejuvenating my mind --
-it didn&rsquo;s last year when I coasted through Europe.
+it didn&rsquo;t last year when I coasted through Europe.
+
+<div class="element instagram">
+  <iframe src="http://instagram.com/p/gLF4PDMFCa/embed/" width="612" height="692" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+</div>
 
 You see new places, meet new people, hear new ideas, smell new scents, hear new 
 sounds&hellip; heck, how can that not refuel a brain with an unsatiable desire
@@ -139,13 +161,17 @@ It should be no surprise that I will be joining one of the busses as a coder.
 </div>
 
 Just to make things a bit easier I have sketched somewhat of a doodle of 
-myself. This should hopefully give you a little picture of me.
+myself. This should hopefully give you a better picture of me {{ ":grinning:" | emojify }}.
 
 <div class="element">
   <img 
     src="/resources/startup/africa/personalintro.png" 
     alt="A description of me. Born in the Netherlands, raised in Suriname. Started coding as a kid, worked in a goldmine for a year then got a job coding within a week of landing back in the Netherlands to start my engineering studies. I love music, I make music, I code, I hack, I dream.">
 </div>
+
+<!--<div class="element cta">
+  <a href="http://www.">Pledge here {{ ":trophy:" | emojify}}</a>
+</div>-->
 
 [startupbus]: www.startupbus.com
 [ampion]: www.ampion.org
