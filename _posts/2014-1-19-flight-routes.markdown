@@ -1,6 +1,7 @@
 ---
 layout: post
 type: aviation
+category: aviation
 date: 2014-01-19 00:03
 title: Making Some Sense of Flight Routes
 description: Looking at a flight route for a commercial airliner had me wondering&hellip; reason to explore
@@ -11,6 +12,7 @@ tags:
  - travel
 redirect_from:
   - /2014/01/19/flight-routes.html
+  - /flight-routes/
 ---
 The misses is on a flight to Suriname, so I'm tracking her flight in an online
 flight tracker while she is enroute.

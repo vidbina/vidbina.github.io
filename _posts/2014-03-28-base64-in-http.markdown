@@ -3,6 +3,7 @@ layout: "post"
 title: "64th Base in HTTP"
 description: "In sending Basic Auth credentials we Base64 encode our handles and secrets. Why?"
 type: "web"
+category: web
 tags:
   - web
   - security
@@ -12,6 +13,7 @@ tags:
   - networking
 redirect_from:
   - /2014/03/28/base64-in-http.html
+  - /base64-in-http/
 ---
 
 The Base64 encoding scheme is used in the HTTP standard to encode some types of

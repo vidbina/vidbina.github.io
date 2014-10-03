@@ -3,6 +3,7 @@ layout: post
 title:  Basic Operator Properties
 date:   2014-03-11 16:51:33
 type:   mathematics
+category: math
 tags:
  - mathematics
  - calculus
@@ -10,6 +11,7 @@ tags:
 mathjax: true
 redirect_from:
   - /2014/03/11/op-properties.html
+  - /op-properties/
 description: A quick glance at some of the properties of operators as commonly encoutered in my ventures through the world of computer science and mathematics.
 ---
 

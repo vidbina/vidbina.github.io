@@ -3,6 +3,7 @@ layout: post
 title:  Animating Mr. Washee Washee (My Version of the Laundr Story)
 date:   2014-04-11 09:28:89
 type: start-up
+category: entrepreneurship
 tags:
  - engineering
  - start-up
@@ -12,6 +13,7 @@ tags:
  - back-end
 redirect_from:
   - /2014/04/11/animating-laundr.html
+  - /animating-laundr/
 description: "Laundr picks up, cleans and delivers your suits when you want it, where you want it. This article chronicles the events as I experienced them. Conception, first app shipment and first actual delivery."
 ---
 
