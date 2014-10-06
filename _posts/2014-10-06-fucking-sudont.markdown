@@ -1,15 +1,16 @@
 ---
 layout: post
-title:  F&#x2620;ing Sudon&rsquo;t
-since:  2014-10-06 08:52
-date:   2014-10-06
+title:  Freaking Sudon&rsquo;t
+#since:  2014-10-06 08:52
+date:   2014-10-06 10:40
+published: true
 type: tools
 category: web
 tags:
  - cli
  - terminal
  - unix
-description: When shit goes down it is often because noobs or lazy bozos decide to slap sudo in front of every seemingly failing command. I need to vent my frustration over that shit so here goes a rant.
+description: When shit goes down it is often because noobs or lazy bozos decide to slap sudo in front of every seemingly failing command. For the love of the FSM, stop excessive sudoing!
 ---
 
 In the design of unix and unix-based OS-es a clear distinction is quite visibly
@@ -75,4 +76,5 @@ nastiness you don't even want to think about.
 
 Bottomline be more conservative in superuser usage. If you frequently end up
 `sudo`-ing commands it is probably a signal that your system is seriously 
-screwed up and it might be time for a fresh install.
+screwed up and it might be due for a fresh install -- the right way 
+{{ ":wink:" | emojify }}.
