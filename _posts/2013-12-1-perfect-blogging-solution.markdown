@@ -12,7 +12,7 @@ tags:
 mathjax: true
 redirect_from:
   - /2013/12/29/perfect-blogging-solution.html
-  - /perfect-blogging-solution/
+
 description: My discoveries while rummaging through toolboxes looking for the blogging solution that works for me
 ---
 
