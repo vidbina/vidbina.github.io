@@ -1,67 +1,16 @@
----
-layout: default
-title: Resume
----
-<article class="post">
-  <header>
-    <time datetime="{{ post.date  }}">{{ post.date  }}</time>
-    <h1>
-      {% include icons-entypo.html type=page.type %}
-      {{ page.title }}
-    </h1>
-  </header>
-
-  <p>Name: David Asabina</p>
-  <p>Birthyear: <a href="http://en.wikipedia.org/wiki/1988">1988</a></p>
-  <p>Habitat: <a href="https://www.google.com/search?q=Rotterdam">Rotterdam, The Netherlands</a></p>
-  <p>E-mail: <a href="mailto:as@bina.me">as at bina dot me</a></p>
-
-  <ul class="experience">
-    {% for experience in site.data.experience %}
-    {% if experience.public %}
-    <li>
-      {% include icons-entypo.html type=experience.type %}
-      <a href="{{experience.organization.url}}">{{experience.organization.name}}</a>,
-      <span>{{experience.title}}</span>
-      <p>{{experience.period}}</p>
-      <p>{{experience.description}}</p>
-      {% if experience.keywords %}
-      <p class="labels">{% for tech in experience.keywords %}<span>{{ tech }}</span>{% endfor %}</p>
-      {% endif %}
-    </li>
-    {% endif %}
-    {% endfor %}
-  </ul>
-
-  <h2>About Myself</h2>
-  <p>As a kid I spend my time tinkering with electronics, doing chores I didn't
-  like and playing... off course {{ ":wink:" | emojify }}. I taught myself how 
-  to program computers through online tutorials and books that my pops had lying 
-  around the house. Apparently during his economics studies in the 80's, they 
-  also received some programming courses in C and C++ because I found those 
-  books in his collection. The internet tutorials I would download from the 
-  internet when my parents weren't home. I would quickly dial-in to the web
-  and download whatever I could process in a week and quickly log off. Pops and
-  moms never caught me in action {{ ":smile:" | emojify }}.</p>
-
-  <p>My father would always remind me not to wreck the computer when I was 
-  still using his', because it also served as his work machine, which prevented 
-  me from going crazy on the box. After buying my father's old computer with 
-  some hard-earned cash I started hacking without limitations. By the time I 
-  finished high-school I had to choose what to study. Computer sciences did 
-  seem interesting, but I figured I could learn that from books and 
-  brain-picking. Electronics, on the other hand, often required access to some 
-  tools and equipment I couldn't get my hands on because of the financial 
-  aspect. That is why I studied electronics. I wanted to be able 
-  to program computers, build robots and rule my universe in the way I deemed 
-  appropriate.</p>
-
-  <p>I did study electronics. T'was a wonderful time. After graduating I set
-  foot in the <em>real world</em> by beginning my free-lancing adventures. 
-  I have built plenty of cool products, made stupid mistakes (lessons), 
-  discovered more of my strengths and weaknesses and am learning truck-loads 
-  of new things through it all. 
-  Most importantly, however; <strong>I am having a blast!</strong>
-  On sunny {{ ":sunny:" | emojify }} and rainy {{ ":umbrella:" | emojify }} 
-  days.</p>
-</article>
+      <!DOCTYPE html>
+      <html>
+      <head>
+      <title>Redirecting...</title>
+      <link rel="canonical" href="/resume/"/>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta http-equiv="refresh" content="0; url=/resume/" />
+      </head>
+      <body>
+        <p><strong>Redirecting...</strong></p>
+        <p><a href='/resume/'>Click here if you are not redirected.</a></p>
+        <script>
+          document.location.href = "/resume/";
+        </script>
+      </body>
+      </html>
