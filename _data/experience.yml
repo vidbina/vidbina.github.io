@@ -19,10 +19,10 @@
     country: The Netherlands
   period: May 2014 - current
   title: Engineer
-  description: Working on some things I'm not fully at liberty to discuss. I am mostly busy designing the electronics necessary to extract data from the system (using sensors, filters and amplifiers) and implementing the complementary logic in the firmware.
+  description: Working on some things I&rsquo;m not fully at liberty to discuss. I am mostly busy designing the electronics necessary to extract data from the system (using sensors, filters and amplifiers) and implementing the complementary logic in the firmware.
   keywords:
    - C/C++
-   - ARM Cortex-M software development
+   - ARM Cortex-M
    - Analog electronics
    - Embedded systems
    - Spark
@@ -90,11 +90,10 @@
   keywords:
    - Ruby on Rails
    - PostgreSQL
-   - Run-time optimization
-   - Indexing
+   - Optimization
   period: November 2013 - December 2013
   title: Engineer
-  description: Spend a few days refactoring the application to accomodate more traffic. Some of the steps taken involved the configuration of indexes in the relational database and the refactoring of code for optimal performance. For some operations these steps slashed the runtime to a timespan less than a fifth of the former execution time.
+  description: Spend a few days refactoring the application to accomodate more traffic. Some of the steps taken involved the configuration of indexes in the relational database and the refactoring of code to improve the overal performance of the web application. For some operations these steps slashed the runtime to a timespan less than a fifth of the former execution time.
   active: false
   public: true
   type: work
