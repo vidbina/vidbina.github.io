@@ -40,9 +40,6 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
 }
-ol, ul {
-    list-style: bullet;
-}
 blockquote, q {
     quotes: none;
 }
@@ -343,6 +340,13 @@ header a {
 .post {
   padding: 10px;
   border-radius: 10px;
+}
+
+.post ul {
+  list-style: bullet;
+}
+.post ul.experience {
+  list-style: none;
 }
 .post .detail {
   display: block;
