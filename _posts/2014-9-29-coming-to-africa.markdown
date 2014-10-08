@@ -151,9 +151,14 @@ pledges come at different costs obviously.
  - the opportunity in naming the next gizmo I hack
  - tickets to a few hack workshops I&rsquo;m giving after I return from my 
  trip. I&rsquo;m working on two courses as we speak currently codenamed
-   - _Hacking for Noobs_ (which should introduce you to electronics-hacking chops and some coding skills) 
-     course and
-   - _Coding for Noobs_ (learn how to write software).
+   - _Hacking for Noobs_ (which should introduce you to electronics-hacking 
+   chops and some coding skills) and
+   - _Crafting Code_ (learn how to write software).
+
+For the courses I&rsquo;m taking ideas for concepts to work into the material.
+So don&rsquo;t hesitate to post some suggestions below. I already have a nicely
+planned out batch of material to serve to you but I&rsquo;d still love to get
+some early input if possible.
 
 <div class="element cta">
   <a href="http://www.">Pledge here {{ ":trophy:" | emojify}}</a>
