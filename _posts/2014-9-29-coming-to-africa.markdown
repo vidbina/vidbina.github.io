@@ -2,6 +2,7 @@
 layout: post
 visible: false
 title: Coming to Africa
+head: africa
 date:   2014-10-03 16:11:07
 type: travel
 category: travel
