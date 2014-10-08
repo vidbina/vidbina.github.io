@@ -61,6 +61,10 @@ enjoyment instead?!? {{ ":bulb:" | emojify }}.
 I want to join one of the four [Ampion][ampion] busses that are set to start 
 their journey somewhere in Africa in November.
 
+<div class="element cta">
+  <a href="http://www.">Pledge here {{ ":trophy:" | emojify}}</a>
+</div>
+
 ## Why?
 I have several reasons for wanting to join one of the African busses.
 If you are here to read it here goes&hellip; (otherwise <a href="#who">tl;dr</a>)
@@ -111,6 +115,10 @@ You see new places, meet new people, hear new ideas, smell new scents, hear new
 sounds&hellip; heck, how can that not refuel a brain with an unsatiable desire
 for more stimuli?!?
 
+<div class="element cta">
+  <a href="http://www.">Pledge here {{ ":trophy:" | emojify}}</a>
+</div>
+
 ## How?
 Well&hellip; because I know that you are such an incredibly awesome soul I
 am quite convinced that you will help a jumpy geek out. I know that the 
@@ -136,13 +144,28 @@ pledges come at different costs obviously.
  - monthly video summaries for the year after the trip to report on my 
  activities and share the progress I have been making in the projects I am 
  involved in
- - a html5-based smartphone {{ ":iphone:" | emojify }} app doing something 
- simple that you think the world or at the very least you needs to have done
  - an opportunity to unload a barrage of paintball bullets at me while I 
  volunteer to be the bunny {{ ":rabbit:" | emojify }} at a paintball 
  {{ ":gun:" | emojify }} rink. This should incentivize my enemies to pledge as 
  well. I offer an opportunity to exact revenge {{ ":rage:" | emojify }}.
  - the opportunity in naming the next gizmo I hack
+ - tickets to a few hack workshops I&rsquo;m giving after I return from my 
+ trip. I&rsquo;m working on two courses as we speak currently codenamed
+   - _Hacking for Noobs_ (which should introduce you to electronics-hacking chops and some coding skills) 
+     course and
+   - _Coding for Noobs_ (learn how to write software).
+
+<div class="element cta">
+  <a href="http://www.">Pledge here {{ ":trophy:" | emojify}}</a>
+</div>
+
+In the year I was minted someone had a similar idea. Was only headed in the 
+wrong direction {{ ":stuck_out_tongue_winking_eye:" | emojify }}. I was 
+actually born a few months later to set the balance straight. For those who 
+don&rsquo;t remember what went down that year, a reminder&hellip;
+<div class="element video">
+  <iframe width="560" height="315" src="//www.youtube.com/embed/6l9pG_XL8yc" frameborder="0" allowfullscreen></iframe>
+</div>
 
 <a name="who"></a>
 ## Who?
@@ -170,16 +193,9 @@ myself. This should hopefully give you a better picture of me {{ ":grinning:" | 
     alt="A description of me. Born in the Netherlands, raised in Suriname. Started coding as a kid, worked in a goldmine for a year then got a job coding within a week of landing back in the Netherlands to start my engineering studies. I love music, I make music, I code, I hack, I dream.">
 </div>
 
-<!--<div class="element cta">
+Let&rsquo; go!
+<div class="element cta">
   <a href="http://www.">Pledge here {{ ":trophy:" | emojify}}</a>
-</div>-->
-
-Just to finish things up a cool song by Herbie Hancock which I recently 
-discovered. A great song for hard times {{ ":smile:" | emojify }}. I&rsquo;m
-not giving up and I&rsquo;m imagining still&hellip;
-
-<div class="element spotify">
-  <iframe src="https://embed.spotify.com/?uri=spotify:track:6tNodrmrsA206cZ0MTJNFN" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 </div>
 
 [startupbus]: www.startupbus.com
