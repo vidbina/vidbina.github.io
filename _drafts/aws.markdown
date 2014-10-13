@@ -79,7 +79,7 @@ sure to set some permissions for the user you want to sign in to AWS as.
  2. create an admin group in IAM
  3. add your user to the admin group in IAM
  4. configure your CLI with the user credentials you have received by running 
- ```aws config```
+ ```aws configure```
 
 ## Usage
 After configuring the AWS CLI you are set to configure the services. It makes
@@ -99,7 +99,40 @@ As simple as that {{ ":wink:" | emojify }}.
 {% highlight bash %}
 aws s3 ls
 {% endhighlight %}
+
 ### EC2
+
+### Route53
+In order to get started a zone needs to be created. In case I would want to
+set up a zone for my `bina.me` domain I would execute the following:
+
+{% highlight bash %}
+aws route53 create-hosted-zone --name bina.me. --caller-reference DemoDNSZoneSetup
+{% endhighlight %}
+
+After creating the zone, AWS will respond with an identifier for the command.
+Most likely the status of our command will be pending at the time the response
+is reported through the terminal, but we we can always request a list of all
+zones.
+{% highlight bash %}
+aws route53 list-hosted-zones
+{% endhighlight %}
+
+After creating a zone, we still need to set the records. AWS is friendly enough
+to set up SOA and NS records for us. An overview of all resource records for a
+zone are acquired by executing the following where `X` is replaced with the
+zone id of you want to lookup.
+{% highlight bash %}
+aws route53 list-resource-record-sets --hosted-zone-id X
+{% endhighlight %}
+
+After creating a zone one might want to [setup `MX`, `CNAME`, `TXT` and other
+DNS records][create-record-sets]. The creation or modification of these records
+may be done through the use of JSON batch files in the following manner.
+{% highlight bash %}
+aws route53 change-resource-record-sets --hosted-zone-id X --change-batch file://~/path/to/file.json
+{% endhighlight %}
+
 ### IAM
 {% highlight bash %}
 aws iam list-users
@@ -107,3 +140,5 @@ aws iam list-users
 
 [installing-awscli]: http://docs.aws.amazon.com/cli/latest/userguide/installing.html
 [confing-awscli]: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+[migrate-dns]: http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html
+[create-record-sets]: http://docs.aws.amazon.com/cli/latest/reference/route53/change-resource-record-sets.html
