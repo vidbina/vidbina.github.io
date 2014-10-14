@@ -2,22 +2,25 @@
 layout: post
 title:  Trekking Through The Amazon Like a Commando
 since:  2014-10-06 07:54
-date:   2014-10-06
-type: tools
+date:   2014-10-14 11:46
+type: cloud
 category: web
 tags:
  - infrastructure
+ - cloud
  - paas
  - aws
  - web
  - devops
+ - tools
 mathjax: true
-description: AWS rocks but
+description: AWS rocks but because of the many services being offered it may feel like a impenetrable jungle at a first glance. This is my take on navigating that jungle using the CLI as my machete.
 ---
-Because I am somewhat of a termrat, I prefer to have CLI's to do everything
+Because I am somewhat of a term hermit, I prefer to have CLI's to do everything
 because it makes scripting so much easier.
 
-Amazon offers control over the AWS through their [CLI][installing-awscli].
+Amazon offers control over AWS {{ ":cloud:" | emojify }} through their 
+[CLI][installing-awscli] that is what this post is all about.
 
 ## Setup
 This section will cover some of the steps I took to get the AWS CLI running on
@@ -95,13 +98,16 @@ aws SERVICE COMMAND [ARGS]
 
 As simple as that {{ ":wink:" | emojify }}.
 
+<a name="storage"></a>
 ### S3
 {% highlight bash %}
 aws s3 ls
 {% endhighlight %}
 
+<a name="vm"></a>
 ### EC2
 
+<a name="dns"></a>
 ### Route53
 In order to get started a zone needs to be created. In case I would want to
 set up a zone for my `bina.me` domain I would execute the following:
@@ -133,6 +139,19 @@ may be done through the use of JSON batch files in the following manner.
 aws route53 change-resource-record-sets --hosted-zone-id X --change-batch file://~/path/to/file.json
 {% endhighlight %}
 
+<a name="dns.mx"></a>
+Just to give an example of the structure of the JSON files fed to the CLI I 
+have published a version of the files I have used on [Github][route53-json-gist]
+{% gist vidbina/8322c299faab15477e1c dns.mx.json %}
+
+<a name="dns.txt"></a>
+In case you need to verify the ownership of a domain at Google you might want
+to setup a text record. AWS Route53 happens to be very picky about the syntax
+of the `TXT` strings (the string received by AWS itself needs to be enclosed in
+double quotes).
+{% gist vidbina/8322c299faab15477e1c dns.txt.json %}
+
+<a name="users"></a>
 ### IAM
 {% highlight bash %}
 aws iam list-users
@@ -142,3 +161,4 @@ aws iam list-users
 [confing-awscli]: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
 [migrate-dns]: http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html
 [create-record-sets]: http://docs.aws.amazon.com/cli/latest/reference/route53/change-resource-record-sets.html
+[route53-json-gist]: https://gist.github.com/vidbina/8322c299faab15477e1c
