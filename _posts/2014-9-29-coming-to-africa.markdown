@@ -1,6 +1,6 @@
 ---
 layout: post
-visible: false
+visible: true
 title: Coming to Africa
 head: africa
 date:   2014-10-03 16:11:07
@@ -17,6 +17,8 @@ tags:
  - crowdfunding
 ---
 
+<blockquote>The campaign is not live yet, I will post the links to the
+crowdfunding platform page as soon as it does</blockquote>
 <div class="element">
   <img 
     src="/resources/startup/africa/ampion2014routes.png" 
@@ -61,9 +63,11 @@ enjoyment instead?!? {{ ":bulb:" | emojify }}.
 I want to join one of the four [Ampion][ampion] busses that are set to start 
 their journey somewhere in Africa in November.
 
+{% if false %}
 <div class="element cta">
   <a href="http://www.">Pledge here {{ ":trophy:" | emojify}}</a>
 </div>
+{% endif %}
 
 ## Why?
 I have several reasons for wanting to join one of the African busses.
@@ -115,9 +119,12 @@ You see new places, meet new people, hear new ideas, smell new scents, hear new
 sounds&hellip; heck, how can that not refuel a brain with an unsatiable desire
 for more stimuli?!?
 
+
+{% if false %}
 <div class="element cta">
   <a href="http://www.">Pledge here {{ ":trophy:" | emojify}}</a>
 </div>
+{% endif %}
 
 ## How?
 Well&hellip; because I know that you are such an incredibly awesome soul I
@@ -160,9 +167,11 @@ So don&rsquo;t hesitate to post some suggestions below. I already have a nicely
 planned out batch of material to serve to you but I&rsquo;d still love to get
 some early input if possible.
 
+{% if false %}
 <div class="element cta">
   <a href="http://www.">Pledge here {{ ":trophy:" | emojify}}</a>
 </div>
+{% endif %}
 
 In the year I was minted someone had a similar idea. Was only headed in the 
 wrong direction {{ ":stuck_out_tongue_winking_eye:" | emojify }}. I was 
@@ -199,8 +208,14 @@ myself. This should hopefully give you a better picture of me {{ ":grinning:" | 
 </div>
 
 Let&rsquo; go!
+{% if false %}
 <div class="element cta">
   <a href="http://www.">Pledge here {{ ":trophy:" | emojify}}</a>
+</div>
+{% endif %}
+
+<div class="element video">
+  <iframe width="420" height="315" src="//www.youtube.com/embed/wBC86idJFj4" frameborder="0" allowfullscreen> </iframe>
 </div>
 
 [startupbus]: www.startupbus.com
