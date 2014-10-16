@@ -17,8 +17,6 @@ tags:
  - crowdfunding
 ---
 
-<blockquote>The campaign is not live yet, I will post the links to the
-crowdfunding platform page as soon as it does</blockquote>
 <div class="element">
   <img 
     src="/resources/startup/africa/ampion2014routes.png" 
@@ -63,9 +61,9 @@ enjoyment instead?!? {{ ":bulb:" | emojify }}.
 I want to join one of the four [Ampion][ampion] busses that are set to start 
 their journey somewhere in Africa in November.
 
-{% if false %}
+{% if true %}
 <div class="element cta">
-  <a href="http://www.">Pledge here {{ ":trophy:" | emojify}}</a>
+  <a href="http://thewayv.com/crowdfunding/projects/coming-to-africa/">Pledge here {{ ":trophy:" | emojify}}</a>
 </div>
 {% endif %}
 
@@ -120,9 +118,9 @@ sounds&hellip; heck, how can that not refuel a brain with an unsatiable desire
 for more stimuli?!?
 
 
-{% if false %}
+{% if true %}
 <div class="element cta">
-  <a href="http://www.">Pledge here {{ ":trophy:" | emojify}}</a>
+  <a href="http://thewayv.com/crowdfunding/projects/coming-to-africa/">Pledge here {{ ":trophy:" | emojify}}</a>
 </div>
 {% endif %}
 
@@ -167,9 +165,9 @@ So don&rsquo;t hesitate to post some suggestions below. I already have a nicely
 planned out batch of material to serve to you but I&rsquo;d still love to get
 some early input if possible.
 
-{% if false %}
+{% if true %}
 <div class="element cta">
-  <a href="http://www.">Pledge here {{ ":trophy:" | emojify}}</a>
+  <a href="http://thewayv.com/crowdfunding/projects/coming-to-africa/">Pledge here {{ ":trophy:" | emojify}}</a>
 </div>
 {% endif %}
 
@@ -208,9 +206,9 @@ myself. This should hopefully give you a better picture of me {{ ":grinning:" | 
 </div>
 
 Let&rsquo; go!
-{% if false %}
+{% if true %}
 <div class="element cta">
-  <a href="http://www.">Pledge here {{ ":trophy:" | emojify}}</a>
+  <a href="http://thewayv.com/crowdfunding/projects/coming-to-africa/">Pledge here {{ ":trophy:" | emojify}}</a>
 </div>
 {% endif %}
 
