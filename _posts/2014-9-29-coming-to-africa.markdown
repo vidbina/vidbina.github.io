@@ -3,7 +3,8 @@ layout: post
 visible: true
 title: Coming to Africa
 head: africa
-date:   2014-10-03 16:11:07
+since:   2014-10-03 16:11:07
+date:   2014-10-16 16:11:07
 type: travel
 category: travel
 description: "Something I still need to do in 2014 to keep that insatiable hunger to discover and learn in balance. The nicest part is that you can help me to accomplish it!"
