@@ -154,8 +154,8 @@ information is available.
 GPG_TTY=$(tty)
 export GPG_TTY
 
-if [ -f "${HOME}/.gpg-agent-info" ]; then
-  . "${HOME}/.gpg-agent-info"
+if [ -f "$/tmp/.gpg-agent-info" ]; then
+  . "$/tmp/.gpg-agent-info"
   export GPG_AGENT_INFO
   export SSH_AUTH_SOCK
 fi
@@ -166,7 +166,7 @@ The previous addition to our shell&rsquo;s configuration depends on the
 possible to instruct the agent to create the needed file][gnu-agent-start].
 {% highlight bash %}
 gpg-agent --daemon --enable-ssh-support \
-  --write-env-file "${HOME}/.gpg-agent-info"
+  --write-env-file "/tmp/.gpg-agent-info"
 {% endhighlight %}
 
 With this setup we will be able to have ```msmtp``` handle our mailing while
