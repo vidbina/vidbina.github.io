@@ -66,7 +66,7 @@ multiplier(12)(2)
 {% endhighlight %}
 
 Currying is most interesting when we want to split the operation to be 
-executed at different times. It may be that only part of the input information
+executed at different times. Perhaps only part of the input information
 is known. Instead of holding on to the data until all input information is 
 known, the data could already be plugged into the black box. The rest of the
 information will be passed along whenever available.
