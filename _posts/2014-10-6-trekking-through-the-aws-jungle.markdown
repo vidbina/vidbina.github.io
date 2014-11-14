@@ -83,6 +83,8 @@ sure to set some permissions for the user you want to sign in to AWS as.
  3. add your user to the admin group in IAM
  4. configure your CLI with the user credentials you have received by running 
  ```aws configure```
+ 5. export your access keys to your env. The AWS CLI tool expects to find the
+ ```AWS_ACCESS_KEY``` and ```AWS_SECRET_KEY``` variables.
 
 ## Usage
 After configuring the AWS CLI you are set to configure the services. It makes
@@ -106,6 +108,18 @@ aws s3 ls
 
 <a name="vm"></a>
 ### EC2
+In order to get an overview of all EC2 instances running in your account run
+the following command:
+{% highlight bash %}
+aws ec2 describe-instances
+{% endhighlight %}
+
+#### VPC
+You can configure all of your machines to reside within a private cloud which
+may expose some of its resources to the web through assigned gateways.
+{% highlight bash %}
+aws ec2 describe-vpcs
+{% endhighlight %}
 
 <a name="dns"></a>
 ### Route53
