@@ -154,16 +154,18 @@ information is available.
 GPG_TTY=$(tty)
 export GPG_TTY
 
-if [ -f "$/tmp/.gpg-agent-info" ]; then
-  . "$/tmp/.gpg-agent-info"
+if [ -f "/tmp/.gpg-agent-info" ]; then
+  . "/tmp/.gpg-agent-info"
   export GPG_AGENT_INFO
   export SSH_AUTH_SOCK
 fi
 {% endhighlight %}
 
 The previous addition to our shell&rsquo;s configuration depends on the 
-```~/.gpg-agent-info``` file. When [starting the ```gpg-agent``` it is also 
-possible to instruct the agent to create the needed file][gnu-agent-start].
+```/tmp/.gpg-agent-info``` file. When [starting the ```gpg-agent``` it is also 
+possible to instruct the agent to create the needed file][gnu-agent-start]. By
+telling the gpg agent to fire up.
+
 {% highlight bash %}
 gpg-agent --daemon --enable-ssh-support \
   --write-env-file "/tmp/.gpg-agent-info"
@@ -172,6 +174,10 @@ gpg-agent --daemon --enable-ssh-support \
 With this setup we will be able to have ```msmtp``` handle our mailing while
 keeping our passwords very secret. The only requirement is that we have 
 ```gpg-agent``` running.
+
+Note that the terminal used by the gpg-agent is fixed, meaning that you would
+have to return to the buffer (when in tmux), tab or terminal window within 
+which this call was first made.
 
 #### Queing outgoing e-mail
 Now that ```msmtp``` and mutt play ball {{ ":ball:" | emojify }} it becomes 
@@ -207,6 +213,7 @@ listed as the last property in the topbar when Mutt is open which happens to be
  - `u` **u**ndelete
  - `z` next page
  - `Z` previous page
+ - `T` `T`oggle quoted text
  - `\]` half down
  - `\[` half up
  - ```$``` sync
