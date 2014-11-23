@@ -3,12 +3,12 @@ layout: post
 title:  Training the Mutt
 since:   2014-10-20 13:01:23
 date:   2014-10-23 10:10:34
+category: tools
 type: tools
 tags:
  - mail
  - messaging 
  - tools
- - tool
  - communications
 description: "A return to the most versatile mail client I have ever had the 
 pleasure of using after many frustration hours with Google Mail, Apple Mail, 

@@ -3,7 +3,7 @@ layout: post
 title:  Before GUI Calculators
 date:   2014-10-07 16:19:33
 type:   tools
-category: math
+category: tools
 tags:
  - mathematics
  - calculus

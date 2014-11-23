@@ -5,12 +5,15 @@ title:  Freaking Sudon&rsquo;t
 date:   2014-10-06 10:40
 published: true
 type: tools
-category: web
+category: tools
 tags:
  - cli
  - terminal
  - unix
+ - tools
 description: When shit goes down it is often because noobs or lazy bozos decide to slap sudo in front of every seemingly failing command. For the love of the FSM, stop excessive sudoing!
+redirect_from:
+  - /web/fucking-sudont/
 ---
 
 In the design of unix and unix-based OS-es a clear distinction is quite visibly
