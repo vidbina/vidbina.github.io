@@ -141,13 +141,17 @@ passwordeval "gpg --quiet --no-tty --for-your-eyes-only --decrypt ~/.mutt/vidbin
 
 In order to [remember the passphrase][gnugpg] we should see to it that the 
 ```~/.gnupg/gpg.conf``` file contains the ```use-agent``` setting.
+{% highlight sh %}
+# Some line in the gpg conf file
+use-agent
+{% endhighlight %}
 
 Furthermore we will need to ensure that our box knows how to fire up the 
 gpg-agent when necessary. The agent needs to know which terminal to work with
 and furthermore it will need the ```GPG_AGENT_INFO``` variable to be set.
 
 By appending the following lines to our shell&rsquo;s ```*rc``` file or 
-```~/.bash_profile``` we can set the ```GPG_TTY``` (terminal), export it and 
+```~/.*_profile``` we can set the ```GPG_TTY``` (terminal), export it and 
 also set the ```GPG_AGENT_INFO``` and ```SSH_AUTH_SOCK``` variables if this 
 information is available.
 {% highlight bash %}
@@ -163,8 +167,8 @@ fi
 
 The previous addition to our shell&rsquo;s configuration depends on the 
 ```/tmp/.gpg-agent-info``` file. When [starting the ```gpg-agent``` it is also 
-possible to instruct the agent to create the needed file][gnu-agent-start]. By
-telling the gpg agent to fire up.
+possible to instruct the agent to create the needed file][gnu-agent-start] by
+telling the gpg agent to fire up using the following command:
 
 {% highlight bash %}
 gpg-agent --daemon --enable-ssh-support \
@@ -172,12 +176,15 @@ gpg-agent --daemon --enable-ssh-support \
 {% endhighlight %}
 
 With this setup we will be able to have ```msmtp``` handle our mailing while
-keeping our passwords very secret. The only requirement is that we have 
-```gpg-agent``` running.
+keeping passwords very secret. There will be no need to enter the passphrase 
+every time gpg gets going. If you do need to enter the passphrase, because 
+maybe the cache has expired, you will be prompted by a nifty fron-end to 
+enter the passphrase. This does not interfere with Mutt. The only requirement
+is that ```gpg-agent``` is running.
 
-Note that the terminal used by the gpg-agent is fixed, meaning that you would
-have to return to the buffer (when in tmux), tab or terminal window within 
-which this call was first made.
+Note that the terminal used by the gpg-agent stays the same untill the agent
+is setup to use another terminal session. This means that you would have to 
+return to the terminal session within which the agent was setup.
 
 #### Queing outgoing e-mail
 Now that ```msmtp``` and mutt play ball {{ ":ball:" | emojify }} it becomes 
