@@ -18,6 +18,17 @@ tags:
  - crowdfunding
 ---
 
+<blockquote>
+I didn't make it. Didn't even get close. So yeah. That was a real bummer (which
+is the only word I can think of and still abstain from profanities). I did try
+so now I know how it would have worked out. What I also learned is that I 
+should reserve a fair amount of energy to get campaigns going if I ever try 
+that crowdfunding thing again. Another note... If many of your friends are 
+exclusively in the not-yet-funded startup husstle they will scrambling for 
+cents themselves.
+</blockquote>
+
+
 <div class="element">
   <img 
     src="/resources/startup/africa/ampion2014routes.png" 
@@ -62,7 +73,7 @@ enjoyment instead?!? {{ ":bulb:" | emojify }}.
 I want to join one of the four [Ampion][ampion] busses that are set to start 
 their journey somewhere in Africa in November.
 
-{% if true %}
+{% if false %}
 <div class="element cta">
   <a href="http://thewayv.com/crowdfunding/projects/coming-to-africa/">Pledge here {{ ":trophy:" | emojify}}</a>
 </div>
@@ -119,7 +130,7 @@ sounds&hellip; heck, how can that not refuel a brain with an unsatiable desire
 for more stimuli?!?
 
 
-{% if true %}
+{% if false %}
 <div class="element cta">
   <a href="http://thewayv.com/crowdfunding/projects/coming-to-africa/">Pledge here {{ ":trophy:" | emojify}}</a>
 </div>
@@ -166,7 +177,7 @@ So don&rsquo;t hesitate to post some suggestions below. I already have a nicely
 planned out batch of material to serve to you but I&rsquo;d still love to get
 some early input if possible.
 
-{% if true %}
+{% if false %}
 <div class="element cta">
   <a href="http://thewayv.com/crowdfunding/projects/coming-to-africa/">Pledge here {{ ":trophy:" | emojify}}</a>
 </div>
@@ -207,7 +218,7 @@ myself. This should hopefully give you a better picture of me {{ ":grinning:" | 
 </div>
 
 Let&rsquo; go!
-{% if true %}
+{% if false %}
 <div class="element cta">
   <a href="http://thewayv.com/crowdfunding/projects/coming-to-africa/">Pledge here {{ ":trophy:" | emojify}}</a>
 </div>
