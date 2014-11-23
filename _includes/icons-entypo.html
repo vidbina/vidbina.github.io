@@ -59,5 +59,9 @@
   <meta class="detail entypo-thermometer" name="type" content="{{ include.type }}">
 {% when 'event', 'conference', 'festival', 'concert', 'workshop' %}
   <meta class="detail entypo-ticket" name="type" content="{{ include.type }}">
+{% when 'security' %}
+  <meta class="detail entypo-lock" name="type" content="{{ include.type }}">
+{% when 'encryption' %}
+  <meta class="detail entypo-key" name="type" content="{{ include.type }}">
 {% else %}
 {% endcase %}
