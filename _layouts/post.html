@@ -6,7 +6,7 @@ layout: default
     {% if page.since %}
     since
     <time datetime="{{ page.since | date: "%Y-%m-%d" }}">{{ page.since | date_to_string }}</time>
-    untill
+    until
     {% endif %}
     <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
 

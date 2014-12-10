@@ -97,7 +97,7 @@ keep our lines limited to 60 characters ([David Jury, About Face page 74][about-
 
 [Montserrat][montserrat] by [Julieta Ulanovsky][julieta] has a interesting 
 [history][montserrat-kickstarter], looks incredible and seems like it will fit
-the bill&hellip; untill people start complaining I will assume that it works well
+the bill&hellip; until people start complaining I will assume that it works well
 in the readability department.
 
 <div class="element video">

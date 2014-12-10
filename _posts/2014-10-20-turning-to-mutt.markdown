@@ -182,7 +182,7 @@ maybe the cache has expired, you will be prompted by a nifty fron-end to
 enter the passphrase. This does not interfere with Mutt. The only requirement
 is that ```gpg-agent``` is running.
 
-Note that the terminal used by the gpg-agent stays the same untill the agent
+Note that the terminal used by the gpg-agent stays the same until the agent
 is setup to use another terminal session. This means that you would have to 
 return to the terminal session within which the agent was setup.
 
