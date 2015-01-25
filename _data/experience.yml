@@ -1,21 +1,42 @@
 - organization:
-    name: Toperators
-    url: https://www.toperators.com
+    name: Saddl B.V.
+    url: https://saddl.nl
     country: The Netherlands
-  period: August 2014
-  title: Engineer
-  description: Spend a weekend helping an acquaintance from Startupbus to finish and deploy the Rails application. We worked on implementing S3 storage, fixing the routing, refactoring the codebase and building and improving several core features to help in having a prototype ready in time for the IBC conference.
+  period: November 2014 - current
+  title: Co-founder/engineer
+  description: Saddl acquired Laundr (technically), and I have assumed the role of CTO in order to ensure that our technology delivers whatever we promise. I spend most of my Saddl hours assisting my fellow developers (front-end mostly), buidling the back-end, designing and maintaining the infrastructure which we currently host at Google Cloud, maintaining the quality of our goods and planning for the future (anticipating the possible scaling issues we may run into).
   keywords:
-   - Ruby on Rails
-   - PostgreSQL
-   - S3
+   - Angular
+   - Python
+   - Scala
+   - Google Cloud
+   - MongoDB
+   - Docker
   active: true
   public: true
   type: work
-  relationship: barter
+  relationship: core-member
+- organization:
+    name: Laundr
+    url: https://laundr.co
+    country: The Netherlands
+  period: Februari 2014 - December 2014
+  title: Co-founder/engineer
+  description: Engineer for the Laundr tech landscape. As lead-engineer my responsibilities involve the execution and management of development of the back-end and client applications (for both smartphones and web) necessary to offer a user-friendly service to the customers.
+  keywords:
+   - Angular
+   - Node.js
+   - PostgreSQL
+   - Redis
+   - MongoDB
+   - Cordova
+  active: false
+  public: true
+  type: work
+  relationship: core-member
 - organization:
     name: SolarSwing
-    url: https://www.solarswing.com
+    url: https://www.solarswing.nl
     country: The Netherlands
   period: May 2014 - current
   title: Engineer
@@ -31,14 +52,46 @@
   type: work
   relationship: free-lancer
 - organization:
+    name: Jobsrepublic
+    url: https://www.jobsrepublic.nl
+    country: The Netherlands
+  period: October 2014 - current
+  title: Engineer
+  description: Maintaining a job placement and matching platform developed in Ruby. This involves executing bug-fixes, improving the general structure of the project and optimizing the migrate and deploy workflows. During my time here, I have also assisted in executing a migration to AWS.
+  keywords:
+   - Ruby
+   - MySQL
+   - MS SQL
+   - AWS
+  active: true
+  public: true
+  type: work
+  relationship: maintainer
+- organization:
+    name: Toperators
+    url: https://www.toperators.com
+    country: The Netherlands
+  period: August 2014
+  title: Engineer
+  description: Spend a weekend helping an acquaintance from Startupbus to finish and deploy the Rails application. We worked on implementing S3 storage, fixing the routing, refactoring the codebase and building and improving several core features to help in having a prototype ready in time for the IBC conference.
+  keywords:
+   - Ruby on Rails
+   - PostgreSQL
+   - S3
+  active: true
+  public: true
+  type: work
+  relationship: barter
+- organization:
     name: Muvement
-    url: https://api.muve.io
+    #url: https://api.muve.io
     country: The Netherlands
   period: May 2014 - current
   title: Engineer
-  description: Developing a simple platform for tracking user movements and triggering actions using geofences as markers.
+  description: Developing a simple platform for tracking user movements and triggering actions using geofences as markers. I have been able to use this solution for several applications I have built in the meantime.
   keywords:
    - Ruby
+   - Python
    - Sinatra
    - Ruby on Rails
    - RabbitMQ
@@ -47,27 +100,9 @@
    - geo-location
    - geo-fencing
   active: true
-  public: false
-  type: work
-  relationship: sole-developer
-- organization:
-    name: Laundr
-    url: https://laundr.co
-    country: The Netherlands
-  period: Februari 2014 - current
-  title: Co-founder/engineer
-  description: Engineer for the Laundr tech landscape. As lead-engineer my responsibilities involve the execution and management of development of the back-end and client applications (for both smartphones and web) necessary to offer a user-friendly service to the customers.
-  keywords:
-   - AngularJS
-   - Node.js
-   - PostgreSQL
-   - Redis
-   - MongoDB
-   - Cordova
-  active: true
   public: true
   type: work
-  relationship: core-member
+  relationship: sole-developer
 - organization:
     name: SolarSwing
     url: https://www.solarswing.nl
