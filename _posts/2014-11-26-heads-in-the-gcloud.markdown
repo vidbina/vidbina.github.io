@@ -33,6 +33,9 @@ After the installation I completed my setup by sourcing the `*.zsh` (or
 `*.bash` if you're still on that {{":wink:" | emojify }}) scripts at 
 startup.
 
+Updating the `gcloud` CLI tool is as simple as running 
+`gcloud components update`.
+
 ## Authentication
 Google made authentication too easy. By simply running 
 
