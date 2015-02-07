@@ -14,7 +14,8 @@ tags:
  - devops
  - tools
 mathjax: true
-description: "How to automate the creation of Google Cloud infrastructures."
+description: "How to automate the creation of Google Cloud infrastructures with 
+the Deployment Manager."
 ---
 Like Amazon's CloudFormation, Google has a solution for the devops fellas and
 gals that need to spawn simple to complex cloud infrastructures at the press
