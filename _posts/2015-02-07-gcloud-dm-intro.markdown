@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Spawning Google Cloud Infrastructures
+title:  Spawning Google Cloud Infrastructures with Deployment Manager
 since:  2015-01-27 17:37
 date:   2015-02-07 21:36
 type: cloud
@@ -18,19 +18,18 @@ description: "How to automate the creation of Google Cloud infrastructures with
 the Deployment Manager."
 ---
 Like Amazon's CloudFormation, Google has a solution for the devops fellas and
-gals that need to spawn simple to complex cloud infrastructures at the press
-of a button.
+gals that need to spawn cloud infrastructures at the press of a button.
 
 The beauty of AWS's CloudFormation is that it allows one to treat a 
 infrastructure setup as a deliverable pretty much in a similar way we consider
 source-code a deliverable. Heck, it even allows one to keep track of 
 infrastructure by checking in templates into your version management tool of 
-choice (probably git).
+choice (probably git) and managing changes to infrastructures.
 
 ## Installing the CLI Tool
 The gcloud tool installs some components by default, but as Google Cloud 
-Deployment Manager is still in alpha you will need to explicitly install the
-`preview` component.
+Deployment Manager is still in alpha, as of Jebruari 2015, one will need to 
+explicitly install the `preview` component.
 
 Get a proper overview of all components by listing them:
 ```gcloud components list```
@@ -47,15 +46,15 @@ group will be used in this post.
 The deployment manager knows [configuration files, templates, manifests and
 deployments][fundamentals].
 
-Deployments are collection of resources that one uses to spawn an 
+A deployment is a collection of resources that one uses to spawn an 
 infrastructure. Which means, all machines, buckets, databases, networks, load
 balancers&hellip; the whole shebang of possible resources that you need.
 
-Deployments are only possible if we there is a configuration. The configuration
-basically contains a description of that goodness you need spawned. To allow
-us to structure our configurations in a manner that is more pleasant to the
-DRY writers among us, one could use templates within configurations by simply
-importing and referencing them.
+Deployments are only possible if we there is a configuration. The 
+configuration basically contains a description of that goodness one needs 
+spawned. To allow one to structure configurations in a manner that is more 
+pleasant to the DRY writers, one could use templates within configurations by 
+simply importing and referencing them.
 
 Manifests are expansions of configurations, and the templates imported within,
 that represent the configuration with all variables expanded exactly as it 
@@ -65,7 +64,7 @@ will be executed.
 [conf-file]: https://cloud.google.com/deployment-manager/configuration-files
 
 ### Configuration
-Imagine ```example-conf.yaml``` file looking like this:
+Imagine the ```example-conf.yaml``` file looking like this:
 
 {%highlight yaml %}
 resources:
@@ -92,7 +91,10 @@ Basically we have a file containing two resources, a `f1-micro` VM instance and
 a storage bucket. As a result we can spawn this setup by simply submitting the
 configuration description to the deployment manager:
 
-```gcloud preview dm-v2 deployments list --config example-conf.yaml --deployment blog_post_demo --project bina```
+```gcloud preview dm-v2 deployments list \
+  --config example-conf.yaml \
+  --deployment blog_post_demo \
+  --project bina```
 
 ### Templates
 The former example may already simplify workflows enough as is, but somehow 
@@ -124,17 +126,18 @@ resources:
 {%endhighlight%}
 
 Observe how we use `env["name"]` and `properties["machineType"]` to allow 
-reuse of the same snippet whilst providing the flexibility of specifying these 
-attributes.
+reuse of the same template whilst providing the flexibility of specifying 
+just the `machineType` and `name`.
 
 The `env["name"]` attribute refers to the name of the resource as specified in
 the configuration file. In the following example this attribute will change as
-such to provide our VM's with names held by some remarkable bot specimen 
+such to provide the VM's with names held by some remarkable bot specimen 
 including Optimus Prime, Ultra Magnus, Sentinel Prime and Megatron.
 
-The created disk assigned to the different machines will also be named to the
-VM's name with an appropriate suffix (`-bootdisk`) which will leave us with the
-bootdisk `optimus-bootdisk` for the VM named `optimus`.
+The created disk assigned to the different machines will also be named to bear
+the name of the VM it belongs to followed by the appropriate suffix 
+(`-bootdisk`) which will leave us with the bootdisk `optimus-bootdisk` for the 
+VM named `optimus`.
 
 The previously described template may be reused by referencing it in the 
 configuration file.
@@ -145,11 +148,11 @@ resources:
 - name: optimus
   type: simple_vm_template.jinja
   properties:
-    machineType: f1-micro
+    machineType: n1-highmem-16
 - name: megatron
   type: simple_vm_template.jinja
   properties:
-    machineType: f1-micro
+    machineType: n1-highcpu-16
 - name: ultra
   type: simple_vm_template.jinja
   properties:
@@ -164,10 +167,10 @@ resources:
 
 For the sake of demonstration, the bucket has been left in the configuration 
 file just to demonstrate that our template is used as just another type in our
-configuration file. We could use Google Cloud's types and out template types
+configuration file. One can use Google Cloud's types and out template types
 interchangeably.
 
-Note that the zone could easily be specified in the configuration file as a 
+Notice that the zone can easily be specified in the configuration file as a 
 property and referred to from the template as could many other properties.
 
 # Sidenotes
@@ -178,3 +181,4 @@ property and referred to from the template as could many other properties.
   deployment manager.
 
 [gcloud-dm-conf]: https://cloud.google.com/deployment-manager/configuration-files#listing_available_resource_types
+[gcloud-dmconf]: https://cloud.google.com/deployment-manager/configuration-files
