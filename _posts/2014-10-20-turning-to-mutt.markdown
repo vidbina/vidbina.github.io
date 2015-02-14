@@ -182,7 +182,7 @@ maybe the cache has expired, you will be prompted by a nifty fron-end to
 enter the passphrase. This does not interfere with Mutt. The only requirement
 is that ```gpg-agent``` is running.
 
-Note that the terminal used by the gpg-agent stays the same until the agent
+Note that the terminal used by the gpg-agent stays the same untill the agent
 is setup to use another terminal session. This means that you would have to 
 return to the terminal session within which the agent was setup.
 
@@ -264,6 +264,11 @@ One can save a message to the archive by entering
 where `s` is bound to the _save-message_ command in the default configuration 
 of mutt.
 
+Mutt's save actualy writes a message to the destination and removes it from
+the source location. In that regards _save_ is [more like a typical _move_ 
+command while Mutt's _copy_ command actually writes to the destination and 
+keeps the original in its source location][mutt-actions-faq].
+
 Since we do not only wish to save the message upon which the cursor 
 rests but all tagged messages I prepend the archive command with the 
 _tag-prefix_ operator (which is bound to `;` in the default Mutt setup)
@@ -298,7 +303,7 @@ The `~f` pattern allows us to define a pattern for the sender. If we simply
 want to tag all messages coming from Facebook we could use the following
 command
 
-    T~f Facebook
+    T~ffacebook.com
 
 #### Tagging all messages with certain keywords
 In this example I check for message content and want all messages that contain
@@ -330,3 +335,4 @@ me to pipe my email into w3m for easier viewing
 [gnugpg]: https://wiki.archlinux.org/index.php/GPG#gpg-agent
 [gnu-agent-start]: https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
 [mutt-patterns]: http://www.mutt.org/doc/manual/manual.html#toc4.2
+[mutt-actions-faq]: http://dev.mutt.org/trac/wiki/MuttFaq/Action
