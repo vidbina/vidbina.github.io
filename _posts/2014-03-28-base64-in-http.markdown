@@ -21,6 +21,10 @@ information (the credentials during the basic authentication strategy). This
 article clears up a few ideas/questions I&rsquo;ve encountered in the field 
 while dealing with developers quite new to the trade.
 
+<div class="element">
+  <iframe src="//giphy.com/embed/14fcmidhmiTL3y?html5=true" width="480" height="360" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
+
 It the context of basic auth, it is important to note that the Base64 encoding 
 scheme is only meant to obscure the credentials sent to the server just enough 
 to avoid clashes with the format in which the requests are composed. One 

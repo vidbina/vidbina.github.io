@@ -21,6 +21,10 @@ The flight routes for commercial flights are obviously indicative of the
 journey the aircraft will be venturing through the skies and I just got curious
 which led to a full day of entertainment.
 
+<div class="element">
+  <iframe src="//giphy.com/embed/8wM2KQDjYu8vK?html5=true" width="480" height="255" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
+
 The flight plan I ran into looked like this&hellip;
 <blockquote>
 GORLO UL980 LAM UL179 CPT UM197 GAPLI GUNSO OMOKO 4800N 01500W 4500N 02000W 
@@ -58,6 +62,10 @@ to intercept SPY 242 to VOLLA (29.0 SPY). Track 238° MAG to GORLO (72.3 SPY).
 RNAV: THR 09 / At 500 ft AMSL turn left / EH053 (MAX 220 KIAS) / EH094 / EH090 
 / EH091 / VOLLA / GORLO
 </blockquote>
+
+<div class="elements">
+<iframe src="//giphy.com/embed/MNZwVeDGVT3na?html5=true" width="480" height="270" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
 
 Backed up by the map below, my interpretation of the sequence of relevant 
 waypoints and the RNAV is&hellip;
@@ -112,6 +120,10 @@ The convention here is to use the latitude and longitude of the location in
 designating the waypoint. A waypoint designated as 4500N 02000W would simply
 be the waypoint located at 45&deg;N 20&deg;W.
 
+<div class="element">
+<iframe src="//giphy.com/embed/WhWl3iN2CMLCM?html5=true" width="480" height="270" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
+
 ## Arrival
 I got my hands on aeronautical charts for the destination which choreograph the
 approach dance for a ILS landing. The ILS approach is only possible when landing
@@ -157,6 +169,10 @@ middle marker, before that point we should have established visual contact
 with the cues available on and near the airstrip, otherwise we are set to fly
 a missed approach.
 </blockquote>
+
+<div class="element">
+<iframe src="//giphy.com/embed/xHaXWUL8WzrhK?html5=true" width="480" height="253" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
 
 The misses has already landed {{ ":airplane:" | emojify }}&hellip; time to 
 sleep.

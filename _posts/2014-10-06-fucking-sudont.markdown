@@ -77,7 +77,13 @@ pulled from repositories somewhere on the web. You probably have no idea what
 is in there. It could be wiping your home directory or installing some other 
 nastiness you don't even want to think about.
 
-Bottomline be more conservative in superuser usage. If you frequently end up
+Bottomline: be more conservative in superuser dances. If you frequently end up
 `sudo`-ing commands it is probably a signal that your system is seriously 
-screwed up and it might be due for a fresh install -- the right way 
+screwed up and it may be due for a clean install -- the right way 
 {{ ":wink:" | emojify }}.
+
+Next time you prefix your command with `sudo` for no healthy, reason, muster up
+the courage and do the right thing.
+<div class="element giphy">
+  <iframe src="//giphy.com/embed/yrJ55WhtAoXVC?html5=true" width="480" height="202" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>

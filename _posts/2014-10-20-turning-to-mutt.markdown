@@ -15,11 +15,16 @@ pleasure of using after many frustration hours with Google Mail, Apple Mail,
 Sparrow and Airmail"
 ---
 I have tried Mail, Sparrow, Airmail and have now returned back to Mutt
-with my tail wagging between my legs, because they all sucked.
+with my tail wagging between my legs, because the other clients all sucked.
 
-I first spend some time cursing and fighting with postfix mail transfer agents.
-So fuck it... I am going try simpler alternatives first and work it up from 
-there.
+<div class="element">
+  <img src="https://38.media.tumblr.com/9e14aabd05982e13351fbf106c507a94/tumblr_mjlod335bb1rgg0yuo1_400.gif" alt="Muttley laughing and flying" >
+  <!--<img src="http://data3.whicdn.com/images/62358154/large.gif" alt="Muttley laughing and flying" >-->
+</div>
+
+Back to the hacker's best friend, I first spend some time cursing at and 
+fighting with postfix mail transfer agents. So fuck it... I am going try 
+simpler alternatives first and work it up from there.
 
 ## Just Mutt
 The build of Mutt that I am playing with at the moment offers support for 
