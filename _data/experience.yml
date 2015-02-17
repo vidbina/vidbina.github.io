@@ -36,6 +36,23 @@
   type: work
   relationship: core-member
 - organization:
+    name: Trovey
+    url: https://trovey.co
+    country: The Netherlands
+  period: October 2014 - current
+  title: Co-founder/Chief Engineer
+  description: Joined a group of entrepreneurs with the intent to simplify the way in which we find and acquire (second-hand) products goods.
+  keywords:
+   - Google Cloud
+   - MongoDB
+   - Ruby
+   - Angular
+   - Ionic
+  active: true
+  public: false
+  type: work
+  relationship: core-member
+- organization:
     name: SolarSwing
     url: https://www.solarswing.nl
     country: The Netherlands
@@ -245,7 +262,7 @@
   title: drop-out
   description: 
   active: false
-  public: false
+  public: true
   type: education
   relationship: student
 - organization:
