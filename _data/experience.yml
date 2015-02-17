@@ -3,15 +3,17 @@
     url: https://saddl.nl
     country: The Netherlands
   period: November 2014 - current
-  title: Co-founder/engineer
+  title: Co-founder/Chief Engineer
   description: Saddl acquired Laundr (technically), and I have assumed the role of CTO in order to ensure that our technology delivers whatever we promise. I spend most of my Saddl hours assisting my fellow developers (front-end mostly), buidling the back-end, designing and maintaining the infrastructure which we currently host at Google Cloud, maintaining the quality of our goods and planning for the future (anticipating the possible scaling issues we may run into).
   keywords:
    - Angular
    - Python
-   - Scala
    - Google Cloud
    - MongoDB
    - Docker
+   - CoreOS
+   - Kubernetes
+   - RabbitMQ
   active: true
   public: true
   type: work
@@ -28,7 +30,6 @@
    - Node.js
    - PostgreSQL
    - Redis
-   - MongoDB
    - Cordova
   active: false
   public: true
@@ -59,9 +60,9 @@
   title: Engineer
   description: Maintaining a job placement and matching platform developed in Ruby. This involves executing bug-fixes, improving the general structure of the project and optimizing the migrate and deploy workflows. During my time here, I have also assisted in executing a migration to AWS.
   keywords:
-   - Ruby
-   - MySQL
+   - Ruby (Ruby on Rails)
    - MS SQL
+   - MySQL
    - AWS
   active: true
   public: true
