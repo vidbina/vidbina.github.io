@@ -36,13 +36,14 @@ idea is to address the entire infrastructure as a unit. Kubernetes allows us
 to talk to our cloud.
 
 There is quite a bit of housekeeping required to get a cluster up and running.
-When working with Docker {{ ":whale:" | emojify }}, just getting different containers to play ball 
-together demands the configuration of discovery services among other things.
-Within the docker scenario this is necessary between containers on the same
-(virtual) machine. Now we need to set up an application over a cluster of 
-multiple (virtual) machines. Every machine added to the cluster needs to know
-how to deal with discovery and if at all possible we rather would not spend our
-energy on focussing on the individual (virtual) machines.
+When working with Docker {{ ":whale:" | emojify }}, just getting different 
+containers to play ball together demands the configuration of discovery 
+services among other things.  Within the docker scenario this is necessary 
+between containers on the same (virtual) machine. Now we need to set up an 
+application over a cluster of multiple (virtual) machines. Every machine added 
+to the cluster needs to know how to deal with discovery and if at all possible 
+we rather would not spend our energy on focussing on the individual (virtual) 
+machines.
 
 With a master and several nodes, Kubernetes offers us a control panel into the
 black box we call our cloud. Scattered accross the nodes, the actual (virtual)
@@ -56,29 +57,33 @@ same volumes and share the networking namespace, ip- and port space (to
 simplify communication between containers within the pod).
 
 ## Create Cluster
+Blah blah
+
 ### The Simple Way
 Google has made it incredibly easy to setup a Kubernetes cluster at the press 
 of a button.
 
-{% highlight bash %}
-gcloud preview container clusters create CLUSTER -m MECH -z ZONE --project PROJECT
-{% endhighlight %}
+<pre>
+gcloud preview container clusters create CLUSTER \
+  --machine-type MECH \
+  --zone ZONE \
+  --project PROJECT
+</pre>
 
-This spawns a cluster named `CLUSTER` (choose [`abell-2744`](abell2744) to test) with 
+This spawns a cluster named `CLUSTER` (choose [abell-2744][abell2744] to test) with 
 machines of type `MECH` (which could be `fi-micro` boxes for testing purposes)
 located within the `ZONE` zone (I generally enter `europe-west1-c` because 
 it is close to home {{ ":wink:" | emojify }}).
 
 For an oveview of the available zones run `gcloud compute zones list` and
-for an overview of the machine types within the zone of choice run ```gcloud
-compute machine-types list --zones ZONE```.
+for an overview of the machine types within the zone of choice run `gcloud
+compute machine-types list --zones ZONE`.
 
 It may be necessary to specify the number of nodes in the cluster using the 
 `--num-nodes X` (where `X` obviously represents the number of nodes wanted) 
 CLI argument, but by default the gcloud CLI tool will create a cluster of 
 three nodes.
 
-<!--
 ### The Rather More Involved Way
 It helps to gain a deeper understanding in the way Kubernetes really works.
 The [GCE util.sh][kubern-gce-util] file describes the manner in which 
@@ -93,90 +98,35 @@ asking Google Cloud to just spawn a cluster for us, we will add these machines
 one by one (this should also make it a bit easier to expand the nodepool later
 on).
 
-{% highlight bash %}
-gcloud compute instances create kubergenesis --machine-type MECH --project PROJECT --zone ZONE
-{% endhighlight %}
+#### Kubernetes Master
+Create a Kubernetes master using the [`master.yaml`](https://github.com/GoogleCloudPlatform/kubernetes/blob/master/docs/getting-started-guides/coreos/cloud-configs/master.yaml)
+file contributed [Kelsey Hightower][khightower]. This will setup the
+Kubernetes API service on port 8080. Just to make things a bit easier, tag the 
+machine to allow more flexibility in defining the firewall rules later on.
 
-Do yourself a favor and do not pick the `f1-micro` machine type. If you need to
-build the Kubernetes release on this box you will run into memory allocation 
-problems. Not surprisingly so, we only have about 0.60 GB available on that 
-box.
-
-After getting the box spawned connect to it using the following command:
-{% highlight bash %}
-gcloud compute ssh kubergenesis --zone ZONE
-{% endhighlight %}
-
-Once inside the machine, it will be necessary to get the kubernetes source in
-order to build the controller project.
-{% highlight bash %}
-git clone https://github.com/GoogleCloudPlatform/kubernetes.git
-{% endhighlight %}
-
-On Ubuntu 14:14
-{% highlight bash %}
-sudo apt-get install git docker.io
-# visit https://golang.org/dl/ and wget one of the latest stable gzipped tarballs
-wget LATEST_STABLE_GO_FOR_LINUX.tar.gz
-tar -C /usr/local -vzf LATEST_STABLE_GO_FOR_LINUX.tar.gz
-git clone https://github.com/GoogleCloudPlatform/kubernetes.git
-sudo usermod -a -G docker USER
-# log out and in again
-cd kubernetes; ./build/release.sh
-{% endhighlight %}
-
-blah
-
-
-
-{% highlight bash %}
-sudo apt-get update
-sudo apt-get install git-core
-sudo apt-get install build-essential
-git clone https://github.com/GoogleCloudPlatform/kubernetes.git
-
-cd kubernetes
-
-wget https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz
-sudo tar -C /usr/local -xvf go1.4.2.linux-amd64.tar.gz
-sudo sh -c 'echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile'
-
-sudo sh -c 'echo "deb http://http.debian.net/debian wheezy-backports main" >> /etc/apt/sources.list'
-curl -sSL https://get.docker.com/ | sh
-
-sudo gpasswd -a $USER docker
-sudo service docker restart
-
-cd kubernetes
-make release
-{% endhighlight %}
-Setting up [Docker on Debian][debian-docker]...
-
-#### CoreOS
-{% highlight bash %}
-gcloud compute instances create NAME --zone ZONE --image coreos --machine-type MECH --metadata-from-file user-data=master.yaml
-
-sed -e "s:<master-private-ip>:10.240.235.105:" kubernetes_cloud/node.yaml > /tmp/1.yml
-{% endhighlight %}
-
-{% highlight bash %}
-cd kubernetes
-./build/run.sh hack/build-cross.sh
-{% endhighlight %}
--->
-
-#### Another Attempt
-Create a Kubernetes master using the `master.yaml` file. This will setup the
-Kubernetes API service on port 8080. Furthermore, the machine may be tagged to 
-allow more flexibility in defining the firewall rules later on.
-{% highlight bash %}
+<pre>
 gcloud compute instances create NAME \
   --zone ZONE \
   --image coreos \
   --machine-type MECH \
-  --metadata-from-file user-data=master.yaml
-  --tags CLUSTER,master
-{% endhighlight %}
+  --metadata-from-file user-data=master.yaml \
+  --tags CLUSTER master
+</pre>
+
+I believe it is needless to say that `ZONE`, `MECH` and `CLUSTER` need to be 
+filled it by you, but there I said it. For a list of available zones query
+`gcloud compute zones list`. Do yourself a favor while you read through this
+article and keep all the machines you create within the same zone (it makes 
+things easier for now, but you can spread your clusters over multiple zones 
+once you understand how things work {{ ":wink:" | emojify }}). For a list of 
+available machine types within your selected zone query 
+`gcloud compute machine-types list --zone ZONE` and replace `MECH`. Yet again,
+do yourself a favor and pick a mech that has more guts then the `f1-micro` 
+mech. Be creative with `CLUSTER`. I called mine [Abell 2744][abell2744].
+
+<div class="element">
+  <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Pandora%27s_Cluster_%E2%80%93_Abell_2744.jpg/600px-Pandora%27s_Cluster_%E2%80%93_Abell_2744.jpg" alt="A picture of Pandora's cluster (cataloged in the Abell index as number 2744) as captured by the Hubble Space Telescope">
+</div>
 
 If all is well the previous command should spawn a Kubernetes master. Confirm
 that the master machine is up by reviewing the list of running instances 
@@ -185,6 +135,7 @@ presented when `gcloud compute instances list --zone ZONE` is queried.
 Assuming that the actual ip address of the master machine is substituted 
 wherever `IP` is mentioned, one may attempt to execute a call to the Kubernetes
 master.
+
 {% highlight bash %}
 wget IP:8080 -O-
 {% endhighlight %}
@@ -196,7 +147,7 @@ Enable traffic to master machines within the infrastructure over port 8080 by
 creating a firewall rules.
 {% highlight bash %}
 gcloud compute firewall-rules create expose-kubernetest-master-api \
-  --allow tcp:8080
+  --allow tcp:8080 \
   --target-tags CLUSTER,master
 {% endhighlight %}
 
@@ -208,10 +159,10 @@ After adding the necessary firewall rule one should be able to perform the
 previous `wget` call without any problems.
 
 Now that the master is accessible from the internet, one may try to use the
-Kubernetes Controller interface to query the amount of pods on the cluster.
+Kubernetes Controller interface to query the amount of nodes on the cluster.
 
 {% highlight bash %}
-kubectl get pods --server=IP:8080
+kubectl get nodes --server=IP:8080
 {% endhighlight %}
 
 Some may not have the `kubectl` command available on their machines. It is 
@@ -219,7 +170,37 @@ shipped as part of the google-cloud-sdk bundle. If for some reason, this does
 not apply use the kubectl.sh which is located in the clusters directory of th
 [kubernetes project][kubernetes-git].
 
-sed -e "s:<master-private-ip>:IP:" kubernetes_cloud/node.yaml > /tmp/node.yml
+#### Kubernetes Minion
+A Kubernetes cluster becomes very interesting once we start adding nodes 
+(formerly known as minions) to it.
+
+Before creating these nodes we need to replace every occurence of the string
+`<master-private-ip>` for the real private ip address of the master.
+
+Using the following command one may simply perform the replacement provided
+that `IP` is substituted for the ip address.
+
+{% highlight bash %}
+sed -e "s:<master-private-ip>:IP:" node.yaml > /tmp/node.yml
+{% endhighlight %}
+
+<pre>
+gcloud compute firewall-rules create allow-service-discovery \
+  --allow tcp:4001 \
+  --target-tags testcluster \
+  --source-ranges 10.X/16
+</pre>
+
+Now it is time to create the nodes (or minions).
+<pre>
+gcloud compute instances create NAME \
+  --zone ZONE \
+  --image coreos \
+  --machine-type MECH \
+  --metadata-from-file user-data=master.yaml \
+  --tags CLUSTER node
+</pre>
+
 
 ## View Cluster
 At the moment one can quickly obtain a list of Kubernetes clusters in Google 
@@ -272,6 +253,7 @@ the storage bucket which will host the images.
 
 Creating the storage bucket is as simple as
 
+[khightower]: https://github.com/kelseyhightower
 [kubernetes-git]: https://github.com/GoogleCloudPlatform/kubernetes
 [clusters-list]: http://en.wikipedia.org/wiki/List_of_galaxy_groups_and_clusters
 [kubernetes]: http://kubernetes.io/
@@ -281,3 +263,4 @@ Creating the storage bucket is as simple as
 [debian-docker]: https://docs.docker.com/installation/debian/
 [kubernetes-coreos]: https://github.com/GoogleCloudPlatform/kubernetes/blob/master/docs/getting-started-guides/coreos.md
 [minions]: http://despicableme.wikia.com/wiki/Minions
+[notable-minions]: http://despicableme.wikia.com/wiki/Category:Minions
