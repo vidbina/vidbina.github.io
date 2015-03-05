@@ -1,4 +1,23 @@
 - organization:
+    name: T.U. Delft
+    url: http://opentrafficsim.org # https://citg.tudelft.nl
+    country: The Netherlands
+  period: Februari 2014 - current
+  title: Software Engineer
+  description: "Professors Hans van Lint and Alexander Verbraeck are working on 
+  a multi-scale multi-mode open-source traffic simulator. I have the 
+  privilege of contributing to this project by designing some software tools
+  that are meant to simplify the use of the simulation engine that performs all
+  computation."
+  keywords:
+   - Java
+   - User Interfaces
+   - simulation
+  active: true
+  public: true
+  type: work
+  relationship: contributor
+- organization:
     name: Saddl B.V.
     url: https://saddl.nl
     country: The Netherlands
@@ -243,7 +262,19 @@
     country: The Netherlands
   period: 2007 - 2012
   title: B.Eng (Electronics Engineering, Embedded Systems)
-  description: Student of the Embedded Systems Engineering track at the Electronics department of the Engineering and Applied Sciences faculty at the university. The educational program touched on subjects varying from the conceptual design of system architectures to the construction of electronic circuitry leveraging concepts from control theory, power electornics, analog electronics and digital electronics domains. During the course of the program I parttook in the development of robots, amplifiers, control circuits and software systems in the context of lab-work, assignments or projects.
+  description: "Student of the Embedded Systems Engineering track at the 
+  Electronics department of the faculty of Engineering and Applied Sciences. 
+  The educational program touched on subjects varying from the conceptual 
+  design of system architectures to the construction of electronic circuitry 
+  leveraging concepts from control theory, power electornics, analog electronics 
+  and digital electronics domains.
+  <br/>
+  During the course of the program I parttook in the development of robots, 
+  amplifiers, control circuits and software systems in the context of lab-work, 
+  assignments or projects.
+  <br/>
+  Honestly, I had the time of my life here. Very hands-on approach. We got our
+  hands dirty and we built cool things. My kind of program."
   active: false
   public: true
   type: education
@@ -255,16 +286,6 @@
    - Embedded Systems
    - Analog Electronics
    - Power Electronics
-- organization:
-    name: T.U. Delft
-    url: http://www.tudelft.nl
-  period: 2007
-  title: drop-out
-  description: 
-  active: false
-  public: true
-  type: education
-  relationship: student
 - organization:
     name: Peppered B.V.
     url: http://www.peppered.nl
@@ -279,6 +300,30 @@
   keywords:
    - PHP
    - MySQL
+- organization:
+    name: T.U. Delft
+    url: http://www.tudelft.nl
+  description: "After a year in the goldmines I started my first weeks at the
+  university. I spent many sleepless nights getting up to speed in my 
+  subjects to keep up with my peers. It was quite a struggle, but I kept 
+  pushing. After a chat with the dean, I discovered that I should not have 
+  been admitted with my HAVO diploma (they explained that the American high 
+  school program compares to the Dutch HAVO program).
+  <br/>In The Netherlands, 
+  WO universities require students to have a VWO diploma or at least a 
+  Propedeuse (completion of the freshman year) from an accredited HBO 
+  university prior to joining a WO university program. At this point I started 
+  looking for a HBO university (hogeschool) in order to obtain my Propedeuse. 
+  <br/>
+  I was not well aware of this difference when I signed up for the program 
+  whilst in Suriname, but now I know that the Dutch educational system is a bit
+  more layered then the American system, which I'm more acquainted with."
+  period: 2007
+  title: drop-out
+  active: false
+  public: true
+  type: education
+  relationship: student
 - organization:
     name: IAMGold Rosebel Goldmines N.V.
     country: Suriname 
