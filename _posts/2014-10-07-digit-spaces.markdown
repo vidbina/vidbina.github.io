@@ -2,7 +2,7 @@
 layout: post
 title:  How Many Digit Spaces
 date:   2014-10-07 16:19:33
-type:   tools
+type:   mathematics
 category: math
 tags:
  - mathematics

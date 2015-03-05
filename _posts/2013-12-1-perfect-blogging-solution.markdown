@@ -107,8 +107,8 @@ in the readability department.
 ### Math
 Another matter I had not yet discussed is the presentation of mathematical
 formulae. My go-to solution for web-math is [MathJax][mathjax]. What can I say
-I'm a \\(\tex\\) guy {{ ":wink:" | emojify }}. Anyways the quadratic formula
-looks as slick as it looks in \\(\LaTex\\) documents if printed like \\(ax^2 + bx + c = 0\\).
+I'm a \\(\TeX\\) guy {{ ":wink:" | emojify }}. Anyways the quadratic formula
+looks as slick as it looks in \\(\LaTeX\\) documents if printed like \\(ax^2 + bx + c = 0\\).
 
 
 ### Color

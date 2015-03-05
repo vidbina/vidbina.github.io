@@ -2,7 +2,7 @@
 layout: post
 title:  Simple Sigmas
 date:   2015-03-05 09:22:33
-type:   tools
+type:   mathematics
 category: math
 tags:
  - mathematics
