@@ -162,13 +162,15 @@ Now that the master is accessible from the internet, one may try to use the
 Kubernetes Controller interface to query the amount of nodes on the cluster.
 
 {% highlight bash %}
-kubectl get nodes --server=IP:8080
+clusters/kubectl.sh get nodes --server=IP:8080
 {% endhighlight %}
 
-Some may not have the `kubectl` command available on their machines. It is 
-shipped as part of the google-cloud-sdk bundle. If for some reason, this does
-not apply use the kubectl.sh which is located in the clusters directory of th
-[kubernetes project][kubernetes-git].
+Some may not have the `kubectl` command available on their machines which may
+be used as a replacement for `clusters/kubectl.sh` in the previous example. It
+is shipped as part of the google-cloud-sdk bundle. If for some reason, this 
+does not apply use the kubectl.sh which is located in the clusters directory of 
+the [kubernetes project][kubernetes-git] you may have to modify your path a 
+bit depending on your working directory.
 
 #### Kubernetes Minion
 A Kubernetes cluster becomes very interesting once we start adding nodes 
@@ -180,27 +182,40 @@ Before creating these nodes we need to replace every occurence of the string
 Using the following command one may simply perform the replacement provided
 that `IP` is substituted for the ip address.
 
+By using `sed` to replace the token for the IP address in mind, we ensure that
+we have every occurence of the phrase substituted.
+
 {% highlight bash %}
 sed -e "s:<master-private-ip>:IP:" node.yaml > /tmp/node.yml
 {% endhighlight %}
 
-<pre>
+In order to allow our cluster machines to communicate through etcd (all minions
+need to communicate with the master in order) one can set up a firewall rule
+that applies to machines bearing the given target tag (this is why I love 
+tagging my machines).
+
+{%highlight bash%}
 gcloud compute firewall-rules create allow-service-discovery \
   --allow tcp:4001 \
-  --target-tags testcluster \
+  --target-tags CLUSTER \
   --source-ranges 10.X/16
-</pre>
+{%endhighlight%}
 
 Now it is time to create the nodes (or minions).
-<pre>
+
+{%highlight bash%}
 gcloud compute instances create NAME \
-  --zone ZONE \
   --image coreos \
   --machine-type MECH \
-  --metadata-from-file user-data=master.yaml \
+  --zone ZONE \
+  --metadata-from-file user-data=/tmp/node.yaml \
   --tags CLUSTER node
-</pre>
+{%endhighlight%}
 
+For `NAME` one may enter one or multple machine names (I chose the names of 
+three Minion resulting to `NAME` being substituted with `dave kevin stuart`).
+For testing purposes one may select a `f1-micro` or `g1-small` mech, while 
+picking a zone close to home {{ ":wink:" | emojify }}.
 
 ## View Cluster
 At the moment one can quickly obtain a list of Kubernetes clusters in Google 
