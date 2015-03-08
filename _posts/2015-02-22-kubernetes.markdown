@@ -17,47 +17,99 @@ tags:
 mathjax: true
 description: "First encounters in setting up and using a Kubernetes cluster on Google Cloud"
 ---
-Kubernetes allows one to orchestrate a cluster of containers in an elegant 
-fashion, specifically... by allowing one to talking to the cluster and 
-instructing it how to allocate the different containers it needs to run. 
+Kubernetes allows one to orchestrate cloud resources in an elegant fashion, 
+specifically... by allowing one to interact with a single point of entry to the 
+cluster and instructing through this interface how to allocate the different 
+resource within. Basically, talk to your cloud and have it manage your compute
+containers.
 
+<blockquote>
 Things like ensuring that 5 instances of a worker remain operational at all 
-times are some of the things that Kubernetes makes possible. This post serves
-as a Note-to-Self to the future me, fighting to get a nice setup of my services
+times are some of the things that Kubernetes makes easy. This post serves
+as a Note-to-Self to the future me fiddling to get a nice setup of my services
 online.
+</blockquote>
 
 At the time of writing (Februari 2015) the Google Cloud container API is still
 in alpha. So {{ ":shit:" | emojify }} will most likely change, but I have a 
-hunch that underlying ideas and principles will remain somewhat the same.
+hunch that underlying principles will remain largely the same.
 
 #Introduction
 Kubernetes introduces a layer or more of abstraction to devops hackers. The 
-idea is to address the entire infrastructure as a unit. Kubernetes allows us
-to talk to our cloud.
+idea is to address the entire infrastructure as a single unit. Kubernetes 
+helps us in orchestrating our cloud.
 
 There is quite a bit of housekeeping required to get a cluster up and running.
 When working with Docker {{ ":whale:" | emojify }}, just getting different 
 containers to play ball together demands the configuration of discovery 
-services among other things.  Within the docker scenario this is necessary 
-between containers on the same (virtual) machine. Now we need to set up an 
-application over a cluster of multiple (virtual) machines. Every machine added 
-to the cluster needs to know how to deal with discovery and if at all possible 
-we rather would not spend our energy on focussing on the individual (virtual) 
-machines.
+services among other things.  Within the docker scenario this is already
+a bit of a hassle between containers on the same (virtual) machine. Setting up 
+an application over a cluster of multiple (virtual) machines will require a bit
+more work obviously.
 
-With a master and several nodes, Kubernetes offers us a control panel into the
-black box we call our cloud. Scattered accross the nodes, the actual (virtual)
+Every machine added to the cluster needs to know how to deal with discovery 
+and if at all possible we rather would not spend our energy on focussing on 
+the individual (virtual) machines, because you don't want to have to remember 
+what every machine does. Let the cluster take care of its own housekeeping 
+{{ ":house:" | emojify }}.
+
+<div class="element">
+  <img src="/resources/devops/kubernetes/basic-setup.svg" alt="The components involved in a basic Kubernetes setup">
+</div>
+
+With a master, Kubernetes offers us a entry point into the black box we call 
+our cloud. 
+
+The master runs the _interface_ service (`kube-apiserver`) which accepts all 
+commands we issue. The _discovery_ service, `etcd` 
+specifically, enables the services to fetch necessary configurations from 
+a central location.
+The _scheduling_ service assigns work to different nodes in the cluster (e.g.: 
+determining on which machines which workload is to be executed based on current
+workload and other properties).
+The _management_ service (which is in fact the Kubernetes replication 
+controller) enforces that the specified requirements for workunits are honored 
+(.e.g.: when one have requested N instances of a worker and some become 
+unhealthy, the replication-controller sees to it that these workers are killed 
+and new instances are spawned to keep the requested count of services up).
+The _registration_ service deals with registering Kubelets with the Kubernetes 
+master.
+
+<blockquote>
+In the traditional CoreOS setup, for instance, one sets up `etcd` to replicate 
+the store content among the different machines in the cluster, but the 
+Kubernetes case simply uses a single box for the store. Yes, this does mean that the 
+Kubernetes benefits disappear with the master going offline.
+</blockquote>
+
+I could dive into the ins and outs of every service in the diagram above, but 
+the good fellas and gals at DigitalOcean have a [clear writeup on the different 
+Kubernetes components][kubern-intro].
+
+The nodes run a _management_ service (`kubelet`) which stays in touch with the 
+master and maintains the workload to be executed on the node. The _networking_
+service provides the necessary plumbing to handle network in a 
+Kubernetes-friendly manner (basically every node on a Kubernetes network 
+requires its own subnet, `flannel` sees to it that Kubernetes has the impression 
+that this is the case). The _proxy_ service takes care of ensuring that 
+requests are mapped to corresponding container endpoints. Last, but definitely
+not least the _containerization_ service takes care of facilitating the running
+of containers on our node(s).
+
+
+Scattered across the nodes, the actual (virtual)
 machines, Kubernetes spawns, monitors and kills the specified pods which are 
-the atoms in the Kubernetes universe.
-
-Pods, being the smallest deployable units in the Kubernetosphere, are 
-collections of containers. There may be multiple containers operating in a pod,
-all these containers are spawned from the same image, share the
-same volumes and share the networking namespace, ip- and port space (to 
-simplify communication between containers within the pod).
+the atoms in the Kubernetes universe. Pods, being the smallest deployable units
+in the Kubernetosphere, are collections of containers. There may be multiple 
+containers operating in a pod, all these containers are spawned from the same 
+image, share the same volumes and share the networking namespace, ip- and port 
+space (to simplify communication between containers within the pod). A simple
+example would be the running of a `web-api` pod which could exist of 5 web 
+worker containers (something that the _replication-controller_ would have to 
+enforce) spread across 5 or less actual nodes (or minions).
 
 ## Create Cluster
-Blah blah
+This section will discuss the creation of Kubernetes clusters on Google cloud.
 
 ### The Simple Way
 Google has made it incredibly easy to setup a Kubernetes cluster at the press 
@@ -279,3 +331,4 @@ Creating the storage bucket is as simple as
 [kubernetes-coreos]: https://github.com/GoogleCloudPlatform/kubernetes/blob/master/docs/getting-started-guides/coreos.md
 [minions]: http://despicableme.wikia.com/wiki/Minions
 [notable-minions]: http://despicableme.wikia.com/wiki/Category:Minions
+[kubern-intro]: https://www.digitalocean.com/community/tutorials/an-introduction-to-kubernetes
