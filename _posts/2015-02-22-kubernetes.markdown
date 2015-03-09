@@ -114,7 +114,23 @@ asking Google Cloud to just spawn a cluster for us, we will add these machines
 one by one (this should also make it a bit easier to expand the nodepool later
 on).
 
-### Kubernetes Master
+<!--
+### All-in-one Google Solution
+Although still in alpha, Google has a nifty way of setting up a cluster. I'll
+mention it here for the sake of keeping stuff complete, but I find the old 
+fashion way of spawning a cluster more useful anyways because it is a universal
+approach.
+
+```bash
+gcloud preview container clusters create CLUSTER \
+  --machine-type  MECH \
+  --zone ZONE \
+  --project PROJECT \
+  --num-nodes N
+```
+-->
+
+### Spawn a Master
 Create a Kubernetes master using the [`master.yaml`](https://github.com/GoogleCloudPlatform/kubernetes/blob/master/docs/getting-started-guides/coreos/cloud-configs/master.yaml)
 file contributed [Kelsey Hightower][khightower]. This will setup the
 Kubernetes API service on port 8080. Just to make things a bit easier, tag the 
@@ -190,7 +206,7 @@ does not apply use the kubectl.sh which is located in the clusters directory of
 the [kubernetes project][kubernetes-git] you may have to modify your path a 
 bit depending on your working directory.
 
-### Kubernetes Minion
+### Spawn a Minion
 A Kubernetes cluster becomes very interesting once we start adding nodes 
 (formerly known as minions) to it.
 
