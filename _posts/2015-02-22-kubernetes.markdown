@@ -109,52 +109,21 @@ worker containers (something that the _replication-controller_ would have to
 enforce) spread across 5 or less actual nodes (or minions).
 
 ## Create Cluster
-This section will discuss the creation of Kubernetes clusters on Google cloud.
-
-### The Simple Way
-Google has made it incredibly easy to setup a Kubernetes cluster at the press 
-of a button.
-
-<pre>
-gcloud preview container clusters create CLUSTER \
-  --machine-type MECH \
-  --zone ZONE \
-  --project PROJECT
-</pre>
-
-This spawns a cluster named `CLUSTER` (choose [abell-2744][abell2744] to test) with 
-machines of type `MECH` (which could be `fi-micro` boxes for testing purposes)
-located within the `ZONE` zone (I generally enter `europe-west1-c` because 
-it is close to home {{ ":wink:" | emojify }}).
-
-For an oveview of the available zones run `gcloud compute zones list` and
-for an overview of the machine types within the zone of choice run `gcloud
-compute machine-types list --zones ZONE`.
-
-It may be necessary to specify the number of nodes in the cluster using the 
-`--num-nodes X` (where `X` obviously represents the number of nodes wanted) 
-CLI argument, but by default the gcloud CLI tool will create a cluster of 
-three nodes.
-
-### The Rather More Involved Way
-It helps to gain a deeper understanding in the way Kubernetes really works.
-The [GCE util.sh][kubern-gce-util] file describes the manner in which 
-Kubernetes goes about executing the different tasks needed to do its work. It
-helps to read through this file to get an idea of how Kubernetes takes care of
-its housekeeping. It will help you answer how it determines the project and 
-zone, what `kube-up` really does and some other curious questions that you may
-ask {{ ":wink: | emojify }}.
-
 For this example we will set up a master and different minions. Instead of
 asking Google Cloud to just spawn a cluster for us, we will add these machines
 one by one (this should also make it a bit easier to expand the nodepool later
 on).
 
-#### Kubernetes Master
+### Kubernetes Master
 Create a Kubernetes master using the [`master.yaml`](https://github.com/GoogleCloudPlatform/kubernetes/blob/master/docs/getting-started-guides/coreos/cloud-configs/master.yaml)
 file contributed [Kelsey Hightower][khightower]. This will setup the
 Kubernetes API service on port 8080. Just to make things a bit easier, tag the 
 machine to allow more flexibility in defining the firewall rules later on.
+
+{%highlight bash%}
+echo "nice";
+{%endhighlight%}
+
 
 <pre>
 gcloud compute instances create NAME \
@@ -165,6 +134,8 @@ gcloud compute instances create NAME \
   --tags CLUSTER master
 </pre>
 
+
+<p>
 I believe it is needless to say that `ZONE`, `MECH` and `CLUSTER` need to be 
 filled it by you, but there I said it. For a list of available zones query
 `gcloud compute zones list`. Do yourself a favor while you read through this
@@ -175,6 +146,7 @@ available machine types within your selected zone query
 `gcloud compute machine-types list --zone ZONE` and replace `MECH`. Yet again,
 do yourself a favor and pick a mech that has more guts then the `f1-micro` 
 mech. Be creative with `CLUSTER`. I called mine [Abell 2744][abell2744].
+</p>
 
 <div class="element">
   <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Pandora%27s_Cluster_%E2%80%93_Abell_2744.jpg/600px-Pandora%27s_Cluster_%E2%80%93_Abell_2744.jpg" alt="A picture of Pandora's cluster (cataloged in the Abell index as number 2744) as captured by the Hubble Space Telescope">
@@ -192,7 +164,7 @@ master.
 wget IP:8080 -O-
 {% endhighlight %}
 
-If wget hangs on this request, it most likely means that there are no firewall
+If `wget` hangs on this request, it most likely means that there are no firewall
 rules in place to allow your call to hit the actual master server.
 
 Enable traffic to master machines within the infrastructure over port 8080 by
@@ -224,7 +196,7 @@ does not apply use the kubectl.sh which is located in the clusters directory of
 the [kubernetes project][kubernetes-git] you may have to modify your path a 
 bit depending on your working directory.
 
-#### Kubernetes Minion
+### Kubernetes Minion
 A Kubernetes cluster becomes very interesting once we start adding nodes 
 (formerly known as minions) to it.
 
