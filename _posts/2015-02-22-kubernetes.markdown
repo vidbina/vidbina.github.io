@@ -15,6 +15,7 @@ tags:
  - tools
  - orchestration
 mathjax: true
+emojify: true
 description: "First encounters in setting up and using a Kubernetes cluster on Google Cloud"
 ---
 Kubernetes allows one to orchestrate cloud resources in an elegant fashion, 
@@ -100,13 +101,12 @@ of containers on our node(s).
 Scattered across the nodes, the actual (virtual)
 machines, Kubernetes spawns, monitors and kills the specified pods which are 
 the atoms in the Kubernetes universe. Pods, being the smallest deployable units
-in the Kubernetosphere, are collections of containers. There may be multiple 
-containers operating in a pod, all these containers are spawned from the same 
-image, share the same volumes and share the networking namespace, ip- and port 
-space (to simplify communication between containers within the pod). A simple
-example would be the running of a `web-api` pod which could exist of 5 web 
-worker containers (something that the _replication-controller_ would have to 
-enforce) spread across 5 or less actual nodes (or minions).
+in the Kubernetosphere, are collections of containers so there may be multiple 
+containers operating in a pod. All the containers within a pod share the same 
+volumes, the networking namespace, ip- and port space (to simplify 
+communication between containers within the pod). In 
+[the section on pods](#pods), I discuss a use-case which describes how one may 
+utilize such pods. 
 
 ## Create Cluster
 For this example we will set up a master and different minions. Instead of
@@ -250,6 +250,7 @@ three Minion resulting to `NAME` being substituted with `dave kevin stuart`).
 For testing purposes one may select a `f1-micro` or `g1-small` mech, while 
 picking a zone close to home {{ ":wink:" | emojify }}.
 
+<!--
 ## View Cluster
 At the moment one can quickly obtain a list of Kubernetes clusters in Google 
 Cloud by listing all the known clusters in a given project.
@@ -257,7 +258,36 @@ Cloud by listing all the known clusters in a given project.
 ```bash
 gcloud preview container clusters list --project PROJECT
 ```
+-->
 
+## <a href="#pods"></a>Pods
+Kubernetes performs work in pods. Pods are collections of containers may be
+bundled together for several reasons. 
+
+Imagine a web worker, that receives content and performs some operation on it.
+You could seperate that into a web worker, which focusses on merely handling 
+the incoming request, and a processor which focusses on performing that 
+operation that we want to execute.
+
+ - The web worker receives text while the processor scans the text to 
+ determine the sentiment of the submittor or whether the text has been 
+ plagiarized.
+ - The web worker receives an audio sample while the processor filters the 
+ sample to flag it whether the secret phrase ("open sesame") is used, or 
+ simply just filter to eliminate non-vocal sound.
+ - The web worker receives a video while the processor filter the fragment to 
+ blur out faces, license plates and nudity.
+
+For several reasons we could decide to run
+both on the same computation unit as the web worker could fetch and store the
+data for processing upon which the processor picks up the data and does its 
+magic. Gosh, would it be great if these services could share their storage 
+volumes? Within a pod they do {{ ":wink:" | emojify }}.
+
+## Service with A Smile
+Now that we have the plumbing in place we need to start pumping some fluids 
+through the pipelines. Kubernetes allows us to define pods which execute the 
+work we need done. 
 ## Start Pod
 Kubernetes introduces the notion of pods as a unit for describing services that
 may require replication over the cluster.
