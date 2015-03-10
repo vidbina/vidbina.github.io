@@ -345,3 +345,4 @@ Creating the storage bucket is as simple as
 [minions]: http://despicableme.wikia.com/wiki/Minions
 [notable-minions]: http://despicableme.wikia.com/wiki/Category:Minions
 [kubern-intro]: https://www.digitalocean.com/community/tutorials/an-introduction-to-kubernetes
+[kubern-workshop]: https://github.com/kelseyhightower/intro-to-kubernetes-workshop
