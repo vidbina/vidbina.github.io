@@ -3,6 +3,7 @@ layout: post
 title:  Understanding Material Conditionals
 date:   2015-03-11 22:51:51
 type: math
+category: math
 tags:
  - math
  - logic
