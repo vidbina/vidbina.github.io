@@ -38,7 +38,7 @@ consequent $q$ to represent that _a creature is an alien_ simply read as _if
 a creature has green blood, then it is an alien_.
 
 <div class="element">
-  <img src="/resources/math/ifthen-bloodandaliens.svg" alt="Simple Venn diagram to explore the \"if creature has green blood, then creature is alien\" material condition">
+  <img src="/resources/math/ifthen-bloodandaliens.png" alt="Simple Venn diagram to explore the if creature has green blood, then creature is alien material condition" />
 </div>
 
 The Venn diagram has surrounded the subject we're talking about (our antecedent 
