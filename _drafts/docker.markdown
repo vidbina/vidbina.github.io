@@ -1,3 +1,21 @@
+---
+layout: post
+title: Dock(erize) those Containers
+since: 2015-02-16 14:19:23
+type: tools
+category: cloud
+tags:
+ - infrastructure
+ - containerization
+ - lxc
+ - docker
+ - container
+emojify: true
+description: ""
+---
+```bash
+docker run -i -t busybox /bin/sh env
+```
 LXC
 - virtual memory
 - kernel sharing
@@ -26,11 +44,16 @@ Somewhere along the line a unit/service breaks and needs to be debugged.
 CoreOS logs everything into ```/var/log/journal/*``` and `journalctl` allows
 one to view the content of the binary logs.
 
-```journalctl --file=/var/log/journal/REF/FILE.log```
+```bash
+sudo journalctl --file=/var/log/journal/REF/FILE.log
+```
 
 I ran into the "Failed units: 1" notification. After reviewing which services
 were up ```sudo systemctl list-units``` I discovered that the 
 `gce-coreos-cloudinit.service` had failed. Running `journalctl` doesn't return
 anything meaningful, but if I specify which journal file to use I get much better
 results
-```sudo journalctl -u gce-coreos-cloudinit.service --file=JOURNAL_FILE.log```
+
+```bash
+sudo journalctl -u gce-coreos-cloudinit.service --file=JOURNAL_FILE.log
+```
