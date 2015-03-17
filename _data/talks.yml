@@ -1,0 +1,27 @@
+- title: "Don't Pee in My Sandbox"
+  description: "Discussing the advantages gained through the seperation of environments through virtualization or containerization."
+  visible: true
+  url: /devops/dont-pee-in-my-sandbox
+  type: devops
+  date: 2015-03-19 17:00:00
+  keywords:
+   - Docker
+   - containerization
+   - virtualization
+   - KVM
+   - QEMU
+   - micro-service
+   - microkernel
+   - monolithic
+   - micro vs mono
+   - SOA
+- title: KISSable Services
+  description: 'Services need to be simple in order to keep them manageable. Just sharing pointers on how to keep services light, simple and kissable -- from one dev to another :wink:.'
+  visible: true
+  url: /devops/kissable--micro-services
+  type: software
+  date: 2015-03-19 17:00:00
+  keywords:
+   - micro-service
+   - micro vs mono
+   - SOA
