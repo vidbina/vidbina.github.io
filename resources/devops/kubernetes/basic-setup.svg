@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="570"
+   height="370"
+   id="svg3163"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="kubern-basic.svg">
+  <defs
+     id="defs3165" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="295"
+     inkscape:cy="199.40315"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1183"
+     inkscape:window-height="609"
+     inkscape:window-x="24"
+     inkscape:window-y="20"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3171"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       originx="-40px"
+       originy="-530px" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata3168">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-40,-152.36218)">
+    <rect
+       style="fill:#19aeff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3335"
+       width="570"
+       height="230"
+       x="-20"
+       y="140"
+       transform="translate(60,152.36218)" />
+    <rect
+       y="332.36218"
+       x="400"
+       height="150"
+       width="190"
+       id="rect3306"
+       style="fill:#b50000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <rect
+       y="322.36218"
+       x="390"
+       height="150"
+       width="190"
+       id="rect3308"
+       style="fill:#dc0000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <rect
+       style="fill:#b50000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3304"
+       width="120"
+       height="130"
+       x="240"
+       y="592.36218" />
+    <rect
+       style="fill:#dc0000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3302"
+       width="120"
+       height="130"
+       x="230"
+       y="582.36218" />
+    <rect
+       style="fill:#9ade00;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3173"
+       width="280"
+       height="180"
+       x="80"
+       y="312.36218" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3181"
+       width="260"
+       height="20"
+       x="90"
+       y="322.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       x="95"
+       y="337.36218"
+       id="text3183"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3185"
+         x="95"
+         y="337.36218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold">interface (kube-apiserver)</tspan></text>
+    <rect
+       y="382.36218"
+       x="90"
+       height="20"
+       width="260"
+       id="rect3187"
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3189"
+       y="397.36218"
+       x="95"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+         y="397.36218"
+         x="95"
+         id="tspan3191"
+         sodipodi:role="line">scheduling (kube-scheduler) </tspan></text>
+    <rect
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3193"
+       width="260"
+       height="20"
+       x="90"
+       y="412.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       x="95"
+       y="427.36218"
+       id="text3195"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3197"
+         x="95"
+         y="427.36218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold">management (kube-controller-manager)</tspan></text>
+    <rect
+       y="442.36218"
+       x="90"
+       height="20"
+       width="260"
+       id="rect3199"
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3201"
+       y="457.36218"
+       x="95"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+         y="457.36218"
+         x="95"
+         id="tspan3203"
+         sodipodi:role="line">registration (kube-register)</tspan></text>
+    <rect
+       y="312.36218"
+       x="380"
+       height="150"
+       width="190"
+       id="rect3224"
+       style="fill:#ff4141;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <rect
+       y="322.36218"
+       x="390"
+       height="20"
+       width="170"
+       id="rect3226"
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3228"
+       y="337.36218"
+       x="395"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+         y="337.36218"
+         x="395"
+         id="tspan3230"
+         sodipodi:role="line">networking (flannel)</tspan></text>
+    <rect
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3232"
+       width="170"
+       height="20"
+       x="390"
+       y="352.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       x="395"
+       y="367.36218"
+       id="text3234"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3236"
+         x="395"
+         y="367.36218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold">containerization (docker)</tspan></text>
+    <rect
+       y="382.36218"
+       x="390"
+       height="20"
+       width="170"
+       id="rect3238"
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3240"
+       y="397.36218"
+       x="395"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+         y="397.36218"
+         x="395"
+         id="tspan3242"
+         sodipodi:role="line">management (kubelet)</tspan></text>
+    <rect
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3244"
+       width="170"
+       height="20"
+       x="390"
+       y="412.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       x="395"
+       y="427.36218"
+       id="text3246"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3248"
+         x="395"
+         y="427.36218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold">proxy (kube-proxy)</tspan></text>
+    <rect
+       y="572.36218"
+       x="80"
+       height="130"
+       width="120"
+       id="rect3250"
+       style="fill:#9ade00;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <rect
+       y="582.36218"
+       x="90"
+       height="20"
+       width="100"
+       id="rect3252"
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3254"
+       y="597.36218"
+       x="95"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+         y="597.36218"
+         x="95"
+         id="tspan3256"
+         sodipodi:role="line">etcd</tspan></text>
+    <rect
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3258"
+       width="100"
+       height="20"
+       x="90"
+       y="612.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       x="95"
+       y="627.36218"
+       id="text3260"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3262"
+         x="95"
+         y="627.36218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold">scheduling</tspan></text>
+    <rect
+       y="642.36218"
+       x="90"
+       height="20"
+       width="100"
+       id="rect3264"
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3266"
+       y="657.36218"
+       x="95"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+         y="657.36218"
+         x="95"
+         id="tspan3268"
+         sodipodi:role="line">management</tspan></text>
+    <rect
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3270"
+       width="100"
+       height="20"
+       x="90"
+       y="672.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       x="95"
+       y="687.36218"
+       id="text3272"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3274"
+         x="95"
+         y="687.36218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold">registration</tspan></text>
+    <rect
+       style="fill:#ff4141;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3276"
+       width="120"
+       height="130"
+       x="220"
+       y="572.36218" />
+    <rect
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3278"
+       width="100"
+       height="20"
+       x="230"
+       y="582.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       x="235"
+       y="597.36218"
+       id="text3280"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3282"
+         x="235"
+         y="597.36218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold">flannel</tspan></text>
+    <rect
+       y="612.36218"
+       x="230"
+       height="20"
+       width="100"
+       id="rect3284"
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3286"
+       y="627.36218"
+       x="235"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+         y="627.36218"
+         x="235"
+         id="tspan3288"
+         sodipodi:role="line">docker</tspan></text>
+    <rect
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3290"
+       width="100"
+       height="20"
+       x="230"
+       y="642.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       x="235"
+       y="657.36218"
+       id="text3292"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3294"
+         x="235"
+         y="657.36218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold">kubelet</tspan></text>
+    <rect
+       y="672.36218"
+       x="230"
+       height="20"
+       width="100"
+       id="rect3296"
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3298"
+       y="687.36218"
+       x="235"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+         y="687.36218"
+         x="235"
+         id="tspan3300"
+         sodipodi:role="line">proxy</tspan></text>
+    <rect
+       style="fill:#0e232e;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3310"
+       width="490"
+       height="40"
+       x="80"
+       y="232.36218" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3312"
+       y="257.36218"
+       x="95"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+         y="257.36218"
+         x="95"
+         id="tspan3314"
+         sodipodi:role="line">universe, or the world wide web</tspan></text>
+    <rect
+       y="352.36218"
+       x="90"
+       height="20"
+       width="260"
+       id="rect3316"
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3318"
+       y="367.36218"
+       x="95"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+         y="367.36218"
+         x="95"
+         id="tspan3320"
+         sodipodi:role="line">discovery (etcd)</tspan></text>
+    <path
+       style="fill:#ff9900;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="m 80,172.36218 490,0 0,40 -420,0 0,30 -20,0 0,-30 -50,0 z"
+       id="rect3322"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       x="95"
+       y="197.36218"
+       id="text3324"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3326"
+         x="95"
+         y="197.36218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold">you, the devops hacker</tspan></text>
+    <path
+       style="fill:#ff9900;stroke:none"
+       d="m 130,272.36218 0,30 -10,0 20,20 20,-20 -10,0 0,-30 z"
+       id="path3329"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       x="95"
+       y="482.36218"
+       id="text3337"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3339"
+         x="95"
+         y="482.36218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold">master</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3341"
+       y="452.36218"
+       x="395"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+         y="452.36218"
+         x="395"
+         id="tspan3343"
+         sodipodi:role="line">node/minion</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3345"
+       y="512.36218"
+       x="95"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+         y="512.36218"
+         x="95"
+         id="tspan3347"
+         sodipodi:role="line">cloud, as manageable and lovable as the fluffiest of pillows</tspan></text>
+  </g>
+</svg>
