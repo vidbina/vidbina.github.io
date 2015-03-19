@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="260"
+   height="115"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="microserviced.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.763354"
+     inkscape:cx="199.59832"
+     inkscape:cy="113.64051"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1362"
+     inkscape:window-height="723"
+     inkscape:window-x="4"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       originx="-90px"
+       originy="-535px" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-90,-402.36218)">
+    <rect
+       style="fill:#19aeff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3894"
+       width="70"
+       height="85"
+       x="200"
+       y="402.36218" />
+    <rect
+       style="fill:#19aeff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3892"
+       width="100"
+       height="85"
+       x="90"
+       y="402.36218" />
+    <rect
+       y="412.36218"
+       x="210"
+       height="39.999996"
+       width="50"
+       id="rect3032"
+       style="fill:#9ade00;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3034"
+       y="437.36218"
+       x="235"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+       xml:space="preserve"><tspan
+         y="437.36218"
+         x="235"
+         id="tspan3036"
+         sodipodi:role="line"
+         style="font-size:13px;text-align:center;text-anchor:middle">msg</tspan></text>
+    <rect
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3054"
+       width="80"
+       height="40"
+       x="100"
+       y="412.36218" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3056"
+       y="437.36218"
+       x="140"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+       xml:space="preserve"><tspan
+         y="437.36218"
+         x="140"
+         id="tspan3058"
+         sodipodi:role="line"
+         style="font-size:13px;text-align:center;text-anchor:middle">templating</tspan></text>
+    <rect
+       style="fill:#b88100;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3853"
+       width="80"
+       height="19.999998"
+       x="100"
+       y="457.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+       x="140"
+       y="472.36218"
+       id="text3855"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:13px;text-align:center;text-anchor:middle"
+         sodipodi:role="line"
+         id="tspan3857"
+         x="140"
+         y="472.36218">distro</tspan></text>
+    <rect
+       y="497.36218"
+       x="90"
+       height="19.999998"
+       width="260"
+       id="rect3859"
+       style="fill:#2d2d2d;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3861"
+       y="512.36218"
+       x="220.0063"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+       xml:space="preserve"><tspan
+         y="512.36218"
+         x="220.0063"
+         id="tspan3863"
+         sodipodi:role="line"
+         style="font-size:13px;text-align:center;text-anchor:middle;fill:#ffffff">kernel</tspan></text>
+    <rect
+       y="457.36218"
+       x="210"
+       height="19.999998"
+       width="50"
+       id="rect3886"
+       style="fill:#b88100;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3888"
+       y="472.36218"
+       x="235"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+       xml:space="preserve"><tspan
+         y="472.36218"
+         x="235"
+         id="tspan3890"
+         sodipodi:role="line"
+         style="font-size:13px;text-align:center;text-anchor:middle">distro</tspan></text>
+    <rect
+       y="402.36218"
+       x="280"
+       height="85"
+       width="70"
+       id="rect3898"
+       style="fill:#19aeff;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <rect
+       style="fill:#ff4141;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3900"
+       width="50"
+       height="39.999996"
+       x="290"
+       y="412.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+       x="315"
+       y="437.36218"
+       id="text3902"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:13px;text-align:center;text-anchor:middle"
+         sodipodi:role="line"
+         id="tspan3904"
+         x="315"
+         y="437.36218">auth</tspan></text>
+    <rect
+       style="fill:#b88100;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3906"
+       width="50"
+       height="19.999998"
+       x="290"
+       y="457.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+       x="315"
+       y="472.36218"
+       id="text3908"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:13px;text-align:center;text-anchor:middle"
+         sodipodi:role="line"
+         id="tspan3910"
+         x="315"
+         y="472.36218">distro</tspan></text>
+  </g>
+</svg>

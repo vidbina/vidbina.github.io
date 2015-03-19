@@ -1,0 +1,27 @@
+---
+layout: default
+title: vidbina's Talks
+emojify: true
+---
+
+<div id="home">
+  <h1>Talks</h1>
+  <p>Some utterances of ideas constructed after hours of musings, which I have been privileged to share in front of an audience :).</p>
+
+  <ul class="posts">
+    {% for talk in site.data.talks %}
+    {% unless talk.visible == false %}
+    <li>
+      <a href="{{ talk.url }}">
+        <time datetime="{{ talk.date | date: "%Y-%m-%d" }}">{{ talk.date | date_to_string }}</time>
+        <h2>
+          {% include icons-entypo.html type=talk.type %}
+          <strong>{{ talk.title }}</strong>
+        </h2>
+        <p>{{ talk.description }}</p>
+      </a>
+    </li>
+    {% endunless %}
+    {% endfor %}
+  </ul>
+</div>
