@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="170"
+   height="155"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="monolith.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.4455696"
+     inkscape:cx="88.291926"
+     inkscape:cy="97.142866"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1362"
+     inkscape:window-height="723"
+     inkscape:window-x="4"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       originx="-100px"
+       originy="-550px" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-100,-347.36218)">
+    <rect
+       style="fill:#000000;fill-opacity:1.0;fill-rule:nonzero;stroke:none"
+       id="rect2987"
+       width="170"
+       height="155"
+       x="100"
+       y="347.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+       x="185"
+       y="492.36218"
+       id="text2989"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2991"
+         x="185"
+         y="492.36218"
+         style="font-size:13px;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1">monster app</tspan></text>
+    <rect
+       y="457.36218"
+       x="110"
+       height="19.999998"
+       width="150"
+       id="rect3032"
+       style="fill:#ff4141;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3034"
+       y="472.36218"
+       x="185"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+       xml:space="preserve"><tspan
+         y="472.36218"
+         x="185"
+         id="tspan3036"
+         sodipodi:role="line"
+         style="font-size:13px;text-align:center;text-anchor:middle">auth</tspan></text>
+    <rect
+       style="fill:#9ade00;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3046"
+       width="60"
+       height="40"
+       x="10"
+       y="65"
+       transform="translate(100,342.36218)" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+       x="140"
+       y="432.36218"
+       id="text3048"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:13px;text-align:center;text-anchor:middle"
+         sodipodi:role="line"
+         id="tspan3050"
+         x="140"
+         y="432.36218">DAL</tspan></text>
+    <rect
+       style="fill:#f1caff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3052"
+       width="35"
+       height="40"
+       x="80"
+       y="65"
+       transform="translate(100,342.36218)" />
+    <rect
+       style="fill:#ffff3e;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3054"
+       width="80"
+       height="40"
+       x="10"
+       y="15"
+       transform="translate(100,342.36218)" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3056"
+       y="382.36218"
+       x="150"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+       xml:space="preserve"><tspan
+         y="382.36218"
+         x="150"
+         id="tspan3058"
+         sodipodi:role="line"
+         style="font-size:13px;text-align:center;text-anchor:middle">templating</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+       x="197.24112"
+       y="432.36218"
+       id="text3060"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:13px;text-align:center;text-anchor:middle"
+         sodipodi:role="line"
+         id="tspan3062"
+         x="197.24112"
+         y="432.36218">I/O</tspan></text>
+    <rect
+       style="fill:#ffc022;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3064"
+       width="60"
+       height="40"
+       x="100"
+       y="15"
+       transform="translate(100,342.36218)" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3066"
+       y="382.36218"
+       x="230"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+       xml:space="preserve"><tspan
+         y="382.36218"
+         x="230"
+         id="tspan3068"
+         sodipodi:role="line"
+         style="font-size:13px;text-align:center;text-anchor:middle">magic</tspan></text>
+    <rect
+       style="fill:#2d2d2d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3070"
+       width="35"
+       height="40"
+       x="125"
+       y="65"
+       transform="translate(100,342.36218)" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3072"
+       y="432.36218"
+       x="242.59384"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat Bold"
+       xml:space="preserve"><tspan
+         y="432.36218"
+         x="242.59384"
+         id="tspan3074"
+         sodipodi:role="line"
+         style="font-size:13px;text-align:center;text-anchor:middle;fill:#ffffff">?</tspan></text>
+  </g>
+</svg>
