@@ -117,6 +117,9 @@ GROUP=alpha
 REBOOT_STRATEGY=off
 ```
 
+# Discovery
+[etcd-clustering]: https://github.com/coreos/etcd/blob/master/Documentation/clustering.md
+
 # Debugging
 Somewhere along the line a unit/service breaks and needs to be debugged.
 CoreOS logs everything into ```/var/log/journal/*``` and `journalctl` allows
