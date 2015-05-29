@@ -1,0 +1,87 @@
+---
+layout: post
+title: Stir it Up
+date: 2015-05-29 11:16
+type: opinion
+category: opinion
+tags:
+ - discrimination
+ - segregation
+ - minority
+ - women
+ - colored
+ - integration
+ - diversity
+ - social
+ - opinion
+ - psychology
+mathjax: true
+description: "Just an opinion (my opinion) on the efforts out there to organize events for minority members."
+---
+I've been thinking about something lately. Nowadays, I read more about ideas to 
+organize events that cater to minority audiences like women in certain branches 
+(like tech) or colored folks in certain branches (like tech). To some extent it
+has even been executed.
+
+I understand that these efforts serve to draw members of these minority groups
+into the playing field and to grant them an accessible stage to share whatever
+they have to offer.
+
+Personally, I believe that we should focus our energy on getting more of 
+the supposed minority group members into the regular events 
+{{ ":ticket:" | emojify }}, but not simply for the sake of being a member of the
+group but by merit of their expertise.
+
+Just invite more women to speak at tech conferences, grant more members of 
+other minority groups &mdash;whether minority means: foreign, colored, non-academic, 
+female or non Klingon speaker, for that matter&mdash; stage time at your regular 
+events. That could pretty much do it.
+
+Creating separate events is only reinforcing that sense of segregation that 
+some may feel there is because people already do quite well in [developing a 
+postive bias for members of their group][race] (whatever that may be) and this
+is commonly referred to as _in-group/out-group bias_. 
+<div class="element video">
+  <iframe width="420" height="315" src="https://www.youtube.com/embed/6QGNxRGgBwM" frameborder="0" allowfullscreen></iframe>
+</div>
+[Even babies may naturally discriminate][baby], and I'm not saying it's a bad 
+thing. Sticking with the folks you relate to may been the reason the human
+race survived the perils of the wild. Bottomline is that setting up a 
+blockparty for members of the same in-group most likely will not result to a 
+significant alteration of subliminally-kept notions within that group because 
+it provides little opportunity for understanding and appreciating the qualities 
+and views of the other groups beyond. 
+
+<blockquote>
+In-group/out-group bias may explain why male coders think higher of female 
+coders. It's most likely a group because of many reasons which may include a 
+lack of social skill in communicating with the opposite sex, a certain sense of 
+humor and the fear to offend... So guess what... The boys stick together 
+because they understand one another easily. You don't get girl coders well 
+integrated into the group until both parties start to learn how to understand
+and appreciate another, and generally you don't accomplish them by having 
+organizing a rally for the girls. No, just have them work together and discuss
+the intricacies of their interactions.
+<div class="element video">
+  <iframe width="420" height="315" src="https://www.youtube.com/embed/ga4Zr7P25o0" frameborder="0" allowfullscreen></iframe>
+</div>
+</blockquote>
+
+It's great to address these issues so please continue, but keep the discussion 
+open. Don't market it as an event for group $x$, because many of the great 
+minds of group $y$ and $z$ will not just invite themselves.
+
+Don't do it for me, because I get in wherever and I'm far too easy. I'm just 
+sharing my 2 cents here because I believe the world's efforts to grant people a 
+stage could be executed more effectively.
+
+<blockquote>
+Not spewing fire {{ ":fire:" | emojify }}, but I believe that whatever is said 
+at TEDx Women should be said on regular TEDx events, by women. Just grant them 
+the mainstage at the main event, but then again... I'm just a simple engineer 
+talking about something that would be considered the domain of social 
+psychologists. What do I know {{ ":grimacing:" | emojify }}. *shrugs*
+</blockquote>
+
+[race]: http://www.slate.com/articles/double_x/the_kids/2014/03/teaching_tolerance_how_white_parents_should_talk_to_their_kids_about_race.html
+[baby]: http://www.newsweek.com/even-babies-discriminate-nurtureshock-excerpt-79233

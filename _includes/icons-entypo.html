@@ -1,3 +1,4 @@
+<!-- Entypo fonts rock, thank you Daniel Bruce -->
 {% case include.type %}
 {% when 'places' %}
   <meta class="detail entypo-address" name="type" content="{{ include.type }}">
@@ -35,7 +36,7 @@
   <meta class="detail entypo-chat" name="type" content="{{ include.type }}">
 {% when 'design' %}
   <meta class="detail entypo-palette" name="type" content="{{ include.type }}">
-{% when 'idea' %}
+{% when 'idea', 'opinion' %}
   <meta class="detail entypo-lamp" name="type" content="{{ include.type }}">
 {% when 'price', 'award' %}
   <meta class="detail entypo-trophy" name="type" content="{{ include.type }}">
@@ -43,7 +44,7 @@
   <meta class="detail entypo-newspaper" name="type" content="{{ include.type }}">
 {% when 'devices', 'device', 'gadget', 'gadgets', 'smartphone', 'smartphones', 'mobile' %}
   <meta class="detail entypo-mobile" name="type" content="{{ include.type }}">
-{% when 'update', 'announcement', 'talk' %}
+{% when 'update', 'announcement', 'talk', 'opinion' %}
   <meta class="detail entypo-megaphone" name="type" content="{{ include.type }}">
 {% when 'business', 'entrepreneurship', 'entrepreneur', 'work', 'start-up', 'startup' %}
   <meta class="detail entypo-briefcase" name="type" content="{{ include.type }}">
