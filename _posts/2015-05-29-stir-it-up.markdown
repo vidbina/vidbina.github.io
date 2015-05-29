@@ -71,16 +71,25 @@ It's great to address these issues so please continue, but keep the discussion
 open. Don't market it as an event for group $x$, because many of the great 
 minds of group $y$ and $z$ will not just invite themselves.
 
-Don't do it for me, because I get in wherever and I'm far too easy. I'm just 
-sharing my 2 cents here because I believe the world's efforts to grant people a 
-stage could be executed more effectively.
-
 <blockquote>
 Not spewing fire {{ ":fire:" | emojify }}, but I believe that whatever is said 
 at TEDx Women should be said on regular TEDx events, by women. Just grant them 
 the mainstage at the main event, but then again... I'm just a simple engineer 
 talking about something that would be considered the domain of social 
 psychologists. What do I know {{ ":grimacing:" | emojify }}. *shrugs*
+</blockquote>
+
+Don't do it for me, because I get in wherever and I'm far too easy. I'm just 
+sharing my 2 cents here because I believe the world's efforts to grant people a 
+stage could be executed more effectively.
+
+<blockquote>
+Ran into this video online which is quite nice to listen to, just give it a 
+try and if you're into gaming {{ ":video_game:" | emojify }}, you'll have 
+something to watch as well.
+<div class="element video">
+  <iframe width="420" height="315" src="https://www.youtube.com/embed/9RZ13rgCcww" frameborder="0" allowfullscreen></iframe>
+</div>
 </blockquote>
 
 [race]: http://www.slate.com/articles/double_x/the_kids/2014/03/teaching_tolerance_how_white_parents_should_talk_to_their_kids_about_race.html
