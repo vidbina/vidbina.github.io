@@ -22,7 +22,7 @@ title: Resume
     <li>
       {% include icons-entypo.html type=experience.type %}
       <a href="{{experience.organization.url}}">{{experience.organization.name}}</a>,
-      <span>{{experience.title}}</span>
+      <span>{{experience.title}} {% if experience.country %} in {% if experience.city %}{{ experience.city }}, {% endif %}{{ experience.country }}{% endif %}</span>
       <p>{{experience.period}}</p>
       <p>{{experience.description}}</p>
       {% if experience.keywords %}
