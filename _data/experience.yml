@@ -1,7 +1,58 @@
 - organization:
+    name: Vita.io
+    url: http://vita.io
+  country: The Netherlands
+  city: Rotterdam
+  period: May 2015 - current
+  title: Devops Engineer
+  description: "In an effort to anticipate to future developments Vita.io needsi
+    her infrastructure prepared for the upcoming demands (larger dev teams, more
+    customers). This means moving away from a few virtual private servers 
+    towards a cloud-based solution that exibits the required reduncancy and 
+    offers the necessary flexibility. Furthermore this should also enable the 
+    company to mantain dev/prod parity between staging, production and 
+    development environments.
+    "
+  keywords:
+   - Azure
+   - cloud-computing
+   - dev-ops
+   - Cassandra
+   - Storm
+   - Zookeeper
+   - Mesos
+  active: true
+  public: true
+  type: work
+  relationship: free-lancer
+- organization:
+    name: 99chairs GmbH
+    url: http://99chairs.com 
+  country: Germany
+  city: Berlin
+  period: May 2015 - June 2015
+  title: Software Engineer
+  description: "At 99chairs interior design specialists are connected with
+    people who need spaces furnished. In order to facilitate this, 99chairs 
+    offers a platform which does many things amongst which allowing designers 
+    to easily draft moodboards for their customers. Quickly allowing designers
+    to find the right products for the moodboards requires good search 
+    functionality. I have had the privilege to work on a Rails engine that 
+    exposes search functionality to any resource (Model) in the currently used
+    Rails application."
+  keywords:
+   - Elasticsearch
+   - Ruby
+   - Rails
+  active: true
+  public: true
+  type: work
+  relationship: free-lancer
+- organization:
     name: T.U. Delft
     url: http://opentrafficsim.org # https://citg.tudelft.nl
-    country: The Netherlands
+  country: The Netherlands
+  city: Delft
   period: Februari 2014 - current
   title: Software Engineer
   description: "Professors Hans van Lint and Alexander Verbraeck are working on 
@@ -20,7 +71,8 @@
 - organization:
     name: Saddl B.V.
     url: https://saddl.nl
-    country: The Netherlands
+  country: The Netherlands
+  city: Amsterdam
   period: November 2014 - current
   title: Co-founder/Chief Engineer
   description: Saddl acquired Laundr (technically), and I have assumed the role of CTO in order to ensure that our technology delivers whatever we promise. I spend most of my Saddl hours assisting my fellow developers (front-end mostly), buidling the back-end, designing and maintaining the infrastructure which we currently host at Google Cloud, maintaining the quality of our goods and planning for the future (anticipating the possible scaling issues we may run into).
@@ -40,7 +92,8 @@
 - organization:
     name: Laundr
     url: https://laundr.co
-    country: The Netherlands
+  country: The Netherlands
+  city: Rotterdam
   period: Februari 2014 - December 2014
   title: Co-founder/engineer
   description: Engineer for the Laundr tech landscape. As lead-engineer my responsibilities involve the execution and management of development of the back-end and client applications (for both smartphones and web) necessary to offer a user-friendly service to the customers.
@@ -57,7 +110,8 @@
 - organization:
     name: Trovey
     url: https://trovey.co
-    country: The Netherlands
+  country: The Netherlands
+  city: Rotterdam
   period: October 2014 - current
   title: Co-founder/Chief Engineer
   description: Joined a group of entrepreneurs with the intent to simplify the way in which we find and acquire (second-hand) products goods.
@@ -74,7 +128,8 @@
 - organization:
     name: SolarSwing
     url: https://www.solarswing.nl
-    country: The Netherlands
+  country: The Netherlands
+  city: Delft
   period: May 2014 - current
   title: Engineer
   description: Working on some things I&rsquo;m not fully at liberty to discuss. I am mostly busy designing the electronics necessary to extract data from the system (using sensors, filters and amplifiers) and implementing the complementary logic in the firmware.
@@ -91,7 +146,8 @@
 - organization:
     name: Jobsrepublic
     url: https://www.jobsrepublic.nl
-    country: The Netherlands
+  country: The Netherlands
+  city: Amsterdam
   period: October 2014 - current
   title: Engineer
   description: Maintaining a job placement and matching platform developed in Ruby. This involves executing bug-fixes, improving the general structure of the project and optimizing the migrate and deploy workflows. During my time here, I have also assisted in executing a migration to AWS.
@@ -107,7 +163,8 @@
 - organization:
     name: Toperators
     url: https://www.toperators.com
-    country: The Netherlands
+  country: The Netherlands
+  city: Rotterdam
   period: August 2014
   title: Engineer
   description: Spend a weekend helping an acquaintance from Startupbus to finish and deploy the Rails application. We worked on implementing S3 storage, fixing the routing, refactoring the codebase and building and improving several core features to help in having a prototype ready in time for the IBC conference.
@@ -122,7 +179,8 @@
 - organization:
     name: Muvement
     #url: https://api.muve.io
-    country: The Netherlands
+  country: The Netherlands
+  city: Rotterdam
   period: May 2014 - current
   title: Engineer
   description: Developing a simple platform for tracking user movements and triggering actions using geofences as markers. I have been able to use this solution for several applications I have built in the meantime.
@@ -143,7 +201,8 @@
 - organization:
     name: SolarSwing
     url: https://www.solarswing.nl
-    country: The Netherlands
+  country: The Netherlands
+  city: Rotterdam
   period: May 2014 - July 2014
   title: Engineer
   description: Developed a sensing option for the detection of the blinds and helped to incorporate the feature into the existing firmware.
@@ -158,7 +217,8 @@
 - organization:
     name: Ratemash
     url: http://ratemash.com
-    country: United Kingdom
+  country: United Kingdom
+  city: London
   keywords:
    - Ruby on Rails
    - PostgreSQL
@@ -202,7 +262,8 @@
 - organization:
     name: Memocom
     url: http://www.memocom.com
-    country: The Netherlands
+  country: The Netherlands
+  city: Rotterdam
   period: June 2013 - October 2013
   title: Engineer
   description: Free-lance developer maily responsible for implementing e-mail synchronization and processing (automatic linking of related entities to e-mails) in the CRM.
@@ -243,7 +304,8 @@
 - organization:
     name: Metatronics
     url: http://www.metatronics.nl
-    country: The Netherlands
+  country: The Netherlands
+  city: Eindhoven
   period: 2011 - 2012
   title: Embedded Systems Engineering Intern
   description: Intern charged with the development of a proof-of-concept for a home-automation system and the development of a track-and-tracing solution utilizing GPS and GPRS technology. My activities involved the engineering of the circuitry, circuit boards and software.
@@ -259,7 +321,8 @@
 - organization:
     name: Hogeschool Rotterdam (University of Rotterdam)
     url: http://www.hro.nl
-    country: The Netherlands
+  country: The Netherlands
+  city: Rotterdam
   period: 2007 - 2012
   title: B.Eng (Electronics Engineering, Embedded Systems)
   description: "Student of the Embedded Systems Engineering track at the 
@@ -289,7 +352,8 @@
 - organization:
     name: Peppered B.V.
     url: http://www.peppered.nl
-    country: The Netherlands
+  country: The Netherlands
+  city: Delft
   period: 2007 - 2010
   title: Part-time all-around developer
   description: Part-time developer mainly responsible for constructing the mailing templates and assisting in minor framework feature implementation sessions.
@@ -326,8 +390,8 @@
   relationship: student
 - organization:
     name: IAMGold Rosebel Goldmines N.V.
-    country: Suriname 
     url: http://www.iamgold.com/English/Operations/Operating-Mines/Rosebel-Gold-Mine-Suriname/default.aspx
+  country: Suriname 
   period: 2006 - 2007
   title: ICT Technician
   description: ICT Technician primarily responsible for assisting in the maintenance of the communications infrastructure. Activities consisted of the troubleshooting of telephone links, installation of telecommunications equipment (PBX expansion boards, additional lines), troubleshooting of computer problems and repairing defective computing workstations.
@@ -337,8 +401,9 @@
   relationship: employee
 - organization:
     name: Ampies Broadcasting Corporation
-    country: Suriname 
     url: http://www.abcsuriname.com
+  country: Suriname 
+  city: Paramaribo
   period: 2005 - 2006
   title: Audio Engineer
   description: Engineer during the live radio shows aired throughout my assigned shift. The job involved the management of prepared cues to be played-back on-air during the radioshows, the preparation of the studios for broadcast (placing and testing needed equipment in the studios), the live mixing of all involved aural inputs for broadcast and the assisting of hosts in technical matters (the editing of audio samples to be used in the shows).
@@ -348,8 +413,9 @@
   relationship: employee
 - organization:
     name: Mediavision N.V.
-    country: Suriname 
     url: http://www.mediavision.sr
+  country: Suriname 
+  city: Paramaribo
   period: 2005
   title: Network Administrator
   description: Maintainer of a small network of approximately ten workstations with the responsibilities of troubleshooting/repairing workstations and resolving networking problems.
@@ -359,8 +425,9 @@
   relationship: employee
 - organization:
     name: Hencom Trai.
-    country: Suriname 
     url: http://www.hencomtrai.com
+  country: Suriname 
+  city: Paramaribo
   period: 2004
   title: Store clerk
   description: Store clerk in the internet-cafe/print-shop with the task of assisting customers in navigating the internet and printing documents
