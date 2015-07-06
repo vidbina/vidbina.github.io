@@ -67,6 +67,7 @@ available from the [Azure documentation site][cli-connect].
 # Creating Resources
 
 ## Creating VM's
+### ASM Mode
 The best way to figure out what the options here are is by taking a look at
 the possibilities presented after querrying `azure vm --help`.
 
@@ -96,6 +97,25 @@ azure vm create VM_DNS_NAME 2b171e93f07c4903bcad35bda10acf22__CoreOS-Stable-647.
 Azure will put some elves and gnomes to work to setup your machine under the 
 URL `VM_DNS_NAME.cloudapp.net`.
 
+### In ARM Mode
+VM's may also be provisioned in _arm_ mode, which exposes more functionality. 
+In _arm_ mode it is much easier to setup NIC's, virtual networks and the 
+contained subnets.
+
+```bash
+vm sizes --location "West Europe"
+```
+
+which gives a detailed overview of all available sizes within a given region
+("West Europe" in my case).
+
+
+Within the _manage.windowsazure.com_ portal, my machines, created in _arm_
+mode don't appear while they are visible when I use the new portal 
+_portal.azure.com_. It may probably have something to do with me not reading
+the documentation properly, but in the very least it isn't too obvious what is
+actually going on here.
+
 [vm-sizes]: https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/
 
 ## Exposing Stuff
@@ -117,7 +137,9 @@ ssh yoda@VM_DNS_NAME.cloudapp.net
 ```
 .
 
-> One may ssh into VM by using keys instead of passwords. Which requires the `-t CERTIFICATE` option to be set when creating the VM (`azure vm create`).
+> One may ssh into VM by using [keys][vm-keys] instead of passwords. Which
+requires the `-t CERTIFICATE` option to be set when creating the VM (`azure vm
+create`).
 
 > Create a certificate using the following commands:
 
@@ -139,9 +161,16 @@ ssh yoda@VM_DNS_NAME.cloudapp.net -i private.key
 ```
 
 [vm-keys]: https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-use-ssh-key/
+[vm-pwdless]: https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-use-root-privileges/
 
 [cli-overview]: https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-command-line-tools/
 [vm-connect]: https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-how-to-log-on/
+
+
+As of late, I have been doing moving a lot of my cloud-related weights with 
+CoreOS. Getting CoreOS setup on Azure is 
+[azure-coreos]: https://coreos.com/docs/running-coreos/cloud-providers/azure/
+[mesos-docker]: https://medium.com/@gargar454/deploy-a-mesos-cluster-with-7-commands-using-docker-57951e020586
 
 ## Using Custom Domains
 Most likely it will not suffice using the `*.cloudapp.net` domain for your 
@@ -184,6 +213,7 @@ and the CLI help pages are
 
 Many of the following commands require a resource group. One can view the 
 available resource groups using:
+
 ```bash
 azure group list
 ```
@@ -213,7 +243,32 @@ azure network dns-zone create \
   --tags "setup"
 ```
 
-After creating the dns zone, Azure will setup the NS records for the newly 
+> In order to create DNS zones on Azure, the subscription must be registered
+to the _Microsoft.Network_ namespace.
+
+> ```bash
+azure provider register Microsoft.Network
+```
+
+> When running `azure vm create` in _arm_ mode, one has different options
+available. This is something to be mindful of.
+
+For example, the _asm_ `azure vm create` command
+
+> ```bash
+
+```
+
+becomes the following in _arm_ mode
+
+> ```bash
+azure vm create -g mesos-sandbox -n ruben -l "West Europe" -y Linux -q 2b171e93f07c4903bcad35bda10acf22__CoreOS-Stable-647.2.0 -M resources/ssh/try.pem -u yoda -z Small
+```
+
+> ```bash
+azure provider register Microsoft.Storage
+```
+After creating the DNS zone, Azure will setup the NS records for the newly 
 created resource set. You can confirm this by running 
 `azure network dns-record-set list` which will report `NS` records with the 
 name `@` (which basically serves as an alias for whatever you entered as 
@@ -252,3 +307,40 @@ organization ids as explained on [this thread on Github][github-xplat-liveid].
 [dns-fwd-azure]: https://support.microsoft.com/en-us/kb/2990804
 
 [azure-arm]: https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-azure-resource-manager/
+
+# Mesos
+
+```bash
+sudo docker run -d \
+  -e SERVER_ID=1 \
+  -e ADDITIONAL_ZOOKEEPER_1=server.1=1.1.1.1:2888:3888 \
+  -e ADDITIONAL_ZOOKEEPER_2=server.2=1.1.1.1:2888:3888 \
+  -e ADDITIONAL_ZOOKEEPER_3=server.3=1.1.1.1:2888:3888 \
+  -p 2181:2181 \
+  -p 2888:2888 \
+  -p 3888:3888 \
+  garland/zookeeper
+sudo docker run --net="host" \
+  -p 5050:5050 \
+  -e "MESOS_HOSTNAME=${HOST_IP}" \
+  -e "MESOS_IP=${HOST_IP}" \
+  -e "MESOS_ZK=zk://${HOST_IP}:2181/mesos" \
+  -e "MESOS_PORT=5050" \
+  -e "MESOS_LOG_DIR=/var/log/mesos" \
+  -e "MESOS_QUORUM=1" \
+  -e "MESOS_REGISTRY=in_memory" \
+  -e "MESOS_WORK_DIR=/var/lib/mesos" \
+  -d \
+  garland/mesosphere-docker-mesos-master
+sudo docker run \
+  -d \
+  -p 8080:8080 \
+  garland/mesosphere-docker-marathon --master zk://${HOST_IP}:2181/mesos --zk zk://${HOST_IP}:2181/marathon
+sudo docker run -d \
+  --entrypoint="mesos-slave" \
+  -e "MESOS_MASTER=zk://${HOST_IP}:2181/mesos" \
+  -e "MESOS_LOG_DIR=/var/log/mesos" \
+  -e "MESOS_LOGGING_LEVEL=INFO" \
+  garland/mesosphere-docker-mesos-master:latest
+```
+[azure-dns]: https://channel9.msdn.com/Events/Ignite/2015/BRK3473
