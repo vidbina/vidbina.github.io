@@ -88,14 +88,14 @@ commands used to create and delete instances. We use `azure vm create` to spawn
 new instances in Azure.
 
 ```bash
-azure vm create VM_DNS_NAME 2b171e93f07c4903bcad35bda10acf22__CoreOS-Stable-647.2.0 \
+azure vm create $NAME $IMAGE \
  -l "West Europe" \
  --vm-size "Small" \
  --ssh 22 \
  -g yoda -p "The force 1 use must."
 ```
 Azure will put some elves and gnomes to work to setup your machine under the 
-URL `VM_DNS_NAME.cloudapp.net`.
+URL `$NAME.cloudapp.net`, substituting `$NAME` for whatever the real name was.
 
 ### In ARM Mode
 VM's may also be provisioned in _arm_ mode, which exposes more functionality. 
@@ -106,11 +106,28 @@ contained subnets.
 vm sizes --location "West Europe"
 ```
 
-which gives a detailed overview of all available sizes within a given region
-("West Europe" in my case).
+which gives a detailed overview of all available [sizes][vm-sizes] within a 
+given region ("West Europe" in my case).
 
+In the following scenario a VM is created that uses a NIC that has been created 
+before.
 
-Within the _manage.windowsazure.com_ portal, my machines, created in _arm_
+```bash
+azure vm create --resource-group $GROUP \
+  --name $NAME \
+  --location "$REGION" \
+  --os-type Linux \
+  --image-name $IMAGE \
+  --ssh-publickey-pem-file $CERT_FILE \
+  --admin-username $USER \
+  --vm-size $SIZE \
+  --nic-name $NAME-nic-a \
+  --vnet-name "$VNET" \
+  --vnet-subnet-name "$SUBNET" \
+  $EXTRA
+```
+
+> Within the _manage.windowsazure.com_ portal, my machines, created in _arm_
 mode don't appear while they are visible when I use the new portal 
 _portal.azure.com_. It may probably have something to do with me not reading
 the documentation properly, but in the very least it isn't too obvious what is
