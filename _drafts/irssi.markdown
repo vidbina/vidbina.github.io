@@ -1,0 +1,52 @@
+---
+layout: post
+title: Irssi Primer
+since: 2015-02-28 13:43
+date: 2015-02-28 21:20
+type: tools
+category: tools
+tags:
+ - irssi
+ - irc
+ - chat
+description: "Reminding myself how to use irssi again..."
+---
+
+# Freenode
+
+
+{% highlight bash %}
+wget http://crt.gandi.net/GandiStandardSSLCA.crt
+{% endhighlight %}
+
+{% highlight bash %}
+openssl x509 -inform der -outform pem < /usr/share/ca-certificates/gandi.net/GandiStandardSSLCA.crt > GandiStandardSSLCA.pem
+{% endhighlight %}
+
+{% highlight bash %}
+/server add \
+  -auto \
+  -ssl \
+  -ssl_cacert /etc/ssl/certs/GandiStandardSSLCA.pem \
+  -network freenode irc.freenode.net 6697 \
+  -autosendcmd "/msg NickServ IDENTIFY $NICK $PASSWORD; wait 2000;"
+{% endhighlight %}
+
+{% highlight bash %}
+/join $CHANNELNAME
+{% endhighlight %}
+
+## Selecting Window
+{% highlight %}
+/window 1
+{% endhighlight %}
+
+{% highlight %}
+/window new split
+{% endhighlight %}
+
+[irssi-guide]: http://quadpoint.org/articles/irssi/
+[irssi-arch]: https://wiki.archlinux.org/index.php/Irssi
+[irssi-commands]: http://www.geekshed.net/commands/user/
+[irssi-window]: https://quadpoint.org/articles/irssi/#hilight-window
+[irssi-ssl]: https://pthree.org/2010/01/31/freenode-ssl-and-sasl-authentication-with-irssi/
