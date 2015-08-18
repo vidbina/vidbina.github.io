@@ -1,0 +1,46 @@
+---
+layout: post
+title:  Let's Go
+date:   2015-08-18 14:08:89
+type: tools
+tags:
+ - go
+ - golang
+ - tools
+ - code
+ - software
+ - back-end
+description: "Just working with Go"
+---
+In order to work with Go packages, one will need to setup a `GOPATH` 
+environment variable which contains the path to the directory one intents to 
+use with Go.
+
+> Installing go packages is done through the `go get` command.
+
+After specifying the `GOPATH` variable, don't forget to append `$GOPATH/bin`
+to `PATH`.
+
+For my different go projects, I often specify a `GOPATH` directory within my 
+project's working directory. This way I can keep my `GOPATH`'s for different
+projects separated.
+
+Imagine the project _spaceship-api_ stored at `/path/spaceship`.
+I tend to setup a gopath directory at `/path/spaceship/gopath`, while I park
+the api repository in `/path/spaceship/api`. Before getting started, I 
+basically do the following:
+
+{% highlight bash %}
+export GOPATH=/path/spacechip/gopath
+export PATH=$PATH:$GOPATH/bin
+{% endhighlight %}
+
+Now I can access all binaries within the `$GOPATH/bin` directory, and perform
+`go get` commands without putting much thought into other projects that I may 
+be screwing up.
+
+> `Godeps` makes dependency management much easier by providing a manifest that
+will allow all developers to build a similar environment dependency-wise.
+
+[gopath]: http://golang.org/cmd/go/#hdr-GOPATH_environment_variable
+[godeps]: https://github.com/tools/godep
