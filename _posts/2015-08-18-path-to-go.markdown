@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Let's Go
+title:  The Path to Go
 date:   2015-08-18 14:08:89
 type: tools
 tags:
@@ -10,7 +10,8 @@ tags:
  - code
  - software
  - back-end
-description: "Just working with Go"
+description: "Simple notes-to-self on setting <code>GOPATH</code>'s to keep
+projects clean and devs happy."
 ---
 In order to work with Go packages, one will need to setup a `GOPATH` 
 environment variable which contains the path to the directory one intents to 
@@ -40,7 +41,8 @@ Now I can access all binaries within the `$GOPATH/bin` directory, and perform
 be screwing up.
 
 > `Godeps` makes dependency management much easier by providing a manifest that
-will allow all developers to build a similar environment dependency-wise.
+will allow all developers to build a similar environment dependency-wise. 
+Think... `package.json` or `Gemfile` {{ ":wink:" | emojify }}.
 
 [gopath]: http://golang.org/cmd/go/#hdr-GOPATH_environment_variable
 [godeps]: https://github.com/tools/godep
