@@ -45,8 +45,16 @@ openssl x509 -inform der -outform pem < /usr/share/ca-certificates/gandi.net/Gan
 /window new split
 {% endhighlight %}
 
+## Change Window 
+Ctl-p Ctl-n Atl-ARROW 
+/window next
+/window prev
+
+
 [irssi-guide]: http://quadpoint.org/articles/irssi/
 [irssi-arch]: https://wiki.archlinux.org/index.php/Irssi
 [irssi-commands]: http://www.geekshed.net/commands/user/
+[irssi-screen]: http://carina.org.uk/screenirssi.shtml#10
 [irssi-window]: https://quadpoint.org/articles/irssi/#hilight-window
 [irssi-ssl]: https://pthree.org/2010/01/31/freenode-ssl-and-sasl-authentication-with-irssi/
+[irc-hidejoin]: http://wiki.xkcd.com/irc/Hide_join_part_messages
