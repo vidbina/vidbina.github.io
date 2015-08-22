@@ -322,6 +322,13 @@ me to pipe my email into w3m for easier viewing
 
     |w3m -T text/html
 
+### Forward Messages with Attachments
+Pressing the ```<Esc>e``` combination triggers the ```resend-message``` 
+command. There is probably a better way to do this, but it works well enough in
+my situation.
+
+
+[fwd-attachments]: http://linuxmafia.com/faq/Mail/mutt-forwarding-attachments.html
 [msmtp-mutt]: http://www.serverwatch.com/tutorials/article.php/3923871/Using-msmtp-as-a-Lightweight-SMTP-Client.htm
 [gmail-mutt]: http://www.bartbania.com/raspberry_pi/consolify-your-gmail-with-mutt/
 [mutt-gmail]: https://help.ubuntu.com/community/MuttAndGmail
