@@ -27,6 +27,7 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElemen
     {% endif %}
   </head>
   <body class="light">
+    <button class="swap" onclick="swapColors();">swap colors</button>
     <div class="site">
       <header>
         <a href="/">
@@ -76,6 +77,23 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElemen
     mixpanel.track_links("a", "click link", {
         "referrer": document.referrer
     });
+</script>
+<script type="text/javascript">
+function swapColors() {
+  var body = document.getElementsByTagName("body")[0];
+  console.log('body is', body, 'with class', body.className);
+  switch(body.className) {
+    case "light":
+      body.className = "dark";
+      console.log(1);
+      break;
+    case "dark":
+      body.className = "light";
+      console.log(2);
+      break;
+    default:
+  }
+}
 </script>
 {% if page.emojify %}
 {% include emojify-script.html %}

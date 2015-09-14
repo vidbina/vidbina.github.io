@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Landing Strip
+title:  A Few Prepared LandingStrips to Use Whenever Another Landing Page is Needed
 date:   2015-09-14 18:29:04
 type: tools
 category: web

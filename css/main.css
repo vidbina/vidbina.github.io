@@ -70,20 +70,29 @@ body {
   */
 }
 
-body.dark {
-  background-color: #111;
-}
-body.light {
-  background-color: #bbb;
-}
-body.dark, a, a:hover, a:visited, .logo path, svg path {
+body.dark { background-color: #111; }
+body.light { background-color: #bbb; }
+.dark .swap { background-color: #bbb; }
+.light .swap { background-color: #111; }
+.dark, .dark a, .dark a:hover, .dark a:visited, .dark .logo path, .dark svg path, .dark .swap {
   fill: #bbb!important;
   color: #bbb;
 }
 
-body.light, a, a:hover, a:visited, .logo path, svg path {
+.light, .light a, .light a:hover, .light a:visited, .light .logo path, .light svg path, .light .swap {
   fill: #111!important;
   color: #111;
+}
+
+.swap {
+  display: block;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
 }
 
 blockquote {
