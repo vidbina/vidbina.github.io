@@ -3,6 +3,7 @@ layout: post
 title:  The Path to Go
 date:   2015-08-18 14:08:89
 type: tools
+category: tools
 tags:
  - go
  - golang
@@ -12,6 +13,8 @@ tags:
  - back-end
 description: "Simple notes-to-self on setting <code>GOPATH</code>'s to keep
 projects clean and devs happy."
+redirect_from:
+  - /path-to-go.html
 ---
 In order to work with Go packages, one will need to setup a `GOPATH` 
 environment variable which contains the path to the directory one intents to 

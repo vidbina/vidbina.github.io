@@ -2,8 +2,8 @@
 layout: post
 title:  Landing Strip
 date:   2015-09-14 18:29:04
-type: "web"
 type: tools
+category: web
 tags:
  - landing page
  - template
