@@ -5,11 +5,11 @@ date:   2015-09-14 18:29:04
 type: tools
 category: web
 tags:
+ - web
  - landing page
  - template
  - lean
  - html
- - web
 description: "I've been around in the startup game for a little while now
 and every time a landing page is needed. I almost lose my mind over the amount
 of time wasted on pixel-twerking instead of turning the knobs that could get

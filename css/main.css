@@ -61,11 +61,27 @@ body {
   text-align: center;
 }
 
-body, .posts li {
+body {
+  /*
+  background-color: #1e1e1e;
+  color: #bbb;
+  color: #1e1e1e;
   background-color: #bbb;
+  */
 }
 
-body, a, a:hover, a:visited, .logo path, svg path {
+body.dark {
+  background-color: #111;
+}
+body.light {
+  background-color: #bbb;
+}
+body.dark, a, a:hover, a:visited, .logo path, svg path {
+  fill: #bbb!important;
+  color: #bbb;
+}
+
+body.light, a, a:hover, a:visited, .logo path, svg path {
   fill: #111!important;
   color: #111;
 }
@@ -394,7 +410,7 @@ div.highlight {
 
 /* terminal */
 .post pre.terminal {
-  border: 1px solid #000;
+  border: 1px solid #1e1e1e;
   background-color: #333;
   color: #FFF;
 }
@@ -503,8 +519,10 @@ div#impress {
   margin: 20px 0 20px 0;
 }
 #title > h1 > span, #title > h2 > span, strong {
+  /*
   color: #111;
   background-color: #bbb;
+  */
 }
 .impress-supported .logo {
   display: inline-block;
