@@ -1,6 +1,7 @@
 name: Blurt
 gems:
  - jekyll-redirect-from
+ - jemoji
 markdown: redcarpet
 highlighter: pygments
 paginate: 50
