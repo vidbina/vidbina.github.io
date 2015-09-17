@@ -72,6 +72,8 @@ body {
 
 body.dark { background-color: #111; }
 body.light { background-color: #bbb; }
+.light .post code { color: #333; }
+.dark .post code { color: #bbb; }
 .dark .swap { background-color: #bbb; }
 .light .swap { background-color: #111; }
 .dark, .dark a, .dark a:hover, .dark a:visited, .dark .logo path, .dark svg path, .dark .swap {
@@ -406,7 +408,6 @@ div.highlight {
 .post code {
   border-radius: 2px;
   padding: 0 .2em;
-  color: #333;
 }
 .post .highlight code {
   color: #bbb;
