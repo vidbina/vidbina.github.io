@@ -2,7 +2,7 @@ name: Blurt
 gems:
  - jekyll-redirect-from
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 paginate: 50
 emoji_dir: /images/emoji
 disqus_shortname: vidbina

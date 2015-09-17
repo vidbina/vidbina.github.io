@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '~> 1.4.2'
-gem 'jekyll-redirect-from'
+gem 'github-pages'
 gem 'dotenv', '~> 0.11.1'
