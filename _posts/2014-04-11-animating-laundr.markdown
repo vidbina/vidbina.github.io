@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Animating Mr. Washee Washee (My Version of the Laundr Story)
-date:   2014-04-11 09:28:89
+date:   2014-04-11 09:28:09
 type: start-up
 category: entrepreneurship
 tags:
