@@ -1,6 +1,9 @@
 name: Blurt
 markdown: redcarpet
 highlighter: pygments
+gems:
+  - jekyll-redirect-from
+  - jemoji
 paginate: 50
 emoji_dir: /images/emoji
 disqus_shortname: vidbina
