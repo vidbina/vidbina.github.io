@@ -126,7 +126,7 @@ Since last year, some users have been begging for this feature.
 </div>
 
 Apparently we haven't begged loudly enough, so I'm giving it a try as well
-:megaphone:. At some point they will have to make our day, right? Come on
+:mega:. At some point they will have to make our day, right? Come on
 people at Slack don't be slackers (couldn't resist using the demonym pun),
 :shipit: ship it!
 
