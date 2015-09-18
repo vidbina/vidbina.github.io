@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  
+title:  Because Slack Broke My Flow... Again
 date:   2015-09-18 12:20
 type: tools
 category: rant
@@ -11,13 +11,14 @@ tags:
  - engineering
  - work
 description: "Just a rant about flow, task-switching and the methods I employ
-to protect my flow at the office."
+to protect my flow at the office all instigated by another episode of Slack
+alerting me out of my flow."
 ---
 I'm getting stuff done again. Concocting possible next steps to be able to
 present a well thought-through battleplan to the team. Yes, I'm awaiting that
 moment the metrics demonstrate that we are set to move forward; that moment 
 when we have discovered the wave we are to ride :surfer:. Suddenly I'm jolted
-out of the zone by this one round that I have come to dislike intensely :rage:.
+out of the zone by this one sound that I have come to dislike intensely :rage:.
 Crap :shit:, that's what you get for forgetting to kill Slack before getting
 started!
 
@@ -98,12 +99,11 @@ noise. Everybody happy :smile:.
 ## Kill Slack
 
 Slack is a wonderful tool to communicate within teams, but until they introduce
-a silencer I will have to kill it before I venture into my focus zone.
+a silencer I will have to kill it before I venture into my focus zone. Today I
+forgot to do that and it's probably the fact that it really startled me that I
+jumped on the rant bandwagon.
 
-Since last year, users have been begging for this feature. Apparently we
-haven't begged enough, so I'm giving it a try as well. At some point they'll 
-have to make our day, right? Common people at Slack don't be
-slackers (couldn't resist using the demonym pun), :shipit: ship it!
+Since last year, some users have been begging for this feature.
 
 <div class="element tweet">
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/SlackHQ">@SlackHQ</a> Is there a ‘do not disturb’ mode in slack, like in Skype or HipChat? Notifications off + a signal to others that I won’t read ASAP…</p>&mdash; Niko Felger (@nfelger) <a href="https://twitter.com/nfelger/status/447024163677822976">March 21, 2014</a></blockquote>
@@ -124,6 +124,12 @@ slackers (couldn't resist using the demonym pun), :shipit: ship it!
 <div class="element tweet">
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/vfonic">@vfonic</a> <a href="https://twitter.com/paulagillpdx">@paulagillpdx</a> We don&#39;t have an ETA at the moment (sorry) but we are working on it so stay tuned 📻</p>&mdash; Slack (@SlackHQ) <a href="https://twitter.com/SlackHQ/status/641439960701210625">September 9, 2015</a></blockquote>
 </div>
+
+Apparently we haven't begged loudly enough, so I'm giving it a try as well
+:megaphone:. At some point they will have to make our day, right? Come on
+people at Slack don't be slackers (couldn't resist using the demonym pun),
+:shipit: ship it!
+
 
 Time to get back to work...
 
