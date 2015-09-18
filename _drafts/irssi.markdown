@@ -14,6 +14,7 @@ description: "Reminding myself how to use irssi again..."
 
 # Freenode
 
+Testing
 
 {% highlight bash %}
 wget http://crt.gandi.net/GandiStandardSSLCA.crt
@@ -32,23 +33,22 @@ openssl x509 -inform der -outform pem < /usr/share/ca-certificates/gandi.net/Gan
   -autosendcmd "/msg NickServ IDENTIFY $NICK $PASSWORD; wait 2000;"
 {% endhighlight %}
 
-{% highlight bash %}
-/join $CHANNELNAME
-{% endhighlight %}
+
+    /join $CHANNELNAME
 
 ## Selecting Window
-{% highlight %}
-/window 1
-{% endhighlight %}
 
-{% highlight %}
-/window new split
-{% endhighlight %}
+    /window 1
+
+
+
+    /window new split
 
 ## Change Window 
 Ctl-p Ctl-n Atl-ARROW 
-/window next
-/window prev
+
+    /window next
+    /window prev
 
 
 [irssi-guide]: http://quadpoint.org/articles/irssi/
