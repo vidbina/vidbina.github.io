@@ -3,6 +3,7 @@ layout: post
 title: Marathon Dreamin'
 since: 2015-06-29 20:11
 date: 2015-09-19 21:10
+category: cloud
 type: cloud
 tags:
  - cloud
@@ -115,10 +116,15 @@ Mesos, we run jobs in Marathon (which is a framework)... that simple.
 <!--<iframe src="//giphy.com/embed/FQJVySekdnR4s" width="480" height="172" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>-->
 If you made it this far, thank you so much for your time.
 
-Enough of this pathetic [Inception :shit: (err junk or analogy)][inception-info],
-you may say at this stage... I don't even really remember what Inception was
-all about other than some mess involving nested dreams; after all 2010 is a
-lifetime ago (for a toddler). All I wanted to say is: Mesos rocks.
+Enough of the Inception :shit: (err junk or analogy), you may say at this stage.
+I don't even fully remember what Inception was all about other than some
+convoluted mess involving nested dreams; after all 2010 is a lifetime ago (for
+a toddler is actually is).
+
+All I wanted to say is: Mesos rocks.
+
+For now... more [Inception junk][inception-info] for the weekend.
+Have a good one :tropical_drink:
 
 <div class="element image">
   <a href="http://www.cinemablend.com/new/An-Illustrated-Guide-To-The-5-Levels-Of-Inception-19643.html">
