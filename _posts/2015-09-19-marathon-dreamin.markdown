@@ -131,9 +131,9 @@ If you made it this far, thank you so much for your time.
 Enough of the Inception :shit: (err junk or analogy), you may say at this stage.
 I don't even fully remember what Inception was all about other than some
 convoluted mess involving nested dreams; after all 2010 is a lifetime ago (for
-a toddler is actually is).
+a toddler it actually is).
 
-All I wanted to say is: Mesos rocks.
+All I wanted to say is: Mesos rocks, Marathon rocks and life is good.
 
 For now... more [Inception junk][inception-info] for the weekend.
 Have a good one :tropical_drink:
