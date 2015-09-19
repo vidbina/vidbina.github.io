@@ -151,7 +151,7 @@ a:visited { }
   overflow: hidden;
   text-align: center;
 }
-.element > * {
+.element > *, .element > * > img {
   width: 100%;
 }
 .video, .spotify, .instagram, .document, .game {

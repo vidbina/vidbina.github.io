@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Marathon
+title: Marathon Dreamin'
 since: 2015-06-29 20:11
 date: 2015-09-19 21:10
 type: cloud
@@ -13,52 +13,126 @@ tags:
  - devops
  - tools
 #mathjax: true
-description: "Mesos"
+description: "Like Inception, devops land is just a matter of setting up and
+controlling dreams within dreams, environments within environments and here is
+my silly analogy."
 ---
-It's only during flights that I really have time to read some papers that have
-been on my to-read list for a while. This time I'm reading the Mesos paper, 
-just to get up to speed on the design philosophy before I set out to design a Mesos infrastructure for one of my clients.
+It's weekend... so I allow myself this silly post. Every time, I play around
+with Mesos, Marathon and/or Kubernetes I feel like I'm the star in my very own
+Inception adventure[^1].
 
-# What Is It?
-Is It A Bird, Is It A Plane... Enough of the cheesy references, just to get to
-business... Mesos is a task scheduler for clusters.
+**Disclaimer**: Only continue if you can stand bull:shit:ing at this
+moment. The music should get you in the mood while reading :wink:.
 
-It's imaginable that you may have a Mongo cluster doing some magic, a Hadoop cluster running some logging jobs, a Cassandra cluster running some MapReduce jobs and maybe a Kubernetes cluster to park webservices packaged into cute 
-little containers -- It's a hypothetical use-case so what the hell 
-{{ ":fire" | emojify }}. The problem with the use-case is that every cluster
-requires exactly that... A cluster of its own. From a utilization and 
-localization perspective this is often far from ideal.
+<iframe src="//giphy.com/embed/jJlxbQAAe52YU" width="480" height="172" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
-# Running jobs in Mesos
+[^1]: Before 2010 (premiere of Inception) it happened to be The Matrix :sunglasses:
 
-Running a 100 seconds job in Mesos:
+<div class="element spotify">
+<iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A6s543KncTsc2rJtMd6kJ8v" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+</div>
+
+## Level 0
+<iframe src="//giphy.com/embed/oVgysSNiyJhFm" width="480" height="172" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+Some call this reality. Some believe this is also just dream. If that were
+true I figure we'd probably call the dreamer god. Anyways, I just turn on my
+computer at this level. Nothing fancy yet.
+
+## Level 1
+<iframe src="//giphy.com/embed/WhaiKgvZvsypW" width="480" height="235" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+Computer is on. I'm plugged in (sorry for the Matrix reference, don't want to
+confuse). 
+
+## Level 2
+<iframe src="//giphy.com/embed/P8kSizJGuPwfm" width="480" height="235" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<!--<iframe src="//giphy.com/embed/Ad6e8Zt89thq8" width="480" height="172" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>-->
+At this level, I enter my VM, being an instance in the cloud or the kitten
+purring in Virtualbox (`vagrant up; vagrant ssh`).
+
+## Level 3
+<!--<iframe src="//giphy.com/embed/ufNsKPi0a8b60" width="480" height="172" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>-->
+<iframe src="//giphy.com/embed/n2hJQFhZZ7RTy" width="480" height="235" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+Mesos, the place where the frameworks are fired up, drops us one notch deeper
+down the dream pipeline.
+
+One could start a task that lasts at least 10 seconds in Mesos.
 
 {% highlight bash %}
-mesos-execute \
-  --master=$MASTER \
-  --name="a_mesos_job" \
-  --command="sleep 100"
+mesos-execute --master=$MASTER --name="envie" --command="echo env; sleep 10"
 {% endhighlight %}
 
-Runs without a framework. After execution the job is considered finished and we're done.
+This task would run as a framework (a short-lived one at that).
 
-Running the same job through marathon, however; provides us with extra management functionality as in easily scaling, suspending and resuming the task.
+By visiting the Marathon portal (most likely running on port 5050 on the Mesos
+master), navigating to the frameworks view and selecting the most recently
+terminated framework (provided that the 10 seconds have already expired :wink:)
+one can enter the job's sandbox o observe the output to `stderr` and `stdout`.
 
-In fact, Marathon is started as a task in Mesos. Starting a job in marathon drops you down a dream level (to use Inception vernacular)
+<div class="element img">
+<img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/mesos-frameworks-envo.png" alt="The Mesos frameworks view allows one to observe running and terminated frameworks">
+</div>
 
-https://giphy.com/gifs/inception-WhaiKgvZvsypW
-Your machine
+Mesos jobs are executed from the directory and environment in which the
+`mesos-execute` command is called. In `stdout` we expect to see something that
+resembles `env` on the Mesos slave.
 
-http://giphy.com/gifs/inception-P8kSizJGuPwfm
-Your VM. You connected to your instance in the cloud or the kitten purring in virtualbox)
+## Level 4
 
-http://giphy.com/gifs/inception-n2hJQFhZZ7RTy
-Mesos. Where the Mesos tasks are fired up. This is where the Marathon starts.
+Marathon is started as a Mesos framework, which drops us down another level.
+Upon adding another Marathon job, the framework (being Marathon) manages the
+environment in which the call is executed.
 
-<iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A6s543KncTsc2rJtMd6kJ8v" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+<div class="element img">
+<img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/mesos-marathon-add-envo.png" alt="Adding a Marathon job">
+</div>
 
-<a href=http://www.cinemablend.com/new/An-Illustrated-Guide-To-The-5-Levels-Of-Inception-19643.html><img src=http://www.cinemablend.com/images/news/19643/_1280109452.jpg></a>
+By adding a Marathon job that echoes `env` and observing the `stdout`
+from the task's sandbox one can verify that the `env` differs from the host's.
 
-https://www.youtube.com/watch?v=ginQNMiRu2w
+Selecting the task's sandbox and opening the task's `stdout` (both screens
+portrayed in the following figures) allows us to introspect `stdout` for the
+task of interest.
 
+<div class="element img">
+<img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/mesos-jobs-envo.png" alt="The mesos portal allows one to get into the job's sandbox">
+</div>
+
+<div class="element img">
+<img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/mesos-sandbox-envo.png" alt="A look inside the Mesos sandbox allows one to view the job's stderr and stdout">
+</div>
+
+[marathon-rest]: https://mesosphere.github.io/marathon/docs/rest-api.html
+
+Marathon provides us with extra management functionality as in easily scaling,
+suspending and resuming of jobs. That is why it makes sense to start jobs from
+Marathon instead of firing them directly into Mesos. We run frameworks in
+Mesos, we run jobs in Marathon (which is a framework)... that simple.
+
+## Limbo
+<iframe src="//giphy.com/embed/ZAv0VrzFL29k4" width="480" height="235" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<!--<iframe src="//giphy.com/embed/FQJVySekdnR4s" width="480" height="172" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>-->
+If you made it this far, thank you so much for your time.
+
+Enough of this pathetic [Inception :shit: (err junk or analogy)][inception-info],
+you may say at this stage... I don't even really remember what Inception was
+all about other than some mess involving nested dreams; after all 2010 is a
+lifetime ago (for a toddler). All I wanted to say is: Mesos rocks.
+
+<div class="element image">
+  <a href="http://www.cinemablend.com/new/An-Illustrated-Guide-To-The-5-Levels-Of-Inception-19643.html">
+    <img src="http://www.cinemablend.com/images/news/19643/_1280109452.jpg" alt="Illustrated guide to the 5 levels of inception">
+  </a>
+</div>
+
+<div class="element video">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ginQNMiRu2w" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<!--<div class="element giphy">
+  <iframe src="//giphy.com/embed/rI6cEnQqGILIs" width="480" height="274" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>-->
+
+[inception-info]: http://neomam.com/blog/10-mind-blowing-inception-infographics/
 [hindman]: https://www.cs.berkeley.edu/~alig/papers/mesos.pdf
