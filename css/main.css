@@ -80,6 +80,7 @@ body.light { background-color: #bbb; }
   fill: #bbb!important;
   color: #bbb;
 }
+.dark .labels span { border-color: #bbb; }
 
 .light, .light a, .light a:hover, .light a:visited, .light .logo path, .light svg path, .light .swap {
   fill: #111!important;
