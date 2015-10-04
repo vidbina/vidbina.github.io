@@ -1,0 +1,6 @@
+@media print {
+  body { font-size: 0.5em; }
+  .experience a:after { content: " (" attr(href) ")" }
+  .site { max-width: 80%; }
+  .swap, .logo { display: none; }
+}
