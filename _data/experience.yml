@@ -1,4 +1,29 @@
 - organization:
+    name: Freewayworks LLC
+    url: freewayworks.com
+  country: Germany
+  city: Berlin
+  period: August 2015 - October 2015
+  title: CTO
+  description: "By the time I joined Freewayworks LLC, the company was on the
+    verge of joining a incubation program to aid in bringing the concept to
+    the public. In my three months with the company I asked many of the
+    critical questions, helped us steer clear of unnecessary busy work by
+    focussing on that will leads to results quickly (which equates to lessons
+    to be learned) and built whatever was necessary to (in)validate the
+    assumptions we still had at that stage.
+    "
+  keywords:
+    - logistics
+    - pay-per-ride
+    - Node.js
+    - Ruby
+    - Ruby on Rails
+    - Redis
+    - MongoDB
+    - Heroku
+    - AWS
+- organization:
     name: Vita.io
     url: http://vita.io
   country: The Netherlands
@@ -6,12 +31,11 @@
   period: May 2015 - current
   title: Devops Engineer
   description: "In an effort to anticipate to future developments Vita.io needsi
-    her infrastructure prepared for the upcoming demands (larger dev teams, more
-    customers). This means moving away from a few virtual private servers 
-    towards a cloud-based solution that exibits the required reduncancy and 
-    offers the necessary flexibility. Furthermore this should also enable the 
-    company to mantain dev/prod parity between staging, production and 
-    development environments.
+    her infrastructure prepared for the upcoming demands (larger dev teams, 
+    more customers). This means moving away from a few virtual private servers 
+    towards a cloud-based solution that has the required reduncancy and 
+    offers the necessary flexibility in required workload. I have been chosen
+    to set up the new infrastructure to help the company move forward.
     "
   keywords:
    - Azure
@@ -21,7 +45,29 @@
    - Storm
    - Zookeeper
    - Mesos
+   - Ansible
   active: true
+  public: true
+  type: work
+  relationship: free-lancer
+- organization:
+    name: Arya mHealth UG
+    url: http://aryaapp.co 
+  country: Germany
+  city: Berlin
+  period: July 2015
+  title: Software Engineer
+  description: "Arya's mission is to help despressed people reclaim their
+    lives. In order to assist Arya in accomplishing this mission I spent a full
+    week in July building parts of their API. I don't shy away from an 
+    opportunity to help, especially when the result of that labor can improve
+    the quality of live for a multitude of people. Depression is a recurring
+    theme in today's society and this was my opportunity to submit a minor
+    contribution to make an difference no matter how small."
+  keywords:
+   - Ruby
+   - Ruby on Rails
+  active: false
   public: true
   type: work
   relationship: free-lancer
@@ -43,7 +89,7 @@
   keywords:
    - Elasticsearch
    - Ruby
-   - Rails
+   - Ruby on Rails
   active: true
   public: true
   type: work
@@ -65,7 +111,7 @@
    - User Interfaces
    - simulation
   active: true
-  public: true
+  public: false
   type: work
   relationship: contributor
 - organization:
@@ -149,10 +195,11 @@
   country: The Netherlands
   city: Amsterdam
   period: October 2014 - current
-  title: Engineer
+  title: Software Developer
   description: Maintaining a job placement and matching platform developed in Ruby. This involves executing bug-fixes, improving the general structure of the project and optimizing the migrate and deploy workflows. During my time here, I have also assisted in executing a migration to AWS.
   keywords:
-   - Ruby (Ruby on Rails)
+   - Ruby
+   - Ruby on Rails
    - MS SQL
    - MySQL
    - AWS
@@ -169,8 +216,10 @@
   title: Engineer
   description: Spend a weekend helping an acquaintance from Startupbus to finish and deploy the Rails application. We worked on implementing S3 storage, fixing the routing, refactoring the codebase and building and improving several core features to help in having a prototype ready in time for the IBC conference.
   keywords:
+   - Ruby
    - Ruby on Rails
    - PostgreSQL
+   - AWS
    - S3
   active: true
   public: true
@@ -220,6 +269,7 @@
   country: United Kingdom
   city: London
   keywords:
+   - Ruby
    - Ruby on Rails
    - PostgreSQL
    - Optimization
@@ -242,7 +292,8 @@
   public: true
   type: workshop
   keywords:
-   - Ruby (Ruby on Rails)
+   - Ruby
+   - Ruby on Rails
    - PostgreSQL
   relationship: participant
 - organization:
@@ -257,7 +308,8 @@
   type: work
   relationship: core-member
   keywords:
-   - Scala (Play)
+   - Scala
+   - Play
    - PostgreSQL
 - organization:
     name: Memocom
@@ -272,7 +324,8 @@
   type: work
   relationship: participant
   keywords:
-   - Ruby (Ruby on Rails)
+   - Ruby
+   - Ruby on Rails
    - MySQL
    - in-app e-mail synchronization
    - background jobs
