@@ -3,6 +3,7 @@ layout: post
 title:  Note About ES6 Constants
 date:   2015-10-8 08:55:51
 type: tools
+category: tools
 tags:
  - software
  - programming 
