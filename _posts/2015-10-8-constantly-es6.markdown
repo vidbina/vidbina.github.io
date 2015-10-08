@@ -16,8 +16,8 @@ description: Note to self about ECMAscript 6 constants, the pass-by-reference an
 
 While reading up about housekeeping the global object in ECMAscript 6, I
 noticed a subtlety of `const` that could have escaped the attention of some
-software developers like myself... because we need to be careful for the
-seemingly immutable, yet capable of change.
+software developers like myself so I'm writing this post especially to
+help me remember :bulb:... because I need to be careful for the seemingly immutable, yet capable of change.
 
 <div class="element giphy">
 <iframe src="//giphy.com/embed/zxxXYJqTlpBnO" width="480" height="259" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
