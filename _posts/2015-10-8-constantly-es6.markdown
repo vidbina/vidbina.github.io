@@ -14,17 +14,21 @@ mathjax: true
 description: Note to self about ECMAscript 6 constants, the pass-by-reference and pass-by-value ordeal and few tips to remember which may aid in maintaining sanity within (if you really don't want other devs to kill you).
 ---
 
-While reading up about housekeeping the global object in ECMAscript 6 I
+While reading up about housekeeping the global object in ECMAscript 6, I
 noticed a subtlety of `const` that could have escaped the attention of some
-software developers like myself.
+software developers like myself... because we need to be careful for the
+seemingly immutable, yet capable of change.
+
+<div class="element giphy">
+<iframe src="//giphy.com/embed/zxxXYJqTlpBnO" width="480" height="259" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
 
 Non-primitives such as arrays and objects are
-accessed by their pointers and constants to such items pertain to the
-reference.
+accessed through their pointers and constants to such items pertain to the
+reference and not the data referred to.
 
-A constant array or object always maintains its reference[^1],
-but the
-data pointed to by the immutable reference may be mutated.
+A constant array or object therefore always maintains its reference[^1],
+but the data pointed to by the immutable reference may be mutated.
 
 [^1]: The pointer never changes, meaning that it will always point to the same item in memory.
 
@@ -33,9 +37,9 @@ const number = 12;
 number++; // fails, integers are primitive
 {% endhighlight %}
 
-Changing the reference will not work for an array, however; one may mutate
-the object referred to by use of the `push`, `pop`, `shift` and `unshift`
-functions:
+In the case of an array one may mutate the object referred to by use of the
+`push`, `pop`, `shift` and `unshift` functions as demonstrated in
+the following snippet:
 
 {% highlight javascript %}
 const people = [];
@@ -58,8 +62,8 @@ immutable state. :warning:. Here is how I maintain sanity:
  - remember that primitives are passed by value
  - remember that non-primitives are passed by a _copy of the reference_[^3]
  - always return copies to non-primitives, ensuring that no one has access
- to the data I need for my housekeeping effectively giving me some guarantees
- regarding state.
+ to the data I need for my housekeeping, effectively giving me some
+ guarantees regarding state.
 
 [^2]: The reference to the array is taken by functions as `push`, `pop`, `shift` and `unshift` and the data pointed to by the reference is mutated. The reference never changes.
 
