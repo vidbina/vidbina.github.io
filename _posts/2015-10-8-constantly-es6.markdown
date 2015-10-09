@@ -10,7 +10,10 @@ tags:
  - es6
  - ECMAscript 
  - javascript
-mathjax: true
+image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/es6const_thumb.png
+twitter:
+  card: summary_large_image
+  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/es6const1.png
 description: Note to self about ECMAscript 6 constants, the pass-by-reference and pass-by-value ordeal and few tips to remember which may aid in maintaining sanity within (if you really don't want other devs to kill you).
 ---
 
