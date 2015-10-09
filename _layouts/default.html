@@ -13,11 +13,11 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElemen
     <meta name="twitter:creator" content="{% if page.twitter and page.twitter.creator%}{{page.twitter.creator}}{% else %}vidbina{% endif %}">
     {% if page.twitter and page.twitter.image %}<meta name="twitter:image" content="{{ page.twitter.image }}">{% endif %}
 
-    <meta name="og:type" content="{% if page.twitter and page.twitter.card %}{{ page.twitter.card }}{% else %}summary{% endif %}">
     <meta name="twitter:site" content="{% if page.twitter and page.twitter.site%}{{page.twitter.site}}{% else %}vidbina{% endif %}">
     <meta name="twitter:creator" content="{% if page.twitter and page.twitter.creator%}{{page.twitter.creator}}{% else %}vidbina{% endif %}">
     {% if page.twitter and page.twitter.image %}<meta name="twitter:image" content="{{ page.twitter.image }}">{% endif %}
 
+    <meta property="og:type" content="{% if page.og and page.og.type %}{{ page.og.type}}{% else %}article{% endif %}">
     <meta property="og:url" content="http://vid.bina.me{{ page.url }}" />
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:description" content="{{ page.description }}" />
