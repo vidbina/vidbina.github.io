@@ -10,6 +10,23 @@ tags:
  - study
  - engineering
  - work
+image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/noslack_thumb.png
+twitter:
+  card: summary_large_image
+  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/noslack.png
+og:
+  type: article
+  article: #see ogp.me/#types
+    author: https://www.facebook.com/david.asabina
+    tags:
+      - slack
+      - concentration
+      - interrupt
+      - focus
+      - study
+      - knowledge worker
+      - communication
+    section: Productivity
 description: "Just a rant about flow, task-switching and the methods I employ
 to protect my flow at the office all instigated by another episode of Slack
 alerting me out of my flow."
