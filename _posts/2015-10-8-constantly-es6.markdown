@@ -12,8 +12,8 @@ tags:
  - javascript
 image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/es6const_thumb.png
 twitter:
-  card: summary
-  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/es6const1_thumb.png
+  card: summary_large_image
+  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/es6const1.png
 og:
   type: article
   article: #see ogp.me/#types
