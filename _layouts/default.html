@@ -35,6 +35,8 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElemen
     {% if page.og.article.section %}<meta property="article:section" content="{{page.og.article.section}}">{% endif %}
     {% if page.og.article.tags %}
     {% for tag in page.og.article.tags %}<meta property="article:tag" content="{{tag}}">{% endfor %}
+    {% else %}
+    {% for tag in page.tags %}<meta property="article:tag" content="{{tag}}">{% endfor %}
     {% endif %}
     {% endif %}
 
