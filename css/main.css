@@ -64,23 +64,23 @@ body {
 body {
   /*
   background-color: #1e1e1e;
-  color: #bbb;
+  color: #ccc;
   color: #1e1e1e;
-  background-color: #bbb;
+  background-color: #ccc;
   */
 }
 
 body.dark { background-color: #111; }
-body.light { background-color: #bbb; }
+body.light { background-color: #ccc; }
 .light .post code { color: #333; }
-.dark .post code { color: #bbb; }
-.dark .swap { background-color: #bbb; }
+.dark .post code { color: #ccc; }
+.dark .swap { background-color: #ccc; }
 .light .swap { background-color: #111; }
 .dark, .dark a, .dark a:hover, .dark a:visited, .dark .logo path, .dark svg path, .dark .swap {
-  fill: #bbb!important;
-  color: #bbb;
+  fill: #ccc!important;
+  color: #ccc;
 }
-.dark .labels span { border-color: #bbb; }
+.dark .labels span { border-color: #ccc; }
 
 .light, .light a, .light a:hover, .light a:visited, .light .logo path, .light svg path, .light .swap {
   fill: #111!important;
@@ -155,7 +155,7 @@ a:visited { }
 .element > *, .element > * > img {
   width: 100%;
 }
-.element.img.light { background: #bbb; }
+.element.img.light { background: #ccc; }
 .element.img.dark { background: #333; }
 
 .video, .spotify, .instagram, .document, .game {
@@ -421,7 +421,7 @@ div.highlight {
   padding: 0 .2em;
 }
 .post .highlight code {
-  color: #bbb;
+  color: #ccc;
 }
 
 .post pre > code {
@@ -473,7 +473,7 @@ div.highlight {
 }
 body.impress-supported {
   background-color: #111;
-  color: #bbb;
+  color: #ccc;
 }
 
 div#impress {
@@ -486,11 +486,11 @@ div#impress {
   line-height: 1.5em;
 }
 .slide {
-  color: #bbb;
+  color: #ccc;
   padding: 20px;
   /*
   background-color: #111;
-  border: 0.5em solid #bbb;
+  border: 0.5em solid #ccc;
   */
   text-align: center;
   position: relative;
@@ -541,12 +541,12 @@ div#impress {
 #title > h1 > span, #title > h2 > span, strong {
   /*
   color: #111;
-  background-color: #bbb;
+  background-color: #ccc;
   */
 }
 .impress-supported .logo {
   display: inline-block;
-  background: #bbb;
+  background: #ccc;
 }
 .footnotes {
   font-size: 0.75em;
@@ -697,7 +697,7 @@ div#impress {
 
 .timeline li {
   border: 2px solid #111;
-  /*color: #bbb;*/
+  /*color: #ccc;*/
   /*background: #111;*/
   padding: 10px;
   margin-bottom: 10px;
@@ -725,7 +725,7 @@ div#impress {
 */
 
 .cta > a, .cta > button {
-  color: #bbb;
+  color: #ccc;
   background-color: #111;
   -webkit-border-radius: 10px;
      -moz-border-radius: 10px;
@@ -749,7 +749,7 @@ div#impress {
   margin: 5px 5px 5px 5px;
   padding: 0 10px 0 10px;
   border-radius: 10px;
-  color: #bbb;
+  color: #ccc;
   background-color: #111;
   white-space: nowrap;
   display: inline-block;
