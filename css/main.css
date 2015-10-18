@@ -155,6 +155,9 @@ a:visited { }
 .element > *, .element > * > img {
   width: 100%;
 }
+.element.img.light { background: #bbb; }
+.element.img.dark { background: #333; }
+
 .video, .spotify, .instagram, .document, .game {
   display: block;
   position: relative;
@@ -406,8 +409,15 @@ div.highlight {
   margin-left: 1.35em;
 }
 
+.post code, .element.img {
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+       -o-border-radius: 2px;
+          border-radius: 2px;
+}
+
 .post code {
-  border-radius: 2px;
   padding: 0 .2em;
 }
 .post .highlight code {
