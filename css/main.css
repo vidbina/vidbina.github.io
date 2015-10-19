@@ -155,6 +155,11 @@ a:visited { }
 .element > *, .element > * > img {
   width: 100%;
 }
+
+.element.img {
+  transition: all .2s ease-in-out;
+}
+
 .element.img.light { background: #ccc; }
 .element.img.dark { background: #333; }
 

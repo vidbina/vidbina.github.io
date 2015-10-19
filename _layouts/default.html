@@ -135,11 +135,39 @@ function swapColors() {
 }
 </script>
 <script type="text/javascript">
-var links = document.links;
-for (var i = 0; i < links.length; i++) {
-  console.log("open in new for", links[i].href);
-  links[i].target = "_blank";
-}
+(function() {
+  var links = document.links;
+  for (var i = 0; i < links.length; i++) {
+    console.log("open in new for", links[i].href);
+    links[i].target = "_blank";
+  }
+})();
+</script>
+<script type="text/javascript">
+(function() {
+  var els = document.querySelectorAll('.element.img');
+  var style = document.createElement('style');
+  style.appendChild(document.createTextNode(''));
+  document.head.appendChild(style);
+
+  for (var i = 0; i < els.length; i++) {
+    (function(div, id) {
+      div.id = 'img_' + id;
+      var img =  div.getElementsByTagName('img')[0];
+
+      var image = new Image();
+      image.onload = function() {
+        img.src = this.src;
+        var sx = this.width/img.width, sy = this.height/img.height;
+        var styleText = '#img_' + id + 
+          ':hover { transform: scale3d(' + sx + ', ' + sy + ', 1); }';
+        style.sheet.insertRule(styleText, 0);
+      };
+      image.src = img.src;
+      img.src = "";
+    })(els[i], i);
+  }
+})();
 </script>
 {% if page.emojify %}
 {% include emojify-script.html %}
