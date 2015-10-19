@@ -70,6 +70,9 @@ body {
   */
 }
 
+body, .post code, .swap, .dark, a, .logo path, svg path, .light {
+  transition: all 3s ease-in-out;
+}
 body.dark { background-color: #111; }
 body.light { background-color: #ccc; }
 .light .post code { color: #333; }
