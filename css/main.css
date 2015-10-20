@@ -159,7 +159,7 @@ a:visited { }
   overflow: hidden;
   text-align: center;
 }
-.element > *, .element > * > img {
+.element > div, .element > span, .element > div > *, .element > img {
   width: 100%;
 }
 
