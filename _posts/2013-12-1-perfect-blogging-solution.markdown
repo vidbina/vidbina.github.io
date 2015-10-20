@@ -345,7 +345,7 @@ the classes `element` and `img`,
 {% endhighlight %}
 
 <div class="element img">
-  <img src="/img/screenshots/editingblog.png" alt="example">
+  <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/tmuxvieditblog.png" alt="screen shot of tmux in which I am editing this post in vim">
 </div>
 
 I guess I&rsquo;ve got it all covered.
