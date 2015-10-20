@@ -90,7 +90,7 @@ counterparts) render words less readable as word shapes become less obvious.
 If I focus on finding _sans-serif_ fonts where the types have long ascenders 
 and descenders I&rsquo;ll be fine.
 
-<div class="element img">
+<div class="element img light">
   <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Typography_Line_Terms.svg/500px-Typography_Line_Terms.svg.png" alt="typography terms">
 </div>
 
