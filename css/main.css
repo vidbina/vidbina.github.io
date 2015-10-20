@@ -32,6 +32,10 @@ time, mark, audio, video {
     font-size: 100%;
     vertical-align: baseline;
 }
+sup {
+  vertical-align: super;
+  font-size: 70%;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -429,6 +433,7 @@ div.highlight {
   padding: 0 .2em;
 }
 .post .highlight code {
+  font-size: 80%;
   color: #ccc;
 }
 

@@ -26,14 +26,14 @@ succeeded?). So here goes... I need something that:
 
  1. supports markdown
  2. allows me to enter LaTeX-like formulas
- - supports embedded web content
- - runs as lean as possible
- - does not introduce new security hazzards
- - grants me (and me alone) full control to my data
- - is simple
- - looks nice
- - adjusts well to different screen sizes
- - offers me some metrics
+ 2. supports embedded web content
+ 2. runs as lean as possible
+ 2. does not introduce new security risks
+ 2. grants me (and me alone) full control to my data
+ 2. is simple
+ 2. grants flexibility in layout/design
+ 2. adjusts well to different screen sizes
+ 2. offers me some metrics
 
 ## Machinery
 I have ignored [Wordpress][wordpress] and quickly glanced over [Ghost][ghost],
@@ -42,13 +42,19 @@ is not going to change anytime soon. I do not see the need for tending
 databases, maintaining a CMS, setting up authentication chains between 
 applications and datasources, and scrolling through logs containing the 
 addresses of the numerous bots which waste my resources in an effort to 
-bruteforce my passwords.
+find their way in.
 
-I do a lot of coding in Ruby, Python, Javascript and other C-ish languages so I 
-guess any solution friendly to these languages will work for me. Jekyll was too 
-easy to warrant moving on to test other solutions, but nanoc, DocPad and Hyde 
-would probably suffice as well. All basically do the same thing (generate 
-static websites) with minute differences.
+I write much in Ruby, Python, Javascript and C family languages, so I guess
+any solution friendly to these languages will work for me. Jekyll was too 
+easy to warrant moving on to test other solutions, but nanoc (Ruby), DocPad
+(CoffeeScript), Hyde (Python), Hugo (Go) or Hexo (Javascript) would probably
+suffice as well[^1]. All basically do the same thing (generate 
+static websites) but the approach in getting things done are obviously
+different. I chose Jekyll[^2], a popular static site generator written in Ruby
+and allows me to enter posts in Markdown :wink:.
+
+[^1]: There is a plethora of static site generators out on the web today (october 2015). As for me, I'm still using Jekyll but have heard a great deal about for a nice overview visit https://staticsitegenerators.net/ where Jekyll, by merits of its Github stars is still one of the leading static site generator projects :wink:
+[^2]: Rolling with Jekyll proved to be a great choice since I currently host my site on Github pages. Github offers a static site hosting service which will generate Jekyll sites after as little as an upstream push.
 
 ## Design
 I'm not a designer and therefore resorted to articles and papers to find a
@@ -84,7 +90,7 @@ counterparts) render words less readable as word shapes become less obvious.
 If I focus on finding _sans-serif_ fonts where the types have long ascenders 
 and descenders I&rsquo;ll be fine.
 
-<div class="element">
+<div class="element img">
   <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Typography_Line_Terms.svg/500px-Typography_Line_Terms.svg.png" alt="typography terms">
 </div>
 
@@ -108,7 +114,8 @@ in the readability department.
 Another matter I had not yet discussed is the presentation of mathematical
 formulae. My go-to solution for web-math is [MathJax][mathjax]. What can I say
 I'm a \\(\TeX\\) guy {{ ":wink:" | emojify }}. Anyways the quadratic formula
-looks as slick as it looks in \\(\LaTeX\\) documents if printed like \\(ax^2 + bx + c = 0\\).
+looks as slick as it looks in \\(\LaTeX\\) documents if printed like 
+$$\large x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}$$.
 
 
 ### Color
@@ -139,9 +146,9 @@ The fragment cited above is from the Michael's paper [Criteria for optimal web d
 ### Layout
 I haven&rsquo;t put too much thought into the layout. I wanted it simple. Long
 sentences, being [difficult to track][long-sentences-codinghorror] have been 
-listed as _no-go_&srquo;s. A usability paper by J. Ryan Baker, titled [Is Multiple-Column Online Text Better? It Depends!][usability-columns-wichita]
+listed as _no-go_&rsquo;s. A usability paper by J. Ryan Baker, titled [Is Multiple-Column Online Text Better? It Depends!][usability-columns-wichita]
 does a great job at establishing which alignment and column strategies work
-well for online documents. I have taken the liberty of assuming that some of
+well for online content. I have taken the liberty of assuming that some of
 the penalties for one-column texts are to be attributed the the lenght of the
 lines. Especially in the full-justified single-column text I had a hard time in
 keeping track of my position when finding my way from the end of a line to the
@@ -274,12 +281,79 @@ the golden ratio by a percent {{ ":wink:" | emojify }}.
 }
 {% endhighlight %}
 
+### Images
+If there is a place for embedded content, images need to be convered as well.
+Due to the small width of my page layout, I had to consider alternatives for
+presenting larger images. I came up with an approach that may be both intrusive 
+and helpful. Since I will feature a lot of screenshots on this page, I need a
+bit more than 500 to 600 pixels in width. However, I don't need my readers to
+gaze at large pictures at all times and therefore considered zooming an image
+on hover.
+
+In CSS one can specify a `scale3d` transform on a hover as demonstrated in the
+following snippet that just doubles the size of an image on the along the $x$
+and $y$ axis.
+
+{%highlight css %}
+#img_x:hover { transform: scale3d(2, 2, 1); }
+{%endhighlight%}
+
+This solution is far from elegant, in fact it is rather nasty but what it
+boils down to is me
+
+ - iterating over every image contained in a container with
+the classes `element` and `img`,
+ - calculating the $x$ and $y$ scaling factors to get an image zoomed to
+ something close to original size and
+ - adding the calculated styles to a `<style>` block in the header:
+
+{% highlight javascript %}
+(function() {
+  var els = document.querySelectorAll('.element.img');
+  var style = document.createElement('style');
+  style.appendChild(document.createTextNode(''));
+  document.head.appendChild(style);
+
+  for (var i = 0; i < els.length; i++) {
+    (function(div, id) {
+      // give every picture container a unique id
+      // id is used to describe the hover transform style
+      div.id = 'img_' + id;
+      var img =  div.getElementsByTagName('img')[0];
+
+      // load image
+      var image = new Image();
+      image.onload = function() {
+        // get the image dimensions after it is loaded
+        img.src = this.src;
+        // calculate scaling factors
+        var sx = this.width/img.width;
+        var sy = this.height/img.height;
+        // build style for this specific image
+        var styleText = '#img_' + id + 
+          ':hover { transform: ' +
+          'scale3d(' + sx + ', ' + sy + ', 1);' +
+          '}';
+        // add style to style block
+        style.sheet.insertRule(styleText, 0);
+      };
+      image.src = img.src;
+      img.src = "";
+    })(els[i], i);
+  }
+})();
+{% endhighlight %}
+
+<div class="element img">
+  <img src="/img/screenshots/editingblog.png" alt="example">
+</div>
+
 I guess I&rsquo;ve got it all covered.
 
 
 Time to start bloggin&hellip;
 
-[font-choice-tnw]: http://thenextweb.com/dd/2011/03/02/whats-the-most-readable-font-for-the-screen/#!qQBqd
+[font-choice-tnw]: http://thenextweb.com/dd/2011/03/02/whats-the-most-readable-font-for-the-screen/#!qQBqd?canvas=918984
 [usability-columns-wichita]: http://psychology.wichita.edu/surl/usabilitynews/72/columns.asp
 [long-sentences-codinghorror]: http://www.codinghorror.com/blog/2006/06/text-columns-how-long-is-too-long.html
 [ghost]: https://ghost.org
