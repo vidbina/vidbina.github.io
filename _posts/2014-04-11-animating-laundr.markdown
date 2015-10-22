@@ -19,21 +19,21 @@ description: "Laundr picks up, cleans and delivers your suits when you want it, 
 
 I believe it has been a month and a half since this idea has been floating 
 around in the [Port][port]&hellip; a month and a half ago 
-{{":ghost:" | emojify }} (I just undusted this post from my drafts 
+:ghost: (I just undusted this post from my drafts 
 collection so we have time travelled further into the future since then 
-{{ ":stuck_out_tongue_closed_eyes:" | emojify }}). Orgeon came up with the 
+:stuck_out_tongue_closed_eyes:). Orgeon came up with the 
 bit, got the [Saddl][saddl] fellers all too much excited about the concept 
 and that is how the ball started rolling.
 
 The idea: Offer a qualitative suit dry cleaning service to white collar workers 
 allowing user-specified pickup and delivery times and locations. Qualitative 
 as in, people should dare entrust us their expensive suits.
-{{ ":necktie:" | emojify }} {{ ":package:" | emojify }}
+:necktie: :package:
 
 The advantage: Don&rsquo;t ever worry about heading to the [dry cleaners][washee]
 yourself again. Now you can spend even more time stuck in your (awesome) office 
 (in the summer), having one less excuse to head out to catch a fresh whiff 
-of air {{ ":innocent:" | emojify }}.
+of air :innocent:.
 
 <div class="element img">
   <img src="/resources/startup/laundr/landing_page_20140309.png" alt="Laundr Landing Page">
@@ -47,20 +47,20 @@ of air {{ ":innocent:" | emojify }}.
 <li>Saddle digs the idea and jumps in</li>
 <li class="label">Week 2<!-- week 4 of 2014 --></li>
 <li>The fellers start talking with people (local high-end tailors, laundromats and businessmen) about the idea</li>
-<li>The Saddl team gets some UI ideas going {{ ":iphone:" | emojify }}</li>
-<li>I start working on a simple Node.js back-end {{ ":construction:" | emojify }}</li>
+<li>The Saddl team gets some UI ideas going :iphone:</li>
+<li>I start working on a simple Node.js back-end :construction:</li>
 <li class="label">Week 3</li>
 <li>Get at much work done for Laundr in between the other gigs I eloquently (or probably chaotically) juggling</li>
-<li>Jump on the plane at the beginning of the weekend for a two week break. I&rsquo;m seeing pa and ma in Suriname again after 5 years away from home. {{ ":sunrise:" | emojify }}</li>
+<li>Jump on the plane at the beginning of the weekend for a two week break. I&rsquo;m seeing pa and ma in Suriname again after 5 years away from home. :sunrise:</li>
 <li class="label">Week 6<!-- week 8 --></li>
-<li>Break is over {{ ":rage:" |emojify }}, I start working on the mobile app (Cordova and Angular are my tools of choice for this mission)</li>
+<li>Break is over :rage:, I start working on the mobile app (Cordova and Angular are my tools of choice for this mission)</li>
 <li class="label">Week 7<!-- week 9 --></li>
-<li>The Saddl fellers join the development effort to help {{ ":muscle:" | emojify }} out with front-end issues leaving us with a development team at last</li>
+<li>The Saddl fellers join the development effort to help :muscle: out with front-end issues leaving us with a development team at last</li>
 <li>First version of the app is ready for shipment (some issues still pending, but it works well enough to get started)</li>
 <li class="label">Week 10<!-- week 12 --></li>
-<li>Bumped the version to 0.0.2, we have been testing the app for a while now. Fuck it, we should just ship it! {{ ":shipit:" | emojify }}</li>
+<li>Bumped the version to 0.0.2, we have been testing the app for a while now. Fuck it, we should just ship it! :shipit:</li>
 <li class="label">Week 11</li>
-<li>First pickup and delivery {{ ":gift:" | emojify }}</li>
+<li>First pickup and delivery :gift:</li>
 <li class="label">Week 12<!-- week 14x --></li>
 <li>Submit app to the Apple app store</li>
 </ol>
@@ -103,10 +103,10 @@ directions.
 
 ### Fuck it, Ship it
 Another thing I apparently have a hard time learning is to ship fast 
-{{ ":shipit:" | emojify }}. The first version submitted to the app store was
+:shipit:. The first version submitted to the app store was
 version `0.0.3`. We have iterated through 3 versions **that no customer had 
 seen** that included feature additions and a UI overhaul. How riddiculous
-is that?!? {{ ":unamused:" | emojify }}, just because we were chasing 
+is that?!? :unamused:, just because we were chasing 
 perfection... yeah right? Perfection for who... ourselves?
 
 <div class="element img">
@@ -137,7 +137,7 @@ perpetually fulfilling the recreational needs of any one human being. Although
 every experience of a piece may unearth new treasures, sometimes a complete 
 replenishing of one&rsquo;s art supply is necessary. Just try enjoying the same
 song everytime you need music and keep it up for a year &dash;&dash; Just one 
-song {{ ":scream:"| emojify}}. It will probably drive you nuts. Why is that?!?
+song :scream:. It will probably drive you nuts. Why is that?!?
 Well, I guess humans constantly change/evolve/adapt and with this, demands and 
 problems change as well which calls for altered solutions.
 
@@ -150,20 +150,20 @@ Playing with new ideas and toys is best left to be done in the experimental
 projects executed by the R&D deparmtments of the world, but then again all
 cool startups are basically R&D departments executing experiments. Yet there is 
 a difference in building something new with the tools you master and building 
-something new with the tools you have just discovered {{ ":wrench:" | emojify }}. 
+something new with the tools you have just discovered :wrench:. 
 
 Somehow we still managed to do the later and utilize a pre-alpha 
 framework in the mobile webapp being developed. Due to major updates during 
 the course of development, documentation inconsistencies and some minor bugs, 
 we were set back quite an amount of time in development as we sought to 
-resolve these issues (with hacks {{ ":dizzy_face:" | emojify }}).
+resolve these issues (with hacks :dizzy_face:).
 
 We were using [Ionic][ionic] and honestly, I love it. My only regret is that
 I didn't adequately account for the risks involved in getting acquianted with 
 a new framework, especially something as volatile as a alpha release product, 
 in our time-to-market estimations. Somewhere during the project I seriously 
 considered pulling the plug on the Ionic branch (after many hours spend on 
-fixing {{ "shit" | emojify }}), but realized that 
+fixing shit), but realized that 
 
  - I had already spend too much time in "making things work"
  - I had come too far and
@@ -182,7 +182,7 @@ made a couple of pickups and deliveries while still having the app in the oven.
 
 
 <div class="element cta">
-  <a href="http://thesummit.co/kilimanjaro/nominees-alpha#entry-199">Vote to get Laundr to Kilimanjaro {{ ":mount_fuji:" | emojify}}</a>
+  <a href="http://thesummit.co/kilimanjaro/nominees-alpha#entry-199">Vote to get Laundr to Kilimanjaro :mount_fuji:</a>
 </div>
 
 Anyways, we&rsquo;ve applied for the Kilimanjaro climb (we still need to figure
@@ -201,10 +201,10 @@ Lessons learnt, moving on a bit smarter and wiser.
 [Do not forget to vote for us][kilimanjaro] we really appreciate any 
 **[votes][kilimanjaro]** we can muster. Ask your folks and friends to vote and 
 if grandma does not get it, help her out, but really for the love of mother 
-Earth, **[vote][kilimanjaro]** and help Laundr out {{ ":trophy:" | emojify }}.
+Earth, **[vote][kilimanjaro]** and help Laundr out :trophy:.
 
 <div class="element cta">
-  <a href="http://thesummit.co/kilimanjaro/nominees-alpha#entry-199">Vote for Laundr {{ ":mount_fuji:" | emojify}}</a>
+  <a href="http://thesummit.co/kilimanjaro/nominees-alpha#entry-199">Vote for Laundr :mount_fuji:</a>
 </div>
 
 <!--
