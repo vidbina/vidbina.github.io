@@ -22,7 +22,7 @@
   <meta class="detail entypo-graduation-cap" name="type" content="{{ include.type }}">
 {% when 'art' %}
   <meta class="detail entypo-palette" name="type" content="{{ include.type }}">
-{% when 'technology', 'science' %}
+{% when 'technology', 'science', 'physics', 'space' %}
   <meta class="detail entypo-rocket" name="type" content="{{ include.type }}">
 {% when 'engineering', 'devops' %}
   <meta class="detail entypo-cog" name="type" content="{{ include.type }}">
@@ -64,5 +64,9 @@
   <meta class="detail entypo-lock" name="type" content="{{ include.type }}">
 {% when 'encryption' %}
   <meta class="detail entypo-key" name="type" content="{{ include.type }}">
+{% when 'energy', 'power' %}
+  <meta class="detail entypo-flash" name="type" content="{{ include.type }}">
+{% when 'flag', 'problam', 'issue' %}
+  <meta class="detail entypo-flag" name="type" content="{{ include.type }}">
 {% else %}
 {% endcase %}
