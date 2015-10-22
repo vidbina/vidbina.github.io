@@ -2,7 +2,7 @@
 layout: post
 title:  Enemy of the State?
 date:   2015-10-8 08:55:51
-type: rant
+type: problem
 category: rant
 tags:
  - profiling
@@ -118,4 +118,4 @@ great lengths.
 
 Tip or no tip. People don't deserved to be treated like that.
 
-Fuck those three officers and bless the good cops on the forces :police:.
+Fuck those three officers and bless the good cops on the forces :cop:.
