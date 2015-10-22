@@ -19,7 +19,7 @@ description: AWS rocks but because of the many services being offered it may fee
 Because I am somewhat of a term hermit, I prefer to have CLI's to do everything
 because it makes scripting so much easier.
 
-Amazon offers control over AWS {{ ":cloud:" | emojify }} through their 
+Amazon offers control over AWS :cloud: through their 
 [CLI][installing-awscli] that is what this post is all about.
 
 ## Setup
@@ -98,7 +98,7 @@ The CLI syntax is basically
 aws SERVICE COMMAND [ARGS]
 {% endhighlight %}
 
-As simple as that {{ ":wink:" | emojify }}.
+As simple as that :wink:.
 
 <a name="storage"></a>
 ### S3

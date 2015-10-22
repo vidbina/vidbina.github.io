@@ -25,7 +25,7 @@ compiling a list of problems to conveniently solve with ``bc`` and catching
 myself dumping too much details in that post.
 
 Solving this in `bc` is discussed in that post with `bc` commands 
-{{ ":wink:" | emojify }} but to save you a click here goes&hellip; in case you
+:wink: but to save you a click here goes&hellip; in case you
 need to figure out how many bits you will need (base 2) for the value $8$ use
 the following command to pipe the statements to bc for processing, needless to
 say that you need to change $8$ for whatever value want to represent, and
@@ -46,7 +46,7 @@ capture and $b$ is the base of the system we want to represent that value in.
 Just to rewind back to a somewhat simpler scenario, let&rsquo;s think base $10$
 for a second. We can capture 10 values by just using one decimal place which 
 are $0$, $1$, $2$, $3$, $4$, $5$, $6$, $7$, $8$ and $9$.
-That is quite simple {{ ":wink:" | emojify }}. For every decimal place we have
+That is quite simple :wink:. For every decimal place we have
 to assume a factor of $10^{N}$ where $N$ represents the place of decimal. The
 least significant digit is the one furthest to the right such that $47$ 
 equals $(4\times 10^{1})+(7\times 10^{0}) = 40 + 7$.
@@ -56,7 +56,7 @@ to the base $10^2$. Ones are the zeroeth power to the base ($10^0=1$), tens are
 the first power ($10^1=10$) and hundredths are the second power ($10^2=100$).
 
 We need three powers to ten ($10^3$) to represent $1000$, that means 4 
-digits because the power to zero covers the ones {{ ":wink:" | emojify }}.
+digits because the power to zero covers the ones :wink:.
 If I ask how many decimal places are needed to represent $978$, you would
 answer that we need $\log\_{10}(978) \approx 2.99034$ powers to the ten to
 cover it.

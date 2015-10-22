@@ -54,9 +54,9 @@ with one of my greatest highs. The way I see it, I still have 3 months to get
 this year balanced out.
 
 Numerous people have recommended me to pick up music again after hearing me 
-speak about my music with twinkling {{":star2:" | emojify }} eyes 
-{{":eyes:" | emojify}}. Furthermore I really want to pack my bag again to 
-experience new highs on a magical busride {{ ":bus:" | emojify }}. So I&rsquo;m
+speak about my music with twinkling :star2: eyes 
+:eyes:. Furthermore I really want to pack my bag again to 
+experience new highs on a magical busride :bus:. So I&rsquo;m
 going to mix things up.
 
 <div class="element instagram">
@@ -64,7 +64,7 @@ going to mix things up.
 </div>
 
 How about I go on that busride to get inspired to compose new tunes for your
-enjoyment instead?!? {{ ":bulb:" | emojify }}.
+enjoyment instead?!? :bulb:.
 
 <div class="element instagram">
   <iframe src="//instagram.com/p/gICEH_Kc6b/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"> </iframe>
@@ -75,7 +75,7 @@ their journey somewhere in Africa in November.
 
 {% if false %}
 <div class="element cta">
-  <a href="http://thewayv.com/crowdfunding/projects/coming-to-africa/">Pledge here {{ ":trophy:" | emojify}}</a>
+  <a href="http://thewayv.com/crowdfunding/projects/coming-to-africa/">Pledge here :trophy:</a>
 </div>
 {% endif %}
 
@@ -114,7 +114,7 @@ Some of the great cats I have had the pleasure of connecting
 with in the past year stem from my [startupbus][startupbus] adventure last year.
 I relate to the misfits, the goons, those buffoons with crazy ideas looming, 
 with radical dreams blooming and a unhealthy dose of energy to tackle the 
-challenges head-on. You usually meet these nut-jobs on these trips {{ ":grin:" | emojify }}.
+challenges head-on. You usually meet these nut-jobs on these trips :grin:.
 
 ###Recharging
 Sleep deprivation may be one of the culprits for exhaustion, yet during this 
@@ -132,7 +132,7 @@ for more stimuli?!?
 
 {% if false %}
 <div class="element cta">
-  <a href="http://thewayv.com/crowdfunding/projects/coming-to-africa/">Pledge here {{ ":trophy:" | emojify}}</a>
+  <a href="http://thewayv.com/crowdfunding/projects/coming-to-africa/">Pledge here :trophy:</a>
 </div>
 {% endif %}
 
@@ -154,17 +154,17 @@ pledges come at different costs obviously.
 
  - a 20 minute concert for all my pledgers. My music is a cross between jazz,
  hiphop, world music and everything else that resonates with me 
- {{ ":notes:" | emojify }}. I will spice things up with technology of course.
+ :notes:. I will spice things up with technology of course.
  My trusty computer will be on-stage composing music along with me during the
- performance (you have to see this {{ ":wink:" | emojify }}).
+ performance (you have to see this :wink:).
  - a {{ ":video_camera:" | emojify }} documentary chronicalling the experiences during my trip
  - monthly video summaries for the year after the trip to report on my 
  activities and share the progress I have been making in the projects I am 
  involved in
  - an opportunity to unload a barrage of paintball bullets at me while I 
- volunteer to be the bunny {{ ":rabbit:" | emojify }} at a paintball 
- {{ ":gun:" | emojify }} rink. This should incentivize my enemies to pledge as 
- well. I offer an opportunity to exact revenge {{ ":rage:" | emojify }}.
+ volunteer to be the bunny :rabbit: at a paintball 
+ :gun: rink. This should incentivize my enemies to pledge as 
+ well. I offer an opportunity to exact revenge :rage:.
  - the opportunity in naming the next gizmo I hack
  - tickets to a few hack workshops I&rsquo;m giving after I return from my 
  trip. I&rsquo;m working on two courses as we speak currently codenamed
@@ -179,7 +179,7 @@ some early input if possible.
 
 {% if false %}
 <div class="element cta">
-  <a href="http://thewayv.com/crowdfunding/projects/coming-to-africa/">Pledge here {{ ":trophy:" | emojify}}</a>
+  <a href="http://thewayv.com/crowdfunding/projects/coming-to-africa/">Pledge here :trophy:</a>
 </div>
 {% endif %}
 
@@ -209,7 +209,7 @@ It should be no surprise that I will be joining one of the busses as a coder.
 </div>
 
 Just to make things a bit easier I have sketched somewhat of a doodle of 
-myself. This should hopefully give you a better picture of me {{ ":grinning:" | emojify }}.
+myself. This should hopefully give you a better picture of me :grinning:.
 
 <div class="element">
   <img 
@@ -220,7 +220,7 @@ myself. This should hopefully give you a better picture of me {{ ":grinning:" | 
 Let&rsquo; go!
 {% if false %}
 <div class="element cta">
-  <a href="http://thewayv.com/crowdfunding/projects/coming-to-africa/">Pledge here {{ ":trophy:" | emojify}}</a>
+  <a href="http://thewayv.com/crowdfunding/projects/coming-to-africa/">Pledge here :trophy:</a>
 </div>
 {% endif %}
 

@@ -42,7 +42,7 @@ a creature has green blood, then it is an alien_.
 </div>
 
 The Venn diagram has surrounded the subject we're talking about (our antecedent 
-$q$) with a white outline, call it the spotlight {{ ":flashlight:" | emojify }}.
+$q$) with a white outline, call it the spotlight :flashlight:.
 Our consequent is represented by another circle which may overlap the 
 antecedent wherever both conditions hold $true$. In case we have a truthful 
 condition (because both conditions hold $true$) the entire area is white. 

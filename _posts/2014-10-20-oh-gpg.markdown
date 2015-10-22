@@ -18,7 +18,7 @@ To encrypt and decrypt my secret messages on my box I use GPG. This post is
 hopefully going to jog the memory of senile future me (or just future me on a
 day on which I happen to be hammered and need to perform this trick). Perhaps
 there is something here that may be of any use to other folks as well 
-{{ ":beer:" | emojify }}.
+:beer:.
 
 ## Encrypt it
 In order to lock up a certain piece of information we can simply pipe it into
@@ -50,7 +50,7 @@ The agent allows you to enter the passphrase once within a session and will
 remember and handle the passphrase dance for as long as the passphrase happens
 to persist in the cache. In the case of mutt that might mean happy mailing for
 two hours straight and entering a passwords only once. Pretty sweet 
-{{ ":smile:" | emojify }}.
+:smile:.
 
 The entire agent business works in the following manner:
 
@@ -68,7 +68,7 @@ then spawns the daemon.
 
 Basically I use the helper ```make-gpg-tty``` to configure my current terminal
 as the GPG-Agent front-end. Mind you that you should only configure one 
-terminal as the front-end in order to avoid weird {{ ":shit:" | emojify }}. 
+terminal as the front-end in order to avoid weird :shit:. 
 That is why ```make-gpg-tty``` stores the agent terminal number to a file and
 only links the current terminal as the front-end if there has not already been
 another terminal linked for this chore.

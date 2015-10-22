@@ -29,7 +29,7 @@ they have to offer.
 
 Personally, I believe that we should focus our energy on getting more of 
 the supposed minority group members into the regular events 
-{{ ":ticket:" | emojify }}, but not simply for the sake of being a member of the
+:ticket:, but not simply for the sake of being a member of the
 group but by merit of their expertise.
 
 Just invite more women to speak at tech conferences, grant more members of 
@@ -72,11 +72,11 @@ open. Don't market it as an event for group $x$, because many of the great
 minds of group $y$ and $z$ will not just invite themselves.
 
 <blockquote>
-Not spewing fire {{ ":fire:" | emojify }}, but I believe that whatever is said 
+Not spewing fire :fire:, but I believe that whatever is said 
 at TEDx Women should be said on regular TEDx events, by women. Just grant them 
 the mainstage at the main event, but then again... I'm just a simple engineer 
 talking about something that would be considered the domain of social 
-psychologists. What do I know {{ ":grimacing:" | emojify }}. *shrugs*
+psychologists. What do I know :grimacing:. *shrugs*
 </blockquote>
 
 Don't do it for me, because I get in wherever and I'm far too easy. I'm just 

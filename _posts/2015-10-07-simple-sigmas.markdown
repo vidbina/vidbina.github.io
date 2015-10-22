@@ -19,7 +19,7 @@ things in embedded systems, memory is scarce. Therefore we abstain from
 remembering sets of information as much as possible. 
 
 For the running variance problem, I stumbled upon Welford's method for 
-computing variance, but that is another story {{ ":bulb:" | emojify }}.
+computing variance, but that is another story :bulb:.
 
 Anyways... While refreshing some of the basic math skills whilst working on the 
 problem I [rediscovered some amazing properties that one should exploit whenever

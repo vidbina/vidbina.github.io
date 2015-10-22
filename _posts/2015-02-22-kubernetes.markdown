@@ -32,7 +32,7 @@ online.
 </blockquote>
 
 At the time of writing (Februari 2015) the Google Cloud container API is still
-in alpha. So {{ ":shit:" | emojify }} will most likely change, but I have a 
+in alpha. So :shit: will most likely change, but I have a 
 hunch that underlying principles will remain largely the same.
 
 #Introduction
@@ -41,7 +41,7 @@ idea is to address the entire infrastructure as a single unit. Kubernetes
 helps us in orchestrating our cloud.
 
 There is quite a bit of housekeeping required to get a cluster up and running.
-When working with Docker {{ ":whale:" | emojify }}, just getting different 
+When working with Docker :whale:, just getting different 
 containers to play ball together demands the configuration of discovery 
 services among other things.  Within the docker scenario this is already
 a bit of a hassle between containers on the same (virtual) machine. Setting up 
@@ -52,7 +52,7 @@ Every machine added to the cluster needs to know how to deal with discovery
 and if at all possible we rather would not spend our energy on focussing on 
 the individual (virtual) machines, because you don't want to have to remember 
 what every machine does. Let the cluster take care of its own housekeeping 
-{{ ":house:" | emojify }}.
+:house:.
 
 <div class="element">
   <img src="/resources/devops/kubernetes/basic-setup.svg" alt="The components involved in a basic Kubernetes setup">
@@ -151,7 +151,7 @@ filled it by you, but there I said it. For a list of available zones query
 `gcloud compute zones list`. Do yourself a favor while you read through this
 article and keep all the machines you create within the same zone (it makes 
 things easier for now, but you can spread your clusters over multiple zones 
-once you understand how things work {{ ":wink:" | emojify }}). For a list of 
+once you understand how things work :wink:). For a list of 
 available machine types within your selected zone query 
 `gcloud compute machine-types list --zone ZONE` and replace `MECH`. Yet again,
 do yourself a favor and pick a mech that has more guts then the `f1-micro` 
@@ -187,7 +187,7 @@ gcloud compute firewall-rules create expose-kubernetest-master-api \
 
 Note that the target tag enables one to describe firewall rules that apply to
 multiple machines without having to specify each machine explicitly. This is 
-one of the sweet cons of machine tagging {{ ":smile:" | emojify }}.
+one of the sweet cons of machine tagging :smile:.
 
 After adding the necessary firewall rule one should be able to perform the
 previous `wget` call without any problems.
@@ -248,7 +248,7 @@ gcloud compute instances create NAME \
 For `NAME` one may enter one or multple machine names (I chose the names of 
 three Minion resulting to `NAME` being substituted with `dave kevin stuart`).
 For testing purposes one may select a `f1-micro` or `g1-small` mech, while 
-picking a zone close to home {{ ":wink:" | emojify }}.
+picking a zone close to home :wink:.
 
 <!--
 ## View Cluster
@@ -282,7 +282,7 @@ For several reasons we could decide to run
 both on the same computation unit as the web worker could fetch and store the
 data for processing upon which the processor picks up the data and does its 
 magic. Gosh, would it be great if these services could share their storage 
-volumes? Within a pod they do {{ ":wink:" | emojify }}.
+volumes? Within a pod they do :wink:.
 
 ## Service with A Smile
 Now that we have the plumbing in place we need to start pumping some fluids 

@@ -28,7 +28,7 @@ GORLO UL980 LAM UL179 CPT UM197 GAPLI GUNSO OMOKO 4800N 01500W 4500N 02000W
 1400N 05300W 0916N 05400W ZY
 </blockquote>
 
-The funk does that mean?!? {{ ":confused:" | emojify }}
+The funk does that mean?!? :confused:
 
 ## Departure
 Since we are leaving from our starting airport we will need to understand what
@@ -158,7 +158,7 @@ with the cues available on and near the airstrip, otherwise we are set to fly
 a missed approach.
 </blockquote>
 
-The misses has already landed {{ ":airplane:" | emojify }}&hellip; time to 
+The misses has already landed :airplane:&hellip; time to 
 sleep.
 
 [aip-definition]: http://en.wikipedia.org/wiki/Aeronautical_Information_Publication
