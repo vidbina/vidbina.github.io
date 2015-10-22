@@ -10,35 +10,41 @@ tags:
  - racism
  - race
  - europe
-image: 
-twitter:
-  card: summary_large_image
-  image: 
 og:
   type: article
   article: #see ogp.me/#types
     author: https://www.facebook.com/david.asabina
 description: My experience with the German police and how I can understand the hatred that some people have against police forces.
 ---
-It is thursday the 22nd of October 2015 and I boarded a bus to Munich from
+It is Thursday the 22nd of October 2015 and I boarded a bus towards Munich in 
 Amsterdam a night ago. There is really nothing special about it as I have
 boarded buses by the same company to Berlin numerous times before. The buses
-take a bit longer but if you plan your trips throughout the night, you sleep
-throughout the trip and wake up at your
-destination while spending about 1/10th of the amount you'd generally spend on
-airfare or a third the amount one would spend on train tickets. Furthermore the
-buses often facilitate Wi-Fi and power outlets, so if you really want to you
-can spend the time working which I definitely can't say for the trains.
+take a while to get there but if you plan your trips throughout the night, you
+sleep throughout the trip and wake up at your destination while spending about
+a tenth of the amount you'd generally spend on airfare or a third the amount
+one would spend on train tickets. The reason I keep coming back to the buses is
+the complementary Wi-Fi and the on-board power outlets which is something the
+train operators haven't figured out to offer in a in a qualitative manner yet
+:train:.
 
 In Munich around 10 o'clock hell began when the police boarded the bus.
 I've been raised to consider the police my friend. I understand the job they
 have and the notion that they protect and serve the people. Naive as ever I
-went into this experience just like that... with the police as my ally.
+went into this experience just like that... with the police as my ally :police:.
+
+<div class="element img">
+  <img src="/img/harassed_in_munich/carone.png" alt="one of the police cars">
+</div>
+
+<div class="element img">
+  <img src="/img/harassed_in_munich/cartwo.png" alt="One of the police cars">
+</div>
 
 About half an hour into the police's search through the bus after troubling a
-few passengers probably from the Eastern part of Europe they confiscated my
-passport and then ordered me and an African passenger off the bus to further
-the search. Apparently they had not found what they are looking for.
+few passengers from the Eastern or Southern part of Europe they confiscated my
+passport and ordered me along with an African passenger off the bus to further
+the search. Apparently they had not found what they were looking for
+:confused:.
 
 We're taken out of the bus and the police has me take off my shoes in front of
 the office of Mercedes-Benz in Munich and pats me down like there is no
@@ -49,6 +55,10 @@ dark-skinned man in a negative episode with the police it is not at all
 surprising that people develop some expectations about such people. After all,
 they constantly see them in brushes with the law. Anyways... Every corner of my luggage is scrutinized and hardly a word is
 uttered towards me as I undergo this ordeal.
+
+<div class="element img">
+  <img src="/img/harassed_in_munich/office.png" alt="Mercedes-Benz office">
+</div>
 
 At some point I am informed that my African brother and I are to enter into
 the unmarked police vehicles for further processing.
@@ -74,6 +84,10 @@ discrimination is a thing of the past. Especially after hearing so many
 Europeans boast about their progressive nature and their acceptance of
 different cultures, yet I still run into painful experiences like these.
 
+<div class="element img">
+  <img src="/img/harassed_in_munich/precinct.png" alt="The precint">
+</div>
+
 Even the conversational component is degrading. You're ordered to to as
 commanded without a real alternative. The tone is off and the treatment is not
 one of mutual respect. However; I kept my cool and suffered through the ordeal
@@ -90,6 +104,10 @@ officer basically responded with a lousy "I smelled weed on the bus". No
 canines were present but her trained nostrils were qualified enough to raise
 red flags while walking through a bus from Amsterdam about the presence of
 weed present or past at a location.
+
+<div class="element img">
+  <img src="/img/harassed_in_munich/friend.png" alt="one of the police cars">
+</div>
 
 I still understand that the police does its job, but I'm developing a slight
 hatred for the office. After a multitude of such experiences it is very easy to
