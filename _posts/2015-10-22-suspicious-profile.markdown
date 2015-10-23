@@ -46,34 +46,41 @@ having confiscated my passport along with that of a most likely African
 passenger, the officers ordered me and the other dark-skinned passenger off the
 bus. Apparently they had not found what they were looking for and seemed quite
 determined to make a bust :confused:. While packing up my belongings to exit
-the bus, the female officer runs through my belongings and accidentally drops
-my Macbook Air, picks it up and tells me it is alright. Obviously I take her
+the bus, the female officer rummages through my belongings and accidentally
+drops my Macbook Air, picks it up and tells me it is alright. For a split
+second my mind races to the hell I'll have to venture through if the laptop
+ends up defective and I would have to setup a new laptop with all of my build 
+environments and rewrite all the uncommitted code on my trusty old pal. I would
+end up loosing days installing all of my junk -- Jeez! Obviously I take her
 word for it because she must be an expert in assessing the state of electronic
-devices as she is also an expect in singling out which rows on buses from
-Amsterdam "smells like they hosts weed-trafficking passengers :unamused:.
+devices as she is also an expect in singling out which rows
+on buses from Amsterdam "smells like they hosts weed-trafficking passengers
+:unamused:. God forbid I talk back to a police officer.
 
 <div class="element img">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/harassed_in_munich/friend.png" alt="One of the officers that checked me for possession of narcotics next to their unmarked vehicle.">
 </div>
 
 We're taken out of the bus and the officers help themselves to a power trip
-by having me take off my shoes in front of the office of Mercedes-Benz in
-Munich while rummaging through my personal belongings for a second time.
-Pedestrians walk past and gawk at the display and bikers coast by glancing at
-the theatric involving the police and a few richly colored fellows. There is
-so much wrong with this image and how subliminally dots are connected but I am
-no authority in psychology and neuroscience so I abstain from further comments.
+by having me take off my shoes in front of the wonderful offices of
+Mercedes-Benz and Ernst and Young in Munich while they rummage through my
+personal belongings for a second time. Pedestrians walk past and gawk at the
+display and bikers coast by glancing at the theatrics involving the police and
+a few richly colored gentlemen. There is so much wrong with this image and how
+subliminally dots are being connected but I am no authority in psychology and
+neuroscience so I abstain from further comments.
 
 <div class="element img">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/harassed_in_munich/office.png" alt="The Mercedes-Benz office in front of which the ordeal began.">
 </div>
 
 The funny thing is that I haven't once been involved with any offense but at
-this moment it sure doesn't feel like I'm a law-abiding citizen. Every corner
-of my luggage is scrutinized and hardly a word is uttered towards me as I
-undergo this ordeal. I don't feel like a respected citizen of the European
+this moment it sure doesn't feel like I'm a law-abiding citizen. That probably 
+isn't the intent of such operations, but it does reflect the result. Every
+corner of my luggage is scrutinized and hardly a word is uttered towards me as
+I undergo this ordeal. I don't feel like a respected citizen of the European
 Union at all. I don't feel protected, by the people that are there to protect
-and serve..
+and serve.
 
 At some point I am informed that my African brother and I are to enter into
 the unmarked police vehicles for further processing at the precinct based on
@@ -87,17 +94,17 @@ are the better skilled and more reliable "sniffers".
 </div>
 
 Considering I am in Munich for a few appointments for new work, I am obviously
-not amused as keeping another party waiting is not going to help me in
-achieving that objective, however; unbeknown to me my concerns at the moment
-do not reflect the gravity of the situation I am in.
+not amused as keeping those parties waiting is not going to help me in
+achieving that objective (of scoring new work), however; unbeknown to me my
+concerns at the moment do not reflect the gravity of the situation I am in.
 
-In the car I overhear the female officer while driving says a few demeaning
-things about the passengers in the backseat under the assumption that we don't
-understand a word of German. With my fluency in Dutch, a Germanic language that
-I consider my mother tongue, and my late encounters in Germany over the last
-few months I have picked up a fair share of German to make sense of a
-conversation, but I keep myself composed. This is what it feels like to get in
-touch with the police?
+In the car I overhear the female officer say  a few demeaning things about the
+dear passengers in the backseat while driving towards the station under the
+assumption that we don't understand a word of German. With my fluency in Dutch,
+a Germanic language that I consider my mother tongue, and my late encounters in
+Germany over the last few months I have picked up a fair share of German to
+make sense of a conversation, but I keep myself composed. This is what it feels
+like to get in touch with the police? Unidirectional respect?
 
 <div class="element img">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/harassed_in_munich/cartwo.png" alt="One of the police cars">
@@ -108,13 +115,13 @@ like there is no tomorrow. Nothing turned up. At this stage I am ordered to
 take all of my clothes off. The police hasn't taken any real effort to engage
 in a dialog to discover my reasons for visiting Munich. After finding nothing
 after putting me through a demeaning experience I'm let of with as little as a
-"sorry". Going through an experience like this happened to be sufficiently degrading, to make me never
-want to have an encounter with the police again. There I stand. In front of
-the precinct far away from the station that I bought my ticket to, left to
-figure out alternative means of getting to my destination. The police don't
-even have the customer to offer to drive a citizen of the EU to at least the
-location where they ordered me to enter their vehicles after such a horrible
-experience.
+"sorry". Going through an experience like this happened to be sufficiently
+degrading, to make me never want to have an encounter with the police again.
+There I stand, in front of the precinct quite a distance removed from the
+station that I bought my ticket to, left to figure out alternative means of
+getting to my destination. The police doesn't even have the courtesy to offer
+my a drive towards at the very least the location where they ordered me to
+enter their vehicles after such a horrible experience.
 
 <div class="element img">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/harassed_in_munich/precinct.png" alt="The precinct">
@@ -124,7 +131,7 @@ Especially since it was rather obvious that we were singled out, being the few
 richly colored passengers on the bus, I have come to realize even more that
 the world isn't as accepting as we sometimes portray it to be. Better put...
 The civilized west isn't as progressive and enlightened as it portrays itself
-to be if such experiences are normal.
+to be if such experiences are to be considered acceptable.
 
 Even the conversational component is disappointing. You're ordered to do as
 commanded without a real alternative. The tone is off and the treatment is not
@@ -133,15 +140,15 @@ without as much as an utterance from my part.
 
 Now I'm on the bus back. I missed my second meeting because I was strapped for
 time and I have my friends at the police to thank for this. Perhaps I shouldn't
-generalize, I had three officers to thank who made an educated guess that I
-had a high chance of turning up a trafficking. The friendly bus drivers who are
-coincidentally driving me back to Amsterdam mentioned that the police was
-probably tipped off by someone, so I guess I just became a victim of a tip.
-When I inquired to the reason or motivation for taking me to the station the
-female officer basically responded with a lousy "I smelled weed on the bus". So
-much for _probable cause_. No canines were present but her olfactoric finesse
-were developed enough to raise red flags while walking through a bus from
-Amsterdam about the presence of weed present or past at a location.
+generalize, I had three officers to thank who made an educated guess that there
+was a high probability of me turning up a trafficker. The friendly bus drivers
+who are coincidentally driving me back to Amsterdam at night mentioned that the
+police was probably tipped off by someone, so I guess I just became a victim of
+an anonymous tip. When I inquired to the reason or motivation for taking me to
+the station the female officer basically responded with a lousy "I smelled weed
+on the bus". So much for _probable cause_. No canines were present but her
+olfactoric finesse was sufficient to raise red flags about the presence of weed
+in the present or past at any location in a bus from Amsterdam.
 
 I still understand that the police does its job, but during the experience I
 felt an intense hatred for the office. After a multitude of such experiences it
@@ -159,17 +166,17 @@ experience. Many of my not so richly colored friends feel differently about
 some of these topics because they hardly run into experiences like these --
 not at the frequency that different looking folks endure such experiences. Then
 again everyone experiences things that are rather unique to whatever groups
-they belong to so at some point we are all subjected to discrimination of some
-form. Anyways... One cannot possibly be expected to fully understand the
+they belong to so at some point we are all probably subjected to discrimination
+of some form. Anyways... One cannot possibly be expected to fully understand the
 gravity of that which their richly colored peers experience if they cannot
-relate to it. I'll do you one better... I ask a richly colored person cannot
-relate to the many experiences that I hear from others that share my
-complexion which means that I don't even come close to understanding the
-plight of some of similarly complexioned fellow humans. Although I experience 
-discrimination in many different forms. I brush it off and move on. I believe
-it keeps me from becoming bitter and cynical about the world, but I am also
-slowly realizing that ignoring reality is unfair as well since it harms
-objective interpretation.
+relate to it. I'll do you one better... I, as one of those richly colored folks,
+cannot relate to the many experiences that I hear from others that share my
+complexion which means that I don't even come close to fully understanding the
+plight of the colored in the West. Although I experience discrimination in
+many different forms. I brush it off and move on. I believe it keeps me from
+becoming bitter and cynical about the world, but I am also slowly realizing
+that ignoring reality is unfair as well since it harms objective
+interpretation.
 
 The once carefree David is now cautious and on guard in some situations, a
 natural response when in a rather hostile environment but a sad place to have
