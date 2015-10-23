@@ -11,7 +11,7 @@ tags:
  - race
  - Europe
 twitter:
-  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/harassed_in_munich/precinct.png
+  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/harassed_in_munich/precinct_small.png
 og:
   type: article
   article: #see ogp.me/#types
