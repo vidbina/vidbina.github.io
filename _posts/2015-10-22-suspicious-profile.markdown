@@ -19,16 +19,19 @@ og:
 description: My experience with the German police and how I can understand the hatred that some people have against police forces.
 ---
 It is Thursday the 22nd of October 2015 and I boarded a bus towards Munich in 
-Amsterdam a night ago. There is really nothing special about it as I have
-boarded buses by the same company to Berlin numerous times before. The buses
-take a while to get there but if you plan your trips throughout the night, you
-sleep throughout the trip and wake up at your destination while spending about
-a tenth of the amount you'd generally spend on airfare or a third the amount
-one would spend on train tickets. The reason I keep using the buses is the
-complementary Wi-Fi and the on-board power outlets which is something the
-train operators haven't figured out to offer in a in a qualitative manner yet
-:train:. To be quite honest, I also haven't developed the luxury demand yet
-that makes long-distance travel by bus unbearable :stuck_out_tongue:.
+Amsterdam a night ago. I planned to visit two prospective clients to discover
+to which extent I could aid in their efforts by offering my hardware and
+software engineering services. There is really nothing special about such trips
+as I have boarded buses by the same company to Berlin numerous times before.
+The buses take a while to get there but if you plan your trips throughout the
+night, you sleep throughout the trip and wake up at your destination while
+spending about a tenth of the amount you'd generally spend on airfare or a
+third the amount one would spend on train tickets. The reason I keep using the
+buses is the complementary Wi-Fi and the on-board power outlets which is
+something the train operators haven't figured out to offer in a in a
+qualitative manner yet :train:. To be quite honest, I also haven't developed
+the luxury demand yet that makes long-distance travel by bus unbearable
+:stuck_out_tongue:.
 
 In Munich :de: around 10 o'clock :clock10: the police boarded the bus for
 another one of those "random" checks. I've been raised to consider the police
