@@ -201,7 +201,7 @@ world.
 
 [^1]: Let's face it. It was demeaning but it wasn't a cavity search yet, so I guess the experience could have been far more degrading.
 
-In the end this post isn't really about discrimination. The point here is that
+In the end this post isn't just about discrimination. The point here is that
 many events influence us in manners unimaginable to others. Nobody should have
 the audacity to tell anyone of semitic heritage to get over the 1940s because
 we have no idea how this event has rippled into the lives of many fellow
