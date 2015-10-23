@@ -33,7 +33,7 @@ qualitative manner yet :train:. To be quite honest, I also haven't developed
 the luxury demand yet that makes long-distance travel by bus unbearable
 :stuck_out_tongue:.
 
-In Munich :de: around 10 o'clock :clock10: the police boarded the bus for
+In Munich :de:, around 10 o'clock :clock10:, the police boarded the bus for
 another one of those "random" checks. I've been raised to consider the police
 my friend. I understand the notion of them being in office to protect and
 serve the people and I have felt comfortable in the presence of the law as long
@@ -51,7 +51,7 @@ drops my Macbook Air, picks it up and tells me it is alright. For a split
 second my mind races to the hell I'll have to venture through if the laptop
 ends up defective and I would have to setup a new laptop with all of my build 
 environments and rewrite all the uncommitted code on my trusty old pal. I would
-end up loosing days installing all of my junk -- Jeez! Obviously I take her
+end up losing days installing all of my tools -- Jeez! Obviously I take her
 word for it because she must be an expert in assessing the state of electronic
 devices as she is also an expect in singling out which rows
 on buses from Amsterdam "smells like they hosts weed-trafficking passengers
