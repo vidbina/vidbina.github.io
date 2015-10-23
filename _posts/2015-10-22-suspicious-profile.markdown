@@ -10,6 +10,8 @@ tags:
  - racism
  - race
  - Europe
+twitter:
+  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/harassed_in_munich/precinct.png
 og:
   type: article
   article: #see ogp.me/#types
@@ -114,7 +116,7 @@ civilized west isn't as progressive and enlightened as it portrays itself to be
 if black men are to expect such experiences.
 
 <div class="element img">
-  <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/harassed_in_munich/precinct.png" alt="The precint">
+  <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/harassed_in_munich/precinct.png" alt="The precinct">
 </div>
 
 Even the conversational component is disappointing. You're ordered to do as
