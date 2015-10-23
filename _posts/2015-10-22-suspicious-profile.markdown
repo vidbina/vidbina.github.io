@@ -3,13 +3,15 @@ layout: post
 title: Profile of the Suspicious
 date:   2015-10-8 08:55:51
 type: problem
-category: rant
+category: reflection
 tags:
  - profiling
  - racial profiling
  - racism
  - race
  - Europe
+redirect_from:
+  - /rant/suspicious-profile/
 twitter:
   image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/harassed_in_munich/precinct_small.png
 og:
