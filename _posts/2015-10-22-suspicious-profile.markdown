@@ -46,8 +46,8 @@ determined to make a bust :confused:. While packing up my belongings to exit
 the bus, the female officer runs through my belongings and accidentally drops
 my Macbook Air, picks it up and tells me it is alright. Obviously I take her
 word for it because she must be an expert in assessing the state of electronic
-devices as she is also an expect in singling out which row a the bus from
-Amsterdam "smells" like it hosts weed-carrying passengers :unamused:.
+devices as she is also an expect in singling out which rows on buses from
+Amsterdam "smells like they hosts weed-trafficking passengers :unamused:.
 
 <div class="element img">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/harassed_in_munich/friend.png" alt="One of the officers that checked me for possession of narcotics next to their unmarked vehicle.">
@@ -153,16 +153,21 @@ I often marginalized the impact of discrimination and treatment by the police,
 but I just realized that **I do not have the right** to blatantly broadcast
 any utterances pertaining such topics until I have been through a comparable
 experience. Many of my not so richly colored friends feel differently about
-some of these topics because they hardly run into experiences like thesei --
-not at the frequency that different looking folks endure such experiences. One
-cannot possibly be expected to fully understand the gravity of that which their
-richly colored peers experience if they cannot relate to it. I often am
-discriminated against in one form or the other. I brush it off and move on. I
-believe it keeps me from becoming bitter and cynical about the world, but I am
-also slowly realizing that ignoring reality is unfair as well since it harms
+some of these topics because they hardly run into experiences like these --
+not at the frequency that different looking folks endure such experiences. Then
+again everyone experiences things that are rather unique to whatever groups
+they belong to so at some point we are all subjected to discrimination of some
+form. Anyways... One cannot possibly be expected to fully understand the
+gravity of that which their richly colored peers experience if they cannot
+relate to it. I'll do you one better... I ask a richly colored person cannot
+relate to the many experiences that I hear from others that share my
+complexion which means that I don't even come close to understanding the
+plight of some of similarly complexioned fellow humans. Although I experience 
+discrimination in many different forms. I brush it off and move on. I believe
+it keeps me from becoming bitter and cynical about the world, but I am also
+slowly realizing that ignoring reality is unfair as well since it harms
 objective interpretation.
 
-Now I am slowly beginning to realize that it does something to me as a person.
 The once carefree David is now cautious and on guard in some situations, a
 natural response when in a rather hostile environment but a sad place to have
 to venture to for any human living in a self-proclaimed enlightened part of the
@@ -171,7 +176,7 @@ world.
 
 [^1]: Let's face it. It was demeaning but it wasn't a cavity search yet, so I guess the experience could have been far more degrading.
 
-I would like to appeal everyone to seriously consider the impact of one's
+I would like to remind everyone to seriously consider the impact of one's
 treatment of fellow human beings as it is too easy to ignore the destructive
 impact that some of our actions and utterances have. The world can use a
 lot more love and understanding -- especially if you have been appointed to
