@@ -102,22 +102,26 @@ touch with the police?
 
 At the station my luggage is turned upside down yet again and I'm patted down
 like there is no tomorrow. Nothing turned up. At this stage I am ordered to
-take all of my clothes off. At this stage the police hasn't explained to me
-what they are looking for and they haven't even taken any real effort to
-discover why I am in Munich. After finding nothing after putting me through a
-demeaning experience I'm let of with as little as a "sorry". Going through an
-experience like this happened to be sufficiently degrading, to make me never
-want to have an encounter with the police again.
-
-Especially since it was rather obvious that we were singled out, being the few
-richly colored passengers on the bus, I have come to realize even more that
-the world isn't as accepting as we sometime portray it to be. Better put... The
-civilized west isn't as progressive and enlightened as it portrays itself to be
-if black men are to expect such experiences.
+take all of my clothes off. The police hasn't taken any real effort to engage
+in a dialog to discover my reasons for visiting Munich. After finding nothing
+after putting me through a demeaning experience I'm let of with as little as a
+"sorry". Going through an experience like this happened to be sufficiently degrading, to make me never
+want to have an encounter with the police again. There I stand. In front of
+the precinct far away from the station that I bought my ticket to, left to
+figure out alternative means of getting to my destination. The police don't
+even have the customer to offer to drive a citizen of the EU to at least the
+location where they ordered me to enter their vehicles after such a horrible
+experience.
 
 <div class="element img">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/harassed_in_munich/precinct.png" alt="The precinct">
 </div>
+
+Especially since it was rather obvious that we were singled out, being the few
+richly colored passengers on the bus, I have come to realize even more that
+the world isn't as accepting as we sometimes portray it to be. Better put...
+The civilized west isn't as progressive and enlightened as it portrays itself
+to be if such experiences are normal.
 
 Even the conversational component is disappointing. You're ordered to do as
 commanded without a real alternative. The tone is off and the treatment is not
@@ -125,37 +129,39 @@ one of mutual respect. However; I kept my cool and suffered through the ordeal
 without as much as an utterance from my part.
 
 Now I'm on the bus back. I missed my second meeting because I was strapped for
-time and I have the police to thank for this. Perhaps I shouldn't generalize,
-I had three officers to thank who made an educated guess that I had a high
-chance of turning up a trafficking. The friendly bus drivers who I am
-coincidentally being driven back to Amsterdam by mentioned that the police was
+time and I have my friends at the police to thank for this. Perhaps I shouldn't
+generalize, I had three officers to thank who made an educated guess that I
+had a high chance of turning up a trafficking. The friendly bus drivers who are
+coincidentally driving me back to Amsterdam mentioned that the police was
 probably tipped off by someone, so I guess I just became a victim of a tip.
 When I inquired to the reason or motivation for taking me to the station the
 female officer basically responded with a lousy "I smelled weed on the bus". So
-much for _probably cause_. No canines were present but her trained nostrils
-were qualified enough to raise red flags while walking through a bus from
+much for _probable cause_. No canines were present but her olfactoric finesse
+were developed enough to raise red flags while walking through a bus from
 Amsterdam about the presence of weed present or past at a location.
 
 I still understand that the police does its job, but during the experience I
 felt an intense hatred for the office. After a multitude of such experiences it
-is very easy to imagine that the parties subjected to such treatment develop
+isn't far-fetched to imagine that the parties subjected to such treatment develop
 an enduring hatred for the office and everything associated to it. I guess the
-sense of being powerless is one of the many very frustrating things about this
+idea of being powerless is one of the many very frustrating things about this
 ordeal. Can I blame people for disliking the police if many of their
 experiences are as negative as the one I've had and probably often even worse
 [^1]?
 
-I often believed that discrimination and treatment by the police is not so
-bad, but I just realized that **I do not have the right** to blatantly broadcast
-such utterances until I have been through a comparable experience. Many of my
-not so richly colored friends feel differently about some of these topics
-because they hardly run into experiences like these. Not at the frequency that
-different looking folks go through such experiences. One cannot possibly be
-expected to fully understand the gravity of that which their richly colored
-peers experience if they cannot relate to it. I often am discriminated against
-in one form or the other. I brush it off and move on. I believe it keeps me
-from becoming bitter and cynical about the world, but I am also slowly
-realizing that ignoring it also unfair to me as it keeps me from facing facts.
+I often marginalized the impact of discrimination and treatment by the police,
+but I just realized that **I do not have the right** to blatantly broadcast
+any utterances pertaining such topics until I have been through a comparable
+experience. Many of my not so richly colored friends feel differently about
+some of these topics because they hardly run into experiences like thesei --
+not at the frequency that different looking folks endure such experiences. One
+cannot possibly be expected to fully understand the gravity of that which their
+richly colored peers experience if they cannot relate to it. I often am
+discriminated against in one form or the other. I brush it off and move on. I
+believe it keeps me from becoming bitter and cynical about the world, but I am
+also slowly realizing that ignoring reality is unfair as well since it harms
+objective interpretation.
+
 Now I am slowly beginning to realize that it does something to me as a person.
 The once carefree David is now cautious and on guard in some situations, a
 natural response when in a rather hostile environment but a sad place to have
@@ -167,7 +173,8 @@ world.
 
 I would like to appeal everyone to seriously consider the impact of one's
 treatment of fellow human beings as it is too easy to ignore the destructive
-impact that some of our actions and utterances can have. The world can use a
-lot more love and understanding.
+impact that some of our actions and utterances have. The world can use a
+lot more love and understanding -- especially if you have been appointed to
+serve in a public office and represent something bigger than any one person.
 
 Think about that.
