@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  JS Variables & Scopes
-date:   2015-10-17 17:02:51
+date:   2015-10-27 17:02:51
 type: code
 category: code
 tags:
@@ -11,22 +11,21 @@ tags:
  - javascript
  - variables
  - es6
- - ecmascript
- - ecmascript2016
+ - ECMAscript
+ - ECMAscript2016
 image: 
-twitter:
-  card: summary_large_image
-  image: 
 og:
   type: article
   article: #see ogp.me/#types
     author: https://www.facebook.com/david.asabina
     section: Javascript
-description: A very basic post on the subleties of scoping in Javascript.
+description: A very basic post on the subleties of variable hoisting in Javascript comparing var and let declarations.
 ---
-Just a little post on Javascript scopes. Nothing new, but just a simple
-reminder whenever I context-switch from whichever of the gazillion languages
-I write in.
+Just a little post on variable hooisting in Javascript. It's nothing new, just
+a simple reminder whenever I context-switch from whichever of the gazillion
+languages I write in back to ES6. There are a few subtleties regarding `var` 
+and `let`/`const` declarations that everyone writing Javascript should be
+aware of. :warning:
 
 ## Hoist or Throw Up
 
@@ -42,8 +41,8 @@ hi ();
 // ReferenceError: sidekick is not defined
 {% endhighlight %}
 
-Variable `var` declarations are hoisted to the top of a function block which
-means that all declared variables are available anywhere in the block
+**Variable `var` declarations are hoisted to the top of a _function block_**
+which means that all declared variables are available anywhere in the block
 regardless of where they were declared.
 
 {% highlight javascript %}
@@ -56,22 +55,22 @@ hi ();
 // hello undefined
 {% endhighlight %}
 
-Now with hoisting we can only promise that a variable will be accessible with
-which we haven't said a darn thing about the value of that variable yet
+Now with hoisting we can only promise that a variable will be accessible.
+It isn't defined yet. Nothing meaningful is assigned to it yet.
 :eyes:.
 
 
 ## `undefined` Until Assigned
 
-Declared variables are `undefined` unless a value is explicitly assigned to
-them. Eventhough declarations are hoisted to the top of the block, definitions
-are just effective, starting at the location at which they are assigned. 
+**Declared variables are `undefined` unless a value is explicitly assigned to
+them**. Eventhough declarations are hoisted to the top of the block,
+definitions apply whenever the assignment is handled.
 
 {% highlight javascript %}
 function hi () {
   // sidekick is hoisted here, which means it exists
   console.log(`hello, ${sidekick}`);
-  var sidekick = 'Morty'; // but is only set here
+  var sidekick = 'Morty'; // but is only assigned here
   console.log(`c'mon, ${sidekick}`);
 }
 hi ();
@@ -80,7 +79,8 @@ hi ();
 {% endhighlight %}
 
 Even if the variable of interest happened to be defined in a parent scope, a
-`var` statement will set the local variable of the same name as `undefined`
+hoisted `var` will be `undefined` by default within the scope in which it is
+hoisted.
 
 {% highlight javascript %}
 var sidekick = 'Rick';
@@ -102,9 +102,9 @@ statement `var x = undefined;` at the top of the scope.
 
 It is important to remember that hoisting is a bit different between `var`'s
 and `let` or `const`'s. Instead of being hoisted to the top of the function
-block, `let` and `const` are hoisted to the top of the containing block which
-could be a `while` or `for` loop, a `function` or anything else where a block
-is described.
+block, **`let` and `const` are hoisted to the top of the containing block**
+which could be a `while` or `for` block or anything else where a block is
+described in addition to `function` blocks.
 
 {% highlight javascript %}
 function hi () {
@@ -140,50 +140,63 @@ hi ();
 // ReferenceError: sidekick is not defined
 {% endhighlight %}
 
+A declared variable is set to `undefined`, even if the parent scope contains
+a variable by the same name.
+
 ## Climbing the Scope Ladder
 
-Declaring a variable in the local scope should be treated as if there hasn't
-been anything in a former scope. One cannot rely on the former definition of
-a variable because the declaration simply resets the variable's content to
-`undefined` until the assignment has taken place in the nearest scope in which
-the variable is defined.
+If a variable is not defined in the local scope, javascript climbs up the
+scope ladder until it arrives at a scope that does define the variable of
+interest. **With `var` declarations the hoisting boundary is the function**.
 
 {% highlight javascript %}
-var sidekick = 'Rick';
+var sidekick = 'Dr. Watson';
 function hi () {
-  // local sidekick hoisted and undefined
-  console.log(`hello, ${sidekick}`);
-  var sidekick = 'Morty'; // local sidekick set
-  console.log(`bye, ${sidekick}`);
-}
-hi ();
-// hello undefined
-// bye Morty
-{% endhighlight %}
-
-The following example demonstrates how the `sidekick` variable, declared in a
-function's parent scope and assigned therein, is accessible in the function's
-local scope. Basically if a variable isn't defined in the local scope,
-javascript climbs up the scope ladder, looking for the first place where it can
-find a definition for the variable.
-
-{% highlight javascript %}
-var sidekick = 'Robin';
-function hi () {
-  console.log(`hello, ${sidekick}`);
-}
-hi ();
-// hello Robin
-{% endhighlight %}
-
-{% highlight javascript %}
-var sidekick = 'Smithers';
-function hi () {
+  // sidekick hoisted
+  console.log(`another mystery, ${sidekick}`)
   if(true) {
-    var sidekick = 'Sideshow Bob';
+    console.log(`another mystery, ${sidekick}`);
+    if(true) {
+      console.log(`mystery solved, ${sidekick}?`);
+      if(true) {
+        console.log(`the answer ss ${sidekick}`);
+        var sidekick = 'Sherlock';
+      }
+    }
   }
-  console.log('there is ${sidekick} again`);
 }
+// another mystery, undefined
+// another mystery, undefined
+// mystery solved, undefined?
+// the answer ss undefined
 {% endhighlight %}
+
+**With `let` and `const` declarations the hoisting boundary is defined by the 
+containing block**.
+
+{% highlight javascript %}
+var sidekick = 'Dr. Watson';
+function hi () {
+  console.log(`another mystery, ${sidekick}`)
+  if(true) {
+    console.log(`another mystery, ${sidekick}`);
+    if(true) {
+      console.log(`mystery solved, ${sidekick}?`);
+      if(true) {
+        // sidekick hoisted
+        console.log(`the answer ss ${sidekick}`);
+        let sidekick = 'Sherlock';
+      }
+    }
+  }
+}
+// another mystery, Dr. Watson
+// another mystery, Dr. Watson
+// mystery solved, Dr. Watson?
+// the answer ss undefined
+{% endhighlight %}
+
+It is useful to know the mechanics of hoisting, although for readabilities'
+sake it would be advised to not depend on this language feature too much.
 
 :coffee: :scroll:
