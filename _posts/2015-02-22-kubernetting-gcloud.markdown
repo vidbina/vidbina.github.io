@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Kubernetes on Google Cloud 101
+title:  Kubernetting Google's Cloud
 since:  2015-02-22 11:49
 date:   2015-03-07 21:36
 type: cloud
@@ -14,9 +14,16 @@ tags:
  - devops
  - tools
  - orchestration
+ - kubernetes
 mathjax: true
-emojify: true
+og:
+  type: article
+  article: #see ogp.me/#types
+    author: https://www.facebook.com/david.asabina
+    section: Dev-Ops
 description: "First encounters in setting up and using a Kubernetes cluster on Google Cloud"
+redirect_from:
+  - /web/kubernetes/
 ---
 Kubernetes allows one to orchestrate cloud resources in an elegant fashion, 
 specifically... by allowing one to interact with a single point of entry to the 
