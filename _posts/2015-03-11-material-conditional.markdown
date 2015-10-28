@@ -52,14 +52,14 @@ everything else simply falls beyond the scope of the statement we're making
 (resides in darkness, outside the spotlight), after all we're simply stating 
 something about _creatures with green blood_.
 
-### A Truth Implies Another Truth
+### When A Truth Implies Another Truth
 
 If a creature has green blood $p=T$ and the creature happens to be an alien 
 $q=T$ the statement is clearly true. We're not bullshitting anyone when stating
 that (see the section labelled _vicious goo-stuffed ET's_ represented by the 
 white area in the Venn diagram).
 
-### A Truth Implies Something Which End Up Being False
+### When A Truth Implies A Lie
 
 Upon the discovery of a creature with green blood $p=T$ which somehow does not 
 happen to be classified as an alien $q=F$ (perhaps some mutant venturing through 
@@ -67,7 +67,7 @@ Gotham) then the statement is suddenly discredited ($p\wedge\neg q$, read as
 _$p$ and the inverse of $q$_). The green-blooded non-alien lifeforms (captured
 by the green area in the Venn diagram) are represented by this statement.
 
-### A Non truth Can Not Imply Anything
+### When A False Statement Implies Anything
 If the creature has blue blood and happens to be an alien, the statement is 
 still true because we initially only said something about the green-blooded
 critters which can not be discredited by this unrelated observation (unrelated
