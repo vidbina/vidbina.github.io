@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  JS Variables & Scopes
-date:   2015-10-27 17:02:51
+date:   2015-10-26 17:02:51
 type: code
 category: code
 tags:
@@ -13,7 +13,6 @@ tags:
  - es6
  - ECMAscript
  - ECMAscript2016
-image: 
 og:
   type: article
   article: #see ogp.me/#types
