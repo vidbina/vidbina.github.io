@@ -21,11 +21,15 @@ og:
     section: Javascript
 description: A very basic post on the subleties of variable hoisting in Javascript comparing var and let declarations.
 ---
-Just a little post on variable hooisting in Javascript. It's nothing new, just
+Just a little post on variable hoisting in Javascript. It's nothing new, just
 a simple reminder whenever I context-switch from whichever of the gazillion
 languages I write in back to ES6. There are a few subtleties regarding `var` 
 and `let`/`const` declarations that everyone writing Javascript should be
 aware of. :warning:
+
+<div class="element">
+  <iframe src="//giphy.com/embed/6NvROVDmhI3QI" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
 
 ## Hoist or Throw Up
 
@@ -199,4 +203,4 @@ function hi () {
 It is useful to know the mechanics of hoisting, although for readabilities'
 sake it would be advised to not depend on this language feature too much.
 
-:coffee: :scroll:
+:smile: Happy :coffee: :scroll:ing  :wink:
