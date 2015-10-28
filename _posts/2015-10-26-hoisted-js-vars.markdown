@@ -44,8 +44,8 @@ hi ();
 // ReferenceError: sidekick is not defined
 {% endhighlight %}
 
-**Variable `var` declarations are hoisted to the top of a _function block_**
-which means that all declared variables are available anywhere in the block
+**Variable `var` declarations are hoisted to the top of a _function_** which
+means that all declared variables are available anywhere in the function
 regardless of where they were declared.
 
 {% highlight javascript %}
@@ -201,5 +201,10 @@ function hi () {
 
 It is useful to know the mechanics of hoisting, although for readabilities'
 sake it would be advised to not depend on this language feature too much.
+
+## Read
+
+ - [`let` vs `var`]: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/let#let_vs_var
+ - [ECMAScript 6 and Block Scope]: http://ariya.ofilabs.com/2013/05/es6-and-block-scope.html
 
 :smile: Happy :coffee: :scroll:ing  :wink:
