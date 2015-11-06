@@ -13,10 +13,10 @@ tags:
  - security
  - tool
  - gpg
-image: /https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/gpglock_thumb.png
+image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/gpglock_thumb.png
 twitter:
   card: summary
-  image: /https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/gpglock_thumb.png
+  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/gpglock_thumb.png
 og:
   type: article
   article: #see ogp.me/#types
