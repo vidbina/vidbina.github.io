@@ -34,6 +34,29 @@ there is something here that may be of any use to other folks as well
   <iframe src="//giphy.com/embed/Gz1Ebo1yJmC9q" width="480" height="288" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
+## Get Started
+
+In order to start using GPG one needs generate a public and secret keys. The
+public key may be shared with the whole world and will allow others to encrypt
+messages intended for the holder of the secret key. Once a message is encrypted
+a secret key is required to decrypt the message which is why one is to take the
+protection of its secret key seriously. Start generating a GPG keypair by
+running the following command:
+{% highlight bash %}
+gpg --gen-key
+{% endhighlight %}
+
+Remember to set a passphrase for the pair. Often enough the keys are used to
+sign documents so remember that it is often a means for authenticating a user.
+Unless a passphrase is set, it is very easy for anyone who acquires the secret
+key to impersonate the identity associated to the key. With a proper passphrase
+set the party acquiring the key still needs to figure out what the passphrase
+is and depending on the type of key it may take them some time.
+
+<div class="element img">
+  <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/gpg_gen_key.gif" alt="generating a GPG key" />
+</div>
+
 ## Encrypt it
 
 In order to lock up a certain piece of information we can simply pipe it into
@@ -56,12 +79,30 @@ should be encrypted not just `chown`ed :closed_lock_with_key:.
 cat code.in.txt | gpg -e -r vid@bina.me -o cipher.gpg
 {% endhighlight %}
 
+Provided that the document needs to be sent to a few third parties of which we
+happen to have the public key one can include them as recipients. The
+following example 
+
+{% highlight sh %}
+cat code.in.txt | gpg -e \
+  -r harold@finch.me \
+  -r elliot@allsafe.secure \
+  -o cipher.gpg
+{% endhighlight %}
+
 ## Decrypt it
 
 Now that the ciphertext is generated one may decrypt it with `gpg` as well.
 {% highlight sh %}
 gpg -d cipher.pgp > code.out.txt
 {% endhighlight %}
+
+Now the launch codes are known and available in `code.out.txt`. API keys are
+launch codes anyways :wink:.
+
+<div class="element">
+  <iframe src="//giphy.com/embed/LjQmZzYuARJF6" width="480" height="217" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
 
 <!--
 ## Signing
@@ -113,3 +154,6 @@ if I want to stop the GPG-Agent I could run `stop-gpg-agent`.
   - [invoke-gpg-agent](https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html)
   - [signing](https://www.gnupg.org/gph/en/manual/x135.html)
   - [cheatsheet](http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/)
+  - [gnupg Manual][gnupg-manual]
+
+[gnupg-manual]: https://www.gnupg.org/gph/en/manual.html
