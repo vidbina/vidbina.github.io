@@ -21,11 +21,20 @@ og:
     section: Securiity
 description: Discussing some steps in setting up the OSX firewall.
 ---
+
 I'm on a bus from Amsterdam to Berlin again. I just finished watching the
 _The Good Shepherd_ and wasn't in the mood to watch anything else, read some
 papers or sleep although it's 2am. It was initially the plan, but sometimes
 flexibility isn't too bad so I'll start writing about OSX's packet filter
 instead.
+
+<cite>
+**DISCLAIMER**: I don't believe that any system will ever be bulletproof.
+We'll just keep designing stronger, faster and more destructive bullets... or 
+bigger guns. I do, however; believe that securing yourself is infinitely less
+stupid than ignoring it altogether and just logging on to every damn network
+you can find.
+</cite>
 
 The packet filter in OSX can be used to control incoming and outgoing traffic
 into a machine. Nowadays, with all the hip coffee joints and coworking
@@ -121,6 +130,20 @@ block return out on eth0 inet all
 pass out on eth0 inet proto tcp from $everyone to any port $stream queue streamers
 pass out on eth0 inet proto tcp from $everyone to any port $web queue readers
 {% endhighlight %}
+
+### Translation
+With translation one can mutate the IP addresses in the packets before they
+hit the filter. In the case one needs to map incoming traffic from one address
+or targeted to a specific machine address to another address and/or port, the
+translator is the one to put to work. In the next example all incoming traffic
+on port `80` for the `$public` address will be proxied to the loopback address
+on port `4000`.
+
+{% highlight bash %}
+rdr on eth0 proto { tcp, udp } from any to $public port 80 -> 127.0.0.1 port 4000
+{% endhighlight %}
+
+### PF
 
 ## Read
 
