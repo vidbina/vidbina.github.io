@@ -22,7 +22,7 @@ og:
   article: #see ogp.me/#types
     author: https://www.facebook.com/david.asabina
     section: Cybersecurity
-description: "Some GPG tricks everyone should know and master, because crypting is something that you should take serious"
+description: "Some GPG tricks everyone should know and master, because crypting is something that you should take serious."
 ---
 To encrypt and decrypt my secret messages on my box I use GPG. This post is
 hopefully going to jog the memory of senile future me (or just future me on a
@@ -57,7 +57,7 @@ is and depending on the type of key it may take them some time.
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/gpg_gen_key.gif" alt="generating a GPG key" />
 </div>
 
-## Encrypt it
+## Encrypting
 
 In order to lock up a certain piece of information we can simply pipe it into
 the `gpg` tool and instruct it how to encrypt it and where to store the 
@@ -90,7 +90,7 @@ cat code.in.txt | gpg -e \
   -o cipher.gpg
 {% endhighlight %}
 
-## Decrypt it
+## Decrypting
 
 Now that the ciphertext is generated one may decrypt it with `gpg` as well.
 {% highlight sh %}
@@ -104,25 +104,95 @@ launch codes anyways :wink:.
   <iframe src="//giphy.com/embed/LjQmZzYuARJF6" width="480" height="217" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
-<!--
 ## Signing
--->
 
+One of the uses of GPG is signing. Signing basically computes a digital
+artefact which may be used to confirm if the document in question is exactly
+as it was intended to be received by the signing party. If the document is
+modified the verification of the signature to the document will fail.
+
+There are different ways to handle the signing problem. The documents can be
+
+ - wrapped inside a compressed envelope containing the message and signature
+ - wrapped inside a clear text envelope containing the message and signature
+ - complemented by a signature in a separate file
+
+### Compressed Envelope
+
+The simplest sign operation will wrap the message inside an envelope which is
+subsequently compressed.
+
+{% highlight bash %}
+gpg --sign code.txt
+{% endhighlight %}
+
+<div class="element img">
+  <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/gpg_sign.gif" alt="Signing a document" />
+</div>
+
+Because the output of the regular sign operation leads to a compressed binary
+file one would do itself a service to not view it with a text editor or pager,
+but with a hex editor. In case `xxd` is installed one can view the output with
+a hex editor like `xxd`.
+
+{% highlight bash %}
+xxd code.txt.sig
+{% endhighlight %}
+
+### Clear Text Envelope
+In case one needs the message in clear text in order to be posted as the body
+of an email or web post one could choose to ensure the output is just the
+uncompressed ASCII-armored signature.
+
+{% highlight bash %}
+gpg --clearsign code.txt
+{% endhighlight %}
+
+<div class="element img">
+  <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/gpg_clearsign.gif" alt="Clearsigning a document" />
+</div>
+
+### Separate Signature
+In some cases one may want the signature separate from the message, in that
+case one may use the `--detach-sign` argument.
+
+{% highlight bash %}
+gpg --detach-sign code.txt
+{% endhighlight %}
+
+<div class="element img">
+  <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/gpg_detachsign.gif" alt="Producing a detached signature for a document" />
+</div>
+
+## Verifying
+
+Verifying of a signed document is performed by:
+
+{% highlight bash %}
+gpg --verify code.txt.sign
+{% endhighlight %}
+
+In case a seperate signature is available for a given message, one should
+specify both files in the verify call as such:
+{% highlight bash %}
+gpg --verify code.txt.sig code.txt
+{% endhighlight %}
 
 ## The Agent
-Sometimes one may fire up an application that may need to make multiple calls
-to encrypted resources. Decrypting all the data every time would present a most
-annoying passphrase prompt every darn time.
+
+Sometimes one may fire up an application that may need to make multiple request
+for input from encrypted resources. Supposing a passphrase is used, the prompt
+could be presented every time the encrypted content is consulted.
 
 <div class="element img">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/gpgagent-mutt.png" alt="GPGagent popping up to decrypt a password needed by Mutt" />
 </div>
 
-The agent allows you to enter the passphrase once within a session and will
-remember and handle the passphrase dance for as long as the passphrase happens
-to persist in the cache. In the case of mutt that might mean happy mailing 
-without having to enter a passwords every time a call is made. Pretty sweet
-:smile:.
+The agent allows you to enter the passphrase once for a certain duration in
+which is remembers and and handles the passphrase dance for as long as the
+passphrase happens to persist in the cache. In the case of mutt that might mean
+happy mailing without having to enter a passphrase every time a call is made.
+Pretty sweet :smile:.
 
 The entire agent business works in the following manner:
 
@@ -132,6 +202,7 @@ The entire agent business works in the following manner:
   - set up a terminal to act as the front-end
 
 ### Simplified
+
 In order to simplify this entire process I have written a small shell script
 to handle all of the daemon summoning and front-end spawning work.
 
@@ -150,10 +221,16 @@ if I want to stop the GPG-Agent I could run `stop-gpg-agent`.
 
 <script src="https://gist.github.com/vidbina/bde1495a6d2a047ada09.js"></script>
 
+<div class="element spotify">
+  <iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A5TmQOp6XVbcy2qYMjte3MI" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+</div>
+
 # Read
   - [invoke-gpg-agent](https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html)
-  - [signing](https://www.gnupg.org/gph/en/manual/x135.html)
-  - [cheatsheet](http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/)
-  - [gnupg Manual][gnupg-manual]
+  - [GPG Making and Verifying Signatures](https://www.gnupg.org/gph/en/manual/x135.html)
+  - [GPG Manual][gnupg-manual]
+  - [Lockhart's GPG cheatsheet](http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/)
+  - [Futureboy's GPG tutorial][futureboy-gpg]
 
 [gnupg-manual]: https://www.gnupg.org/gph/en/manual.html
+[futureboy-gpg]: https://futureboy.us/pgp.html
