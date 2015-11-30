@@ -56,11 +56,14 @@ $$\bigl(\begin{smallmatrix}x_1\\ x_2\end{smallmatrix}\bigr)$$. In order
 to determine whether the matrix $$K$$ is a positive definite matrix we will need 
 to determine $$\mathbf{x}^TK\mathbf{x}$$.
 
-$$\begin{pmatrix}x_1&x_2\end{pmatrix}\begin{pmatrix}4&-2\\ -2&3\end{pmatrix}\begin{pmatrix}x_1\\x_2\end{pmatrix}$$
+$$\begin{pmatrix}x_1&x_2\end{pmatrix}\begin{pmatrix}a&b\\c&d\end{pmatrix}\begin{pmatrix}x_1\\x_2\end{pmatrix}$$
 
-$$\begin{pmatrix}x_1+2x_2&2x_1+x_2\end{pmatrix}\begin{pmatrix}x_1\\x_2\end{pmatrix}$$
+$$\begin{pmatrix}ax_1+cx_2&bx_1+dx_2\end{pmatrix}\begin{pmatrix}x_1\\x_2\end{pmatrix}$$
 
-$$\begin{pmatrix}x_1^2+2x_1x_2+2x_1^2\end{pmatrix}$$
+$$\begin{pmatrix}x_1(ax_1+cx_2)+x_2(bx_1+dx_2)\end{pmatrix} = 
+\begin{pmatrix}ax_1^2+(b+c)x_1x_2+dx_2^2\end{pmatrix}$$
+$$\begin{pmatrix}ax_1^2+cx_1x_2+bx_1x_2+dx_2^22x_1^2\end{pmatrix}$$
+
 
 :wink:
 
