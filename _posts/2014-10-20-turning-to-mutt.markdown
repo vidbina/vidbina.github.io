@@ -187,7 +187,7 @@ is setup to use another terminal session. This means that you would have to
 return to the terminal session within which the agent was setup.
 
 #### Queing outgoing e-mail
-Now that ```msmtp``` and mutt play ball {{ ":ball:" | emojify }} it becomes 
+Now that ```msmtp``` and mutt play ball :ball: it becomes 
 time to consider how to deal with outgoing messages when the connection is not 
 playing along.
 
@@ -242,7 +242,7 @@ Mutt command _search_ which is printed in italics. You can
 
 and Mutt should get you to the line that explains it all (1st column is the
 keystroke, 2nd column the command name and 3rd column represents a description
-of the feature) {{ ":wink:" |emojify }}.
+of the feature) :wink:.
 You could repeat this search by pressing `n` which is bound to _search-next_ by
 default.
 
@@ -281,7 +281,7 @@ in order to have the command apply to all tagged messages.
 Up next I 
 demonstrate the usage of different patterns in tagging messages. Perhaps you
 will choose to archive, perhaps you just want to delete, or maybe even forward.
-Mutt can do it all {{ ":email:" | emojify }}
+Mutt can do it all :email:
 
 #### Tagging messages older than 60days
 The _tag-pattern_ command (default `T`) allows us to tag multiple 
@@ -294,7 +294,7 @@ I use these features to tag all messages with their date greater than 60 days.
     T\~d\>60d
 
 Obviously I could perform some operation on all these tagged messages as 
-demonstrated in the previous example {{ ":wink:" | emojify }}.
+demonstrated in the previous example :wink:.
 
     ;s=Archive
 

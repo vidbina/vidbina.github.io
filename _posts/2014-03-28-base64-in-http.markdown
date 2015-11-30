@@ -67,7 +67,7 @@ following example I just parse the authorization scheme descriptor followed
 by a seperator (1 or more space characters) followed by a base64 string which 
 would be a alphanumeric string ending in equal signs. As soon as I run into 
 something that does not fit the format I throw up an _invalid syntax_ 
-exception. This design makes for a healthy parser {{ ":relaxed:" | emojify }}.
+exception. This design makes for a healthy parser :relaxed:.
 
     GET /resource HTTP/1.1
     Host: example.com
@@ -88,7 +88,7 @@ space character.
 
 Wikipedia has an article on [delimiter collision][del-collision] which deals
 with this specific problem, so we and all the pieces of software we compose can 
-all get along {{ ":sunglasses:" | emojify }}.
+all get along :sunglasses:.
 
 [del-collision]: http://en.wikipedia.org/wiki/Delimiter_collision#Delimiter_collision
 [sql-injection]: http://en.wikipedia.org/wiki/SQL_injection

@@ -45,7 +45,7 @@ be screwing up.
 
 > `Godeps` makes dependency management much easier by providing a manifest that
 will allow all developers to build a similar environment dependency-wise. 
-Think... `package.json` or `Gemfile` {{ ":wink:" | emojify }}.
+Think... `package.json` or `Gemfile` :wink:.
 
 [gopath]: http://golang.org/cmd/go/#hdr-GOPATH_environment_variable
 [godeps]: https://github.com/tools/godep

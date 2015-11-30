@@ -51,7 +51,7 @@ can do the previous thing for base $2$ or simply execute:
 echo "obase=2; 165" | bc
 {% endhighlight %}
 
-So simple {{ ":smile:" | emojify }}
+So simple :smile:
 
 [bc-writeup]: http://www.basicallytech.com/blog/?/archives/23-command-line-calculations-using-bc.html
 [bc]: http://www.gnu.org/software/bc/

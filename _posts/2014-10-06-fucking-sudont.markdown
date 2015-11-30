@@ -47,7 +47,7 @@ When sudoeing remember this:
  system)
  - You should always know what is happening if you choose to `sudo` something.
  Installing a script from someone with superuser privileges is not a good idea 
- {{ ":thumbsdown:" | emojify }}, unless you have read the code and are 
+ :thumbsdown:, unless you have read the code and are 
  certain it is not downloading another script you haven't read to be executed 
  as well. Otherwise you have no idea what is being done under the umbrella of 
  superuser clearance.
@@ -70,7 +70,7 @@ executables into `/usr/local`. On my own mech I happen to be a member of the
 reason to `sudo` here being the simple me is enough.
 
 Installing gems, node packages or any other packages for whatever env you 
-are using with `sudo` {{ ":rage:" | emojify }} is generally bad news. Generally
+are using with `sudo` :rage: is generally bad news. Generally
 if you have rvm, virtualenv or nodeenv set up properly you should not need to 
 sudo something ever. The big problem here is that all the code is generally 
 pulled from repositories somewhere on the web. You probably have no idea what 
@@ -80,4 +80,4 @@ nastiness you don't even want to think about.
 Bottomline be more conservative in superuser usage. If you frequently end up
 `sudo`-ing commands it is probably a signal that your system is seriously 
 screwed up and it might be due for a fresh install -- the right way 
-{{ ":wink:" | emojify }}.
+:wink:.

@@ -20,7 +20,7 @@ I do a thing or two with containers from time to time, that involves building
 Mesosphere or Kubernetes setups. Often enough my OS of choice happens to be
 CoreOS, but as ashamed as I am I should mention that I often end up scratching
 my head and wondering what the hell that command was again 
-{{ ":pensive:" | emojify }}?!? Hope this helps me recall.
+:pensive:?!? Hope this helps me recall.
 
 <iframe src="//giphy.com/embed/OP7kIfBat5sGY?html5=true" width="480" height="270" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 

@@ -113,7 +113,7 @@ in the readability department.
 ### Math
 Another matter I had not yet discussed is the presentation of mathematical
 formulae. My go-to solution for web-math is [MathJax][mathjax]. What can I say
-I'm a \\(\TeX\\) guy {{ ":wink:" | emojify }}. Anyways the quadratic formula
+I'm a \\(\TeX\\) guy :wink:. Anyways the quadratic formula
 looks as slick as it looks in \\(\LaTeX\\) documents if printed like 
 $$\large x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}$$.
 
@@ -261,7 +261,7 @@ padding. Instagram pretty much has the same story but requires 98 pixes in
 additional padding for the information above and beneath the square image.
 Videos will be displayed in a 5:3 aspect ratio which coincides with Native 
 Super 16mm film as listed on [wikipedia][aspectratio] and only deviates from 
-the golden ratio by a percent {{ ":wink:" | emojify }}.
+the golden ratio by a percent :wink:.
 
 {% highlight css %}
 .instagram:before {

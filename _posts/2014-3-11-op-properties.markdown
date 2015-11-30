@@ -48,7 +48,7 @@ $a^b$ as ```a^b```. Mistakingly dealing with exponents as left-associative
 would cause one to evaluate $a^{b^{c}}$ as $(a^b)^c$ which would cause
 erronous results in most cases (in the cases where $a=b=c$ you could have many
 fooled when applying the operation with a blatant disregard for associativity 
-{{ ":scream:" | emojify }}).
+:scream:).
 
 ## Commutativity
 Commutativity is always tied to an operator. The property deals with the
@@ -64,7 +64,7 @@ when the operands are not equal to each other.
 
  - notice that $1^{2} = 1$ while $2^{1} = 2$
  - $2^3 = 8$ while $3^{2} = 9$
- - when the operands are similar (both $2$) swapping the order has no effect because $2^{2} = 4$ either ways {{ ":wink:" | emojify }}
+ - when the operands are similar (both $2$) swapping the order has no effect because $2^{2} = 4$ either ways :wink:
  - but in some cases swapping different operands may still return the same result as $4^2 = 16$ and $2^4 = 16$ as well {{ ":speak_no_evil:" | emojify }}
 
 Cross-products are also non-commutative, but I suppose the concept of
@@ -72,4 +72,4 @@ commutativity is clear with the given example, so no need to spend more
 time on that one.
 
 ## And&hellip;
-Whenever in the mood, I might discuss the other op properties in this note {{ ":wink:" | emojify }}.
+Whenever in the mood, I might discuss the other op properties in this note :wink:.

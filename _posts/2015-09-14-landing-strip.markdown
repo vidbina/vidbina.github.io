@@ -72,7 +72,7 @@ works quite well in that regard.
 
 Next time you're polishing pixels again, ask yourself if that is really going
 to make the big difference in pushing your company into the list of winners
-{{ ":trophy:" | emojify }}.
+:trophy:.
 
 I have stripped Magic, the old Buffer page and also Assist which has a nice 
 split pane layout.
@@ -95,13 +95,13 @@ I have on things that will not make a ground shattering difference for my
 startups. I will not get that time back and often enough when you tell yourself
 it needs to look a little better, it is just **you bullshitting yourself with
 excuses that will keep you from the really hard stuff**. The really hard stuff
-that could make the difference. Don't do that to yourself {{ ":wink:" | emojify }}.
+that could make the difference. Don't do that to yourself :wink:.
 
 Stay Lean, Be Focused, Go Hard!
 
 P.S.: Normally I would have spent a few extra days polishing it up. Just to 
 protect my street cred. Then again... Fuck it, ship it
-{{":shipit:" | emojify }}! If it renders imperfectly in some browsers, I 
+:shipit:! If it renders imperfectly in some browsers, I 
 hope a greater wielder of the CSS/HTML swords will help me out... after getting
 his/her landing page up first. Because we ship landing pages to hook people,
 not to win awards for aesthetics. I made up mine.

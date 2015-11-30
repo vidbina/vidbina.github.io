@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Kubernetes on Google Cloud 101
+title:  Kubernetting Google's Cloud
 since:  2015-02-22 11:49
 date:   2015-03-07 21:36
 type: cloud
@@ -14,9 +14,16 @@ tags:
  - devops
  - tools
  - orchestration
+ - kubernetes
 mathjax: true
-emojify: true
+og:
+  type: article
+  article: #see ogp.me/#types
+    author: https://www.facebook.com/david.asabina
+    section: Dev-Ops
 description: "First encounters in setting up and using a Kubernetes cluster on Google Cloud"
+redirect_from:
+  - /web/kubernetes/
 ---
 Kubernetes allows one to orchestrate cloud resources in an elegant fashion, 
 specifically... by allowing one to interact with a single point of entry to the 
@@ -32,7 +39,7 @@ online.
 </blockquote>
 
 At the time of writing (Februari 2015) the Google Cloud container API is still
-in alpha. So {{ ":shit:" | emojify }} will most likely change, but I have a 
+in alpha. So :shit: will most likely change, but I have a 
 hunch that underlying principles will remain largely the same.
 
 #Introduction
@@ -41,7 +48,7 @@ idea is to address the entire infrastructure as a single unit. Kubernetes
 helps us in orchestrating our cloud.
 
 There is quite a bit of housekeeping required to get a cluster up and running.
-When working with Docker {{ ":whale:" | emojify }}, just getting different 
+When working with Docker :whale:, just getting different 
 containers to play ball together demands the configuration of discovery 
 services among other things.  Within the docker scenario this is already
 a bit of a hassle between containers on the same (virtual) machine. Setting up 
@@ -52,9 +59,9 @@ Every machine added to the cluster needs to know how to deal with discovery
 and if at all possible we rather would not spend our energy on focussing on 
 the individual (virtual) machines, because you don't want to have to remember 
 what every machine does. Let the cluster take care of its own housekeeping 
-{{ ":house:" | emojify }}.
+:house:.
 
-<div class="element">
+<div class="element img">
   <img src="/resources/devops/kubernetes/basic-setup.svg" alt="The components involved in a basic Kubernetes setup">
 </div>
 
@@ -121,13 +128,13 @@ mention it here for the sake of keeping stuff complete, but I find the old
 fashion way of spawning a cluster more useful anyways because it is a universal
 approach.
 
-```bash
+{% highlight bash %}
 gcloud preview container clusters create CLUSTER \
   --machine-type  MECH \
   --zone ZONE \
   --project PROJECT \
   --num-nodes N
-```
+{% endhighlight %}
 -->
 
 ### Spawn a Master
@@ -136,28 +143,27 @@ file contributed [Kelsey Hightower][khightower]. This will setup the
 Kubernetes API service on port 8080. Just to make things a bit easier, tag the 
 machine to allow more flexibility in defining the firewall rules later on.
 
-```bash
+{% highlight bash %}
 gcloud compute instances create NAME \
   --zone ZONE \
   --image coreos \
   --machine-type MECH \
   --metadata-from-file user-data=master.yaml \
   --tags CLUSTER master
-</pre>
-```
+{% endhighlight %}
 
 I believe it is needless to say that `ZONE`, `MECH` and `CLUSTER` need to be 
 filled it by you, but there I said it. For a list of available zones query
 `gcloud compute zones list`. Do yourself a favor while you read through this
 article and keep all the machines you create within the same zone (it makes 
 things easier for now, but you can spread your clusters over multiple zones 
-once you understand how things work {{ ":wink:" | emojify }}). For a list of 
+once you understand how things work :wink:). For a list of 
 available machine types within your selected zone query 
 `gcloud compute machine-types list --zone ZONE` and replace `MECH`. Yet again,
 do yourself a favor and pick a mech that has more guts then the `f1-micro` 
 mech. Be creative with `CLUSTER`. I called mine [Abell 2744][abell2744].
 
-<div class="element">
+<div class="element img">
   <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Pandora%27s_Cluster_%E2%80%93_Abell_2744.jpg/600px-Pandora%27s_Cluster_%E2%80%93_Abell_2744.jpg" alt="A picture of Pandora's cluster (cataloged in the Abell index as number 2744) as captured by the Hubble Space Telescope">
 </div>
 
@@ -169,9 +175,9 @@ Assuming that the actual ip address of the master machine is substituted
 wherever `IP` is mentioned, one may attempt to execute a call to the Kubernetes
 master.
 
-```bash
+{% highlight bash %}
 wget IP:8080 -O-
-```
+{% endhighlight %}
 
 If `wget` hangs on this request, it most likely means that there are no firewall
 rules in place to allow your call to hit the actual master server.
@@ -179,15 +185,15 @@ rules in place to allow your call to hit the actual master server.
 Enable traffic to master machines within the infrastructure over port 8080 by
 creating a firewall rules.
 
-```bash
+{% highlight bash %}
 gcloud compute firewall-rules create expose-kubernetest-master-api \
   --allow tcp:8080 \
   --target-tags CLUSTER,master
-```
+{% endhighlight %}
 
 Note that the target tag enables one to describe firewall rules that apply to
 multiple machines without having to specify each machine explicitly. This is 
-one of the sweet cons of machine tagging {{ ":smile:" | emojify }}.
+one of the sweet cons of machine tagging :smile:.
 
 After adding the necessary firewall rule one should be able to perform the
 previous `wget` call without any problems.
@@ -195,9 +201,9 @@ previous `wget` call without any problems.
 Now that the master is accessible from the internet, one may try to use the
 Kubernetes Controller interface to query the amount of nodes on the cluster.
 
-```bash
+{% highlight bash %}
 clusters/kubectl.sh get nodes --server=IP:8080
-```
+{% endhighlight %}
 
 Some may not have the `kubectl` command available on their machines which may
 be used as a replacement for `clusters/kubectl.sh` in the previous example. It
@@ -219,45 +225,45 @@ that `IP` is substituted for the ip address.
 By using `sed` to replace the token for the IP address in mind, we ensure that
 we have every occurence of the phrase substituted.
 
-```bash
+{% highlight bash %}
 sed -e "s:<master-private-ip>:IP:" node.yaml > /tmp/node.yml
-```
+{% endhighlight %}
 
 In order to allow our cluster machines to communicate through etcd (all minions
 need to communicate with the master in order) one can set up a firewall rule
 that applies to machines bearing the given target tag (this is why I love 
 tagging my machines).
 
-```bash
+{% highlight bash %}
 gcloud compute firewall-rules create allow-service-discovery \
   --allow tcp:4001 \
   --target-tags CLUSTER \
   --source-ranges 10.X/16
-```
+{% endhighlight %}
 
 Now it is time to create the nodes (or minions).
 
-```bash
+{% highlight bash %}
 gcloud compute instances create NAME \
   --image coreos \
   --machine-type MECH \
   --zone ZONE \
   --metadata-from-file user-data=/tmp/node.yaml \
   --tags CLUSTER node
-```
+{% endhighlight %}
 For `NAME` one may enter one or multple machine names (I chose the names of 
 three Minion resulting to `NAME` being substituted with `dave kevin stuart`).
 For testing purposes one may select a `f1-micro` or `g1-small` mech, while 
-picking a zone close to home {{ ":wink:" | emojify }}.
+picking a zone close to home :wink:.
 
 <!--
 ## View Cluster
 At the moment one can quickly obtain a list of Kubernetes clusters in Google 
 Cloud by listing all the known clusters in a given project.
 
-```bash
+{% highlight bash %}
 gcloud preview container clusters list --project PROJECT
-```
+{% endhighlight %}
 -->
 
 ## <a href="#pods"></a>Pods
@@ -282,28 +288,31 @@ For several reasons we could decide to run
 both on the same computation unit as the web worker could fetch and store the
 data for processing upon which the processor picks up the data and does its 
 magic. Gosh, would it be great if these services could share their storage 
-volumes? Within a pod they do {{ ":wink:" | emojify }}.
+volumes? Within a pod they do :wink:.
 
 ## Service with A Smile
 Now that we have the plumbing in place we need to start pumping some fluids 
 through the pipelines. Kubernetes allows us to define pods which execute the 
 work we need done. 
+
 ## Start Pod
+
 Kubernetes introduces the notion of pods as a unit for describing services that
 may require replication over the cluster.
 One can easily start a pod in Kubernetes 
 
-```bash
+{% highlight bash %}
 gcloud preview container pods create --name NAME --zone ZONE --image=IMAGE --replicas=N
-```
+{% endhighlight %}
 
 ## Start Services
+
 In order to create a nginx server one could run:
 
-```bash
+{% highlight bash %}
 gcloud preview container kubectl --zone ZONE run-container NAME --image=IMAGE --replicas=2
 gcloud preview container pods create --name my-nginx --zone ZONE --image=IMAGE --replicas=N
-```
+{% endhighlight %}
 
 Basically this spawns a replication controller, which manages the docker 
 service(s) it is instructed to run. In the current example a simple nginx 
@@ -318,20 +327,24 @@ health failure, the replication controller will see to it that another instance
 is spawned.
 
 Google has made exposed some `kubectl` features to be accessible through other
-calls such as ```gcloud preview container pods create --help```.
+calls such as `gcloud preview container pods create --help`.
 
 ## Stop Services
-```bash
+
+{% highlight bash %}
 gcloud preview container kubectl --zone ZONE get pods
 gcloud preview container pods list --zone ZONE
-```
+{% endhighlight %}
 
+<!--
 ## Create a Private Docker Registry
+
 In order to run a a private docker registry within the Kubernetes cluster, I 
 will need to define the containers which will serve the registry requests and 
 the storage bucket which will host the images.
 
 Creating the storage bucket is as simple as
+-->
 
 [khightower]: https://github.com/kelseyhightower
 [kubernetes-git]: https://github.com/GoogleCloudPlatform/kubernetes

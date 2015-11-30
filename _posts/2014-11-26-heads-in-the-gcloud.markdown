@@ -30,7 +30,7 @@ the install script
 {%endhighlight%}
 
 After the installation I completed my setup by sourcing the `*.zsh` (or 
-`*.bash` if you're still on that {{":wink:" | emojify }}) scripts at 
+`*.bash` if you're still on that :wink:) scripts at 
 startup.
 
 Updating the `gcloud` CLI tool is as simple as running 
@@ -83,7 +83,7 @@ gcloud compute instances create box1 --image coreos --zone europe-west1-c
 {%endhighlight%}
 
 The name of my instance is `box1`, the image is the CoreOS image and the zone 
-is somewhere in Western Europe {{ ":wink:" | emojify }}. The command 
+is somewhere in Western Europe :wink:. The command 
 
 {%highlight bash %}
 gcloud compute images list

@@ -24,7 +24,7 @@ that needs to change proto, you don't wait to make it a new-years-resolution it
 becomes effective immediately) and I'm planning to keep that up. The 
 clusterfucks were some of the most valuable lessons in my life to date but they
 did hurt like hell. Some of them still hurt a bit. Growing pains, I choose to 
-call them {{ ":wink:" | emojify }} and I woudn't know what I would have been 
+call them :wink: and I woudn't know what I would have been 
 without them.
 
 I'm set for another lesson-filled journey, but this time a bit less painful 
@@ -73,11 +73,11 @@ different technologies, building experiences and engineering functional
 solutions. I'm about improving the fruit count and the quality of the fruit I 
 produce while maintaining what I already had reasonably well under control.
 
-It will be a good year! {{ ":stars:" | emojify }}
+It will be a good year! :stars:
 
 So future me, remember where you've ventured from but for the love of God don't 
 spend much energy on it. Draw your lessons and move on. You have the tendency
-to overthink {{ ":shit:" | emojify }}, for now just stick to the code and obey
+to overthink :shit:, for now just stick to the code and obey
 your gut a bit more often. I also discovered that darn thing was right at 
 least 80% of the time.
 
