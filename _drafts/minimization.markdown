@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  
+title:  A Few Notes While Reading Up on Minimizaton
 date:   2015-11-29 20:38:51
 type: math
 category: math
@@ -17,13 +17,10 @@ og:
   article: #see ogp.me/#types
     author: https://www.facebook.com/david.asabina
     tags:
-      - javascript
-      - ECMAscript 6
-      - Harmony
-      - es6
-      - constants
-      - immutables
-      - functional programming
+      - math
+      - matrix
+      - calculus
+      - algebra
     section: Algebra
 description: Note-to-self while reading through Olver's Numerical Analysis lecture notes covering Minimization
 mathjax: true
@@ -60,13 +57,31 @@ $$\begin{pmatrix}x_1&x_2\end{pmatrix}\begin{pmatrix}a&b\\c&d\end{pmatrix}\begin{
 
 $$\begin{pmatrix}ax_1+cx_2&bx_1+dx_2\end{pmatrix}\begin{pmatrix}x_1\\x_2\end{pmatrix}$$
 
-$$\begin{pmatrix}x_1(ax_1+cx_2)+x_2(bx_1+dx_2)\end{pmatrix} = 
-\begin{pmatrix}ax_1^2+(b+c)x_1x_2+dx_2^2\end{pmatrix}$$
-$$\begin{pmatrix}ax_1^2+cx_1x_2+bx_1x_2+dx_2^22x_1^2\end{pmatrix}$$
+$$\begin{pmatrix}ax_1^2+(b+c)x_1x_2+dx_2^2\end{pmatrix}$$
 
 
-:wink:
+With the information given, 
+$$\bigl(\begin{smallmatrix}4&-2\\-2&3\end{smallmatrix}\bigr)$$ may be expressed
+as $$4x_1^2-4x_1x_2+3x_2^2$$.
 
-http://www.math.umn.edu/~olver/num.html
-http://www.math.umn.edu/~olver/num_/lnz.pdf
+$$\begin{array}{c|c|c|}
+     & 2x_1 & x_2 \\ \hline
+2x_1 & 4x_1^2 & 2x_1x_2 \\ \hline
+-3x_2 & -6x_1x_2 & 3x_2^2 \\ \hline
+\end{array}$$
+
+$$(2x_1+x_2)(2x_1-3x_2)$$
+
+$$\begin{array}{c|c|c|}
+     & 2x_1 & -x_2 \\ \hline
+2x_1 & 4x_1^2 & -x_1x_2 \\ \hline
+-x_2 & -x_1x_2 & x_2^2 \\ \hline
+\end{array}$$
+
+$$(2x_1-x_2)(2x_1-x_2) = 4x_1^2 -4x_1x_2 + x_2^2$$
+
+# Reading 
+
+ - [Olver's Numerical Analysis Lecture Notes](http://www.math.umn.edu/~olver/num.html)
+ - [Olver's Numerical Analysis Lecture Notes covering Minimization](http://www.math.umn.edu/~olver/num_/lnz.pdf)
 
