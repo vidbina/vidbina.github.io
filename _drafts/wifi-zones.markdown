@@ -19,7 +19,9 @@ og:
   article: #see ogp.me/#types
     author: https://www.facebook.com/david.asabina
     section: Wireless Networking
-description: Just an idea to tackle the wireless networking problem in congested areas.
+description: |
+  Just an idea to tackle the wireless networking problem in the
+  radio-congested areas many of us call home.
 ---
 
 I have spend the better part of the last months hanging around different 
@@ -67,9 +69,11 @@ completely shielded environments.
 This would provide some added security on the physical level, since networks
 are more bound by geometric constraints of the apartment blocks. Furthermore it
 would provide increased network performance since the RSSI of neighboring
-signals would be negligible due to the shielding methods employed.
+signals would be negligible due to the shielding methods employed. :wink:
+
 
 ## Read
+
 
  - [How to find the best Wi-fi Channel for your Router on Any Operating System (Howtogeek.com)](http://www.howtogeek.com/197268/how-to-find-the-best-wi-fi-channel-for-your-router-on-any-operating-system/)
  - [](http://www.letstalk-tech.com/how-to-access-the-wifi-scanner-in-mac-os-x-yosemite/)
