@@ -66,7 +66,10 @@ we need to construct new data if we need something changed... every single
 time which means that we have to play ball in an entirely different manner
 when dealing with those immutable creatures.
 
-<!-- TODO: twitter conv -->
+<div class="element twitter">
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/mononcqc">@mononcqc</a> thx for the <a href="https://twitter.com/hashtag/Erlang?src=hash">#Erlang</a> bible 🙌🏿 Why didn’t you avoid `reverse` by `Sublist++[H]` instead of `[H|Sublist]`? <a href="https://t.co/6DkoaTASs4">https://t.co/6DkoaTASs4</a></p>&mdash; David Asabina (@vidbina) <a href="https://twitter.com/vidbina/status/679659666817859584">December 23, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 
 {% highlight erlang %}
 NoFlyList=[monkey|[mole]].
