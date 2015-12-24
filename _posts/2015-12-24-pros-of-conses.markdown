@@ -90,7 +90,7 @@ NoFlyList=[monkey|[mole]].
 
 The `NoFlyList` represents a list of creatures we don't want on our flight
 because of bad behavior. Maybe the monkey pooped:poop: in his seat and the mole
-burrowed his way into a fluffy cushion... really, that isn't the point; of
+burrowed his way into a fluffy cushion:seat:... really, that isn't the point; of
 importance is realizing that Erlang `List`s are singly linked-lists meaning
 that list items only know who their successor is.
 
@@ -108,8 +108,8 @@ doesn't see jack--it's practically blind anyways :eyes:.
 # Growing Lists
 
 Now the most interesting bit, which should help us understand the merit of
-_cons_, is that we could extend our list of creatures unwelcome on our flights
-by prepending or appending items to the list.
+_conses_, is that we could extend our list of creatures unwelcome on our
+flights:airplane: by prepending or appending items to the list.
 
 <!-- In case of appending the
 list we would have to tell the mole to remember who its successor is. Since
@@ -138,22 +138,27 @@ right-hand side (the tail) as the item it wants to connect something to, where
 the operand on the left-hand (the head) side represents the item we're going to
 connect to the tail.
 
-What basically happens is that we have a immutable list
-containing a ghost and we need to extend the list on the left-hand side of the
-operator to contain our ghost. Remember that we have that monkey looking at the
-mole in our `NoFlyList`? Well, now we want the mole to look at the ghost. It's
-Erlang, however; so the mole is immutable. Since the mole is immutable we'll
-have to create a copy of the mole that looks at the ghost in order to realize
-that list extension. The new mole has nothing looking at it and we need the
-monkey to do that, yet again we stumble into the problem of the monkey being
-cast in stone, so we'll have to create a new monkey to look at the newly
-created mole. Now we'll have a list in which the monkey looks at the mole
-which looks at the ghost, but as you noticed we had to recreate the entire
-list on the left-hand side. Bummer!
+We have a immutable list containing a ghost and need to extend the no-fly
+to contain all items in the list that currently contains just our ghost. This
+basically means that we want the mole, the last one in our no-fly list, to look
+at the first item in our tail, which is the ghost. It's Erlang, however; so the
+mole is immutable therefore we'll have to create a copy of the mole that looks
+at the ghost in order to realize that list extension.
+
+The new mole has nothing looking at it and we need the monkey to do that, yet
+again we stumble into the problem of the monkey being cast in stone, so we'll
+have to create a new monkey to look at the newly created mole. Now we'll have a
+list in which the monkey looks at the mole which looks at the ghost, but as
+you noticed we had to recreate the entire list on the left-hand side. Bummer!
 
 <!-- TODO: Visual representation of having to copy the NoFlyList -->
 
-> I got this information from section 6.31.1 in the Erlang Specification Draft
+Section 6.13.1 in the Erlang Specification Draft contains a formal definition
+of the `++` operator which I attached below for your convenience :wink:.
+
+<div class="element document portrait-a4">
+  <embed class="a4" src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/doc/erlang/erl_spec47_listops.pdf">
+</div>
 
 ## Prepend
 
