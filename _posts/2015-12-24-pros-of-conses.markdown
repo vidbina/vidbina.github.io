@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Pro of Cons
+title:  Pros of Conses
 date:   2015-12-23 21:13:51
 type: tools
 category: tools
@@ -25,52 +25,64 @@ og:
        - list cons
        - immutable
     section: Software Engineering
-description: Note-to-self about Erlang list constructors, whyto use them and how to refrain from writing code I could get murered over by some angry developers.
+description: Note-to-self about Erlang list conses and why to use them to refrain from writing code I could possibly get murdered over by wiser peers.
 mathjax: true
+redirect_from:
+  - /tools/pro-of-cons.html
 ---
 
-I finished a crapload of work for one of my clients and decided that I will
-use my holidays to look into a language I wanted to explore for a while now...
-Erlang.
-
 While reading [Learn You Some Erlang For Great Good](http://learnyousomeerlang.com/)
-I stumbled upon a list growing problem.
+I stumbled upon a list growing problem. Little did I know that my lack of
+understanding was about to dispatch me on a 1-hour journey that would help me
+better understand and appreciate the pros of conses (I'll explain what conses
+are in a sec).
 
 # What Are Lists?
 
-An Erlang list is a finite collections of items (possibly of different types)
-and is notated as `[Head|Tail]`. The `[...|...]` notation is referred to as a
-_cons_ (it's a list constructor) in Erlang patois and requires a left-hand
+An Erlang list is a finite collections of items (elements could be of different
+types) and is notated as `[Head|Tail]`. The `[...|...]` notation is referred
+to as a _cons_ (it's a list constructor) in Erlang patois and requires a left-hand
 operand commonly referred to as the head and a right-hand operand, the tail.
 
-So let's look at a few snippets that demonstrate lists also covered
-in the [book](http://learnyousomeerlang.com/starting-out-for-real#lists).
+So let's look at a few snippets that demonstrate lists.
 
 {% highlight erlang %}
 []. % nil or an empty list
 
-[monkey, mole]. % monkey and mole in a list
+[monkey,mole]. % monkey and mole in a list
 [monkey|[mole]]. % monkey and mole in s list
 [monkey|[mole|[]]]. % monkey and mole in a list
 
 [mokey|mole]. % improper list, steer clear of these
 {% endhighlight %}
 
-So let's understand how things work... Variables in Erlang aren't really
-variable as everything is immutable. This means that we can't reassign values
-or modify properties.
+The [book](http://learnyousomeerlang.com/starting-out-for-real#lists) does a
+great job in explaining lists too by the way and if you want to get a deeper
+understanding I have attached a fragment of the Erlang Specification Draft 0.7
+below, otherwise just skip the PDF.
+
+<div class="element document portrait-a4">
+  <embed class="a4" src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/doc/erlang/erl_spec47_lists.pdf">
+</div>
+
+It always helps to truly understand how things work... Variables in Erlang
+aren't really variable as everything is immutable. This means that we can't
+reassign values or modify properties.
 
 My lack of understanding the implications of immutability required me to do 1
 hour worth of reading and thinking, after having proposed inefficient code,
-before finally appreciating the design. Basically, we should keep in mind that
-we need to construct new data if we need something changed... every single
-time which means that we have to play ball in an entirely different manner
-when dealing with those immutable creatures.
+before finally appreciating the design.
 
 <div class="element twitter">
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/mononcqc">@mononcqc</a> thx for the <a href="https://twitter.com/hashtag/Erlang?src=hash">#Erlang</a> bible 🙌🏿 Why didn’t you avoid `reverse` by `Sublist++[H]` instead of `[H|Sublist]`? <a href="https://t.co/6DkoaTASs4">https://t.co/6DkoaTASs4</a></p>&mdash; David Asabina (@vidbina) <a href="https://twitter.com/vidbina/status/679659666817859584">December 23, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
+
+Basically, we should keep in mind that we need to construct new data if we need
+anything changed... every single time which means that we have to play ball in
+an entirely different manner when dealing with those immutable creatures.
+
+Let's cut to the chase...
 
 {% highlight erlang %}
 NoFlyList=[monkey|[mole]].
@@ -81,6 +93,10 @@ because of bad behavior. Maybe the monkey pooped:poop: in his seat and the mole
 burrowed his way into a fluffy cushion... really, that isn't the point; of
 importance is realizing that Erlang `List`s are singly linked-lists meaning
 that list items only know who their successor is.
+
+<div class="element twitter">
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/vidbina">@vidbina</a> <a href="https://twitter.com/mononcqc">@mononcqc</a> SL ++ [H] is O(n) whereas [H|SL] is O(1). Lists are singly linked.</p>&mdash; Jesper L. Andersen (@jlouis666) <a href="https://twitter.com/jlouis666/status/679667193894858753">December 23, 2015</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 
 > A node in a doubly linked-list knows predecessor and successor (previous and next) nodes.
 
