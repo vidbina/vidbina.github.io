@@ -26,6 +26,7 @@ og:
        - immutable
     section: Software Engineering
 description: Note-to-self about Erlang list constructors, whyto use them and how to refrain from writing code I could get murered over by some angry developers.
+mathjax: true
 ---
 
 I finished a crapload of work for one of my clients and decided that I will
