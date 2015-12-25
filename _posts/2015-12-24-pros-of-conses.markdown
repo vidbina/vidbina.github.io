@@ -152,6 +152,9 @@ list in which the monkey looks at the mole which looks at the ghost, but as
 you noticed we had to recreate the entire list on the left-hand side. Bummer!
 
 <!-- TODO: Visual representation of having to copy the NoFlyList -->
+<div class="element img">
+<img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/gif/erl_list_add_single.gif" alt="Demonstrating how expensive List++[Item] is in Erlang">
+</div>
 
 Section 6.13.1 in the Erlang Specification Draft contains a formal definition
 of the `++` operator which I attached below for your convenience :wink:.
