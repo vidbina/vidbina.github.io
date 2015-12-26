@@ -119,9 +119,10 @@ list and in the process record the mole's successor.-->
 
 ## Append
 
-The `++` list operator allows us to append something to a list. To be precise,
-we're appending whatever we have to the right-hand side of the operator to the
-left-hand side.
+The `++` list operator is officially called the list addition operator, so
+yeah... it will allow us to add something to a list. In our example we want
+to add a list containing just a ghost to our already existing list of
+creatures we'd rather not board on our planes.
 
 {% highlight erlang %}
 NoobNoFlyList = NoFlyList++[ghost].
@@ -138,7 +139,7 @@ right-hand side (the tail) as the item it wants to connect something to, where
 the operand on the left-hand (the head) side represents the item we're going to
 connect to the tail.
 
-We have a immutable list containing a ghost and need to extend the no-fly
+We have a immutable list containing a ghost and need to extend the no-fly list
 to contain all items in the list that currently contains just our ghost. This
 basically means that we want the mole, the last one in our no-fly list, to look
 at the first item in our tail, which is the ghost. It's Erlang, however; so the
@@ -164,9 +165,9 @@ of the `++` operator which I attached below for your convenience :wink:.
 
 ## Prepend
 
-In order to use the `++` append list operator without having to step through an
+In order to use the `++` list operator without having to step through an
 entire list which could very well be comprised of a million misbehaving
-critters it would make more sense to have the list on the right-hand side of
+critters it would be more sensible to have the list on the right-hand side of
 the operator. 
 
 <div class="element img">
@@ -177,12 +178,12 @@ the operator.
 OkayNoFlyList = [ghost]++NoFlyList.
 {% endhighlight %}
 
+Note that the left-hand operand represent a list of a single item -- our ghost.
+The list happens to be immutable so Erlang cannot in good conscience modify
+it or any of its contents, therefore being forced to make a copy.
 This time the `ghost` needs to look at the first screw-up in the no-fly list,
-therefore being the only item that needs to be copied. Remember that the
-left-hand operand represent a list of a single item. This item already exist
-and Erlang cannot in good conscience modify this item, there being forced to
-make a copy. In the meantime the monkey still looks at the mole which is still
-blind as a bat.
+therefore being the only item that needs to be copied. In the meantime the
+monkey still looks at the mole which is still blind as a bat.
 
 Just sidetracking here
 
