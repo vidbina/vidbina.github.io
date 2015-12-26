@@ -10,10 +10,10 @@ tags:
  - Erlang
  - list cons
  - immutable
-image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/erlcons.gif
+image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/erlcons.png
 twitter:
   card: summary_large_image
-  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/erlcons.gif
+  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/erlcons.png
 og:
   type: article
   article: #see ogp.me/#types
@@ -25,7 +25,7 @@ og:
        - list cons
        - immutable
     section: Software Engineering
-description: Note-to-self about Erlang list conses and why to use them to refrain from writing code I could possibly get murdered over by wiser peers.
+description: Note-to-self about Erlang list conses and why to use them to refrain from writing code I could possibly get shunned over by wiser peers.
 mathjax: true
 redirect_from:
   - /tools/pro-of-cons.html
