@@ -10,10 +10,10 @@ tags:
  - Erlang
  - list cons
  - immutable
-image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/gif/erl_list_cons.gif
+image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/erlcons.gif
 twitter:
   card: summary_large_image
-  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/gif/erl_list_cons.gif
+  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/erlcons.gif
 og:
   type: article
   article: #see ogp.me/#types
