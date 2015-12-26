@@ -10,10 +10,10 @@ tags:
  - Erlang
  - list cons
  - immutable
-image: 
+image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/gif/erl_list_cons.gif
 twitter:
   card: summary_large_image
-  image: 
+  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/gif/erl_list_cons.gif
 og:
   type: article
   article: #see ogp.me/#types
@@ -174,7 +174,7 @@ the operator.
 </div>
 
 {% highlight erlang %}
-ProNoFlyList = [ghost]++NoFlyList.
+OkayNoFlyList = [ghost]++NoFlyList.
 {% endhighlight %}
 
 This time the `ghost` needs to look at the first screw-up in the no-fly list,
@@ -209,7 +209,7 @@ Just sidetracking here
 Using list cons, one could perform the previous feat more effectively.
 
 {% highlight erlang %}
-BestNoFlyList = [ghost|NoFlyList].
+EliteNoFlyList = [ghost|NoFlyList].
 {% endhighlight %}
 
 As suggested in the [Efficiency Guide](http://www.erlang.org/doc/efficiency_guide/myths.html#id61192)
