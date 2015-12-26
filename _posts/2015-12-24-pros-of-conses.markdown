@@ -92,7 +92,7 @@ The `NoFlyList` represents a list of creatures we don't want on our flight
 because of bad behavior. Maybe the monkey pooped:poop: in his seat and the mole
 burrowed his way into a fluffy cushion:seat:... really, that isn't the point; of
 importance is realizing that Erlang `List`s are singly linked-lists meaning
-that list items only know who their successor is.
+that list items only know who their successors are.
 
 <div class="element twitter">
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/vidbina">@vidbina</a> <a href="https://twitter.com/mononcqc">@mononcqc</a> SL ++ [H] is O(n) whereas [H|SL] is O(1). Lists are singly linked.</p>&mdash; Jesper L. Andersen (@jlouis666) <a href="https://twitter.com/jlouis666/status/679667193894858753">December 23, 2015</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -151,7 +151,6 @@ have to create a new monkey to look at the newly created mole. Now we'll have a
 list in which the monkey looks at the mole which looks at the ghost, but as
 you noticed we had to recreate the entire list on the left-hand side. Bummer!
 
-<!-- TODO: Visual representation of having to copy the NoFlyList -->
 <div class="element img">
 <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/gif/erl_list_add_single.gif" alt="Demonstrating how expensive List++[Item] is in Erlang">
 </div>
@@ -170,28 +169,28 @@ entire list which could very well be comprised of a million misbehaving
 critters it would make more sense to have the list on the right-hand side of
 the operator. 
 
-<!-- TODO: Visual representation of a appending a list to a shortlist,
-emphasize the impact of the shortlist which has to be produced and why it
-needs to be copied since the shortlist isn't looking at anything -->
+<div class="element img">
+<img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/gif/erl_single_add_list.gif" alt="Demonstrating how cheap [Item]++List is in Erlang">
+</div>
 
 {% highlight erlang %}
 ProNoFlyList = [ghost]++NoFlyList.
 {% endhighlight %}
 
-This time erlang has the `NoFlyList` and can keep her intact, `ghost` which
-needs to look at the first item in the no-fly list is therefore the only item
-that needs to be copied in order to obtain a version of the ghost that looks at
-the first screw-up in the no-fly list. Now ghost looks at monkey, which still
-looks at the mole which is still blind as a bat.
+This time the `ghost` needs to look at the first screw-up in the no-fly list,
+therefore being the only item that needs to be copied. Remember that the
+left-hand operand represent a list of a single item. This item already exist
+and Erlang cannot in good conscience modify this item, there being forced to
+make a copy. In the meantime the monkey still looks at the mole which is still
+blind as a bat.
 
 Just sidetracking here
 
  - the left-hand operand of the `++` operation is always a list. Erlang throws
  up if it isn't.
- - the left-hand operand of the `++` operation will be traversed in it's
- entirety with a time complexity of $O(n)$ where $n$ represents the number of
- items in the left-hand operand, it is in our interest to keep the left-hand
- operand as small as possible
+ - the left-hand operand of the `++` operation will be traversed in its
+ entirety, leading to a time complexity of $O(n)$ where $n$ represents the
+ number of items in the left-hand operand
  - the last item in the head (the left-hand operand) (which is a list) will
  need to point to the first item in the tail (the right-hand operand). Being
  pointed to doesn't require anything at all, so the passive tail will survive
@@ -220,6 +219,10 @@ monkey, which is looking at a blind mole. In the `[ghost]++NoFlyList` approach
 we create the ghost, and subsequently have to recreate a copy of it to look at
 whatever the hell is first up in the `NoFlyList`.
 
+<div class="element img">
+<img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/gif/erl_list_cons.gif" alt="Demonstrating how cheap [Item|List] is in Erlang">
+</div>
+
 Always remember that using a non-list tail will result to a improper list,
 with which you will most likely have a bad time
 
@@ -227,8 +230,3 @@ with which you will most likely have a bad time
 [monkey|mole] != [monkey,mole]. % avoid
 [monkey|[mole]] == [monkey,mole]. % do this :)
 {% endhighlight %}
-
-<!-- TODO: VIsual representation of a cons used which doesn't have to copy 
-a shortlist because the head is already created ready to point to something
-that is going to be supplied -->
-
