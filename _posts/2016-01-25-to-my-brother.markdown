@@ -4,6 +4,7 @@ title:  Favorite Warrior Brother
 date:   2016-01-25 15:38:51
 type: social
 category: family
+icon: entypo-paper-plane
 tags:
  - sibling
  - brothers

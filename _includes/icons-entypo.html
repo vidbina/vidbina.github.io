@@ -69,4 +69,5 @@
 {% when 'flag', 'problem', 'issue' %}
   <meta class="detail entypo-flag" name="type" content="{{ include.type }}">
 {% else %}
+{% if include.icon %}  <meta class="detail {{ include.icon }}" name="type" content="{{ include.type }}">{% endif %}
 {% endcase %}

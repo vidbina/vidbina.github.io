@@ -11,7 +11,7 @@ layout: default
     <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
 
     <h1>
-      {% include icons-entypo.html type=page.type %}
+      {% include icons-entypo.html type=page.type icon=page.icon %}
       {{ page.title }}
     </h1>
   </header>
