@@ -96,7 +96,7 @@ what?!? Three years?!? I pegged you down in a hold and you've been aching to
 get back at me ever since. Well.. You pretty much did the last time back at
 Annie's place in Rotterdam. You had me in a choke hold so proficiently executed
 that I remember it to this day. I had to tap out or get my neck snapped off.
-You're pretty freaking strong.
+You're pretty f:collision:ing strong.
 
 <div class="element giphy">
 <iframe src="//giphy.com/embed/4Mnx16O3BJR0A" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
@@ -119,7 +119,7 @@ everything. Yeah, I'll say it... you're the perfect younger brother to me.
 You're an annoying little brat and I love the fact that you always try to get
 back at me.
 
-And I'm so fucking glad it was just a nightmare! Can't wait to punch you in the
+And I'm so f:bomb:ing glad it was just a nightmare! Can't wait to punch you in the
 chest again, just to celebrate the fact you're alive as ever! Love ya and stay
 alive, Warrior Brother; which rhymes which Mario Brother[^mario] so here is
 a matching gif with that... :stuck_out_tongue:
