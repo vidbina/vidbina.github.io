@@ -14,7 +14,7 @@ og:
   article: #see ogp.me/#types
     author: https://www.facebook.com/david.asabina
     section: Family
-description: After a nightmare I just felt I needed to share a few things with my younger brother, a remarkable specimen of the homosapien species.
+description: I lost my brother in a nightmare then woke up to a world where he was alive as ever. I just felt I needed to share a few things with my younger brother, a remarkable homosapien specimen.
 ---
 Distraught and drenched in sweat -- it is the second time I woke to a
 nightmarish dream.
@@ -128,4 +128,14 @@ a matching gif with that... :stuck_out_tongue:
 
 <div class="element giphy">
 <iframe src="//giphy.com/embed/cYTpkixJhWNKU" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
+
+I just called my brother who's 8050 kilometers away... He's cooking dinner with
+pops.
+
+Look at that... _Life is good, life is good, no matter what... life is good_ as
+Nas said in _Cherry Wine_.
+
+<div class="element spotify">
+<iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A4K7jd5Wm09iF9xum3gfExb" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 </div>
