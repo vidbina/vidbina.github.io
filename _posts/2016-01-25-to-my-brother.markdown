@@ -131,11 +131,13 @@ a matching gif with that... :stuck_out_tongue:
 <iframe src="//giphy.com/embed/cYTpkixJhWNKU" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
-I just called my brother who's 8050 kilometers away... He's cooking dinner with
+I just called my brother who's 8050 kilometers away... cooking dinner with
 pops.
 
-Look at that... _Life is good, life is good, no matter what... life is good_ as
-Nas said in _Cherry Wine_.
+Look at that...
+
+_Life is good, life is good, no matter what... life is good_ as Nas said in
+_Cherry Wine_.
 
 <div class="element spotify">
 <iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A4K7jd5Wm09iF9xum3gfExb" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
