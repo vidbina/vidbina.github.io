@@ -19,6 +19,24 @@ calculations oracle. Because I am somewhat of a terminal hermit it helps to
 be able to have your math executed there as well. No GUI calcs, no REPLs for
 your favorite flavor languages -- just simple math.
 
+## Logarithm of Something
+In `bc` one can compute natural logarithms through the function `l`.
+
+The natural logarithm of the _Euler_ constant equals 1 $\ln(e) = 1$ and `bc`
+does its best to arrive at whatever value is closest considering rounding
+errors introduced through floating point arithmetic.
+
+{% highlight bash %}
+echo "l(e(1))" | bc -l
+{% endhighlight %}
+
+It helps to be aware of $\log_a(b) = \frac{\log_k(b)}{\log_k(a)}$ where $k$ is
+an arbitrary base. Considering that $\ln(x) = \log_e(x)$ and `bc` offers the
+natural logarithm function through its function `l` we can calculate any
+logarithm by leveraging the aforementioned property.
+
+ - $\log_{10}(x) = \frac{\log_e(x)}{\log_e(10)}$ which may be described as `l(x)/l(10)`
+ - $\log_2(x) = \frac{\log_e(x)}{\log_e(2)}$ which may be described as `l(x)/l(2)`
 
 ## Change of base
 The expression $\lfloor \log\_{b}(q) \rfloor + 1$ is the answer to all _How 
@@ -38,7 +56,8 @@ value $57$ in the octal (base 8) system we ask:
 echo "f=l(57)/l(8); scale=0; 1+(f/1)" | bc -l
 {% endhighlight %}
 
-If I want to capture the value $665$ in hex (base 16) I run
+If I want to capture the amount of digits necessary to represent the decimal
+value $665$ in hex (base 16) I run:
 {% highlight bash %}
 echo "f=l(665)/l(16); scale=0; 1+(f/1)" | bc -l
 {% endhighlight %}
@@ -52,6 +71,7 @@ echo "obase=2; 165" | bc
 {% endhighlight %}
 
 So simple :smile:
+
 
 [bc-writeup]: http://www.basicallytech.com/blog/?/archives/23-command-line-calculations-using-bc.html
 [bc]: http://www.gnu.org/software/bc/
