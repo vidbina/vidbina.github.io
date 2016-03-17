@@ -9,17 +9,29 @@ type: music
 category: music
 tags:
  - music
+ - orchestra
+ - guitar
+ - motivational
+ - empowerment
+og:
+  type: music.song
+  music.song:
+    music:musician: Laura Mvula and Nile Rodgers
+image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/music/laura-mvula-overcome-come.png
+twitter:
+  card: summary_large_image
+  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/music/laura-mvula-overcome-come.png
 ---
 From the first time I heard [Laura Mvula](https://en.wikipedia.org/wiki/Laura_Mvula) 
-I believed in angels :angel:. No seriously, her voice is celestial. Especially
-in combination with her orchestral arrangements.
+I believed in angels :angel:. No seriously, her voice is celestial, especially
+in combination with her glorious orchestral arrangements and angelic harmonies.
 
 Yesterday, I stumbled upon her latest masterpiece in collaboration with the
-great musician/producer Nile Rodgers.
+great musician/producer [Nile Rodgers](https://en.wikipedia.org/wiki/Nile_Rodgers).
 
 All the brilliance in the musical elements aside, the message, woven into the
 fabric of the song, appeals to us humans to pursue dreams and goals regardless
-otherwise limiting circumstances as clear through phrases as
+of otherwise limiting circumstances with simple phrases as
 
 > Take your broken wings and fly
 
