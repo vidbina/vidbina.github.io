@@ -16,7 +16,8 @@ tags:
 og:
   type: music.song
   music.song:
-    music:musician: Laura Mvula and Nile Rodgers
+   - music:musician: https://open.spotify.com/artist/0Dy94lW3txJhWQHqNXP1BT
+   - music:musician: https://open.spotify.com/artist/3yDIp0kaq9EFKe07X1X2rz
 image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/music/laura-mvula-overcome-come.png
 twitter:
   card: summary_large_image

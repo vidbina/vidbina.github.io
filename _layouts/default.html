@@ -20,8 +20,10 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElemen
     <meta property="og:type" content="{% if page.og and page.og.type %}{{ page.og.type}}{% else %}article{% endif %}" />
     {% if page.og %}
     {% if page.og[page.og.type] %}
-    {% for og_type_el in page.og[page.og.type] %}
+    {% for og_type_els in page.og[page.og.type] %}
+    {% for og_type_el in og_type_els %}
     <meta property="{{og_type_el[0]}}" content="{{og_type_el[1]}}" />
+    {% endfor %}
     {% endfor %}
     {% endif %}
     {% endif %}
