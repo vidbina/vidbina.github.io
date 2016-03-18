@@ -35,7 +35,7 @@ In order to setup Klouddns the user is required to update a `A` and `TXT`
 DNS record for the domain of interest.
 
 <div class="element img">
-  <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/dns-for-kloudsec.png" alt="Updating DNS records through Route53 to get started with Kloudsec" />
+  <img src="http://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/dns-for-kloudsec.png" alt="Updating DNS records through Route53 to get started with Kloudsec" />
 </div>
 
 ## Notes
@@ -45,7 +45,7 @@ requesting assets over a non-secured connections. Per AWS S3 bucket, one can
 configure CORS settings through the _Edit CORS Configuration_ control.
 
 <div class="element img">
-  <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/cirs-aws-s3.png" alt="CORS needs to be setup on S3 in order to access resources from the web page" />
+  <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/cors-aws-s3.png" alt="CORS needs to be setup on S3 in order to access resources from the web page" />
 </div>
 
 <!--
