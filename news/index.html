@@ -1,0 +1,20 @@
+---
+layout: default
+title: News
+---
+<div id="home">
+  <ul class="posts">
+    {% for news in site.data.news %}
+    <li>
+      <a href="{{news.url}}">
+        <h2>
+          {% include icons-entypo.html type=news.type icon=news.icon %}
+          <strong>{{ news.title }}</strong>
+        </h2>
+        <p>{{ news.description }}</p>
+        {{ news.embed }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
