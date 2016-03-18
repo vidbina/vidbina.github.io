@@ -6,6 +6,7 @@ gems:
   - jemoji
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-sitemap
 paginate: 50
 emoji_dir: /images/emoji
 disqus_shortname: vidbina
