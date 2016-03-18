@@ -19,6 +19,7 @@ Just updated my AWS Route 53 records, but they haven not propagated yet. How
 do I review the results of a DNS lookup?
 
 Perform a `dig` lookup while specifying the DNS server to query.
+
 ```bash
 dig @SERVER_TO_ASK DOMAIN_TO_LOOKUP [options]
 ```
@@ -29,7 +30,7 @@ will take some time for this information to propagate, but you can always ask
 the authoritative DNS servers directly, which saves the wait.
 
 ```bash
-dig @ns-1282.awsdns-32.org azure.supr.nu ANY
+dig @ns-1245.awsdns-27.org something.bina.me ANY
 ```
 
 [q10]: http://anouar.adlani.com/2011/12/useful-dig-command-to-troubleshot-your-domains.html
