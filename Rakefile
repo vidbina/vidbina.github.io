@@ -30,4 +30,31 @@ namespace :site do
   task :server do
     exec "jekyll serve -w"
   end
+
+  desc 'generate new post'
+  task :new do
+    ARGV.each { |arg| task arg.to_sym do; end }
+    args = ARGV
+
+    time = Time.now
+    title = args[1]
+    category= args[2]
+    args.shift
+
+    front_matter = File.open('_includes/front.template.yml', 'r') do |f|
+      template = f.read
+      template = template.gsub '{{DATE}}', time.to_s
+      (template = template.gsub '{{TITLE}}', title) if title
+      (template = template.gsub '{{CATEGORY}}', category) if category
+      template
+    end
+
+    filename = "#{time.strftime '%Y-%m-%d'}-#{title.downcase}".gsub ' ', '-'
+    file = "_drafts/#{filename}.markdown"
+    File.open(file, "w") do |f|
+      f.puts front_matter
+    end
+
+    exec "git add #{file}"
+  end
 end
