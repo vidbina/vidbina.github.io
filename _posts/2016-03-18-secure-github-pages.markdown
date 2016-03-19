@@ -26,9 +26,11 @@ tags:
 #  card: summary_large_image
 #  image: http://example.com
 ---
-This morning I learned about Kloudsec, a service that offers a CDN, HTTP/SSL
-encryption and shadowing in case Github pages becomes unavailable
+This morning I learned about Kloudsec, a service that offers a CDN, HTTPS
+encryption and shadowing in case Github pages are unavailable[^1]
 :stuck_out_tongue:. 
+
+[^1]: Hell does freeze over [occasionally](https://news.ycombinator.com/item?id=7130624), so don't think you would never need it :wink:
 
 ## Update DNS
 
@@ -44,11 +46,11 @@ is quite common for service providers to request the addition of `TXT` records
 from their clients in order to allow the client to demonstrate some control
 over the domain in question.
 
-<!--
+{% if false %}
 <div class="element img">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/dns-for-kloudsec.png" alt="Updating DNS records through Route53 to get started with Kloudsec" />
 </div>
--->
+{% endif %}
 
 ## Update CORS Policies
 
@@ -60,7 +62,7 @@ which is allowed to access the bucket cross domain which. Since
 reflect that in my CORS policy.
 
 <div class="element img">
-  <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/cors-aws-s3.png" alt="CORS needs to be setup on S3 in order to access resources from the web page" />
+  <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/cors-aws-s3.gif" alt="CORS needs to be setup on S3 in order to access resources from the web page" />
 </div>
 
 {% highlight xml %}
@@ -113,9 +115,10 @@ Kloudsec offers a few tricks for optimizing page load. At the mere click of a
 button any github page can be served through their CDN which leverages smart
 routing schemes (instead of just relying on DNS) to provide a more reliable
 means of finding the closest mirror for content. The tools of use at Kloudsec
-include BIND (recursive acronym for _Bird Internet Routing Daemon_) which as
-the name implies deals with routing, while `pf` is used for packet filtering
-in combination with `relayd` which aids in dynamically changing the `pf`
+include [`BIRD` (recursive acronym for _Bird Internet Routing Daemon_)][bird] which as
+the name implies deals with routing, while
+[`pf` is used for packet filtering][pf]
+in combination with [`relayd`][relayd] which aids in dynamically changing the `pf`
 configuration, but don't take it from me,
 read the inside scoop from [Bach Le at Kloudsec][kloudsec-anycast].
 
@@ -141,9 +144,11 @@ that originally just contained the following code:
 </html>
 {% endhighlight %}
 
-If you're okay with all the "defacing", just go ahead and jump into Kloudsec.
 Essentially whatever happens here is that Kloudsec simply adds script tags to
-your pages. Somewhere it kind of creeps me out that they do it for me.
+your pages. Some service providers require you to do it yourself, but the
+Kloudsec team just wanted to be helpful and take another worry off your
+shoulders. Somewhere it kind of creeps me out that they do it for me, but I get
+why they did it.
 
 ## CA Housekeeping
 
@@ -151,11 +156,12 @@ Another thing to consider is that using the Kloudsec service requires you to
 **trust** Kloudsec. Kloudsec holds the certificates and they provide the first
 front for your page on the web. They could provide resources that aren't yours
 but are hardly indistinguishable from the resources you intended to provide.
+
 In short, if there would be anything somewhere in the middle, it could be them.
 To be fair, if Github were to offer HTTPS pages for custom domains, they
-would have that power too, so what am I really bitching about here?!? With a
-similar solution you kind of have to be okay with another party holding that
-certificate for your domain.
+would have that power too, so what am I really bitching about here?!? 
+:stuck_out_tongue_closed_eyes: It's just a trust issue, but I felt I needed to
+point it out clearly.
 
 # Conclusion
 
@@ -163,7 +169,12 @@ In conclusion: The TLS, CDN and mirroring features that are offered are pretty
 cool, a few topics raise minor concerns but I needed to invest less than 5
 minutes of my live to see it work -- that is, if I
 ignore all the work I still have left to do in removing all non-HTTPS links
-throughout my repository :stuck_out_tongue:.
+throughout my repository :stuck_out_tongue:. It's pretty dope :metal:.
+
+For now I've got some work to do :sweat:
 
 [kloudsec-proxy]: https://blog.kloudsec.com/how-to-setup-github-custom-domain-with-https/
 [kloudsec-anycast]: https://blog.kloudsec.com/building-an-anycast-network/
+[bird]: http://bird.network.cz/
+[pf]: http://www.openbsd.org/faq/pf/
+[relayd]: http://bsd.plumbing/
