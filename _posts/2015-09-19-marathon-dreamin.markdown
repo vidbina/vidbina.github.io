@@ -139,8 +139,8 @@ For now... more [Inception junk][inception-info] for the weekend.
 Have a good one :tropical_drink:
 
 <div class="element image">
-  <a href="http://www.cinemablend.com/new/An-Illustrated-Guide-To-The-5-Levels-Of-Inception-19643.html">
-    <img src="http://www.cinemablend.com/images/news/19643/_1280109452.jpg" alt="Illustrated guide to the 5 levels of inception">
+  <a href="https://www.cinemablend.com/new/An-Illustrated-Guide-To-The-5-Levels-Of-Inception-19643.html">
+    <img src="https://www.cinemablend.com/images/news/19643/_1280109452.jpg" alt="Illustrated guide to the 5 levels of inception">
   </a>
 </div>
 
