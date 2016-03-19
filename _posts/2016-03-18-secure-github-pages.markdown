@@ -116,15 +116,54 @@ means of finding the closest mirror for content. The tools of use at Kloudsec
 include BIND (recursive acronym for _Bird Internet Routing Daemon_) which as
 the name implies deals with routing, while `pf` is used for packet filtering
 in combination with `relayd` which aids in dynamically changing the `pf`
-configuration, but don't take it from me.
-[Read all about it on the Kloudsec site.][kloudsec-anycast].
+configuration, but don't take it from me,
+read the inside scoop from [Bach Le at Kloudsec][kloudsec-anycast].
 
-<!--
-## Shadowing
+## Friendly Defacing
 
-In order to provide some redundancy, Kloudsec offers a mirroring service that
-basically
--->
+Another thing to consider is that Kloudsec mutates the page with some
+additional logic. The goodfellas and gals at Kloudsec need to record some
+performance metrics for the dashboard, and just to get an impression of
+whatever they add take a look at the source for [a simple HTML page](/blank)
+that originally just contained the following code:
+
+{% highlight html %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>untitled</title>
+    <script>console.log("here we go");</script>
+  </head>
+  <body>
+    Move along. Nothing to see here!
+  </body>
+</html>
+{% endhighlight %}
+
+If you're okay with all the "defacing", just go ahead and jump into Kloudsec.
+Essentially whatever happens here is that Kloudsec simply adds script tags to
+your pages. Somewhere it kind of creeps me out that they do it for me.
+
+## CA Housekeeping
+
+Another thing to consider is that using the Kloudsec service requires you to
+**trust** Kloudsec. Kloudsec holds the certificates and they provide the first
+front for your page on the web. They could provide resources that aren't yours
+but are hardly indistinguishable from the resources you intended to provide.
+In short, if there would be anything somewhere in the middle, it could be them.
+To be fair, if Github were to offer HTTPS pages for custom domains, they
+would have that power too, so what am I really bitching about here?!? With a
+similar solution you kind of have to be okay with another party holding that
+certificate for your domain.
+
+# Conclusion
+
+In conclusion: The TLS, CDN and mirroring features that are offered are pretty
+cool, a few topics raise minor concerns but I needed to invest less than 5
+minutes of my live to see it work -- that is, if I
+ignore all the work I still have left to do in removing all non-HTTPS links
+throughout my repository :stuck_out_tongue:.
 
 [kloudsec-proxy]: https://blog.kloudsec.com/how-to-setup-github-custom-domain-with-https/
 [kloudsec-anycast]: https://blog.kloudsec.com/building-an-anycast-network/
