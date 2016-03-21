@@ -401,8 +401,7 @@ header a {
 }
 div.highlight {
   border-radius: 2px;
-  overflow-x: auto;
-  overflow-y: auto;
+  overflow-x: scroll;
 }
 .post pre {
   padding: 0 .4em;
