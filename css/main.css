@@ -399,7 +399,7 @@ header a {
   margin-bottom: 0.25em;
   line-height: 1em;
 }
-div.highlight {
+.highlight {
   border-radius: 2px;
   overflow-x: scroll;
 }
@@ -513,7 +513,7 @@ div#impress {
 .slide img {
   float: none!important;
 }
-.slide div.highlight {
+.slide .highlight {
   padding: 0.25em;
   -webkit-border-radius: 0.25em;
 }
