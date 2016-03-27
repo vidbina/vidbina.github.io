@@ -41,8 +41,8 @@ state that:
 
 $$f'(x) = \frac{a'(x)\cdot b(x) - a(x)\cdot b'(x)}{b(x)^2}$$
 
-Working out the math for the derivative to $\frac{1}{1+e^{-x}}$ leads to the
-following result:
+Now that we know how to work out the derivative to a quotient we can basically
+work out $a'(x)$ and $b'(x)$ in order to fill in the blanks later.
 
 $$ % show how to differentiate numerator and denominator
 \begin{align}
@@ -51,7 +51,8 @@ $$ % show how to differentiate numerator and denominator
 %        &                     &        & \frac{d}{dx}e^{-x} &= (\frac{d}{dx}(-x))\cdot e^{-x} \\
 \end{align}$$
 
-Filling in the blanks we get:
+Working out the math for the derivative to $\frac{1}{1+e^{-x}}$ leads to the
+following result, given the quotient rule:
 
 $$f'(x) = \frac{-1\cdot (-1 e^{-x})}{(1+e^{-x})^2} = \frac{e^{-x}}{(1+e^{-x})^2}
 $$
@@ -74,7 +75,7 @@ the square of one remains one, yet this operation paves the way to squaring
 the entire term (numerator and denominator) which offers another
 simplification $\frac{a^n}{b^n} = (\frac{a}{b})^n$.
 
-$$\frac{1}{(1+e^{-x})} - \Bigg(\frac{1}{(1+e^{-x})}\Bigg)^2$$
+$$\frac{1}{(1+e^{-x})} - \bigg(\frac{1}{(1+e^{-x})}\bigg)^2$$
 
 Since $\sigma(x)$ is equals to $\frac{1}{1+e^{-x}}$ as we've seen in the
 definition (first expression in this post), we can simplify our result to.
@@ -92,3 +93,4 @@ $$
 [jump-discontinuity]: https://en.wikipedia.org/wiki/Classification_of_discontinuities#Jump_discontinuity
 [differentiable]: https://en.wikipedia.org/wiki/Differentiable_function
 [diff-notation]: http://www.maths.manchester.ac.uk/~cds/articles/derivative.pdf
+[youtube-sigmoid]: https://www.youtube.com/watch?v=aVId8KMsdUU
