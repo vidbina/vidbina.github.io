@@ -25,6 +25,8 @@ og:
 #  image: http://example.com
 mathjax: true
 function_plot: true
+head: mugshot
+mugshot_description: My face in 2015, I probably still look like this.
 ---
 Step functions enforce some threshold on a variable e.g.: discard anything
 below a certain value. Given $u(x)$ any value equal to or greater than $0$

@@ -325,6 +325,22 @@ html, body { height: 100%; }
     width: 200px;
     height: 200px;
     border-radius: 100px;
+    &.mugshot {
+      width: 140px;
+      height: 140px;
+      //border: 10px solid #111;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      text-indent: 9999px;
+      display: inline-block;
+      span {
+        display: inline-block;
+      }
+      &.2015 {
+        background-image: url(https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/mugshots/2015.jpg);
+      }
+    }
   }
 
   .site > header > h1 > a {
@@ -565,10 +581,8 @@ html, body { height: 100%; }
     margin: 20px 0 20px 0;
   }
   #title > h1 > span, #title > h2 > span, strong {
-    /*
-    color: #111;
-    background-color: #ccc;
-    */
+    //color: #111;
+    //background-color: #ccc;
   }
   .impress-supported .logo {
     display: inline-block;
