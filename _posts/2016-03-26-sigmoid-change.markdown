@@ -192,20 +192,19 @@ $$
 
 It's pretty clear that $e^{-x}$ is equal to $(1+e^{-x})-1$. That part is
 trivial to understand, however; it is pretty brilliant to have the insight to
-organize the token as such in order to be able to eliminate tokens in the next
-step through this substitution.
+organize the tokens as such in order to be able to eliminate tokens in the
+next step through this substitution.
 
 $$\frac{(1+e^{-x})-1}{(1+e^{-x})^2}$$
 
-Go the extra mile to separate the expression into two separate terms
+Go the extra mile to separate the expression into two separate terms:
 
 $$\frac{(1+e^{-x})}{(1+e^{-x})^2} - \frac{1}{(1+e^{-x})^2}$$
 
-We can simplify the first term since there is a $(1+e^{-x})$ in both
-the numerator and denominator. The second term can be simplified by 
-expressing the value as the square of something which is simply $1 = 1^2$, yet
-this operation paves the way to squaring the entire term since
-$\frac{a^n}{b^n} = (\frac{a}{b})^n$.
+We can simplify the first term since $(1+e^{-x})$ occurs in both the numerator
+and denominator. The second term can be simplified by expressing the value as
+the square of something which is simply $1 = 1^2$, yet this operation paves
+the way to squaring the entire term since $\frac{a^n}{b^n} = (\frac{a}{b})^n$.
 
 $$\frac{1}{(1+e^{-x})} - \bigg(\frac{1}{(1+e^{-x})}\bigg)^2$$
 
