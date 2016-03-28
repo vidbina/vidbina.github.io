@@ -115,6 +115,7 @@ $$\sigma(x) = \frac{1}{1+e^{-x\beta}}$$
         width: 300,
         height: 225,
         target: "#sigmoid",
+        title: "weighted sigmoids",
         grid: true,
         disableZoom: true,
         xAxis: {domain: [-6,6]},
@@ -175,9 +176,10 @@ work out $a'(x)$ and $b'(x)$ in order to fill in the blanks later.
 
 $$ % show how to differentiate numerator and denominator
 \begin{align}
-  a(x)  &= 1                  &  b(x)  &= 1+e^{-x} \\
-  a'(x) &= \frac{d}{dx}1 = 0  &  b'(x) &= \frac{d}{dx}1 + \frac{d}{dx}e^{-x} = -1 e^{-x} \\
-%        &                     &        & \frac{d}{dx}e^{-x} &= (\frac{d}{dx}(-x))\cdot e^{-x} \\
+  a(x)  &= 1                  \\
+  a'(x) &= \frac{d}{dx}1 = 0  \\
+  b(x)  &= 1+e^{-x} \\
+  b'(x) &= \frac{d}{dx}1 + \frac{d}{dx}e^{-x} = -1 e^{-x} \\
 \end{align}$$
 
 Working out the math for the derivative to $\frac{1}{1+e^{-x}}$ leads to the
