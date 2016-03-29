@@ -2,17 +2,19 @@
 layout: post
 title: Sigmoid Change
 description: |
-  The sigmoid function provides a derrivable alternative for step function.
-  Take a look at how we derrive the sigmoid function and observe why she is so
-  elegant.
+  The sigmoid function provides a differentiable alternative to the step
+  function. Derrive the sigmoid function and observe why she is so elegant.
 date:  2016-03-26 17:17:52 +0100
 type:  math # for icon
 category: math # for url
 tags:
  - math
  - derrivative
+ - differentiation
+ - calculus
  - functions
  - step function
+ - sigmoid function
 og:
   type: article # http://ogp.me/#types
 #  og:type: # 
