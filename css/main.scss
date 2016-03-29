@@ -89,15 +89,27 @@ html, body { height: 100%; }
   .dark .post code { color: #ccc; }
   .dark .swap { background-color: #ccc; }
   .light .swap { background-color: #111; }
-  .dark, .dark a, .dark a:hover, .dark a:visited, .dark .logo path, .dark svg path, .dark .swap {
-    //fill: #ccc!important;
+  .dark, .dark a, .dark a:hover, .dark a:visited, .dark .logo path, .dark svg.logo path, .function-plot axis, .swap {
+    fill: #ccc!important;
     color: #ccc;
+  }
+  .dark blockquote {
+    border-color: #ccc;
+  }
+  .dark .function-plot .axis .tick line {
+    stroke: #ccc!important;
   }
   .dark .labels span { border-color: #ccc; }
 
   .light, .light a, .light a:hover, .light a:visited, .light .logo path, .light svg.logo path, .light .swap {
     fill: #111!important;
     color: #111;
+  }
+  .light blockquote {
+    border-color: #111;
+  }
+  .light .function-plot .axis .tick line {
+    stroke: #111!important;
   }
 
   .swap {
@@ -113,7 +125,7 @@ html, body { height: 100%; }
 
   blockquote {
     border-left: 0.5em solid #111;
-    padding-left: 2em;
+    padding-left: 1em;
   }
   blockquote footer {
     text-align: right;
