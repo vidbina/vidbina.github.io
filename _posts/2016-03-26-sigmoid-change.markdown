@@ -28,6 +28,7 @@ function_plot: true
 head: mugshot
 mugshot_description: My face in 2015, I probably still look like this.
 ---
+{% assign graphs = true %}
 Step functions enforce some threshold on a variable e.g.: discard anything
 below a certain value. Given $u(x)$ any value equal to or greater than $0$
 would trigger a positive output ($1$ in this case), everything else just equals
@@ -56,6 +57,7 @@ $$\sigma(x) = \frac{1}{1+e^{-x}}$$
 The sigmoid function $\sigma(x)$, because of its differentiability :wink:, is
 sometimes used as an alternative to the step function $u(x)$.
 
+{% if graphs %}
 <div class="element graph">
   <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function(event) {
@@ -65,7 +67,7 @@ sometimes used as an alternative to the step function $u(x)$.
         height: 225,
         target: "#sigmoid-step",
         grid: true,
-        disableZoom: false,
+        disableZoom: true,
         xAxis: {domain: [-10,10]},
         yAxis: {domain: [-0.1, 1.1]},
         data: [
@@ -87,6 +89,7 @@ sometimes used as an alternative to the step function $u(x)$.
   </script>
   <div id="sigmoid-step"></div>
 </div>
+{% endif %}
 
 > Why care for differentiability? Well, when determining the coefficients for a
 neural network methods such as _back propagation_ depend on the ability to
@@ -110,6 +113,7 @@ function quite closely in comparison to the other plots.
 
 $$\sigma(x) = \frac{1}{1+e^{-x\beta}}$$
 
+{% if graphs %}
 <div class="element graph">
   <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function(event) {
@@ -157,6 +161,7 @@ $$\sigma(x) = \frac{1}{1+e^{-x\beta}}$$
   </script>
   <div id="sigmoid"></div>
 </div>
+{% endif %}
 
 However enticing, during this post we'll keep our eyes set on the unweighted
 sigmoid.
