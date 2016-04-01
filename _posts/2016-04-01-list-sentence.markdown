@@ -28,9 +28,10 @@ mathjax: true
 ---
 So I just needed to present a list of authors in an article but I didn't want
 to resort to writing a stupid text shoving helper.
-The sun :sun: is beating down on me after the pasta :pasta: carbonara I just
-devoured so I'm in
-a good mood to share a little snippet I may need again in the future :wink:.
+
+The sun :sunny: is beating down on me after the pasta :spaghetti:
+carbonara I just devoured so I'm in a good mood to share a little snippet I
+may need again in the future :wink:.
 
 So for future me...
 
