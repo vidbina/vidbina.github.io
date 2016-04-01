@@ -1,0 +1,7 @@
+{% if page.head == "africa" %}
+  {% include logos/africa.html %}
+{% elsif page.head == "mugshot" %}
+  {% include logos/mugshot.html %}
+{% else %}
+  {% include logos/avatar.html %}
+{% endif %}
