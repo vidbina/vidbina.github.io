@@ -2,7 +2,7 @@
 layout: post
 title: List Sentence
 description: |
-  Presenting semantic lists as we would've presented them in a sentence.
+  Presenting HTML lists as we would've presented them in a sentence.
 date:  2016-04-01 13:12:03 +0200
 type: web # for icon
 category: web # for url
