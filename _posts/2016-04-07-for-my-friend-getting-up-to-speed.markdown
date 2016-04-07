@@ -147,7 +147,7 @@ makes more sense. On the other end, ramping up the number of webservices,
 because there is more traffic on the site sometimes requires some finesse.
 Perhaps you want to equally distribute the workload over all virtual machines,
 instead of cracking down on a single VM to the limit. [Mesos][mesos],
-[kubernetes][kubernetes] and [docker-swarm][docker-swarms] are a few tools
+[kubernetes][kubernetes] and [docker-swarm][docker-swarm] are a few tools
 that make this a bit easier. You could tell these tools, to ramp up certain
 containers on some VM's with specific hardware by using labels (e.g.: only ramp
 up database containers on machines that have very fast SSD storage instead of
