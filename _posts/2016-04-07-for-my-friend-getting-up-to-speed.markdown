@@ -2,13 +2,20 @@
 layout: post
 title: For my Friend Getting up to Speed
 description: |
-  
+  After a while of project management work, a friend is yearning to in on the
+  action again. Things change fast so as of April 2016 I'll try to list a few
+  things that I deem instrumental in understanding and building modern system 
+  for the web.
 date:  2016-04-07 16:14:42 -0400
 type: web # for icon
 category: web # for url
 tags:
- - TAGA
- - TAGB
+ - web
+ - patterns
+ - trends
+ - development
+ - cloud
+ - engineering
 #og:
 #  type: OG:TYPE # http://ogp.me/#types
 #  og:type: # 
@@ -19,6 +26,7 @@ tags:
 #twitter:
 #  card: summary_large_image
 #  image: http://example.com
+head: mugshot
 ---
 
 This post is a work in progress... I'll keep editing it in the next couple of
@@ -31,8 +39,8 @@ software to Linux servers, and how to maintain them). I think you already used
 Linux a lot. Let's just assume from this point on that you do everything I
 recommend in the points below in Linux or OSX (any nix-based OS will work).
 
-> It may even make sense to stick to command-line tools like vim for text
-editing, tmux or screen for terminal multiplexing -- basically all non-gui
+> It may even make sense to stick to command line tools like vim for text
+editing, tmux or screen for terminal multiplexing -- basically all non-GUI
 tools. Why?!? Well, mostly servers don't run elaborate GUI's. Most of the work
 is done from the command line so you better get comfortable. Whenever I log
 into my Macbook, I open a tmux session and generally do all of my work from
@@ -49,9 +57,9 @@ language for the web but the problem is that, as applications grow, they become
 harder to maintain. The latest trend is to develop microservices which
 subdivide work into smaller tasks which are managed by a single application.
 
-Instead of a complete netflix-like application (that handles catalogueing,
-authentication, permission management, streaming, etc), one could build seperate
-video-decoding/encoding services that just translate video from one format to
+Instead of a complete Netflix-like application (that handles cataloging,
+authentication, permission management, streaming, etc), one could build separate
+video decoding/encoding services that just translate video from one format to
 another, authentication services that just look at user credentials and
 determine if they get permission for a certain action yes or no, cataloging
 services that simply look at a user and figure out which items should be
@@ -60,7 +68,7 @@ available.
 
 [Learn Rails from Hartl's tutorial](https://www.railstutorial.org) which will
 give you a great understanding of building applications that do everything).
-You will write a simple microblogging application, but that is good enough to
+You will write a simple micro blogging application, but that is good enough to
 understand how an application works that does multiple things. For an
 application this small it doesn't even make sense to try the microservices
 approach because that approach comes with a price, too. They're harder to
@@ -79,19 +87,68 @@ into Heroku. If you're a startup, I don't get why you'd have a problem with
 Heroku. I think Heroku is a wonderful solution to get applications live. Just
 focus on figuring out if the assumptions your company is based on are valid.
 Until you've validated or invalidated them and are serving people to the point
-that you get phonecalls of overjoyed clients, you have no reason to worry too
-much about "where" your application is running and "how" it is deployed.
+that you get phone calls of overjoyed clients, you have no reason to worry too
+much about _where_ your application is running and _how_ it is deployed.
 
 However; if you want to understand what the big fuss is about in application 
 development, lately you need to familiarize yourself with the following...
-configuration management (ansible, puppet, chef), containerization (docker,
-rkt), orchestration (docker-swarm, mesos, kubernetes).
-kubernetes). Basically I just listed a topic and a few solutions within the
-parenthesis. It is unlikely you'll be able to get a in-depth look at all of
-the listed options, but let's get at least a birds-eye view of what's possible.
+configuration management ([ansible][ansible], [puppet][puppet], [chef][chef]),
+containerization ([docker][docker], [rkt][rkt]), orchestration
+([docker-swarm][docker-swarm], [mesos][mesos], [kubernetes][kubernetes]).
+Basically I just listed a topic and a few solutions within the parenthesis. It
+is unlikely you'll be able to get a in-depth look at all of the listed options,
+but let's get at least a birds-eye view of what's possible.
 
 With configuration management we basically simplify how we provision and
-configure resources. Think about starting a new virtual machine at your
-provider, installing a base OS and some of the needed tools to get started.
+configure resources. Think about
 
-To be continued
+ - starting a new virtual machines at your provider,
+ - installing base OS-es and some of the needed tools to get started and
+ - setting up networking between the machines.
+
+After the machines are running you need to deploy applications to these boxes.
+I have used [capistrano][capistrano] a lot to do this. With
+[capistrano][capistrano], I would basically just install the necessary tools
+on the VM and set up the application, however; the problem with this occurs
+when one starts to run multiple applications on a single machine. Somehow the
+applications share libraries. If application A needs an updated version of
+some libs while application B wasn't yet updated to be compatible with the
+newer library we have problems :fire:. Containerization provides a solution by
+allowing us to run our applications in sandboxed environments. Every
+application runs in its own container. The only thing the applications share
+is the kernel (pretty low level). The libraries and all the other junk that is
+specific to the application is contained within... the container. Solutions
+like [docker][docker] and [rkt][rkt] make running containers quite easy.
+
+Whenever you have enough containers floating around, management of these
+suckers becomes rather tricky. Some containers you rather have running on the
+same machine for simplicity's sake. Having the database and the application
+that relies on that database running in different containers in different
+machines incurs extra networking overhead, running them on the same machines
+makes more sense. On the other end, ramping up the number of webservices,
+because there is more traffic on the site sometimes requires some finesse.
+Perhaps you want to equally distribute the workload over all virtual machines,
+instead of cracking down on a single VM to the limit. [Mesos][mesos],
+[kubernetes][kubernetes] and [docker-swarm][docker-swarms] are a few tools
+that make this a bit easier. You could tell these tools, to ramp up certain
+containers on some VM's with specific hardware by using labels (e.g.: only ramp
+up database containers on machines that have very fast SSD storage instead of
+cheaper and slower magnetic disks).
+
+[Try you hand at kubernetes](http://kubernetes.io/docs/hellonode/) and after
+that take a look at how things are being done in
+[docker-swarm](https://blog.docker.com/2016/03/swarmweek-advanced-orchestration-docker-swarm/).
+
+To be continued :construction:
+
+[ansible]: https://en.wikipedia.org/wiki/Ansible_(software)
+[puppet]: https://en.wikipedia.org/wiki/Puppet_(software)
+[chef]: https://en.wikipedia.org/wiki/Chef_(software)
+
+[capistrano]: https://en.wikipedia.org/wiki/Capistrano_(software)
+
+[docker]: https://en.wikipedia.org/wiki/Docker_(software)
+[docker-swarm]: https://docs.docker.com/swarm/
+[kubernetes]: https://en.wikipedia.org/wiki/Kubernetes
+[mesos]: https://en.wikipedia.org/wiki/Apache_Mesos
+
