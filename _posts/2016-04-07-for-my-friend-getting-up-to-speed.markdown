@@ -56,10 +56,10 @@ Check your feelings at the door for this one :door:. If you're not using
 It's simple and works well in teams. Run through the [git tutorial][git-guide]
 and make sure you understand what you just did.
 
-Also make sure you have a [Github][github] account. Pretty much
-every project that matters is on [Github][github] and many developers are
-sharing code there and collaborating on projects. Changes are that you will
-have to get an account just to get cracking. Get one now :octocat:.
+Also make sure you have a [Github][github] account. Pretty much every project
+that matters is on [Github][github] and many developers are sharing code there
+and collaborating on projects. Chances are that you will have to get an account
+just to get cracking. Get one now :octocat:.
 
 <div class="element">
   <div class="github-card" data-github="vidbina" data-width="400" data-height="150" data-theme="default"></div>
