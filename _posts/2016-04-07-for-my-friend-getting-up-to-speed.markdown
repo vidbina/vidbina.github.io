@@ -154,8 +154,8 @@ up database containers on machines that have very fast SSD storage instead of
 cheaper and slower magnetic disks).
 
 [Try you hand at kubernetes](http://kubernetes.io/docs/hellonode/) and after
-that take a look at how things are being done in
-[docker-swarm](https://blog.docker.com/2016/03/swarmweek-advanced-orchestration-docker-swarm/).
+that take a look at a wonderful example of [how things can be done in
+docker-swarm](https://blog.docker.com/2016/03/swarmweek-advanced-orchestration-docker-swarm/).
 
 To be continued :construction:
 
