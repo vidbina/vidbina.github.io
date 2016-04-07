@@ -34,7 +34,7 @@ days :construction:.
 
 ## The Right Environment
 
-become a proficient Linux user (why: I need you to understand how to deploy
+Become a proficient Linux user (why: I need you to understand how to deploy
 software to Linux servers, and how to maintain them). I think you already used
 Linux a lot. Let's just assume from this point on that you do everything I
 recommend in the points below in Linux or OSX (any nix-based OS will work).
@@ -48,6 +48,24 @@ there. I browse the web with Chrome and Safari, but every line of code written
 happens in vim, every time I need to jump between windows or interfaces I do
 that within or between my tmux session. When someone drops me on a server, I
 know how to find my way around :wink:.
+
+### Git Started! :checkered_flag:
+
+Check your feelings at the door for this one :door:. If you're not using
+[git][git-guide] you don't really matter -- sorry, but everyone is using git.
+It's simple and works well in teams. Run through the [git tutorial][git-guide]
+and make sure you understand what you just did.
+
+Also make sure you have a [Github][github] account. Pretty much
+every project that matters is on [Github][github] and many developers are
+sharing code there and collaborating on projects. Changes are that you will
+have to get an account just to get cracking. Get one now :octocat:.
+
+<div class="element">
+  <div class="github-card" data-github="vidbina" data-width="400" data-height="150" data-theme="default"></div>
+  <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
 
 ## Monoliths and Microservices
 
@@ -148,7 +166,11 @@ To be continued :construction:
 [capistrano]: https://en.wikipedia.org/wiki/Capistrano_(software)
 
 [docker]: https://en.wikipedia.org/wiki/Docker_(software)
+[rkt]: https://coreos.com/rkt/
+
 [docker-swarm]: https://docs.docker.com/swarm/
 [kubernetes]: https://en.wikipedia.org/wiki/Kubernetes
 [mesos]: https://en.wikipedia.org/wiki/Apache_Mesos
 
+[git-guide]: https://git-scm.com/book/en/v1/Getting-Started
+[github]: https://github.com
