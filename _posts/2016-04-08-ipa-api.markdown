@@ -1,0 +1,168 @@
+---
+layout: post
+title: IPA API
+description: |
+  The goons in Amsterdam are having a IPA & API's meetup. I couldn't help but
+  think about them once I saw a well-stocked IPA aisle at the Deli.
+date:  2016-04-08 08:02:35 -0400
+type: code # for icon
+category: code # for url
+tags:
+ - code
+ - web
+ - API
+ - beer
+ - IPA
+ - brew
+ - meetup
+ - Amsterdam
+ - Brooklyn
+#og:
+#  type: article # http://ogp.me/#types
+#  og:type: # 
+#   - og:value: value
+#     og:attr: foo
+#   - og:value: value
+#image: http://example.com
+#twitter:
+#  card: summary_large_image
+#  image: http://example.com
+head: mugshot
+---
+
+So a few fellas and gals are having a meetup in Amsterdam in a few minutes
+:hourglass_flowing_sand:, a few days ago I ran into a IPA :beers: aisle at the
+Deli, API and IPA are palindromes to each other, a few minutes ago I thought
+about useless API's in the shower :shower:... guess what, it's friday and I'm
+just connecting the dots here in a useless expenditure of time.
+
+> **DISCLAIMER:** You definitely have something better to do. If you read this
+post it's all on you :stuck_out_tongue_closed_eyes:. I take resposibility for
+writing this hunk of junk :shit: but you better take responsibility for
+reading it.
+
+## Put Beer into the fridge
+
+    PUT /brews
+
+Put some beer into the fridge first.
+
+You could drop crates into the fridge but that really doesn't make too much
+sense unless you have a walk-in fridge.
+
+{% highlight json %}
+{
+  "object": "crate",
+  "content": []
+}
+{% endhighlight %}
+
+You can also drop six-packs in the fridge... I'm just saying :smirk:.
+
+{% highlight json %}
+{
+  "object": "six-pack",
+  "content": []
+}
+{% endhighlight %}
+
+Just put single [bottles](https://en.wikipedia.org/wiki/Beer_bottle) into the
+fridge if you take this seriously. You'll get more packed in there.
+
+{% highlight json %}
+{
+  "object": "bottle",
+  "volume": "300",
+  "brand": "Backyard Brew",
+  "type": "IPA",
+  "state": "sealed",
+  "content": "300"
+}
+{% endhighlight %}
+
+The volume and content are expressed in milliliters. SI units rule! :metal:
+
+Perhaps you're more into the canned variant. Everything is possible.
+
+{% highlight json %}
+{
+  "object": "can",
+  "volume": "330",
+  "brand": "BeerPongKong",
+  "type": "Pale Lager",
+  "state": "sealed",
+  "content": "330"
+}
+{% endhighlight %}
+
+## Make inventory
+
+    GET /brews
+
+Figure out what there is in the fridge. Of course that liquid is best served
+cold :snowflake:.
+
+Perhaps you want to know which IPA's you have stocked up on, then just provide
+the following data with the `GET` request.
+
+{% highlight json %}
+{
+  "type": "IPA",
+  "state": "sealed"
+}
+{% endhighlight %}
+
+Perhaps you need something specific... like for example something of a certain
+brand? Then again, send data with the `GET` request.
+
+{% highlight json %}
+{
+  "brand": "BeerPongKong"
+}
+{% endhighlight %}
+
+The result should look something like this:
+
+{% highlight json %}
+[
+  {
+    "uuid": "something-something-something-darkside",
+    "object": "bottle",
+    "etc": "etc"
+  },
+  {
+    "uuid": "another-something-something-darkside",
+    "object": "bottle",
+    "etc": "etc"
+  },
+]
+{% endhighlight %}
+
+
+## Get something to quench that thirst
+
+    GRAB /brews/random
+
+Surprise yourself. Just have a cold one. A random brew that will hopefully
+titillate the senses.
+
+Be social about it, get some for your friends too.
+
+## Drink
+
+    GULP /brews/:uuid
+
+Take a sip of that liquid delight in you hands at the moment. You can also run
+around the room and take sips of everyone's beer to everyone's dismay and
+every warm unfinished one on the tables. Not saying it's good for you, but it's
+possible.
+
+> NOTE: Grabbed beers don't show up in the fridge anymore. So `GET /brews` will
+not display the grabbed beers, however; you could still take a gulp of any
+grabbed beer provided that there is something in it.
+
+:shit: I have to get to work...
+
+    DELETE /brews/:uuid
+
+:recycle:d
