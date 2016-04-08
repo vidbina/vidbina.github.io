@@ -21,10 +21,10 @@ og:
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
-#image: http://example.com
-#twitter:
-#  card: summary_large_image
-#  image: http://example.com
+image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/weightedsigmoid_thumb.png
+twitter:
+  card: summary
+  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/weightedsigmoid_thumb.png
 mathjax: true
 function_plot: true
 head: mugshot
