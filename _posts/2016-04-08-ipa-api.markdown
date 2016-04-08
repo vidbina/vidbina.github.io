@@ -23,10 +23,10 @@ og:
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
-image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/es6const1.png
+image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/ipas.png
 twitter:
   card: summary_large_image
-  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/es6const1.png
+  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/ipas.png
 head: mugshot
 ---
 
