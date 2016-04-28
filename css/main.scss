@@ -64,6 +64,9 @@ table {
 html, body { height: 100%; }
 
 #classic {
+  .strike {
+    text-decoration: line-through;
+  }
   body {
     font: 11pt Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-align: center;
