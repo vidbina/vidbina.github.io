@@ -6,8 +6,8 @@ description: |
   developed European city is not in support of Brittain's decision and I'm
   just trying to put things into perspective.
 date:  2016-06-26 09:38:34 +0200
-type: politics # for icon
-category: politics # for url
+type: news # for icon
+category: news # for url
 tags:
  - brexit
  - EU
