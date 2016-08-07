@@ -3,9 +3,9 @@ layout: post
 title: Outside the bubble
 description: |
   The Brits voted for Brexit. The shared sentiment throughout a lot of the
-  European continent that is well covered by western media outlets seems to be
-  less or not supportive of Britain's decision and I'm just trying to put
-  things into perspective.
+  European continent that is covered by western "progressive" media outlets
+  seems to be less or not supportive of Britain's decision and I'm just trying
+  to put things into perspective for myself.
 date:  2016-06-26 09:38:34 +0200
 type: opinion # for icon
 category: opinion # for url
