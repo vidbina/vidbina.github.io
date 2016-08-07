@@ -152,7 +152,9 @@ the same continent isn't enough to get a sense of solidarity grounded in the
 people. Perhaps Europe needs the EU to feel less fractured, but perhaps the EU
 should be more democratic still.
 
-What do I know though...
+What do I know though... Let's all just keep an open mind about the plight of
+others and the true merits of the institutes we sustain, for [the end does not
+always justify the means, or does it](https://en.wiktionary.org/wiki/the_end_justifies_the_means)?!?
 
 [^q]: It depending on what software you write.
 [^blend]: Actually, don't waste your finest blend on me. I probably wouldn't even taste the difference.
