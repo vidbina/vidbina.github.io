@@ -31,30 +31,36 @@ namespace :site do
     exec "jekyll serve -w"
   end
 
-  desc 'generate new post'
+  desc 'generate new post as `rake site:new "Title" "category"`'
   task :new do
-    ARGV.each { |arg| task arg.to_sym do; end }
+    ARGV.each do |arg| 
+      p "arg is #{arg}"
+      task arg.to_sym do; end
+    end
     args = ARGV
 
     time = Time.now
     title = args[1]
-    category= args[2]
+    category = args[2]
     args.shift
+    if title and category
+      p "title is #{title} category is #{category}"
 
-    front_matter = File.open('_includes/front.template.yml', 'r') do |f|
-      template = f.read
-      template = template.gsub '{{DATE}}', time.to_s
-      (template = template.gsub '{{TITLE}}', title) if title
-      (template = template.gsub '{{CATEGORY}}', category) if category
-      template
+      front_matter = File.open('_includes/front.template.yml', 'r') do |f|
+        template = f.read
+        template = template.gsub '{{DATE}}', time.to_s
+        (template = template.gsub '{{TITLE}}', title) if title
+        (template = template.gsub '{{CATEGORY}}', category) if category
+        template
+      end
+
+      filename = "#{time.strftime '%Y-%m-%d'}-#{title.downcase}".gsub ' ', '-'
+      file = "_drafts/#{filename}.markdown"
+      File.open(file, "w") do |f|
+        f.puts front_matter
+      end
+
+      exec "git add #{file}"
     end
-
-    filename = "#{time.strftime '%Y-%m-%d'}-#{title.downcase}".gsub ' ', '-'
-    file = "_drafts/#{filename}.markdown"
-    File.open(file, "w") do |f|
-      f.puts front_matter
-    end
-
-    exec "git add #{file}"
   end
 end
