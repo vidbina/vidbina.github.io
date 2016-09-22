@@ -30,6 +30,8 @@ This morning I learned about Kloudsec, a service that offers a CDN, HTTPS
 encryption and shadowing in case Github pages are unavailable[^1]
 :stuck_out_tongue:. 
 
+> **UPDATE (September 22, 2016)**: Kloudsec is down :sob:, but Steve left [a few notes](https://www.reddit.com/r/webdev/comments/4s3kmf/got_an_email_saying_that_kloudsec_will_be/) for his follower and clients. Do yourself a favor and ignore this post from now up.
+
 [^1]: Hell does freeze over [occasionally](https://news.ycombinator.com/item?id=7130624), so don't think you would never need it :wink:
 
 ## Update DNS
