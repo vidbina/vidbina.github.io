@@ -175,6 +175,8 @@ throughout my repository :stuck_out_tongue:. It's pretty dope :metal:.
 
 For now I've got some work to do :sweat:
 
+> **UPDATE (September 22, 2016)**: You could setup [Cloudflare](https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/) if you still want serve secured github pages.
+
 [kloudsec-proxy]: https://blog.kloudsec.com/how-to-setup-github-custom-domain-with-https/
 [kloudsec-anycast]: https://blog.kloudsec.com/building-an-anycast-network/
 [bird]: http://bird.network.cz/
