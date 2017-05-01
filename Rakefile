@@ -1,4 +1,4 @@
-require 'dotenv/tasks'
+#require 'dotenv/tasks'
 
 namespace :site do
   desc 'Clean up the site directory'
@@ -12,9 +12,9 @@ namespace :site do
   end
 
   desc 'Upload'
-  task :upload => :dotenv do
-	  exec "rsync -avz --copy-links --del _site/ #{ENV['WEBSITE_USER']}:#{ENV['WEBSITE_PATH']}"
-  end
+  #task :upload => :dotenv do
+	#  exec "rsync -avz --copy-links --del _site/ #{ENV['WEBSITE_USER']}:#{ENV['WEBSITE_PATH']}"
+  #end
 
   desc 'reload'
   task :reload => [ :clean, :build, :upload ] do
