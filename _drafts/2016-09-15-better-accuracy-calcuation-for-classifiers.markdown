@@ -1,10 +1,10 @@
 ---
-layout: {{TYPE}}
+layout: post
 title: Better accuracy calcuation for classifiers
 description: |
-  {{DESCRIPTION}}
+  WIP
 date:  2016-09-15 17:09:06 +0200
-type: {{TYPE}} # for icon
+type: math # for icon
 category: math # for url
 tags:
  - TAGA
