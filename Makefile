@@ -16,5 +16,12 @@ server:
 server-dev:
 	${DOCKER} run --rm -it -p 4000:4000 -v ${PWD}:/src -w /src ${IMAGE} rake site:review
 
+nginx:
+	${DOCKER} run --rm -v ${PWD}/_site:/usr/share/nginx/html:ro --name vidbina.nginx -p 8080:80 -d nginx
+
 .PHONY: \
+	image
+	nginx
 	shell
+	server
+	server-dev
