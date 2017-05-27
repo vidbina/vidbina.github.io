@@ -46,7 +46,7 @@ namespace :site do
     if title and category
       p "title is #{title} category is #{category}"
 
-      front_matter = File.open('_includes/front.template.yml', 'r') do |f|
+      front_matter = File.open('_includes/front.template.jekyll', 'r') do |f|
         template = f.read
         template = template.gsub '{{DATE}}', time.to_s
         (template = template.gsub '{{TITLE}}', title) if title
