@@ -99,7 +99,7 @@ an organic change that we'll have to evolve through over the course of the
 next years, decades or perhaps centuries.
 
 Meanwhile, I'll be more careful about title attribution. Perhaps I'll just
-talk less :evil_grin:
+talk less :speak_no_evil:
 
 If we could just apply regular expressions in natural language...
 
