@@ -11,6 +11,9 @@ category: reflection # for url
 tags:
  - reflection
  - generalization
+ - classifiers
+ - classification
+ - machine learning
  - titles
  - gender
 og:
@@ -27,7 +30,7 @@ head: mugshot
 ---
 Thinking to be polite, I just addressed a lady by the title "sir". In the
 split-second in which my brain realised I would have to ask her to keep a
-watchful eye over my stuff it deduced that a "sporty outfir" and a
+watchful eye over my stuff it deduced that a "sporty outfit" and a
 _bald head_ had a high probability of fitting the _male_ profile.
 
 Well... I was wrong. Technically, I was correct but any trained classifier
@@ -35,11 +38,22 @@ is bound to make some misclassifications from time to time. This
 misclassification is perfectly palatable when we're just working the math
 but becomes painful when materialized into a social encounter.
 
+
 She could have been a cancer patient. I meant absolutely no harm, in fact,
 the usage of a title was simply done out of respect. You could say that
 my efforts to be "nice" inflicted some harm after all. Understandably she
 was visibly annoyed by this and despite the fact that I apologised, I
 probably contributed to one of the multiple dreaded episodes of her day.
+
+> This encounter served as a reminder that the problems we are analysing or
+modelling have a real impact on human lives. It's comfortable to hide
+behind data and models and keep the entire ordeal an intellectual exercise,
+but it isn't limited to simply a puzzle. Economic models impact families,
+those classifiers that identify health risks will impact lives and our
+deduction will too. Somewhere a doctor will eventually deliver good or
+bad news to someone after analysing the suggestions we generated through our
+classifiers or other types of machine learning models. Always remember that,
+self.
 
 I know our mind generalizes and intuitively deduces things to offload
 some work from our active though processes. By not overanalyzing every 
@@ -87,7 +101,7 @@ next years, decades or perhaps centuries.
 Meanwhile, I'll be more careful about title attribution. Perhaps I'll just
 talk less :evil_grin:
 
-If we could just apply regular expressions in natural language.
+If we could just apply regular expressions in natural language...
 
 ````
 Excuse me, .*
