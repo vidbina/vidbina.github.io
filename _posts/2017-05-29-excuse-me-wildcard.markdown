@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Excuse me, sir, madam... `.*`
+title: Excuse me, (sir|madam|.*)
 description: |
   Just got in an awkward social predicament by using gender-based title
   in an effort to be polite. The things we do without actively thinking
@@ -64,6 +64,17 @@ Then again you could ask... why should the recipient of the title usage
 be sensitive about the title they are addressed by?!? There are many
 sides to this.
 
+> I for one, remember being offended when I was constantly addressed as a
+lady before my voice broke simply because I wanted to be associated to
+masculinity and the title was a big part of it. I was a little nerdy and
+very insecure little boy. Insecurity not being a rare trait for anyone in
+the sensitive pre-teen and teen years. I wanted so many things as a child.
+Wanted to be older, wanted to be bigger, wanted to be independent, wanted
+no-one to tell me which vegetables to eat, wanted to be able to go to the
+supermarket and buy whatever the fuck I wanted... now things are slightly
+different. Got all of those things, lost some of the carefreeness. Pros
+and cons, right?!? :stuck_out_tongue_winking_eye:
+
 Mind you, I'm not saying the social construct is out of place. It is there
 for a reason, I suppose, however; in light of our recent understanding of
 the complexity and non-dichotomous nature of "gender" that it is probably
@@ -79,7 +90,7 @@ talk less :evil_grin:
 If we could just apply regular expressions in natural language.
 
 ````
-Excuse me .*
+Excuse me, .*
 ```
 
 Social constructs are so complicated, back to machines...
