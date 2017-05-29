@@ -33,8 +33,8 @@ split-second in which my brain realised I would have to ask her to keep a
 watchful eye over my stuff it deduced that a "sporty outfit" and a
 _bald head_ had a high probability of fitting the _male_ profile.
 
-Well... I was wrong. Technically, I was correct but any trained classifier
-is bound to make some misclassifications from time to time. This
+Well... I was wrong :pensive:. Technically, I was correct but any trained
+classifier is bound to make some misclassifications from time to time. This
 misclassification is perfectly palatable when we're just working the math
 but becomes painful when materialized into a social encounter.
 
