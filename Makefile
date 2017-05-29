@@ -8,7 +8,7 @@ image:
 	${DOCKER} build . -t ${IMAGE}
 
 shell:
-	${DOCKER} run --rm -it -p 4000:4000 -v ${PWD}:/src -w /src ${IMAGE} /bin/sh
+	${DOCKER} run --rm -it -p 4000:4000 -v ${PWD}:/src -w /src ${IMAGE} /bin/bash
 
 server:
 	${DOCKER} run --rm -it -p 4000:4000 -v ${PWD}:/src -w /src ${ENV} ${SERVE} ${IMAGE} rake site:serve
