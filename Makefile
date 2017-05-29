@@ -19,6 +19,10 @@ server-dev:
 nginx:
 	${DOCKER} run --rm -v ${PWD}/_site:/usr/share/nginx/html:ro --name vidbina.nginx -p 8080:80 -d nginx
 
+mathjax:
+	git clone https://github.com/mathjax/MathJax.git js/MathJax
+
+
 .PHONY: \
 	image
 	nginx
