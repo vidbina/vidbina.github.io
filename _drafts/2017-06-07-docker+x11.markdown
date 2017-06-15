@@ -64,9 +64,9 @@ This problem may in several cases be resolved by adding the docker instance's ho
 to the X11 access control list.
 
 
-```
+{% raw %}
 xhost +local:`docker inspect --format {{.Config.Hostname}} NAME_OF_CONTAINER`
-```
+{% endraw %}
 
 > In NixOS `xhost` is part of the `xorg` package. Just add `xorg.xhost` as one of the
 packages :wink: as demonstrated below:
