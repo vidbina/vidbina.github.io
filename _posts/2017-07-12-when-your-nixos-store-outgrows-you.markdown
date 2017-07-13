@@ -36,7 +36,7 @@ machine...
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
-After noticing that I could build chromium with WideVine support, which I needed
+After noticing that I could build chrome with WideVine support, which I needed
 anyways for Netflix :unamused: I managed to trigger the most rigorous build on
 my nix setup to date. DAMN.
 
