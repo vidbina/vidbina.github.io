@@ -148,6 +148,9 @@ So I'll `sudo systemctl hibernate` and continue this busy work later... Well bus
 for the machine... I basically just read papers, chat with cool people including my
 Startupbus family and of course... chill :grin:
 
+> The day after the build [failed](https://github.com/NixOS/nixpkgs/issues/26299). :shit:
+Debugging :frown:
+
 <div class="element">
   <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">🛳<a href="https://twitter.com/TOABerlin">@TOABerlin</a> in a 🌰shell : <a href="https://twitter.com/hashtag/deeplearning?src=hash">#deeplearning</a> for <a href="https://twitter.com/hashtag/bots?src=hash">#bots</a>, <a href="https://twitter.com/Google">@Google</a> <a href="https://twitter.com/hashtag/coffee?src=hash">#coffee</a> <a href="https://twitter.com/ClubMate_UK">@ClubMate_UK</a> <a href="https://twitter.com/hashtag/tech?src=hash">#tech</a> <a href="https://twitter.com/hashtag/android?src=hash">#android</a> 👓<a href="https://twitter.com/hashtag/AI?src=hash">#AI</a> <a href="https://twitter.com/hashtag/building?src=hash">#building</a> <a href="https://twitter.com/Crowdcube">@Crowdcube</a> <a href="https://twitter.com/hashtag/product?src=hash">#product</a> ON A BOAT <a href="https://t.co/a9j9dSRYzQ">pic.twitter.com/a9j9dSRYzQ</a></p>&mdash; mahoney turnbull 马甜甜 (@mahoneyjkt) <a href="https://twitter.com/mahoneyjkt/status/885435818445332482">July 13, 2017</a></blockquote>
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
