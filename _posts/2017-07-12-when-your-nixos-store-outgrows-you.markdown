@@ -96,10 +96,10 @@ NewDealDesign](https://newdealdesign.com/studio) (one of the bright minds behind
    Max-Planck Institute and
    - a plethora of AI-heads working on a number of different problems.
    
-Meanwhile I'm dealing with my little machine fuck-up :devil:.
+Meanwhile I'm dealing with my little machine fuck-up :rage:
 
 <div class="element video">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OazFiIhwAEs" frameborder="0" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/OazFiIhwAEs" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <div class="element">
@@ -117,11 +117,11 @@ In my case `realpath /dev/disk/by-uuid/UUID_OF_SWAP_B` pointed to `/dev/dm-N`
 which is the path for a mapped device so out it went.
 
 
-```nix
-  swapDevices =
-  [ { device = "/dev/disk/by-uuid/UUID_OF SWAP_A"; }
-    # { device = "/dev/disk/by-uuid/UUID_OF_SWAP_B"; }
-  ];
+```
+swapDevices = [
+  { device = "/dev/disk/by-uuid/UUID_OF SWAP_A"; }
+  # { device = "/dev/disk/by-uuid/UUID_OF_SWAP_B"; }
+];
 ```
 
 After a reboot, I was able to remove the swap partition with
@@ -156,13 +156,19 @@ Debugging :frown:
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
+> The [Nix manual](https://nixos.org/nixos/manual/index.html#sec-nix-gc) mentions the use of the
+`nix-store --optimise` command which, also in my case cleaned up 20 gigs of 50 so yeah... do
+yourself a favor. :wink:
+
 ## Learnings
 
  - install your home directory to a seperate partition... you'll be glad you did someday
  - do encrypt your :shit: (just because...)
  - use LVM... It's convenient to be able to stitch LV's together if you ever run out of space :wink:
+ - read up on [how to clean your Nix store](https://nixos.org/nixos/manual/index.html#sec-nix-gc)
 
 ## Links
 
 - [Installing NixOS by Chris Martin](https://chris-martin.org/2015/installing-nixos)
 - [Resizing a Btrfs File System](https://docs.oracle.com/cd/E37670_01/E37355/html/ol_use_case2_btrfs.html)
+- [Cleaning the Nix store](https://nixos.org/nixos/manual/index.html#sec-nix-gc)
