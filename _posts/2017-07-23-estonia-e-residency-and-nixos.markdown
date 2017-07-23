@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Estonia's e-Residency and NixOS
+title: Estonia's e-Residency & NixOS
 description: |
   Safe yourself some trouble with the qesteidutil tool and just get the update
   if you are running into some certificate-related issues.
