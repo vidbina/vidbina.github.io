@@ -26,7 +26,7 @@ namespace :site do
     exec "jekyll serve -H 0.0.0.0 -wD "
   end
 
-  desc 'serve'
+  desc 'server'
   task :server do
     exec "jekyll serve -H 0.0.0.0 -w"
   end
