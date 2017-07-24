@@ -44,11 +44,10 @@ to look like.
   <img src="/img/qesteidutil-after-scaleddown.png" alt="The qesteidutil tool with the footer providing valuable information about the certificates.">
 </div>
 
-I've submitted a patch for NixOS that should be part of the
-[17.03-small](https://github.com/NixOS/nixpkgs-channels/tree/nixos-17.03-small)
-soon enough if it gets accepted. If not, override the qesteidutil package in
+I've submitted a patch for NixOS that should be part of [17.03-small](https://github.com/NixOS/nixpkgs-channels/tree/nixos-17.03-small)
+soon enough, if it gets accepted. If not, override the qesteidutil package in
 your custom setup or perform the changes in the [qesteidutil: 3.12.2.1206 -> 3.12.5.1233](https://github.com/NixOS/nixpkgs/pull/27599)
-to quickly move past this issue.
+PR to quickly move past this issue.
 
 ## Links
 
