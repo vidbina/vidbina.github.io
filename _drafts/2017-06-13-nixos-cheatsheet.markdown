@@ -30,12 +30,6 @@ for the reminders :wink:.
 
 # Nix Basics
 
-When running on NixOS simplify your life by making the Nix repl available.
-
-```
-nix-env -i nix-repl
-```
-
 In Nix* parlance you will often notice the terms [profile][nix-profiles] and
 generation being thrown around. One should have a decent understanding of the
 nix store to demystify these concepts.
@@ -91,14 +85,16 @@ switch environments by simply rerouting symlinks. This is the where NixOS gets
 to boast atomic profile switches or updates.
 
 > Note that `$HOME/.nix-profile` is symlinked to `/nix/var/nix/profiles/per-user/vid/profile`
-in my case, which happens to me symlinked to `/nix/var/nix/profiles/per-user/vid/profile-NN-link`
+in my case, which happens to be symlinked to `/nix/var/nix/profiles/per-user/vid/profile-NN-link`
 (where NN is some number). Inside the `/nix/var/nix/profiles/per-user/vid`
 directory I find a couple of symlinks that fit the profile-NN-link pattern
 which makes the changing of my profile as simple as just switching the
 profile symlink to point to one of those profile-NN-link targets :wink:.
+Atomic AF!
 
-<!-- `$HOME/.nix-profile/bin:$HOME/.nix-profile/sbin:$HOME/.nix-profile/lib/kde4/libexec:/nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/default/sbin:/nix/var/nix/profiles/default/lib/kde4/libexec:/run/current-system/sw/bin:/run/current-system/sw/sbin:/run/current-system/sw/lib/kde4/libexec` -->
-
+{% if fasle %}
+`$HOME/.nix-profile/bin:$HOME/.nix-profile/sbin:$HOME/.nix-profile/lib/kde4/libexec:/nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/default/sbin:/nix/var/nix/profiles/default/lib/kde4/libexec:/run/current-system/sw/bin:/run/current-system/sw/sbin:/run/current-system/sw/lib/kde4/libexec`
+{% endif %}
 
 # Packages
 
@@ -265,6 +261,35 @@ nixos-17.03-small.go            go-1.7.4
 If you still are still looking at this error message study these
 [Nix dev mailing list][nix-dev-name-coll] and [Stackexchange][name-coll]
 threads for more information. Godspeed :rocket:
+
+## Syntax
+
+I've been using NixOS for the better part of the last 2 months now and am still
+fighting with its syntax and eco-system from time to time. Since I'm a big
+believer or doing shit to understand what is going on, I decided to tweak a few
+packages to my liking or attempt to add some functionality that I needed as an
+exercise in wrapping my mind around the Nix-verse.
+
+Let's simplify our lives by making the Nix repl available.
+
+```
+nix-env -i nix-repl
+```
+
+Within the nix repl we can try out different statements and expressions and perform some
+introspection. Inside the repl we could
+
+ - enter `:?` for the help menu
+ - double TAB to trigger the autocompleter which exposes whatever is in scope :wink:
+ (e.g.: functions and variables).
+
+<div class="element img">
+  <img src="/img/nix-repl-intro.png" alt="Screenshot of nix-repl" />
+</div>
+
+So to drop to a practical use case. I've been meaning to override something in firefox for a
+while.
+
 
 ## Links
 
