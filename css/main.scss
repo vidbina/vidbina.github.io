@@ -88,8 +88,8 @@ html, body { height: 100%; }
   }
   body.dark { background-color: #111; }
   body.light { background-color: #ccc; }
-  .light .post code { color: #333; }
-  .dark .post code { color: #ccc; }
+  //.light .post code { color: #333; }
+  //.dark .post code { color: #ccc; }
   .dark .swap { background-color: #ccc; }
   .light .swap { background-color: #111; }
   .dark, .dark a, .dark a:hover, .dark a:visited, .dark .logo path, .dark svg.logo path, .function-plot axis, .swap {
@@ -441,8 +441,12 @@ html, body { height: 100%; }
     margin-bottom: 0.25em;
     line-height: 1em;
   }
-  .highlight {
+  .post .highlight, .post code {
     border-radius: 2px;
+    background-color: #333;
+    color: #ccc;
+  }
+  .highlight {
     overflow-x: scroll;
   }
   .post pre {
