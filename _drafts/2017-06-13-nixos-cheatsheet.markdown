@@ -25,8 +25,8 @@ og:
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
 ---
-Learning Nix, I felt the need to take note. My future self will thank me for the
-reminders :wink:.
+Learning Nix, I felt the need to take notes. My future self will thank me
+for the reminders :wink:.
 
 # Nix Basics
 
@@ -36,36 +36,38 @@ When running on NixOS simplify your life by making the Nix repl available.
 nix-env -i nix-repl
 ```
 
-In Nix* parlance you will often notice the terms [profile][nix-profile] and generation
-being thrown around. To make it a bit clearer one should have a decent understanding of
-the nix store.
+In Nix* parlance you will often notice the terms [profile][nix-profile] and
+generation being thrown around. To make it a bit clearer one should have a
+decent understanding of the nix store.
 
 The nix store contains all packages that are installed on your system in unique
-directories which are prefixed by a cryptographic hash that contains the inputs involved
-in building the package such that every build of the exact same package would result to
-the same cryptographic hash for the installation directory, while a minor tweak, perhaps
-just the addition or removal of a single dependency or compiler flag, will produce a
-different prefix altogether.
+directories which are prefixed by a cryptographic hash that contains the inputs
+involved in building the package such that every build of the exact same
+package would result to the same cryptographic hash for the installation
+directory, while a minor tweak, perhaps just the addition or removal of a
+single dependency or compiler flag, will produce a different prefix altogether.
 
 In my system, for example, the GCC man pages are installed to `/nix/store/81dm4qw-gcc-5.4.0-man/`
-where `81dm4qw` represents a trucated hash since it displaying full hashes in a
+where `81dm4qw` represents a trucated hash since displaying full hashes in a
 post doesn't help anyone :wink:. Anytime, I have the gcc manpages installed and
-encounter the exact same hash in the directory name, I can pretty much be confident
-that the files in that directory are similar to the ones I have encountered before.
-A different hash, however; would indicate that there is a difference in the the gcc
-manpages, or perhaps the way they were built or installed.
+encounter the exact same hash in the directory name, I can be pretty confident
+that the files in that directory are similar to the ones I may have encountered
+before, perhaps even elsewhere. A different hash, however; would indicate that
+there is a difference in the the gcc manpages, its dependencies or perhaps the
+way they were built or installed.
 
-Since the `/nix/store` paths are rather cryptic and kind of user-unfriendly in a certain way
-(i.e.: PATH would be a unlegible mess with just a small number of such paths added to it),
-nix introduces the concept of profiles and generations.
+Since the `/nix/store` paths are rather cryptic and kind of user-unfriendly in
+a certain way (i.e.: PATH would be a unlegible mess with just a small number of
+such paths added to it), nix introduces the concept of profiles and
+generations.
 
-Profiles are simply a representation of the packages are are available within a given
-environment and generations represent versions of those profiles.
+Profiles are simply a representation of the packages are are available within a
+given environment and generations represent versions of those profiles.
 
 In short, my personal profile `~/.nix-profile` points to something in the
-`/nix/var/nix/profiles` directory which contains a manifest.nix file and a `bin` and
-`share` directory that contain symlinks to the appropriate destinations somewhere in
-`/nix/store`.
+`/nix/var/nix/profiles` directory which contains a manifest.nix file and a
+`bin` and `share` directory that contain symlinks to the appropriate
+destinations somewhere in `/nix/store`.
 
 ```
 $HOME/.nix-profile
@@ -82,10 +84,11 @@ $HOME/.nix-profile
 4 directories, 4 files
 ```
 
-With the `bin` directory as specified by my profile, added to $PATH, one can easily call
-all the executable inside this `bin` directory. In fact, with multiple profile directories
-containing their own `bin` directories, one can switch environments by simply rerouting
-symlinks. This is the where NixOS gets to boast atomic profile switches or updates.
+With the `bin` directory as specified by my profile, added to $PATH, one can
+easily call all the executable inside this `bin` directory. In fact, with
+multiple profile directories containing their own `bin` directories, one can
+switch environments by simply rerouting symlinks. This is the where NixOS gets
+to boast atomic profile switches or updates.
 
 <!-- `$HOME/.nix-profile/bin:$HOME/.nix-profile/sbin:$HOME/.nix-profile/lib/kde4/libexec:/nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/default/sbin:/nix/var/nix/profiles/default/lib/kde4/libexec:/run/current-system/sw/bin:/run/current-system/sw/sbin:/run/current-system/sw/lib/kde4/libexec` -->
 
