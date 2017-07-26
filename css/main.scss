@@ -648,17 +648,17 @@ html, body { height: 100%; }
 
   @-webkit-keyframes rotate-appear {
     0%    { -webkit-transform: translate(0, 0) rotate(0deg)    scale(0); }
-    5%  { -webkit-transform: translate(0, 0) rotate(90deg)   scale(0.25); }
-    10%    { -webkit-transform: translate(0, 0) rotate(180deg)  scale(0.5); }
-    10%  { -webkit-transform: translate(0, 0) rotate(270deg)  scale(0.75); }
+    5%    { -webkit-transform: translate(0, 0) rotate(90deg)   scale(0.25); }
+    10%   { -webkit-transform: translate(0, 0) rotate(180deg)  scale(0.5); }
+    10%   { -webkit-transform: translate(0, 0) rotate(270deg)  scale(0.75); }
     15%   { -webkit-transform: translate(0, 0) rotate(360deg)  scale(1); }
     30%   { -webkit-transform: translate(0, 0) rotate(380deg)  scale(1.1); }
     50%   { -webkit-transform: translate(0, 0) rotate(360deg)  scale(1.1); }
     70%   { -webkit-transform: translate(0, 0) rotate(340deg)  scale(1); }
     85%   { -webkit-transform: translate(0, 0) rotate(360deg)  scale(1); }
-    90% { -webkit-transform: translate(0, 0) rotate(270deg)  scale(0.75); }
+    90%   { -webkit-transform: translate(0, 0) rotate(270deg)  scale(0.75); }
     90%   { -webkit-transform: translate(0, 0) rotate(180deg)  scale(0.5); }
-    95% { -webkit-transform: translate(0, 0) rotate(90deg)   scale(0.25); }
+    95%   { -webkit-transform: translate(0, 0) rotate(90deg)   scale(0.25); }
     100%  { -webkit-transform: translate(0, 0) rotate(0deg)    scale(0); }
   }
 
