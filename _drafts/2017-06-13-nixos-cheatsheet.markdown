@@ -25,13 +25,16 @@ og:
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
 ---
-As I'm not the brightest idiot out there I try to produce digital notes-to-self in
-an effort to externalize some knowledge. Honestly speaking, I probably use note-taking
-more as a mechanism to weave knowledge into the fabric of my brain and therefore
-improve recall which isn't exactly my strong suit as I have made apparent from the start
-of this post. Some say writing things down helps one remember, so here goes... :notebook:
+Learning Nix, I felt the need to take note. My future self will thank me for the
+reminders :wink:.
 
 # Nix Basics
+
+When running on NixOS simplify your life by making the Nix repl available.
+
+```
+nix-env -i nix-repl
+```
 
 In Nix* parlance you will often notice the terms [profile][nix-profile] and generation
 being thrown around. To make it a bit clearer one should have a decent understanding of
@@ -131,6 +134,14 @@ nix-env -qaP firefox
 
 Which, for debian-based distro users, is more analogous to `apt-cache search firefox`.
 
+> Running `nix-env -qaP pasystray` provides me with the output
+```
+nixos.paysystray              pasystray-0.6.0
+nixos-17.03-small.paysystray  pasystray-0.6.0
+```
+which indicates that version 0.6.0 of pasystray is available in the nixos and
+nixos-17.03-small channels
+
 One may also
 
 ```
@@ -145,19 +156,53 @@ nix-shell -p libjpeg openjdk
 
 # Channels
 
+Within the Nix ecosystem, packages are delivered through the medium of
+channels, which represent a collection of assets that fly under a given flag.
+
+The [channels repository][github-nixpkgs-channels] provides references for
+every channel in relation to the [nixpkgs repository][github-nixpkgs].
+
+A simple glance into the [branches inside the nixpkgs-channels repository]
+provide the insight into the cannels that are available, which as of the 26th
+of June 2017 include:
+
+ - nixpkgs-unstable (development branch, bleeding edge, not recommended for production)
+ - nixos-unstable-small
+ - nixos-17.03 (stable channel, think Ubuntu LTS-ish :wink:)
+ - nixos-17.03-small
+
+among some stale branches
+
+ - nixos-14.12
+ - nixos-14.12-small
+
+which I suppose you'd generally want to avoid.
+
+The [Upgrading NixOS][Upgrading NixOS] section in the manual provides a clear
+explanation and recommendation regarding the channels so feel free to consult
+the source :wink:. The gist is that new PR's are generally merged into
+channels postfixed as `-small` a bit faster than their stable counterparts.
+
+List the channels on your current system using `nix-channel --list`
+and find the expressions for your channels within the `~/.nix-defexpr`
+directory
+
 ```
 ~/.nix-defexpr
 ├── channels -> /nix/var/nix/profiles/per-user/vid/channels
 └── channels_root -> /nix/var/nix/profiles/per-user/root/channels
 ```
 
-```
-nix-channel --add https://nixos.org/channels/nixos-17.03-small
-```
+which indicates that the system is set up with a path for the root channel
+(which are shared among all users of the system) and private channels which
+as user specific.
 
-Note that `tree -L 2 ~/.nix-defexpr`
+> NOTE: that running `sudo nix-channel --list` will provide a listing of the
+channels as known to the user root, which may differ from the regular user
+who's channel listing you may review through `nix-channel --list`.
 
-Adds a channel
+Adding the nixos-17.03-small channel may be done by executing
+`nix-channel --add https://nixos.org/channels/nixos-17.03-small`
 
 ## Name collision in input Nix expression, skipping...
 
@@ -169,7 +214,7 @@ nixos.go_1_6        go-1.6.4
 nixos.go            go-1.7.4
 ```
 
-After running `nix-channel --list`, I realised that I had added a non-stable channel under
+After running ```nix-channel --list```, I realised that I had added a non-stable channel under
 the `nixos` name and wondered if perhaps the nixos name for a channel is already used by
 Nix* internals and therefore collides.
 
@@ -177,25 +222,25 @@ Wondering whether the name collision issue may be attributed to the previous add
 of a channel under an already "reserved" name, being `nixos`, prompted the idea to remove
 the channel to observe whether it resolved the issue.
 
-Most likely, the former execution of
+The former execution of
+```nix-channel --add https://nixos.org/channels/nixos-17.03-small nixos```.
+apparently confused my setup which already contained a (root) channel named
+`nixos`.
 
-`nix-channel --add https://nixos.org/channels/nixos-17.03-small nixos`.
+After removing the recently added user channel named nixos
+```nix-channel --remove nixos``` and re-adding it without specifying the
+optional name
+```nix-channel --add https://nixos.org/channels/nixos-17.03-small```,
+the channel was added with the name `nixos-17.03-small`.
 
-confused my setup.
+> NOTE: Adding channels without providing the name simply names the channel in
+accordance to the last phrase of the channel URL with the suffix `-stable` or
+`-unstable` removed from the name such that `nixos-17.03-small` remains
+`nixos-17.03-small` and `nixos-unstable-small` becomes `nixos-small` :wink:.
 
-After removing the channel inapporpriately named nixos
-
-```nix-channel --remove nixos```
-
-and re-adding it without specifying the optional name
-
-`nix-channel --add https://nixos.org/channels/nixos-17.03-small`,
-
-an update was required to enforce the changes
-
-```nix-channel --update```.
-
-After the change, a query actually presented the results from the different channels.
+An update through ```nix-channel --update```
+was required to enforce the changes after which a query actually presented the
+results from the different channels. :victory:
 
 ```
 $ nix-env -qaP go
@@ -207,10 +252,22 @@ nixos.go                        go-1.7.4
 nixos-17.03-small.go            go-1.7.4
 ```
 
+If you still are still looking at this error message study these
+[Nix dev mailing list][nix-dev-name-coll] and [Stackexchange][name-coll]
+threads for more information. Godspeed :rocket:
+
 ## Links
 
-- https://github.com/NixOS/nixpkgs/issues/9682
-- https://mailman.science.uu.nl/pipermail/nix-dev/2013-October/011898.html
-- [name-coll]: https://unix.stackexchange.com/questions/332272/name-collision-in-input-nix-expressions-with-nix-env-f
-- [nix-profiles]: https://nixos.org/nix/manual/#sec-profiles
-- [nix-env]: https://nixos.org/nix/manual/#sec-nix-env
+- [PR convo about installing a specific package version][pr-nix-install-specific-version]
+- [[Nix-dev] warning: name collision in input Nix expressions][nix-dev-name-coll]
+- [NixOS Manual: Upgrading NixOS][Upgrading NixOS]
+
+[nix-dev-name-coll]: https://mailman.science.uu.nl/pipermail/nix-dev/2013-October/011898.html
+[pr-nix-install-specific-version]: https://github.com/NixOS/nixpkgs/issues/9682
+[name-coll]: https://unix.stackexchange.com/questions/332272/name-collision-in-input-nix-expressions-with-nix-env-f
+[nix-profiles]: https://nixos.org/nix/manual/#sec-profiles
+[nix-env]: https://nixos.org/nix/manual/#sec-nix-env
+[github-nixpkgs-channels]:  https://github.com/NixOS/nixpkgs-channels
+[github-nixpkgs-channels Branches]:  https://github.com/NixOS/nixpkgs-channels/branches
+[github-nixpkgs]:https://github.com/NixOS/nixpkgs
+[Upgrading NixOS]: https://nixos.org/nixos/manual/index.html#sec-upgrading
