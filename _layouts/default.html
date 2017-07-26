@@ -162,6 +162,8 @@ function swapColors() {
 (function() {
   var els = document.querySelectorAll('.element.img');
   var style = document.createElement('style');
+  //var z_r1 = 0;
+  //var z_r2 = 0;
   style.appendChild(document.createTextNode(''));
   document.head.appendChild(style);
 
@@ -174,12 +176,54 @@ function swapColors() {
       image.onload = function() {
         img.src = this.src;
         var sx = this.width/img.width, sy = this.height/img.height;
-        var styleText = '#img_' + id + 
-          ':hover { transform: scale3d(' + sx + ', ' + sy + ', 1); }';
-        style.sheet.insertRule(styleText, 0);
+        const scaleStyle = (id) => (x, y, sx, sy, wx, wy) => {
+          const fW = Math.min(wx/x, wy/y); // scala factor to fit
+          const fA = Math.min(sx/x, sy/y); // scale factor to original
+          const k = Math.min(fA, fW);
+          return(
+            '#img_' + id + 
+            ':hover { transform: scale3d(' + k + ', ' + k + ', 1); }'
+          );
+        };
+        const genStyle = () => scaleStyle(id)(
+          img.width, img.height,    // image dimensions in document
+          this.width, this.height,  // original image dimensions
+          window.innerWidth, window.innerHeight // window dimensions
+        );
+        style.sheet.insertRule(genStyle(), id);
+        /*
+        window.addEventListener("resize", () => {
+          z_r1 = z_r1 + 1;
+          console.log({ z_r1, z_r2, 'sheet': style.sheet });
+        });
+        */
+        window.addEventListener("optimizedResize", () => {
+          //z_r2 = z_r2 + 1;
+          style.sheet.deleteRule(id);
+          style.sheet.insertRule(genStyle(), id);
+        });
+
       };
       image.src = img.src;
       img.src = "";
+
+      // Copied from https://developer.mozilla.org/en-US/docs/Web/Events/resize
+      var throttle = function(type, name, obj) {
+        obj = obj || window;
+        var running = false;
+        var func = function() {
+          if (running) { return; }
+          running = true;
+          requestAnimationFrame(function() {
+            obj.dispatchEvent(new CustomEvent(name));
+            running = false;
+          });
+        };
+        obj.addEventListener(type, func);
+      };
+
+      /* init - you can init any event */
+      throttle("resize", "optimizedResize");
     })(els[i], i);
   }
 })();
