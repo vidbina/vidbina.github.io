@@ -36,9 +36,9 @@ When running on NixOS simplify your life by making the Nix repl available.
 nix-env -i nix-repl
 ```
 
-In Nix* parlance you will often notice the terms [profile][nix-profile] and
-generation being thrown around. To make it a bit clearer one should have a
-decent understanding of the nix store.
+In Nix* parlance you will often notice the terms [profile][nix-profiles] and
+generation being thrown around. One should have a decent understanding of the
+nix store to demystify these concepts.
 
 The nix store contains all packages that are installed on your system in unique
 directories which are prefixed by a cryptographic hash that contains the inputs
@@ -49,16 +49,16 @@ single dependency or compiler flag, will produce a different prefix altogether.
 
 In my system, for example, the GCC man pages are installed to `/nix/store/81dm4qw-gcc-5.4.0-man/`
 where `81dm4qw` represents a trucated hash since displaying full hashes in a
-post doesn't help anyone :wink:. Anytime, I have the gcc manpages installed and
-encounter the exact same hash in the directory name, I can be pretty confident
-that the files in that directory are similar to the ones I may have encountered
-before, perhaps even elsewhere. A different hash, however; would indicate that
-there is a difference in the the gcc manpages, its dependencies or perhaps the
-way they were built or installed.
+post doesn't help anyone :wink:. Any time, I have the gcc manpages installed
+and encounter the exact same hash in the directory name, I can be pretty
+confident that the files in that directory are similar to the ones I may have
+encountered before, perhaps even elsewhere. A different hash, however; would
+indicate that there is a difference in the the gcc manpages, its dependencies
+or perhaps the way they were built or installed.
 
 Since the `/nix/store` paths are rather cryptic and kind of user-unfriendly in
 a certain way (i.e.: PATH would be a unlegible mess with just a small number of
-such paths added to it), nix introduces the concept of profiles and
+such paths added to it), Nix introduces the concept of profiles and
 generations.
 
 Profiles are simply a representation of the packages are are available within a
@@ -84,11 +84,18 @@ $HOME/.nix-profile
 4 directories, 4 files
 ```
 
-With the `bin` directory as specified by my profile, added to $PATH, one can
-easily call all the executable inside this `bin` directory. In fact, with
+With the `bin` directory as specified by my profile, added to `$PATH`, one can
+easily call all the executables inside this `bin` directory. In fact, with
 multiple profile directories containing their own `bin` directories, one can
 switch environments by simply rerouting symlinks. This is the where NixOS gets
 to boast atomic profile switches or updates.
+
+> Note that `$HOME/.nix-profile` is symlinked to `/nix/var/nix/profiles/per-user/vid/profile`
+in my case, which happens to me symlinked to `/nix/var/nix/profiles/per-user/vid/profile-NN-link`
+(where NN is some number). Inside the `/nix/var/nix/profiles/per-user/vid`
+directory I find a couple of symlinks that fit the profile-NN-link pattern
+which makes the changing of my profile as simple as just switching the
+profile symlink to point to one of those profile-NN-link targets :wink:.
 
 <!-- `$HOME/.nix-profile/bin:$HOME/.nix-profile/sbin:$HOME/.nix-profile/lib/kde4/libexec:/nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/default/sbin:/nix/var/nix/profiles/default/lib/kde4/libexec:/run/current-system/sw/bin:/run/current-system/sw/sbin:/run/current-system/sw/lib/kde4/libexec` -->
 
