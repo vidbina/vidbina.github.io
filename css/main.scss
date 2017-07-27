@@ -813,3 +813,11 @@ html, body { height: 100%; }
     display: inline-block;
   }
 }
+
+#disqus_thread {
+  background: #fff;
+  padding: 10px;
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+            border-radius: 2px;
+}
