@@ -478,6 +478,7 @@ html, body { height: 100%; }
 
   .post code {
     padding: 0 .2em;
+    white-space: pre-wrap;
   }
   .post .highlight code {
     font-size: 80%;
