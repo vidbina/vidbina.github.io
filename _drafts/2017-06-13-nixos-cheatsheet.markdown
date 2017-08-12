@@ -24,6 +24,7 @@ og:
 #  card: summary
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
+mathjax: true
 ---
 Learning Nix, I felt the need to take notes. My future self will thank me
 for the reminders :wink:.
@@ -165,8 +166,8 @@ nix-shell -p libjpeg openjdk
 Within the Nix ecosystem, packages are delivered through the medium of
 channels, which represent a collection of assets that fly under a given flag.
 
-The [channels repository][github-nixpkgs-channels] provides references for
-every channel in relation to the [nixpkgs repository][github-nixpkgs].
+The [channels repository][gh-nixpkgs-channels] provides references for
+every channel in relation to the [nixpkgs repository][gh-nixpkgs].
 
 A simple glance into the [branches inside the nixpkgs-channels repository]
 provide the insight into the cannels that are available, which as of the 26th
@@ -184,7 +185,7 @@ among some stale branches
 
 which I suppose you'd generally want to avoid.
 
-The [Upgrading NixOS][Upgrading NixOS] section in the manual provides a clear
+The [Upgrading NixOS][nixos-upgrade] section in the manual provides a clear
 explanation and recommendation regarding the channels so feel free to consult
 the source :wink:. The gist is that new PR's are generally merged into
 channels postfixed as `-small` a bit faster than their stable counterparts.
@@ -264,11 +265,11 @@ threads for more information. Godspeed :rocket:
 
 ## Syntax
 
-I've been using NixOS for the better part of the last 2 months now and am still
-fighting with its syntax and eco-system from time to time. Since I'm a big
-believer or doing shit to understand what is going on, I decided to tweak a few
-packages to my liking or attempt to add some functionality that I needed as an
-exercise in wrapping my mind around the Nix-verse.
+I've been using NixOS for the better part of the last 2 months now and I still
+find myself fighting its syntax and eco-system from time to time. Since I'm a
+big believer in practice, I decided to tweak a few packages to my liking or
+at least attempt to add some functionality that I needed as an exercise in
+wrapping my mind around the Nix-verse.
 
 Let's simplify our lives by making the Nix repl available.
 
@@ -276,8 +277,8 @@ Let's simplify our lives by making the Nix repl available.
 nix-env -i nix-repl
 ```
 
-Within the nix repl we can try out different statements and expressions and perform some
-introspection. Inside the repl we could
+Within the nix repl it becomes easy to try out different statements and
+expressions and perform some introspection. Inside the REPL one may
 
  - enter `:?` for the help menu
  - double TAB to trigger the autocompleter which exposes whatever is in scope :wink:
@@ -287,22 +288,202 @@ introspection. Inside the repl we could
   <img src="/img/nix-repl-intro.png" alt="Screenshot of nix-repl" />
 </div>
 
-So to drop to a practical use case. I've been meaning to override something in firefox for a
-while.
+A helpful resource to keep close is the [syntax summary][nix-syntax-summary]
+does exactly what its name implies :wink:.
 
+So to drop to a practical use case. I've been meaning to override something in
+firefox for a while.  Firefox, like any other Nix module, is defined in
+[nixpkgs][nixpkgs-firefox]
+as a [function][nix-fn] that takes some configuration flags and dependencies as
+a set of arguments and returns a set of options, which in Nix syntax looks a
+bit like `inputs: outputs` but is explained in detail in the
+[Nix documentation on writing Nix expressions][nix-expr].
+
+> Tip :bulb: Feel free to enter all of the expressions displayed in the text as
+```nix
+expr
+```
+into the REPL in order to follow along. It's the best way to learn  :wink:.
+
+
+### Functions
+
+A doubling lambda $x \mapsto x\times 2$ is expressed in Nix as
+
+```nix
+x: x*2
+```
+
+and could be called by passing an argument, let's say $24$, as
+
+```nix
+(x: x*2) 24
+```
+
+where it is important to note that the lambda is enclosed between parenthesis
+to indicate to the language how to tokenize the expression.
+
+A function call in Nix looks like `fn arg` and without the parenthesis, the
+expression 
+
+```nix
+x: x*2 24
+```
+
+will represent a lambda that takes x, multiplies x by two and then applies 24
+to the output of the multiplication. What the hell does that even mean?!?
+:confused: Since `x*2` does not yield a function we are basically committing an
+offense by attempting to apply 24 to the output of a multiplication operation.
+
+Nix is user-friendly enough to throw
+`error: attempt to call something which is not a function but an integer, at … `
+whenever we pull crap like this.
+
+
+Nix seem to deal with unary functions only, therefore passing multiple
+arguments to a function isn't possible. What we can do, however; is pass a set
+that contains an arbitrary amount of values to meet our needs. Calculating the
+area of a triangle by returning half the product of the base $b$ and height $h$
+could be represented as follows
+
+```nix
+areaOfTriangle = { b, h }: b*h/2
+```
+
+and subsequently called by passing a set with `a` and `b` defined :wink:
+`areaOfTriangle { b = 12; h = 12; }`.
+
+### Let
+
+Of course, being able to bind expressions to names is cool, but using globals
+isn't[^globals]. Inside the REPL you may be able to do this, but don't get too used to
+it. The `let` statement allows one to specify a binding that will be limited to
+the scope that follows the `in` keyword.
+
+```nix
+let n = 12; in { name = "example"; n = n; version = "v0.${toString n}"; }
+```
+
+is a much cleaner way to deal with bindings.
+
+### Builtins
+
+[Learn x in y][learnxiny-nix] provides an excellent 
+
+
+### Demystifying the Firefox package
+
+The `firefox` attribute in [all-packages.nix][gh-nixpkgs-all-firefox]
+is bound to the output of `wrapFirefox firefox-unwrapped { }`.
+
+In this case, the [wrapFirefox binding][gh-nixpkgs-all-wrapFirefox] has the
+output of 
+
+```nix
+callPackage ../applications/networking/browsers/firefox/wrapper.nix { }
+```
+
+assigned to it, which begs the question... what is `callPackage`? Well,
+[callPackage is a convenience function][nixos-callPackage] that basically
+fills in the blanks on a package import that may require some attributes that
+are defined in nixpkgs.
+
+
+In all-packages The
+[wrapper function][gh-nixpkgs-wrapFirefox] takes a set with
+dependencies such as stdenv, lib and some plugins, then it takes a browser
+set and subsequently a configuration set for the browserName, desktopName and
+an icon, among some other configurations, and returns a derivation.
+
+```
+(((wrapFirefox {}) browser) {})
+```
+
+```
+__functionArgs (wrapFirefox)
+```
+
+Understanding what we feed into `wrapFirefox` requires understanding what rrecursive set [`firefox` from firefox/packages.nix][gh-nixpkgs-firefox-unwrapped]
+```
+:l nixpkgs # ignore if <nixpkgs> is already loaded
+__attrNames firefox
+```
+
+In order to observe the output derivation whenever we call firefox
+
+The wrapper takes a set containing stdenv, lib, config, esteidfirefoxplugin,
+among others and returns a lambda that takes another set `browser` that returns
+another lambda that takes a set that requires a configuration set for the
+browser and populates some default attributes based on the `browser` binding
+established prior after which we return a derivation.
+
+```
+{ stdenv, lib, makeDesktopItem, makeWrapper, config
+, flashplayer, hal-flash
+, MPlayerPlugin, ffmpeg, gst_all, xorg, libpulseaudio, libcanberra_gtk2
+, supportsJDK, jrePlugin, icedtea_web
+, trezor-bridge, bluejeans, djview4, adobe-reader
+, google_talk_plugin, fribid, gnome3/*.gnome_shell*/
+, esteidfirefoxplugin
+, vlc_npapi
+, libudev
+}:
+
+# configurability of the wrapper itself
+browser:
+{ browserName ? browser.browserName or (builtins.parseDrvName browser.name).name
+, name ? (browserName + "-" + (builtins.parseDrvName browser.name).version)
+, desktopName ? # browserName with first letter capitalized
+  (lib.toUpper (lib.substring 0 1 browserName) + lib.substring 1 (-1) browserName)
+, nameSuffix ? ""
+, icon ? browserName
+}:
+# build output set
+{ ... }
+```
+
+
+```
+wrapFirefox { stdenv ? stdenv, meta = {}  } {} {}
+```
+
+and returns a lambda that 
+
+```
+:l nixpkgs # ignore if <nixpkgs> is already loaded
+firefox.plugins # or
+let ff = wrapFirefox firefox-unwrapped {}; in ff.plugins
+```
 
 ## Links
 
 - [PR convo about installing a specific package version][pr-nix-install-specific-version]
 - [[Nix-dev] warning: name collision in input Nix expressions][nix-dev-name-coll]
-- [NixOS Manual: Upgrading NixOS][Upgrading NixOS]
+- [NixOS Manual: Configuration Syntax][nix-conf-syntax]
+- [NixOS Manual: Syntax Summary][nix-syntax-summary]
+- [NixOS Manual: Upgrading NixOS][nixos-upgrade]
+- [Nix Manual: Writing Nix Expressions][nix-expr]
+- [Learn x in y: nix][learnxiny-nix]
 
 [nix-dev-name-coll]: https://mailman.science.uu.nl/pipermail/nix-dev/2013-October/011898.html
+[nix-conf-syntax]: https://nixos.org/nixos/manual/index.html#sec-configuration-syntax
 [pr-nix-install-specific-version]: https://github.com/NixOS/nixpkgs/issues/9682
 [name-coll]: https://unix.stackexchange.com/questions/332272/name-collision-in-input-nix-expressions-with-nix-env-f
 [nix-profiles]: https://nixos.org/nix/manual/#sec-profiles
 [nix-env]: https://nixos.org/nix/manual/#sec-nix-env
-[github-nixpkgs-channels]:  https://github.com/NixOS/nixpkgs-channels
-[github-nixpkgs-channels Branches]:  https://github.com/NixOS/nixpkgs-channels/branches
-[github-nixpkgs]:https://github.com/NixOS/nixpkgs
-[Upgrading NixOS]: https://nixos.org/nixos/manual/index.html#sec-upgrading
+[gh-nixpkgs-channels]:  https://github.com/NixOS/nixpkgs-channels
+[gh-nixpkgs-channels Branches]:  https://github.com/NixOS/nixpkgs-channels/branches
+[gh-nixpkgs]:https://github.com/NixOS/nixpkgs
+[nixos-upgrade]: https://nixos.org/nixos/manual/index.html#sec-upgrading
+[nix-expr]: http://nixos.org/nix/manual/#chap-writing-nix-expressions
+[nix-fn]: http://nixos.org/nix/manual/#ss-functions
+[nix-syntax-summary]: https://nixos.org/nixos/manual/index.html#sec-nix-syntax-summary
+[gh-nixpkgs-wrapFirefox]: https://github.com/NixOS/nixpkgs/blob/2799a94963aaf37f059b5ed4c0d2b0cf98ba445e/pkgs/applications/networking/browsers/firefox/wrapper.nix
+[gh-nixpkgs-all-wrapFirefox]: https://github.com/NixOS/nixpkgs/blob/2799a94963aaf37f059b5ed4c0d2b0cf98ba445e/pkgs/top-level/all-packages.nix#L16682
+[gh-nixpkgs-all-firefox]: https://github.com/NixOS/nixpkgs/blob/2799a94963aaf37f059b5ed4c0d2b0cf98ba445e/pkgs/top-level/all-packages.nix#L14254
+[gh-nixpkgs-firefox-packages]: https://github.com/NixOS/nixpkgs/blob/2799a94963aaf37f059b5ed4c0d2b0cf98ba445e/pkgs/applications/networking/browsers/firefox/packages.nix
+[gh-nixpkgs-firefox-unwrapped]: https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/networking/browsers/firefox/packages.nix#L7
+[learnxiny-nix]: https://learnxinyminutes.com/docs/nix/
+[nixos-callPackage]: https://nixos.org/nix/manual/#ex-hello-composition-co-3
+
+[^globals]: Using globals is unsustainable because it becomes increasingly harder to keep track of which globals are defined and who assigns values to global references. This could lead to name collisions or even worse, if bindings are mutable, changes of global references.
