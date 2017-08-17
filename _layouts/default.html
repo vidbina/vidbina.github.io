@@ -79,7 +79,7 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElemen
     <!-- end includes -->
   </head>
   <body class="light">
-    <base target="_blank">
+    <base>
     <button class="swap" onclick="swapColors();"><span>swap colors</span></button>
     <div class="site">
       <header>
@@ -148,12 +148,18 @@ function swapColors() {
 }
 </script>
 <script type="text/javascript">
-{% if false %}
+{% if true %}
 (function() {
   var links = document.links;
   for (var i = 0; i < links.length; i++) {
-    console.log("open in new for", links[i].href);
-    links[i].target = "_blank";
+    const link = links[i]
+
+    if(link.hostname == document.location.hostname) {
+      console.log("open in current", link.getAttribute("href"));
+    } else {
+      console.log("open in new for", link.getAttribute("href"));
+      links[i].target = "_blank";
+    }
   }
 })();
 {% endif %}
