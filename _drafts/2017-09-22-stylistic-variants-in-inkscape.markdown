@@ -33,17 +33,23 @@ So here's how one may leverage the features that modern fonts offer.
 <div class="element img"><img alt="Text and Font item in the toolbar" src="/img/text-in-toolbar-inkscape.png" /></div>
 
 Open the Text and Font panel through
- - the toolbar
+ - the toolbar (see image above, button is higlighted in pink)
  - the Text menu, subsequently followed by the Text and Font menu item
  - `Ctrl` + `Shift` + `T`, unless you have changed the shortcuts.
 
 The trick here is to select the part of the text one want to manipulate and
 open the "Variant" tab in the _Text and Font_ panel in which we may specify
-some opentype-compliant descriptor for feature setting one wants activated.
+some opentype-compliant descriptor for a feature setting one wants activated.
 
 <div class="element img">
 <img alt="Example of the _Text and Font_ Variant interface" src="/img/text-and-font-variant.png"/>
 </div>
+
+In the screenshot below the word "area" is presented in the A Industrial
+typeface with "a" presented through an alternate glyph for each occurrence.
+Selecting a portion of the text, specifying a valid descriptor in the the
+feature settings text field and applying that change will modify the
+representation of the text accordingly.
 
 <div class="element img">
 <img alt="Screenshot of the entire workspace while specifying variants for glyphs" src="/img/variant-inkscape-screenshot.png" />
