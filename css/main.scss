@@ -88,8 +88,8 @@ html, body { height: 100%; }
   }
   body.dark { background-color: #111; }
   body.light { background-color: #ccc; }
-  .light .post code { color: #333; }
-  .dark .post code { color: #ccc; }
+  //.light .post code { color: #333; }
+  //.dark .post code { color: #ccc; }
   .dark .swap { background-color: #ccc; }
   .light .swap { background-color: #111; }
   .dark, .dark a, .dark a:hover, .dark a:visited, .dark .logo path, .dark svg.logo path, .function-plot axis, .swap {
@@ -441,8 +441,12 @@ html, body { height: 100%; }
     margin-bottom: 0.25em;
     line-height: 1em;
   }
-  .highlight {
+  .post .highlight, .post code {
     border-radius: 2px;
+    background-color: #333;
+    color: #ccc;
+  }
+  .highlight {
     overflow-x: scroll;
   }
   .post pre {
@@ -474,6 +478,7 @@ html, body { height: 100%; }
 
   .post code {
     padding: 0 .2em;
+    white-space: pre-wrap;
   }
   .post .highlight code {
     font-size: 80%;
@@ -644,17 +649,17 @@ html, body { height: 100%; }
 
   @-webkit-keyframes rotate-appear {
     0%    { -webkit-transform: translate(0, 0) rotate(0deg)    scale(0); }
-    5%  { -webkit-transform: translate(0, 0) rotate(90deg)   scale(0.25); }
-    10%    { -webkit-transform: translate(0, 0) rotate(180deg)  scale(0.5); }
-    10%  { -webkit-transform: translate(0, 0) rotate(270deg)  scale(0.75); }
+    5%    { -webkit-transform: translate(0, 0) rotate(90deg)   scale(0.25); }
+    10%   { -webkit-transform: translate(0, 0) rotate(180deg)  scale(0.5); }
+    10%   { -webkit-transform: translate(0, 0) rotate(270deg)  scale(0.75); }
     15%   { -webkit-transform: translate(0, 0) rotate(360deg)  scale(1); }
     30%   { -webkit-transform: translate(0, 0) rotate(380deg)  scale(1.1); }
     50%   { -webkit-transform: translate(0, 0) rotate(360deg)  scale(1.1); }
     70%   { -webkit-transform: translate(0, 0) rotate(340deg)  scale(1); }
     85%   { -webkit-transform: translate(0, 0) rotate(360deg)  scale(1); }
-    90% { -webkit-transform: translate(0, 0) rotate(270deg)  scale(0.75); }
+    90%   { -webkit-transform: translate(0, 0) rotate(270deg)  scale(0.75); }
     90%   { -webkit-transform: translate(0, 0) rotate(180deg)  scale(0.5); }
-    95% { -webkit-transform: translate(0, 0) rotate(90deg)   scale(0.25); }
+    95%   { -webkit-transform: translate(0, 0) rotate(90deg)   scale(0.25); }
     100%  { -webkit-transform: translate(0, 0) rotate(0deg)    scale(0); }
   }
 
@@ -808,4 +813,12 @@ html, body { height: 100%; }
     white-space: nowrap;
     display: inline-block;
   }
+}
+
+#disqus_thread {
+  background: #fff;
+  padding: 10px;
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+            border-radius: 2px;
 }

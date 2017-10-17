@@ -23,12 +23,12 @@ namespace :site do
 
   desc 'review'
   task :serve do
-    exec "jekyll serve -wD"
+    exec "jekyll serve -H 0.0.0.0 -wD "
   end
 
-  desc 'serve'
+  desc 'server'
   task :server do
-    exec "jekyll serve -w"
+    exec "jekyll serve -H 0.0.0.0 -w"
   end
 
   desc 'generate new post as `rake site:new "Title" "category"`'
