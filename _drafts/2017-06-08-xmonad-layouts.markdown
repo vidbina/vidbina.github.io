@@ -30,7 +30,7 @@ head: mugshot
 
 [MultiColumns](https://hackage.haskell.org/package/xmonad-contrib-0.13/docs/XMonad-Layout-MultiColumns.html)
 provide a great way to keep your windows in check. The documentation is rather
-clean on how they work, although I've been slightly puzzled about the operation
+clear on how they work, although I've been slightly puzzled about the operation
 of them when I initially started using XMonad.
 
 The document presents a setup that reads as follows:
@@ -44,9 +44,9 @@ subsequent column with a step size of of 0.01 for every resize change with an
 initial master pane size of 0.5 the screen width.
 
 The [XMonad tour](http://xmonad.org/tour.html) gives a good introduction to the
-XMonad basics. In short, the layout can be modified using some of the 
-keybinding. If you haven't changed the [default keybindings](https://github.com/xmonad/xmonad/blob/3897cab7c9b708446a4a6f6bb2918a3c07c31f08/src/XMonad/Config.hs#L185), resizing of
-the width of the windows is simply done through by sending the `Shrink` message
+XMonad basics. In short, the layout can be modified using some of the default
+keybindings. If you haven't changed the [default keybindings](https://github.com/xmonad/xmonad/blob/3897cab7c9b708446a4a6f6bb2918a3c07c31f08/src/XMonad/Config.hs#L185), resizing of
+the width of the windows is simply altered by sending the `Shrink` message
 (Mod+H) and the `Expand` message (Mod+L), while one can increment the number of
 windows per column throught sending the `(IncMasterN 1)` message (Mod+comma)
 and decrement through sending the `(IncMasterN (-1))` message (Mod+,).
