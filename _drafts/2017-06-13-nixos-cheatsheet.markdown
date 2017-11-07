@@ -350,8 +350,11 @@ could be represented as follows
 areaOfTriangle = { b, h }: b*h/2
 ```
 
-and subsequently called by passing a set with `a` and `b` defined :wink:
-`areaOfTriangle { b = 12; h = 12; }`.
+and subsequently called by passing a set with `a` and `b` defined :wink:.
+
+```nix
+areaOfTriangle { b = 12; h = 12; }
+```
 
 ### Let
 
@@ -361,7 +364,11 @@ it. The `let` statement allows one to specify a binding that will be limited to
 the scope that follows the `in` keyword.
 
 ```nix
-let n = 12; in { name = "example"; n = n; version = "v0.${toString n}"; }
+let n = 12; in {
+  name = "example";
+  n = n;
+  version = "v0.${toString n}";
+}
 ```
 
 is a much cleaner way to deal with bindings.
@@ -395,16 +402,16 @@ dependencies such as stdenv, lib and some plugins, then it takes a browser
 set and subsequently a configuration set for the browserName, desktopName and
 an icon, among some other configurations, and returns a derivation.
 
-```
+```nix
 (((wrapFirefox {}) browser) {})
 ```
 
-```
+```nix
 __functionArgs (wrapFirefox)
 ```
 
 Understanding what we feed into `wrapFirefox` requires understanding what rrecursive set [`firefox` from firefox/packages.nix][gh-nixpkgs-firefox-unwrapped]
-```
+```nix
 :l nixpkgs # ignore if <nixpkgs> is already loaded
 __attrNames firefox
 ```
@@ -417,7 +424,7 @@ another lambda that takes a set that requires a configuration set for the
 browser and populates some default attributes based on the `browser` binding
 established prior after which we return a derivation.
 
-```
+```nix
 { stdenv, lib, makeDesktopItem, makeWrapper, config
 , flashplayer, hal-flash
 , MPlayerPlugin, ffmpeg, gst_all, xorg, libpulseaudio, libcanberra_gtk2
@@ -443,13 +450,13 @@ browser:
 ```
 
 
-```
+```nix
 wrapFirefox { stdenv ? stdenv, meta = {}  } {} {}
 ```
 
 and returns a lambda that 
 
-```
+```nix
 :l nixpkgs # ignore if <nixpkgs> is already loaded
 firefox.plugins # or
 let ff = wrapFirefox firefox-unwrapped {}; in ff.plugins
