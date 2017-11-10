@@ -64,7 +64,7 @@ group in order to allow USB pass-through.
 
 In my case I have to add the `vboxusers` group to the user object.
 
-```
+```nix
 users = {
   defaultUserShell = "/run/current-system/sw/bin/zsh";
 
@@ -83,6 +83,14 @@ users = {
     initialPassword = "WatchingRayDonovan";
   };
 };
+```
+
+```nix
+boot.kernelModules = [
+  "af_packet"
+  "virtio" "virtio_pci" "virtio_ring" "virtio_net"
+  "vboxguest" "vboxsf"
+];
 ```
 
 After these changes `sudo nixos-rebuild test` should work. Make the switch to
