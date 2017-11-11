@@ -46,9 +46,22 @@ and the work environment.
 
 ## Base image
 
-> An attempt was made to start of with Ubuntu 17.10 Desktop edition, but since it is too new and documentation is not complete at the time of writing it seemed wise to resort to using a LTS version of the OS. For example, at the time of writing, `openssh-server` was not yet part of the default apt repositorie of Ubuntu Artful Aardvark (17.10) which would require jumping through a few loops to get this entire setup to work.
+> An attempt was made to start of with Ubuntu 17.10 Desktop edition, but since it is too new and documentation is not complete at the time of writing it seemed wise to resort to using a LTS version of Ubuntu. For example, at the time of writing, `openssh-server` was not yet part of the default apt repository of Ubuntu Artful Aardvark (17.10) which would require jumping through a few loops (e.g.: modifying the sources list with the sources for older distributions) to get this entire setup to work.
 
 ## Provisioning
+
+The [Ubiquity Automation][ubiquity-auto] wiki at the time of writing, mentioned
+that they keys `netcfg`, LVM and RAID, `base-installer`, `pkgsel`, `tasksel`
+and `finish-install` are not used by Ubiquity. This leaves us to find another
+way to provision a few basic packages such as `openssh-server` which is part of
+the server distribution, but has to be installed explicitly on a desktop
+release.
+
+```
+d-i preseed/early_command in-target touch /path/to/file.txt
+```
+
+Examine /var/log/installer/casper.log
 
 ## Vagrant
 
@@ -58,4 +71,12 @@ process of mounting shared volumes should not be a big problem, but
 
 ## Links
 
-- http://web.mit.edu/~cocosci/Papers/statistics-and-the-Bayesian-mind.pdf
+- [Ubiquity Automation][ubiquity-auto]
+- [Appendix B. Automating the installation using preseeding][lts-apb]
+- [Debugging Ubiquity][ubiquity-debug]
+- [B.5. Advanced options][lts-apb-5-advanced]
+
+[ubiquity-auto]: https://web.archive.org/web/20171025150033/https://wiki.ubuntu.com/UbiquityAutomation
+[lts-apb]: https://web.archive.org/web/20170213144306/https://help.ubuntu.com/lts/installation-guide/i386/apb.html
+[ubiquity-debug]: https://web.archive.org/web/20170912022644/https://wiki.ubuntu.com/DebuggingUbiquity
+[lts-apb-5-advanced]: https://web.archive.org/web/20161224142631/https://www.debian.org/releases/stable/i386/apbs05.html.en
