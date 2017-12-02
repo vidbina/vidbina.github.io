@@ -72,13 +72,20 @@ along with some examples:
     - KDE
     - XFCE
 
-Within [NixOS's display-managers/default.nix](https://github.com/NixOS/nixpkgs/blob/1273f414a784af87363ac440af2ce948b6a656b1/nixos/modules/services/x11/display-managers/default.nix#L31-L168)
+Within [NixOS's display-managers/default.nix](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L31-L174)
 file, an `xsession` function is defined which is quite interesting to dissect.
 
 ## `xsession` dissection
 
-:point_right: if called with the args `$1` and `$2` where `$1` starts with `/`, execute
- `$1` with `$2` as an argument
+After successfully getting past the display manager by providing the correct
+login credentials and selecting a valid window or desktop manager, X server
+is fired up. The [`xsession`](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L31-L174) function provides some insights into the steps taken in setting up
+this X server session.
+
+
+:point_right: if called with the args `$1` and `$2` where `$1` constitutes an
+absolute path (i.e.: starts with the character `/`), execute `$1` with `$2` as
+an argument
  [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L57)
 ```nix
 if [ "''${1:0:1}" = "/" ];
@@ -213,7 +220,7 @@ fi
 ```nix
 # Start systemd user services for graphical sessions
 ${config.systemd.package}/bin/systemctl --user start graphical-session.target
-```nix
+```
 
 :point_right: `exec ~/.xsession`
  [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L128-L135)
@@ -285,6 +292,15 @@ ${config.systemd.package}/bin/systemctl --user stop graphical-session.target
 
 exit 0
 ```
+
+## Where to handle daemon spawning
+
+In our case there seem to exist several places where one could potentially
+start the ibus daemon.
+
+ - `displayManager.sessionCommands`
+ - `~/.xprofile`
+ - a systemd unit that starts after `graphic-session.target`
 
 [escape-nix]:https://nixos.org/nix/manual/#idm140737318136176 
 
