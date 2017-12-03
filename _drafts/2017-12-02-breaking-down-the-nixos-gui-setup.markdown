@@ -131,6 +131,7 @@ reference's sake :wink:.
 absolute path (i.e.: starts with the character `/`), execute `$1` with `$2` as
 an argument
 [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L35-L57)
+
 ```bash
 # Expected parameters:
 #   $1 = <desktop-manager>+<window-manager>
@@ -164,78 +165,85 @@ and the [documentation][escape-nix][^escape-nix].
 
 :point_right: optionally log to journal using `systemd-cat` if
  `displayManager.logToJournal` is set
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L62-L66)
-```nix
-${optionalString cfg.displayManager.logToJournal ''
-  if [ -z "$_DID_SYSTEMD_CAT" ]; then
-    _DID_SYSTEMD_CAT=1 exec ${config.systemd.package}/bin/systemd-cat -t xsession -- "$0" "$@"
-  fi
-''}
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L62-L66)
+
+```bash
+if [ -z "$_DID_SYSTEMD_CAT" ]; then
+  _DID_SYSTEMD_CAT=1 \
+    exec $SYSTEMD_PATH/bin/systemd-cat -t xsession -- \
+    "$0" "$@"
+fi
 ```
 
 :point_right: source `/etc/profile` and change directory into `$HOME`
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L68-L69)
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L68-L69)
+
 ```bash
 . /etc/profile
 cd "$HOME"
 ```
 
-:point_right: `sessionType` is an empty string if the first argument `$1` is `default`,
+:point_right: `sessionType` is an empty string if the first argument `$1` is
+`default`,
  otherwise `sessionType` is set to the value of `$1`
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L71-L73)
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L71-L73)
+
 ```bash
 # The first argument of this script is the session type.
 sessionType="$1"
 if [ "$sessionType" = default ]; then sessionType=""; fi
 ```
 
-:point_right: optionally log errors to `~/.xsession-errors` if
- `displayManager.logXsession` and `displayManager.logToJournal` are not set
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L75-L77)
-```nix
-${optionalString (!cfg.displayManager.job.logsXsession && !cfg.displayManager.logToJournal) ''
-  exec > ~/.xsession-errors 2>&1
-''}
+:point_right: Log errors to `~/.xsession-errors` if the NixOS
+[`displayManager`](https://nixos.org/nixos/options.html#displaymanager) options
+[`logXsession`](https://nixos.org/nixos/options.html#logsxsession) and
+[`logToJournal`](https://nixos.org/nixos/options.html#logtojournal) are not set
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L75-L77)
+
+```bash
+exec > ~/.xsession-errors 2>&1
 ```
 
-:point_right: start DBus session
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L79-L83)
-```nix
-${optionalString cfg.startDbusSession ''
-  if test -z "$DBUS_SESSION_BUS_ADDRESS"; then
-    exec ${pkgs.dbus.dbus-launch} --exit-with-session "$0" "$sessionType"
-  fi
-''}
+:point_right: Start DBus session provided that the NixOS option
+[`services.xserver.startDbusSession`](https://nixos.org/nixos/options.html#startdbussession)
+is set to `true`
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L79-L83).
+
+```bash
+if test -z "$DBUS_SESSION_BUS_ADDRESS"; then
+  exec ${pkgs.dbus.dbus-launch} --exit-with-session "$0" "$sessionType"
+fi
 ```
-:point_right: Start pulseaudio, if enabled
+:point_right: Start pulseaudio
 [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L85-L93)
 
 ```nix
 # Start PulseAudio if enabled.
-${optionalString (config.hardware.pulseaudio.enable) ''
+optionalString (config.hardware.pulseaudio.enable) ''
   ${optionalString (!config.hardware.pulseaudio.systemWide)
     "${config.hardware.pulseaudio.package.out}/bin/pulseaudio --start"
   }
 
   # Publish access credentials in the root window.
   ${config.hardware.pulseaudio.package.out}/bin/pactl load-module module-x11-publish "display=$DISPLAY"
-''}
+''
 ```
 
 
 :point_right: tell systemd about `$DISPLAY` (needed by ssh-agent)
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L95-L97)
-```nix
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L95-L97)
+```bash
 # Tell systemd about our $DISPLAY and $XAUTHORITY.
 # This is needed by the ssh-agent unit.
 #
 # Also tell systemd about the dbus session bus address.
 # This is required by user units using the session bus.
-${config.systemd.package}/bin/systemctl --user import-environment DISPLAY XAUTHORITY DBUS_SESSION_BUS_ADDRESS
+$SYSTEMCTL_PATH/bin/systemctl --user import-environment DISPLAY XAUTHORITY DBUS_SESSION_BUS_ADDRESS
 ```
 
 :point_right: load Xdefaults
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L99-L105)
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L99-L105)
+
 ```nix
 # Load X defaults.
 ${xorg.xrdb}/bin/xrdb -merge ${xresourcesXft}
@@ -247,8 +255,9 @@ fi
 ```
 
 :point_right: handle KDE voodoo
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L107-L114)
-```nix
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L107-L114)
+
+```bash
 # Speed up application start by 50-150ms according to
 # http://kdemonkey.blogspot.nl/2008/04/magic-trick.html
 rm -rf "$HOME/.compose-cache"
@@ -260,20 +269,25 @@ mkdir -p "$HOME/.local/share"
 ```
 
 :point_right: release logToJournal lock
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L116)
-```nix
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L116)
+
+```bash
 unset _DID_SYSTEMD_CAT
 ```
 
-:point_right: load `displayManager.sessionCommands`
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L118)
+:point_right: Run `displayManager.sessionCommands`
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L118)
+
+{% if false %}
 ```nix
 ${cfg.displayManager.sessionCommands}
 ```
+{% endif %}
 
 :point_right: load `~/.xprofile`
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L120-L123)
-```nix
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L120-L123)
+
+```bash
 # Allow the user to execute commands at the beginning of the X session.
 if test -f ~/.xprofile; then
     source ~/.xprofile
@@ -281,15 +295,20 @@ fi
 ```
 
 :point_right: start graphical-session systemd target
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L125-L126)
-```nix
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L125-L126)
+
+```bash
 # Start systemd user services for graphical sessions
-${config.systemd.package}/bin/systemctl --user start graphical-session.target
+$SYSTEMD_PATH/bin/systemctl --user start graphical-session.target
 ```
 
+> Note that `$SYSTEMD_PATH` is just a substitution for the real `systemd.package` path which is
+expanded into this string by Nix :wink:.
+
 :point_right: `exec ~/.xsession`
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L128-L135)
-```nix
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L128-L135)
+
+```bash
 # Allow the user to setup a custom session type.
 if test -x ~/.xsession; then
     exec ~/.xsession
@@ -301,10 +320,11 @@ fi
 ```
 
 :point_right: set `desktopManager` and `windowManager` where `windowManager` is set to the
- phrase container `sessionType` without the all characters from the beginning
- up to the plus sign while `desktopManager` is set to `sessionType` excluding
- all characters from the end of the phrase up to the plus sign :wink:
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L137-L143)
+phrase container `sessionType` without the all characters from the beginning
+up to the plus sign while `desktopManager` is set to `sessionType` excluding
+all characters from the end of the phrase up to the plus sign :wink:
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L137-L143)
+
 ```nix
 # The session type is "<desktop-manager>+<window-manager>", so
 # extract those (see:
@@ -316,9 +336,10 @@ desktopManager="''${sessionType%%+*}"
 ```
 
 :point_right: start the window- and desktop manager
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L145-L163)
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L145-L163)
+
 ```nix
-# Start the window manager.
+''# Start the window manager.
 case "$windowManager" in
   ${concatMapStrings (s: ''
     (${s.name})
@@ -337,10 +358,12 @@ case "$desktopManager" in
   '') dm}
   (*) echo "$0: Desktop manager '$desktopManager' not found.";;
 esac
+''
 ```
 
 :point_right: update DBus environment
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L165-L167)
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L165-L167)
+
 ```nix
 ${optionalString cfg.updateDbusEnvironment ''
   ${lib.getBin pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
@@ -348,12 +371,13 @@ ${optionalString cfg.updateDbusEnvironment ''
 ```
 
 :point_right: wait for process to terminate, then stop stop graphical-session systemd
- target and exit
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L169-L173)
-```nix
+target and exit
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L169-L173)
+
+```bash
 test -n "$waitPID" && wait "$waitPID"
 
-${config.systemd.package}/bin/systemctl --user stop graphical-session.target
+$SYSTEMD_PATH/bin/systemctl --user stop graphical-session.target
 
 exit 0
 ```
