@@ -57,3 +57,6 @@ code .vc                { color: #f8f8f2 }                            /* Name.Va
 code .vg                { color: #f8f8f2 }                            /* Name.Variable.Global        */
 code .vi                { color: #f8f8f2 }                            /* Name.Variable.Instance      */
 code .il                { color: #ae81ff }                            /* Literal.Number.Integer.Long */
+code > span {
+  white-space: nowrap;
+}
