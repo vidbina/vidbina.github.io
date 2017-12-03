@@ -393,6 +393,25 @@ start the ibus daemon.
  - `~/.xsession`
  - XMonad configuration
 
+In my case, I opted for a systemd unit, which I defined in my nixos
+configuration as follows:
+
+```nix
+systemd.user.services.ibus-daemon = {
+  enable = true;
+  wantedBy = [
+    "multi-user.target"
+    "graphical-session.target"
+  ];
+  description = "IBus daemon";
+  script = "${pkgs.ibus-with-plugins}/bin/ibus-daemon";
+  serviceConfig = {
+    Restart = "always";
+    StandardOutput = "syslog";
+  };
+};
+```
+
 [escape-nix]:https://nixos.org/nix/manual/#idm140737318136176 
 
 [^escape-nix]: Since `${` and `''` have special meaning in indented strings, you need a way to quote them. `${` can be escaped by prefixing it with `''` (that is, two single quotes), i.e., `''${`. `''` can be escaped by prefixing it with `'`, i.e., `'''`. Finally, linefeed, carriage-return and tab characters can be written as `''\n`, `''\r`, `''\t`.
