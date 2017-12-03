@@ -36,14 +36,44 @@ Nixos defines a `display-manager.service` (view by running
 firing up the login interface, in which the user is allowed to login and select
 the environment of choice, up to keeping the desktop- or window manager alive.
 
-The `ExecPreStart` stage of the service takes care of clearing a lock
+```
+# /nix/store/*-unit-display-manager.service/display-manager.service
+[Unit]
+After=systemd-udev-settle.service local-fs.target acpid.service systemd-logind.service
+Description=X11 Server
+Wants=systemd-udev-settle.service
+
+[Service]
+Environment="LD_LIBRARY_PATH=/nix/store/*-libX11-1.6.5/lib:/nix/store/*-libXext-1.3.3/lib:/run/opengl-driver/lib"
+Environment="LOCALE_ARCHIVE=/nix/store/*-glibc-locales-2.25-49/lib/locale/locale-archive"
+Environment="PATH=/nix/store/*-coreutils-8.28/bin:/nix/store/*-findutils-4.6.0/bin:/nix/store/*-gnugrep-3.1/bin:/nix/store/*-gnused-4.4/bin:/nix/store/*-systemd-234/bin:/nix/store/*-coreutils-8.28/sbin:/nix/store/*-findutils-4.6.0/sbin:/nix/store/*-gnugrep-3.1/sbin:/nix/store/*-gnused-4.4/sbin:/nix/store/*-systemd-234/sbin"
+Environment="SLIM_CFGFILE=/nix/store/*-slim.cfg"
+Environment="SLIM_THEMESDIR=/nix/store/*-slim-theme"
+Environment="TZDIR=/nix/store/*-tzdata-2016j/share/zoneinfo"
+Environment="XORG_DRI_DRIVER_PATH=/run/opengl-driver/lib/dri"
+
+X-RestartIfChanged=false
+
+
+ExecStart=/nix/store/*-unit-script/bin/display-manager-start
+ExecStartPre=/nix/store/*-unit-script/bin/display-manager-pre-start
+Restart=always
+RestartSec=200ms
+StartLimitBurst=3
+StartLimitInterval=30s
+SyslogIdentifier=display-manager
+```
+
+The `ExecStartPre` stage of the service takes care of clearing a lock if one
+peeks into the scripts that is fired
 
 ```bash
 #! /nix/store*-bash-*/bin/bash -e
 rm -f /tmp/.X0-lock
 ```
 
-whereas the `ExecStart` unsurprisingly fires up the display manager
+whereas the script called in `ExecStart` unsurprisingly fires up the display
+manager
 
 ```bash
 #! /nix/store/*-bash-*/bin/bash -e
@@ -57,7 +87,7 @@ without explaining what the different roles of these components are, so here
 follows an attempt of my simple brain to list the functions of these components
 along with some examples:
 
-  - display managers: tools that present login interfaces and provide methodsa
+  - display managers: tools that present login interfaces and provide methods
   to select the wanted environment such as
     - lightdm
     - sddm
@@ -75,27 +105,62 @@ along with some examples:
 Within [NixOS's display-managers/default.nix](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L31-L174)
 file, an `xsession` function is defined which is quite interesting to dissect.
 
-## `xsession` dissection
+## Dissecting `xsession`
 
 After successfully getting past the display manager by providing the correct
 login credentials and selecting a valid window or desktop manager, X server
 is fired up. The [`xsession`](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L31-L174) function provides some insights into the steps taken in setting up
 this X server session.
 
+> For simplicity's sake, the creative license is taken to display bash snippets
+instead of the nix snippets wherever "sensible"[^sensible]. The `xsession`
+function discussed, basically produces a bash script by means of the
+`writeScript` function. In several cases, wherever the nix code is crucial to
+the understanding of the snippet, the entire nix snippet is presented but in
+any case the octocat :octocat: emoji's are links to the original nix code for
+reference's sake :wink:.
+
+[^sensible]: Just a personal call. Since the xsession script happens to be a bash script it felt reasonable to focus on the bash code to understand the purpose and behavior rather than tunnel-visioning on the nix part, however enticing :stuck_out_tongue_closed_eyes:.
+
+{% if false %}
+:point_right: hashbang
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L33)
+{% endif %}
 
 :point_right: if called with the args `$1` and `$2` where `$1` constitutes an
 absolute path (i.e.: starts with the character `/`), execute `$1` with `$2` as
 an argument
- [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L57)
-```nix
-if [ "''${1:0:1}" = "/" ];
-then eval exec "$1" "$2";
-fi
+[:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L35-L57)
+```bash
+# Expected parameters:
+#   $1 = <desktop-manager>+<window-manager>
+# Actual parameters (FIXME):
+# SDDM is calling this script like the following:
+#   $1 = /nix/store/xxx-xsession (= $0)
+#   $2 = <desktop-manager>+<window-manager>
+# SLiM is using the following parameter:
+#   $1 = /nix/store/xxx-xsession <desktop-manager>+<window-manager>
+# LightDM keeps the double quotes:
+#   $1 = /nix/store/xxx-xsession "<desktop-manager>+<window-manager>"
+# The fake/auto display manager doesn't use any parameters and GDM is
+# broken.
+# If you want to "debug" this script don't print the parameters to stdout
+# or stderr because this script will be executed multiple times and the
+# output won't be visible in the log when the script is executed for the
+# first time (e.g. append them to a file instead)!
+# All of the above cases are handled by the following hack (FIXME).
+# Since this line is *very important* for *all display managers* it is
+# very important to test changes to the following line with all display
+# managers:
+if [ "${1:0:1}" = "/" ]; then eval exec "$1" "$2" ; fi
 ```
 
-> Note that the double single quote `''` is merely there to escape the phrase
-`${` which happens to bear special meaning in nix as pointed out in [the
-thread to the commit that introduced this change](https://github.com/NixOS/nixpkgs/commit/1273f414a784af87363ac440af2ce948b6a656b1) and the [documentation][escape-nix][^escape-nix].
+> :snowflake: Note when looking at the Nix code
+([:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L35-L57)),
+that `${` is a special sequence in Nix and has to be escaped by prefixing it
+with `''` to become `''${` as pointed out in
+[the thread to the commit that introduced this change](https://github.com/NixOS/nixpkgs/commit/1273f414a784af87363ac440af2ce948b6a656b1)
+and the [documentation][escape-nix][^escape-nix].
 
 :point_right: optionally log to journal using `systemd-cat` if
  `displayManager.logToJournal` is set
@@ -110,7 +175,7 @@ ${optionalString cfg.displayManager.logToJournal ''
 
 :point_right: source `/etc/profile` and change directory into `$HOME`
  [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L68-L69)
-```nix
+```bash
 . /etc/profile
 cd "$HOME"
 ```
@@ -118,7 +183,7 @@ cd "$HOME"
 :point_right: `sessionType` is an empty string if the first argument `$1` is `default`,
  otherwise `sessionType` is set to the value of `$1`
  [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L71-L73)
-```nix
+```bash
 # The first argument of this script is the session type.
 sessionType="$1"
 if [ "$sessionType" = default ]; then sessionType=""; fi
@@ -301,6 +366,8 @@ start the ibus daemon.
  - `displayManager.sessionCommands`
  - `~/.xprofile`
  - a systemd unit that starts after `graphic-session.target`
+ - `~/.xsession`
+ - XMonad configuration
 
 [escape-nix]:https://nixos.org/nix/manual/#idm140737318136176 
 
