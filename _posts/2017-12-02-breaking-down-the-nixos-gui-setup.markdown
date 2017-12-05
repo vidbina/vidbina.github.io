@@ -2,7 +2,9 @@
 layout: post
 title: Breaking down the NixOS GUI setup
 description: |
-  Add a description to this article here. Keep it short and sweet.
+  In an attemp to get the ibus-daemon to play ball I needed to understand
+  how NixOS handles the entire GUI dance so here goes a brief commentary on the
+  NixOS xsession setup.
 date:  2017-12-02 05:05:20 +0000
 type: tools
 category:
