@@ -94,25 +94,31 @@ order to effectively manage the utilisation of screen real-estate.
 Whilst using IRC, it may be convenient to be aware of channel and user modes.
 
 In the case of FreeNode, the [user modes][freenode-usermodes] are specified to
-indicate that the user is:
+indicate that the user is
 
  - `g`, ignoring private messages
  - `i`, invisible
  - `Z`, connected securely
 
-while [channel modes][freenode-chanmodes] are specified to indicate that a
-channel is:
+whereas [channel modes][freenode-chanmodes] are specified to indicate that a
+channel is
 
- - `s`, secret
- - `S`, SSL-only
- - `l`, limited
- - `k`, password protected
- - `i`, invite only
- - `C`, blocking CTCP commands
  - `c`, stripping color and formatting
+ - `C`, blocking CTCP commands
+ - `f`, a forward channel
+ - `i`, invite only
+ - `k`, password protected
+ - `l`, limited
  - `m`, moderated
  - `n`, not allowing outsiders (to the channel) to send to the channel
  - `p`, private, outsiders can't KNOCK to get in.
+ - `r`, blocking unidentified users
+ - `s`, secret
+ - `S`, SSL-only
+ - `t`, ops topic
+
+among many other options of course, that would distract from the point I'm trying
+to make if I listed them all out in this text :wink:.
 
 [freenode-usermodes]: https://freenode.net/kb/answer/usermodes
 [freenode-chanmodes]: https://freenode.net/kb/answer/channelmodes
