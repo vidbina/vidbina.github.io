@@ -83,7 +83,7 @@ html, body { height: 100%; }
       display: none;
     }
   }
-  body, .post code, .swap, .dark, a, .logo path, svg path, .light {
+  body, .post code, .swap, .dark, a, .logo path, svg path, .light, table > tbody > tr {
     transition: background-color 3s ease-in-out;
   }
   body.dark { background-color: #111; }
