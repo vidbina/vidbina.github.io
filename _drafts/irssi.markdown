@@ -11,19 +11,112 @@ tags:
  - chat
 description: "Reminding myself how to use irssi again..."
 ---
+Somehow it seems too easy for me to forget how to use Irssi. With this primer
+I hope to provide my future-self a decent reference to get up and going within
+an acceptable timeframe.
+
+## Basic Shortcuts
 
 > `Meta` is generally configured to the `Alt` key :wink:.
 
 |Shortcut|Description|
-`Meta`+`n`|scroll up
-`Meta`+`p`|scroll down
-`Meta`+left<br/>`Ctrl`+`p`|previous window
-`Meta`+right<br/>`Ctrl`+`n`|previous window
-`Meta`+`N`|goto window `N`
+|--------|-----------|
+|`Meta`+`n`|scroll up|
+|`Meta`+`p`|scroll down|
+|`Meta`+left<br/>`Ctrl`+`p`|previous window|
+|`Meta`+right<br/>`Ctrl`+`n`|previous window|
+|`Meta`+`N`|goto window `N`|
 
-Windows
+## Window Selection
+Besides using the shortcuts, one may use commands such as
 
+ - `/window N`, where `N` represents the number of the window,
+ - `/window next` and
+ - `/window previous`
+
+to navigate one's way through the windows.
+
+The number of a window may be changed through the `/window number #` command,
+where one enters the actual number instead of `#`. In case the provided number
+is already linked to another window, Irssi will simply perform a swap of
+window numbers to ensure that the active window has the number specified by the
+user.
+
+## Splits and Stickiness
+
+[An Illustrated Guide to Split Windows in Irssi][irssi-win-split] gives a good
+explanation on window handling and the mechanics of splitting windows and
+window stickiness.
+
+<div class="element">
+<script type="text/javascript" src="https://asciinema.org/a/GeTFKrw008VoF8IZxqJQXItsw.js" id="asciicast-GeTFKrw008VoF8IZxqJQXItsw" async></script>
+</div>
+
+Basically sticky windows are limited in mobility. This is a convenient feature
+since it prevents windows from jumping between containers when stepping through
+them. Simply put, the container represents the entity that hosts a window.
+
+Sticking a window to a container results to the container gaining focus every
+time the window is focussed.
+
+Running `window show #` will create a new container on top and stick window `#`
+to that container unless the default setting for `autostick_split_windows` has
+been altered no not exhibit this behavior.
+
+The `window show #` trick will not work in case window `#` is already stuck to
+a container. In the case you still want to create a split and attach an
+already-stuck window to the new container, one may run `window new split` which
+should create a new container with a blank window stuck to it, and then run
+`/window stick #` which will unstick the window from its former container and
+subsequently stick it to the focussed container :wink:.
+
+> To avoid stickiness confusion, I would recommend creating splits with
+`window split new` and manually sticking windows to the new container using
+`window stick #` until one is comfortable with the concept of stickiness in
+Irssi.
+
+[^hash]: Replace `#` for a valid window number :wink:
+
+## Window Size
+
+The following commands are pretty self explanatory but immensely useful in
+order to effectively manage the utilisation of screen real-estate.
+
+ - `/window balance` equalizes the line count for all windows
+ - `/window grow N` increases the active window's line count by `N` lines
+ - `/window shrink N` decreases the active window's line count by `N` lines
+ - `/window size N` sets the line count for the active window to `N` lines
+
+## Modes
+
+Whilst using IRC, it may be convenient to be aware of channel and user modes.
+
+In the case of FreeNode, the [user modes][freenode-usermodes] are specified to
+indicate that the user is:
+
+ - `g`, ignoring private messages
+ - `i`, invisible
+ - `Z`, connected securely
+
+while [channel modes][freenode-chanmodes] are specified to indicate that a
+channel is:
+
+ - `s`, secret
+ - `S`, SSL-only
+ - `l`, limited
+ - `k`, password protected
+ - `i`, invite only
+ - `C`, blocking CTCP commands
+ - `c`, stripping color and formatting
+ - `m`, moderated
+ - `n`, not allowing outsiders (to the channel) to send to the channel
+ - `p`, private, outsiders can't KNOCK to get in.
+
+[freenode-usermodes]: https://freenode.net/kb/answer/usermodes
+[freenode-chanmodes]: https://freenode.net/kb/answer/channelmodes
 [irssi-win-split]: http://quadpoint.org/articles/irssisplit/
+
+{% if false %}
 An excerpt from the [doc][basic-ui-usage] may be helpful for reference's sake
 :wink:.
 
@@ -34,8 +127,12 @@ Meta-q .. Meta-o          - Jump directly between windows 11-19
 Ctrl-P, Ctrl-N            - Jump to previous / next window
 ```
 
-[basic-ui-usage]: https://irssi.org/documentation/startup/#basic-user-interface-usage
+{% endif %}
 
+[basic-ui-usage]: https://irssi.org/documentation/startup/#basic-user-interface-usage
+[split-win]: https://irssi.org/documentation/startup/#split-windows-and-window-items
+
+{% if false %}
 # Freenode
 
 Testing
@@ -60,6 +157,8 @@ openssl x509 -inform der -outform pem < /usr/share/ca-certificates/gandi.net/Gan
 
     /join $CHANNELNAME
 
+# Basics
+
 ## Selecting Window
 
     /window 1
@@ -73,6 +172,7 @@ Ctl-p Ctl-n Atl-ARROW
 
     /window next
     /window prev
+{% endif %}
 
 
 [irssi-guide]: http://quadpoint.org/articles/irssi/
