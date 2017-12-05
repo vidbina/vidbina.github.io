@@ -73,9 +73,9 @@ html, body { height: 100%; }
   }
   body {
   //    background-color: #1e1e1e;
-  //    color: #ccc;
+  //    color: #ddd;
   //    color: #1e1e1e;
-  //    background-color: #ccc;
+  //    background-color: #ddd;
   }
 
   .swap {
@@ -87,22 +87,22 @@ html, body { height: 100%; }
     transition: background-color 3s ease-in-out;
   }
   body.dark { background-color: #111; }
-  body.light { background-color: #ccc; }
+  body.light { background-color: #ddd; }
   //.light .post code { color: #333; }
-  //.dark .post code { color: #ccc; }
-  .dark .swap { background-color: #ccc; }
+  //.dark .post code { color: #ddd; }
+  .dark .swap { background-color: #ddd; }
   .light .swap { background-color: #111; }
   .dark, .dark a, .dark a:hover, .dark a:visited, .dark .logo path, .dark svg.logo path, .function-plot axis, .swap {
-    fill: #ccc!important;
-    color: #ccc;
+    fill: #ddd!important;
+    color: #ddd;
   }
   .dark blockquote {
-    border-color: #ccc;
+    border-color: #ddd;
   }
   .dark .function-plot .axis .tick line {
-    stroke: #ccc!important;
+    stroke: #ddd!important;
   }
-  .dark .labels span { border-color: #ccc; }
+  .dark .labels span { border-color: #ddd; }
 
   .light, .light a, .light a:hover, .light a:visited, .light .logo path, .light svg.logo path, .light .swap {
     fill: #111!important;
@@ -191,7 +191,7 @@ html, body { height: 100%; }
     transition: all .2s ease-in-out;
   }
 
-  .element.img.light { background: #ccc; }
+  .element.img.light { background: #ddd; }
   .element.img.dark { background: #333; }
   .element.graph {
     //width: 100%;
@@ -444,7 +444,7 @@ html, body { height: 100%; }
   .post .highlight, .post code {
     border-radius: 2px;
     background-color: #333;
-    color: #ccc;
+    color: #ddd;
   }
   .highlight {
     overflow-x: scroll;
@@ -486,7 +486,7 @@ html, body { height: 100%; }
   }
   .post .highlight code {
     font-size: 80%;
-    color: #ccc;
+    color: #ddd;
   }
 
   .post pre > code {
@@ -538,7 +538,7 @@ html, body { height: 100%; }
   }
   body.impress-supported {
     background-color: #111;
-    color: #ccc;
+    color: #ddd;
   }
 
   div#impress {
@@ -551,11 +551,11 @@ html, body { height: 100%; }
     line-height: 1.5em;
   }
   .slide {
-    color: #ccc;
+    color: #ddd;
     padding: 20px;
     /*
     background-color: #111;
-    border: 0.5em solid #ccc;
+    border: 0.5em solid #ddd;
     */
     text-align: center;
     position: relative;
@@ -605,11 +605,11 @@ html, body { height: 100%; }
   }
   #title > h1 > span, #title > h2 > span, strong {
     //color: #111;
-    //background-color: #ccc;
+    //background-color: #ddd;
   }
   .impress-supported .logo {
     display: inline-block;
-    background: #ccc;
+    background: #ddd;
   }
   .footnotes {
     font-size: 0.75em;
@@ -760,7 +760,7 @@ html, body { height: 100%; }
 
   .timeline li {
     border: 2px solid #111;
-    /*color: #ccc;*/
+    /*color: #ddd;*/
     /*background: #111;*/
     padding: 10px;
     margin-bottom: 10px;
@@ -788,7 +788,7 @@ html, body { height: 100%; }
   */
 
   .cta > a, .cta > button {
-    color: #ccc;
+    color: #ddd;
     background-color: #111;
     -webkit-border-radius: 10px;
        -moz-border-radius: 10px;
@@ -812,7 +812,7 @@ html, body { height: 100%; }
     margin: 5px 5px 5px 5px;
     padding: 0 10px 0 10px;
     border-radius: 10px;
-    color: #ccc;
+    color: #ddd;
     background-color: #111;
     white-space: nowrap;
     display: inline-block;
@@ -840,5 +840,5 @@ table td {
 }
 
 .light table > tbody > tr:nth-child(2n+1) {
-  background: #bbb; // bg is #ccc
+  background: #bbb; // bg is #ddd
 }
