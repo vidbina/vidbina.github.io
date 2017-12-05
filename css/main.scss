@@ -826,3 +826,11 @@ html, body { height: 100%; }
        -moz-border-radius: 2px;
             border-radius: 2px;
 }
+
+table {
+  width: 100%;
+}
+
+table > tbody > tr:nth-child(2n+1) {
+  background: #ccc;
+}

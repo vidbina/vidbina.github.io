@@ -12,17 +12,16 @@ tags:
 description: "Reminding myself how to use irssi again..."
 ---
 
-Scrolling
- - `Meta`+`n`: up
- - `Meta`+`p`: down
-
 > `Meta` is generally configured to the `Alt` key :wink:.
 
+|Shortcut|Description|
+`Meta`+`n`|scroll up
+`Meta`+`p`|scroll down
+`Meta`+left<br/>`Ctrl`+`p`|previous window
+`Meta`+right<br/>`Ctrl`+`n`|previous window
+`Meta`+`N`|goto window `N`
+
 Windows
- - `Meta`+left or right
- - `Meta`+`N`: goto window `N`
- - `Ctrl`+`n`: next
- - `Ctrl`+`p`: prev
 
 [irssi-win-split]: http://quadpoint.org/articles/irssisplit/
 An excerpt from the [doc][basic-ui-usage] may be helpful for reference's sake
