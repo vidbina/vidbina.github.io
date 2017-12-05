@@ -831,6 +831,10 @@ table {
   width: 100%;
 }
 
+table td {
+  padding: 0 0.5em;
+}
+
 .dark table > tbody > tr:nth-child(2n+1) {
   background: #222; // bg is #111
 }
