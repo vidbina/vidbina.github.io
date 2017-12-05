@@ -831,6 +831,10 @@ table {
   width: 100%;
 }
 
-table > tbody > tr:nth-child(2n+1) {
-  background: #ccc;
+.dark table > tbody > tr:nth-child(2n+1) {
+  background: #222; // bg is #111
+}
+
+.light table > tbody > tr:nth-child(2n+1) {
+  background: #bbb; // bg is #ccc
 }
