@@ -12,6 +12,31 @@ tags:
 description: "Reminding myself how to use irssi again..."
 ---
 
+Scrolling
+ - `Meta`+`n`: up
+ - `Meta`+`p`: down
+
+> `Meta` is generally configured to the `Alt` key :wink:.
+
+Windows
+ - `Meta`+left or right
+ - `Meta`+`N`: goto window `N`
+ - `Ctrl`+`n`: next
+ - `Ctrl`+`p`: prev
+
+[irssi-win-split]: http://quadpoint.org/articles/irssisplit/
+An excerpt from the [doc][basic-ui-usage] may be helpful for reference's sake
+:wink:.
+
+```
+Meta-1, Meta-2, .. Meta-0 - Jump directly between windows 1-10
+Meta-q .. Meta-o          - Jump directly between windows 11-19
+/WINDOW <number>          - Jump to any window with specified number
+Ctrl-P, Ctrl-N            - Jump to previous / next window
+```
+
+[basic-ui-usage]: https://irssi.org/documentation/startup/#basic-user-interface-usage
+
 # Freenode
 
 Testing
