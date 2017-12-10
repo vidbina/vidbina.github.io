@@ -108,39 +108,74 @@ arduino --verify Blink.cpp
 
 to build the sketch.
 
+> :exclamation: Normal users generally don't have unrestricted access to
+devices. In NixOS this rings true for the TTY devices. Just run
+`ls -la /dev/tty*` to observe for yourself. The `root` user is most likely
+owner of all of the listed devices, however; the serial TTY's seem to
+owned by the `dialout` group. By adding the `dialout` group to your user's
+`extraGroups` (see the [NixOS Manual][nixos-user-mgmt] for an example on
+configuring `extraGroups`) and logging back into your system, you will now have
+access to any resource that owned by the `dialout` group :wink:.
+
 In order to compile and upload the sketch in one go, one may run
 
 ```bash
 arduino \
-  --board arduino:avr:nano:cpu=atmega168 \
+  --board arduino:avr:leonardo \
   --port /dev/ttyACM0 \
   --upload Blink.cpp
 ```
 
 in case the board in question is an Arduino Nano donning the ATMega168 AVR
-chipset. In case you're dealing with some other hardware, please explore the
-boards.txt file
+chipset and connected to port `ttyACM0`. In case you're dealing with some other
+hardware, please explore the boards.txt file located in the
+`$ARDUINO_PATH/share/arduino/hardware/arduino/avr` directory and adjust the
+parameters accordingly.
 
-```bash
-less $ARDUINO_PATH/share/arduino/hardware/arduino/avr/boards.txt
+> <a name="which-port">:bulb:</a> Determining the port could be as simple as observing the output of
+`ls -la /dev/tty*` or just watching the output of `dmesg -wH` or
+`journalctl -f` for USB-related messages while resetting or connecting the board
+:wink:. The extract of my dmesg buffer below indicates that there is a device
+connected as `ttyACM0` right after a new USB device has been detected that
+fits the description.
+```
+[  +8.258105] usb 1-2: USB disconnect, device number 34
+[  +0.798493] usb 1-2: new full-speed USB device number 35 using xhci_hcd
+[  +0.171444] usb 1-2: New USB device found, idVendor=2341, idProduct=8036
+[  +0.000003] usb 1-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[  +0.000001] usb 1-2: Product: Arduino Leonardo
+[  +0.000002] usb 1-2: Manufacturer: Arduino LLC
+[  +0.001795] cdc_acm 1-2:1.0: ttyACM0: USB ACM device
 ```
 
-for the appropriate identifier for your hardware.
-
+Usage of the `--verbose-build` and `--verbose-upload` arguments
 
 ```bash
 arduino \
-  --board arduino:avr:nano:cpu=atmega168 \
+  --board arduino:avr:leonardo \
   --port /dev/ttyACM0 \
   --verbose-build \
   --verbose-upload \
   --upload Blink.cpp
 ```
 
-in case things fail in order to get more verbose output on the build and upload
-progress to aid your sleuthing :mag:.
+could be helpful in case :poop: hits the fan in order to aid in sleuthing :mag:.
+
+To conclude this section, observe how I change into a directory which contains
+the default.nix and shell.nix, spawn a nix-shell and shoot an application to an
+Arduino Leonardo :wink:.
+
+<div class="element">
+<!--<script type="text/javascript" src="https://asciinema.org/a/151930.js" id="asciicast-151930" async></script>-->
+<script type="text/javascript" src="https://asciinema.org/a/HDzd2kE1cy91Z8qoKsjBuJ5oK.js" id="asciicast-HDzd2kE1cy91Z8qoKsjBuJ5oK" async></script>
+</div>
 
 ## 2
+
+:flushed: The process described in the previous section should be enough to get
+going.  For whichever reason you decided to read on, things are about to get a
+bit more involved. For convenience's sake, I assume that you have read through
+the section above.
 
 The `arduino` tool uses the `arduino-builder` under the hood. Given the
 `default.nix` and `shell.nix` files presented above. We could run the
@@ -161,19 +196,20 @@ arduino-builder \
   Blink.cpp
 ```
 
-which is quite a handful.
+which is quite a handful but essentially compiles the Blink.cpp file, given the
+parameters specified, to produce a collection of build artifacts in the
+`${PWD}/out` directory. The build artifcats directory is a step up from the
+`arduino` approach. If you like studying the machine code [like these guys](http://www.avrfreaks.net/forum/understanding-hex-file) you'll have something to study and play with
+when using `arduino-builder` :wink:.
 
 > :smirk: Of course you didn't have to run the command with the
 `-debug-level 10`, `-verbose` and `-warning all` arguments but in many cases it
-is convenient to have sufficient information available in case things :poop:
-fail.
-
-After a succesful build, one should find the build artifacts inside the `out`
-directory :trophy:.
+is convenient to have plenty of information available in case things fail.
 
 After building one would still need to flash the Arduino. This could be done
-by using the `avrdude` tool. Since this wasn't installed before, we would have
-to modify the `default.nix` file by adding the `avrdude` package to the mix
+by using the `avrdude` [:books:][avrdude-doc] tool. Since this wasn't installed
+before, we would have to modify the `default.nix` file by adding the `avrdude`
+package to the mix.
 
 ```nix
 # default.nix
@@ -204,58 +240,55 @@ after `avrdude` is added to the `buildInputs`.
 At this stage, one may run
 
 ```bash
-hello
+avrdude \
+	-C${ARDUINO_PATH}/share/arduino/hardware/tools/avr/etc/avrdude.conf \
+	-patmega32u4 \
+	-cavr109 \
+	-v -v -v -v \
+	-P/dev/ttyACM0 \
+	-b57600 \
+	-D \
+	-Uflash:w:${PWD}/out/Blink.cpp.hex:i
 ```
 
 to upload the prior generated binary to the board.
 
-To round it all up, all of this manual labor warrants the use of a Makefile to
-simplify the entire dance by storing
+:explosion: In case you run into the
 
-```make
-BUILDER=arduino-builder
-FLASHER=avrdude
-MKDIR=mkdir -p
-RM=rm -rf
-
-BUILD_DIR=${PWD}/out
-
-build:
-	${MKDIR} ${BUILD_DIR}
-	${BUILDER} \
-		-build-path ${BUILD_DIR} \
-		-debug-level 10 \
-		-fqbn arduino:avr:leonardo \
-		-hardware ${ARDUINO_PATH}/share/arduino/hardware/ \
-		-libraries ${ARDUINO_PATH}/share/arduino/libraries/ \
-		-tools ${ARDUINO_PATH}/share/arduino/tools/ \
-		-tools ${ARDUINO_PATH}/share/arduino/tools-builder/ \
-		-tools ${ARDUINO_PATH}/share/arduino/hardware/tools/ \
-		-verbose \
-		-warnings all \
-		Blink.cpp
-
-flash:
-	${FLASHER} --version
-
-clean:
-	${RM} ${BUILD_DIR}
-
-.PHONY: build clean flash
+```
+avrdude: ser_recv(): programmer is not responding
+avrdude: butterfly_recv(): programmer is not responding
 ```
 
-into the file `Makefile` and subsequently calling the defined rules `clean`,
-`build` and `flash` by running `make clean`, `make build` and `make flash` from
-the console :metal:.
+errors please
+
+ - verify that the specified port is actually the correct port as explained
+ [earlier](#which-port),
+ - verify that the specified board and/or the processor correspond to the board
+ and processor plugged into the machine and
+ - ensure that the board is in "bootloader mode"
+
+which would generally lead to resolution.
+
+> :bulb: For the Leonardo board known as device `ttyACM0`, one may set the
+board into bootloader mode by initiating a serial connection at 1200bps by
+executing
+```
+stty -F /dev/ttyACM0 ispeed 1200 ospeed 1200
+```
+after which the led fades in and out to indicate that it is in bootloader mode
+and good to go. For other board types, one would have to figure out what the
+procedure is to get into bootmode.
 
 ## 3
 
 ## Links
 
 - [Arduino manpage][arduino-manpage]
-- [inotool][inotool]
-- [Experimenting with `arduino-builder`][experimenting-arduino-builder]
 - [`arduino-builder` on :octocat:][arduino-builder]
+- [`avrdude` :books:][avrdude-doc]
+- [Experimenting with `arduino-builder`][experimenting-arduino-builder]
+- [inotool][inotool]
 
 [nixpkgs-all-arduino]: https://github.com/NixOS/nixpkgs/blob/17.09/pkgs/top-level/all-packages.nix#L459
 [nixpkgs]: https://github.com/NixOS/nixpkgs
@@ -269,4 +302,5 @@ the console :metal:.
 [neopixel-guide]: https://cdn-learn.adafruit.com/downloads/pdf/adafruit-neopixel-uberguide.pdf
 [nixos-currentSystem]: https://nixos.org/nix/manual#builtin-currentSystem
 [arduino-examples]: https://github.com/arduino/Arduino/blob/master/build/shared/manpage.adoc#examples
-[avrdued-doc]: http://www.nongnu.org/avrdude/user-manual/avrdude.html
+[avrdude-doc]: http://www.nongnu.org/avrdude/user-manual/avrdude.html
+[nixos-user-mgmt]: https://nixos.org/nixos/manual/index.html#sec-user-management
