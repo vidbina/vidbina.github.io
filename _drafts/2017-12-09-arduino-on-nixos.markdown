@@ -270,9 +270,10 @@ errors please
 
 which would generally lead to resolution.
 
-> :bulb: For the Leonardo board known as device `ttyACM0`, one may set the
-board into bootloader mode by initiating a serial connection at 1200bps by
-executing
+> :bulb: For the Leonardo board known as device `ttyACM0`, the
+[Arduino Leonardo documentation :book:][arduino-leonardo] mentions that one may
+set the board into bootloader mode by opening and closing a serial connection
+at 1200 baud. One may accomplish this in Linux by executing
 ```
 stty -F /dev/ttyACM0 ispeed 1200 ospeed 1200
 ```
@@ -304,3 +305,5 @@ procedure is to get into bootmode.
 [arduino-examples]: https://github.com/arduino/Arduino/blob/master/build/shared/manpage.adoc#examples
 [avrdude-doc]: http://www.nongnu.org/avrdude/user-manual/avrdude.html
 [nixos-user-mgmt]: https://nixos.org/nixos/manual/index.html#sec-user-management
+[arduino-leonardo]: https://store.arduino.cc/arduino-leonardo-with-headers
+[arduino-loader-nicolas]: https://nicholaskell.wordpress.com/tag/leonardo/
