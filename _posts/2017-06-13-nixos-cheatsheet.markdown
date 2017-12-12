@@ -5,7 +5,9 @@ description: |
   Add a description to this article here. Keep it short and sweet.
 date:  2017-06-13 00:00:49 +0000
 type: tools # for icon
-category: tools # for url
+category:
+ - tools
+ - nixos
 tags:
  - nixos
  - os
@@ -28,6 +30,12 @@ mathjax: true
 ---
 Learning Nix, I felt the need to take notes. My future self will thank me
 for the reminders :wink:.
+
+> :bomb: I'm a total noob with Nix, I'm just writing just because my stupid
+brain forgets shit all the time. Don't use this as a source of truth. I will
+update things as I learn more, but I have already seen a few talks that suggest
+that some of the CLI tools that I refer to here may be something of the past
+soon enough. You've been warned :wink:.
 
 # Nix Basics
 
