@@ -26,10 +26,9 @@ nginx:
 mathjax:
 	git clone https://github.com/mathjax/MathJax.git js/MathJax
 
-
 .PHONY: \
-	image
-	nginx
-	shell
-	server
+	image \
+	nginx \
+	shell \
+	server \
 	server-dev
