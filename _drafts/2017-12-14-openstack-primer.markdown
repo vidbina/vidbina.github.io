@@ -61,7 +61,7 @@ I attempted to follow the instructions in the
 of `virtualenv` and the installation of certain dependencies using `bindep`
 
 <div class="element">
-  <script type="text/javascript" src="https://asciinema.org/a/A5rmzVgsCUF6tQnBHU1oxhtEt.js" id="asciicast-A5rmzVgsCUF6tQnBHU1oxhtEt" async></script>
+  <script type="text/javascript" src="https://asciinema.org/a/A5rmzVgsCUF6tQnBHU1oxhtEt.js" id="asciicast-A5rmzVgsCUF6tQnBHU1oxhtEt" data-rows="15" async></script>
   <pre style="display: none;">FileNotFoundError: [Errno 2] No such file or directory: 'lsb_release': 'lsb_release'</pre>
 </div>
 
@@ -85,19 +85,9 @@ stdenv.mkDerivation rec {
       (writeScriptBin "lsb_release" ''
         #!${stdenv.shell}
   
-        case "$1" in
-          -i)
-            echo "nixos";;
-          -r)
-            echo "${nixos.config.system.nixosRelease}";;
-          -c)
-            echo "${nixos.config.system.nixosCodeName}";;
-          *)
-            echo "nixos"
-            echo "${nixos.config.system.nixosRelease}"
-            echo "${nixos.config.system.nixosCodeName}"
-            ;;
-        esac
+        echo "nixos";
+        echo "${nixos.config.system.nixosRelease}";
+        echo "${nixos.config.system.nixosCodeName}";
       ''
       )
       python3Packages.pip
@@ -111,28 +101,48 @@ stdenv.mkDerivation rec {
 }
 ```
 
-but why really? :confused:
+in order to realise that it wouldn't help after all.
 
-I would only need `bindep -b` to enumerate the dependencies that aren't yet
-fulfilled and unless the bindep project defines a [Platform][bindep-platforms]
-for NixOS, I'll be out of luck.
+I only needed `bindep -b` to enumerate the dependencies that aren't yet
+fulfilled such that I can proceed and install the missing pieces, however;
+since the bindep project does not define a [Platform][bindep-platforms] for
+NixOS at the time of writing, bindep ends up attempting to access attributes of
+an undefined platform :boom:. Mocking the output of another distro for which
+there is a platform defined isn't a qualitative solution since one would
+still need to map the package names to their respective counterparts in the
+nixpkgs repository.
 
-Quite honestly, I don't even think it pays to define a `Platform` for NixOS
-since package names are bound to differ over different platforms and I find it ludricrous to expect
-the project's maintainers to:
- - figure out the proper package name for every distro or
- - attempt to build their tool for every distro to
-figure out if it breaks or not.
+> I do not think it pays to define a `Platform` for NixOS since package names
+are bound to differ accross different platforms and I find it ludricrous to
+expect a project's maintainers to:
+ - figure out the proper package name for every distro and/or
+ - attempt to test and build a codebase against every distro to figure out if
+ it breaks or not.
+
+Getting shit built on NixOS is just some extra work that doesn't really have
+strong merit. One could just figure out how to get it done but...
+
+<div class="element">
+  <blockquote class="imgur-embed-pub" lang="en" data-id="ur4Srzk"><a href="//imgur.com/ur4Srzk">me irl</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+</div>
+
+:speak_no_evil: Not everything has to be done in NixOS :hear_no_evil:
+
+There are most definitely healthier ways to go about this.
 
 The more maintainable route from the perspective of the package maintainer
 seems to define a contained environment that is easier to setup from any
 environment which tends to leave us with virtual machines or containers, so...
 
+<div class="element video">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ZY8hnMnUDjU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+</div>
+
 {% if false %}
 ## Still trying the NixOS approach
 
 <div class="element">
-  <script type="text/javascript" src="https://asciinema.org/a/KSebHzZnwTixLbzNF5DJMvIcm.js" id="asciicast-KSebHzZnwTixLbzNF5DJMvIcm" async></script>
+  <script type="text/javascript" src="https://asciinema.org/a/KSebHzZnwTixLbzNF5DJMvIcm.js" id="asciicast-KSebHzZnwTixLbzNF5DJMvIcm" data-rows="15" async></script>
 </div>
 
 add
