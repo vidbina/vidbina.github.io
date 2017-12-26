@@ -3,11 +3,11 @@ layout: post
 title: Arduino on NixOS
 description: |
   Add a description to this article here. Keep it short and sweet.
-date:  2017-12-09 11:45:36 +0000
+since:  2017-12-09 11:45:36 +0000
+date:  2017-12-26 15:37:53 +0100
 type: tools # for icon
 category:
  - tools
- - electronics
  - arduino
 tags:
  - tools
