@@ -1,8 +1,11 @@
 ---
 layout: post
-title: Arduino on NixOS
+title: Arduino without the GUI
 description: |
-  Add a description to this article here. Keep it short and sweet.
+  A brief account of the different methods of building Arduino code on
+  Linux :penguin:, especialy NixOS :snowflake:, utilizing the
+  <code>arduino</code>, <code>arduino-builder</code> and <code>avrdude</code>
+  tools :wrench: among other.
 since:  2017-12-09 11:45:36 +0000
 date:  2017-12-26 15:37:53 +0100
 type: tools # for icon
