@@ -31,17 +31,26 @@ The first attempt to start playing around with Arduino's on my machine had
 involved installing the [`arduino` :octocat:][nixpkgs-all-arduino] package from
 [nixpkgs :octocat:][nixpkgs].
 
-After a few pathetic attempts to use the Arduino IDE in XMonad (my window
-manager), I gave up on the GUI route. Basically the IDE seems to be okay, but
-menus exhibit really weird behavior requiring me to keep the mouse depressed
-while navigating towards the drop-down menu which appears way out of frame of
-the menu bar. Furthermore, the IDE doesn't seem to play well with XMonad
-dictating which dimensions to assume.
+After a few pathetic attempts to use the Arduino IDE with my current window
+manager (XMonad), I gave up on the GUI route. Basically the IDE seems to be
+okay, but menus exhibit really weird behavior requiring me to keep the mouse
+depressed while navigating towards the drop-down menu which appears way out of
+reach of the menu bar. Furthermore, the IDE doesn't seem to play well with
+XMonad dictating which dimensions to assume.
 
 To be honest, I wasn't serious about using the IDE anyways. CLI tools are more
-user-friendly when it comes to automation anyways so fvck the UI.
+user-friendly when it comes to automation anyways so fvck :fu: the UI.
 
-## 1
+So here is an account of several ways to build code for the Arduino boards
+covering
+ - the [easiest (least flexible)](#1) using the `arduino` tool which does it all,
+ - the [harder (more flexible)](#2) option which utilizes the `arduino-build`
+ tool in combination with `avrdude` and someday...
+ - the [hardest option](#3) which I haven't come around to document but
+ involves custom Makefiles to build source, and link objects and subsequently
+ upload the whole she-bang using the `avrdude` tool. :hourglass:
+
+## <span id="1"> 1
 
 The easiest way to circumvent the painful IDE experience is by simply using the
 `arduino` CLI tool.
@@ -170,7 +179,7 @@ Arduino Leonardo :wink:.
 <script type="text/javascript" src="https://asciinema.org/a/HDzd2kE1cy91Z8qoKsjBuJ5oK.js" id="asciicast-HDzd2kE1cy91Z8qoKsjBuJ5oK" async></script>
 </div>
 
-## 2
+## <span id="2"> 2
 
 :flushed: The process described in the previous section should be enough to get
 going.  For whichever reason you decided to read on, things are about to get a
@@ -289,10 +298,10 @@ which I wrote to simplify the build and flash process with arduino-builder for a
 something I was fooling around at home with :stuck_out_tongue_closed_eyes:. The
 make rules `build`, `clean` and `flash` should be sufficient for basic workflows.
 
-## 3
+## <span id="3"> 3
 
 I would have to write a custom Makefiles to call `gcc` while including the
-Wiring libray and all other required libs, while perform all linking activities
+Wiring library and all other required libs, while perform all linking activities
 myself. I would also have to provide a main function that calls the `setup` and
 `loop` functions, unless the Wiring library has off-the-shelf method of handling
 this which I don't remember. I did this a while ago in university, but have am
@@ -300,7 +309,7 @@ too lazy to look into my archives (which I don't have within reach at the moment
 anyways). So let's just call this a work in progress. Hopefully some day I'll
 get around to it. :rainbow:
 
-## Links
+## <span id="links"> Links
 
 - [Arduino manpage][arduino-manpage]
 - [`arduino-builder` on :octocat:][arduino-builder]
