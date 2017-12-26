@@ -27,7 +27,6 @@ og:
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
 ---
-
 > :bulb: See `:help terminal-emulator` in neovim for more info
 
 Ocasionally I will sideline my WM[^wm] (XMonad) or terminal multiplexer (tmux) in
@@ -36,14 +35,12 @@ order to start a terminal session in nvim itself.
 Sometimes it pays to use neovim's builtin terminals because
 
  - when already in neovim and in need of a terminal in order to quickly move
- forward with whatever it is I'm trying to do it is convenient to spawn on an
- get shit done.
+ forward with whatever it is I'm trying to do, it is convenient to spawn one
+ and get shit done :poop:
  - moving the neovim window around between workspaces or displays will always
- keep the related terminal close (i.e: I don't have to move two windows around
- that are closely related :wink:).
- - if I have to confine the entire workflow for something I'm doing to a
- single "window" I don't have to move this terminal session into a tmux session
- and then split or perform some WM-fu to take care of this
+ keep the related terminal close (i.e: I don't have to move two windows around)
+ or consider how to move the editor into a tmux session and then split it
+ - yanking text between buffers is a breeze
 
 Start a neovim terminal through the `:terminal` command in neovim. You'll get
 dropped into insert mode so do yourself a favor and use the
@@ -54,9 +51,9 @@ you're most comfortable with (in my case `a` or `i`).
 Another, perhaps more practical, way to spawn a terminal is by using the
 term scheme. Opening a file prefixed with `term://` will result into the section
 prefixed by the `term://` to be executed in the terminal as in
- - `:vsplit term://zsh` spawning a zsh shell,
+ - `:vsplit term://zsh` spawning a zsh :ocean: shell :shell:,
  - `:split term://htop` spawning htop in a terminal and
- - `:edit term://bash` spawning a bash shell.
+ - `:edit term://bash` spawning a bash shell :shell:.
 
 > Note that navigating between neovim windows is only possible in normal mode.
 Which should make sense when you think about it. It isn't much different when
