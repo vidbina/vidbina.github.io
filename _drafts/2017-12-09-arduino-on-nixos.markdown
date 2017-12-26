@@ -253,7 +253,7 @@ avrdude \
 
 to upload the prior generated binary to the board.
 
-:explosion: In case you run into the
+:boom: In case you run into the
 
 ```
 avrdude: ser_recv(): programmer is not responding
@@ -266,7 +266,7 @@ errors please
  [earlier](#which-port),
  - verify that the specified board and/or the processor correspond to the board
  and processor plugged into the machine and
- - ensure that the board is in "bootloader mode"
+ - ensure that the board switches "bootloader mode"
 
 which would generally lead to resolution.
 
@@ -274,14 +274,31 @@ which would generally lead to resolution.
 [Arduino Leonardo documentation :book:][arduino-leonardo] mentions that one may
 set the board into bootloader mode by opening and closing a serial connection
 at 1200 baud. One may accomplish this in Linux by executing
-```
+```o
 stty -F /dev/ttyACM0 ispeed 1200 ospeed 1200
 ```
 after which the led fades in and out to indicate that it is in bootloader mode
 and good to go. For other board types, one would have to figure out what the
-procedure is to get into bootmode.
+procedure is to get into bootmode. The Mega board, for instance doesn't require
+any sorcery to make things work. Simply using the correct port and calling
+avrdude with the appropriate arguments will result to a successful flash unless
+the board and processor are defective.
+
+For demonstrative purposes you can have a glance at [a Makefile][mkfile-neopixel]
+which I wrote to simplify the build and flash process with arduino-builder for a
+something I was fooling around at home with :stuck_out_tongue_closed_eyes:. The
+make rules `build`, `clean` and `flash` should be sufficient for basic workflows.
 
 ## 3
+
+I would have to write a custom Makefiles to call `gcc` while including the
+Wiring libray and all other required libs, while perform all linking activities
+myself. I would also have to provide a main function that calls the `setup` and
+`loop` functions, unless the Wiring library has off-the-shelf method of handling
+this which I don't remember. I did this a while ago in university, but have am
+too lazy to look into my archives (which I don't have within reach at the moment
+anyways). So let's just call this a work in progress. Hopefully some day I'll
+get around to it. :rainbow:
 
 ## Links
 
@@ -307,3 +324,5 @@ procedure is to get into bootmode.
 [nixos-user-mgmt]: https://nixos.org/nixos/manual/index.html#sec-user-management
 [arduino-leonardo]: https://store.arduino.cc/arduino-leonardo-with-headers
 [arduino-loader-nicolas]: https://nicholaskell.wordpress.com/tag/leonardo/
+
+[mkfile-neopixel]: https://github.com/vidbina/arduino-neopixel-strip/blob/22bae965d5f457829d4da060195846d076c76bd6/Makefile
