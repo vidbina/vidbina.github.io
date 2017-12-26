@@ -5,7 +5,8 @@ description: |
   Trying to understand Haskell's syntax for Function Composition
 date:  2017-12-20 11:04:23 +0000
 type: fp # for icon
-category: fp # for url
+category: # for url
+ - fp
 tags:
  - fp
  - functional programming
@@ -49,7 +50,7 @@ which I could compose and apply to `2` to yield `7`
 (plus1 . times3) 2
 ```
 
-which is effectively equivalent to
+which is "effectively" equivalent to
 
 ```haskell
 plus1 (times3 2)
@@ -59,12 +60,17 @@ which demonstrates the piping idea in a manner more palatable to my brain.
 
 The type of the composition operator `(.)` is defined as
 $(\beta \to \gamma) \to (\alpha \to \beta) \to \alpha \to \gamma$
-which I guess means that
- - the output type of the first argument (function $\beta \to \gamma$) dictates
- the type of the resulting function (or composition) so I guess it makes sense
- to state that the first function sits at the end of the pipe.
- - the composition operator takes two functions and applies an argument to the
- composition
+which I dumb down to
+ - two operands, each being funtions, are composed to produce a new function
+ $\alpha \to \gamma$
+ - compositions are processed from the rightmost function towards the left
+ therefore one may state that, regardless how many compositions are chained
+ together:
+   - the output type of the leftmost operand (in our simplified expression
+   above, function $\beta \to \gamma$) dictates the return type of the
+   resulting function (or composition) so I guess it makes sense to state that
+   the leftmost function sits at the end of the pipe.
+   - the rightmost function represents the first function that will be applied
 
 ## Links
 
