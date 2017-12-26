@@ -2,9 +2,10 @@
 layout: post
 title: When your NixOS store outgrows you...
 description: |
-  Limbo! Filled up the partition containing /nix/store to the brim.
-  My computer froze up and I'm at a conference. Need to grow some
-  partitions to give NixOS some space.
+  Limbo! Filled up the partition :floppy_disk: containing
+  <code>/nix/store</code> to the brim.  y computer :computer: froze up and I'm
+  at a conference. Need to grow some partitions to give NixOS :snowflake: some
+  space. :free:
 date:  2017-07-12 12:13:46 +0000
 type: tools # for icon
 category: tools # for url

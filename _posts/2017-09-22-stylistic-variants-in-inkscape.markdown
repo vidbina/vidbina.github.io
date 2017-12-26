@@ -3,10 +3,11 @@ layout: post
 title: Stylistic Variants in Inkscape
 description: |
   Accessing stylistic variants in Inkscape, along with some other
-  font feature settings.
+  font :black_nib: feature settings.
 date:  2017-09-22 20:47:00 +0000
-type: typography # for icon
-category: typography # for url
+type: typography
+category: # for url
+ - typography
 tags:
  - typography
  - design

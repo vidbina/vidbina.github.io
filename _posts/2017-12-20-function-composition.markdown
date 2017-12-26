@@ -2,9 +2,10 @@
 layout: post
 title: Function Composition
 description: |
-  Trying to understand Haskell's syntax for Function Composition
+  Trying to understand Haskell's syntax for function composition through the
+  <code>(.)</code> operator akin to $f\circ g$.
 date:  2017-12-20 11:04:23 +0000
-type: fp # for icon
+type: math # for icon
 category: # for url
  - fp
 tags:

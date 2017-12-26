@@ -2,7 +2,8 @@
 layout: post
 title: NixOS cheatsheet
 description: |
-  Add a description to this article here. Keep it short and sweet.
+  A messy coverage of some basics that I may commonly refer to during my NixOS
+  :snowflake: usage.
 date:  2017-06-13 00:00:49 +0000
 type: tools # for icon
 category:
