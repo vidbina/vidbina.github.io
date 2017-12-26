@@ -150,18 +150,47 @@ nix-env -qaP firefox
 Which, for debian-based distro users, is more analogous to `apt-cache search firefox`.
 
 > Running `nix-env -qaP pasystray` provides me with the output
+
 ```
-nixos.paysystray              pasystray-0.6.0
-nixos-17.03-small.paysystray  pasystray-0.6.0
+nixos.pasystray              pasystray-0.6.0
+nixos-17.03-small.pasystray  pasystray-0.6.0
 ```
+
 which indicates that version 0.6.0 of pasystray is available in the nixos and
 nixos-17.03-small channels
 
-One may also
+One may also specify the nix expression by specifying the path to the nix
+expression using the `-f` flag
 
 ```
 nix-env -f ~/.nix-defexpr -qa
 ```
+
+which becomes helpful when testing changes to a nixpkgs repository.
+
+Let's, for the sake of argument, suppose that I have the nixpkgs repository
+checked out to the `my_nixpkgs` directory. When I've made changes to the
+nixpkgs repository I spawn a nix shell within which I try to install the
+modified or newly added package. After modifying the nixpkgs repository to add
+a `terraform_0_11` derivation, one can verify that the newly added package is
+listed by querying the index
+
+```
+nix-env -f nixpkgs=my_nixpkgs -qaP terraform_0_11
+```
+
+and subsequently install the new package by running
+
+```
+nix-env -f nixpkgs=my_nixpkgs -i terraform_0_11
+```
+
+which may be done in the current shell, or even better a seperate nix-shell
+just to keep things isolated :wink:.
+
+<div class="element">
+<script type="text/javascript" src="https://asciinema.org/a/FRrvhg1eqRHf2wh9nnxsTDYPG.js" id="asciicast-FRrvhg1eqRHf2wh9nnxsTDYPG" async></script>
+</div>
 
 ## Install a package only for the duration of a session
 
@@ -239,7 +268,7 @@ the channel to observe whether it resolved the issue.
 
 The former execution of
 ```nix-channel --add https://nixos.org/channels/nixos-17.03-small nixos```.
-apparently confused my setup which already contained a (root) channel named
+pparently confused my setup which already contained a (root) channel named
 `nixos`.
 
 After removing the recently added user channel named nixos
@@ -500,5 +529,8 @@ let ff = wrapFirefox firefox-unwrapped {}; in ff.plugins
 [gh-nixpkgs-firefox-unwrapped]: https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/networking/browsers/firefox/packages.nix#L7
 [learnxiny-nix]: https://learnxinyminutes.com/docs/nix/
 [nixos-callPackage]: https://nixos.org/nix/manual/#ex-hello-composition-co-3
+[nix-drv]: https://nixos.org/nix/manual/#ssec-derivation
+[nix-drv-pill]: https://nixos.org/nixos/nix-pills/our-first-derivation.html
+[nix-cheatsheet]: https://nixos.wiki/wiki/Cheatsheet
 
 [^globals]: Using globals is unsustainable because it becomes increasingly harder to keep track of which globals are defined and who assigns values to global references. This could lead to name collisions or even worse, if bindings are mutable, changes of global references.
