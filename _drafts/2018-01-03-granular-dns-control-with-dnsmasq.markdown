@@ -31,8 +31,8 @@ which is consulted by the multitudes of resolvers that need the addresses to
 domain names.
 
 Because I want to cache my DNS requests locally and provide some masking rules
-to handle `*.local` domains "my way" :clown:, I am using dnsmasq. Effectively,
-I'm running my own DNS server on localhost and my resolv.conf reflects this by
+to handle `*.local` domains "my way", I am using dnsmasq. Effectively, I'm
+running my own DNS server on localhost and my resolv.conf reflects this by
 listing 127.0.0.1 as my nameserver of choice :smile:.
 
 ```
@@ -81,6 +81,7 @@ one may want to
 in order to restore the system's behavior to the former state where dnsmasq is
 running as service.
 
+# Configuration Files
 ```
 vid@localhost> cat /etc/NetworkManager/NetworkManager.conf
 [main]
