@@ -41,6 +41,7 @@ the wild and what kind of file each extension represents.
  - `*.o` object file
  - `*.la` libtool archive
  - `*.lo` libtool object
+ - `*.so` shared object
 
 # Commands
 
