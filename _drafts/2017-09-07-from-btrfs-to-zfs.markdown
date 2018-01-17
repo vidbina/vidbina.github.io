@@ -21,11 +21,59 @@ og:
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
 ---
+List the block devices
+
+    lsblk
+
 Figure out which partitions I have
 
     fdisk -l
 
-Figure out sizes of directories
+Figure out sizes of directories, only recursing to a depth of 1 level
 
     du -d 1 -h /
 
+Make a ext3 filesystem on block device `/dev/sda1`
+
+    mkfs.ext3 /dev/sda1
+
+Mount block device `/dev/sda1` to a readwrite mountpoint `/tmp/mountpoint`
+
+    udisksctrl mount -b /dev/sda1 -o rw /tmp/mountpoint
+
+Unmount block device `/dev/sda1`
+
+    udisksctrl unmount -b /dev/sda1
+
+
+Create `-c` an archive of my home directory `~`, using the bzip2 filter `-j`,
+and output this archive's contents to stdout, pipe this data to gpg to encrypt
+this data with a symmetric cipher `-c` and redirect the output of gpg to a file
+in `/tmp/mountpoint` matching the pattern `backup_*.tbz2.gpg` where the asterisk
+represents the date at which the archive was created.
+
+    tar cjf - ~ | gpg --ciper-algo AES -c - > /tmp/mountpoint/backup_`date +"%Y%m%d%H%M"`.tbz2.gpg
+
+> NOTE: In my case, this produces a tarball over 100G in size, which I would
+have to unpack in its entirety and decrypt in order to do anything useful with
+it.
+
+Read the archive, pipe it into gpg which pipes its output to stdout where
+we decompress `-d` the bzip2 `-j` archive into
+
+    cat backup_DATE.tbz2.gpg | gpg - | tar djf -
+
+Archive `-a` sync a file with rsync, which basically preserves everything except
+hardlinks, present information in a human-readable format `-h` and provide a
+progress report `--progress`.
+
+    rsync -ah --progress $SOURCE $DESTINATION
+
+# Links
+
+ - https://wiki.gentoo.org/wiki/Dm-crypt_full_disk_encryption
+ - https://gitlab.com/cryptsetup/cryptsetup/wikis/FrequentlyAskedQuestions
+ - https://superuser.com/questions/205223/pros-and-cons-of-bzip-vs-gzip
+ - https://xkcd.com/936/
+ - https://gitlab.com/cryptsetup/cryptsetup/wikis/FrequentlyAskedQuestions
+ - https://en.wikipedia.org/wiki/Trim_(computing)
