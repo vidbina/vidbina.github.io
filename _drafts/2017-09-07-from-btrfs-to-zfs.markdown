@@ -45,9 +45,22 @@ screencast below.
 </div>
 
 An unencrypted partition is easily accessible by mounting the block device.
-When partitions are encrypted, however; one would need to unlock the partition
-which would yield a mapping which is then mountable. Understanding this concept
-makes the entire ordeal much easier to reason about :wink.
+Encrypted partitions, however; would need to be unlocked first which would
+subsequently yield a mapping which is mountable. Understanding this order of
+steps makes the entire ordeal much easier to reason about -- encrypted volumes
+need to be unlocked prior to them even being mountable :thought_balloon:.
+
+For a brief overview, the following list captures the step involved in the
+usage of a volume where :key: marks the steps required with encrypted volumes
+and :construction: marks the steps required only at the setup of a volume:
+
+ - luksFormat: prep volume for encryption :key: :construction:
+ - format volume to a filesystem :construction:
+ - unlock/luksOpen :key:
+ - mount
+ - read/write
+ - unmount
+ - lock/luksClose :key:
 
 The snippet below lists the output of `lsblk /dev/sda` which provides an
 some insights as to how an LUKS encrypted volume `sda1` relates to its
@@ -62,9 +75,10 @@ sda                    8:0    0 476.9G  0 disk
 └─sda2                 8:2    0 176.9G  0 part  /run/media/b
 ```
 
-> Note that both volumes in the lsblk listing are mounted. I'll discuss how
-to format unencrypted and encrypted volumes and mount these in the sections
-that follow :wink:.
+> Note that both volumes in the lsblk listing are mounted. In order to arrive
+at a scenario that is somewhat similar to the one presented in the listing
+above, I'll mention how to format unencrypted and encrypted volumes and mount
+these in the sections that follow :point_down:.
 
 ### Basic (Unencrypted)
 
@@ -72,9 +86,10 @@ Formatting partition `/dev/sda2` to the ext3 filesystem may be done as follows
 
     sudo mkfs.ext3 /dev/sda2
 
-which is a command that you probably wouldn't need on a day to day basis.
+which is a command that you probably wouldn't need on a day to day basis but
+is still fundamental enough to be worth remembering. :star:
 
-Once a volume is formatted, it may simply be mounted using either
+Once a volume is formatted, it may be mounted by
 
     sudo mount /dev/sda2/ /my/mountpoint
 
@@ -82,10 +97,11 @@ which will mount the disk to `/my/mountpoint` or
 
     udisksctl mount -b /dev/sda2
 
-which will mount the disk to a mountpoint set-up by udisksctl and printed to
-the terminal after the mount is completed.
+which will mount the the block device designated by the flag `-b` and referred
+to as `/dev/sda2` to a mountpoint set up by udisksctl and subsequently printed
+to the terminal after the mount is completed.
 
-Unmount block device `/dev/sda1` by running
+Unmount block device `/dev/sda2` by running
 
     sudo umount /dev/sda2
 
@@ -93,68 +109,79 @@ or by running
 
     udisksctl unmount -b /dev/sda2
 
-> :bulb: Note how udisksctl works without `sudo`. If at all possible, I avoid
-using `sudo` as much as I can :wink:.
+where `-b` indicates that the token that follows represents the reference to
+the block device we intend to unmount.
 
-> If I use `sudo` now and faint a few seconds later, I effectively leave a
-terminal accessible to the next person walking by where sudo probably doesn't
-ask for a password for the next 50-odd seconds or so :explosion:.
+> :bulb: Note how `udisksctl` works without `sudo`. If at all possible, I avoid
+using `sudo` as much as I can :wink:[^sudo].
+
+[^sudo]: Using `sudo` and fainting a few seconds later effectively leaves a terminal that will probably allow unfettered sudo foolery for the next 50-odd seconds or so exposed to the next person walking by. :boom: This is bad, M'kay?!?
 
 ### Encrypted
 
-One may encrypt a partition by using the `cryptsetup` tool as follows
+One may setup encryption on partition `/dev/sda1` by using the `cryptsetup`
+tool as follows
 
     sudo cryptsetup luksFormat /dev/sda1
-In order to use our partition we would have to unlock it. This could be achieved
-using either
+
+which will completely wipe the data off the partition, request a passphrase and
+subsequently prep the volume for use as -- an encrypted volume. :raised_hands:
+
+At this stage we have setup a partition to be used with LUKS encryption.  There
+is no filesystem (ext3, btrfs, zfs, or whatever) setup on the volume yet so
+don't get confused by the "format" in "luksFormat", the drive isn't really
+formatted for a specific filesystem yet.
+
+In order to use our partition we need to unlock it by
 
     sudo cryptsetup luksOpen /dev/sda1 some-alias
 
-which requests a passphrase, opens the the volume and maps it to the arbitrary
-name `some-alias` or
+which will request a passphrase :key:, open the the volume
+and map it to the arbitrary name `some-alias`, or
 
     udisksctl unlock -b /dev/sda1
 
-which will request a passphrase and unlock the device, returning the path to
-which the volume was mapped (e.g.: `/dev/dm-x`).
+which will request a passphrase and unlock the device, subsequently returning
+the path to which the volume was mapped (e.g.: `/dev/dm-x`).
 
-After the volume is unlocked, one may format it to the filesystem of choice, in
-this case being ext3
+Now that the volume is unlocked, one may treat the mapping as a conventional
+drive -- fit for formatting, mounting, reading, writing and unmounting. :floppy_disk:
 
-    sudo mkfs.ext3 /dev/dm-x
+From this point on, one may use the mapping reference `/dev/dm-x` in a similar
+manner as we used the block device reference `/dev/sda2` in the examples to
+format the unencrypted volume. So now you know how to format, mount and unmount
+the encrypted volume as well. :wink:
 
-such that we can finally mount it by means of 
-    
-    sudo mount /dev/dm-x /my/encrypted-storage
+An unmounted disk is still exposed until it is locked again, so when done
+don't forget to lock the device by either running
 
-which mounts our unlocked volume to the arbitrary mountpoint
-`/my/encrypted-storage` or
+    sudo cryptsetup luksClose some-alias
 
-    udisksctl mount -b /dev/dm-x
-
-which mounts the same unlocked volume but has udisksctl manage to which
-mountpoint the volume is mounted. :wink:.
-
-> A volume is mountable for IO after it has been formatted with a filesystem.
-
-Unmount the mapping `/dev/dm-x`
-
-    udisksctl unmount -b /dev/dm-x
-
-After which we can lock the partition `/dev/sda1`
+where the alias is provided that the volume was opened as, or
 
     udisksctl lock -b /dev/sda1
 
-> :bulb: Learning how to use `udisksctl` makes life slightly easier since you
-can use the same tool for unlocking, mount, unmounting and ejecting medium --
-basically your entire day-to-day disk usage workflow. Without `udisksctl` one
-would otherwise have to remember how to use `cryptsetup luksOpen`, `mount` ,
-`umount` along with a method for safely unplugging the storage device and the
-worst part is that one would need to elevate itself to sudo privileges to run
-these commands whereas `udisksctl` just works without requiring sudo
-privileges :wink:. The biggest downside to udisksctl is that I haven't figured
-out how to explicitly provide custom mountpoints while invoking the command.
+which is hopefully self-explantory at this stage.
 
+> :bulb: Learning how to use `udisksctl` makes life slightly easier since you
+can use the same tool for unlocking, mount, unmounting and ejecting medium
+which basically covers your entire day-to-day disk usage workflow. Without
+`udisksctl` one would otherwise have to remember how to use
+`cryptsetup luksOpen`, `mount` , `umount` along with a method for safely
+unplugging the storage device and the worst part is that one would need to
+elevate itself to sudo privileges to run these commands whereas `udisksctl`
+just works without any special privileges :wink:. The biggest downside to
+udisksctl is that I haven't figured out how to explicitly provide custom
+mountpoints while invoking the command.
+
+A great feature of udisksctl is that it makes it pretty easy to safely
+disconnect or eject a medium from a system. Running
+
+    udisksctl power-off -b /dev/sda
+
+allows one to disconnect the entire device `/dev/sda`. Note that I didn't use
+the path to a partition, but the path to the entire device. This is basically
+the eject switch to use with your removable media. :rocket::seat:
 
 ## Backups
 
@@ -194,3 +221,6 @@ progress report `--progress`.
  - https://gitlab.com/cryptsetup/cryptsetup/wikis/FrequentlyAskedQuestions
  - https://en.wikipedia.org/wiki/Trim_(computing)
  - http://www.linfo.org/journaling_filesystem.html
+ - https://unix.stackexchange.com/questions/161915/change-password-on-a-luks-filesystem-without-knowing-the-password#161920
+ - https://www.thegeekstuff.com/2016/03/cryptsetup-lukskey
+[10-cryptsetup-examples][https://www.thegeekstuff.com/2016/03/cryptsetup-lukskey]
