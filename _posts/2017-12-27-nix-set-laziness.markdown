@@ -69,7 +69,7 @@ represents the definition of a set, which will be evaluated lazily. Furthermore
 the the `builtins.nada` phrase will also be evaluated lazily. As such, the
 first call of `z`, evaluates all attributes of the overriden set to return a set
 resembling `{ out = "wow"; }`. This output suggests that the erronous call was
-completely avoided as a result of the override of the `q` attribute during
+completely avoided as a result of the override of the `out` attribute during
 merge (the `//` operator merges two sets).
 
 I guess in the case of merges, one may assume that an attribute in the
@@ -109,7 +109,7 @@ which could leave one to assume that recursive sets have to be considered
 a bit less lazy when recursive references are made. It seems that `a` was
 only overriden after all references to `a` within the left-hand operand were
 evaluated. This is kind of a big deal, as that demands a bit more care from
-anyone using recursive sets to be overriden :boom:.
+anyone using recursive sets with the intent to override them later. :boom:
 
 Fixing the `concat` partial by, for example definining it to
 
@@ -159,10 +159,11 @@ which leads me to the following take-away:
 on the left-hand side, referenced attributes will be evaluated prior to the merge.
 If anything, it makes some sense to avoid the use of recursive sets unless you
 have a good understanding of its inner-workings. I've been bitten before by
-defining a recursive set for a derivation and then merging an override set unto it
-to compose other packages, without being aware that some values could be
-referenced against the old set attributes and others against the override set
-attributes, depending on the expressions used.
+defining a recursive set for the general part of a derivation and then merging
+it with another set to compose the concrete sets for different derrivative
+packages, without being aware that some values could be referenced against the
+old set attributes and others against the override set attributes, depending on
+the expressions used.
 
 The following pseudo-code demonstrates this problem in something remarkably stupid
 I attempted earlier on.
@@ -183,7 +184,7 @@ q = rec {
 ```
 
 Note that the resulting set contains the updated `src` but an `installPhase`
-string that was evaluated against the old value of `src` :boom:.
+string that was evaluated against the old value of `src`. :boom:
 
 This broken code, I wrapped into a helper to compose a derivation
 
@@ -201,3 +202,5 @@ mkSomePackage = overrides: stdenv.mkDerivation (rec {
 which resulted to the resulting derivation having some properly overriden
 attributes and some attributes evaluated against the original attributes
 (i.e.: being from the left-hand set) contributing to some confusion. :sob:
+
+Future me reading this... you've been warned. :rage:
