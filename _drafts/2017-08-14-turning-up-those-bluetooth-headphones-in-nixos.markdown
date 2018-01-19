@@ -11,6 +11,7 @@ tags:
  - audio
  - bluetooth
  - nixos
+ - pacmd
  - pactl
  - pulseaudio
 og:
@@ -29,18 +30,32 @@ head: mugshot
 List all sinks
 
     pacmd list-sinks
+    pactl list-sinks
 
 Set sink `N` as default sink
 
     pacmd set-default-sink N
+    pactl set-default-sink N
 
 Suspend sink `N`
 
-    pacmd suspend-sink N 1
+    pacmd suspend-sink N true
+    pactl suspend-sink N true
 
 Resume sink `N`
 
-    pacmd suspend-sink N 0
+    pacmd suspend-sink N false
+    pactl suspend-sink N false
+
+Move a sink input from one sink to another :wink:
+
+    pacmd move-sink-input X Y
+    pactl move-sink-input X Y
+
+So...
+
+    pacmd list cards
+    pactl list cards
 
 ## Links
 
@@ -53,3 +68,4 @@ Resume sink `N`
 [arch-pa]: https://wiki.archlinux.org/index.php/PulseAudio/Examples
 [pactl-man]: https://linux.die.net/man/1/pactl
 [se-340766]:https://unix.stackexchange.com/questions/340766/change-volume-on-bluetooth-speaker-with-amixer/340794
+[x]:https://askubuntu.com/questions/765233/pulseaudio-fails-to-set-card-profile-to-a2dp-sink-how-can-i-see-the-logs-and#773391
