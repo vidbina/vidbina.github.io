@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Notifications through DBus
+title: Notifications through DBus on NixOS
 description: |
-  A walkthrough of my noob-ish attempt to understand how notifications work on
-  my system before improving the setup altogether with some new eyecandy.
+  A walkthrough of my noob-ish attempt to understand how notifications
+  :speech_balloon:work on my system running NixOS :snowflake:, before
+  improving the setup altogether with some new eyecandy. :eyes: :candy:
 date:  2018-01-19 14:03:52 +0000
 type: tools # for icon
 category: tools # for url
@@ -20,14 +21,13 @@ head: mugshot
 ---
 Yesterday, a bit of config hacking with Lassulus at c-base, resulted to a bunch
 of new ideas that I would like to implement. In short, I would like to mimick
-one specific feature that I remember from my Alfred usage days on OSX on my
-Linux setup. Think about typing mathmatical expressions and getting the answers
-presented through popups or notifications, for starters. Perhaps even copying it
-to the clipboard right away, or at least allowing the user to click the
-notification or a button on a notification to perform the copy operation.
+one specific feature that I remember from my Alfred usage days on OSX on
+my Linux setup. Think about typing mathmatical expressions and getting the
+answers presented through popups or notifications, for starters. Perhaps even
+copying it to the clipboard right away, or at least allowing the user to click
+the notification or a button on a notification to perform the copy operation.
 
-So this post documents my journey and learnings in my attempts to solve this
-issue.
+This post documents my journey and learnings in my attempts to solve this issue.
 
 At this stage I had already installed notify-osd on my NixOS :snowflake: mech
 before. Puzzled by notify-osd automatically starting after me logging in,
@@ -127,7 +127,8 @@ Time to take a closer look...
 
 # D-Bus
 
-The [DBus][dbus] homepage, under the section __What is D-Bus__, reads:
+It's Saturday and the [DBus][dbus] homepage, under the section __What is D-Bus__,
+reads:
 
 > D-Bus is a message bus system, a simple way for applications to talk to one another. In addition to interprocess communication, D-Bus helps coordinate process lifecycle; it makes it simple and reliable to code a "single instance" application or daemon, and to **launch applications and daemons on demand** when their services are needed.
 
