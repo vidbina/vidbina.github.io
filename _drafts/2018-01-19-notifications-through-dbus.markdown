@@ -46,15 +46,12 @@ reference in any of my existing dotfiles.
 
 WTF is starting notify-osd? :confused:
 
-The output of `pstree` displays `notify-osd` just one level under the init
-system (`systemd`), which would leave one to assume that either systemd sparked
-the process (and perhaps manages it too) or something else triggered a start of
-notify-osd. Since it isn't forked under another application that could provide
-clues as to what started it, I still have to look elsewhere for answers.
-
-systemd
-somehow. If there is no mention of notify-osd in any of my systemd services, it
-may have been triggered by something that communicates over D-Bus.
+The output of `pstree` after a fresh reboot displays `notify-osd` just one
+level under the init system (`systemd`), which would leave one to assume
+that either systemd sparked the process (and perhaps manages it too) or
+something else triggered a start of notify-osd. Since it isn't forked under
+another application that could provide clues as to what started it, I still
+have to look elsewhere for answers.
 
 ```
 vid@localhost> pstree -g 2                                                                                                                                                      ~
@@ -77,19 +74,15 @@ vid@localhost> pstree -g 2                                                      
  ├──◆ 01275 dnsmasq /.../bin/dnsmasq -k --enable-dbus --user=dnsmasq -C /...
  ├──◆ 01263 root agetty --login-program /.../bin/login --noclear --keep-baud tty1 115200,38400,9600 linux 
  ├──◆ 01259 privoxy /.../bin/privoxy --no-daemon --user privoxy /... 
- ├─┬◆ 01246 root /.../libexec/docker/dockerd --group=docker --host=fd:// --log-driver=journald --live-restore --graph=/s
- │ └──◆ 01286 root docker-containerd -l unix:///var/run/docker/libcontainerd/docker-containerd.sock --metrics-interval=0 --start-timeout 2m --state-dir /var/run/docker/libcontai
  ├─┬◆ 01163 root /.../bin/slim 
  │ ├─┬─ 01490 vid /store/vidbina.home/.xmonad/xmonad-x86_64-linux 
- │ │ ├─┬◆ 02578 vid /run/current-system/sw/bin/termite 
- │ │ │ └──◆ 02584 vid /run/current-system/sw/bin/zsh 
  │ │ ├─┬◆ 01683 vid /run/current-system/sw/bin/termite 
  │ │ │ └─┬◆ 01704 vid /run/current-system/sw/bin/zsh 
  │ │ │   └──◆ 04224 vid pstree -g 2 
  │ │ ├──◆ 01667 vid xmobar -x0 
  │ │ ├─── 01657 vid /.../bin/python /.../bin/..blueman-applet-wrapped-w
  │ │ ├─── 01656 vid /run/current-system/sw/bin/nm-applet --sm-disable 
- │ │ └─── 01655 vid trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 5 --transparent true --tint 0x212121 --height 24 
+ │ │ └─── 01655 vid trayer --blahblah
  │ └──◆ 01244 root /.../bin/X -config /... -xkbdir /...
  ├──◆ 01128 root /.../lib/systemd/systemd-logind 
  ├──◆ 01030 messagebus /.../bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation 
@@ -111,16 +104,92 @@ vid@localhost> pstree -g 2                                                      
  └─── 01699 vid /.../libexec/bluetooth/obexd
 ```
 
+At this stage I recalled noticing a notify-osd popup every time I connected to
+a network leading me to assume that NetworkManager may have something to do with
+starting notify-osd. Since PID's tend increase with time as new processes are
+started, the pstree listing suggests that the network manager (PID: 1017) along
+with my bluetooth daemons (PID: 1699) and some other junk were started before
+notify-osd.
+
+In order to explore the hunch that NetworkManager may be involved, I kill
+notify-osd and reconnect to a network and voilà... notify-osd is ressurected.
+
+Recalling reading something about D-Bus in conjunction NetworkManager far in
+the past, I decide to finally dive into a long overdue encounter with D-Bus to
+get to the bottom of this.
+
 # D-Bus
 
-On the [DBus][dbus] homepage, I read the next under the section __What is D-Bus__:
+The [DBus][dbus] homepage, under the section __What is D-Bus__, reads:
 
 > D-Bus is a message bus system, a simple way for applications to talk to one another. In addition to interprocess communication, D-Bus helps coordinate process lifecycle; it makes it simple and reliable to code a "single instance" application or daemon, and to **launch applications and daemons on demand** when their services are needed.
+
+The D-Bus (Desktop bus) ecosystem introduces the concept of busses,
+connections, objects, interfaces and members.
+
+<div class="element svg light">
+  <img src="/svg/diagrams/dbus-ecosystem-overview.svg" alt="D-Bus facilitates connections that host objects that expose methods. A user of D-Bus connects to the bus, and a specific connection in order to interact with an object through its methods.">
+</div>
+
+A bus is the actual medium that serves as a carrier of all messages.
+Generally, a machine will have at least a `system` and `session` bus which, for
+example, would be accessible through a unix-domain socket expressed as a
+unix-domain path or a TCP connection expressed by hostname and port. :bus:
+
+A connection is addressed by a _bus name_. The naming is slightly confusing but
+bear with me for a moment as I attempt to clarify. A _bus name_ is the
+_connection's bus name_ (i.e.: name of the connection on the bus) and not the
+connection _bus's name_.
+
+Within a connection one may expect to find objects that contain members.
+Interfaces, as in OOP, specify members and can as a whole be implemented by an
+object. :wink:
+
+To illustrate, the [D-Bus Specification][dbus-spec], specifies a `org.freedesktop.DBus.ListNames`
+member for the `org.freedesktop.DBus` object, which lists the names currently
+registered on the bus. We could execute
+
+```bash
+dbus-send \
+  --session \
+  --dest=org.freedesktop.DBus \
+  --type=method_call \
+  --print-reply \
+  /org/freedesktop/DBus \
+  org.freedesktop.DBus.ListNames
+```
+
+to get a listing of names on the session bus. The command is pretty
+self-explanatory but humor me for a moment. The `--session` flag indicates that
+we intent to communicate with the session bus, whereas the `--system` would
+indicate that we intent to communicate with the system bus. The `--dest` argument
+specifies the __bus name__, therefore specifying which connection on the bus we
+are targeting. With `--type` we specify we are issuing a `method_call` --
+another valid type is that of a `signal`. In our case we need a reply printed,
+hence the `--print-reply`. The object we are interacting with and the member of
+that object or the message name are the next two arguments respectively.
+
+A quick read of the [Introduction to D-Bus][dbus-intro] article, mentions
+activations as a mechanism for triggering an executable. Basically activations
+allow for a service to subscribe to a given type of message in order to trigger
+an executable (if it isn't already running) upon the delivery of a message.
+
+ 1. `dbus-daemon --system` (PID: 1030)
+ 1. `dbus-launch --exit-with-session` (PID: 1560)
+ 1. `dbus-daemon --session` (PID: 1575)
 
 Installing `dbus-map`
 
 ## Links
 
-- http://web.mit.edu/~cocosci/Papers/statistics-and-the-Bayesian-mind.pdf
+ - [Introduction to D-Bus][dbus-intro]
 
 [dbus]: https://www.freedesktop.org/wiki/Software/dbus/
+[dbus-intro]: https://www.freedesktop.org/wiki/IntroductionToDBus/
+[dbus-activation]: https://dbus.freedesktop.org/doc/dbus-specification.html#message-bus-starting-services
+[dbus-tut-activation]: http://raphael.slinckx.net/blog/documents/dbus-tutorial
+[dbus-tut]: https://dbus.freedesktop.org/doc/dbus-tutorial.html
+[wiki-dbus]: https://en.wikipedia.org/wiki/D-Bus
+[dbus-spec]: https://dbus.freedesktop.org/doc/dbus-specification.html
+[dbus-spec-listnames]: https://dbus.freedesktop.org/doc/dbus-specification.html#bus-messages-list-names
+[dbus-cli]: http://www.kaizou.org/2014/06/dbus-command-line/

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="142.875mm"
+   height="87.3125mm"
+   viewBox="0 0 142.875 87.3125"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="dbus-ecosystem-overview.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="190.42023"
+     inkscape:cy="89.910027"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer4"
+     showgrid="true"
+     inkscape:window-width="3194"
+     inkscape:window-height="1769"
+     inkscape:window-x="0"
+     inkscape:window-y="1465"
+     inkscape:window-maximized="0"
+     inkscape:snap-global="true"
+     inkscape:snap-text-baseline="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid815"
+       originx="-2.6458333"
+       originy="-209.02083" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="bg"
+     transform="translate(-2.6458333,-0.66666663)"
+     style="display:none">
+    <rect
+       style="fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+       id="rect936"
+       width="142.875"
+       height="87.3125"
+       x="2.6458333"
+       y="0.66666663" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-2.6458333,-0.66666663)">
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       id="rect817"
+       width="111.125"
+       height="50.270836"
+       x="7.9375"
+       y="32.416664" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       id="rect823"
+       width="35.71875"
+       height="18.25625"
+       x="7.9375"
+       y="7.5458307" />
+    <rect
+       style="fill:#ffcc00;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       id="rect879"
+       width="30.427084"
+       height="6.3499999"
+       x="10.583332"
+       y="10.191665" />
+    <rect
+       y="16.541664"
+       x="10.583332"
+       height="6.6145844"
+       width="30.427084"
+       id="rect881"
+       style="fill:#ffcc00;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1" />
+    <rect
+       y="7.5458288"
+       x="46.302078"
+       height="18.25625"
+       width="35.71875"
+       id="rect891"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1" />
+    <rect
+       y="10.191663"
+       x="48.947914"
+       height="6.3499999"
+       width="30.427084"
+       id="rect893"
+       style="fill:#ffcc00;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1" />
+    <rect
+       style="fill:#ffcc00;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       id="rect895"
+       width="30.427084"
+       height="6.6145844"
+       x="48.947914"
+       y="16.541664" />
+    <rect
+       style="fill:#ffcc00;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       id="rect911"
+       width="105.83334"
+       height="39.6875"
+       x="10.583333"
+       y="35.0625" />
+    <rect
+       style="fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       id="rect917"
+       width="100.54166"
+       height="29.104166"
+       x="13.229167"
+       y="37.708336" />
+    <rect
+       style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       id="rect923"
+       width="95.25"
+       height="7.9375014"
+       x="15.875"
+       y="50.9375" />
+    <rect
+       y="40.354168"
+       x="15.875"
+       height="7.9375014"
+       width="95.25"
+       id="rect929"
+       style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="interconnects">
+    <path
+       style="fill:#ff005d;fill-opacity:0.22312927;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 5.2916667,31.749997 111.1250033,0 L 38.364583,22.48958 H 7.9375"
+       id="path939"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       sodipodi:nodetypes="cccc"
+       inkscape:connector-curvature="0"
+       id="path949"
+       d="M 5.2916667,31.749997 H 116.41667 L 76.729166,22.48958 H 46.302083"
+       style="fill:#ff005d;fill-opacity:0.22312927;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="text"
+     style="display:inline"
+     transform="translate(-2.6458333,-0.66666663)">
+    <text
+       id="text857"
+       y="5.9583302"
+       x="10.583333"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332"
+         y="5.9583302"
+         x="10.583333"
+         sodipodi:role="line"
+         id="tspan859">D-Bus client</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="10.583333"
+       y="80.041664"
+       id="text865"><tspan
+         id="tspan863"
+         sodipodi:role="line"
+         x="10.583333"
+         y="80.041664"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332">D-Bus</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="11.906249"
+       y="15.21875"
+       id="text885"><tspan
+         id="tspan883"
+         sodipodi:role="line"
+         x="11.906249"
+         y="15.21875"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332">your code</tspan></text>
+    <text
+       id="text889"
+       y="21.833332"
+       x="11.906249"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332"
+         y="21.833332"
+         x="11.906249"
+         sodipodi:role="line"
+         id="tspan887">dbus binding</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="48.947918"
+       y="5.9583302"
+       id="text899"><tspan
+         id="tspan897"
+         sodipodi:role="line"
+         x="48.947918"
+         y="5.9583302"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332">D-Bus client</tspan></text>
+    <text
+       id="text903"
+       y="15.21875"
+       x="50.270828"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332"
+         y="15.21875"
+         x="50.270828"
+         sodipodi:role="line"
+         id="tspan901">app logic</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="50.270828"
+       y="21.833332"
+       id="text907"><tspan
+         id="tspan905"
+         sodipodi:role="line"
+         x="50.270828"
+         y="21.833332"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332">dbus glib</tspan></text>
+    <text
+       id="text915"
+       y="72.104172"
+       x="13.229167"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332"
+         y="72.104172"
+         x="13.229167"
+         sodipodi:role="line"
+         id="tspan913">connection: org.freedesktop.DBus</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="15.875"
+       y="64.166672"
+       id="text921"><tspan
+         id="tspan919"
+         sodipodi:role="line"
+         x="15.875"
+         y="64.166672"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332">object: /org/freedesktop/DBus</tspan></text>
+    <text
+       id="text927"
+       y="56.229168"
+       x="18.520834"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332"
+         y="56.229168"
+         x="18.520834"
+         sodipodi:role="line"
+         id="tspan925">member: org.freedesktop.DBus.ListNames</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="18.520834"
+       y="45.645836"
+       id="text933"><tspan
+         id="tspan931"
+         sodipodi:role="line"
+         x="18.520834"
+         y="45.645836"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332">member: org.freedesktop.DBus.Hello</tspan></text>
+  </g>
+</svg>
