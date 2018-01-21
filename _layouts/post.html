@@ -9,6 +9,10 @@ layout: default
     until
     {% endif %}
     <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
+    {% if page.updated %}
+    and last updated on
+    <time datetime="{{ page.updated | date: "%Y-%m-%d" }}">{{ page.updated | date_to_string }}</time>
+    {% endif %}
 
     <h1>
       {% include icons-entypo.html type=page.type icon=page.icon %}
