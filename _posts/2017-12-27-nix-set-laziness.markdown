@@ -114,7 +114,7 @@ in rec {
 } // { a = "wow"; }
 ```
 
-which fails comicaly with a fragmented error message :stuck_out_tongue_closed_eyes:
+which fails comically with a fragmented error message :stuck_out_tongue_closed_eyes:
 
 ```
 { a = "wow"; b = error: attribute ‘nada’ missing, at (string):2:12
@@ -193,8 +193,9 @@ q = rec {
   '';
 } // {
   src = "new source";
-  # I would have to redefine installPhase here
-  # otherwise I'm screwing myself :poop:
+  # I would have to redefine installPhase here or
+  # face the consequences of installPhase being
+  # evaluated against the old value of src
 }
 ```
 
