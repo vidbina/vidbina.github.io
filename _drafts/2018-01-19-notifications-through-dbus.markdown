@@ -3,8 +3,8 @@ layout: post
 title: Notifications through DBus on NixOS
 description: |
   A walkthrough of my noob-ish attempt to understand how notifications
-  :speech_balloon:work on my system running NixOS :snowflake:, before
-  improving the setup altogether with some new eyecandy. :eyes: :candy:
+  :speech_balloon: work on my system running NixOS :snowflake:, before
+  improving the setup altogether with some new eyecandy. :eyes::candy:
 date:  2018-01-19 14:03:52 +0000
 type: tools # for icon
 category: tools # for url
@@ -125,7 +125,7 @@ evident in the following excerpt from my pstree output:
 
 Time to take a closer look...
 
-# D-Bus
+## D-Bus
 
 It's Saturday and the [DBus][dbus] homepage, under the section __What is D-Bus__,
 reads:
@@ -147,13 +147,13 @@ unix-domain path or a TCP connection expressed by hostname and port. :bus:
 A connection is addressed by a _bus name_. The naming is slightly confusing but
 bear with me for a moment as I attempt to clarify. A _bus name_ is the
 _connection's bus name_ (i.e.: name of the connection on the bus) and not the
-connection _bus's name_.
+connection _bus's name_. :name_badge:
 
 Within a connection one may expect to find objects that contain members.
-Interfaces, as in OOP, specify members and can as a whole be implemented by an
-object. :wink:
+Interfaces, as in OOP, specify members and can, as a whole, be implemented by an
+object. :package::wink:
 
-To illustrate, the [D-Bus Specification][dbus-spec], specifies a `org.freedesktop.DBus.ListNames`
+To illustrate, the [D-Bus Specification][dbus-spec], documents a `org.freedesktop.DBus.ListNames`
 member for the `org.freedesktop.DBus` object, which lists the names currently
 registered on the bus. We could [run][dbus-list]
 
@@ -167,10 +167,6 @@ dbus-send \
   org.freedesktop.DBus.ListNames
 ```
 
-> :bulb: Installing `dbus-map` and running `dbus-map --session --dump-methods`
-gives an overview of all methods for the different connections on the session
-bus.
-
 to get a listing of names on the session bus. The command is
 pretty self-explanatory but humor me for a moment. The `--session` flag
 indicates that we intent to communicate with the session bus, whereas the
@@ -182,20 +178,24 @@ need a reply printed, hence the `--print-reply`. The object we are interacting
 with and the member of that object or the message name are the next two
 arguments respectively.
 
+> :bulb: Installing `dbus-map` and executing the command `dbus-map --session --dump-methods`
+gives an overview of all methods for the different connections on the session
+bus.
+
 A quick read of the [Introduction to D-Bus][dbus-intro] article, mentions
 activations as a mechanism for triggering an executable. Basically activations
 allow for a service to subscribe to a given type of message in order to trigger
 an executable (if it isn't already running) upon the delivery of a message.
 
 In order to explore whether activations were indeed the cause of the notify-osd
-resurrection, I decided to try my hand at the `org.freedesktop.DBus.StartServiceByName`
-member.
+resurrection, I decided to try my hand at invoking a method call to the member
+named `org.freedesktop.DBus.StartServiceByName`.
 
 Killing notify-osd and sending the [StartServiceByName][dbus-startservicebyname]
-message with `org.freedesktop.Notifications` and 0 as arguments, seems to do
-the trick.
+message with the name of the service, being "org.freedesktop.Notifications", and
+an empty 32-bit integer as arguments, by running:
 
-```
+```bash
 kill `pidof notify-osd`
 dbus-send \
   --session \
@@ -204,28 +204,58 @@ dbus-send \
   --print-reply \
   /org/freedesktop/DBus \
   org.freedesktop.DBus.StartServiceByName string:org.freedesktop.Notifications uint32:0
+```
 
+seems to do the trick and produces a reply indicating that the service was
+succesfully started. :trophy:
+
+```
 method return time=1516484477.248379 sender=org.freedesktop.DBus -> destination=:1.163 serial=3 reply_serial=2 uint32 1
 ```
 
 The remaining question is now, where the .service is defined. As far as I can
 tell from the documentation this should be recorded in a file somewhere on my
-filesystem. Since I haven't yet found it, I'm afraid that perhaps D-Bus allows
-an application to register for service activation on first boot, but haven't
-found anything in the documentation to suggest that it is possible.
+filesystem.
+
+> :book: On Unix systems, the system bus should default to searching for .service files in `/usr/local/share/dbus-1/system-services`, `/usr/share/dbus-1/system-services` and `/lib/dbus-1/system-services`, with that order of precedence. It may also search other implementation-specific locations, but should not vary these locations based on environment variables.
+
+> :book: On Unix systems, the session bus should search for .service files in `$XDG_DATA_DIRS/dbus-1/services` as defined by the XDG Base Directory Specification. Implementations may also search additional locations, with a higher or lower priority than the XDG directories.
+
+Since I haven't yet found it, I'm afraid that perhaps D-Bus allows an
+application to register for service activation on first boot, but haven't
+found anything in the documentation to support this theory. :confused:
 
 After a while of sleuthing on the web and poking around my file system, I
-remember that NixOS :snowflake: allows a package to provide complementary files
-by placing them in the  `$out/doc`, `$out/lib` and `$out/share` directories, for
-example. The notify-osd package does exactly that: producing a service file in
-`share/dbus-1/services`. Problem solved. Now I know that uninstalling
-notify-osd will also remove the service for activation. Just not sure if NixOS
-will restart the DBus daemon once notify-osd is uninstalled or perhaps D-Bus
-keeps an eye on the dbus-1/services directory to handle mutations on the fly.
-I'll check it out later... I had a b-day party to attend at nine and it's
-quarter to midnight. :stuck_out_tongue_closed_eyes:
+remember[^where] that NixOS :snowflake: allows a package to provide
+complementary files by placing them in the  `$out/doc`, `$out/lib` and
+`$out/share` directories, for example.
 
-# Links
+The notify-osd package does exactly that: producing a service file in
+`share/dbus-1/services`. Problem solved! Now I know that uninstalling
+notify-osd will also remove the service for activation.
+
+Just not sure if NixOS will restart the DBus daemon once notify-osd is
+uninstalled or perhaps D-Bus keeps an eye on the dbus-1/services directory
+to appropriately respond to file changes.
+
+I'll check it out later... I had a b-day bash to attend at nine and it's
+quarter to midnight. :stuck_out_tongue_closed_eyes::confetti_ball:
+
+[^where]: If you manage to figure out where this is documented, please let me know. As with many things NixOS :snowflake: related, the documentation is continually improving but as of yet still hard to search sometimes.
+
+## Conclusion
+
+This post is already far too long. I'll work on the features I wanted on
+another occassion.
+
+A day later, I removed the `notify-osd` package and installed `dunst`
+instead, but D-Bus didn't take notice of the change. For the entire
+duration of my session notify-osd would pop up to any relevant message
+sent to the `org.freedekstop.Notifications` connection. Since the D-Bus
+session bus lasts for the duration of the user session, I basically had
+to log out and log back in to get dunst to pick up my notifications.
+
+## Links
 
  - [Introduction to D-Bus][dbus-intro]
 

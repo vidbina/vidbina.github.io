@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="142.875mm"
-   height="87.3125mm"
-   viewBox="0 0 142.875 87.3125"
+   height="95.25mm"
+   viewBox="0 0 142.875 95.25"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
@@ -27,9 +27,9 @@
      inkscape:pageshadow="2"
      inkscape:zoom="2.8284271"
      inkscape:cx="190.42023"
-     inkscape:cy="89.910027"
+     inkscape:cy="176.47857"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer2"
      showgrid="true"
      inkscape:window-width="3194"
      inkscape:window-height="1769"
@@ -46,7 +46,7 @@
        type="xygrid"
        id="grid815"
        originx="-2.6458333"
-       originy="-209.02083" />
+       originy="-201.08333" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -70,20 +70,20 @@
        style="fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
        id="rect936"
        width="142.875"
-       height="87.3125"
+       height="95.25"
        x="2.6458333"
        y="0.66666663" />
   </g>
   <g
-     inkscape:label="Layer 1"
+     inkscape:label="figures"
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-2.6458333,-0.66666663)">
     <rect
        style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
        id="rect817"
-       width="111.125"
-       height="50.270836"
+       width="132.29167"
+       height="60.854164"
        x="7.9375"
        y="32.416664" />
     <rect
@@ -92,31 +92,31 @@
        width="35.71875"
        height="18.25625"
        x="7.9375"
-       y="7.5458307" />
+       y="7.2812467" />
     <rect
        style="fill:#ffcc00;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
        id="rect879"
        width="30.427084"
        height="6.3499999"
-       x="10.583332"
-       y="10.191665" />
+       x="10.583333"
+       y="9.9270802" />
     <rect
        y="16.541664"
-       x="10.583332"
+       x="10.583333"
        height="6.6145844"
-       width="30.427084"
+       width="30.427082"
        id="rect881"
        style="fill:#ffcc00;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1" />
     <rect
-       y="7.5458288"
-       x="46.302078"
+       y="7.2812467"
+       x="46.302082"
        height="18.25625"
        width="35.71875"
        id="rect891"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1" />
     <rect
-       y="10.191663"
-       x="48.947914"
+       y="9.9270802"
+       x="48.947918"
        height="6.3499999"
        width="30.427084"
        id="rect893"
@@ -126,36 +126,57 @@
        id="rect895"
        width="30.427084"
        height="6.6145844"
-       x="48.947914"
+       x="48.947918"
        y="16.541664" />
     <rect
        style="fill:#ffcc00;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
        id="rect911"
-       width="105.83334"
-       height="39.6875"
+       width="127"
+       height="50.270832"
        x="10.583333"
-       y="35.0625" />
+       y="35.062496" />
     <rect
        style="fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
        id="rect917"
-       width="100.54166"
-       height="29.104166"
+       width="121.70835"
+       height="39.6875"
        x="13.229167"
-       y="37.708336" />
+       y="37.708328" />
     <rect
        style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
        id="rect923"
-       width="95.25"
-       height="7.9375014"
+       width="116.41666"
+       height="7.9375019"
        x="15.875"
-       y="50.9375" />
+       y="61.520828" />
     <rect
-       y="40.354168"
+       y="50.937496"
        x="15.875"
-       height="7.9375014"
-       width="95.25"
+       height="7.9375005"
+       width="116.41666"
        id="rect929"
        style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1" />
+    <rect
+       style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       id="rect860"
+       width="116.41666"
+       height="7.937499"
+       x="15.875"
+       y="40.354164" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       id="rect884"
+       width="35.718739"
+       height="11.641668"
+       x="84.666664"
+       y="13.89583" />
+    <rect
+       style="fill:#ffcc00;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       id="rect886"
+       width="30.427084"
+       height="6.3499999"
+       x="87.3125"
+       y="16.806246" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -163,7 +184,7 @@
      inkscape:label="interconnects">
     <path
        style="fill:#ff005d;fill-opacity:0.22312927;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 5.2916667,31.749997 111.1250033,0 L 38.364583,22.48958 H 7.9375"
+       d="M 5.2916667,31.749997 H 137.58333 L 38.364583,22.48958 H 7.9375"
        id="path939"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
@@ -171,8 +192,14 @@
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path949"
-       d="M 5.2916667,31.749997 H 116.41667 L 76.729166,22.48958 H 46.302083"
+       d="M 5.2916667,31.749997 H 137.58333 L 76.729166,22.48958 H 46.302083"
        style="fill:#ff005d;fill-opacity:0.22312927;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       style="fill:#ff005d;fill-opacity:0.22312927;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 5.2916667,31.749997 H 137.58333 L 115.09375,22.48958 H 84.666667"
+       id="path902"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -195,12 +222,12 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="10.583333"
-       y="80.041664"
+       y="90.624992"
        id="text865"><tspan
          id="tspan863"
          sodipodi:role="line"
          x="10.583333"
-         y="80.041664"
+         y="90.624992"
          style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332">D-Bus</tspan></text>
     <text
        xml:space="preserve"
@@ -259,12 +286,12 @@
          style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332">dbus glib</tspan></text>
     <text
        id="text915"
-       y="72.104172"
+       y="82.6875"
        x="13.229167"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332"
-         y="72.104172"
+         y="82.6875"
          x="13.229167"
          sodipodi:role="line"
          id="tspan913">connection: org.freedesktop.DBus</tspan></text>
@@ -272,34 +299,67 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="15.875"
-       y="64.166672"
+       y="74.75"
        id="text921"><tspan
          id="tspan919"
          sodipodi:role="line"
          x="15.875"
-         y="64.166672"
+         y="74.75"
          style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332">object: /org/freedesktop/DBus</tspan></text>
     <text
        id="text927"
-       y="56.229168"
+       y="66.8125"
        x="18.520834"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332"
-         y="56.229168"
+         y="66.8125"
          x="18.520834"
          sodipodi:role="line"
-         id="tspan925">member: org.freedesktop.DBus.ListNames</tspan></text>
+         id="tspan925">member: org.freedesktop.DBus.StartServiceByName</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="18.520834"
-       y="45.645836"
+       y="56.229164"
        id="text933"><tspan
          id="tspan931"
          sodipodi:role="line"
          x="18.520834"
-         y="45.645836"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332">member: org.freedesktop.DBus.Hello</tspan></text>
+         y="56.229164"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332">member: org.freedesktop.DBus.ListNames</tspan></text>
+    <text
+       id="text864"
+       y="45.645832"
+       x="18.520834"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332"
+         y="45.645832"
+         x="18.520834"
+         sodipodi:role="line"
+         id="tspan862">member: org.freedesktop.DBus.Hello</tspan></text>
+    <text
+       id="text892"
+       y="12.572913"
+       x="87.3125"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332"
+         y="12.572913"
+         x="87.3125"
+         sodipodi:role="line"
+         id="tspan890">D-Bus client</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'A Industrial Black';-inkscape-font-specification:'A Industrial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="88.635414"
+       y="21.833334"
+       id="text896"><tspan
+         id="tspan894"
+         sodipodi:role="line"
+         x="88.635414"
+         y="21.833334"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Medium';stroke-width:0.26458332">dbus-send</tspan></text>
   </g>
 </svg>
