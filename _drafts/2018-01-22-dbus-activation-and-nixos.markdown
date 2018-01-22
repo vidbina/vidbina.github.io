@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Notifications through DBus on NixOS
+title: Notifications, DBus Activation and NixOS
 description: |
   A walkthrough of my noob-ish attempt to understand how notifications
   :speech_balloon: work on my system running NixOS :snowflake:, before
   improving the setup altogether with some new eyecandy. :eyes::candy:
-date:  2018-01-19 14:03:52 +0000
+since:  2018-01-19 14:03:52 +0000
+date:  2018-01-22 01:49:37 +0200
 type: tools # for icon
 category: tools # for url
 tags:
@@ -27,7 +28,8 @@ answers presented through popups or notifications, for starters. Perhaps even
 copying it to the clipboard right away, or at least allowing the user to click
 the notification or a button on a notification to perform the copy operation.
 
-This post documents my journey and learnings in my attempts to solve this issue.
+This post documents my journey and learnings in my attempts ~~to solve this
+issue~~ figure out how D-Bus plays ball in NixOS.
 
 At this stage I had already installed notify-osd on my NixOS :snowflake: mech
 before. Puzzled by notify-osd automatically starting after me logging in,
@@ -251,7 +253,7 @@ It's Sunday and this post is already too long, so I'll work on the features I
 wanted on another occassion.
 
 I removed the `notify-osd` package and installed `dunst` instead, but D-Bus
-didn't take notice of the change. For the entire duration of my session
+didn't take notice of the change. For the entire duration of my session,
 notify-osd would pop up to any relevant message sent to the
 `org.freedekstop.Notifications` connection.
 
@@ -260,8 +262,8 @@ basically had to log out and log back in to get dunst to pick up my
 notifications.
 
 Actually, I even tried killing the D-Bus session daemon in order to observe if
-that would trigger a restart. It didn't, :laughing: but did take down all of my
-windows rather spectacularly. :boom: I had a good laugh.
+that would trigger a restart. It didn't :laughing: but it did take down all of
+my windows rather spectacularly. :boom: I had a good laugh.
 
 Someday I will have to figure out what the point of `dbus-launch` is.
 
