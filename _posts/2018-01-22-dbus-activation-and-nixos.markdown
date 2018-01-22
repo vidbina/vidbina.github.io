@@ -121,9 +121,9 @@ To get started, the tree indicates that two daemons are running for D-Bus, of
 which the second daemon seems to have been triggered by some launcher as
 evident in the following excerpt from my pstree output:
 
- 1. `dbus-daemon --system` (PID: 1030)
- 1. `dbus-launch --exit-with-session /.../xsession blah` (PID: 1560)
- 1. `dbus-daemon --session` (PID: 1575)
+ 1. dbus-daemon --system (PID: 1030)
+ 1. dbus-launch --exit-with-session /.../xsession blah (PID: 1560)
+ 1. dbus-daemon --session (PID: 1575)
 
 Time to take a closer look...
 
