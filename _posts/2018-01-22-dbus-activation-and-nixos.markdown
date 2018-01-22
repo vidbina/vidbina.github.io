@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Notifications, DBus Activation and NixOS
+title: Notifications, D-Bus Activation and NixOS
 description: |
   A walkthrough of my noob-ish attempt to understand how notifications
   :speech_balloon: work on my system running NixOS :snowflake:, before
@@ -129,7 +129,7 @@ Time to take a closer look...
 
 ## D-Bus
 
-It's Saturday and the [DBus][dbus] homepage, under the section __What is D-Bus__,
+It's Saturday and the [D-Bus][dbus] homepage, under the section __What is D-Bus__,
 reads:
 
 > D-Bus is a message bus system, a simple way for applications to talk to one another. In addition to interprocess communication, D-Bus helps coordinate process lifecycle; it makes it simple and reliable to code a "single instance" application or daemon, and to **launch applications and daemons on demand** when their services are needed.
@@ -238,7 +238,7 @@ The notify-osd package does exactly that: producing a service file in
 `share/dbus-1/services`. Problem solved! Now I know that uninstalling
 notify-osd will also remove the service for activation.
 
-Just not sure if NixOS will restart the DBus daemon once notify-osd is
+Just not sure if NixOS will restart the D-Bus daemon once notify-osd is
 uninstalled or perhaps D-Bus keeps an eye on the dbus-1/services directory
 to appropriately respond to file changes.
 
