@@ -153,9 +153,10 @@ Within a connection one may expect to find objects that contain members.
 Interfaces, as in OOP, specify members and can, as a whole, be implemented by an
 object. :package::wink:
 
-To illustrate, the [D-Bus Specification][dbus-spec], documents a `org.freedesktop.DBus.ListNames`
-member for the `org.freedesktop.DBus` object, which lists the names currently
-registered on the bus. We could [run][dbus-list]
+To illustrate, the [D-Bus Specification][dbus-spec], documents an
+`org.freedesktop.DBus.ListNames` [member][dbus-spec-listnames] for the
+`org.freedesktop.DBus` object, which lists the names currently registered on
+the bus. We could [run][dbus-list]
 
 ```bash
 dbus-send \
@@ -183,9 +184,10 @@ gives an overview of all methods for the different connections on the session
 bus.
 
 A quick read of the [Introduction to D-Bus][dbus-intro] article, mentions
-activations as a mechanism for triggering an executable. Basically activations
-allow for a service to subscribe to a given type of message in order to trigger
-an executable (if it isn't already running) upon the delivery of a message.
+[activations][dbus-activation] as a mechanism for triggering an executable.
+Basically activations allow for a service to subscribe to a given type of
+message in order to trigger an executable (if it isn't already running) upon
+the delivery of a message.
 
 In order to explore whether activations were indeed the cause of the notify-osd
 resurrection, I decided to try my hand at invoking a method call to the member
@@ -245,19 +247,33 @@ quarter to midnight. :stuck_out_tongue_closed_eyes::confetti_ball:
 
 ## Conclusion
 
-This post is already far too long. I'll work on the features I wanted on
-another occassion.
+It's Sunday and this post is already too long, so I'll work on the features I
+wanted on another occassion.
 
-A day later, I removed the `notify-osd` package and installed `dunst`
-instead, but D-Bus didn't take notice of the change. For the entire
-duration of my session notify-osd would pop up to any relevant message
-sent to the `org.freedekstop.Notifications` connection. Since the D-Bus
-session bus lasts for the duration of the user session, I basically had
-to log out and log back in to get dunst to pick up my notifications.
+I removed the `notify-osd` package and installed `dunst` instead, but D-Bus
+didn't take notice of the change. For the entire duration of my session
+notify-osd would pop up to any relevant message sent to the
+`org.freedekstop.Notifications` connection.
+
+Since the D-Bus session bus lasts for the duration of the user session, I
+basically had to log out and log back in to get dunst to pick up my
+notifications.
+
+Actually, I even tried killing the D-Bus session daemon in order to observe if
+that would trigger a restart. It didn't, :laughing: but did take down all of my
+windows rather spectacularly. :boom: I had a good laugh.
+
+Someday I will have to figure out what the point of `dbus-launch` is.
+
+Someday... :rainbow:
 
 ## Links
 
- - [Introduction to D-Bus][dbus-intro]
+ - [D-Bus Activation Tutorial][dbus-tut-activation] by Raphaël Slinckx
+ - [D-Bus Specification][dbus-spec]
+ - [D-Bus Tutorial][dbus-tut] by Havoc Pennington
+ - [Introduction to D-Bus][dbus-intro] by Jeroen Vermeulen
+ - [Wikipedia: D-Bus][wiki-dbus]
 
 [dbus]: https://www.freedesktop.org/wiki/Software/dbus/
 [dbus-intro]: https://www.freedesktop.org/wiki/IntroductionToDBus/
