@@ -221,6 +221,11 @@ attributes and some attributes evaluated against the original attributes
 
 Future me reading this... you've been warned. :rage:
 
+## Links
+
+ - [Nix Pills: Chapter 4. The Basics of the Language, Section 1. Laziness][nix-pill-basics]
+
 [profpatsch]: http://profpatsch.de/
 [set-math]: https://en.wikipedia.org/wiki/Set_(mathematics)
 [set-cs]: https://en.wikipedia.org/wiki/Set_(abstract_data_type)
+[nix-pill-basics]: https://nixos.org/nixos/nix-pills/basics-of-language.html#idm140737316523008
