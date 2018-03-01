@@ -5,15 +5,15 @@
   city: Berlin
   period: August 2015 - October 2015
   title: CTO
-  public: true
-  description: "By the time I joined Freewayworks LLC, the company was on the
-    verge of joining a incubation program to aid in bringing the concept to
-    the public. In my three months with the company I asked many of the
-    critical questions, helped us steer clear of unnecessary busy work by
-    focussing on that will leads to results quickly (which equates to lessons
-    to be learned) and built whatever was necessary to (in)validate the
-    assumptions we still had at that stage.
-    "
+  public: false
+  description: |
+    By the time I joined Freewayworks LLC, the company was on the verge of
+    joining a incubation program to aid in bringing the concept to the public.
+    In my three months with the company I asked many of the critical questions,
+    helped us steer clear of unnecessary busy work by focussing on that will
+    leads to results quickly (which equates to lessons to be learned) and built
+    whatever was necessary to (in)validate the assumptions we still had at that
+    stage.
   keywords:
     - logistics
     - pay-per-ride
@@ -29,15 +29,16 @@
     url: http://vita.io
   country: The Netherlands
   city: Rotterdam
-  period: May 2015 - current
+  period: May 2015
   title: Devops Engineer
-  description: "In an effort to anticipate to future developments Vita.io needsi
-    her infrastructure prepared for the upcoming demands (larger dev teams, 
-    more customers). This means moving away from a few virtual private servers 
-    towards a cloud-based solution that has the required reduncancy and 
-    offers the necessary flexibility in required workload. I have been chosen
-    to set up the new infrastructure to help the company move forward.
-    "
+  description: |
+    In an effort to anticipate to future developments Vita.io needed her
+    infrastructure prepared for the upcoming demands (larger dev teams, more
+    customers). In this case I assisted in the attempts to explore the options
+    in moving away from a few virtual private servers towards a cloud-based
+    solution that has the required reduncancy and offers the necessary
+    flexibility in required workload. I have been chosen to set up the new
+    infrastructure to help the company move forward.
   keywords:
    - Azure
    - cloud-computing
@@ -48,7 +49,7 @@
    - Mesos
    - Ansible
   active: true
-  public: true
+  public: false
   type: work
   relationship: free-lancer
 - organization:
@@ -58,13 +59,14 @@
   city: Berlin
   period: July 2015
   title: Software Engineer
-  description: "Arya's mission is to help despressed people reclaim their
-    lives. In order to assist Arya in accomplishing this mission I spent a full
-    week in July building parts of their API. I don't shy away from an 
-    opportunity to help, especially when the result of that labor can improve
-    the quality of live for a multitude of people. Depression is a recurring
-    theme in today's society and this was my opportunity to submit a minor
-    contribution to make an difference no matter how small."
+  description: |
+    Arya's mission is to help despressed people reclaim their lives. In order
+    to assist Arya in accomplishing this mission I spent a full week in July
+    building parts of their API. I don't shy away from an opportunity to help,
+    especially when the result of that labor can improve the quality of live
+    for a multitude of people. Depression is a recurring theme in today's
+    society and this was my opportunity to submit a minor contribution to make
+    an difference no matter how small."
   keywords:
    - Ruby
    - Grape (microframework)
@@ -79,14 +81,15 @@
   city: Berlin
   period: May 2015 - June 2015
   title: Software Engineer
-  description: "At 99chairs interior design specialists are connected with
-    people who need spaces furnished. In order to facilitate this, 99chairs 
-    offers a platform which does many things amongst which allowing designers 
-    to easily draft moodboards for their customers. Quickly allowing designers
-    to find the right products for the moodboards requires good search 
-    functionality. I have had the privilege to work on a Rails engine that 
-    exposes search functionality to any resource (Model) in the currently used
-    Rails application."
+  description: |
+    At 99chairs interior design specialists are connected with people who need
+    spaces furnished. In order to facilitate this, 99chairs offers a platform
+    which does many things amongst which allowing designers to easily draft
+    moodboards for their customers. Quickly allowing designers to find the
+    right products for the moodboards requires good search functionality. I
+    have had the privilege to work on a Rails engine that exposes search
+    functionality to any resource (Model) in the currently used Rails
+    application.
   keywords:
    - Elasticsearch
    - Ruby
@@ -102,11 +105,11 @@
   city: Delft
   period: Februari 2014 - current
   title: Software Engineer
-  description: "Professors Hans van Lint and Alexander Verbraeck are working on 
-  a multi-scale multi-mode open-source traffic simulator. I have the 
-  privilege of contributing to this project by designing some software tools
-  that are meant to simplify the use of the simulation engine that performs all
-  computation."
+  description: |
+    Professors Hans van Lint and Alexander Verbraeck are working on a
+    multi-scale multi-mode open-source traffic simulator. I have the privilege
+    of contributing to this project by designing some software tools that are
+    meant to simplify the use of the simulation engine.
   keywords:
    - Java
    - User Interfaces
