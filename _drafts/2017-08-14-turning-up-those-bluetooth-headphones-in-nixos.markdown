@@ -10,13 +10,14 @@ category: nixos # for url
 tags:
  - audio
  - bluetooth
+ - bluetoothctl
  - nixos
  - pacmd
  - pactl
  - pulseaudio
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -30,7 +31,7 @@ head: mugshot
 List all sinks
 
     pacmd list-sinks
-    pactl list-sinks
+    pactl list sinks
 
 Set sink `N` as default sink
 
@@ -56,6 +57,77 @@ So...
 
     pacmd list cards
     pactl list cards
+
+
+    bluetoothctl
+    list
+    devices
+
+```
+[bluetooth]# connect 00:00:00:0A:0B:F0
+Attempting to connect to 00:00:00:0A:0B:F0
+[CHG] Device 00:00:00:0A:0B:F0 Connected: yes
+Failed to connect: org.bluez.Error.Failed
+[CHG] Device 00:00:00:0A:0B:F0 Connected: no
+```
+
+```
+[bluetooth]# info 00:00:00:0A:0B:F0
+Device 00:00:00:0A:0B:F0
+	Name: PXC 550
+	Alias: PXC 550
+	Class: 0x00240404
+	Icon: audio-card
+	Paired: yes
+	Trusted: yes
+	Blocked: no
+	Connected: no
+	LegacyPairing: no
+	UUID: Headset                   (00000000-0000-0000-0000-00000f0b00fb)
+	UUID: Audio Sink                (0000000b-0000-0000-0000-00000f0b00fb)
+	UUID: A/V Remote Control Target (0000000c-0000-0000-0000-00000f0b00fb)
+	UUID: Advanced Audio Distribu.. (0000000d-0000-0000-0000-00000f0b00fb)
+	UUID: A/V Remote Control        (0000000e-0000-0000-0000-00000f0b00fb)
+	UUID: Handsfree                 (0000000e-0000-0000-0000-00000f0b00fb)
+	UUID: PnP Information           (00000000-0000-0000-0000-00000f0b00fb)
+	UUID: Generic Access Profile    (00000000-0000-0000-0000-00000f0b00fb)
+	UUID: Generic Attribute Profile (00000000-0000-0000-0000-00000f0b00fb)
+	UUID: Battery Service           (0000000f-0000-0000-0000-00000f0b00fb)
+	UUID: Vendor specific           (0ddce00a-ecb0-0000-0000-0000c00aec0f)
+	UUID: Vendor specific           (00000000-00c0-00e0-b000-feff000cdc0f)
+	Modalias: bluetooth:v0000p0000d0000
+```
+
+```
+[bluetooth]# register-application 0000000b-0000-0000-0000-00000f0b00fb
+Application registered
+[CHG] Device 00:00:00:0A:0B:F0 Connected: yes
+[NEW] Primary Service
+	/org/bluez/hci0/dev_00_00_00_0A_0B_F0/service0000
+	00000000-0000-0000-0000-00000f0b00fb
+	Generic Attribute Profile
+[NEW] Primary Service
+	/org/bluez/hci0/dev_00_00_00_0A_0B_F0/service0000
+	0000000f-0000-0000-0000-00000f0b00fb
+	Battery Service
+[NEW] Characteristic
+	/org/bluez/hci0/dev_00_00_00_0A_0B_F0/service0000/char0000
+	00000a00-0000-0000-0000-00000f0b00fb
+	Battery Level
+[NEW] Descriptor
+	/org/bluez/hci0/dev_00_00_00_0A_0B_F0/service0000/char0000/desc000a
+	00000000-0000-0000-0000-00000f0b00fb
+	Client Characteristic Configuration
+[NEW] Primary Service
+	/org/bluez/hci0/dev_00_00_00_0A_0B_F0/service000b
+	00000000-00c0-00e0-b000-feff000cdc0f
+	Vendor specific
+[NEW] Characteristic
+	/org/bluez/hci0/dev_00_00_00_0A_0B_F0/service000b/char000c
+	000000e0-00c0-00e0-b000-feff000cdc0f
+	Vendor specific
+[CHG] Device 00:00:00:0A:0B:F0 ServicesResolved: yes
+```
 
 ## Links
 
