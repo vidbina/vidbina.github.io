@@ -78,10 +78,10 @@ function keys `F1`, `F2` and `F3`. If you end up with these keycodes, you may
 have to press `Fn` along with the intended function key to evoke the alternate
 behavior :wink:.
 
-Since my function keys have been configured in my BIOS to behave as function
-keys instead of multimedia keys, I can switch between virtual terminals by
-simultaneously pressing `Ctrl`, `Alt` and any of my function keys ranging from
-`F1` through `F12`.
+Since my function keys have been configured in my [BIOS][dell-bios-fn] to
+behave as function keys instead of multimedia keys, I can switch between
+virtual terminals by simultaneously pressing `Ctrl`, `Alt` and any of my
+function keys ranging from `F1` through `F12`.
 
 > Note that NixOS reserves the seventh virtual terminal for the window manager
 and the [eight terminal for its manual][nixos-altf8]. 
@@ -97,9 +97,9 @@ will have to prefix the function key with the `Fn` key within the keystroke
 sequence necessary to switch to the virtual terminals. Switching to virtual
 terminal 1 would, in that case, require the simultaneous pressing of `Ctrl`,
 `Alt`, `Fn` and `F1`. The mute button, however; would be accessible through a
-simple press of just the `F1` button. It's obviously up to you to determine which configuration makes sense
-for you as long as you are aware of the differences in use that this may
-entail.
+simple press of just the `F1` button. It's obviously up to you to determine
+which configuration makes sense for you as long as you are aware of the
+differences in use that this may entail.
 
 The [problem with this approach][github-issue] is that the actkbd daemon
 executes commands as `root`. Since the PulseAudio server imposes restrictions
