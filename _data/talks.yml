@@ -1,6 +1,6 @@
 - title: "Don't Pee in My Sandbox"
   description: "Discussing the advantages gained through the seperation of environments through virtualization or containerization."
-  visible: true
+  visible: false
   url: /talks/devops/dont-pee-in-my-sandbox
   type: devops
   date: 2015-03-19 17:00:00
