@@ -35,6 +35,7 @@ namespace :site do
   task :new do
     args = ARGV.map do |arg|
       task arg.to_sym do; end
+      arg.to_s
     end
 
     time = Time.now
