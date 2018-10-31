@@ -4,7 +4,7 @@ title: NixOS zsh prompt option order
 description: |
   A note to self on the order in which NixOS prompt options are handled.
 date:  2018-10-31 15:05:55 +0000
-type: nixos # for icon
+type: tools # for icon
 category: nixos # for url
 tags:
  - nixos
@@ -48,14 +48,14 @@ The following list represents the login files that the values of the options
 are composed into and the order in which they are loaded:
 
  - zshenv
-   - shellInit
+   - `shellInit`
  - zprofile
-   - loginShellInit
+   - `loginShellInit`
  - zshrc
-   - interactiveShellInit
-   - promptInit
+   - `interactiveShellInit`
+   - `promptInit`
 
-Keep that in mind when editing any of the `shellInit` options :wink:.
+Keep that in mind when editing any of the `*Init` options :wink:.
 
 ## Links
 
