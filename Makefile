@@ -12,15 +12,15 @@ image:
 	${DOCKER} build . -t ${IMAGE}
 
 shell:
-	${DOCKER} run --rm -it ${DOCKER_SHELL_ARGS} ${DOCKER_ARGS} ${IMAGE} /bin/bash
+	${DOCKER} run --rm -it ${DOCKER_SHELL_PORT_ARGS} ${DOCKER_ARGS} ${IMAGE} /bin/bash
 
 server:
 	${RM} _site
-	${DOCKER} run --rm -it ${DOCKER_SERVER_ARGS} ${DOCKER_ARGS} ${ENV} ${IMAGE} rake site:server
+	${DOCKER} run --rm -it ${DOCKER_SERVER_PORT_ARGS} ${DOCKER_ARGS} ${ENV} ${IMAGE} rake site:server
 
 server-dev:
 	${RM} _site
-	${DOCKER} run --rm -it ${DOCKER_SERVER_ARGS} ${DOCKER_ARGS} ${IMAGE} rake site:serve
+	${DOCKER} run --rm -it ${DOCKER_SERVER_PORT_ARGS} ${DOCKER_ARGS} ${IMAGE} rake site:serve
 
 nginx:
 	${DOCKER} run --rm -v ${PWD}/_site:/usr/share/nginx/html:ro --name vidbina.nginx -p 8080:80 -d nginx
