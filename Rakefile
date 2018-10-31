@@ -33,18 +33,16 @@ namespace :site do
 
   desc 'generate new post as `rake site:new "Title" "category"`'
   task :new do
-    ARGV.each do |arg| 
-      p "arg is #{arg}"
+    args = ARGV.map do |arg|
       task arg.to_sym do; end
+      arg.to_s
     end
-    args = ARGV
 
     time = Time.now
-    title = args[1]
-    category = args[2]
-    args.shift
+    _, title, category = args
+
     if title and category
-      p "title is #{title} category is #{category}"
+      puts "\tTitle: #{title}\n\tCategory: #{category}\n\tTime: #{time}"
 
       front_matter = File.open('_includes/front.template.jekyll', 'r') do |f|
         template = f.read
@@ -61,6 +59,8 @@ namespace :site do
       end
 
       exec "git add #{file}"
+    else
+      puts "Usage: rake site:new ${TITLE} ${CATEGORY}"
     end
   end
 end
