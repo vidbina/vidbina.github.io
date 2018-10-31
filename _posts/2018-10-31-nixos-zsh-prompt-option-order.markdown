@@ -2,7 +2,8 @@
 layout: post
 title: NixOS zsh prompt option order
 description: |
-  A note to self on the order in which NixOS prompt options are handled.
+  A note to self on the order in which NixOS :snowflake: zsh :shell: prompt
+  options are handled.
 date:  2018-10-31 15:05:55 +0000
 type: tools # for icon
 category: nixos # for url
