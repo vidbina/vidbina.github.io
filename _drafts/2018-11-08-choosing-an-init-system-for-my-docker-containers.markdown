@@ -175,17 +175,34 @@ note:
 
  - Modification needed to OpenRC configuration to run inside a container
  - Superviser not included
+ - Extra work required to exit container once it runs an init system
+
+## runit
+
+## supervisord
 
 ## Links
 
 - [Comparison of init systems][cmp-init]
 - [Alpine Syslog][alpine-syslog]
-- [Gentoo Process Supervisioni][gentoo-proc-supervision]
+- [Gentoo Process Supervision][gentoo-proc-supervision]
+- [runit][runit] a [thread on the exit problem][runit-exit-discourse] and a [commit to tackle that][runit-exit-github]
 
-[cmp-init]: https://wiki.gentoo.org/wiki/Comparison_of_init_systems
-[postfix-syslog]: http://www.postfix.org/BASIC_CONFIGURATION_README.html#syslog_howto
+<!--
+- [runit-docker][runit-docker]
+-->
+
 [alpine-syslog]: https://wiki.alpinelinux.org/wiki/Syslog
-[gentoo-proc-supervision]: https://wiki.gentoo.org/wiki/Process-Supervision
-[yelp-dumb-init]:  https://engineeringblog.yelp.com/2016/01/dumb-init-an-init-for-docker.html
-[dumb-init]:  https://engineeringblog.yelp.com/2016/01/dumb-init-an-init-for-docker.html
+[cmp-init]: https://wiki.gentoo.org/wiki/Comparison_of_init_systems
+[docker-multiple-svcs]: https://docs.docker.com/config/containers/multi-service_container/
 [docker-systemctl-replacement]: https://github.com/gdraheim/docker-systemctl-replacement/blob/master/notes/NOTES.md
+[dumb-init]:  https://engineeringblog.yelp.com/2016/01/dumb-init-an-init-for-docker.html
+[gentoo-proc-supervision]: https://wiki.gentoo.org/wiki/Process-Supervision
+[peterbourgon-runsvinit]: https://peter.bourgon.org/blog/2015/09/24/docker-runit-and-graceful-termination.html
+[postfix-syslog]: http://www.postfix.org/BASIC_CONFIGURATION_README.html#syslog_howto
+[runit-docker]: https://github.com/pixers/runit-docker
+[runit-exit-discourse]: https://github.com/discourse/discourse_docker/commit/d821539c6a63d1fbeaf9f56811aaf9b2be11185d
+[runit-exit-github]: https://meta.discourse.org/t/runsv-hanging-on-docker-container-shutdown/36844/53
+[runit]: http://smarden.org/runit/index.html
+[supervisord]: http://supervisord.org/
+[yelp-dumb-init]:  https://engineeringblog.yelp.com/2016/01/dumb-init-an-init-for-docker.html
