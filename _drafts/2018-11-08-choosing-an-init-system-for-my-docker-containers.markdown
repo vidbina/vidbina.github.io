@@ -16,7 +16,7 @@ tags:
  - s6
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -81,6 +81,8 @@ failure of the syslogd daemon should trigger a restart of the daemon by
 whichever supervisor we choose.
 
 ## OpenRC
+
+<!-- not a init system, a supervisor -->
 
 OpenRC is the init system used by Gentoo and I considered it might be worth a
 try in order to determine how well it fits the use-case I have in mind.
@@ -179,7 +181,21 @@ note:
 
 ## runit
 
+<!-- provides /sbin/init and PID 1, no service management tooling -->
+
 ## supervisord
+
+## s6-overlay
+
+<!-- s6 provides pid 1, and hooks for service manager integration -->
+<!-- anopa and s6-rc are service managers designed to work with s6 -->
+<!-- openrc starts service serially, s6-rc is parallel ->
+<!-- s6 uses notification statt polling -->
+
+There is an excellent write-up on [s6's right to existence][s6-why] which
+basically boils down to
+ - s6 doesn't poll its children buts gets messaged/notified
+ - .
 
 ## Links
 
@@ -204,5 +220,9 @@ note:
 [runit-exit-discourse]: https://github.com/discourse/discourse_docker/commit/d821539c6a63d1fbeaf9f56811aaf9b2be11185d
 [runit-exit-github]: https://meta.discourse.org/t/runsv-hanging-on-docker-container-shutdown/36844/53
 [runit]: http://smarden.org/runit/index.html
+[runsvdir-start]: https://serverfault.com/questions/818266/runit-does-not-start-a-service
+[s6-overlay]: https://github.com/just-containers/s6-overlay
+[s6-why]: http://skarnet.org/software/s6/why.html
 [supervisord]: http://supervisord.org/
 [yelp-dumb-init]:  https://engineeringblog.yelp.com/2016/01/dumb-init-an-init-for-docker.html
+[fosdem17-s6]:
