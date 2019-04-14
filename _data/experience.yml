@@ -124,6 +124,23 @@
     - custdev
     - mobility
 - organization:
+    name: Arya mHealth UG
+    url: https://web.archive.org/web/20150810204935/http://www.aryaapp.co/
+  country: Germany
+  city: Berlin
+  period: July 2015
+  title: Software Engineer
+  description: |
+    Built parts of the API for the healthcare solution that was targeted at
+    helping people dealing with depression.
+  keywords:
+   - Ruby
+   - Grape (microframework)
+  active: false
+  public: true
+  type: work
+  relationship: free-lancer
+- organization:
     name: Vita.io
     #url: http://vita.io
     #url: https://web.archive.org/web/20150530011059/http://vita.io/
@@ -150,25 +167,8 @@
   type: work
   relationship: free-lancer
 - organization:
-    name: Arya mHealth UG
-    url: http://aryaapp.co 
-  country: Germany
-  city: Berlin
-  period: July 2015
-  title: Software Engineer
-  description: |
-    Built parts of the API for the healthcare solution that was targeted at
-    helping people dealing with depression.
-  keywords:
-   - Ruby
-   - Grape (microframework)
-  active: false
-  public: true
-  type: work
-  relationship: free-lancer
-- organization:
     name: 99chairs GmbH
-    url: http://99chairs.com 
+    url: https://web.archive.org/web/20150910000209/https://www.99chairs.com/
   country: Germany
   city: Berlin
   period: May 2015 - June 2015
@@ -209,10 +209,10 @@
   relationship: contributor
 - organization:
     name: Saddl B.V.
-    url: https://saddl.nl
+    url: https://web.archive.org/web/20150706113438/http://www.saddl.nl/<Paste>
   country: The Netherlands
   city: Amsterdam
-  period: November 2014 - current
+  period: November 2014 - 2015
   title: Co-founder/CTO
   description: Saddl acquired Laundr (technically), and I assumed the role of CTO in order to ensure that our technology serves our promise to our clients. I spend much of the time delivering features with the developers, architecting and buidling the back-end, designing and maintaining the infrastructure which we currently host at Google Cloud, maintaining the quality of our goods and planning for the future (anticipating the possible scaling issues we may run into).
   keywords:
@@ -230,7 +230,7 @@
   relationship: core-member
 - organization:
     name: Laundr
-    url: https://laundr.co
+    url: https://web.archive.org/web/20150801232808/http://laundr.co/
   country: The Netherlands
   city: Rotterdam
   period: Februari 2014 - December 2014
@@ -266,10 +266,10 @@
   relationship: core-member
 - organization:
     name: SolarSwing
-    url: https://www.solarswing.nl
+    url: https://web.archive.org/web/20151026131548/http://www.solarswing.com/
   country: The Netherlands
   city: Delft
-  period: May 2014 - current
+  period: May 2014 - May 2015
   title: Engineer
   description: Working on some things I&rsquo;m not fully at liberty to discuss. I am mostly busy designing the electronics necessary to extract data from the system (using sensors, filters and amplifiers) and implementing the complementary logic in the firmware.
   keywords:
