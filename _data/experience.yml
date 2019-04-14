@@ -11,7 +11,7 @@
     Contributing to my new favorite Linux distribution by occasionally 
 - organization:
     name: Asabina GmbH
-    url: asabina.de
+    url: https://asabina.de
   country: Germany
   city: Berlin
   period: October 2017 - present
@@ -19,7 +19,7 @@
   active: true
   public: true
   description: |
-    Guiding an engineering firm focussed on helping firms develop tech
+    Heading an engineering firm focussed on helping firms develop tech
     solutions that leverage blockchain technology, cloud computing or IoT.
     With a distributed team of engineer, we take on the development of
     electronic devices including the circuit design and firmware development.
@@ -32,7 +32,7 @@
     problems.
 - organization:
     name: BCT, Inc.
-    url: bct.io
+    url: https://bct.io
   country: USA
   city: NYC
   period: January 2018 - March 2018
@@ -40,11 +40,12 @@
   active: false
   public: true
   description: |
-    Assisted in demonstrating the product to different parties at various
-    conferences in the United States and Europe and closed sessions. Due to my
-    familiarity with trading and blockchain technology, I was able to inform
-    interested parties about the technical implementation details of the
-    platform with regards to engineering and trading mechanics.
+    Assisting in identifying pain-points in usage and technology and also in
+    demonstrating the product at various conferences in the United States and
+    Europe and closed sessions. Due to my familiarity with trading and
+    blockchain technology, I was able to inform interested parties about the
+    technical implementation details of the platform with regards to
+    engineering and trading mechanics.
   keywords:
     - bitcoin
     - terminal
@@ -53,7 +54,7 @@
   relationship: free-lancer
 - organization:
     name: The Mobility House GmbH
-    url: themobilityhouse.com
+    url: https://www.mobilityhouse.com
   country: Germany
   city: Munich
   period: December 2015 - September 2017
@@ -80,7 +81,8 @@
   relationship: free-lancer
 - organization:
     name: Freewayworks LLC
-    url: freewayworks.com
+    url: https://web.archive.org/web/20151114154538/http://prelaunch.heyride.com/
+    #url: https://web.archive.org/web/20151014200938/http://freewayworks.com/
   country: Germany
   city: Berlin
   period: August 2015 - October 2015
@@ -92,7 +94,9 @@
     and aid in bringing the concept to the public. In my three months with the
     company we spent a predominant amount of our time on customer development
     and testing while a smaller portion was spent on refining prototypes in
-    order to gather customer feedback.
+    order to gather customer feedback. The product pivoted to HeyRide, which
+    utilized a basic application to simplify the dispatching of riders to
+    passengers
   keywords:
     - logistics
     - pay-per-ride
@@ -105,7 +109,9 @@
     - AWS
 - organization:
     name: Vita.io
-    url: http://vita.io
+    #url: http://vita.io
+    #url: https://web.archive.org/web/20150530011059/http://vita.io/
+    url: https://web.archive.org/web/20170929080401/https://vita.io/
   country: The Netherlands
   city: Rotterdam
   period: May 2015
