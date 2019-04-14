@@ -9,6 +9,10 @@
   public: true
   description: |
     Contributing to my new favorite Linux distribution by occasionally 
+  keywords:
+    - Linux
+    - NixOS
+    - package repository
 - organization:
     name: Asabina GmbH
     url: https://asabina.de
@@ -30,6 +34,17 @@
     our core focus. All in all -- the team is comprised of a rather versatile
     set of engineers and has succeeded in tackling a variety of engineering
     problems.
+  keywords:
+    - AWS
+    - C
+    - Embedded Systems
+    - FreeRTOS
+    - GCP
+    - IoT
+    - Kubernetes
+    - TensorFlow
+    - Terraform
+    - pytorch
 - organization:
     name: BCT, Inc.
     url: https://bct.io
@@ -48,9 +63,9 @@
     engineering and trading mechanics.
   keywords:
     - bitcoin
+    - blockchain
     - terminal
     - trading
-    - blockchain
   relationship: free-lancer
 - organization:
     name: The Mobility House GmbH
@@ -74,10 +89,11 @@
     therefore was subjected to the necessary requirements to safeguard national
     security) and accessed through an unreliable network (GPRS link).
   keywords:
-    - distributed computing
     - Erlang
-    - golang
     - Scala
+    - distributed computing
+    - golang
+    - greentech
   relationship: free-lancer
 - organization:
     name: Freewayworks LLC
@@ -98,15 +114,15 @@
     utilized a basic application to simplify the dispatching of riders to
     passengers
   keywords:
-    - logistics
-    - pay-per-ride
+    - AWS
+    - Heroku
+    - MongoDB
     - Node.js
+    - Redis
     - Ruby
     - Ruby on Rails
-    - Redis
-    - MongoDB
-    - Heroku
-    - AWS
+    - custdev
+    - mobility
 - organization:
     name: Vita.io
     #url: http://vita.io
@@ -121,14 +137,14 @@
     virtual private servers towards a cloud-based solution that offered the
     required redundancy and necessary flexibility to accommodate the workload.
   keywords:
+   - Ansible
    - Azure
-   - cloud-computing
-   - dev-ops
    - Cassandra
+   - Mesos
    - Storm
    - Zookeeper
-   - Mesos
-   - Ansible
+   - cloud-computing
+   - dev-ops
   active: false
   public: true
   type: work
