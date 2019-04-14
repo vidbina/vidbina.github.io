@@ -1,19 +1,98 @@
 - organization:
+    name: NixOS
+    url: https://github.com/nixos/nixpkgs/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Avidbina
+  country: N/A
+  city: N/A
+  period: June 2017 - present
+  title: contributor
+  active: true
+  public: true
+  description: |
+    Contributing to my new favorite Linux distribution by occasionally 
+- organization:
+    name: Asabina GmbH
+    url: asabina.de
+  country: Germany
+  city: Berlin
+  period: October 2017 - present
+  title: CEO/CTO
+  active: true
+  public: true
+  description: |
+    Guiding an engineering firm focussed on helping firms develop tech
+    solutions that leverage blockchain technology, cloud computing or IoT.
+    With a distributed team of engineer, we take on the development of
+    electronic devices including the circuit design and firmware development.
+    Furthermore, we have helped several companies build their cloud
+    infrastructure from scratch or upgrade their infrastructure to facilitate
+    growth. Occasionally, we have jumped in to help companies fix front-end
+    applications or smartphone apps although that doesn't necessarily represent
+    our core focus. All in all -- the team is comprised of a rather versatile
+    set of engineers and has succeeded in tackling a variety of engineering
+    problems.
+- organization:
+    name: BCT, Inc.
+    url: bct.io
+  country: USA
+  city: NYC
+  period: January 2018 - March 2018
+  title: Consultant
+  active: false
+  public: true
+  description: |
+    Assisted in demonstrating the product to different parties at various
+    conferences in the United States and Europe and closed sessions. Due to my
+    familiarity with trading and blockchain technology, I was able to inform
+    interested parties about the technical implementation details of the
+    platform with regards to engineering and trading mechanics.
+  keywords:
+    - bitcoin
+    - terminal
+    - trading
+    - blockchain
+  relationship: free-lancer
+- organization:
+    name: The Mobility House GmbH
+    url: themobilityhouse.com
+  country: Germany
+  city: Munich
+  period: December 2015 - September 2017
+  title: Consultant/Engineer
+  active: false
+  public: true
+  description: |
+    Joined the company when there were only architects on the engineering team
+    and helped out with the recruiting of a engineering team, the development
+    of the first services and the architecting of the overall architecture for
+    the system we were working towards. With regards to the development part of
+    my contributions, the focus was on producing the software to be used in
+    relaying communications from our cloud environment to the industrial
+    computers that controlled the assets of interest (battery banks) within a
+    network with numerous safeguards to complicate unwanted access (as mandated
+    by German regulations as this pertained to an infrastructure project and
+    therefore was subjected to the necessary requirements to safeguard national
+    security) and accessed through an unreliable network (GPRS link).
+  keywords:
+    - distributed computing
+    - Erlang
+    - golang
+    - Scala
+  relationship: free-lancer
+- organization:
     name: Freewayworks LLC
     url: freewayworks.com
   country: Germany
   city: Berlin
   period: August 2015 - October 2015
-  title: CTO
-  public: false
+  title: interim CTO
+  active: false
+  public: true
   description: |
-    By the time I joined Freewayworks LLC, the company was on the verge of
-    joining a incubation program to aid in bringing the concept to the public.
-    In my three months with the company I asked many of the critical questions,
-    helped us steer clear of unnecessary busy work by focussing on that will
-    leads to results quickly (which equates to lessons to be learned) and built
-    whatever was necessary to (in)validate the assumptions we still had at that
-    stage.
+    Joined Freewayworks LLC to help the company through a incubation program
+    and aid in bringing the concept to the public. In my three months with the
+    company we spent a predominant amount of our time on customer development
+    and testing while a smaller portion was spent on refining prototypes in
+    order to gather customer feedback.
   keywords:
     - logistics
     - pay-per-ride
@@ -30,15 +109,11 @@
   country: The Netherlands
   city: Rotterdam
   period: May 2015
-  title: Devops Engineer
+  title: Consultant/DevOps Engineer
   description: |
-    In an effort to anticipate to future developments Vita.io needed her
-    infrastructure prepared for the upcoming demands (larger dev teams, more
-    customers). In this case I assisted in the attempts to explore the options
-    in moving away from a few virtual private servers towards a cloud-based
-    solution that has the required reduncancy and offers the necessary
-    flexibility in required workload. I have been chosen to set up the new
-    infrastructure to help the company move forward.
+    Assisted in the attempts to explore the options in moving away from a few
+    virtual private servers towards a cloud-based solution that offered the
+    required redundancy and necessary flexibility to accommodate the workload.
   keywords:
    - Azure
    - cloud-computing
@@ -48,8 +123,8 @@
    - Zookeeper
    - Mesos
    - Ansible
-  active: true
-  public: false
+  active: false
+  public: true
   type: work
   relationship: free-lancer
 - organization:
@@ -60,13 +135,8 @@
   period: July 2015
   title: Software Engineer
   description: |
-    Arya's mission is to help despressed people reclaim their lives. In order
-    to assist Arya in accomplishing this mission I spent a full week in July
-    building parts of their API. I don't shy away from an opportunity to help,
-    especially when the result of that labor can improve the quality of live
-    for a multitude of people. Depression is a recurring theme in today's
-    society and this was my opportunity to submit a minor contribution to make
-    an difference no matter how small."
+    Built parts of the API for the healthcare solution that was targeted at
+    helping people dealing with depression.
   keywords:
    - Ruby
    - Grape (microframework)
@@ -82,14 +152,11 @@
   period: May 2015 - June 2015
   title: Software Engineer
   description: |
-    At 99chairs interior design specialists are connected with people who need
-    spaces furnished. In order to facilitate this, 99chairs offers a platform
-    which does many things amongst which allowing designers to easily draft
-    moodboards for their customers. Quickly allowing designers to find the
-    right products for the moodboards requires good search functionality. I
-    have had the privilege to work on a Rails engine that exposes search
-    functionality to any resource (Model) in the currently used Rails
-    application.
+    Designed and tuned an ElasticSearch engine used to simplify the matching of
+    furniture by the interior designers working for the firm. Besides tuning
+    the ElasticSearch engine and studying the different options that yielded
+    better results for the goal in mind, I assisted in developing some
+    complementing functionality within their Ruby on Rails environment as well.
   keywords:
    - Elasticsearch
    - Ruby
@@ -103,7 +170,7 @@
     url: http://opentrafficsim.org # https://citg.tudelft.nl
   country: The Netherlands
   city: Delft
-  period: Februari 2014 - current
+  period: Februari 2014
   title: Software Engineer
   description: |
     Professors Hans van Lint and Alexander Verbraeck are working on a
@@ -114,7 +181,7 @@
    - Java
    - User Interfaces
    - simulation
-  active: true
+  active: false
   public: false
   type: work
   relationship: contributor
@@ -124,8 +191,8 @@
   country: The Netherlands
   city: Amsterdam
   period: November 2014 - current
-  title: Co-founder/Chief Engineer
-  description: Saddl acquired Laundr (technically), and I have assumed the role of CTO in order to ensure that our technology delivers whatever we promise. I spend most of my Saddl hours assisting my fellow developers (front-end mostly), buidling the back-end, designing and maintaining the infrastructure which we currently host at Google Cloud, maintaining the quality of our goods and planning for the future (anticipating the possible scaling issues we may run into).
+  title: Co-founder/CTO
+  description: Saddl acquired Laundr (technically), and I assumed the role of CTO in order to ensure that our technology serves our promise to our clients. I spend much of the time delivering features with the developers, architecting and buidling the back-end, designing and maintaining the infrastructure which we currently host at Google Cloud, maintaining the quality of our goods and planning for the future (anticipating the possible scaling issues we may run into).
   keywords:
    - Angular
    - Python
@@ -146,7 +213,7 @@
   city: Rotterdam
   period: Februari 2014 - December 2014
   title: Co-founder/engineer
-  description: Engineer for the Laundr tech landscape. As lead-engineer my responsibilities involve the execution and management of development of the back-end and client applications (for both smartphones and web) necessary to offer a user-friendly service to the customers.
+  description: Engineered and develop a considerable portion of the Laundr stack. As lead-engineer my responsibilities involved the execution and management of development of the back-end and client applications (for both smartphones and web) necessary to offer a user-friendly service to the customers.
   keywords:
    - Angular
    - Node.js
@@ -162,7 +229,7 @@
     url: https://trovey.co
   country: The Netherlands
   city: Rotterdam
-  period: October 2014 - current
+  period: October 2014
   title: Co-founder/Chief Engineer
   description: Joined a group of entrepreneurs with the intent to simplify the way in which we find and acquire (second-hand) products goods.
   keywords:
@@ -171,7 +238,7 @@
    - Ruby
    - Angular
    - Ionic
-  active: true
+  active: false
   public: false
   type: work
   relationship: core-member
@@ -198,7 +265,7 @@
     url: https://www.jobsrepublic.nl
   country: The Netherlands
   city: Amsterdam
-  period: October 2014 - current
+  period: October 2014 - December 2014
   title: Software Developer
   description: Maintaining a job placement and matching platform developed in Ruby. This involves executing bug-fixes, improving the general structure of the project and optimizing the migrate and deploy workflows. During my time here, I have also assisted in executing a migration to AWS.
   keywords:
