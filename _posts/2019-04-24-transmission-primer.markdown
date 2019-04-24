@@ -3,7 +3,7 @@ layout: post
 title: Transmission Primer
 description: |
   Just the bare minum to get started with Transmission from the CLI.
-date:  2018-01-28 16:13:06 +0000
+date:  2019-04-24 22:07:28 +0200
 type: tools # for icon
 category: tools # for url
 tags:
