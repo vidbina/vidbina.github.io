@@ -100,8 +100,20 @@ transmission-remote -l
 transmission-remote --list
 ```
 
-> You'll have observed in the previous step that the torrents are listed by ID.
-> This ID can be references by means of the `-t` or `--torrent` argument.
+### Select Torrents
+
+You'll have observed in the previous step that the torrents are listed by ID.
+This ID can be references by means of the `-t` or `--torrent` argument.
+
+Failing to select the torrents to operate on may in some cases default to
+`-tall` or `--torrent all` -- all torrents.
+
+Specify multiple ids by seperating them with commas as follows
+
+```
+-t4,2,99
+-t 4,2,99
+```
 
 ### Start Torrent
 
