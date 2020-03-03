@@ -1,0 +1,33 @@
+---
+layout: post
+title: Level 5 in mid-2019
+description: |
+  How are autonomous vehicles coming along as per mid-2019?
+date:  2019-07-17 13:12:19 +0000
+type: AI # for icon
+category: AI # for url
+tags:
+ - AI
+ - ML
+ - self-driving
+ - autonomous vehicles
+ - Level 5 autonomy
+og:
+  type: article # http://ogp.me/#types
+#  og:type: # 
+#   - og:value: value
+#     og:attr: foo
+#   - og:value: value
+#image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
+#twitter:
+#  card: summary
+#  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
+head: mugshot
+---
+Here be dragons :dragon:
+
+## Links
+
+[vox]: https://www.vox.com/2019/3/27/18194715/self-driving-cars-uber-lyft
+[mit-rech-review]:https://www.technologyreview.com/smart-cities/self-driving-cars/
+[]: https://www.rolandberger.com/en/Point-of-View/Automated-driving-Germany-in-the-lead..html
