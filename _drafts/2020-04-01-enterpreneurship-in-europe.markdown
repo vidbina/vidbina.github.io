@@ -56,12 +56,12 @@ Europe doesn't have venture capital like it used to. I've been through a few
 cohorts at accelerators on the continent and have witnessed a bunch of my peers
 maneuver the fundraise dance both in Europe and in the Americas to vastly
 different results. Arguably most startups aren't really doing anything
-adventurous to pique the interest of venture capital, but when you witness one
-of your mentors challenge to source funds close to home for the development of
-intellectual property for widely applicable timing chips that find their way
-into our smartphones, tables, computers -- effectively every smart device these
-days -- it definitely makes you wonder whether European venture capital is on a
-holiday.
+adventurous to pique the interest of venture capital, but after witnessing one
+of my mentors face considerable challenges in sourcing funds close to home for
+the development of intellectual property for widely applicable timing chips
+that find their way into our smartphones, tables, computers -- effectively
+every smart device these days -- it definitely made me wonder whether European
+venture capital is on a holiday.
 
 ### When Europe definitely had it: Exploration
 
@@ -199,6 +199,20 @@ acknowledge that their investment is likelier to produce the next regional big
 thing rather than the _"next big thing"_ thus setting a glass ceiling to cap
 that number that an investor may be willing to part with.
 
+Europe has a good number of government grants that entrepreneurs can take
+advantage of to advance their business and this often against terms that will
+not require one to relinquish control of their company. The application
+procedures are at times strenuous but venture capital wasn't particularly known
+for being easy so perhaps this evens out. The numbers involved are vastly
+different, but then again European salaries are considerably lower to American
+salaries (sometimes at a factor 2 for tech talent) so there is some room to get
+interesting ideas off the ground. The real problem exists with high-tech
+ventures that have considerable start-up costs. Platform companies can be built
+in garages or dorm-rooms, but device development often requires facilities that
+are escorted by bills that are challenging to foot with the funds of grant
+programs. In this case, you better have decent connections to find yourself a
+venture capital fund that has the guts to help you along the way.
+
 [bbenz]: www.cicero.de/kapital/bertha-benz-die-erste-frau-am-steuer/41482
 
 [ageofdiscovery]: https://en.wikipedia.org/wiki/Age_of_Discovery
@@ -243,26 +257,25 @@ with different rates of success.
 
 ### Bigger is Better
 
-Americans like "big things" and it shows. American vehicles are effectively
-apartments, American cities feel massive, and not just because they liked their
-high-rises, and an American "Big Gulp" is an unconquerable challenge for the
-stomach dimensioned to European portions. Maybe, just maybe, this love for the
-"humongous" speaks to the imaginations enough for Americans to want to engage
-on those bold quests regardless of the cost.
+American likes "big things" and it shows. American vehicles are effectively
+apartments, American cities feel massive, and not just because they liked
+themselves some high-rises, and an American "Big Gulp" is an unconquerable
+challenge for the stomach and bladder dimensioned to European portions. Maybe,
+just maybe, this love for the "humongous" speaks to the imaginations enough for
+Americans to want to engage on those bold quests at great costs.
 
 It follows, however; that bigger adventures tend to correlate to bigger
 catastrophes when shit hits the fan and therefore it I often find it
 counterintuitive that, for a people so exposed when a plan were to fail,
 Americans seem more willing to enter the warpath towards some goal in
-comparison to Europeans with their safety nets. I guess anything that seems
-logical may seem illogical when approached from a slightly different
-perspective. You can theorize that safety nets may render folks complacent
-although you can also argue that safety nets could provide folks the security
-to try new things. You can argue that the prospect of financial ruin upon
-failure keeps one awake and on their toes in a country where everything is
-controlled by the buck -- ready for that war -- while one could equally argue
-that this could provide folks an incentive to optimize for stability and
-safety.
+comparison to Europeans with their safety nets. Seems that anything apparently
+logical may be construed as illogical when approached from a slightly different
+perspective after all. You can theorize that safety nets may render folks
+complacent although you can also argue that safety nets could provide folks the
+security to try new things. You can argue that the prospect of financial ruin
+upon failure keeps one awake and on their toes in a country where everything is
+controlled by the buck but one could also equally argue that this friction
+could provide folks an incentive to optimize for stability and safety.
 
 As mentioned when discussing the cultural diversity of Europe in the previous
 chapter, when concerning oneself with the scale question, it is worth
@@ -270,7 +283,14 @@ considering that any 5 Americans working on a solution effectively look at a
 much larger pool of relatively highly-productive people to consider as their
 domestic market as opposed to a European team of the same size. The American
 fascination for scale is perhaps in part related to the sheer scale of the
-nation in geographic size, population and economic productivity.
+nation in geographic size, population and economic productivity. A US platform
+startup with access to a 300M+ person audience off the cuff, will talk a
+different numbers game as opposed to a startup offering the same solution in
+The Netherlands with a roughly 17½M person audience with the potential of
+another 80M folks in Germany if they successfully pull of internationalizing
+(simply read: translate), complying to the differing regulations and then
+addressing pesky nuances that the founding team possibly doesn't even properly
+understand.
 
 
 ### Individualism and Collectivism
@@ -293,24 +313,26 @@ Surely, we can achieve innovation without such cult-like figures, one may think
 and this is where I feel that our record testifies to the contrary. Harari so
 nicely discussed how storytelling serves as an organizational tools for larger
 groups to collaborate -- national identity, innovation, social justice and
-religion would all serve as great tools to that effect. In most cases these
-causes need lead characters, even if only to provide some coherent vision of
-where to go. Engineers may be familiar with the jokes about the failures of
-design by consensus -- we simply don't always design better solutions by
-allowing everyone to pitch in. In fact, I would argue that the iPhone would
-have been a considerably less impressive device if the vision for the product
-weren't defined by some eccentric tech artist. Wherever you find yourself on
-the individualism-to-collectivism spectrum, we may have to acknowledge that
-there are some systems that are best designed by a collectivist mindset while
-there are others best designed by allowing some individual to let their
-imaginations run wild.
+religion all serve as great tools to that effect. In most cases these causes
+need lead characters, even if only to provide some coherent vision of where to
+go. Engineers may be familiar with the jokes about the failures of design by
+consensus -- we simply don't always design better solutions by allowing
+everyone to pitch in. In fact, I would argue that the iPhone would have been a
+considerably less impressive device if the vision for the product weren't
+defined by some eccentric tech artist. Wherever you find yourself on the
+individualism-to-collectivism spectrum, we may have to acknowledge that there
+are some systems that are best designed by a collectivist mindset while there
+are others best designed by allowing some individual to let their imaginations
+run wild.
 
-Maybe Europe doesn't produce as many top-level startups as the US will, but
-Europe's somewhat collectivist leanings may be one of the things to attribute
-for institutions that seem to prioritize human wellbeing as pleasantly as they
-do by comparison. The ventures that will stem from such a system may exhibit
+Maybe Europe doesn't produce as many outlier startups as the US, but Europe's
+somewhat collectivist leanings may be one of the things to attribute for
+institutions that seem to prioritize human wellbeing quite pleasantly in
+comparison. The ventures that will stem from such a system may exhibit
 different characteristics to those shared by American top ventures and maybe
-that's okay.
+that's okay. Some of Europe's companies will be smaller in size and in market
+segment ownership, but that possibly simplifies regulation and oversight which
+may serve to protect the populous better over the long-term.
 
 <!--
 There seem to be
@@ -349,31 +371,42 @@ or oil.
 
 ## In closing...
 
-The world can only have so many winner-takes-all winners because of the
-destructive nature of this play strategy. There are only a handful of such tech
-companies and arguably the wealth generated by such companies does not do much
-good towards the diminishing of wealth disparity issues, if that happens to be
-a point on your agenda.
+The world can only have a handful of winners when we engage in winner-takes-all
+plays and, if it happened to be a point on our agenda, arguably the wealth
+generated by such winners seems to do little towards resolving the increasing
+wealth disparity issues.
 
 What I personally tend to find more interesting is the larger number of smaller
 sized enterprises that can not afford to disrespect their user base and are
-naturally forced to compete or collaborate more actively in order to win.
+naturally forced to compete or collaborate more effectively in order to thrive
+and stick around. Surely, such enterprises would lack the advantages of
+economics at scale but if we aren't seriously questioning what the hell we have
+created by allowing some tech companies to grow unrestricted, we may have
+bigger problems on our hands before we know it -- yesterday. It is already
+interesting to observe governments attempting to figure out what oversight and
+regulations should look like to keep companies such as Facebook in line but one
+can argue that companies with coffers the size of national budgets, with the
+outreach the size of several of the largest broadcasting networks in the world
+and possibly some control over critical infrastructure world-wide are only
+"controllable" in our imaginations i.e.: not really.
 
-Surely, such enterprises would lack the advantages of economics at scale but if
-we aren't seriously questioning what the hell we have created by allowing some
-tech companies to grow without restrained, we may have bigger problem on our
-hands before we know it. It is already interesting to see how governments are
-currently attempting to introduce checks and balances to keep companies such as
-Facebook tame enough but one can argue that companies with coffers the size of
-nation states, with the outreach the size of several of the largest
-broadcasting networks and possibly some control over critical infrastructure
-(i.e.: networking infrastructure) are only "controllable" in our imaginations.
-
+<!--
 Winner-take-all schemes are conducive to monopoly creation which provides a
-central point of attack for exploitation. From an evolutionary perspective, we
-should perhaps go back to focussing on diversity by sending different parties
-into vastly different directions in order to find more innovative solutions to
-our problems.
+central point of attack for exploitation. Furthermore, they are simply too
+complex for individuals to effectively reason about let alone regulate. From an
+evolutionary perspective, we should perhaps go back to focussing on diversity
+by sending different parties into vastly different directions in order to find
+more innovative solutions to our problems.
+-->
+
+We probably won't breed many unicorns in Europe and I haven't been convinced
+yet that Europe would be missing out if that were to be the case. There needs
+to be room for smaller ventures lead by visionaries, larger corporates that are
+naturally a bit slower, collective-owned enterprises and other structures to
+join the stage and cater to the different needs in the market. Maybe these
+other players may, by their design, face constraints that drive them to operate
+in a manner that is less exploitative in order to remain in business. I
+wouldn't consider that a big problem but then again... I'm just an engineer.
 
 <!--
 ### 
