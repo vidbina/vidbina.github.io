@@ -29,22 +29,23 @@ forgive me where I inadvertently loose any of his focal points in translation:
 
 > We have observed that Europe has not proved as successful as the United
 > Stated in producing the dominant tech companies. Amazon, Apple, Facebook,
-> Google and Microsoft all American firms. Considering you're experiences in
-> the startup scene in The Netherlands and Germany as well as the internation
-> startup scene beyond that, what would you attribute this phenomenon to.
-> Which factors contribute to America's dominant position in startups and what
-> are the differences between the startup ecosystems that allow for America to
-> perform this exceptionally.
+> Google and Microsoft are all American firms. Considering you're experiences
+> in the startup scene in The Netherlands and Germany as well as the
+> internation startup scene beyond that, what would you attribute this
+> phenomenon to. Which factors contribute to America's dominant position in
+> startups and what are the differences between the startup ecosystems that
+> allow for America to perform this exceptionally.
 
 [^question]: Het ondernemers klimaat in Europa: We hebben gezien dat Europa niet zo succesvol is geweest als America in het produceren van de grote technologische bedrijven van de afgelopen decenia.  Kijk bijvoorbeeld naar Google, Apple, Amazon, Facebook, Microsoft dat zijn allemaal Americaanse bedrijven. Jij hebt zowel in Nederland als Duitsland de start-up wereld van dichtbij meegemaakt en je hebt ook ervaring met de international start-up wereld. Wat zou jij zeggen dat 1 van de grote oorzaken is die hieraan ten grondslag ligt. Welke andere dingen liggen hieraan ten grondslag. Is er een groot verschil in het ondernemers klimaat van Nederland en Duitsland m.b.t. het bovenstaande?  
 
-Mind you, I'm not an anthropologist, historian, sociologist or psychologist but
-merely an engineer with many opinions about topics I don't possess sufficient
-depth in even though I am constantly reading into these topics to "wisen up".
-It is therefore important to note that my musings represent opinions derived
-from anecdotes and whatever historical record I happen to be aware of, both of
-which will likely lead me down the path to a number of flawed conclusions but
-you may find a few points that seem reasonably sensible to entertain :wink:.
+Mind you, I'm not an anthropologist, economist, historian, psychologist or
+sociologist but merely an engineer with many opinions about topics I don't
+possess sufficient depth in even though I am constantly reading into these
+topics to "wisen up".  It is therefore important to note that my musings
+represent opinions derived from anecdotes and whatever historical record I
+happen to be aware of, both of which will likely lead me down the path to a
+number of flawed conclusions but you may find a few points, at the very least
+an engineer's perspective, that may be reasonably sensible to entertain :wink:.
 
 > For simplicity's sake, I'll start each section of with a few focal points
 > which I'll dive into in the subsections of each chapter assuming that you
@@ -54,13 +55,13 @@ you may find a few points that seem reasonably sensible to entertain :wink:.
 
 Europe doesn't have venture capital like it used to. I've been through a few
 cohorts at accelerators on the continent and have witnessed a bunch of my peers
-maneuver the fundraise dance both in Europe and in the Americas to vastly
-different results. Arguably most startups aren't really doing anything
-adventurous to pique the interest of venture capital, but after witnessing one
-of my mentors face considerable challenges in sourcing funds close to home for
-the development of intellectual property for widely applicable timing chips
-that find their way into our smartphones, tables, computers -- effectively
-every smart device these days -- it definitely made me wonder whether European
+maneuver the fundraise dance both in Europe and in America to vastly different
+results. Arguably most startups aren't really doing anything adventurous to
+pique the interest of venture capital, but after witnessing one of my mentors
+face considerable challenges in sourcing funds close to home for the
+development of intellectual property for widely applicable timing chips that
+find their way into our smartphones, tables, computers -- effectively every
+smart device these days -- it definitely made me wonder whether European
 venture capital is on a holiday.
 
 ### When Europe definitely had it: Exploration
@@ -84,6 +85,13 @@ some may consider nut-jobs or degenerates.
 Vasco da Gama and Christopher Columbus are among the most commonly known of
 such adventurers and the sponsors of their ventures, typically monarchs,
 effectively became the first to provide _venture capital_ if you will.
+
+### When Europe still had it: Industrialization
+
+Arguably, the United States was still in its nascent stages during that
+so-called Age of Exploration but towards the ending of the 18th century,
+however; America found itself in a much better state to take part in the
+industrial age, the rat race of the times.
 
 During the [Industrial Age][industrial-age], venture capital reared its head
 again albeit it in a slightly different form factor. Instead of dispatching
@@ -109,17 +117,11 @@ natural resources such as oil and gold.
 <!-- Samuel Slater (textile) -->
 <!-- iron production -->
 
-### When Europe still had it: Industrialization
-
-Arguably, the United States was still in its nascent stages during that
-so-called Age of Exploration but towards the ending of the 18th century,
-however; America found itself in a much better state to take part in the
-industrial age, rat race of the times.
-
 England was more or less the cradle of industrialization, but one would be
-remiss if they mentioned industrialization and Europe in a text but managed to
-avoid addressing the role of Germany in the movement, considering that Germany
-is more or less hailed as the pinnacle of modern European industrialization.
+remiss if they mentioned industrialization and Europe in a breath but managed
+to avoid addressing the role of Germany in the movement considering that
+Germany is more or less hailed as the pinnacle of modern European
+industrialization.
 
 Reunification of formerly quibbling states by Otto von Bismarck effectively
 paved the way for Germany to take advantage of its abundance in resources and
@@ -127,8 +129,8 @@ opportunity. Protectionist measures, government support for industry and
 artisanship, incentives towards technical education, the development of a
 welfare system, the breathing room for a pragmatic insurance and banking sector
 and considerable investments in infrastructure (rail and road), may have
-contributed towards Germany step up in comparison to its nearest neighbor at
-scale, across that proverbial "pond".
+contributed towards Germany stepping up in comparison to its nearest neighbor
+at scale, across that proverbial "pond".
 
 I would regard Bertha Benz, born Ringer, as one of the notable German venture
 capitalist of that time. Stemming from nobility, she effectively fell for a
@@ -154,12 +156,12 @@ I often joke about this among my acquaintances and it seems that more
 entrepreneurs tend to share the viewpoint that European investors are a
 different creature to the American investor who seems to have internalized the
 direct relationship between risk and reward so well that they seem more capable
-of comfortably shrugging of that notion of taking risks -- "part of the game",
+of comfortably shrugging of that notion of taking risks -- "part of the game,"
 an American investor seemingly thinks while they sign that check as long as
 they have enough different plays in motion to manage their exposure. Europe may
 have grown partial to financial security, social security and stability over
-the years and it is hard to say if the trauma of recent European history plays
-a role here.
+the years and it is hard to say if the trauma of recent European history
+involving multiple wars and socio-economic experiments plays a role here.
 
 Additionally, it is hard to overlook that American ventures have access to a
 larger and more homogeneous domestic market than European ventures. A French
@@ -167,13 +169,13 @@ social-media startup, for example, can design a solution that thrives by
 cleverly playing to French cultural nuances, including business sensibilities.
 Upon attempting to reach a wider user-base, however; this startup will be
 required to deal with the non-trivial challenges of addressing the cultural,
-lingual and political differences they will find themselves facing. Different
+lingual and regulatory differences they will find themselves facing. Different
 strokes for different folks, right?!? A business that relies on network effect
 dynamics and would therefore need to obtain critical mass at some point, may
 therefore be better off starting outside of the union where they can grow that
-critical mass and only then set foot on the European continent since acceptance
-is sometimes much easier when you're so big that people see an obvious
-advantage in having you around.
+critical mass (such as China, India, the US) and only then set foot on the
+European continent since acceptance is sometimes much easier when you're so big
+that people see an obvious advantage in having you around.
 
 > Curious that Europeans, with a history riddled with skirmishes and ethnic
 > feuds, completely missed the mark and divvied up the African continent
@@ -196,22 +198,24 @@ about some of the regulatory complexity, __one still needs to navigate the maze
 of cultural nuances in order to make a business break out of its regional
 sandbox__ to serve a much larger market. Quite frankly, investors have to
 acknowledge that their investment is likelier to produce the next regional big
-thing rather than the _"next big thing"_ thus setting a glass ceiling to cap
-that number that an investor may be willing to part with.
+thing as opposed to than the _"next big thing"_ thus setting a glass ceiling to
+cap that number that an investor may be willing to part with.
 
 Europe has a good number of government grants that entrepreneurs can take
-advantage of to advance their business and this often against terms that will
-not require one to relinquish control of their company. The application
-procedures are at times strenuous but venture capital wasn't particularly known
-for being easy so perhaps this evens out. The numbers involved are vastly
-different, but then again European salaries are considerably lower to American
-salaries (sometimes at a factor 2 for tech talent) so there is some room to get
-interesting ideas off the ground. The real problem exists with high-tech
-ventures that have considerable start-up costs. Platform companies can be built
-in garages or dorm-rooms, but device development often requires facilities that
-are escorted by bills that are challenging to foot with the funds of grant
-programs. In this case, you better have decent connections to find yourself a
-venture capital fund that has the guts to help you along the way.
+advantage of to advance their business though and this often against favorable
+terms that make no requirement of relinquishing control of the company. The
+application procedures are at times strenuous but venture capital wasn't
+particularly known for being easy so perhaps this evens out. The numbers
+involved are vastly different, but then again European salaries are
+considerably lower to American salaries (sometimes at a factor 2 for tech
+talent) so there are some options to get interesting ideas off the ground. The
+real problem exists with high-tech ventures that have considerable start-up
+costs. After all, platform companies can be built in garages or dorm-rooms, but
+device development often requires facilities, tooling costs or material
+purchases in bulk that are escorted by bills that are challenging to foot
+with the funds of grant programs. In this case, you better have decent
+connections to find yourself a large enough angel or a venture capital fund
+that has the guts to help you along the way.
 
 [bbenz]: www.cicero.de/kapital/bertha-benz-die-erste-frau-am-steuer/41482
 
@@ -222,7 +226,7 @@ venture capital fund that has the guts to help you along the way.
 
 On multiple occasions I have heard folks almost simplify the American ethos to
 one-liners such as "Bigger is Better" and "Go Big or Go Home" emphasizing
-America's fascination with scale.  American songs are decorated with lines like
+America's fascination with scale. American songs are decorated with lines like
 "I did it my way", "Me, Myself and I" and "All by myself" that provide a sense
 of America's celebration of individualism. Sayings such as "Time is Money" may
 emphasize the strong focus on the illustrious American buck. And with idioms
@@ -230,7 +234,7 @@ such as "if you got it, flaunt it" being as commonplace as they are, it becomes
 so much more comfortable to maintain a unapologetic relationship to whatever it
 is that you have -- especially wealth.
 
-These perhaps seemingly insignificant caricatures of American culture propagate
+These perhaps seemingly insignificant elements of American culture propagate
 nearly every stratum of society. Success is greatly celebrated, wins and
 decorations are worn with pride and losing... well, it sucks but the good part
 is that you can always try again because the pursuit of happiness doesn't end
@@ -257,7 +261,7 @@ with different rates of success.
 
 ### Bigger is Better
 
-American likes "big things" and it shows. American vehicles are effectively
+America likes "big things" and it shows. American vehicles are effectively
 apartments, American cities feel massive, and not just because they liked
 themselves some high-rises, and an American "Big Gulp" is an unconquerable
 challenge for the stomach and bladder dimensioned to European portions. Maybe,
@@ -283,14 +287,14 @@ considering that any 5 Americans working on a solution effectively look at a
 much larger pool of relatively highly-productive people to consider as their
 domestic market as opposed to a European team of the same size. The American
 fascination for scale is perhaps in part related to the sheer scale of the
-nation in geographic size, population and economic productivity. A US platform
-startup with access to a 300M+ person audience off the cuff, will talk a
-different numbers game as opposed to a startup offering the same solution in
-The Netherlands with a roughly 17½M person audience with the potential of
-another 80M folks in Germany if they successfully pull of internationalizing
-(simply read: translate), complying to the differing regulations and then
-addressing pesky nuances that the founding team possibly doesn't even properly
-understand.
+nation in geographic size, population and, perhaps more interestingly, economic
+productivity. A US platform startup with access to a 300M+ person audience off
+the cuff, will talk a different numbers game as opposed to a startup offering
+the same solution in The Netherlands with a roughly 17½M person audience with
+the potential of another 80M folks in Germany if they successfully pull of
+internationalizing (simply read: translate), complying to the differing
+regulations and then addressing nuances that the founding team may possibly not
+even properly understand.
 
 
 ### Individualism and Collectivism
@@ -311,19 +315,19 @@ scandals and arguably detrimental wealth shifts along the way as well.
 
 Surely, we can achieve innovation without such cult-like figures, one may think
 and this is where I feel that our record testifies to the contrary. Harari so
-nicely discussed how storytelling serves as an organizational tools for larger
-groups to collaborate -- national identity, innovation, social justice and
-religion all serve as great tools to that effect. In most cases these causes
-need lead characters, even if only to provide some coherent vision of where to
-go. Engineers may be familiar with the jokes about the failures of design by
-consensus -- we simply don't always design better solutions by allowing
-everyone to pitch in. In fact, I would argue that the iPhone would have been a
-considerably less impressive device if the vision for the product weren't
-defined by some eccentric tech artist. Wherever you find yourself on the
-individualism-to-collectivism spectrum, we may have to acknowledge that there
-are some systems that are best designed by a collectivist mindset while there
-are others best designed by allowing some individual to let their imaginations
-run wild.
+discusses how storytelling serves as an organizational tools to facilitate
+collaboration in larger groups -- national identity, technology vision, social
+justice and religion all serve as great tools to that effect. In most cases
+these causes need lead characters, even if only to provide some coherent vision
+of where to go. Engineers may be familiar with the jokes about the failures of
+design by consensus -- we simply don't always design better solutions by
+allowing everyone to pitch in. In fact, I would argue that the iPhone would
+have been a considerably less impressive device if the vision for the product
+weren't defined by some eccentric tech artist. Wherever you find yourself on
+the individualism-to-collectivism spectrum, we may have to acknowledge that
+there are some systems that are best designed by a collectivist mindset while
+there are others best designed by allowing some individual to let their
+imaginations run wild.
 
 Maybe Europe doesn't produce as many outlier startups as the US, but Europe's
 somewhat collectivist leanings may be one of the things to attribute for
@@ -374,7 +378,7 @@ or oil.
 The world can only have a handful of winners when we engage in winner-takes-all
 plays and, if it happened to be a point on our agenda, arguably the wealth
 generated by such winners seems to do little towards resolving the increasing
-wealth disparity issues.
+wealth disparity problem.
 
 What I personally tend to find more interesting is the larger number of smaller
 sized enterprises that can not afford to disrespect their user base and are
@@ -386,9 +390,9 @@ bigger problems on our hands before we know it -- yesterday. It is already
 interesting to observe governments attempting to figure out what oversight and
 regulations should look like to keep companies such as Facebook in line but one
 can argue that companies with coffers the size of national budgets, with the
-outreach the size of several of the largest broadcasting networks in the world
-and possibly some control over critical infrastructure world-wide are only
-"controllable" in our imaginations i.e.: not really.
+outreach comparable to several of the largest broadcasting networks of the
+world in aggregate and possibly with some control over critical infrastructure
+world-wide are only "controllable" in our imaginations i.e.: not really.
 
 <!--
 Winner-take-all schemes are conducive to monopoly creation which provides a
