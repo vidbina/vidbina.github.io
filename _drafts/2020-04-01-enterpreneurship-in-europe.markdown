@@ -22,22 +22,10 @@ og:
 head: mugshot
 ---
 A friend and I have recently picked up the writing exercise of posing each
-other questions to use as the basis of a series of posts. Elward, ended up
-asking:
-
-> We hebben gezien dat Europa niet zo succesvol is geweest als America in het
-> produceren van de grote technologische bedrijven van de afgelopen decenia.
-> Kijk bijvoorbeeld naar Google, Apple, Amazon, Facebook, Microsoft dat zijn
-> allemaal Americaanse bedrijven. Jij hebt zowel in Nederland als Duitsland de
-> start-up wereld van dichtbij meegemaakt en je hebt ook ervaring met de
-> international start-up wereld. Wat zou jij zeggen dat 1 van de grote oorzaken
-> is die hieraan ten grondslag ligt. Welke andere dingen liggen hieraan ten
-> grondslag. Is er een groot verschil in het ondernemers klimaat van Nederland
-> en Duitsland m.b.t. het bovenstaande?
-
-which I'll roughly translate into the following hoping that Elward will be
-graceful enough to forgive me where I inadvertently loose any of the points in
-translation:
+other questions to use as the basis of a series of posts. The question for this
+post was formulated in Dutch[^question] which I'll roughly translate into the
+following snippet hoping that Elward, the sender, will be graceful enough to
+forgive me where I inadvertently loose any of his focal points in translation:
 
 > We have observed that Europe has not proved as successful as the United
 > Stated in producing the dominant tech companies. Amazon, Apple, Facebook,
@@ -48,11 +36,34 @@ translation:
 > are the differences between the startup ecosystems that allow for America to
 > perform this exceptionally.
 
-:warning: Before continuing, it is important to not my musings represent
-opinions derived from anecdotes and historical record, both of which may be
-contested although the.
+[^question]: Het ondernemers klimaat in Europa: We hebben gezien dat Europa niet zo succesvol is geweest als America in het produceren van de grote technologische bedrijven van de afgelopen decenia.  Kijk bijvoorbeeld naar Google, Apple, Amazon, Facebook, Microsoft dat zijn allemaal Americaanse bedrijven. Jij hebt zowel in Nederland als Duitsland de start-up wereld van dichtbij meegemaakt en je hebt ook ervaring met de international start-up wereld. Wat zou jij zeggen dat 1 van de grote oorzaken is die hieraan ten grondslag ligt. Welke andere dingen liggen hieraan ten grondslag. Is er een groot verschil in het ondernemers klimaat van Nederland en Duitsland m.b.t. het bovenstaande?  
+
+Mind you, I'm not an anthropologist, historian, sociologist or psychologist but
+merely an engineer with many opinions about topics I don't possess sufficient
+depth in even though I am constantly reading into these topics to "wisen up".
+It is therefore important to note that my musings represent opinions derived
+from anecdotes and whatever historical record I happen to be aware of, both of
+which will likely lead me down the path to a number of flawed conclusions but
+you may find a few points that seem reasonably sensible to entertain :wink:.
+
+> For simplicity's sake, I'll start each section of with a few focal points
+> which I'll dive into in the subsections of each chapter assuming that you
+> will feel free to skip to chapters based on your interest. :wink:
 
 ## Venture Capital
+
+Europe doesn't have venture capital like it used to. I've been through a few
+cohorts at accelerators on the continent and have witnessed a bunch of my peers
+maneuver the fundraise dance both in Europe and in the Americas to vastly
+different results. Arguably most startups aren't really doing anything
+adventurous to pique the interest of venture capital, but when you witness one
+of your mentors challenge to source funds close to home for the development of
+intellectual property for widely applicable timing chips that find their way
+into our smartphones, tables, computers -- effectively every smart device these
+days -- it definitely makes you wonder whether European venture capital is on a
+holiday.
+
+### When Europe definitely had it: Exploration
 
 The period from the 15th century till the 17th century is commonly hailed as
 the [**Age of Discovery**][ageofdiscovery] or **Age of Exploration** in which
@@ -98,6 +109,8 @@ natural resources such as oil and gold.
 <!-- Samuel Slater (textile) -->
 <!-- iron production -->
 
+### When Europe still had it: Industrialization
+
 Arguably, the United States was still in its nascent stages during that
 so-called Age of Exploration but towards the ending of the 18th century,
 however; America found itself in a much better state to take part in the
@@ -135,63 +148,235 @@ ideas often find it challenging to take root in Europe on account of the
 scarcity of capital while the same ideas seem to find fertile soil in America
 more readily.
 
+### When Europe took a step back: Information Age Startups
+
 I often joke about this among my acquaintances and it seems that more
 entrepreneurs tend to share the viewpoint that European investors are a
 different creature to the American investor who seems to have internalized the
 direct relationship between risk and reward so well that they seem more capable
-of comfortably taking risks. Europe may have grown partial to financial
-security, social security and stability over the years and it is hard to say if
-the trauma of recent European history plays a role here.
+of comfortably shrugging of that notion of taking risks -- "part of the game",
+an American investor seemingly thinks while they sign that check as long as
+they have enough different plays in motion to manage their exposure. Europe may
+have grown partial to financial security, social security and stability over
+the years and it is hard to say if the trauma of recent European history plays
+a role here.
 
-Mind you, I'm not an anthropologist, historian, sociologist or psychologist but
-merely an engineer with too many opinions about topics I don't possess
-sufficient depth in even though I'm constantly looking into these topics to
-"wisen up".
+Additionally, it is hard to overlook that American ventures have access to a
+larger and more homogeneous domestic market than European ventures. A French
+social-media startup, for example, can design a solution that thrives by
+cleverly playing to French cultural nuances, including business sensibilities.
+Upon attempting to reach a wider user-base, however; this startup will be
+required to deal with the non-trivial challenges of addressing the cultural,
+lingual and political differences they will find themselves facing. Different
+strokes for different folks, right?!? A business that relies on network effect
+dynamics and would therefore need to obtain critical mass at some point, may
+therefore be better off starting outside of the union where they can grow that
+critical mass and only then set foot on the European continent since acceptance
+is sometimes much easier when you're so big that people see an obvious
+advantage in having you around.
+
+> Curious that Europeans, with a history riddled with skirmishes and ethnic
+> feuds, completely missed the mark and divvied up the African continent
+> without a decent regard for the ethnic distribution and resource dependency
+> of the people living on the continent. Europe's diversity can in part be
+> traced along the lines of its current borders as these borders where largely
+> organically established in a manner where the people divided by those borders
+> maintained some agency over how those borders were drawn by political
+> alliance or local wars. Africans, on the other hand, were not granted this
+> basic courtesy which is why I am curious to observe how Information Age
+> solutions hailing from African soil will manage to win over the hearts of its
+> very diverse populations that at times will find themselves divided by
+> national borders and thus economic, lingual and regulatory contexts.
+
+Europe may be one continent, but it is a remarkably diverse amalgamation of
+folks and as such a one-size-fits-all solution may be much harder to come by
+for any company operating within the continent. Even if one were to agree that
+the European Union is an interesting tool in providing a framework to reason
+about some of the regulatory complexity, __one still needs to navigate the maze
+of cultural nuances in order to make a business break out of its regional
+sandbox__ to serve a much larger market. Quite frankly, investors have to
+acknowledge that their investment is likelier to produce the next regional big
+thing rather than the _"next big thing"_ thus setting a glass ceiling to cap
+that number that an investor may be willing to part with.
 
 [bbenz]: www.cicero.de/kapital/bertha-benz-die-erste-frau-am-steuer/41482
 
 [ageofdiscovery]: https://en.wikipedia.org/wiki/Age_of_Discovery
 [entrepreneur-etymology]: https://en.wiktionary.org/wiki/entrepreneur#French
 
-## Bigger is Better?
+## Culture
 
-The differences between the entrepreneurial climates may very well have a
-strong cultural component. On multiple occasions I have heard folks simplify
-the American ethos to one-liners such as "Bigger is Better", "Go Big or Go
-Home" and "Time is Money". This is strongly contrasted against Puritanical
-views that have shaped The Netherlands and Germany, in particular. In fact, the
-Dutch[^dutch] proudly wear their Calvinistic tendencies as a badge of honor and
-don't shy away from using this as ammunition when engaging in self-ridicule.
+On multiple occasions I have heard folks almost simplify the American ethos to
+one-liners such as "Bigger is Better" and "Go Big or Go Home" emphasizing
+America's fascination with scale.  American songs are decorated with lines like
+"I did it my way", "Me, Myself and I" and "All by myself" that provide a sense
+of America's celebration of individualism. Sayings such as "Time is Money" may
+emphasize the strong focus on the illustrious American buck. And with idioms
+such as "if you got it, flaunt it" being as commonplace as they are, it becomes
+so much more comfortable to maintain a unapologetic relationship to whatever it
+is that you have -- especially wealth.
+
+These perhaps seemingly insignificant caricatures of American culture propagate
+nearly every stratum of society. Success is greatly celebrated, wins and
+decorations are worn with pride and losing... well, it sucks but the good part
+is that you can always try again because the pursuit of happiness doesn't end
+with a loss and to be frank, by trying so much different things a single loss
+is effectively just a drop in the bucket.
+
+This is strongly contrasted against the Puritanical views that seem to have
+shaped The Netherlands where success is fortunate but something that you keep
+more to yourself in an attempt to display humility whereas losses, especially
+bankruptcies, still seem like everlasting lesions of your failings to yourself
+and society and undeniable testaments of one's lack of prudence and self
+restraint or discipline. Luckily, the Dutch[^dutch] proudly wear their
+Calvinistic tendencies as a badge of honor and don't shy away from using this
+as ammunition when engaging in humorous self-ridicule which serves as an
+effective coping mechanism at times.
+
+I'm not suggesting that either of those cultural cherry-pickings are negative
+or positive on their own but I am suggesting that they may contribute to
+shaping interesting cultural paradigms in which different ideas may fare
+with different rates of success.
 
 [^dutch]: Just picking on the Dutch since I was born in The Netherlands and carry a Dutch passport, so if anything, I'm one of them too.
 
-Deification of "self-made"-ness is another aspect that seems so central to
-American culture that it becomes difficult to overlook. My goodness, everyone
-has started from some bottom in the US of A. How many stories about folks
-entering the land of opportunity must one still hear that include some line to
-the effect of having but a dollar to one's name or even better, a sum
-denominated in pennies to emphasize how low one set off at the start their
-journey?  Even America's current, definitely not middle-class President, has
-more or less made the "started from the bottom" claim stating that he only
-received a "small" loan from his father.
 
-These seemingly unrelated and insignificant details of American culture
-propagate nearly every stratum of society. Success is greatly celebrated, wins
-and decorations are worn with pride and losing... well, it sucks but the good
-part is that you can always try again because the pursuit of happiness doesn't
-end with a loss.
+### Bigger is Better
 
-To America's credit, the acceptance of losses as a part of one's experience
-that one should embrace is something that Europe is starting to catch on to.
-Failing your company to the point of bankruptcy will still produce a battle
-scar that Europe will not allow you to forget easily, but at least we're
-starting to understand that one does not get the gains from exploration without
-accepting that it requires some folks heading into wrong directions to fail.
+Americans like "big things" and it shows. American vehicles are effectively
+apartments, American cities feel massive, and not just because they liked their
+high-rises, and an American "Big Gulp" is an unconquerable challenge for the
+stomach dimensioned to European portions. Maybe, just maybe, this love for the
+"humongous" speaks to the imaginations enough for Americans to want to engage
+on those bold quests regardless of the cost.
 
+It follows, however; that bigger adventures tend to correlate to bigger
+catastrophes when shit hits the fan and therefore it I often find it
+counterintuitive that, for a people so exposed when a plan were to fail,
+Americans seem more willing to enter the warpath towards some goal in
+comparison to Europeans with their safety nets. I guess anything that seems
+logical may seem illogical when approached from a slightly different
+perspective. You can theorize that safety nets may render folks complacent
+although you can also argue that safety nets could provide folks the security
+to try new things. You can argue that the prospect of financial ruin upon
+failure keeps one awake and on their toes in a country where everything is
+controlled by the buck -- ready for that war -- while one could equally argue
+that this could provide folks an incentive to optimize for stability and
+safety.
+
+As mentioned when discussing the cultural diversity of Europe in the previous
+chapter, when concerning oneself with the scale question, it is worth
+considering that any 5 Americans working on a solution effectively look at a
+much larger pool of relatively highly-productive people to consider as their
+domestic market as opposed to a European team of the same size. The American
+fascination for scale is perhaps in part related to the sheer scale of the
+nation in geographic size, population and economic productivity.
+
+
+### Individualism and Collectivism
+
+It is curious how many Europeans seems to be aware of the central role that
+collectivism plays in some Asian societies and simultaneously gloss over how
+collectivist European societies seem in comparison to American society as a
+whole. The self seems to fill a different, more subdued, role in European
+societies than it seems to do in the United States.
+
+Types such as Steve Jobs and Elon Musk have become an American phenomenon; a
+visionary with notable quirks and dysfunctions leading hordes of bright folks
+towards a single-minded goal in a winner-takes-all game. The fertile ground
+found wherever individualism is so celebrated will breed many more of such
+visionaries to the benefit of many although it seems fair to expect that cult
+of personality and winner-takes-all setups will facilitate its share of frauds,
+scandals and arguably detrimental wealth shifts along the way as well.
+
+Surely, we can achieve innovation without such cult-like figures, one may think
+and this is where I feel that our record testifies to the contrary. Harari so
+nicely discussed how storytelling serves as an organizational tools for larger
+groups to collaborate -- national identity, innovation, social justice and
+religion would all serve as great tools to that effect. In most cases these
+causes need lead characters, even if only to provide some coherent vision of
+where to go. Engineers may be familiar with the jokes about the failures of
+design by consensus -- we simply don't always design better solutions by
+allowing everyone to pitch in. In fact, I would argue that the iPhone would
+have been a considerably less impressive device if the vision for the product
+weren't defined by some eccentric tech artist. Wherever you find yourself on
+the individualism-to-collectivism spectrum, we may have to acknowledge that
+there are some systems that are best designed by a collectivist mindset while
+there are others best designed by allowing some individual to let their
+imaginations run wild.
+
+Maybe Europe doesn't produce as many top-level startups as the US will, but
+Europe's somewhat collectivist leanings may be one of the things to attribute
+for institutions that seem to prioritize human wellbeing as pleasantly as they
+do by comparison. The ventures that will stem from such a system may exhibit
+different characteristics to those shared by American top ventures and maybe
+that's okay.
 
 <!--
-"if you've got it, flaunt it"
+There seem to be
+things that demand
+smaller groups or single-mindedness to thrive.
+
+Deification of "self-made"-ness is another aspect that nicely ties into the
+individualism point that becomes difficult to overlook. Perhaps, Europe's
+different relationship with immigration may play a part here. Meanwhile in
+America, everyone has started from the bottom of some barrel in order to
+complete the rite of passage to becoming a self-made individual. How many
+stories about immigrants to the land of opportunity must one still hear that
+include some line to the effect of having but a dollar to one's name or even
+better, a sum denominated in pennies to emphasize how low one set off at the
+start of their journey?  Even America's current President, who has thus far
+never really known poor or middle-class circumstances, has more or less made
+the "started from the bottom" claim when emphasizing how "small" that loan from
+his father was.
+
+Tech startups as we currently known them are fast, innovative and agile enough
+to swiftly dominate large swathes or their market segments. A celebration of
+individualism
+
+### Winner takes all
+
+The acceptance of losses as a part of growth is a concept that Europe is
+starting to catch on to but one that America seems to have mastered over the
+years. Failing your company to the point of bankruptcy will still produce a
+battle scar that Europe will not allow you to forget too easily, but at least
+we're starting to understand that one does not get the gains from exploration
+without accepting that it requires some folks heading into wrong directions and
+subsequently failing. Just make sure you have enough folks heading into vastly
+different directions to maximize your chances of striking the proverbial gold
+or oil.
 -->
+
+## In closing...
+
+The world can only have so many winner-takes-all winners because of the
+destructive nature of this play strategy. There are only a handful of such tech
+companies and arguably the wealth generated by such companies does not do much
+good towards the diminishing of wealth disparity issues, if that happens to be
+a point on your agenda.
+
+What I personally tend to find more interesting is the larger number of smaller
+sized enterprises that can not afford to disrespect their user base and are
+naturally forced to compete or collaborate more actively in order to win.
+
+Surely, such enterprises would lack the advantages of economics at scale but if
+we aren't seriously questioning what the hell we have created by allowing some
+tech companies to grow without restrained, we may have bigger problem on our
+hands before we know it. It is already interesting to see how governments are
+currently attempting to introduce checks and balances to keep companies such as
+Facebook tame enough but one can argue that companies with coffers the size of
+nation states, with the outreach the size of several of the largest
+broadcasting networks and possibly some control over critical infrastructure
+(i.e.: networking infrastructure) are only "controllable" in our imaginations.
+
+Winner-take-all schemes are conducive to monopoly creation which provides a
+central point of attack for exploitation. From an evolutionary perspective, we
+should perhaps go back to focussing on diversity by sending different parties
+into vastly different directions in order to find more innovative solutions to
+our problems.
+
+<!--
+### 
 
 I served a startup around the beginning of 2018 which brought me to the valley
 and New York on several occasions. My impression of the organization was that
@@ -202,3 +387,4 @@ chain of command was apparently defective or crucial links were missing and
 everything just felt as if it existed in a state of utmost entropy at all
 times. The sharing of my observation was generally received with a "well you
 don't quite get it, this is how we roll in the US" or some variation thereof.
+-->
