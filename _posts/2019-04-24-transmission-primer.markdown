@@ -66,13 +66,13 @@ transmission-remote --session-info
 
 and prints information regarding:
  - networking settings
-   - listining ports
+   - listening ports
    - download/upload speed restrictions
  - storage settings
    - daemon configuration file
    - download directory
 
-some of which is accessible through the Preferences modal in the webportal.
+some of which is accessible through the Preferences modal in the web portal.
 
 From now on, I'll just print short and long versions of commands within the
 same block as follows:
@@ -91,6 +91,17 @@ transmission-remote -a TORRENT_URL
 transmission-remote --add TORRENT_URL
 ```
 
+### Remote Torrent
+
+Remove a torrent by id. Examine the [Select Torrents](#select-torrents) section
+on how to find the id for a torrent (spoiler: list `transmission-remote -l` as
+documented in the [List Torrents](#list-torrents) section)
+
+```
+transmission-remote -r TORRENT_ID
+transmission-remote --remove TORRENT_ID
+```
+
 ### List Torrents
 
 One may list Torrents by running
@@ -100,15 +111,19 @@ transmission-remote -l
 transmission-remote --list
 ```
 
+> Note that torrents are listed with an ID column which provides the identifier
+> to use in referencing a particular torrent in commands.
+
 ### Select Torrents
 
-You'll have observed in the previous step that the torrents are listed by ID.
-This ID can be references by means of the `-t` or `--torrent` argument.
+While [listing torrents](#list-torrents) you may have observed that the
+torrents are listed by ID. This ID can used to specify a torrent through the
+`-t` or `--torrent` argument.
 
 Failing to select the torrents to operate on may in some cases default to
-`-tall` or `--torrent all` -- all torrents.
+`-tall` or `--torrent all` to list all torrents.
 
-Specify multiple ids by seperating them with commas as follows
+Specify multiple ids by separating them with commas as follows
 
 ```
 -t4,2,99
@@ -147,7 +162,7 @@ transmission-remote --torrent 3 --files
 
 ### Show info for a given torrent
 
-In order to observe the the magnet link, the directory into which it is being
+In order to observe the magnet link, the directory into which it is being
 downloaded, the relevant download metrics and a bit of history for a given
 torrent, one may run:
 
