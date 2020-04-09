@@ -3,8 +3,8 @@ layout: post
 title: On The Entrepreneurial Environment in Europe
 description: |
   A friend asked how the entrepreneurial environments in America and Europe are
-  different which, from my experiences, seem to revolve around access to
-  venture capital and culture.
+  different which, from my experience, seem to revolve around access to venture
+  capital and culture.
 date:  2020-04-01 11:49:04 +0000
 type: enterpreneurship # for icon
 category: enterpreneurship # for url
@@ -32,25 +32,39 @@ og:
 #twitter:
 #  card: summary
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
-head: mugshot
+#head: mugshot
 ---
+<!-- Eli would remove the entire reference to the writing exercise. Reduce this
+or move towards the end. -->
+<!-- TODO: Shorten -->
+A friend recently asked why America manages to produce successful startups such
+as Apple, Amazon, Facebook, Google and Microsoft where Europe doesn't seem to
+have a comparable track-record. I've often been part of conversation in which
+one casually commented on this observation and based on those exchanges, I tend
+to focus on thventure capital and culture to find clues.
+
+<!--
 A friend and I have recently picked up the writing exercise of posing each
 other questions to use as the basis of a series of posts. The question for this
 post was formulated in Dutch[^question] which I'll roughly translate into the
 following snippet hoping that Elward, the sender, will be graceful enough to
-forgive me where I inadvertently loose any of his focal points in translation:
+forgive me where I inadvertently lose any of his focal points in translation:
 
 > We have observed that Europe has not proved as successful as the United
-> Stated in producing the dominant tech companies. Amazon, Apple, Facebook,
-> Google and Microsoft are all American firms. Considering you're experiences
-> in the startup scene in The Netherlands and Germany as well as the
-> internation startup scene beyond that, what would you attribute this
-> phenomenon to. Which factors contribute to America's dominant position in
-> startups and what are the differences between the startup ecosystems that
-> allow for America to perform this exceptionally.
+> States in producing the dominant tech companies. Amazon, Apple, Facebook,
+> Google and Microsoft are all American firms. Considering your experience in
+> the startup scene in The Netherlands and Germany as well as the international
+> startup scene beyond that, what would you attribute this phenomenon to. Which
+> factors contribute to America's dominant position in startups and what are
+> the differences between the startup ecosystems that allow for America to
+> perform this exceptionally.
 
 [^question]: Het ondernemers klimaat in Europa: We hebben gezien dat Europa niet zo succesvol is geweest als America in het produceren van de grote technologische bedrijven van de afgelopen decenia.  Kijk bijvoorbeeld naar Google, Apple, Amazon, Facebook, Microsoft dat zijn allemaal Americaanse bedrijven. Jij hebt zowel in Nederland als Duitsland de start-up wereld van dichtbij meegemaakt en je hebt ook ervaring met de international start-up wereld. Wat zou jij zeggen dat 1 van de grote oorzaken is die hieraan ten grondslag ligt. Welke andere dingen liggen hieraan ten grondslag. Is er een groot verschil in het ondernemers klimaat van Nederland en Duitsland m.b.t. het bovenstaande?  
+-->
 
+<!-- Eli says stop the downselling -->
+<!-- Eli: don't focus on too many points. Choose a focal point. -->
+<!--
 Mind you, I'm not an anthropologist, economist, historian, psychologist or
 sociologist but merely an engineer with many opinions about topics I don't
 possess sufficient depth in even though I am constantly reading into these
@@ -60,15 +74,18 @@ happen to be aware of, both of which will likely lead me down the path to a
 number of flawed conclusions but you may find a few points, at the very least
 an engineer's perspective, that may be reasonably sensible to entertain :wink:.
 
-> For simplicity's sake, I'll start each section of with a few focal points
-> which I'll dive into in the subsections of each chapter assuming that you
-> will feel free to skip to chapters based on your interest. :wink:
+:warning: For simplicity's sake, I'll start each section of with a few focal
+points which I'll dive into in the subsections of each chapter assuming that
+you will feel free to skip to chapters based on your interest. :wink:
+-->
 
 ## Venture Capital
 
+<!-- Eli: Why, not like it used to? -->
+<!-- Eli: Give more examples -->
 Europe doesn't have venture capital like it used to. I've been through a few
 cohorts at accelerators on the continent and have witnessed a bunch of my peers
-maneuver the fundraise dance both in Europe and in America to vastly different
+maneuver the fund-raise dance both in Europe and in America to vastly different
 results. Arguably most startups aren't really doing anything adventurous to
 pique the interest of venture capital, but after witnessing one of my mentors
 face considerable challenges in sourcing funds close to home for the
@@ -79,6 +96,8 @@ venture capital is on a holiday.
 
 ### When Europe definitely had it: Exploration
 
+<!-- Eli: Spent too much time on this as this is not my expertise and should
+possibly be reduced so I can focus on my area of expertise -->
 The period from the 15th century till the 17th century is commonly hailed as
 the [**Age of Discovery**][ageofdiscovery] or **Age of Exploration** in which
 European priorities shifted towards exploring what they considered foreign or
@@ -190,18 +209,20 @@ critical mass (such as China, India, the US) and only then set foot on the
 European continent since acceptance is sometimes much easier when you're so big
 that people see an obvious advantage in having you around.
 
-> Curious that Europeans, with a history riddled with skirmishes and ethnic
-> feuds, completely missed the mark and divvied up the African continent
-> without a decent regard for the ethnic distribution and resource dependency
-> of the people living on the continent. Europe's diversity can in part be
-> traced along the lines of its current borders as these borders where largely
-> organically established in a manner where the people divided by those borders
-> maintained some agency over how those borders were drawn by political
-> alliance or local wars. Africans, on the other hand, were not granted this
-> basic courtesy which is why I am curious to observe how Information Age
-> solutions hailing from African soil will manage to win over the hearts of its
-> very diverse populations that at times will find themselves divided by
-> national borders and thus economic, lingual and regulatory contexts.
+<div class="element note">
+Curious that Europeans, with a history riddled with skirmishes and ethnic
+feuds, completely missed the mark and divvied up the African continent without
+a decent regard for the ethnic distribution and resource dependency of the
+people living on the continent. Europe's diversity can in part be traced along
+the lines of its current borders as these borders where largely organically
+established in a manner where the people divided by those borders maintained
+some agency over how those borders were drawn by political alliance or local
+wars. Africans, on the other hand, were not granted this basic courtesy which
+is why I am curious to observe how Information Age solutions hailing from
+African soil will manage to win over the hearts of its very diverse populations
+that at times will find themselves divided by national borders and thus
+economic, lingual and regulatory contexts.
+</div>
 
 Europe may be one continent, but it is a remarkably diverse amalgamation of
 folks and as such a one-size-fits-all solution may be much harder to come by
@@ -237,6 +258,7 @@ that has the guts to help you along the way.
 
 ## Culture
 
+<!-- Eli liked the culture discussion -->
 On multiple occasions I have heard folks almost simplify the American ethos to
 one-liners such as "Bigger is Better" and "Go Big or Go Home" emphasizing
 America's fascination with scale. American songs are decorated with lines like
@@ -326,6 +348,7 @@ visionaries to the benefit of many although it seems fair to expect that cult
 of personality and winner-takes-all setups will facilitate its share of frauds,
 scandals and arguably detrimental wealth shifts along the way as well.
 
+<!-- Eli liked the part of the engineers -->
 Surely, we can achieve innovation without such cult-like figures, one may think
 and this is where I feel that our record testifies to the contrary. Harari so
 discusses how storytelling serves as an organizational tools to facilitate
@@ -350,6 +373,8 @@ different characteristics to those shared by American top ventures and maybe
 that's okay. Some of Europe's companies will be smaller in size and in market
 segment ownership, but that possibly simplifies regulation and oversight which
 may serve to protect the populous better over the long-term.
+
+<!-- address cooperation, as per Leon's feedback -->
 
 <!--
 There seem to be
@@ -388,11 +413,13 @@ or oil.
 
 ## In closing...
 
-The world can only have a handful of winners when we engage in winner-takes-all
-plays and, if it happened to be a point on our agenda, arguably the wealth
-generated by such winners seems to do little towards resolving the increasing
-wealth disparity problem.
+<!-- Eli: shorter sentences. Hard to digest -->
+From the nation of the game, we can only have a handful of winners when we
+engage in winner-takes-all plays.
+<!-- Arguably the wealth generated by such winners seems to do little towards
+resolving the increasing wealth disparity problem. -->
 
+<!-- Eli: Characterized as cardinal sin as new information is introduced -->
 What I personally tend to find more interesting is the larger number of smaller
 sized enterprises that can not afford to disrespect their user base and are
 naturally forced to compete or collaborate more effectively in order to thrive
@@ -438,3 +465,8 @@ everything just felt as if it existed in a state of utmost entropy at all
 times. The sharing of my observation was generally received with a "well you
 don't quite get it, this is how we roll in the US" or some variation thereof.
 -->
+
+<div class="element note">
+Thanks to Elward Valstein and Leon Pals for providing some points on helping me
+revise this article.
+</div>
