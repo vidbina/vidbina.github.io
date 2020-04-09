@@ -8,13 +8,16 @@ date:  2016-03-26 17:17:52 +0100
 type:  math # for icon
 category: math # for url
 tags:
- - math
+ - calculus
  - derrivative
  - differentiation
- - calculus
  - functions
- - step function
+ - fundamentals
+ - machine learning
+ - math
+ - mathematics
  - sigmoid function
+ - step function
 og:
   type: article # http://ogp.me/#types
 #  og:type: # 
@@ -50,7 +53,7 @@ ambient light brightness exceeds a given measure.
 Perceptrons, binary classifiers and the neurons in artificial neural networks
 require an activation function in order to produce any output. The step
 function is a valid option for the activation function but poses a challenge
-in analysis because of the [jump disconuity][jump-discontinuity] at $x=0$.
+in analysis because of the [jump discontinuity][jump-discontinuity] at $x=0$.
 
 > At $x=0$ the derivative is undefined ($\frac{\infty}{0}$) while the derivative is zero for the remainder of the domain.
 
