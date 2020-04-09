@@ -77,6 +77,11 @@ to vastly different results. Some ideas that were deemed nearly "nonfundable"
 here in Europe have found fertile soil in the US in order to grow on to build
 sustainable businesses or flop.
 
+<div class="elmement img">
+  <img src="/img/european-money.jpg" alt="Image of a glass of coins and Euro bills tipped over such that the money lies spilled over a surface" />
+  <!-- https://www.pexels.com/photo/bills-capital-cash-cent-210679/ -->
+</div>
+
 Slowly but surely, European investors are catching on which can be observed in
 the ever growing number of money that is invested in European ventures.
 Crunchbase [reports][cb-vc] 17.7B USD being invested in EU startups in 2015
@@ -134,6 +139,11 @@ so risk-averse? :thinking: One could argue that the presence of safety nets
 should simplify or even encourage the taking risk given the comfort of knowing
 that on can only fall so far, but that again could be a completely separate
 post.
+
+<div class="elmement img">
+  <img src="/img/black-calculator-investor.jpg" alt="Image of a calculator and a sheet with investment details with a handwritten comment asking \"Can we do this?\"" />
+  <!-- https://www.pexels.com/photo/black-calculator-near-ballpoint-pen-on-white-printed-paper-53621/ -->
+</div>
 
 [^1]: Carry a Dutch :nl: passport so I'm kind of ripping at my own folks here :wink:.
 
@@ -196,6 +206,11 @@ have found themselves relocating to the west coast in order to benefit from the
 multitude of ideas, capital and willingness to collaborate. The tension that
 may have stemmed from collaborations that evolved into rivalries may have been
 a catalyst in keeping Silicon Valley tech firms on edge.
+
+<div class="elmement img">
+  <img src="/img/top-view-people-handshaking.jpg" alt="People shaking hands over a table full of tablets, laptops and notebooks, presumably after a meeting" />
+  <!-- https://www.pexels.com/photo/top-view-photo-of-people-handshaking-3182784/ -->
+</div>
 
 [^bt]: [Big Tech][bigtech]: Facebook, Amazon, Apple, Microsoft, Netflix, Google
 
