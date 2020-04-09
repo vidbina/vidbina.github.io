@@ -23,6 +23,19 @@ head: mugshot
 ---
 Here be dragons :dragon:
 
+```
+nc -l -p PORT_NUMBER > out.file
+```
+
+I
+
+```
+nc -w 3 IP_ADDR PORT_NUMBER < out.file
+```
+
+
 ## Links
 
-- http://web.mit.edu/~cocosci/Papers/statistics-and-the-Bayesian-mind.pdf
+- [Using netcat for File Transfers][netcat]
+
+[netcat]: https://nakkaya.com/2009/04/15/using-netcat-for-file-transfers/
