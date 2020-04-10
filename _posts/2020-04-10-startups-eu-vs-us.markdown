@@ -40,7 +40,7 @@ It's difficult to discuss how-to's on growing a national (or larger) startup
 ecosystem without mentioning Israel, a nation that has managed to produce a
 dazzling amount of tech ventures for its relatively small population. Around
 the time I graduated college and started getting introduced to the Dutch
-startup space, I got my hands on [Startup Nation][sn] by Dan Senor and Saul
+startup scene, I got my hands on [Startup Nation][sn] by Dan Senor and Saul
 Singer which provided interesting insights to how _access to capital_ as well
 as _cultural aspects_ enabled Israel to take such a dominant role in tech.
 Military service[^idf], the risk-averseness introduced by immigrants and
@@ -259,7 +259,7 @@ the European startup scene.
 [^2]: Europe has arguably experimented with collectivist political ideology more than America has.
 
 ### Collaboration
-For its individualistic-leanings, the American startup space has managed to
+For its individualistic-leanings, the American startup scene has managed to
 prove rich with collaboration. Founders will readily find themselves good
 mentors to help their businesses forward, especially around the Silicon Valley
 region, which [Quartz][qz] referred to as the "Pay-it-forward" mentality. [Leon
