@@ -32,20 +32,22 @@ head: mugshot
 mugshot: y2019
 ---
 A [friend][eli] recently asked why America churns out startups that seem to be
-successful to an extent that knows no equal in Europe. :shrug:
+successful to an extent that knows no equal in Europe.
 
 [eli]: http://elwardvalstein.com
 
-It's difficult to discuss the how to grow a national (or larger) startup
+It's difficult to discuss how-to's on growing a national (or larger) startup
 ecosystem without mentioning Israel, a nation that has managed to produce a
-dazzling amount of tech ventures for a relatively small population. Around the
-time I graduated college, I got my hands on [Startup Nation][sn] by Dan Senor
-and Saul Singer which provided interesting insights to how access to capital as
-well as some cultural aspects shaped through the military service, the
-risk-averseness introduced by immigrants and what they refer to as _chutzpah_,
-the quality of of audacity for good or bad, enabled Israel to take such a
-dominant role in tech.
+dazzling amount of tech ventures for its relatively small population. Around
+the time I graduated college and started getting introduced to the Dutch
+startup space, I got my hands on [Startup Nation][sn] by Dan Senor and Saul
+Singer which provided interesting insights to how _access to capital_ as well
+as _cultural aspects_ enabled Israel to take such a dominant role in tech.
+Military service[^idf], the risk-averseness introduced by immigrants and
+_chutzpah_, the quality of of audacity for good or bad, are some of the
+components that shaped that culture in Israel according to Dan and Saul.
 
+[^idf]: Compulsory service to the Israeli Defense Forces apparently played a crucial role in shaping generations of leaders well-suited to thrive in the tech sector.
 [^il]: You may not hear too much about those startups because they tend to get bought out before they show up on your radar. Remember MobileEye to Tesla or Waze to Google?
 
 [sn]: https://en.wikipedia.org/wiki/Start-up_Nation
