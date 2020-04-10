@@ -1,5 +1,5 @@
+default: y2015
 y2015:
   description: My face in 2015, I probably still look like this.
-y2016:
-  description: Don't have a mugshot for 2016 yet
-
+y2019:
+  description: My face in 2019 still looked a bit like it did in 2015 just with the the hair worn upwards.

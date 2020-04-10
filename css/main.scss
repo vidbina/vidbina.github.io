@@ -362,7 +362,10 @@ html, body { height: 100%; }
         display: none;
       }
       &.y2015 {
-        background-image: url(https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/mugshots/2015.jpg);
+        background-image: url(https://vid.bina.me/img/mug_2015.jpg);
+      }
+      &.y2019 {
+        background-image: url(https://vid.bina.me/img/mug_2019.jpg);
       }
     }
   }

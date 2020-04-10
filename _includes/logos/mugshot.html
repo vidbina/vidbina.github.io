@@ -1,8 +1,5 @@
 {% if page.mugshot and site.data.logo[page.mugshot] %}
 <div class="logo mugshot {{page.mugshot}}"><span>{{site.data.logo[page.mugshot].description}}</span></div>
 {% else %}
-{% for logo in site.data.logo %}
-<div class="logo mugshot {{logo[0]}}"><span>{{logo[1].description}}</span></div>
-{% break %}
-{% endfor %}
+<div class="logo mugshot {{site.data.logo.default}}"><span>{{site.data.logo[site.data.logo.default].description}}</span></div>
 {% endif %}
