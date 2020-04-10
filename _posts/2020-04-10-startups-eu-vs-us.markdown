@@ -48,7 +48,9 @@ _chutzpah_, the quality of audacity for good or bad, are some of factors cited
 by Dan and Saul as shapers of those cultural aspects in Israel.
 
 [^idf]: Compulsory service to the Israeli Defense Forces apparently played a crucial role in shaping generations of leaders well-suited to thrive in the tech sector.
-[^il]: You may not hear too much about those startups because they tend to get bought out before they show up on your radar. Remember MobileEye to Tesla or Waze to Google?
+[^il]: You may not hear too much about those startups because they tend to get bought out before they show up on your radar. Remember [Mobileye to Tesla or Waze to Google][il-exit]?
+
+[il-exit]: https://www.israel21c.org/the-15-biggest-acquisitions-in-israeli-history/
 
 [sn]: https://en.wikipedia.org/wiki/Start-up_Nation
 
