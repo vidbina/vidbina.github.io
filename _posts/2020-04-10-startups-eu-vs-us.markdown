@@ -195,10 +195,10 @@ I would assume that America's relationship to risk is shaped by it being a
 nation of immigrants where nearly everyone has been brought up with the
 awareness of a nearby history of venturing into the unknown to escape horror or
 to pursue happiness. The authors of [Start-up Nation][sn] also related this
-spirit Israel's immigrants. In Europe, my immigrant peers seem to care less
-about failing or hitting rock bottom and thus seem more comfortable taking
-certain risks. Of course there are some nuances. Many of those immigrant often
-struggle to secure the needed initial funding which they, considering
+spirit stemming from Israel's immigrants. In Europe, my immigrant peers seem to
+care less about failing or hitting rock bottom and thus seem more comfortable
+taking certain risks. Of course there are some nuances. Many of those immigrant
+often struggle to secure the needed initial funding which they, considering
 circumstances, can't source from the famous goto initial funding parties
 colloquially referred to as ["family and friends"][fandf].  Being a
 2nd-generation immigrant to the Netherlands, spending my formative years in
