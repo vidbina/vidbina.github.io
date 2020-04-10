@@ -31,17 +31,25 @@ og:
 #head: mugshot
 ---
 A [friend][eli] recently asked why America churns out startups that seem to be
-successful to an extent that knows no equal in Europe.
+successful to an extent that knows no equal in Europe. :shrug:
 
-[eli]: elwardvalstein.com
+[eli]: http://elwardvalstein.com
 
-I would argue that this largely boils down to the access to capital, venture
-capital in particular, and culture. At the same time, it needs to be noted that
-Europe does have its share of startup wins that at least deserve a brief
-mention in this post before rambling on about why America seems more fertile
-for startups to thrive.
+It's difficult to discuss the how to grow a national (or larger) startup
+ecosystem without mentioning Israel, a nation that has managed to produce a
+dazzling amount of tech ventures for a relatively small population. Around the
+time I graduated college, I got my hands on [Startup Nation][sn] by Dan Senor
+and Saul Singer which provided interesting insights to how access to capital as
+well as some cultural aspects shaped through the military service, the
+risk-averseness introduced by immigrants and what they refer to as _chutzpah_,
+the quality of of audacity for good or bad, enabled Israel to take such a
+dominant role in tech.
 
-Notable European startups (some of which aren't European anymore :stuck_out_tongue:):
+[^il]: You may not hear too much about those startups because they tend to get bought out before they show up on your radar. Remember MobileEye to Tesla or Waze to Google?
+
+[sn]: https://en.wikipedia.org/wiki/Start-up_Nation
+
+It needs to be noted that Europe has claimed its share of startup wins such as
 - Adyen (payment) :credit_card:
 - Deliveroo (food delivery) :bento:
 - Klarna (payment) :credit_card:
@@ -54,12 +62,27 @@ Notable European startups (some of which aren't European anymore :stuck_out_tong
 - Takeaway.com (food delivery) :bento:
 - Zalando (retail) :dress: :necktie: :shoe: :jeans: :handbag:
 
+but in all honesty the numbers of European tech startups founded and matured
+(acquisition, IPO or just plain old going-steady) are obviously not nearly as
+impressive in numbers in relation to the population if you were to contrast it
+to Israel... or the US, to get back on topic. :wink:
+
+Culture and access to capital, venture capital in particular, are important
+factors to entrepreneurship anywhere. The differences in culture and capital
+access may provide some clues as to why America performs differently to Europe
+in the startup arena.
+
 <div class="element note">
-An interesting idea to entertain is that it may be benefits to an ecosystem
-that is comprised of smaller startups instead of the behemoths that we witness
-hailing from the US. I'm a fan of smaller competing or collaborating firms and
-keeping each other in check instead of monopolies that absorb anything that
-poses a remote risk. This, however; is a topic for another post.
+An interesting idea to entertain is that an ecosystem with smaller startups
+instead of the behemoths that we witness hailing from the US comes with its own
+set of benefits. Due to competition, such "smaller firms" would be obligated to
+pay closer attention to the voice of their customer or user base, something
+that becomes easier to ignore when one is "too large to avoid". Furthermore, such
+ecosystems may provide users with more and perhaps better alternatives to
+address the differing needs with more focus. At the same time, it follows that
+this fragmentation may result to adverse cost effects that otherwise could be
+mitigated through business growing to economies of scale. This, however; is a
+topic for another post.
 </div>
 
 ## Venture Capital
@@ -73,37 +96,47 @@ produced some wins as previously mentioned but few to none of those wins
 managed to capture their audiences as well as some of the popular American
 names.
 
-I've been through a few cohorts at accelerators in Europe and have witnessed a
-bunch of my peers maneuver the fund-raise dance both in Europe and in America
-to vastly different results. Some ideas that were deemed nearly "nonfundable"
-here in Europe have found funding in the US in order to grow on to build
-sustainable businesses or flop. :money_with_wings:
+I've been through a few cohorts at accelerators and have witnessed peers
+maneuver the fund-raise dance in Europe and in America to vastly different
+results. In my experience, numerous teams that proposed ideas deemed
+"nonfundable" in Europe have managed to raise funding in the US. Fortunately,
+US founders still end up finding their way to Europe although generally not for
+the funding climate but rather for things such as the higher quality of life at
+a lower cost. :money_with_wings:
 
 <div class="element img">
   <img src="/img/european-money.jpg" alt="Image of a glass of coins and Euro bills tipped over such that the money lies spilled over a surface" />
   <!-- https://www.pexels.com/photo/bills-capital-cash-cent-210679/ -->
 </div>
 
-Slowly but surely, European investors are catching on which can be observed in
-the ever growing number of money that is invested in European ventures.
-Crunchbase [reports][cb-vc] 17.7B USD being invested in EU startups in 2015
-while they tracked about twice as much, 36B USD, being invested in 2019.
+Slowly but surely, investors are catching on and this can be observed in the
+growing sums of money invested in European ventures. [Crunchbase
+reports][cb-vc] 17.7B USD being invested in EU startups in 2015 while they
+tracked about twice as much, 36B USD, being invested in 2019.
+Dealroom has [reported][dealroom] a steady growth of European venture capital
+from 2019 through 2018 starting at 6.5B EUR and growing to exceed 21.2B EUR.
 Statista provides data on the [number of investments][statista-num] and the
-[sum of investments][statista-val] in Europe which support the notion that the
-funding situation is improving. Dealroom [reports][dealroom] 18.5B EUR invested
-in 2015 and reports a steady growth in invested capital up to 27.8B EUR
-invested in 2018. Assuming that each source keeps consistent definitions for
-statups and investments year-over-year, it seems evident that the influx of
-capital to European startups has been ramping up. :moneybag:
+[sum of investments][statista-val] in Europe which also supports the notion
+that the funding situation is improving.
+In fact, an older 2017 [analysis by Pitchbook][pitchbook] emphasized that deal
+size itself was increasing, allowing startups to do push further and get more
+done per deal.
+Assuming that each source honors consistent definitions for startups and
+investments year-over-year, it seems evident that the influx of capital to
+European startups has been ramping up. :moneybag:
 
 [cb-vc]: https://news.crunchbase.com/news/european-venture-report-vc-dollars-rise-in-2019/
 [statista-num]: https://www.statista.com/statistics/763156/number-of-investments-in-start-ups-in-europe/
 [statista-val]:  https://www.statista.com/statistics/763260/value-of-investments-in-start-ups-in-europe/
 [dealroom]: https://blog.dealroom.co/wp-content/uploads/2019/02/Dealroom-2018-vFINAL.pdf
+[pitchbook]: https://pitchbook.com/news/articles/the-state-of-vc-in-europe-and-israel-in-11-charts
+
+[wiki-unicorn]: https://en.wikipedia.org/wiki/List_of_unicorn_startup_companies<Paste>
 
 At some point, one can only hope that the greater access to capital will allow
-founders to build solutions that are taken a bit further in order to compete
-with that which is produced across the Atlantic.
+founders to dare to take more chances to actually push whichever frontier
+they've zeroed in on. Thriving startup ecosystems are a lot more than just
+money though.
 
 ## Culture
 
@@ -112,6 +145,10 @@ a challenging, culturally heterogeneous, sandbox in which to grow a startup. I
 would go as far to argue that America, with all its differences between the two
 coastlines, is arguably more homogeneous in a cultural sense than a similarly
 sized chunk of Europe.
+
+Even as a "nation-of-immigrants" that is subjected to so many cultural
+influences, America has developed to shape some core cultural values that seem
+to be commonly held by most.
 
 Those observations aside, I would consider the
 - tolerance for risk,
@@ -128,22 +165,30 @@ as a virtue. As a generalization one may note that the Dutch[^1] joke about
 their Calvinistic tendencies and although I rip at the Dutch, this is a
 tendency that I've experienced in multiple parts of the continent. While the
 European is busy conducting cost-benefit analysis, an American somewhere has
-already dispatched capital and put folks to work to find a solution. Perhaps
-such American founders will fail disproportionately more to their European
-counterparts but if new functional concepts arise from experimentation, it
-follows that increasing the number of experiments will at some point result to
-a greater number of wins. This idea doesn't quite gel with the flavor of
-risk-aversion commonly served in Europe although cues are being taken from
-Silicon Valley and other startup havens in order to develop a tolerance for
-experimentation and "failure". Notably this risk-aversion is not only a
-challenge among the investment climate but arguable also in the labor market
-where it may be challenging to entice folks with the promise of shares in the
-risk and rewards. I often wonder if the presence of our safety nets have some
-role to play in this, or perhaps we designed those safety nets because we are
-so risk-averse? :thinking: One could argue that the presence of safety nets
-should simplify or even encourage the taking risk given the comfort of knowing
-that on can only fall so far, but that again could be a completely separate
-post.
+already dispatched capital and put folks to work to find a solution.
+
+I can already imagine some Europeans cringe at the idea of just venturing into
+the unknown but if new functional concepts arise from experimentation, it follows
+to assume that the every-trying American is set to win at some point.
+This idea doesn't quite gel with the flavor of risk-aversion commonly served in
+Europe although cues are being taken from Silicon Valley and other startup
+havens in order to develop a tolerance for experimentation and "failure".
+
+Notably this risk-aversion is not only a challenge among the investment climate
+but arguable also in the labor market where it may be challenging to entice
+folks with the promise of shares in the risk and rewards. I often wonder if the
+presence of our safety nets have some role to play in this, or perhaps we
+designed those safety nets because we are so risk-averse? :thinking: One could
+argue that the presence of safety nets should simplify or even encourage the
+taking of risk given the comfort of knowing that on can only fall so far, but that
+again could be a completely separate post.
+
+As the authors of [Start-up Nation][sn] addressed, I tend to believe that
+America's relationship to risk is shaped by the fact that it is effectively a
+nation of immigrants where everyone effectively stems from a relatively nearby
+history of venturing into the unknown to pursue happiness, whatever that means
+in their respective cases.
+
 
 <div class="element img">
   <img src="/img/black-calculator-investor.jpg" alt="Image of a calculator and a sheet with investment details with a handwritten comment asking: Can we do this?" />
@@ -159,15 +204,15 @@ American culture that may play a role in explaining the differences in the
 types of startups that both ecosystems produce. It took Americans to propose a
 concept for a car that, to an European, effectively feels like a house on
 wheels. It is in America where one finds portions that are over-dimensioned for
-the European stomach such as the "Big Gulp" and other "Supersized" food items.
-Big is almost synonymous with America and America has not just applied this to
-object but equally enthusiastically to ideas as well. Furthermore, reasoning
-about serving a quarter billion people is different in The United States as
-opposed to Europe.  This exercise in Europe would require consideration for
-internationalization (languages, notation systems, etc.), cultural differences
-and regulatory aspects in order to achieve a similar scale. This presents
-another challenge for European startups that may not always be trivial to
-resolve.
+the average-sized human stomach such as the "Big Gulp" and other "Supersized"
+food items. Big is almost synonymous with America and America has not just
+applied this to object but equally enthusiastically to ideas as well.
+Furthermore, reasoning about serving a quarter billion people is different in
+The United States as opposed to Europe. This exercise in Europe would require
+consideration for internationalization (languages, notation systems, etc.),
+cultural differences and regulatory aspects in order to achieve a similar
+scale, thus presenting another challenge for European startups that may not
+always be trivial to resolve.
 
 ### Individualism and Collectivism
 America and Europe seem to exhibit different leanings on the
@@ -180,14 +225,15 @@ definitely out of scope for this post[^2]. For now, types such as Steve Jobs,
 Bill Gates and Elon Musk have become somewhat of an American phenomenon. Even
 some of Europe's notable tech leaders, such as [Linus Torvalds][linus] (creator
 of Linux, the operating system that runs the web :smirk:) and [Guido van
-Rossum][guido] (creator of Python, the language that enables rapid development
-and machine learning), have relocated to the United States. Supposedly, a
-culture so eager to celebrate individualism and support such dreamers in a
-manner like America, will enable many more of such visionaries to do what other
-deem "crazy". Meanwhile, Europe's different mindset could give birth to
+Rossum][guido] (creator of Python, a language that facilitates rapid software
+development and machine learning), have relocated to the United States.
+Supposedly, a culture so eager to celebrate individualism and support such
+dreamers in a manner, will enable many more of such visionaries to do what
+others deem "crazy". Meanwhile, Europe's different mindset could give birth to
 ventures of a considerably different nature. Since funds are more readily
-streaming into the European startup sector, we can expect some interesting
-developments over the coming years.
+streaming into the European startup sector, I'm already looking forward to
+witness how other models, such as cooperative models for example, will shape
+the European startup scene.
 
 [linus]: https://en.wikipedia.org/wiki/Linus_Torvalds
 [guido]: https://gvanrossum.github.io/
