@@ -44,8 +44,8 @@ startup space, I got my hands on [Startup Nation][sn] by Dan Senor and Saul
 Singer which provided interesting insights to how _access to capital_ as well
 as _cultural aspects_ enabled Israel to take such a dominant role in tech.
 Military service[^idf], the risk-averseness introduced by immigrants and
-_chutzpah_, the quality of of audacity for good or bad, are some of the
-components that shaped that culture in Israel according to Dan and Saul.
+_chutzpah_, the quality of audacity for good or bad, are some of factors cited
+by Dan and Saul as shapers of those cultural aspects in Israel.
 
 [^idf]: Compulsory service to the Israeli Defense Forces apparently played a crucial role in shaping generations of leaders well-suited to thrive in the tech sector.
 [^il]: You may not hear too much about those startups because they tend to get bought out before they show up on your radar. Remember MobileEye to Tesla or Waze to Google?
