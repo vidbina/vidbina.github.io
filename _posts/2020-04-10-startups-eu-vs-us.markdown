@@ -290,5 +290,7 @@ a catalyst in keeping Silicon Valley tech firms on edge.
 
 Culture and capital may be notable factors in explaining why Europe hasn't been
 able to produce tech ventures at the scale observed in the US. The changing
-investment climate, however; may yet result to more changes on this front,
-although I would expect the cultural factors to remain a challenge for a while.
+investment climate, however; may yet result to more changes on this front.
+Although I would expect the cultural factors to remain a challenge for a while
+they simultaneously present an opportunity for things to be done differently.
+:thinking: :wink:
