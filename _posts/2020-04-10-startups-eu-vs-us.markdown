@@ -3,7 +3,7 @@ layout: post
 title: Why Europe Doesn't Produce Big Tech Like the USA
 description: |
   America :us: has produced companies like Amazon, Apple, Facebook, Google and
-  Microsoft, while Europe doesn't quite seem to have comparable Big Tech
+  Microsoft, while Europe :eu: doesn't quite seem to have comparable Big Tech
   companies? :trophy: Why is that? :thinking:
 date:  2020-04-01 11:49:04 +0000
 type: enterpreneurship # for icon
@@ -40,9 +40,9 @@ mention in this post before rambling on about why America seems more fertile
 for startups to thrive.
 
 Notable European startups (some of which aren't European anymore :stuck_out_tongue:):
-- Adyen (payment) :money: :credit_card:
+- Adyen (payment) :credit_card:
 - Deliveroo (food delivery) :bento:
-- Klarna (payment) :money: :credit_card:
+- Klarna (payment) :credit_card:
 - Rovio (games) :video_game:
 - Shazam (song detection and streaming) :musical_score: :iphone:
 - Skype (videoconferencing) :video_camera: :phone:
@@ -75,7 +75,7 @@ I've been through a few cohorts at accelerators in Europe and have witnessed a
 bunch of my peers maneuver the fund-raise dance both in Europe and in America
 to vastly different results. Some ideas that were deemed nearly "nonfundable"
 here in Europe have found fertile soil in the US in order to grow on to build
-sustainable businesses or flop.
+sustainable businesses or flop. :money_with_wings:
 
 <div class="elmement img">
   <img src="/img/european-money.jpg" alt="Image of a glass of coins and Euro bills tipped over such that the money lies spilled over a surface" />
@@ -90,7 +90,9 @@ Statista provides data on the [number of investments][statista-num] and the
 [sum of investments][statista-sum] in Europe which support the notion that the
 funding situation is improving. Dealroom [reports][dealroom] 18.5B EUR invested
 in 2015 and reports a steady growth in invested capital up to 27.8B EUR
-invested in 2018.
+invested in 2018. Assuming that each source keeps consistent definitions for
+statups and investments year-over-year, it seems evident that the influx of
+capital to European startups has been ramping up. :moneybag:
 
 [cb-vc]: https://news.crunchbase.com/news/european-venture-report-vc-dollars-rise-in-2019/
 [statista-num]: https://www.statista.com/statistics/763156/number-of-investments-in-start-ups-in-europe/
