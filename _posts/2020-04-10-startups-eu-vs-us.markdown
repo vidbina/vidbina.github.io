@@ -138,7 +138,7 @@ European startups has been ramping up. :moneybag:
 
 [wiki-unicorn]: https://en.wikipedia.org/wiki/List_of_unicorn_startup_companies<Paste>
 
-At some point, one can only hope that the greater access to capital will allow
+At some point, one can only hope that easier access to capital will allow
 founders to dare to take more chances to actually push whichever frontier
 they've zeroed in on. Thriving startup ecosystems are a lot more than just
 money though.
@@ -197,19 +197,19 @@ I would assume that America's relationship to risk is shaped by it being a
 nation of immigrants where nearly everyone has been brought up with the
 awareness of a nearby history of venturing into the unknown to escape horror or
 to pursue happiness. The authors of [Start-up Nation][sn] also related this
-spirit stemming from Israel's immigrants. In Europe, my immigrant peers seem to
-care less about failing or hitting rock bottom and thus seem more comfortable
-taking certain risks. Of course there are some nuances. Many of those immigrant
-often struggle to secure the needed initial funding which they, considering
+spirit to Israel's immigrants. In Europe, my immigrant peers seem to care less
+about failing or hitting rock bottom and thus seem more comfortable taking
+certain risks. Of course there are some nuances. Many of those immigrant often
+struggle to secure the needed initial funding which they, considering
 circumstances, can't source from the famous goto initial funding parties
-colloquially referred to as ["family and friends"][fandf].  Being a
+colloquially referred to as ["family and friends"][fandf]. Being a
 2nd-generation immigrant to the Netherlands, spending my formative years in
 Suriname, I have also sort of developed a risk-averseness that
 [Leni][leni][^leni] and I often hold up to the mirror in laughter. She
-considers much of what I do far too risky. I on the other hand often think she
-is playing things too safe. We brush off our somewhat culturally-defined
-character traits on her being very German in her efforts to seek security and
-me just being a flexible volatility-conditions Surinamese Dutchman.
+considers much of what I do far too risky while I often think she is playing
+things too safe. We brush off our somewhat culturally-defined character traits
+on her being very German in her efforts to seek security and me just being a
+flexible volatility-conditioned Surinamese Dutchman.
 
 [fandf]: https://www.fundable.com/learn/resources/guides/investor/types-of-investors
 [leni]: https://instagram.com/lenipaperboats
