@@ -143,7 +143,7 @@ that on can only fall so far, but that again could be a completely separate
 post.
 
 <div class="element img">
-  <img src="/img/black-calculator-investor.jpg" alt="Image of a calculator and a sheet with investment details with a handwritten comment asking \"Can we do this?\"" />
+  <img src="/img/black-calculator-investor.jpg" alt="Image of a calculator and a sheet with investment details with a handwritten comment asking: Can we do this?" />
   <!-- https://www.pexels.com/photo/black-calculator-near-ballpoint-pen-on-white-printed-paper-53621/ -->
 </div>
 
