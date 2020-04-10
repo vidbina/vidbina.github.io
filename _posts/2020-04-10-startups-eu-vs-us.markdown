@@ -5,7 +5,7 @@ description: |
   America :us: has produced companies like Amazon, Apple, Facebook, Google and
   Microsoft, while Europe doesn't quite seem to have comparable Big Tech
   companies? :trophy: Why is that? :thinking:
-date:  2020-04-01 11:49:04 +0000
+date:  2020-04-10 02:33:04 +0200
 type: enterpreneurship # for icon
 category: enterpreneurship # for url
 tags:
