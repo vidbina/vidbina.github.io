@@ -116,10 +116,11 @@ Those observations aside, I would consider the
 - bias towards big think,
 - individualistic leanings and
 - willingness or daringness to cooperate
+
 as notable cultural factors that may provide some explanation as to why America
 seems fertile ground for [Big Tech][bigtech][^bt] startups.
 
-## Risk
+### Risk
 In the parts of Western Europe that I've spent most time in, prudence is hailed
 as a virtue. As a generalization one may note that the Dutch[^1] joke about
 their Calvinistic tendencies and although I rip at the Dutch, this is a
@@ -149,7 +150,7 @@ post.
 
 [^1]: I carry a Dutch passport so I'm kind of ripping at my own folks here. :wink:
 
-## Big Think
+### Big Think
 Somehow I tend to get the sense that Americans, in general, think a bit bigger
 than their European peers. I often consider this a feature or component of
 American culture that may play a role in explaining the differences in the
@@ -166,7 +167,7 @@ and regulatory aspects in order to achieve a similar scale. This presents
 another challenge for European startups that may not always be trivial to
 resolve.
 
-## Individualism and Collectivism
+### Individualism and Collectivism
 America and Europe seem to exhibit different leanings on the
 individualism-to-collectivism spectrum. Europeans tend to recognize the central
 role that collectivism seems to play in some Asian societies and simultaneously
