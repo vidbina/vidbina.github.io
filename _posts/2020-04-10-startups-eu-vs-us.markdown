@@ -3,7 +3,7 @@ layout: post
 title: Why Europe Doesn't Produce Big Tech Like the USA
 description: |
   America :us: has produced companies like Amazon, Apple, Facebook, Google and
-  Microsoft, while Europe :eu: doesn't quite seem to have comparable Big Tech
+  Microsoft, while Europe doesn't quite seem to have comparable Big Tech
   companies? :trophy: Why is that? :thinking:
 date:  2020-04-01 11:49:04 +0000
 type: enterpreneurship # for icon
@@ -74,10 +74,10 @@ names.
 I've been through a few cohorts at accelerators in Europe and have witnessed a
 bunch of my peers maneuver the fund-raise dance both in Europe and in America
 to vastly different results. Some ideas that were deemed nearly "nonfundable"
-here in Europe have found fertile soil in the US in order to grow on to build
+here in Europe have found funding in the US in order to grow on to build
 sustainable businesses or flop. :money_with_wings:
 
-<div class="elmement img">
+<div class="element img">
   <img src="/img/european-money.jpg" alt="Image of a glass of coins and Euro bills tipped over such that the money lies spilled over a surface" />
   <!-- https://www.pexels.com/photo/bills-capital-cash-cent-210679/ -->
 </div>
@@ -87,7 +87,7 @@ the ever growing number of money that is invested in European ventures.
 Crunchbase [reports][cb-vc] 17.7B USD being invested in EU startups in 2015
 while they tracked about twice as much, 36B USD, being invested in 2019.
 Statista provides data on the [number of investments][statista-num] and the
-[sum of investments][statista-sum] in Europe which support the notion that the
+[sum of investments][statista-val] in Europe which support the notion that the
 funding situation is improving. Dealroom [reports][dealroom] 18.5B EUR invested
 in 2015 and reports a steady growth in invested capital up to 27.8B EUR
 invested in 2018. Assuming that each source keeps consistent definitions for
@@ -117,7 +117,7 @@ Those observations aside, I would consider the
 - individualistic leanings and
 - willingness or daringness to cooperate
 as notable cultural factors that may provide some explanation as to why America
-seems fertile ground for [Big Tech][^bt] startups.
+seems fertile ground for [Big Tech][bigtech][^bt] startups.
 
 ## Risk
 In the parts of Western Europe that I've spent most time in, prudence is hailed
@@ -142,12 +142,12 @@ should simplify or even encourage the taking risk given the comfort of knowing
 that on can only fall so far, but that again could be a completely separate
 post.
 
-<div class="elmement img">
+<div class="element img">
   <img src="/img/black-calculator-investor.jpg" alt="Image of a calculator and a sheet with investment details with a handwritten comment asking \"Can we do this?\"" />
   <!-- https://www.pexels.com/photo/black-calculator-near-ballpoint-pen-on-white-printed-paper-53621/ -->
 </div>
 
-[^1]: Carry a Dutch :nl: passport so I'm kind of ripping at my own folks here :wink:.
+[^1]: I carry a Dutch passport so I'm kind of ripping at my own folks here. :wink:
 
 ## Big Think
 Somehow I tend to get the sense that Americans, in general, think a bit bigger
@@ -177,18 +177,14 @@ definitely out of scope for this post[^2]. For now, types such as Steve Jobs,
 Bill Gates and Elon Musk have become somewhat of an American phenomenon. Even
 some of Europe's notable tech leaders, such as [Linus Torvalds][linus] (creator
 of Linux, the operating system that runs the web :smirk:) and [Guido van
-Rossum] (creator of Python, the language that enables rapid development and
-machine learning), have relocated to the United States. Visionaries with
-notable quirks and dysfunctions that manage to motivate hordes of talented
-folks towards a single-minded goal seem to find more fertile ground in the US.
-I would suppose that a culture so willing to celebrate individualism and
-self-made-ness as America does, will breed many more of such visionaries while
-Europe is engaging in more design by consensus endeavors. I would assume that
-the types of ventures that will stem from more collectivist minds may be
-considerably different to the types of ventures that stem from more
-individualism-favoring systems but now that we're finally noticing the funds
-stream into the startup sector, we can expect some interesting developments
-over the coming years.
+Rossum][guido] (creator of Python, the language that enables rapid development
+and machine learning), have relocated to the United States. Supposedly, a
+culture so eager to celebrate individualism and support such dreamers in a
+manner like America, will enable many more of such visionaries to do what other
+deem "crazy". Meanwhile, Europe's different mindset could give birth to
+ventures of a considerably different nature. Since funds are more readily
+streaming into the European startup sector, we can expect some interesting
+developments over the coming years.
 
 [linus]: https://en.wikipedia.org/wiki/Linus_Torvalds
 [guido]: https://gvanrossum.github.io/
@@ -209,7 +205,7 @@ multitude of ideas, capital and willingness to collaborate. The tension that
 may have stemmed from collaborations that evolved into rivalries may have been
 a catalyst in keeping Silicon Valley tech firms on edge.
 
-<div class="elmement img">
+<div class="element img">
   <img src="/img/top-view-people-handshaking.jpg" alt="People shaking hands over a table full of tablets, laptops and notebooks, presumably after a meeting" />
   <!-- https://www.pexels.com/photo/top-view-photo-of-people-handshaking-3182784/ -->
 </div>
@@ -218,10 +214,7 @@ a catalyst in keeping Silicon Valley tech firms on edge.
 
 [bigtech]: https://en.wikipedia.org/wiki/Big_Tech
 [qz]: https://qz.com/1320983/why-arent-europes-technology-companies-as-big-as-in-the-us-and-china/
-
-<!--
 [leonpals]: https://leonpals.com/
--->
 
 ## Conclusion
 
