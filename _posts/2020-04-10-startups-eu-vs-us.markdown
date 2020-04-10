@@ -30,8 +30,10 @@ og:
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 #head: mugshot
 ---
-A friend recently asked why America churns out startups that seem to be
+A [friend][eli] recently asked why America churns out startups that seem to be
 successful to an extent that knows no equal in Europe.
+
+[eli]: elwardvalstein.com
 
 I would argue that this largely boils down to the access to capital, venture
 capital in particular, and culture. At the same time, it needs to be noted that
