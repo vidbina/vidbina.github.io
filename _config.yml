@@ -3,11 +3,13 @@ markdown: kramdown
 highlighter: rouge
 gems:
   - jekyll-redirect-from
-  - jemoji
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
+plugins:
+  - jemoji
 paginate: 50
-emoji_dir: /images/emoji
+emoji:
+  src: /images/emoji
 disqus_shortname: vidbina
 permalink: /:categories/:title/
