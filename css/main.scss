@@ -277,8 +277,8 @@ html, body { height: 100%; }
   .posts li {
     line-height: 1.75em;
     list-style: none;
-    padding: 10px;
-    margin-bottom: 30px;
+    padding: 1em;
+    margin-bottom: 1em;
   }
 
   .posts h1 {
@@ -286,6 +286,7 @@ html, body { height: 100%; }
   }
 
   .posts h1, .posts h2 {
+    margin-top: 0;
     text-align: center;
   }
 
