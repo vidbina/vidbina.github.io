@@ -6,10 +6,6 @@ gems:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
-plugins:
-  - jemoji
 paginate: 50
-emoji:
-  src: /images/emoji
 disqus_shortname: vidbina
 permalink: /:categories/:title/
