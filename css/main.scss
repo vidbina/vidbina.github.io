@@ -441,6 +441,12 @@ html, body { height: 100%; }
   .post {
     padding: 10px;
     border-radius: 10px;
+
+    em {
+      font-style: normal;
+      text-decoration: underline;
+      text-decoration-thickness: 0.1em;
+    }
   }
 
   .post ul {
