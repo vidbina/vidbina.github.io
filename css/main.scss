@@ -862,3 +862,30 @@ table td {
 .light table > tbody > tr:nth-child(2n+1) {
   background: #bbb; // bg is #ddd
 }
+
+@media only screen and (max-width: 600px) {
+  #classic {
+    .posts {
+      h2 {
+        font-size: 1.4em;
+        text-align: left;
+
+        .detail { display: none; }
+      }
+      p {
+        margin-top: 0.5em;
+      }
+    }
+    .post {
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+      h3 {
+        font-size: 1.2em;
+      }
+    }
+  }
+}
