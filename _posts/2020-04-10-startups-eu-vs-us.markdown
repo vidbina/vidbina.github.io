@@ -30,6 +30,7 @@ og:
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
 mugshot: y2019
+emojify: true
 ---
 A [friend][eli] recently asked why America churns out startups that seem to be
 successful to an extent that knows no equal in Europe.
