@@ -24,6 +24,7 @@ og:
 #  card: summary
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
+emojify: true
 ---
 Bare with me, this posts covers a solution that may partially work for some
 but will probably cause some trouble down the road. I'll get to it in a minute.

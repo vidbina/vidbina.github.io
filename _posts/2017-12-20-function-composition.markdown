@@ -26,6 +26,7 @@ og:
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
 mathjax: true
+emojify: true
 ---
 Here be dragons :dragon:
 

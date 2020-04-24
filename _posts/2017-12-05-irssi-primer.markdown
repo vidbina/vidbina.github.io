@@ -15,6 +15,7 @@ description: |
   Reminding myself how to use Irssi  :speech_balloon: again after a while of
   dormancy. Hopefully this primer :memo: will help me get back on track fast
   enough, next time I need to brush up on my irssi usage skills :wink:.
+emojify: true
 ---
 Somehow it seems too easy for me to forget how to use Irssi. With this primer
 I hope to provide my future-self a decent reference to get up and going within

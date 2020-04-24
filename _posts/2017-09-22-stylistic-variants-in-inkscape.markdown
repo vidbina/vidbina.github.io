@@ -23,6 +23,7 @@ og:
 #  card: summary
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
+emojify: true
 ---
 Lately I have been dabbling a bit in typography. One of the things, I had the
 opportunity to play around with are stylistic variants, a feature I came to

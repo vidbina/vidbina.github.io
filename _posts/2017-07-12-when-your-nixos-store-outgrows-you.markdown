@@ -26,6 +26,7 @@ og:
 #  card: summary
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
+emojify: true
 ---
 I'm running around on [TOA2017](https://toa.berlin) and I just did something stupid.
 It all started with me being in the process of installing all of the tooling
