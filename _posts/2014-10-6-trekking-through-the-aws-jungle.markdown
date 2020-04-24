@@ -15,6 +15,7 @@ tags:
  - tools
 mathjax: true
 description: AWS rocks but because of the many services being offered it may feel like a impenetrable jungle at a first glance. This is my take on navigating that jungle using the CLI as my machete.
+emojify: true
 ---
 Because I am somewhat of a term hermit, I prefer to have CLI's to do everything
 because it makes scripting so much easier.

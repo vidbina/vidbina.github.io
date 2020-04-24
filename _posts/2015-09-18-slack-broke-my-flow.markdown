@@ -30,6 +30,7 @@ og:
 description: "Just a rant about flow, task-switching and the methods I employ
 to protect my flow at the office all instigated by another episode of Slack
 alerting me out of my flow."
+emojify: true
 ---
 I'm getting stuff done again. Concocting possible next steps to be able to
 present a well thought-through battleplan to the team. Yes, I'm awaiting that

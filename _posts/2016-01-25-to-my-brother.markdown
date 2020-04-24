@@ -16,6 +16,7 @@ og:
     author: https://www.facebook.com/david.asabina
     section: Family
 description: I lost my brother in a nightmare then woke up to a world where he was alive as ever. I just felt I needed to share a few things with my younger brother, a remarkable homosapien specimen.
+emojify: true
 ---
 Distraught and drenched in sweat -- it is the second time I woke to a
 nightmarish dream.

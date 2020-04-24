@@ -14,6 +14,7 @@ redirect_from:
   - /2013/12/29/perfect-blogging-solution.html
 
 description: My discoveries while rummaging through toolboxes looking for the blogging solution that works for me
+emojify: true
 ---
 
 I've had a few people ask me why I was not maintaining some blog and I have always

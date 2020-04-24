@@ -32,6 +32,7 @@ mathjax: true
 function_plot: true
 head: mugshot
 mugshot_description: My face in 2015, I probably still look like this.
+emojify: true
 ---
 {% assign graphs = true %}
 Step functions enforce some threshold on a variable e.g.: discard anything

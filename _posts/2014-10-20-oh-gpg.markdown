@@ -23,6 +23,7 @@ og:
     author: https://www.facebook.com/david.asabina
     section: Cybersecurity
 description: "Some GPG tricks everyone should know and master, because crypting is something that you should take serious."
+emojify: true
 ---
 To encrypt and decrypt my secret messages on my box I use GPG. This post is
 hopefully going to jog the memory of senile future me (or just future me on a

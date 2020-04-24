@@ -27,6 +27,7 @@ og:
     section: Software Engineering
 description: Note-to-self about Erlang list conses and why to use them to refrain from writing code I could possibly get shunned over by wiser peers.
 mathjax: true
+emojify: true
 redirect_from:
   - /tools/pro-of-cons.html
 ---

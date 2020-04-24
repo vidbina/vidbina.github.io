@@ -28,6 +28,7 @@ og:
       - functional programming
     section: Software Engineering
 description: Note-to-self about ES6 constants and a few tips to remember if you really don't want other devs to kill you.
+emojify: true
 ---
 
 While reading up about housekeeping the global object in ECMAscript 6, I

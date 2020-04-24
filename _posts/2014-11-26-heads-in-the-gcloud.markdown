@@ -16,6 +16,7 @@ tags:
 mathjax: true
 description: "Just a quick glance into running compute instances in the Google
 Cloud using the CLI."
+emojify: true
 ---
 I've been playing around with the cloud for a while now (specifically AWS and
 Google Cloud) and deemed it useful to publish a thing or two about the GCloud
