@@ -120,7 +120,7 @@ Retrieve the keysym for the required buttons in `xev` (`0x1008ff12`,
 
 I've chosen to define my audio keys as a seperate list
 
-```hs
+```haskell
 audioKeys = [
     ((0, 0x1008ff12), spawn "amixer -q set Master toggle")
   , ((0, 0x1008ff11), spawn "amixer -q set Master 10%-")
@@ -130,7 +130,7 @@ audioKeys = [
 
 and concatenate them to the other bindings in order to produce `myKeys` :wink:
 
-```hs
+```haskell
 myKeys = [
 -- some other keybindings
 ] ++ audioKeys

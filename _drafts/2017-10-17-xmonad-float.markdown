@@ -58,11 +58,11 @@ WM_NAME(STRING) = "urxvt"
 In my case I simply need windows of the "Pinentry" class to always float which
 may be accomplished by setting up a `manageHook` in XMonad.
 
-{% highlight haskell %}
+```haskell
 myManageHook = composeAll [
   className =? "Pinentry" --> doFloat
 ]
-{% endhighlight %}
+```
 
 ## Links
 

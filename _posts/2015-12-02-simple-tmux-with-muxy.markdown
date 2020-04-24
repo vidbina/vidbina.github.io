@@ -53,17 +53,16 @@ directory at the `$MUXY_PATH/projects/hackathon` path.
 
 The base file named `base.bash` in my case simple defines some variables.
 
-{% highlight bash %}
+```bash
 NAME="hackathon"
 SESSION="hack"
 BASE="/path/to/workdir/hack"
-{% endhighlight %}
-
+```
 
 The `up.bash` file specifies the steps that need to be taken in setting up the
 workspace.
 
-{% highlight bash %}
+```bash
 # up file
 
 # start tmux if not already running
@@ -89,7 +88,7 @@ tmux send-keys -t $SESSION:0 "cd $BASE/notes" C-m
 tmux new-window -t $SESSION:1 -n concept
 
 tmux attach-session -t $SESSION
-{% endhighlight %}
+```
 
 ## Leveraging Indexes
 

@@ -34,10 +34,10 @@ I tend to setup a gopath directory at `/path/spaceship/gopath`, while I park
 the api repository in `/path/spaceship/api`. Before getting started, I 
 basically do the following:
 
-{% highlight bash %}
+```bash
 export GOPATH=/path/spacechip/gopath
 export PATH=$PATH:$GOPATH/bin
-{% endhighlight %}
+```
 
 Now I can access all binaries within the `$GOPATH/bin` directory, and perform
 `go get` commands without putting much thought into other projects that I may 

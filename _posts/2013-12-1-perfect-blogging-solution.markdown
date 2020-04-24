@@ -206,7 +206,7 @@ This solution is most interesting because of the aspect-ratios and other
 dimensional properties you will be able to assign to page elements but I will
 get to that in a short bit.
 
-{% highlight css %}
+```css
 .element {
   width: 100%;
   display: block;
@@ -232,19 +232,19 @@ get to that in a short bit.
   content: "";
   display: block;
 }
-{% endhighlight %}
+```
 
 Adding a embedded item to my page simply requires the addition of the `iframe`&rsquo;s
 in divs of the `.element` class. Even with the `width` or `height`
 attributes set on the `iframe` the styles will still ensure that the iframe
 fills up its container.
 
-{% highlight html %}
+```html
 <div class="element spotify">
   /* copy the iframe from the embed snippet provided */
   <iframe src="https://embed.spotify.com/?uri=blahblah" ...> </iframe>
 </div>
-{% endhighlight %}
+```
 
 The iframe does not support much styling unless you are willing to try your 
 hands at setting element-level styles on the ugly ducklings using javascript.
@@ -263,7 +263,7 @@ Videos will be displayed in a 5:3 aspect ratio which coincides with Native
 Super 16mm film as listed on [wikipedia][aspectratio] and only deviates from 
 the golden ratio by a percent :wink:.
 
-{% highlight css %}
+```css
 .instagram:before {
   padding-top: 100%;
   padding-bottom: 98px;
@@ -279,7 +279,7 @@ the golden ratio by a percent :wink:.
   padding-top: 60%;
   background: yellow;
 }
-{% endhighlight %}
+```
 
 ### Images
 If there is a place for embedded content, images need to be convered as well.
@@ -294,9 +294,9 @@ In CSS one can specify a `scale3d` transform on a hover as demonstrated in the
 following snippet that just doubles the size of an image on the along the $x$
 and $y$ axis.
 
-{%highlight css %}
+```css
 #img_x:hover { transform: scale3d(2, 2, 1); }
-{%endhighlight%}
+```
 
 This solution is far from elegant, in fact it is rather nasty but what it
 boils down to is me
@@ -307,7 +307,7 @@ the classes `element` and `img`,
  something close to original size and
  - adding the calculated styles to a `<style>` block in the header:
 
-{% highlight javascript %}
+```javascript
 (function() {
   var els = document.querySelectorAll('.element.img');
   var style = document.createElement('style');
@@ -342,7 +342,7 @@ the classes `element` and `img`,
     })(els[i], i);
   }
 })();
-{% endhighlight %}
+```
 
 <div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/tmuxvieditblog.png" alt="screen shot of tmux in which I am editing this post in vim">

@@ -35,9 +35,9 @@ of them when I initially started using XMonad.
 
 The document presents a setup that reads as follows:
 
-{% highlight hs %}
+```haskell
 multiCol [1] 4 0.01 0.5
-{% endhighlight %}
+```
 
 which results to a single window in the main column, a maximum of 4 windows per
 subsequent column with a step size of of 0.01 for every resize change with an

@@ -38,10 +38,10 @@ variables or adding the following snippet to whatever loads whenever you start
 your session (.bashrc, .zshrc, .bash_profile or something else&hellip; you 
 should know).
 
-{% highlight bash %}
+```bash
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-{% endhighlight %}
+```
 
 After installing the CLI you could confirm that the executable is present
 `which aws` and check which version you are rocking with 
@@ -94,64 +94,64 @@ features that may safe you a few clicks.
 
 The CLI syntax is basically
 
-{% highlight bash %}
+```bash
 aws SERVICE COMMAND [ARGS]
-{% endhighlight %}
+```
 
 As simple as that :wink:.
 
 <a name="storage"></a>
 ### S3
-{% highlight bash %}
+```bash
 aws s3 ls
-{% endhighlight %}
+```
 
 <a name="vm"></a>
 ### EC2
 In order to get an overview of all EC2 instances running in your account run
 the following command:
-{% highlight bash %}
+```bash
 aws ec2 describe-instances
-{% endhighlight %}
+```
 
 #### VPC
 You can configure all of your machines to reside within a private cloud which
 may expose some of its resources to the web through assigned gateways.
-{% highlight bash %}
+```bash
 aws ec2 describe-vpcs
-{% endhighlight %}
+```
 
 <a name="dns"></a>
 ### Route53
 In order to get started a zone needs to be created. In case I would want to
 set up a zone for my `bina.me` domain I would execute the following:
 
-{% highlight bash %}
+```bash
 aws route53 create-hosted-zone --name bina.me. --caller-reference DemoDNSZoneSetup
-{% endhighlight %}
+```
 
 After creating the zone, AWS will respond with an identifier for the command.
 Most likely the status of our command will be pending at the time the response
 is reported through the terminal, but we we can always request a list of all
 zones.
-{% highlight bash %}
+```bash
 aws route53 list-hosted-zones
-{% endhighlight %}
+```
 
 After creating a zone, we still need to set the records. AWS is friendly enough
 to set up SOA and NS records for us. An overview of all resource records for a
 zone are acquired by executing the following where `X` is replaced with the
 zone id of you want to lookup.
-{% highlight bash %}
+```bash
 aws route53 list-resource-record-sets --hosted-zone-id X
-{% endhighlight %}
+```
 
 After creating a zone one might want to [setup `MX`, `CNAME`, `TXT` and other
 DNS records][create-record-sets]. The creation or modification of these records
 may be done through the use of JSON batch files in the following manner.
-{% highlight bash %}
+```bash
 aws route53 change-resource-record-sets --hosted-zone-id X --change-batch file://~/path/to/file.json
-{% endhighlight %}
+```
 
 <a name="dns.mx"></a>
 Just to give an example of the structure of the JSON files fed to the CLI I 
@@ -167,9 +167,9 @@ double quotes).
 
 <a name="users"></a>
 ### IAM
-{% highlight bash %}
+```bash
 aws iam list-users
-{% endhighlight %}
+```
 
 [installing-awscli]: http://docs.aws.amazon.com/cli/latest/userguide/installing.html
 [confing-awscli]: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html

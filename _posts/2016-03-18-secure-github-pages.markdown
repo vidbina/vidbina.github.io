@@ -67,7 +67,7 @@ reflect that in my CORS policy.
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/cors-aws-s3.gif" alt="CORS needs to be setup on S3 in order to access resources from the web page" />
 </div>
 
-{% highlight xml %}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
     <CORSRule>
@@ -75,7 +75,7 @@ reflect that in my CORS policy.
         <AllowedMethod>GET</AllowedMethod>
     </CORSRule>
 </CORSConfiguration>
-{% endhighlight %}
+```
 
 > If you choose a wildcard `*` as the allowed origin, be aware that anyone out
 there will be allowed to embed resources from your bucket into their pages.
@@ -132,7 +132,7 @@ performance metrics for the dashboard, and just to get an impression of
 whatever they add take a look at the source for [a simple HTML page](/blank)
 that originally just contained the following code:
 
-{% highlight html %}
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -144,7 +144,7 @@ that originally just contained the following code:
     Move along. Nothing to see here!
   </body>
 </html>
-{% endhighlight %}
+```
 
 Essentially whatever happens here is that Kloudsec simply adds script tags to
 your pages. Some service providers require you to do it yourself, but the

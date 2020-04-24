@@ -70,9 +70,9 @@ down the dream pipeline.
 
 One could start a task that lasts at least 10 seconds in Mesos.
 
-{% highlight bash %}
+```bash
 mesos-execute --master=$MASTER --name="envie" --command="echo env; sleep 10"
-{% endhighlight %}
+```
 
 This task would run as a framework (a short-lived one at that).
 

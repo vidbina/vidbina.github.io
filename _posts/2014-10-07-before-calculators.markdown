@@ -26,9 +26,9 @@ The natural logarithm of the _Euler_ constant equals 1 $\ln(e) = 1$ and `bc`
 does its best to arrive at whatever value is closest considering rounding
 errors introduced through floating point arithmetic.
 
-{% highlight bash %}
+```bash
 echo "l(e(1))" | bc -l
-{% endhighlight %}
+```
 
 It helps to be aware of $\log_a(b) = \frac{\log_k(b)}{\log_k(a)}$ where $k$ is
 an arbitrary base. Considering that $\ln(x) = \log_e(x)$ and `bc` offers the
@@ -45,30 +45,31 @@ many digits in base $b$ are used to represent the value $q$_ questions.
 I pipe some statements to `bc` in the following manner to solve how many bits
 I would need to capture $44$:
 
-{% highlight bash %}
+```bash
 echo "f=l(44)/l(2); scale=0; 1+(f/1)" | bc -l
-{% endhighlight %}
+```
 
 If you want to know how many digits you would need to represent the decimal
 value $57$ in the octal (base 8) system we ask:
 
-{% highlight bash %}
+```bash
 echo "f=l(57)/l(8); scale=0; 1+(f/1)" | bc -l
-{% endhighlight %}
+```
 
 If I want to capture the amount of digits necessary to represent the decimal
 value $665$ in hex (base 16) I run:
-{% highlight bash %}
+
+```bash
 echo "f=l(665)/l(16); scale=0; 1+(f/1)" | bc -l
-{% endhighlight %}
+```
 
 ## The binary representation of any number?
 Provided that we want to convert the decimal number $165$ to a binary number we
 can do the previous thing for base $2$ or simply execute:
 
-{% highlight bash %}
+```bash
 echo "obase=2; 165" | bc
-{% endhighlight %}
+```
 
 So simple :smile:
 

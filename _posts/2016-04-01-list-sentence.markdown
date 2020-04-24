@@ -51,12 +51,12 @@ With my two authors, one quite wise and renowned for his
 disregard for the ordering we generally respect in English grammar and the
 other barely capable of formulating a proper sentence, we are in for a treat.
 
-{% highlight html %}
+```html
 <ul class="authors">
   <li class="author">Yoda</li>
   <li class="author">Jar Jar Bings</li>
 </ul>
-{% endhighlight %}
+```
 
 We want to disable the `list-style` and display the list and all it's
 elements as `inline-block`s' in order to play ball with the rest of our
@@ -80,7 +80,7 @@ comma.
 
 The resulting css should look something like the following:
 
-{% highlight scss %}
+```scss
 .authors {
   list-style: none;
   display: inline-block;
@@ -101,7 +101,7 @@ The resulting css should look something like the following:
     }
   }
 }
-{% endhighlight %}
+```
 
 That's all for now.
 

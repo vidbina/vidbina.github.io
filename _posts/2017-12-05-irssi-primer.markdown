@@ -148,22 +148,22 @@ Ctrl-P, Ctrl-N            - Jump to previous / next window
 
 Testing
 
-{% highlight bash %}
+```bash
 wget http://crt.gandi.net/GandiStandardSSLCA.crt
-{% endhighlight %}
+```
 
-{% highlight bash %}
+```bash
 openssl x509 -inform der -outform pem < /usr/share/ca-certificates/gandi.net/GandiStandardSSLCA.crt > GandiStandardSSLCA.pem
-{% endhighlight %}
+```
 
-{% highlight bash %}
+bash
 /server add \
   -auto \
   -ssl \
   -ssl_cacert /etc/ssl/certs/GandiStandardSSLCA.pem \
   -network freenode irc.freenode.net 6697 \
   -autosendcmd "/msg NickServ IDENTIFY $NICK $PASSWORD; wait 2000;"
-{% endhighlight %}
+```
 
 
     /join $CHANNELNAME

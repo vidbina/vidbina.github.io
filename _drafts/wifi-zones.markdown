@@ -35,9 +35,9 @@ This morning I ran a `airport -s` scan, I noticed the excessive use of channels
 1, 6 and 11. Everyone seems to be using the three non overlapping channels,
 especially if routers are just used out-of-the-box.
 
-{% highlight bash %}
+```bash
 System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport
-{% endhighlight %}
+```
 
 <div class="element image animate">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/wlanscankreuzberg1.png" alt="WLAN scan in Kreuzberg" >

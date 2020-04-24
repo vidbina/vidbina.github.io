@@ -46,7 +46,7 @@ operand commonly referred to as the head and a right-hand operand, the tail.
 
 So let's look at a few snippets that demonstrate lists.
 
-{% highlight erlang %}
+```erlang
 []. % nil or an empty list
 
 [monkey,mole]. % monkey and mole in a list
@@ -54,7 +54,7 @@ So let's look at a few snippets that demonstrate lists.
 [monkey|[mole|[]]]. % monkey and mole in a list
 
 [mokey|mole]. % improper list, steer clear of these
-{% endhighlight %}
+```
 
 The [book](http://learnyousomeerlang.com/starting-out-for-real#lists) does a
 great job in explaining lists too by the way and if you want to get a deeper
@@ -84,9 +84,9 @@ an entirely different manner when dealing with those immutable creatures.
 
 Let's cut to the chase...
 
-{% highlight erlang %}
+```erlang
 NoFlyList=[monkey|[mole]].
-{% endhighlight %}
+```
 
 The `NoFlyList` represents a list of creatures we don't want on our flight
 because of bad behavior. Maybe the monkey pooped:poop: in his seat and the mole
@@ -124,9 +124,9 @@ yeah... it will allow us to add something to a list. In our example we want
 to add a list containing just a ghost to our already existing list of
 creatures we'd rather not board on our planes.
 
-{% highlight erlang %}
+```erlang
 NoobNoFlyList = NoFlyList++[ghost].
-{% endhighlight %}
+```
 
 Experienced Erlang coders, a title and burden I aspire to carry in the future,
 will probably chuckle when they see that snippet because they can only imagine
@@ -174,9 +174,9 @@ the operator.
 <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/gif/erl_single_add_list.gif" alt="Demonstrating how cheap [Item]++List is in Erlang">
 </div>
 
-{% highlight erlang %}
+```erlang
 OkayNoFlyList = [ghost]++NoFlyList.
-{% endhighlight %}
+```
 
 Note that the left-hand operand represent a list of a single item -- our ghost.
 The list happens to be immutable so Erlang cannot in good conscience modify
@@ -198,20 +198,19 @@ Just sidetracking here
  unscathed, however; the active head, having to do the pointing, will have to
  be reconstructed.
 
-{% highlight erlang %}
+```erlang
 [mole]++bat==[mole|bat]. % improper list
 [mole]++[bat]==[mole,bat]. % proper list
 [mole]++[bat]==[mole|[bat]]. % same thing
 [mole]++[bat]==[mole|[bat|[]]]. % we covered this before
-{% endhighlight %}
-
+```
 
 ## Cons
 Using list cons, one could perform the previous feat more effectively.
 
-{% highlight erlang %}
+```erlang
 EliteNoFlyList = [ghost|NoFlyList].
-{% endhighlight %}
+```
 
 As suggested in the [Efficiency Guide](http://www.erlang.org/doc/efficiency_guide/myths.html#id61192)
 the constructor does not have to copy the ghost as it directly creates the
@@ -227,7 +226,7 @@ whatever the hell is first up in the `NoFlyList`.
 Always remember that using a non-list tail will result to a improper list,
 with which you will most likely have a bad time
 
-{% highlight erlang %}
+```erlang
 [monkey|mole] != [monkey,mole]. % avoid
 [monkey|[mole]] == [monkey,mole]. % do this :)
-{% endhighlight %}
+```

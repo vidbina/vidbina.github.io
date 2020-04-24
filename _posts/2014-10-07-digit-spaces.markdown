@@ -31,10 +31,10 @@ the following command to pipe the statements to bc for processing, needless to
 say that you need to change $8$ for whatever value want to represent, and
 $2$ for whatever the intended base of your output should be.
 
-{% highlight bash %}
+```bash
 echo "f=l(8)/l(2); scale=0; 1+(f/1)" | bc -l
 #echo "p=l(8)/l(2); scale=0; print 1+(f/1), \" bits\"" | bc -l
-{% endhighlight %}
+```
 
 ## How many digits are needed to represent a number in base $b$?
 The expression $\lfloor \log\_{b}(q) \rfloor + 1$ is the answer to that 

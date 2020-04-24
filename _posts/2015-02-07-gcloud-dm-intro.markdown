@@ -150,7 +150,7 @@ VM named `optimus`.
 The previously described template may be reused by referencing it in the 
 configuration file.
 
-{% highlight yaml %}
+```yaml
 imports: ["simple_vm.jinja"]
 resources:
 - name: optimus
@@ -171,7 +171,7 @@ resources:
     machineType: f1-micro
 - name: bina-store
   type: storage.v1.bucket
-{%endhighlight%}
+```
 
 For the sake of demonstration, the bucket has been left in the configuration 
 file just to demonstrate that our template is used as just another type in our

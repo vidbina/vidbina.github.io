@@ -54,26 +54,26 @@ Put some beer into the fridge first.
 You could drop crates into the fridge but that really doesn't make too much
 sense unless you have a walk-in fridge.
 
-{% highlight json %}
+```json
 {
   "object": "crate",
   "content": []
 }
-{% endhighlight %}
+```
 
 You can also drop six-packs in the fridge... I'm just saying :smirk:.
 
-{% highlight json %}
+```json
 {
   "object": "six-pack",
   "content": []
 }
-{% endhighlight %}
+```
 
 Just put single [bottles](https://en.wikipedia.org/wiki/Beer_bottle) into the
 fridge if you take this seriously. You'll get more packed in there.
 
-{% highlight json %}
+```json
 {
   "object": "bottle",
   "volume": "300",
@@ -82,13 +82,13 @@ fridge if you take this seriously. You'll get more packed in there.
   "state": "sealed",
   "content": "300"
 }
-{% endhighlight %}
+```
 
 The volume and content are expressed in milliliters. SI units rule! :metal:
 
 Perhaps you're more into the canned variant. Everything is possible.
 
-{% highlight json %}
+```json
 {
   "object": "can",
   "volume": "330",
@@ -97,7 +97,7 @@ Perhaps you're more into the canned variant. Everything is possible.
   "state": "sealed",
   "content": "330"
 }
-{% endhighlight %}
+```
 
 ## Make inventory
 
@@ -109,25 +109,25 @@ cold :snowflake:.
 Perhaps you want to know which IPA's you have stocked up on, then just provide
 the following data with the `GET` request.
 
-{% highlight json %}
+```json
 {
   "type": "IPA",
   "state": "sealed"
 }
-{% endhighlight %}
+```
 
 Perhaps you need something specific... like for example something of a certain
 brand? Then again, send data with the `GET` request.
 
-{% highlight json %}
+```json
 {
   "brand": "BeerPongKong"
 }
-{% endhighlight %}
+```
 
 The result should look something like this:
 
-{% highlight json %}
+```json
 [
   {
     "uuid": "something-something-something-darkside",
@@ -138,9 +138,9 @@ The result should look something like this:
     "uuid": "another-something-something-darkside",
     "object": "bottle",
     "etc": "etc"
-  },
+  }
 ]
-{% endhighlight %}
+```
 
 
 ## Get something to quench that thirst

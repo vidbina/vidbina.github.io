@@ -178,8 +178,7 @@ tasksel install ubuntu-desktop
 
 named `scripts/example.sh` and invoked by specifying a provisioner for it as
 
-{% highlight json %}
-{% raw %}
+```json
 {
   "provisioners": [
     {
@@ -189,8 +188,7 @@ named `scripts/example.sh` and invoked by specifying a provisioner for it as
     }
   ]
 }
-{% endraw %}
-{% endhighlight %}
+```
 
 in the packer JSON.
 
