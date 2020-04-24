@@ -29,6 +29,7 @@ og:
 #  card: summary
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
+emojify: true
 ---
 The first attempt to start playing around with Arduino's on my machine had
 involved installing the [`arduino` :octocat:][nixpkgs-all-arduino] package from

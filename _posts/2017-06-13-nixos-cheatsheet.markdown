@@ -28,6 +28,7 @@ og:
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
 mathjax: true
+emojify: true
 ---
 Learning Nix, I felt the need to take notes. My future self will thank me
 for the reminders :wink:.

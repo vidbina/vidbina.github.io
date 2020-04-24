@@ -19,6 +19,7 @@ tags:
 og:
   type: article # http://ogp.me/#types
 head: mugshot
+emojify: true
 ---
 Yesterday, a bit of config hacking with Lassulus at c-base, resulted to a bunch
 of new ideas that I would like to implement. In short, I would like to mimick

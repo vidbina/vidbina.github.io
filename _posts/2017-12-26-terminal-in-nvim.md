@@ -26,6 +26,7 @@ og:
 #  card: summary
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
+emojify: true
 ---
 <div class="element note">
 :bulb: See `:help terminal-emulator` in neovim for more info

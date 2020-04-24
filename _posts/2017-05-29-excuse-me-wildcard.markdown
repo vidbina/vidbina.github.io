@@ -27,6 +27,7 @@ og:
 #  card: summary
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
+emojify: true
 ---
 Thinking to be polite, I just addressed a lady by the title "sir". In the
 split-second in which my brain realised I would have to ask her to keep a

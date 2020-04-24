@@ -44,7 +44,7 @@ will work as an outlet so I'll find out soon enough.
 I've told the young feller plenty of times that he's a remarkable element in my
 life, but I realize that I probably don't spend enough time mentioning that to
 the people that matter to me. Once more... Jonathan, I'm so darn grateful I
-know you. I should have you a trophy:trophy: to emphasize it.
+know you. I should have you a trophy :trophy: to emphasize it.
 
 I admire your creativity, especially in terms of comedy, and I feel that your
 absence would certainly create a void in my life in terms of comic relief. I

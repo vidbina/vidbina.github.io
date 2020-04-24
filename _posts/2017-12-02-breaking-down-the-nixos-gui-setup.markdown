@@ -26,6 +26,7 @@ og:
 #  card: summary
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
+emojify: true
 ---
 I am using Xmonad on my NixOS setup and somehow, configuring ibus doesn't
 result to the daemon being spawned on boot automatically. This sparked a little
