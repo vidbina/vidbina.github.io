@@ -90,7 +90,7 @@ counterparts) render words less readable as word shapes become less obvious.
 If I focus on finding _sans-serif_ fonts where the types have long ascenders 
 and descenders I&rsquo;ll be fine.
 
-<div class="element img light">
+<div class="element image light">
   <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Typography_Line_Terms.svg/500px-Typography_Line_Terms.svg.png" alt="typography terms">
 </div>
 
@@ -169,7 +169,7 @@ Twitter, Youtube, Spotify and Instagram, among others, offer the ability to
 embed content using iframes. My sample of nicely styled content (as in proper 
 width and corresponding heights) is demonstrated beneath&hellip;
 
-<div class="element">
+<div class="element tweet">
   <blockquote class="twitter-tweet" lang="en"><p>Those days when nothing seems to work :P… that’s when I abandon the code and turn to the piano <a href="https://twitter.com/search?q=%23coders&amp;src=hash">#coders</a> <a href="https://twitter.com/search?q=%23block&amp;src=hash">#block</a></p>&mdash; David Asabina (@vidbina) <a href="https://twitter.com/vidbina/statuses/417369790718959616">December 29, 2013</a></blockquote>
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"> </script>
 </div>
@@ -344,7 +344,7 @@ the classes `element` and `img`,
 })();
 {% endhighlight %}
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/tmuxvieditblog.png" alt="screen shot of tmux in which I am editing this post in vim">
 </div>
 

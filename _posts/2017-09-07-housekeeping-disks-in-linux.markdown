@@ -49,7 +49,7 @@ Figure out sizes of directories, only recursing to a depth of 1 levels deep
 One may create partition tables on a disk using `fdisk` as demonstrated in the
 screencast below.
 
-<div class="element">
+<div class="element screencast">
   <script src="https://asciinema.org/a/ubDxMlMqWFOq7UtalLFFPhF7P.js" id="asciicast-ubDxMlMqWFOq7UtalLFFPhF7P" async></script>
 </div>
 

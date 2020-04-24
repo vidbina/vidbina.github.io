@@ -152,7 +152,7 @@ have to create a new monkey to look at the newly created mole. Now we'll have a
 list in which the monkey looks at the mole which looks at the ghost, but as
 you noticed we had to recreate the entire list on the left-hand side. Bummer!
 
-<div class="element img">
+<div class="element image">
 <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/gif/erl_list_add_single.gif" alt="Demonstrating how expensive List++[Item] is in Erlang">
 </div>
 
@@ -170,7 +170,7 @@ entire list which could very well be comprised of a million misbehaving
 critters it would be more sensible to have the list on the right-hand side of
 the operator. 
 
-<div class="element img">
+<div class="element image">
 <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/gif/erl_single_add_list.gif" alt="Demonstrating how cheap [Item]++List is in Erlang">
 </div>
 
@@ -220,7 +220,7 @@ monkey, which is looking at a blind mole. In the `[ghost]++NoFlyList` approach
 we create the ghost, and subsequently have to recreate a copy of it to look at
 whatever the hell is first up in the `NoFlyList`.
 
-<div class="element img">
+<div class="element image">
 <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/gif/erl_list_cons.gif" alt="Demonstrating how cheap [Item|List] is in Erlang">
 </div>
 

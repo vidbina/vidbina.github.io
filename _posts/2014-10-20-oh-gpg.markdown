@@ -30,7 +30,7 @@ day on which I happen to be hammered and need to perform this trick). Perhaps
 there is something here that may be of any use to other folks as well 
 :beer:.
 
-<div class="element">
+<div class="element gif">
   <iframe src="//giphy.com/embed/Gz1Ebo1yJmC9q" width="480" height="288" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
@@ -53,7 +53,7 @@ key to impersonate the identity associated to the key. With a proper passphrase
 set the party acquiring the key still needs to figure out what the passphrase
 is and depending on the type of key it may take them some time.
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/gpg_gen_key.gif" alt="generating a GPG key" />
 </div>
 
@@ -100,7 +100,7 @@ gpg -d cipher.pgp > code.out.txt
 Now the launch codes are known and available in `code.out.txt`. API keys are
 launch codes anyways :wink:.
 
-<div class="element">
+<div class="element gif">
   <iframe src="//giphy.com/embed/LjQmZzYuARJF6" width="480" height="217" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
@@ -126,7 +126,7 @@ subsequently compressed.
 gpg --sign code.txt
 {% endhighlight %}
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/gpg_sign.gif" alt="Signing a document" />
 </div>
 
@@ -148,7 +148,7 @@ uncompressed ASCII-armored signature.
 gpg --clearsign code.txt
 {% endhighlight %}
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/gpg_clearsign.gif" alt="Clearsigning a document" />
 </div>
 
@@ -160,7 +160,7 @@ case one may use the `--detach-sign` argument.
 gpg --detach-sign code.txt
 {% endhighlight %}
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/gpg_detachsign.gif" alt="Producing a detached signature for a document" />
 </div>
 
@@ -184,7 +184,7 @@ Sometimes one may fire up an application that may need to make multiple request
 for input from encrypted resources. Supposing a passphrase is used, the prompt
 could be presented every time the encrypted content is consulted.
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/gpgagent-mutt.png" alt="GPGagent popping up to decrypt a password needed by Mutt" />
 </div>
 

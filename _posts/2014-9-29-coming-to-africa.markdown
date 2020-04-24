@@ -30,9 +30,9 @@ themselves.
 </div>
 
 
-<div class="element">
-  <img 
-    src="/resources/startup/africa/ampion2014routes.png" 
+<div class="element image">
+  <img
+    src="/resources/startup/africa/ampion2014routes.png"
     alt="The four Ampion 2014 bus routes">
 </div>
 
@@ -211,7 +211,7 @@ It should be no surprise that I will be joining one of the busses as a coder.
 Just to make things a bit easier I have sketched somewhat of a doodle of 
 myself. This should hopefully give you a better picture of me :grinning:.
 
-<div class="element">
+<div class="element image">
   <img 
     src="/resources/startup/africa/personalintro.png" 
     alt="A description of me. Born in the Netherlands, raised in Suriname. Started coding as a kid, worked in a goldmine for a year then got a job coding within a week of landing back in the Netherlands to start my engineering studies. I love music, I make music, I code, I hack, I dream.">

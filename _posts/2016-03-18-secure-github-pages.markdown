@@ -49,7 +49,7 @@ from their clients in order to allow the client to demonstrate some control
 over the domain in question.
 
 {% if false %}
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/dns-for-kloudsec.png" alt="Updating DNS records through Route53 to get started with Kloudsec" />
 </div>
 {% endif %}
@@ -63,7 +63,7 @@ which is allowed to access the bucket cross domain which. Since
 `http://vid.bina.me` is different to `https://vid.bina.me` I will need to
 reflect that in my CORS policy.
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/cors-aws-s3.gif" alt="CORS needs to be setup on S3 in order to access resources from the web page" />
 </div>
 

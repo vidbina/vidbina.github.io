@@ -35,7 +35,7 @@ yourself again. Now you can spend even more time stuck in your (awesome) office
 (in the summer), having one less excuse to head out to catch a fresh whiff 
 of air :innocent:.
 
-<div class="element img">
+<div class="element image">
   <img src="/resources/startup/laundr/landing_page_20140309.png" alt="Laundr Landing Page">
 </div>
 
@@ -85,7 +85,7 @@ that is surprising. I&rsquo;m quite sure that the rest of the team wasn&rsquo;t
 either yet we waited much too long to accept orders through simple
 low-tech channels using bullshit excuses.
 
-<div class="element img">
+<div class="element image">
   <img alt="A few mood shots of the Laundr operation" src="/resources/startup/laundr/ops-collage-042014.jpg">
 </div>
 
@@ -109,7 +109,7 @@ seen** that included feature additions and a UI overhaul. How riddiculous
 is that?!? :unamused:, just because we were chasing 
 perfection... yeah right? Perfection for who... ourselves?
 
-<div class="element img">
+<div class="element image">
   <img alt="A few mood shots of the Laundr operation" src="/resources/startup/laundr/orgeon-home-042014.jpg">
 </div>
 

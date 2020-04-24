@@ -53,7 +53,7 @@ user.
 explanation on window handling and the mechanics of splitting windows and
 window stickiness.
 
-<div class="element">
+<div class="element screencast">
 <script type="text/javascript" src="https://asciinema.org/a/GeTFKrw008VoF8IZxqJQXItsw.js" id="asciicast-GeTFKrw008VoF8IZxqJQXItsw" async></script>
 </div>
 

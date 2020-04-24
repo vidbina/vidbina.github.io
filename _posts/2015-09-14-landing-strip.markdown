@@ -39,7 +39,7 @@ stuff), but because I needed another landing page I just had to hack something
 together in a manner that may save me some time the next time I need to perform
 this dance again.
 
-<div class="element img">
+<div class="element image">
   <img alt="Enchanted, the Magic (st)rip" src="https://github.com/vidbina/landing-strip/raw/master/enchanted/preview-large.png">
 </div>
 
@@ -58,7 +58,7 @@ because
 Apart from the wordplay in the use of the term strip, it also employs a
 colorful double entendre.
 
-<div class="element img">
+<div class="element image">
   <img alt="Airstrip in Africa" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Msembe_airstrip.jpg">
 </div>
 
@@ -66,7 +66,7 @@ colorful double entendre.
 as a colloquialism for runway or a euphemism for the minimalistic pubic hairdo
 works quite well in that regard.
 
-<div class="element">
+<div class="element video">
   <iframe width="420" height="315" src="//www.youtube.com/embed/5uzhxQAj_PM" frameborder="0" allowfullscreen> </iframe>
 </div>
 
@@ -77,7 +77,7 @@ to make the big difference in pushing your company into the list of winners
 I have stripped Magic, the old Buffer page and also Assist which has a nice 
 split pane layout.
 
-<div class="element img">
+<div class="element image">
   <img alt="Joinsupport, the Assist (st)rip" src="https://github.com/vidbina/landing-strip/raw/master/pipeline/preview-large.png">
 </div>
 
@@ -85,7 +85,7 @@ Bear with me. In order to avoid copyright infringement or abuse of trademarks
 I have given all the strips alternative names. A listing of the strips is 
 available on the [project page](https://github.com/vidbina/landing-strip).
 
-<div class="element img">
+<div class="element image">
   <img alt="Joinsupport, the Assist (st)rip" src="https://github.com/vidbina/landing-strip/raw/master/joinsupport/preview-large.png">
 </div>
 

@@ -26,7 +26,7 @@ languages I write in back to ES6. There are a few subtleties regarding `var`
 and `let`/`const` declarations that everyone writing Javascript should be
 aware of. :warning:
 
-<div class="element">
+<div class="element gif">
   <iframe src="//giphy.com/embed/6NvROVDmhI3QI" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 

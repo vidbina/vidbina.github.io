@@ -29,7 +29,7 @@ head: mugshot
 On my setup, the qesteidutil tool keeps throwing "empty certificates" errors
 dialogs whenever I click on certificates.
 
-<div class="element img">
+<div class="element image">
   <img src="/img/qesteidutil-before.png" alt="The qesteidutil tool without the footer when certificate info isn't available.">
 </div>
 
@@ -40,7 +40,7 @@ and install a new version of the qesteidutil tool. For NixOS, the available
 package happened to be outdated, so here's what a recent qesteidutil is supposed
 to look like.
 
-<div class="element img">
+<div class="element image">
   <img src="/img/qesteidutil-after-scaleddown.png" alt="The qesteidutil tool with the footer providing valuable information about the certificates.">
 </div>
 

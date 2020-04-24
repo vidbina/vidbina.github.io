@@ -35,7 +35,7 @@ qualitative manner yet :train:. To be quite honest, I also haven't developed
 the luxury demand yet that makes long-distance travel by bus unbearable
 :stuck_out_tongue:.
 
-<div class="element">
+<div class="element gif">
 <iframe src="//giphy.com/embed/YF5XMZt3Hxw1W" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/hateplow-city-hateplow-germany-YF5XMZt3Hxw1W">via GIPHY</a></p>
 </div>
 
@@ -63,7 +63,7 @@ devices as she is also an expect in singling out which rows
 on buses from Amsterdam "smell like they hosts weed-trafficking passengers"
 :unamused:. God forbid I talk back to a police officer.
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/harassed_in_munich/friend.png" alt="One of the officers that checked me for possession of narcotics next to their unmarked vehicle.">
 </div>
 
@@ -76,7 +76,7 @@ a few richly colored gentlemen. There is so much wrong with this image and how
 subliminally dots are being connected but I am no authority in psychology and
 neuroscience so I abstain from further comments.
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/harassed_in_munich/office.png" alt="The Mercedes-Benz office in front of which the ordeal began.">
 </div>
 
@@ -95,7 +95,7 @@ pinpointing targets by aroma that canines :dog: aren't consulted, as a matter
 of fact they are nowhere near the scene, yet I can't help but believe that
 man's best friend is a better skilled and more reliable "sniffer".
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/harassed_in_munich/carone.png" alt="one of the police cars">
 </div>
 
@@ -112,7 +112,7 @@ Germany over the last few months I have picked up a fair share of German to
 make sense of this conversation, but I keep myself composed. This is what it
 feels like to get in touch with the police? Unidirectional respect?
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/harassed_in_munich/cartwo.png" alt="One of the police cars">
 </div>
 
@@ -131,7 +131,7 @@ getting to my destination. The police doesn't even have the courtesy to at the
 very least offer me a drive back to the location where they ordered me to
 enter their vehicles after such a horrible experience.
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/harassed_in_munich/precinct.png" alt="The precinct">
 </div>
 
@@ -170,7 +170,7 @@ ordeal. Can I blame people for disliking the police if many of their
 experiences are as negative as the one I've had and probably often even worse
 [^1]?
 
-<div class="element">
+<div class="element gif">
 <iframe src="//giphy.com/embed/m9rMVyKactNK" width="480" height="348" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/police-cartoon-violence-m9rMVyKactNK">via GIPHY</a></p>
 </div>
 
@@ -222,7 +222,7 @@ Understanding is the name of the game. Just live and let live.
 
 [zp]: https://en.wikipedia.org/wiki/Zwarte_Piet
 
-<div class="element">
+<div class="element gif">
   <iframe src="//giphy.com/embed/60AbXN4D8NgBO" width="480" height="384" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/vrt-facepalm-beschaamd-dagsinterklaas-60AbXN4D8NgBO">via GIPHY</a></p>
 </div>
 

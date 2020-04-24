@@ -38,7 +38,7 @@ use the antecedent $p$ to represent that _a creature has green blood_ and the
 consequent $q$ to represent that _a creature is an alien_ simply read as _if 
 a creature has green blood, then it is an alien_.
 
-<div class="element img">
+<div class="element image">
   <img src="/resources/math/ifthen-bloodandaliens.svg" alt="Simple Venn diagram to explore the if creature has green blood, then creature is alien material condition" />
 </div>
 

@@ -39,20 +39,20 @@ especially if routers are just used out-of-the-box.
 System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport
 {% endhighlight %}
 
-<div class="element img animate">
+<div class="element image animate">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/wlanscankreuzberg1.png" alt="WLAN scan in Kreuzberg" >
 </div>
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/wlanscankreuzberg2.png" alt="WLAN scan in Kreuzberg" >
 </div>
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/wlanscanguikreuzberg.png" alt="WLAN scan in Kreuzberg" >
 </div>
 
 
-<div class="element img light">
+<div class="element image light">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/2.4_GHz_Wi-Fi_channels_%28802.11b%2Cg_WLAN%29.svg/720px-2.4_GHz_Wi-Fi_channels_%28802.11b%2Cg_WLAN%29.svg.png" alt="Graphical representation of 2.4 GHz band channels">
 </div>
 

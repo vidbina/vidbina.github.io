@@ -110,7 +110,7 @@ US founders still end up finding their way to Europe although generally not for
 the funding climate but rather for things such as the higher quality of life at
 a lower cost. :money_with_wings:
 
-<div class="element img">
+<div class="element image">
   <img src="/img/european-money.jpg" alt="Image of a glass of coins and Euro bills tipped over such that the money lies spilled over a surface" />
   <!-- https://www.pexels.com/photo/bills-capital-cash-cent-210679/ -->
 </div>
@@ -189,7 +189,7 @@ argue that the presence of safety nets should simplify or even encourage the
 taking of risk given the comfort of knowing that on can only fall so far, but that
 again could be a completely separate post.
 
-<div class="element img">
+<div class="element image">
   <img src="/img/black-calculator-investor.jpg" alt="Image of a calculator and a sheet with investment details with a handwritten comment asking: Can we do this?" />
   <!-- https://www.pexels.com/photo/black-calculator-near-ballpoint-pen-on-white-printed-paper-53621/ -->
 </div>
@@ -276,7 +276,7 @@ multitude of ideas, capital and willingness to collaborate. The tension that
 may have stemmed from collaborations that evolved into rivalries may have been
 a catalyst in keeping Silicon Valley tech firms on edge.
 
-<div class="element img">
+<div class="element image">
   <img src="/img/top-view-people-handshaking.jpg" alt="People shaking hands over a table full of tablets, laptops and notebooks, presumably after a meeting" />
   <!-- https://www.pexels.com/photo/top-view-photo-of-people-handshaking-3182784/ -->
 </div>

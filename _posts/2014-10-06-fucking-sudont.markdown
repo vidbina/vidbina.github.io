@@ -32,7 +32,7 @@ unix-based OS-es I&rsquo;ve had too much encounters with seriously screwed up
 systems because someone disrespectfully smacked a `sudo` in front of a command
 that was not doing what the user expected.
 
-<div class="element">
+<div class="element image">
   <img src="http://imgs.xkcd.com/comics/sandwich.png" alt="Sudo make me a sandwich">
 </div>
 

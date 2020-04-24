@@ -189,7 +189,7 @@ nix-env -f nixpkgs=my_nixpkgs -i terraform_0_11
 which may be done in the current shell, or even better a seperate nix-shell
 just to keep things isolated :wink:.
 
-<div class="element">
+<div class="element screencast">
 <script type="text/javascript" src="https://asciinema.org/a/FRrvhg1eqRHf2wh9nnxsTDYPG.js" id="asciicast-FRrvhg1eqRHf2wh9nnxsTDYPG" async></script>
 </div>
 
@@ -322,7 +322,7 @@ expressions and perform some introspection. Inside the REPL one may
  - double TAB to trigger the autocompleter which exposes whatever is in scope :wink:
  (e.g.: functions and variables).
 
-<div class="element img">
+<div class="element image">
   <img src="/img/nix-repl-intro.png" alt="Screenshot of nix-repl" />
 </div>
 
