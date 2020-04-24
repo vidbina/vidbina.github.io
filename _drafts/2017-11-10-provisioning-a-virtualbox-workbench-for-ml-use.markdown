@@ -18,7 +18,7 @@ tags:
  - virtualbox
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -27,6 +27,7 @@ og:
 #  card: summary
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
+emojify: true
 ---
 For a course I helped co-write, a need has emerged for a work environment as
 part of the course material in order to eliminate the complications the
@@ -46,7 +47,10 @@ and the work environment.
 
 ## Base image
 
-> **NOTE:** Use server images. The Ubiquity installer on desktop images doesn't facilitate complete automation in a practical manner.
+<div class="element note">
+**NOTE:** Use server images. The Ubiquity installer on desktop images doesn't
+facilitate complete automation in a practical manner.
+</div>
 
 An attempt was made to start off with an Ubuntu 17.10 Desktop ISO, but after a
 long time of messing around it became clear that this is an impractical route
@@ -169,7 +173,7 @@ d-i pkgsel/include string openssh-server build-essential ubuntu-desktop
 ```
 
 happened everytime an attempt was made to install `ubuntu-dekstop` in a script
-using `tasksel` such as 
+using `tasksel` such as
 
 ```bash
 #!/bin/bash
@@ -178,8 +182,8 @@ tasksel install ubuntu-desktop
 
 named `scripts/example.sh` and invoked by specifying a provisioner for it as
 
-{% highlight json %}
 {% raw %}
+```json
 {
   "provisioners": [
     {
@@ -189,8 +193,8 @@ named `scripts/example.sh` and invoked by specifying a provisioner for it as
     }
   ]
 }
+```
 {% endraw %}
-{% endhighlight %}
 
 in the packer JSON.
 
@@ -219,7 +223,7 @@ So `pkgsel/include` instead of `tasksel`.
 
 With the image ready, users still need a convenient method of exchanging
 information between the environment and their host system. Explaining the
-process of mounting shared volumes should not be a big problem, but 
+process of mounting shared volumes should not be a big problem, but
 
 ## Links
 

@@ -20,7 +20,7 @@ tags:
  - step function
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -55,7 +55,10 @@ require an activation function in order to produce any output. The step
 function is a valid option for the activation function but poses a challenge
 in analysis because of the [jump discontinuity][jump-discontinuity] at $x=0$.
 
-> At $x=0$ the derivative is undefined ($\frac{\infty}{0}$) while the derivative is zero for the remainder of the domain.
+<div class="element note">
+At $x=0$ the derivative is undefined ($\frac{\infty}{0}$) while the derivative
+is zero for the remainder of the domain.
+</div>
 
 $$\sigma(x) = \frac{1}{1+e^{-x}}$$
 
@@ -96,7 +99,8 @@ sometimes used as an alternative to the step function $u(x)$.
 </div>
 {% endif %}
 
-> Why care for differentiability? Well, when determining the coefficients for a
+<div class="element note">
+Why care for differentiability? Well, when determining the coefficients for a
 neural network methods such as _back propagation_ depend on the ability to
 determine the rate of change in the network output per change in the
 coefficients. Imagine that we assign coefficients at random initially. Through
@@ -107,6 +111,7 @@ change and proceed towards the next iteration in which we repeat the process
 until the output of the network is sufficiently close to the target value.
 This process involves as much partial derivatives as we have coefficients to
 determine.
+</div>
 
 Some may choose to introduce a weight $\beta$ to the input variables in order
 to obtain a sigmoid curve more reminiscent of the step we're trying to mimic.

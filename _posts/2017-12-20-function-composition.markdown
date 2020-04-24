@@ -16,7 +16,7 @@ tags:
  - function composition
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -32,7 +32,7 @@ Here be dragons :dragon:
 The [Haskell wiki][haskell-fc] explains function composition as
 
 > the act of pipelining the result of one function to the input of another,
-creating an entirely new function
+> creating an entirely new function
 
 and that seems relatively easy to wrap one's mind around.
 

@@ -18,7 +18,7 @@ tags:
  - linux
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -32,11 +32,13 @@ mathjax: true
 Learning Nix, I felt the need to take notes. My future self will thank me
 for the reminders :wink:.
 
-> :bomb: I'm a total noob with Nix, I'm just writing just because my stupid
-brain forgets shit all the time. Don't use this as a source of truth. I will
-update things as I learn more, but I have already seen a few talks that suggest
-that some of the CLI tools that I refer to here may be something of the past
-soon enough. You've been warned :wink:.
+<div class="element note">
+:bomb: I'm a total noob with Nix, I'm just writing just because my stupid brain
+forgets shit all the time. Don't use this as a source of truth. I will update
+things as I learn more, but I have already seen a few talks that suggest that
+some of the CLI tools that I refer to here may be something of the past soon
+enough. You've been warned :wink:.
+</div>
 
 # Nix Basics
 
@@ -94,15 +96,17 @@ multiple profile directories containing their own `bin` directories, one can
 switch environments by simply rerouting symlinks. This is the where NixOS gets
 to boast atomic profile switches or updates.
 
-> Note that `$HOME/.nix-profile` is symlinked to `/nix/var/nix/profiles/per-user/vid/profile`
-in my case, which happens to be symlinked to `/nix/var/nix/profiles/per-user/vid/profile-NN-link`
-(where NN is some number). Inside the `/nix/var/nix/profiles/per-user/vid`
-directory I find a couple of symlinks that fit the profile-NN-link pattern
-which makes the changing of my profile as simple as just switching the
-profile symlink to point to one of those profile-NN-link targets :wink:.
-Atomic AF!
+<div class="element note">
+Note that `$HOME/.nix-profile` is symlinked to
+`/nix/var/nix/profiles/per-user/vid/profile` in my case, which happens to be
+symlinked to `/nix/var/nix/profiles/per-user/vid/profile-NN-link` (where NN is
+some number). Inside the `/nix/var/nix/profiles/per-user/vid` directory I find
+a couple of symlinks that fit the profile-NN-link pattern which makes the
+changing of my profile as simple as just switching the profile symlink to point
+to one of those profile-NN-link targets :wink:.  Atomic AF!
+</div>
 
-{% if fasle %}
+{% if false %}
 `$HOME/.nix-profile/bin:$HOME/.nix-profile/sbin:$HOME/.nix-profile/lib/kde4/libexec:/nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/default/sbin:/nix/var/nix/profiles/default/lib/kde4/libexec:/run/current-system/sw/bin:/run/current-system/sw/sbin:/run/current-system/sw/lib/kde4/libexec`
 {% endif %}
 
@@ -150,7 +154,8 @@ nix-env -qaP firefox
 
 Which, for debian-based distro users, is more analogous to `apt-cache search firefox`.
 
-> Running `nix-env -qaP pasystray` provides me with the output
+<div class="element note">
+Running `nix-env -qaP pasystray` provides me with the output
 
 ```
 nixos.pasystray              pasystray-0.6.0
@@ -159,6 +164,7 @@ nixos-17.03-small.pasystray  pasystray-0.6.0
 
 which indicates that version 0.6.0 of pasystray is available in the nixos and
 nixos-17.03-small channels
+</div>
 
 One may also specify the nix expression by specifying the path to the nix
 expression using the `-f` flag
@@ -189,7 +195,7 @@ nix-env -f nixpkgs=my_nixpkgs -i terraform_0_11
 which may be done in the current shell, or even better a seperate nix-shell
 just to keep things isolated :wink:.
 
-<div class="element">
+<div class="element screencast">
 <script type="text/javascript" src="https://asciinema.org/a/FRrvhg1eqRHf2wh9nnxsTDYPG.js" id="asciicast-FRrvhg1eqRHf2wh9nnxsTDYPG" async></script>
 </div>
 
@@ -242,9 +248,11 @@ which indicates that the system is set up with a path for the root channel
 (which are shared among all users of the system) and private channels which
 as user specific.
 
-> NOTE: that running `sudo nix-channel --list` will provide a listing of the
+<div class="element note">
+NOTE: that running `sudo nix-channel --list` will provide a listing of the
 channels as known to the user root, which may differ from the regular user
 who's channel listing you may review through `nix-channel --list`.
+</div>
 
 Adding the nixos-17.03-small channel may be done by executing
 `nix-channel --add https://nixos.org/channels/nixos-17.03-small`
@@ -259,7 +267,7 @@ nixos.go_1_6        go-1.6.4
 nixos.go            go-1.7.4
 ```
 
-After running ```nix-channel --list```, I realised that I had added a non-stable channel under
+After running `nix-channel --list`, I realised that I had added a non-stable channel under
 the `nixos` name and wondered if perhaps the nixos name for a channel is already used by
 Nix* internals and therefore collides.
 
@@ -268,22 +276,24 @@ of a channel under an already "reserved" name, being `nixos`, prompted the idea 
 the channel to observe whether it resolved the issue.
 
 The former execution of
-```nix-channel --add https://nixos.org/channels/nixos-17.03-small nixos```.
+`nix-channel --add https://nixos.org/channels/nixos-17.03-small nixos`.
 pparently confused my setup which already contained a (root) channel named
 `nixos`.
 
 After removing the recently added user channel named nixos
-```nix-channel --remove nixos``` and re-adding it without specifying the
+`nix-channel --remove nixos` and re-adding it without specifying the
 optional name
-```nix-channel --add https://nixos.org/channels/nixos-17.03-small```,
+`nix-channel --add https://nixos.org/channels/nixos-17.03-small`,
 the channel was added with the name `nixos-17.03-small`.
 
-> NOTE: Adding channels without providing the name simply names the channel in
+<div class="element note">
+NOTE: Adding channels without providing the name simply names the channel in
 accordance to the last phrase of the channel URL with the suffix `-stable` or
 `-unstable` removed from the name such that `nixos-17.03-small` remains
 `nixos-17.03-small` and `nixos-unstable-small` becomes `nixos-small` :wink:.
+</div>
 
-An update through ```nix-channel --update```
+An update through `nix-channel --update`
 was required to enforce the changes after which a query actually presented the
 results from the different channels. :victory:
 
@@ -322,7 +332,7 @@ expressions and perform some introspection. Inside the REPL one may
  - double TAB to trigger the autocompleter which exposes whatever is in scope :wink:
  (e.g.: functions and variables).
 
-<div class="element img">
+<div class="element image">
   <img src="/img/nix-repl-intro.png" alt="Screenshot of nix-repl" />
 </div>
 
@@ -337,11 +347,15 @@ a set of arguments and returns a set of options, which in Nix syntax looks a
 bit like `inputs: outputs` but is explained in detail in the
 [Nix documentation on writing Nix expressions][nix-expr].
 
-> Tip :bulb: Feel free to enter all of the expressions displayed in the text as
+<div class="element note">
+Tip :bulb: Feel free to enter all of the expressions displayed in the text as
+
 ```nix
 expr
 ```
+
 into the REPL in order to follow along. It's the best way to learn  :wink:.
+</div>
 
 
 ### Functions
@@ -362,7 +376,7 @@ where it is important to note that the lambda is enclosed between parenthesis
 to indicate to the language how to tokenize the expression.
 
 A function call in Nix looks like `fn arg` and without the parenthesis, the
-expression 
+expression
 
 ```nix
 x: x*2 24
@@ -413,7 +427,7 @@ is a much cleaner way to deal with bindings.
 
 ### Builtins
 
-[Learn x in y][learnxiny-nix] provides an excellent 
+[Learn x in y][learnxiny-nix] provides an excellent
 
 
 ### Demystifying the Firefox package
@@ -422,7 +436,7 @@ The `firefox` attribute in [all-packages.nix][gh-nixpkgs-all-firefox]
 is bound to the output of `wrapFirefox firefox-unwrapped { }`.
 
 In this case, the [wrapFirefox binding][gh-nixpkgs-all-wrapFirefox] has the
-output of 
+output of
 
 ```nix
 callPackage ../applications/networking/browsers/firefox/wrapper.nix { }
@@ -492,7 +506,7 @@ browser:
 wrapFirefox { stdenv ? stdenv, meta = {}  } {} {}
 ```
 
-and returns a lambda that 
+and returns a lambda that
 
 ```nix
 :l nixpkgs # ignore if <nixpkgs> is already loaded

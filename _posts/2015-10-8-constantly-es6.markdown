@@ -6,9 +6,9 @@ type: tools
 category: tools
 tags:
  - software
- - programming 
+ - programming
  - es6
- - ECMAscript 
+ - ECMAscript
  - javascript
 image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/es6const_thumb.png
 twitter:
@@ -48,30 +48,30 @@ but the data pointed to by the immutable reference may be mutated.
 
 [^1]: The pointer never changes, meaning that it will always point to the same item in memory.
 
-{% highlight javascript %}
+```javascript
 const number = 12;
 number++; // fails, integers are primitive
-{% endhighlight %}
+```
 
 In the case of an array one may mutate the object referred to by use of the
 `push`, `pop`, `shift` and `unshift` functions as demonstrated in
 the following snippet:
 
-{% highlight javascript %}
+```javascript
 const people = [];
 people.push('Leni') // ok
 people = []; // fails, don't reassign
-{% endhighlight %}
+```
 
 The data referred to by an object reference may also be mutated:
 
-{% highlight javascript %}
+```javascript
 const thing = {};
 thing['name'] = 'Spaceship'; // ok
 thing = { 'name': 'Paperplane' } // fails, don't reassign
-{% endhighlight %}
+```
 
-Upon first glance it isn't far fetched to assume that somewhere in the 
+Upon first glance it isn't far fetched to assume that somewhere in the
 life cycle of a codebase, someone will mistake a constant for an item of
 immutable state. :warning:. Here is how I maintain sanity:
 

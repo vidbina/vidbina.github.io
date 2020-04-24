@@ -4,7 +4,7 @@ title: For my Friend Getting up to Speed
 description: |
   After a while of project management work, a friend is yearning to in on the
   action again. Things change fast so as of April 2016 I'll try to list a few
-  things that I deem instrumental in understanding and building modern system 
+  things that I deem instrumental in understanding and building modern system
   for the web.
 date:  2016-04-07 16:14:42 -0400
 type: web # for icon
@@ -18,7 +18,7 @@ tags:
  - engineering
 #og:
 #  type: OG:TYPE # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -39,7 +39,8 @@ software to Linux servers, and how to maintain them). I think you already used
 Linux a lot. Let's just assume from this point on that you do everything I
 recommend in the points below in Linux or OSX (any nix-based OS will work).
 
-> It may even make sense to stick to command line tools like vim for text
+<div class="element note">
+It may even make sense to stick to command line tools like vim for text
 editing, tmux or screen for terminal multiplexing -- basically all non-GUI
 tools. Why?!? Well, mostly servers don't run elaborate GUI's. Most of the work
 is done from the command line so you better get comfortable. Whenever I log
@@ -48,6 +49,7 @@ there. I browse the web with Chrome and Safari, but every line of code written
 happens in vim, every time I need to jump between windows or interfaces I do
 that within or between my tmux session. When someone drops me on a server, I
 know how to find my way around :wink:.
+</div>
 
 ### Git Started! :checkered_flag:
 
@@ -81,7 +83,7 @@ video decoding/encoding services that just translate video from one format to
 another, authentication services that just look at user credentials and
 determine if they get permission for a certain action yes or no, cataloging
 services that simply look at a user and figure out which items should be
-available. 
+available.
 
 
 [Learn Rails from Hartl's tutorial](https://www.railstutorial.org) which will
@@ -108,7 +110,7 @@ Until you've validated or invalidated them and are serving people to the point
 that you get phone calls of overjoyed clients, you have no reason to worry too
 much about _where_ your application is running and _how_ it is deployed.
 
-However; if you want to understand what the big fuss is about in application 
+However; if you want to understand what the big fuss is about in application
 development, lately you need to familiarize yourself with the following...
 configuration management ([ansible][ansible], [puppet][puppet], [chef][chef]),
 containerization ([docker][docker], [rkt][rkt]), orchestration

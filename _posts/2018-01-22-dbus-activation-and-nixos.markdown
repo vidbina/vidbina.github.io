@@ -54,52 +54,52 @@ have to look elsewhere for answers.
 
 ```
 vid@localhost> pstree -g 2                                                                                                                                                      ~
-─┬◆ 00001 root systemd 
- ├──◆ 01615 rtkit /.../libexec/rtkit-daemon 
- ├──◆ 01575 vid /run/current-system/sw/bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session 
+─┬◆ 00001 root systemd
+ ├──◆ 01615 rtkit /.../libexec/rtkit-daemon
+ ├──◆ 01575 vid /run/current-system/sw/bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
  ├─── 01560 vid /.../bin/dbus-launch --exit-with-session /.../xsession none+xmonad
- ├─┬◆ 01443 vid /.../lib/systemd/systemd --user 
- │ ├─┬◆ 01631 vid /.../bin/pulseaudio --daemonize=no 
- │ │ └─── 01635 vid /.../libexec/pulse/gconf-helper 
- │ ├──◆ 01507 vid /.../bin/gpg-agent --supervised 
- │ ├─── 01448 vid (sd-pam)  
- │ └─┬◆ 01649 vid /.../bin/bash -e /.../bin/ibus-daemon-start 
- │   └─┬◆ 01650 vid /.../bin/.ibus-daemon-wrapped_ --cache=refresh 
- │     ├─── 01676 vid /.../libexec/ibus-engine-simple 
- │     ├─── 01661 vid /.../libexec/ibus-ui-gtk3 
- │     └─── 01659 vid /.../libexec/ibus-dconf 
- ├──◆ 01394 root /..._supplicant-2.6/sbin//wpa_supplicant -u 
- ├──◆ 01385 polkituser /.../lib/polkit-1/polkitd --no-debug 
+ ├─┬◆ 01443 vid /.../lib/systemd/systemd --user
+ │ ├─┬◆ 01631 vid /.../bin/pulseaudio --daemonize=no
+ │ │ └─── 01635 vid /.../libexec/pulse/gconf-helper
+ │ ├──◆ 01507 vid /.../bin/gpg-agent --supervised
+ │ ├─── 01448 vid (sd-pam)
+ │ └─┬◆ 01649 vid /.../bin/bash -e /.../bin/ibus-daemon-start
+ │   └─┬◆ 01650 vid /.../bin/.ibus-daemon-wrapped_ --cache=refresh
+ │     ├─── 01676 vid /.../libexec/ibus-engine-simple
+ │     ├─── 01661 vid /.../libexec/ibus-ui-gtk3
+ │     └─── 01659 vid /.../libexec/ibus-dconf
+ ├──◆ 01394 root /..._supplicant-2.6/sbin//wpa_supplicant -u
+ ├──◆ 01385 polkituser /.../lib/polkit-1/polkitd --no-debug
  ├──◆ 01275 dnsmasq /.../bin/dnsmasq -k --enable-dbus --user=dnsmasq -C /...
- ├──◆ 01263 root agetty --login-program /.../bin/login --noclear --keep-baud tty1 115200,38400,9600 linux 
- ├──◆ 01259 privoxy /.../bin/privoxy --no-daemon --user privoxy /... 
- ├─┬◆ 01163 root /.../bin/slim 
- │ ├─┬─ 01490 vid /store/vidbina.home/.xmonad/xmonad-x86_64-linux 
- │ │ ├─┬◆ 01683 vid /run/current-system/sw/bin/termite 
- │ │ │ └─┬◆ 01704 vid /run/current-system/sw/bin/zsh 
- │ │ │   └──◆ 04224 vid pstree -g 2 
- │ │ ├──◆ 01667 vid xmobar -x0 
+ ├──◆ 01263 root agetty --login-program /.../bin/login --noclear --keep-baud tty1 115200,38400,9600 linux
+ ├──◆ 01259 privoxy /.../bin/privoxy --no-daemon --user privoxy /...
+ ├─┬◆ 01163 root /.../bin/slim
+ │ ├─┬─ 01490 vid /store/vidbina.home/.xmonad/xmonad-x86_64-linux
+ │ │ ├─┬◆ 01683 vid /run/current-system/sw/bin/termite
+ │ │ │ └─┬◆ 01704 vid /run/current-system/sw/bin/zsh
+ │ │ │   └──◆ 04224 vid pstree -g 2
+ │ │ ├──◆ 01667 vid xmobar -x0
  │ │ ├─── 01657 vid /.../bin/python /.../bin/..blueman-applet-wrapped-w
- │ │ ├─── 01656 vid /run/current-system/sw/bin/nm-applet --sm-disable 
+ │ │ ├─── 01656 vid /run/current-system/sw/bin/nm-applet --sm-disable
  │ │ └─── 01655 vid trayer --blahblah
  │ └──◆ 01244 root /.../bin/X -config /... -xkbdir /...
- ├──◆ 01128 root /.../lib/systemd/systemd-logind 
- ├──◆ 01030 messagebus /.../bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation 
- ├──◆ 01024 dictd dictd 1.12.1: 0/0                                                                                                                                              
- ├─┬◆ 01017 root /.../sbin/NetworkManager --no-daemon 
+ ├──◆ 01128 root /.../lib/systemd/systemd-logind
+ ├──◆ 01030 messagebus /.../bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+ ├──◆ 01024 dictd dictd 1.12.1: 0/0
+ ├─┬◆ 01017 root /.../sbin/NetworkManager --no-daemon
  │ └──◆ 01747 root /.../bin/dhclient -d -q -sf /.../libexec/nm-dhc
- ├──◆ 01015 root /.../bin/illum-d 
- ├──◆ 01012 root /.../libexec/bluetooth/bluetoothd 
- ├──◆ 01011 root /.../sbin/rngd -f -v 
- ├──◆ 01008 root acpid --confdir /... 
- ├──◆ 00995 root /...+git20161120/bin/w3m /.../share/doc/nixos/index.html 
- ├──◆ 00955 systemd-timesync /.../lib/systemd/systemd-timesyncd 
- ├──◆ 00692 root /.../lib/systemd/systemd-udevd 
- ├──◆ 00686 root /.../lib/systemd/systemd-journald 
- ├─┬─ 02915 vid /run/current-system/sw/bin/zsh 
- │ └─── 02924 vid /.../bin/.firefox-wrapped 
- ├──◆ 01837 nscd nscd 
- ├─── 01829 vid /.../bin/notify-osd 
+ ├──◆ 01015 root /.../bin/illum-d
+ ├──◆ 01012 root /.../libexec/bluetooth/bluetoothd
+ ├──◆ 01011 root /.../sbin/rngd -f -v
+ ├──◆ 01008 root acpid --confdir /...
+ ├──◆ 00995 root /...+git20161120/bin/w3m /.../share/doc/nixos/index.html
+ ├──◆ 00955 systemd-timesync /.../lib/systemd/systemd-timesyncd
+ ├──◆ 00692 root /.../lib/systemd/systemd-udevd
+ ├──◆ 00686 root /.../lib/systemd/systemd-journald
+ ├─┬─ 02915 vid /run/current-system/sw/bin/zsh
+ │ └─── 02924 vid /.../bin/.firefox-wrapped
+ ├──◆ 01837 nscd nscd
+ ├─── 01829 vid /.../bin/notify-osd
  └─── 01699 vid /.../libexec/bluetooth/obexd
 ```
 
@@ -132,7 +132,11 @@ Time to take a closer look...
 It's Saturday and the [D-Bus][dbus] homepage, under the section __What is D-Bus__,
 reads:
 
-> D-Bus is a message bus system, a simple way for applications to talk to one another. In addition to interprocess communication, D-Bus helps coordinate process lifecycle; it makes it simple and reliable to code a "single instance" application or daemon, and to **launch applications and daemons on demand** when their services are needed.
+> D-Bus is a message bus system, a simple way for applications to talk to one
+> another. In addition to interprocess communication, D-Bus helps coordinate
+> process lifecycle; it makes it simple and reliable to code a "single
+> instance" application or daemon, and to **launch applications and daemons on
+> demand** when their services are needed.
 
 The D-Bus (Desktop bus) ecosystem introduces the concept of busses,
 connections, objects, interfaces and members.
@@ -181,9 +185,11 @@ need a reply printed, hence the `--print-reply`. The object we are interacting
 with and the member of that object or the message name are the next two
 arguments respectively.
 
-> :bulb: Installing `dbus-map` and executing the command `dbus-map --session --dump-methods`
-gives an overview of all methods for the different connections on the session
-bus.
+<div class="element note">
+:bulb: Installing `dbus-map` and executing the command `dbus-map --session
+--dump-methods` gives an overview of all methods for the different connections
+on the session bus.
+</div>
 
 A quick read of the [Introduction to D-Bus][dbus-intro] article, mentions
 [activations][dbus-activation] as a mechanism for triggering an executable.
@@ -221,9 +227,17 @@ The remaining question is now, where the .service is defined. As far as I can
 tell from the documentation this should be recorded in a file somewhere on my
 filesystem.
 
-> :book: On Unix systems, the system bus should default to searching for .service files in `/usr/local/share/dbus-1/system-services`, `/usr/share/dbus-1/system-services` and `/lib/dbus-1/system-services`, with that order of precedence. It may also search other implementation-specific locations, but should not vary these locations based on environment variables.
+> :book: On Unix systems, the system bus should default to searching for
+> .service files in `/usr/local/share/dbus-1/system-services`,
+> `/usr/share/dbus-1/system-services` and `/lib/dbus-1/system-services`, with
+> that order of precedence. It may also search other implementation-specific
+> locations, but should not vary these locations based on environment
+> variables.
 
-> :book: On Unix systems, the session bus should search for .service files in `$XDG_DATA_DIRS/dbus-1/services` as defined by the XDG Base Directory Specification. Implementations may also search additional locations, with a higher or lower priority than the XDG directories.
+> :book: On Unix systems, the session bus should search for .service files in
+> `$XDG_DATA_DIRS/dbus-1/services` as defined by the XDG Base Directory
+> Specification. Implementations may also search additional locations, with a
+> higher or lower priority than the XDG directories.
 
 Since I haven't yet found it, I'm afraid that perhaps D-Bus allows an
 application to register for service activation on first boot, but haven't

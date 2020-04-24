@@ -14,7 +14,7 @@ tags:
  - inkscape
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -31,7 +31,7 @@ experiment with in my
 
 So here's how one may leverage the features that modern fonts offer.
 
-<div class="element img"><img alt="Text and Font item in the toolbar" src="/img/text-in-toolbar-inkscape.png" /></div>
+<div class="element image"><img alt="Text and Font item in the toolbar" src="/img/text-in-toolbar-inkscape.png" /></div>
 
 Open the Text and Font panel through
  - the toolbar (see image above, button is higlighted in pink)
@@ -43,12 +43,12 @@ open the "Variant" tab in the _Text and Font_ panel in which we may specify
 some opentype-compliant descriptor for a feature setting one wants activated.
 
 <!--
-<div class="element img">
+<div class="element image">
 <img alt="Example of the _Text and Font_ Variant interface" src="/img/text-and-font-variant.png"/>
 </div>
 -->
 
-<div class="element img">
+<div class="element image">
 <img alt="Screenshot of the entire workspace while specifying variants for glyphs" src="/img/variant-inkscape-screenshot.png" />
 </div>
 

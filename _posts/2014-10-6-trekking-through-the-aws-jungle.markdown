@@ -19,33 +19,33 @@ description: AWS rocks but because of the many services being offered it may fee
 Because I am somewhat of a term hermit, I prefer to have CLI's to do everything
 because it makes scripting so much easier.
 
-Amazon offers control over AWS :cloud: through their 
+Amazon offers control over AWS :cloud: through their
 [CLI][installing-awscli] that is what this post is all about.
 
 ## Setup
 This section will cover some of the steps I took to get the AWS CLI running on
-my box. I also motivate some of the decisions in the general housekeeping 
+my box. I also motivate some of the decisions in the general housekeeping
 regiment that I enforce.
 
-I use ```virtualenv``` to contain my python environments so with the target 
-environment created `virtualenv ~/env/aws-first-encounter`and selected using 
+I use `virtualenv` to contain my python environments so with the target
+environment created `virtualenv ~/env/aws-first-encounter`and selected using
 `source ~/env/aws-first-encounter/bin/activate` I can proceed to install the
 CLI `pip install awscli`.
 
 Mind you that AWS&rsquo;s CLI expects the ``LANG`` and ``LC_ALL`` env vars to
 be set you can basically take care of that by manually exporting the necessary
 variables or adding the following snippet to whatever loads whenever you start
-your session (.bashrc, .zshrc, .bash_profile or something else&hellip; you 
+your session (.bashrc, .zshrc, .bash_profile or something else&hellip; you
 should know).
 
-{% highlight bash %}
+```bash
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-{% endhighlight %}
+```
 
 After installing the CLI you could confirm that the executable is present
-```which aws``` and check which version you are rocking with 
-```aws --version```.
+`which aws` and check which version you are rocking with
+`aws --version`.
 
 ### Virtualenv
 In order to keep my experiments and project tools contained I use solutions as
@@ -55,9 +55,9 @@ level.
 
 <blockquote>
 Note that these solutions are quite different to package managers like bundler,
-pip or npm. Package managers usually take care of installing the right 
-dependencies, based on a manifest (Gemfile, package.json, etc), into whatever 
-may be the default installation path. Determining that default installation 
+pip or npm. Package managers usually take care of installing the right
+dependencies, based on a manifest (Gemfile, package.json, etc), into whatever
+may be the default installation path. Determining that default installation
 path and the version of the runtime is generally managed by a run-time
 enviroment management tool like rvm, rbenv, virtualenv or nodeenv.
 </blockquote>
@@ -73,18 +73,18 @@ encounter. Good luck!
 Prior to configuring the CLI you will need your user credentials to access AWS.
 In case you already have created a user with the proper privileges you could
 use the credentials belonging to that user. You could choose to skip step 2 and
-3 in the sequence below as long as your do realize that a user without 
-permissions is basically a ghost in that it can not do anything, really. Make 
+3 in the sequence below as long as your do realize that a user without
+permissions is basically a ghost in that it can not do anything, really. Make
 sure to set some permissions for the user you want to sign in to AWS as.
 
  1. create user in IAM (remember the credentials presented after creation of the
  user as these cannot be presented to you by AWS again)
  2. create an admin group in IAM
  3. add your user to the admin group in IAM
- 4. configure your CLI with the user credentials you have received by running 
- ```aws configure```
+ 4. configure your CLI with the user credentials you have received by running
+ `aws configure`
  5. export your access keys to your env. The AWS CLI tool expects to find the
- ```AWS_ACCESS_KEY``` and ```AWS_SECRET_KEY``` variables.
+ `AWS_ACCESS_KEY` and `AWS_SECRET_KEY` variables.
 
 ## Usage
 After configuring the AWS CLI you are set to configure the services. It makes
@@ -94,67 +94,67 @@ features that may safe you a few clicks.
 
 The CLI syntax is basically
 
-{% highlight bash %}
+```bash
 aws SERVICE COMMAND [ARGS]
-{% endhighlight %}
+```
 
 As simple as that :wink:.
 
 <a name="storage"></a>
 ### S3
-{% highlight bash %}
+```bash
 aws s3 ls
-{% endhighlight %}
+```
 
 <a name="vm"></a>
 ### EC2
 In order to get an overview of all EC2 instances running in your account run
 the following command:
-{% highlight bash %}
+```bash
 aws ec2 describe-instances
-{% endhighlight %}
+```
 
 #### VPC
 You can configure all of your machines to reside within a private cloud which
 may expose some of its resources to the web through assigned gateways.
-{% highlight bash %}
+```bash
 aws ec2 describe-vpcs
-{% endhighlight %}
+```
 
 <a name="dns"></a>
 ### Route53
 In order to get started a zone needs to be created. In case I would want to
 set up a zone for my `bina.me` domain I would execute the following:
 
-{% highlight bash %}
+```bash
 aws route53 create-hosted-zone --name bina.me. --caller-reference DemoDNSZoneSetup
-{% endhighlight %}
+```
 
 After creating the zone, AWS will respond with an identifier for the command.
 Most likely the status of our command will be pending at the time the response
 is reported through the terminal, but we we can always request a list of all
 zones.
-{% highlight bash %}
+```bash
 aws route53 list-hosted-zones
-{% endhighlight %}
+```
 
 After creating a zone, we still need to set the records. AWS is friendly enough
 to set up SOA and NS records for us. An overview of all resource records for a
 zone are acquired by executing the following where `X` is replaced with the
 zone id of you want to lookup.
-{% highlight bash %}
+```bash
 aws route53 list-resource-record-sets --hosted-zone-id X
-{% endhighlight %}
+```
 
 After creating a zone one might want to [setup `MX`, `CNAME`, `TXT` and other
 DNS records][create-record-sets]. The creation or modification of these records
 may be done through the use of JSON batch files in the following manner.
-{% highlight bash %}
+```bash
 aws route53 change-resource-record-sets --hosted-zone-id X --change-batch file://~/path/to/file.json
-{% endhighlight %}
+```
 
 <a name="dns.mx"></a>
-Just to give an example of the structure of the JSON files fed to the CLI I 
+Just to give an example of the structure of the JSON files fed to the CLI I
 have published a version of the files I have used on [Github][route53-json-gist]
 {% gist vidbina/8322c299faab15477e1c dns.mx.json %}
 
@@ -167,9 +167,9 @@ double quotes).
 
 <a name="users"></a>
 ### IAM
-{% highlight bash %}
+```bash
 aws iam list-users
-{% endhighlight %}
+```
 
 [installing-awscli]: http://docs.aws.amazon.com/cli/latest/userguide/installing.html
 [confing-awscli]: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html

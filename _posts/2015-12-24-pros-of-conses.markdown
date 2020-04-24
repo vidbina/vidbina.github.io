@@ -6,7 +6,7 @@ type: tools
 category: tools
 tags:
  - software
- - programming 
+ - programming
  - Erlang
  - list cons
  - immutable
@@ -20,7 +20,7 @@ og:
     author: https://www.facebook.com/david.asabina
     tags:
        - software
-       - programming 
+       - programming
        - Erlang
        - list cons
        - immutable
@@ -46,7 +46,7 @@ operand commonly referred to as the head and a right-hand operand, the tail.
 
 So let's look at a few snippets that demonstrate lists.
 
-{% highlight erlang %}
+```erlang
 []. % nil or an empty list
 
 [monkey,mole]. % monkey and mole in a list
@@ -54,7 +54,7 @@ So let's look at a few snippets that demonstrate lists.
 [monkey|[mole|[]]]. % monkey and mole in a list
 
 [mokey|mole]. % improper list, steer clear of these
-{% endhighlight %}
+```
 
 The [book](http://learnyousomeerlang.com/starting-out-for-real#lists) does a
 great job in explaining lists too by the way and if you want to get a deeper
@@ -84,9 +84,9 @@ an entirely different manner when dealing with those immutable creatures.
 
 Let's cut to the chase...
 
-{% highlight erlang %}
+```erlang
 NoFlyList=[monkey|[mole]].
-{% endhighlight %}
+```
 
 The `NoFlyList` represents a list of creatures we don't want on our flight
 because of bad behavior. Maybe the monkey pooped:poop: in his seat and the mole
@@ -98,7 +98,10 @@ that list items only know who their successors are.
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/vidbina">@vidbina</a> <a href="https://twitter.com/mononcqc">@mononcqc</a> SL ++ [H] is O(n) whereas [H|SL] is O(1). Lists are singly linked.</p>&mdash; Jesper L. Andersen (@jlouis666) <a href="https://twitter.com/jlouis666/status/679667193894858753">December 23, 2015</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
-> A node in a doubly linked-list knows predecessor and successor (previous and next) nodes.
+<div class="element note">
+A node in a doubly linked-list knows predecessor and successor (previous and
+next) nodes.
+</div>
 
 In the case of the `NoFlyList` the monkey only sees the mole and the mole
 doesn't see jack--it's practically blind anyways :eyes:.
@@ -124,9 +127,9 @@ yeah... it will allow us to add something to a list. In our example we want
 to add a list containing just a ghost to our already existing list of
 creatures we'd rather not board on our planes.
 
-{% highlight erlang %}
+```erlang
 NoobNoFlyList = NoFlyList++[ghost].
-{% endhighlight %}
+```
 
 Experienced Erlang coders, a title and burden I aspire to carry in the future,
 will probably chuckle when they see that snippet because they can only imagine
@@ -152,7 +155,7 @@ have to create a new monkey to look at the newly created mole. Now we'll have a
 list in which the monkey looks at the mole which looks at the ghost, but as
 you noticed we had to recreate the entire list on the left-hand side. Bummer!
 
-<div class="element img">
+<div class="element image">
 <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/gif/erl_list_add_single.gif" alt="Demonstrating how expensive List++[Item] is in Erlang">
 </div>
 
@@ -168,15 +171,15 @@ of the `++` operator which I attached below for your convenience :wink:.
 In order to use the `++` list operator without having to step through an
 entire list which could very well be comprised of a million misbehaving
 critters it would be more sensible to have the list on the right-hand side of
-the operator. 
+the operator.
 
-<div class="element img">
+<div class="element image">
 <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/gif/erl_single_add_list.gif" alt="Demonstrating how cheap [Item]++List is in Erlang">
 </div>
 
-{% highlight erlang %}
+```erlang
 OkayNoFlyList = [ghost]++NoFlyList.
-{% endhighlight %}
+```
 
 Note that the left-hand operand represent a list of a single item -- our ghost.
 The list happens to be immutable so Erlang cannot in good conscience modify
@@ -198,20 +201,19 @@ Just sidetracking here
  unscathed, however; the active head, having to do the pointing, will have to
  be reconstructed.
 
-{% highlight erlang %}
+```erlang
 [mole]++bat==[mole|bat]. % improper list
 [mole]++[bat]==[mole,bat]. % proper list
 [mole]++[bat]==[mole|[bat]]. % same thing
 [mole]++[bat]==[mole|[bat|[]]]. % we covered this before
-{% endhighlight %}
-
+```
 
 ## Cons
 Using list cons, one could perform the previous feat more effectively.
 
-{% highlight erlang %}
+```erlang
 EliteNoFlyList = [ghost|NoFlyList].
-{% endhighlight %}
+```
 
 As suggested in the [Efficiency Guide](http://www.erlang.org/doc/efficiency_guide/myths.html#id61192)
 the constructor does not have to copy the ghost as it directly creates the
@@ -220,14 +222,14 @@ monkey, which is looking at a blind mole. In the `[ghost]++NoFlyList` approach
 we create the ghost, and subsequently have to recreate a copy of it to look at
 whatever the hell is first up in the `NoFlyList`.
 
-<div class="element img">
+<div class="element image">
 <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/gif/erl_list_cons.gif" alt="Demonstrating how cheap [Item|List] is in Erlang">
 </div>
 
 Always remember that using a non-list tail will result to a improper list,
 with which you will most likely have a bad time
 
-{% highlight erlang %}
+```erlang
 [monkey|mole] != [monkey,mole]. % avoid
 [monkey|[mole]] == [monkey,mole]. % do this :)
-{% endhighlight %}
+```

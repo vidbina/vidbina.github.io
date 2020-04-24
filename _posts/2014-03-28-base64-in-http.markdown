@@ -18,21 +18,21 @@ redirect_from:
 
 The Base64 encoding scheme is used in the HTTP standard to encode some types of
 information (the credentials during the basic authentication strategy). This
-article clears up a few ideas/questions I&rsquo;ve encountered in the field 
+article clears up a few ideas/questions I&rsquo;ve encountered in the field
 while dealing with developers quite new to the trade.
 
-It the context of basic auth, it is important to note that the Base64 encoding 
-scheme is only meant to obscure the credentials sent to the server just enough 
-to avoid clashes with the format in which the requests are composed. One 
-should be very aware of the fact that looking at a Base64 encoded string gives 
+It the context of basic auth, it is important to note that the Base64 encoding
+scheme is only meant to obscure the credentials sent to the server just enough
+to avoid clashes with the format in which the requests are composed. One
+should be very aware of the fact that looking at a Base64 encoded string gives
 one full knowledge of the originating string. Encoding is *not encryption*.
 
 ## What if?
-If the HTTP standard did not require the encoding of the credentials and 
-specified them to be formatted in the authorization header as 
-```handle:secret``` we could get unpredicted results.
+If the HTTP standard did not require the encoding of the credentials and
+specified them to be formatted in the authorization header as
+`handle:secret` we could get unpredicted results.
 
-In the case of the ```spock:livelongandprosper``` handle/secret combo, we 
+In the case of the `spock:livelongandprosper` handle/secret combo, we
 would not encounter any peculiarities, but whenever supplied credentials that
 include characters that serve as delimiters to the HTTP standard we could hit
 crapfest paydirt. Some of the characters that would trigger such disasters are
@@ -48,25 +48,25 @@ password containing a newline character.
     Barbosa: 0
 
 If the standard was designed to place the username password combination in the
-header unaltered we could get the following result for a user named 
-```polly```.
+header unaltered we could get the following result for a user named
+`polly`.
 
     GET /resource HTTP/1.1
     Host: example.com
     Authorization: polly:Jack:1
     Barbosa: 0
 
-How the hell would this work? First of all spaces, colons and new-lines are 
-delimiters. Is ```Barbosa``` a header with the value ```0```? How would I know 
-```Barbosa``` is still part of the password? As a human I am having a hard time making sense of this string 
+How the hell would this work? First of all spaces, colons and new-lines are
+delimiters. Is `Barbosa` a header with the value `0`? How would I know
+`Barbosa` is still part of the password? As a human I am having a hard time making sense of this string
 and humans are generally believed to be great at pattern recognition.
 
 Base64 encoding translates the handle and secret into a string that would not
-cause conflicts with the format in which we compose raw requests. In the 
+cause conflicts with the format in which we compose raw requests. In the
 following example I just parse the authorization scheme descriptor followed
-by a seperator (1 or more space characters) followed by a base64 string which 
-would be a alphanumeric string ending in equal signs. As soon as I run into 
-something that does not fit the format I throw up an _invalid syntax_ 
+by a seperator (1 or more space characters) followed by a base64 string which
+would be a alphanumeric string ending in equal signs. As soon as I run into
+something that does not fit the format I throw up an _invalid syntax_
 exception. This design makes for a healthy parser :relaxed:.
 
     GET /resource HTTP/1.1
@@ -75,19 +75,19 @@ exception. This design makes for a healthy parser :relaxed:.
 
 ## Not So Weird After All
 The idea of formatting user-supplied data to prevent weird behaviour when used
-in the context of another format is not so foreign to computing after all. 
+in the context of another format is not so foreign to computing after all.
 
-In many cases it has a much simpler form when named _character escaping_. When 
-dealing with SQL querries we basically do something quite similar to 
+In many cases it has a much simpler form when named _character escaping_. When
+dealing with SQL querries we basically do something quite similar to
 prevent [SQL-injection][sql-injection].
 
 In url&rsquo;s we also escape characters just to comply to the set of allowed
 characters for url&rsquo;s in accordance to the standard. You must have noticed
-the `%20` phrase in some urls, which is simply the result of URL-encoding the 
+the `%20` phrase in some urls, which is simply the result of URL-encoding the
 space character.
 
 Wikipedia has an article on [delimiter collision][del-collision] which deals
-with this specific problem, so we and all the pieces of software we compose can 
+with this specific problem, so we and all the pieces of software we compose can
 all get along :sunglasses:.
 
 [del-collision]: http://en.wikipedia.org/wiki/Delimiter_collision#Delimiter_collision

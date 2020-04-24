@@ -20,6 +20,7 @@ og:
     author: https://www.facebook.com/david.asabina
     section: Securiity
 description: Discussing some steps in setting up the OSX firewall.
+# TODO: Fix syntax-highlighting on the code currently highlighted as bash while it isn't bash
 ---
 
 I'm on a bus from Amsterdam to Berlin again. I just finished watching the
@@ -28,13 +29,13 @@ papers or sleep although it's 2am. It was initially the plan, but sometimes
 flexibility isn't too bad so I'll start writing about OSX's packet filter
 instead.
 
-<cite>
+<div class="element note">
 **DISCLAIMER**: I don't believe that any system will ever be bulletproof.
-We'll just keep designing stronger, faster and more destructive bullets... or 
+We'll just keep designing stronger, faster and more destructive bullets... or
 bigger guns. I do, however; believe that securing yourself is infinitely less
 stupid than ignoring it altogether and just logging on to every damn network
 you can find.
-</cite>
+</div>
 
 The packet filter in OSX can be used to control incoming and outgoing traffic
 into a machine. Nowadays, with all the hip coffee joints and coworking
@@ -48,38 +49,38 @@ contains a CIDR of `0/0` which basically means `0.0.0.0` submasked `0.0.0.0`,
 which covers the addresses `0.0.0.0` till `255.255.255.255`... yeah, everything
 one can find in the IP4 constellation.
 
-{% highlight bash %}
+```bash
 table <everything> const { 0/0 }
-{% endhighlight %}
+```
 
 Here is how we can get `pfctl` to _show all_ it knows:
 
-{% highlight bash %}
+```bash
 sudo pfctrl -s all
-{% endhighlight %}
+```
 
 Add a new rule to the flixbus table which allows:
 
-{% highlight bash %}
+```bash
 sudo pfctl -t flixbus -T add 1.2.3.4 5.6.7.8
-{% endhighlight %}
+```
 
 Be extremely verbose in showing the existing tables in the main anchor.
 
-{% highlight bash %}
+```bash
 sudo pfctl -vvsTables
-{% endhighlight %}
+```
 
 
-{% highlight bash %}
+```bash
 usage: pfctl [-AdeghmNnOqRrvz] [-a anchor] [-D macro=value] [-F modifier]
         [-f file] [-i interface] [-K host | network] [-k host | network]
         [-o level] [-p device] [-s modifier] [-w interval]
         [-t table -T command [address ...]] [-x level]
-{% endhighlight %}
+```
 
 ## The Seven
-Just for a full understanding there are 7 types of statements in 
+Just for a full understanding there are 7 types of statements in
 
  - macros: user defined variables
  - tables: collections of addresses and/or networks
@@ -98,9 +99,9 @@ One could even set the optimization level to `satellite` mode which is a
 pretty cool alias for `high-latency` (which really makes a lot of sense if you
 plan to be talking to satellites far away).
 
-{% highlight bash %}
+```bash
 set optimization satellite
-{% endhighlight %}
+```
 
 
 ### Traffic Normalization
@@ -108,9 +109,9 @@ Buffer fragments until the complete packet is available and then pass it on to
 the filter which means that the filter works less frequently but consumes
 larger batches of content whenever it does.
 
-{% highlight bash %}
+```bash
 scrub in on if all fragment reassemble
-{% endhighlight %}
+```
 
 ### Queuing
 Three queues are described in the following example. One is assigned for
@@ -123,13 +124,13 @@ care as much about the streaming. With the current bandwidth they should be
 fine and most streaming protocols just drop packets that aren't there in time
 anyways.
 
-{% highlight bash %}
+```bash
 queue streamers bandwidth 90% priority 1 cbq(borrow)
 queue readers bandwidth 10% priority 4 cbq(borrow)
 block return out on eth0 inet all
 pass out on eth0 inet proto tcp from $everyone to any port $stream queue streamers
 pass out on eth0 inet proto tcp from $everyone to any port $web queue readers
-{% endhighlight %}
+```
 
 ### Translation
 With translation one can mutate the IP addresses in the packets before they
@@ -139,9 +140,9 @@ translator is the one to put to work. In the next example all incoming traffic
 on port `80` for the `$public` address will be proxied to the loopback address
 on port `4000`.
 
-{% highlight bash %}
+```bash
 rdr on eth0 proto { tcp, udp } from any to $public port 80 -> 127.0.0.1 port 4000
-{% endhighlight %}
+```
 
 ### PF
 

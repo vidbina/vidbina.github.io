@@ -15,7 +15,7 @@ tags:
  - transmission-cli
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -111,8 +111,10 @@ transmission-remote -l
 transmission-remote --list
 ```
 
-> Note that torrents are listed with an ID column which provides the identifier
-> to use in referencing a particular torrent in commands.
+<div class="element note">
+Note that torrents are listed with an ID column which provides the identifier
+to use in referencing a particular torrent in commands.
+</div>
 
 ### Select Torrents
 

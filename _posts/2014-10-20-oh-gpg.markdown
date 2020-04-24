@@ -27,10 +27,10 @@ description: "Some GPG tricks everyone should know and master, because crypting 
 To encrypt and decrypt my secret messages on my box I use GPG. This post is
 hopefully going to jog the memory of senile future me (or just future me on a
 day on which I happen to be hammered and need to perform this trick). Perhaps
-there is something here that may be of any use to other folks as well 
+there is something here that may be of any use to other folks as well
 :beer:.
 
-<div class="element">
+<div class="element gif">
   <iframe src="//giphy.com/embed/Gz1Ebo1yJmC9q" width="480" height="288" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
@@ -42,9 +42,10 @@ messages intended for the holder of the secret key. Once a message is encrypted
 a secret key is required to decrypt the message which is why one is to take the
 protection of its secret key seriously. Start generating a GPG keypair by
 running the following command:
-{% highlight bash %}
+
+```bash
 gpg --gen-key
-{% endhighlight %}
+```
 
 Remember to set a passphrase for the pair. Often enough the keys are used to
 sign documents so remember that it is often a means for authenticating a user.
@@ -53,54 +54,55 @@ key to impersonate the identity associated to the key. With a proper passphrase
 set the party acquiring the key still needs to figure out what the passphrase
 is and depending on the type of key it may take them some time.
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/gpg_gen_key.gif" alt="generating a GPG key" />
 </div>
 
 ## Encrypting
 
 In order to lock up a certain piece of information we can simply pipe it into
-the `gpg` tool and instruct it how to encrypt it and where to store the 
+the `gpg` tool and instruct it how to encrypt it and where to store the
 ciphertext. To get started a file is created with the following shell command
 that contains the text `launch codes` :rocket:.
 
-{% highlight sh %}
+```sh
 echo "launch codes" > code.in.txt
-{% endhighlight %}
+```
 
 The following command basically encrypts the string in the message file and
-stores the ciphertext into the file `cipher.gpg`. The recipient 
-`vid@bina.me` has been specified in order to instruct whom is to be able 
+stores the ciphertext into the file `cipher.gpg`. The recipient
+`vid@bina.me` has been specified in order to instruct whom is to be able
 to decrypt the ciphertext. For the encrypted launch codes the given recipient
 will be the only person who needs to know so&hellip; yeah&hellip; secrets
 should be encrypted not just `chown`ed :closed_lock_with_key:.
 
-{% highlight sh %}
+```sh
 cat code.in.txt | gpg -e -r vid@bina.me -o cipher.gpg
-{% endhighlight %}
+```
 
 Provided that the document needs to be sent to a few third parties of which we
 happen to have the public key one can include them as recipients. The
-following example 
+following example
 
-{% highlight sh %}
+```sh
 cat code.in.txt | gpg -e \
   -r harold@finch.me \
   -r elliot@allsafe.secure \
   -o cipher.gpg
-{% endhighlight %}
+```
 
 ## Decrypting
 
 Now that the ciphertext is generated one may decrypt it with `gpg` as well.
-{% highlight sh %}
+
+```sh
 gpg -d cipher.pgp > code.out.txt
-{% endhighlight %}
+```
 
 Now the launch codes are known and available in `code.out.txt`. API keys are
 launch codes anyways :wink:.
 
-<div class="element">
+<div class="element gif">
   <iframe src="//giphy.com/embed/LjQmZzYuARJF6" width="480" height="217" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
@@ -122,11 +124,11 @@ There are different ways to handle the signing problem. The documents can be
 The simplest sign operation will wrap the message inside an envelope which is
 subsequently compressed.
 
-{% highlight bash %}
+```bash
 gpg --sign code.txt
-{% endhighlight %}
+```
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/gpg_sign.gif" alt="Signing a document" />
 </div>
 
@@ -135,20 +137,20 @@ file one would do itself a service to not view it with a text editor or pager,
 but with a hex editor. In case `xxd` is installed one can view the output with
 a hex editor like `xxd`.
 
-{% highlight bash %}
+```bash
 xxd code.txt.sig
-{% endhighlight %}
+```
 
 ### Clear Text Envelope
 In case one needs the message in clear text in order to be posted as the body
 of an email or web post one could choose to ensure the output is just the
 uncompressed ASCII-armored signature.
 
-{% highlight bash %}
+```bash
 gpg --clearsign code.txt
-{% endhighlight %}
+```
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/gpg_clearsign.gif" alt="Clearsigning a document" />
 </div>
 
@@ -156,11 +158,11 @@ gpg --clearsign code.txt
 In some cases one may want the signature separate from the message, in that
 case one may use the `--detach-sign` argument.
 
-{% highlight bash %}
+```bash
 gpg --detach-sign code.txt
-{% endhighlight %}
+```
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/gpg_detachsign.gif" alt="Producing a detached signature for a document" />
 </div>
 
@@ -168,15 +170,16 @@ gpg --detach-sign code.txt
 
 Verifying of a signed document is performed by:
 
-{% highlight bash %}
+```bash
 gpg --verify code.txt.sign
-{% endhighlight %}
+```
 
 In case a seperate signature is available for a given message, one should
 specify both files in the verify call as such:
-{% highlight bash %}
+
+```bash
 gpg --verify code.txt.sig code.txt
-{% endhighlight %}
+```
 
 ## The Agent
 
@@ -184,7 +187,7 @@ Sometimes one may fire up an application that may need to make multiple request
 for input from encrypted resources. Supposing a passphrase is used, the prompt
 could be presented every time the encrypted content is consulted.
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/gpgagent-mutt.png" alt="GPGagent popping up to decrypt a password needed by Mutt" />
 </div>
 
@@ -196,8 +199,8 @@ Pretty sweet :smile:.
 
 The entire agent business works in the following manner:
 
-  - invoke the agent daemon (which runs in the background, presents the 
-  passphrases for keys it has stored in cache and prompting you for the 
+  - invoke the agent daemon (which runs in the background, presents the
+  passphrases for keys it has stored in cache and prompting you for the
   passphrase it hasn't yet stored)
   - set up a terminal to act as the front-end
 
@@ -206,12 +209,12 @@ The entire agent business works in the following manner:
 In order to simplify this entire process I have written a small shell script
 to handle all of the daemon summoning and front-end spawning work.
 
-Running `start-gpg-agent` checks if the info file doesn't yet exist and 
+Running `start-gpg-agent` checks if the info file doesn't yet exist and
 then spawns the daemon.
 
 Basically I use the helper `make-gpg-tty` to configure my current terminal
-as the GPG-Agent front-end. Mind you that you should only configure one 
-terminal as the front-end in order to avoid weird :shit:. 
+as the GPG-Agent front-end. Mind you that you should only configure one
+terminal as the front-end in order to avoid weird :shit:.
 That is why `make-gpg-tty` stores the agent terminal number to a file and
 only links the current terminal as the front-end if there has not already been
 another terminal linked for this chore.

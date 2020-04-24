@@ -16,21 +16,26 @@ tags:
  - cloud
 #og:
 #  type: article # http://ogp.me/#types
-#  article: # 
+#  article: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
 
-#image: 
+#image:
 #twitter:
 #  card: summary_large_image
 #  image: http://example.com
 ---
 This morning I learned about Kloudsec, a service that offers a CDN, HTTPS
 encryption and shadowing in case Github pages are unavailable[^1]
-:stuck_out_tongue:. 
+:stuck_out_tongue:.
 
-> **UPDATE (September 22, 2016)**: Kloudsec is down :sob:, but Steve left [a few notes](https://www.reddit.com/r/webdev/comments/4s3kmf/got_an_email_saying_that_kloudsec_will_be/) for his follower and clients. Do yourself a favor and ignore this post from now up.
+<div class="element note">
+**UPDATE (September 22, 2016)**: Kloudsec is down :sob:, but Steve left [a few
+notes](https://www.reddit.com/r/webdev/comments/4s3kmf/got_an_email_saying_that_kloudsec_will_be/)
+for his follower and clients. Do yourself a favor and ignore this post from now
+on.
+</div>
 
 [^1]: Hell does freeze over [occasionally](https://news.ycombinator.com/item?id=7130624), so don't think you would never need it :wink:
 
@@ -38,7 +43,7 @@ encryption and shadowing in case Github pages are unavailable[^1]
 
 In order to setup Kloudsec the user is required to update `A` and `TXT`
 DNS records for the domain of interest. The `A` record in my case points the
-domain `vid.bina.me` to a Kloudsec proxy. Quang Huynh discusses in 
+domain `vid.bina.me` to a Kloudsec proxy. Quang Huynh discusses in
 [this post][kloudsec-proxy] how one may configure a Nginx proxy server with
 a certificate obtained from [Let's Encrypt CA](https://letsencrypt.org/) to
 provide a similar self-managed solution.
@@ -49,7 +54,7 @@ from their clients in order to allow the client to demonstrate some control
 over the domain in question.
 
 {% if false %}
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/dns-for-kloudsec.png" alt="Updating DNS records through Route53 to get started with Kloudsec" />
 </div>
 {% endif %}
@@ -63,11 +68,11 @@ which is allowed to access the bucket cross domain which. Since
 `http://vid.bina.me` is different to `https://vid.bina.me` I will need to
 reflect that in my CORS policy.
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/cors-aws-s3.gif" alt="CORS needs to be setup on S3 in order to access resources from the web page" />
 </div>
 
-{% highlight xml %}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
     <CORSRule>
@@ -75,13 +80,15 @@ reflect that in my CORS policy.
         <AllowedMethod>GET</AllowedMethod>
     </CORSRule>
 </CORSConfiguration>
-{% endhighlight %}
+```
 
-> If you choose a wildcard `*` as the allowed origin, be aware that anyone out
+<div class="element note">
+If you choose a wildcard `*` as the allowed origin, be aware that anyone out
 there will be allowed to embed resources from your bucket into their pages.
 If you want to keep your S3 bills to a minimum, perhaps anyone who needs some
 resources that you serve should consider mirroring them instead of serving them
 directly from your bucket :wink:.
+</div>
 
 ## Update URL's
 
@@ -132,7 +139,7 @@ performance metrics for the dashboard, and just to get an impression of
 whatever they add take a look at the source for [a simple HTML page](/blank)
 that originally just contained the following code:
 
-{% highlight html %}
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -144,7 +151,7 @@ that originally just contained the following code:
     Move along. Nothing to see here!
   </body>
 </html>
-{% endhighlight %}
+```
 
 Essentially whatever happens here is that Kloudsec simply adds script tags to
 your pages. Some service providers require you to do it yourself, but the
@@ -161,7 +168,7 @@ but are hardly indistinguishable from the resources you intended to provide.
 
 In short, if there would be anything somewhere in the middle, it could be them.
 To be fair, if Github were to offer HTTPS pages for custom domains, they
-would have that power too, so what am I really bitching about here?!? 
+would have that power too, so what am I really bitching about here?!?
 :stuck_out_tongue_closed_eyes: It's just a trust issue, but I felt I needed to
 point it out clearly.
 
@@ -175,7 +182,11 @@ throughout my repository :stuck_out_tongue:. It's pretty dope :metal:.
 
 For now I've got some work to do :sweat:
 
-> **UPDATE (September 22, 2016)**: You could setup [Cloudflare](https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/) if you still want serve secured github pages.
+<div class="element note">
+**UPDATE (September 22, 2016)**: You could setup
+[Cloudflare](https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/)
+if you still want serve secured github pages.
+</div>
 
 [kloudsec-proxy]: https://blog.kloudsec.com/how-to-setup-github-custom-domain-with-https/
 [kloudsec-anycast]: https://blog.kloudsec.com/building-an-anycast-network/

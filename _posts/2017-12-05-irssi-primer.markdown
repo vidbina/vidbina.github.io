@@ -22,7 +22,9 @@ an acceptable timeframe.
 
 ## Basic Shortcuts
 
-> `Meta` is generally configured to the `Alt` key :wink:.
+<div class="element note">
+`Meta` is generally configured to the `Alt` key :wink:.
+</div>
 
 |Shortcut|Description|
 |--------|-----------|
@@ -53,7 +55,7 @@ user.
 explanation on window handling and the mechanics of splitting windows and
 window stickiness.
 
-<div class="element">
+<div class="element screencast">
 <script type="text/javascript" src="https://asciinema.org/a/GeTFKrw008VoF8IZxqJQXItsw.js" id="asciicast-GeTFKrw008VoF8IZxqJQXItsw" async></script>
 </div>
 
@@ -75,10 +77,11 @@ should create a new container with a blank window stuck to it, and then run
 `/window stick #` which will unstick the window from its former container and
 subsequently stick it to the focussed container :wink:.
 
-> To avoid stickiness confusion, I would recommend creating splits with
-`window split new` and manually sticking windows to the new container using
-`window stick #` until one is comfortable with the concept of stickiness in
-Irssi.
+<div class="element note">
+To avoid stickiness confusion, I would recommend creating splits with `window
+split new` and manually sticking windows to the new container using `window
+stick #` until one is comfortable with the concept of stickiness in Irssi.
+</div>
 
 [^hash]: Replace `#` for a valid window number :wink:
 
@@ -148,22 +151,22 @@ Ctrl-P, Ctrl-N            - Jump to previous / next window
 
 Testing
 
-{% highlight bash %}
+```bash
 wget http://crt.gandi.net/GandiStandardSSLCA.crt
-{% endhighlight %}
+```
 
-{% highlight bash %}
+```bash
 openssl x509 -inform der -outform pem < /usr/share/ca-certificates/gandi.net/GandiStandardSSLCA.crt > GandiStandardSSLCA.pem
-{% endhighlight %}
+```
 
-{% highlight bash %}
+bash
 /server add \
   -auto \
   -ssl \
   -ssl_cacert /etc/ssl/certs/GandiStandardSSLCA.pem \
   -network freenode irc.freenode.net 6697 \
   -autosendcmd "/msg NickServ IDENTIFY $NICK $PASSWORD; wait 2000;"
-{% endhighlight %}
+```
 
 
     /join $CHANNELNAME
@@ -178,8 +181,8 @@ openssl x509 -inform der -outform pem < /usr/share/ca-certificates/gandi.net/Gan
 
     /window new split
 
-## Change Window 
-Ctl-p Ctl-n Atl-ARROW 
+## Change Window
+Ctl-p Ctl-n Atl-ARROW
 
     /window next
     /window prev

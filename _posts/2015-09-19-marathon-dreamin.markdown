@@ -49,7 +49,7 @@ computer at this level. Nothing fancy yet.
 <iframe src="//giphy.com/embed/WhaiKgvZvsypW" width="480" height="235" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 Computer is on. I'm plugged in (sorry for the Matrix reference, don't want to
-confuse). 
+confuse).
 
 ## Level 2
 <div class="element giphy">
@@ -70,9 +70,9 @@ down the dream pipeline.
 
 One could start a task that lasts at least 10 seconds in Mesos.
 
-{% highlight bash %}
+```bash
 mesos-execute --master=$MASTER --name="envie" --command="echo env; sleep 10"
-{% endhighlight %}
+```
 
 This task would run as a framework (a short-lived one at that).
 
@@ -81,7 +81,7 @@ master), navigating to the frameworks view and selecting the most recently
 terminated framework (provided that the 10 seconds have already expired :wink:)
 one can enter the job's sandbox o observe the output to `stderr` and `stdout`.
 
-<div class="element img">
+<div class="element image">
 <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/mesos-frameworks-envo.png" alt="The Mesos frameworks view allows one to observe running and terminated frameworks">
 </div>
 
@@ -95,7 +95,7 @@ Marathon is started as a Mesos framework, which drops us down another level.
 Upon adding another Marathon job, the framework (being Marathon) manages the
 environment in which the call is executed.
 
-<div class="element img">
+<div class="element image">
 <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/mesos-marathon-add-envo.png" alt="Adding a Marathon job">
 </div>
 
@@ -106,11 +106,11 @@ Selecting the task's sandbox and opening the task's `stdout` (both screens
 portrayed in the following figures) allows us to introspect `stdout` for the
 task of interest.
 
-<div class="element img">
+<div class="element image">
 <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/mesos-jobs-envo.png" alt="The mesos portal allows one to get into the job's sandbox">
 </div>
 
-<div class="element img">
+<div class="element image">
 <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/mesos-sandbox-envo.png" alt="A look inside the Mesos sandbox allows one to view the job's stderr and stdout">
 </div>
 

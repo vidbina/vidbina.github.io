@@ -24,7 +24,7 @@ description: |
   radio-congested areas many of us call home.
 ---
 
-I have spend the better part of the last months hanging around different 
+I have spend the better part of the last months hanging around different
 neighborhoods in Berlin (mostly Kreuzberg) and have been suffering from a lot
 of network related problems.
 
@@ -35,24 +35,24 @@ This morning I ran a `airport -s` scan, I noticed the excessive use of channels
 1, 6 and 11. Everyone seems to be using the three non overlapping channels,
 especially if routers are just used out-of-the-box.
 
-{% highlight bash %}
+```bash
 System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport
-{% endhighlight %}
+```
 
-<div class="element img animate">
+<div class="element image animate">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/wlanscankreuzberg1.png" alt="WLAN scan in Kreuzberg" >
 </div>
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/wlanscankreuzberg2.png" alt="WLAN scan in Kreuzberg" >
 </div>
 
-<div class="element img">
+<div class="element image">
   <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/screenshots/wlanscanguikreuzberg.png" alt="WLAN scan in Kreuzberg" >
 </div>
 
 
-<div class="element img light">
+<div class="element image light">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/2.4_GHz_Wi-Fi_channels_%28802.11b%2Cg_WLAN%29.svg/720px-2.4_GHz_Wi-Fi_channels_%28802.11b%2Cg_WLAN%29.svg.png" alt="Graphical representation of 2.4 GHz band channels">
 </div>
 

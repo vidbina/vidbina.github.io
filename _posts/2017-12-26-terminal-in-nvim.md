@@ -17,7 +17,7 @@ tags:
  - workflow
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -27,7 +27,9 @@ og:
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
 ---
-> :bulb: See `:help terminal-emulator` in neovim for more info
+<div class="element note">
+:bulb: See `:help terminal-emulator` in neovim for more info
+</div>
 
 Ocasionally I will sideline my WM[^wm] (XMonad) or terminal multiplexer (tmux) in
 order to start a terminal session in nvim itself.
@@ -55,11 +57,13 @@ prefixed by the `term://` to be executed in the terminal as in
  - `:split term://htop` spawning htop in a terminal and
  - `:edit term://bash` spawning a bash shell :shell:.
 
-> Note that navigating between neovim windows is only possible in normal mode.
+<div class="element note">
+Note that navigating between neovim windows is only possible in normal mode.
 Which should make sense when you think about it. It isn't much different when
 editing text in vim-ish editors. The terminal-emulator help page documents how
 you may define mappings using `:noremap` and `:tnoremap` to specify mappings to
 navigate windows within any mode.
+</div>
 
 So in conclusion,
  - use the `:terminal` command to spawn a terminal or

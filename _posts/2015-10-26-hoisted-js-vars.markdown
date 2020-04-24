@@ -22,11 +22,11 @@ description: A very basic post on the subleties of variable hoisting in Javascri
 ---
 Just a little post on variable hoisting in Javascript. It's nothing new, just
 a simple reminder whenever I context-switch from whichever of the gazillion
-languages I write in back to ES6. There are a few subtleties regarding `var` 
+languages I write in back to ES6. There are a few subtleties regarding `var`
 and `let`/`const` declarations that everyone writing Javascript should be
 aware of. :warning:
 
-<div class="element">
+<div class="element gif">
   <iframe src="//giphy.com/embed/6NvROVDmhI3QI" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
@@ -36,19 +36,19 @@ Calling a variable without having it declared will result to a
 `ReferenceError`.
 
  <!-- A -->
-{% highlight javascript %}
+```javascript
 function hi () {
   console.log(`hello ${sidekick}`);
 }
 hi ();
 // ReferenceError: sidekick is not defined
-{% endhighlight %}
+```
 
 **Variable `var` declarations are hoisted to the top of a _function_** which
 means that all declared variables are available anywhere in the function
 regardless of where they were declared.
 
-{% highlight javascript %}
+```javascript
 function hi () {
   // with hoisting sidekick is already available here
   console.log(`hello, ${sidekick}`);
@@ -56,7 +56,7 @@ function hi () {
 }
 hi ();
 // hello undefined
-{% endhighlight %}
+```
 
 Now with hoisting we can only promise that a variable will be accessible.
 It isn't defined yet. Nothing meaningful is assigned to it yet.
@@ -69,7 +69,7 @@ It isn't defined yet. Nothing meaningful is assigned to it yet.
 them**. Eventhough declarations are hoisted to the top of the block,
 definitions apply whenever the assignment is handled.
 
-{% highlight javascript %}
+```javascript
 function hi () {
   // sidekick is hoisted here, which means it exists
   console.log(`hello, ${sidekick}`);
@@ -79,13 +79,13 @@ function hi () {
 hi ();
 // hello undefined
 // c'mon, Morty
-{% endhighlight %}
+```
 
 Even if the variable of interest happened to be defined in a parent scope, a
 hoisted `var` will be `undefined` by default within the scope in which it is
 hoisted.
 
-{% highlight javascript %}
+```javascript
 var sidekick = 'Rick';
 function hi () {
   // sidekick hoisted to this point and undefined
@@ -96,7 +96,7 @@ function hi () {
 hi ();
 // hello undefined
 // you don't understand, Morty
-{% endhighlight %}
+```
 
 It sometimes helps to imagine that any `var` variable declaration adds the
 statement `var x = undefined;` at the top of the scope.
@@ -109,7 +109,7 @@ block, **`let` and `const` are hoisted to the top of the containing block**
 which could be a `while` or `for` block or anything else where a block is
 described in addition to `function` blocks.
 
-{% highlight javascript %}
+```javascript
 function hi () {
   // sidekick is hoisted to this point
   if(true) {
@@ -121,14 +121,14 @@ function hi () {
 hi ();
 // let's cook, Pinkman!
 // you don't think, Pinkman
-{% endhighlight %}
+```
 
 In that sense the scoping of `let` and `const` statements is a bit more
 restrictive. A `let` or `const` declaration would be limited to the scope of
 the if-block within which it was declared in our current example leaving
 someone without its sidekick.
 
-{% highlight javascript %}
+```javascript
 function hi () {
   if(true) {
     // sidekick plays within this block
@@ -141,7 +141,7 @@ function hi () {
 hi ();
 // let's cook, Pinkman!
 // ReferenceError: sidekick is not defined
-{% endhighlight %}
+```
 
 A declared variable is set to `undefined`, even if the parent scope contains
 a variable by the same name.
@@ -152,7 +152,7 @@ If a variable is not defined in the local scope, javascript climbs up the
 scope ladder until it arrives at a scope that does define the variable of
 interest. **With `var` declarations the hoisting boundary is the function**.
 
-{% highlight javascript %}
+```javascript
 var sidekick = 'Dr. Watson';
 function hi () {
   // sidekick hoisted
@@ -172,12 +172,12 @@ function hi () {
 // another mystery, undefined
 // mystery solved, undefined?
 // the answer ss undefined
-{% endhighlight %}
+```
 
-**With `let` and `const` declarations the hoisting boundary is defined by the 
+**With `let` and `const` declarations the hoisting boundary is defined by the
 containing block**.
 
-{% highlight javascript %}
+```javascript
 var sidekick = 'Dr. Watson';
 function hi () {
   console.log(`another mystery, ${sidekick}`)
@@ -197,7 +197,7 @@ function hi () {
 // another mystery, Dr. Watson
 // mystery solved, Dr. Watson?
 // the answer ss undefined
-{% endhighlight %}
+```
 
 It is useful to know the mechanics of hoisting, although for readabilities'
 sake it would be advised to not depend on this language feature too much.

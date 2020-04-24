@@ -21,7 +21,7 @@ tags:
 emojify: true
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -52,7 +52,7 @@ respectively as demonstrated in the [screencast][asciinema-man-skip] below. But
 these bindings are not worth remembering as the `man` tool prints an
 informative prompt that lists those bindings when relevant.
 
-<div class="element">
+<div class="element screencast">
   <script id="asciicast-wspj6740NJTMooh24IQKOUsET" src="https://asciinema.org/a/wspj6740NJTMooh24IQKOUsET.js" async></script>
 </div>
 

@@ -18,7 +18,7 @@ tags:
  - sovereignty
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -69,7 +69,7 @@ understand each other's plights, let alone be emphatic towards members of the
 other group.
 
 As a _big-city_ software engineer who can make a decent living, I may not
-posses the proper background to truly empathize with the rural fishermen 
+posses the proper background to truly empathize with the rural fishermen
 because of my detachment. I simply don't live the fisherman's live. Even if I
 believe to understand the numbers, Kahneman would point out that I may not be
 as skilled at performing statistical analysis as well as I, as human, may think
@@ -113,7 +113,7 @@ Compliance is annoying, but you wouldn't know that if you're just writing
 software[^q], making music or writing articles. The EU attempts to protect its
 its interests by laws that may deter entrepreneurs with less means, but the
 corporations can sure handle it. There is a reason why Brussels is lobby town.
-As ofter seen in government, there exists or occurs a disparity between the 
+As ofter seen in government, there exists or occurs a disparity between the
 interests of the ruling classes and the working classes.
 
 The Danes have an curious relationship with the union. The Swiss aren't even

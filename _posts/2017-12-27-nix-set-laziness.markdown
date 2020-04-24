@@ -37,11 +37,13 @@ og:
 head: mugshot
 ---
 
-> :bow: Special thanks to [@Profpatsch][profpatsch] for making sure that I keep
+<div class="element note">
+:bow: Special thanks to [@Profpatsch][profpatsch] for making sure that I keep
 my terminology in line with the rest of the community. I erronously referred to
 attrsets as "sets", but saw the confusion therein as attrsets are more akin to
 hashmap than sets as they are formally known in [CS :computer:][set-cs] and
 [mathmathics (Set Theory)][set-math].
+</div>
 
 <div class="element tweet">
   <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Great article, minor nitpick: We usually call them attribute sets (or attrsets), to differentiate from normal (multi-)sets (collections of values with no identifiers except maybe equality). They are more akin to (hash)maps (and internally probably implemented as such).</p>&mdash; Patschisupercalifragilisticexpialidociousdöner (@Profpatsch) <a href="https://twitter.com/Profpatsch/status/947462980568059905?ref_src=twsrc%5Etfw">December 31, 2017</a></blockquote>
@@ -170,15 +172,17 @@ we end up with the result
 
 which leads me to the following take-away:
 
-> Exercise care when using recursive attrsets in overrides and understand when
-used on the left-hand side, referenced attributes will be evaluated prior to the
-merge.  If anything, it makes some sense to avoid the use of recursive attrsets
-unless you have a good understanding of its inner-workings. I've been bitten
-before by defining a recursive attrset for the general part of a derivation and
-then merging it with another attrset to compose the concrete attrsets for
-different derrivative packages, without being aware that some values could be
-referenced against the old attrset attributes and others against the override
-attrset attributes, depending on the expressions used.
+<div class="element note">
+Exercise care when using recursive attrsets in overrides and understand when
+used on the left-hand side, referenced attributes will be evaluated prior to
+the merge.  If anything, it makes some sense to avoid the use of recursive
+attrsets unless you have a good understanding of its inner-workings. I've been
+bitten before by defining a recursive attrset for the general part of a
+derivation and then merging it with another attrset to compose the concrete
+attrsets for different derrivative packages, without being aware that some
+values could be referenced against the old attrset attributes and others
+against the override attrset attributes, depending on the expressions used.
+</div>
 
 The following pseudo-code demonstrates this problem in something remarkably stupid
 I attempted earlier on.
