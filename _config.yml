@@ -10,3 +10,5 @@ paginate: 50
 disqus_shortname: vidbina
 permalink: /:categories/:title/
 url: https://vid.bina.me
+plugins:
+  - jemoji
