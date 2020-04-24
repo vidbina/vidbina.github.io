@@ -189,20 +189,17 @@ html, body { height: 100%; }
       text-align: left;
       width: 90%;
     }
-  }
-  .element > div,
-  .element > span,
-  //.element > div > *,
-  .element > img {
-    width: 100%;
+
+    &.image {
+      img {
+        width: 100%;
+      }
+      transition: all .2s ease-in-out;
+      &.light { background: #ddd; }
+      &.dark { background: #333; }
+    }
   }
 
-  .element.img {
-    transition: all .2s ease-in-out;
-  }
-
-  .element.img.light { background: #ddd; }
-  .element.img.dark { background: #333; }
   .element.graph {
     //width: 100%;
     div {
