@@ -15,6 +15,7 @@ and every time a landing page is needed. I almost lose my mind over the amount
 of time wasted on pixel-twerking instead of turning the knobs that could get
 the company to grow. Many companies have great landing pages, learn from them
 and focus on the business instead of webpages."
+emojify: true
 ---
 I think startups should spend more time on tweaking their business model and
 gaining traction than building landing pages.

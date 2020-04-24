@@ -25,6 +25,7 @@ twitter:
   card: summary_large_image
   image: http://example.com
 head: mugshot
+emojify: true
 ---
 The people's _favorite_ companies do this all the time. The people pay taxes
 like there is no tomorrow while the companies sell them overpriced services or

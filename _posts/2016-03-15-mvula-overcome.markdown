@@ -22,6 +22,7 @@ image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/music/laura-mvula-o
 twitter:
   card: summary_large_image
   image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/music/laura-mvula-overcome-come.png
+emojify: true
 ---
 From the first time I heard [Laura Mvula](https://en.wikipedia.org/wiki/Laura_Mvula)
 I believed in angels :angel:. No seriously, her voice is celestial, especially

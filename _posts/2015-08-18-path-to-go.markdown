@@ -15,6 +15,7 @@ description: "Simple notes-to-self on setting <code>GOPATH</code>'s to keep
 projects clean and devs happy."
 redirect_from:
   - /path-to-go.html
+emojify: true
 ---
 In order to work with Go packages, one will need to setup a `GOPATH`
 environment variable which contains the path to the directory one intents to

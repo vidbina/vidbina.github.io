@@ -25,6 +25,7 @@ tags:
 #twitter:
 #  card: summary_large_image
 #  image: http://example.com
+emojify: true
 ---
 This morning I learned about Kloudsec, a service that offers a CDN, HTTPS
 encryption and shadowing in case Github pages are unavailable[^1]

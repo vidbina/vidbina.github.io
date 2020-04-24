@@ -15,6 +15,7 @@ redirect_from:
   - /2014/04/11/animating-laundr.html
   - /animating-laundr/
 description: "Laundr picks up, cleans and delivers your suits when you want it, where you want it. This article chronicles the events as I experienced them. Conception, first app shipment and first actual delivery."
+emojify: true
 ---
 
 I believe it has been a month and a half since this idea has been floating

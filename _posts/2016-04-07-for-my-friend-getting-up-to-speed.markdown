@@ -27,6 +27,7 @@ tags:
 #  card: summary_large_image
 #  image: http://example.com
 head: mugshot
+emojify: true
 ---
 
 This post is a work in progress... I'll keep editing it in the next couple of

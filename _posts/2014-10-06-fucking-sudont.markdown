@@ -14,6 +14,7 @@ tags:
 description: When shit goes down it is often because noobs or lazy bozos decide to slap sudo in front of every seemingly failing command. For the love of the FSM, stop excessive sudoing!
 redirect_from:
   - /web/fucking-sudont/
+emojify: true
 ---
 
 In the design of unix and unix-based OS-es a clear distinction is quite visibly

@@ -13,6 +13,7 @@ tags:
 redirect_from:
   - /2014/01/19/flight-routes.html
   - /flight-routes/
+emojify: true
 ---
 The misses is on a flight to Suriname, so I'm tracking her flight in an online
 flight tracker while she is enroute.

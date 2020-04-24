@@ -10,6 +10,7 @@ tags:
 redirect_from:
   - /music/2014/08/30/grooves.html
   - /music/grooves/
+emojify: true
 ---
 [Michael League and the other extraordinary gents and dames](http://www.snarkypuppy.com) have been putting it
 down for several years. Due to circumstances I wasn't able to witness their

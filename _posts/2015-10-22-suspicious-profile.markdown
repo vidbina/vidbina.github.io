@@ -19,6 +19,7 @@ og:
   article: #see ogp.me/#types
     author: https://www.facebook.com/david.asabina
 description: My experience with the German police and how I can understand the hatred that some people have against police forces.
+emojify: true
 ---
 It is Thursday the 22nd of October 2015 and I boarded a bus towards Munich in
 Amsterdam a night ago. I planned to visit two prospective clients to discover

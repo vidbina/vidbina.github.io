@@ -28,6 +28,7 @@ twitter:
   card: summary_large_image
   image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/ipas.png
 head: mugshot
+emojify: true
 ---
 
 So a few fellas and gals are having a meetup in Amsterdam in a few minutes

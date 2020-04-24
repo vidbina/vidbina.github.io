@@ -13,6 +13,7 @@ tags:
  - unix
 mathjax: true
 description: A note-to-self to future me in case I forget how to perform calculation in my terminal without firing up a REPL
+emojify: true
 ---
 Sometimes these basic questions pop up that need me to seek the counsel of a
 calculations oracle. Because I am somewhat of a terminal hermit it helps to

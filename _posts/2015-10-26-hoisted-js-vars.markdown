@@ -19,6 +19,7 @@ og:
     author: https://www.facebook.com/david.asabina
     section: Javascript
 description: A very basic post on the subleties of variable hoisting in Javascript comparing var and let declarations.
+emojify: true
 ---
 Just a little post on variable hoisting in Javascript. It's nothing new, just
 a simple reminder whenever I context-switch from whichever of the gazillion

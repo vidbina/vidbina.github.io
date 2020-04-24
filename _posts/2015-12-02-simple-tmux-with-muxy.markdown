@@ -26,6 +26,7 @@ og:
       - cli
     section: Software Engineering
 description: A pragmatic solution to dealing with multiple sessions in tmux
+emojify: true
 ---
 
 A while ago I wrote a little tool to help me in managing my project workspaces

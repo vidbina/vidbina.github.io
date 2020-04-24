@@ -17,6 +17,7 @@ tags:
 description: "Like Inception, devops land is just a matter of setting up and
 controlling dreams within dreams, environments within environments and here is
 my silly analogy."
+emojify: true
 ---
 It's weekend... so I allow myself this silly post. Every time, I play around
 with Mesos, Marathon and/or Kubernetes I feel like I'm the star in my very own

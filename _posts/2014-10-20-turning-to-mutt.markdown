@@ -14,6 +14,7 @@ description: |
   A return to the most versatile mail client I have ever had the pleasure of
   using after many frustration hours with Google Mail, Apple Mail, Sparrow and
   Airmail
+emojify: true
 ---
 I have tried Mail, Sparrow, Airmail and have now returned back to Mutt
 with my tail wagging between my legs, because they all sucked.

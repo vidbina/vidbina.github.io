@@ -12,6 +12,7 @@ mathjax: true
 description: "When working with values in different base systems it may be
 convenient to know how to determine how much digit spaces a value would
 require"
+emojify: true
 ---
 Especially when working with microprocessors I frequently have to figure out
 how many bits I would need to capture a given value. It so happened to be

@@ -26,6 +26,7 @@ twitter:
   image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/list-stars.png
 head: mugshot
 mathjax: true
+emojify: true
 ---
 So I just needed to present a list of authors in an article but I didn't want
 to resort to writing a stupid text shoving helper.

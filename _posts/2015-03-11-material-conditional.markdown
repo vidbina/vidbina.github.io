@@ -14,6 +14,7 @@ description: "A simpleton's reasoning of material conditionals (if/then logic
 $p\\rightarrow q$) which seems to be different from the way we discuss if/then
 constructs in everyday English or computation but really isn't at all hard to
 grasp."
+emojify: true
 ---
 After a inspiring catch-up dinner with the founder of
 [Clinck](http://clinck.me), I've just resumed my week's reading. I'm covering

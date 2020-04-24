@@ -24,6 +24,7 @@ og:
 description: "First encounters in setting up and using a Kubernetes cluster on Google Cloud"
 redirect_from:
   - /web/kubernetes/
+emojify: true
 ---
 Kubernetes allows one to orchestrate cloud resources in an elegant fashion,
 specifically... by allowing one to interact with a single point of entry to the
