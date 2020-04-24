@@ -16,17 +16,18 @@ tags:
  - africa
  - networking
  - crowdfunding
+emojify: true
 ---
 
-<blockquote>
+<div class="element note">
 I didn't make it. Didn't even get close. So yeah. That was a real bummer (which
 is the only word I can think of and still abstain from profanities). I did try
-so now I know how it would have worked out. What I also learned is that I 
-should reserve a fair amount of energy to get campaigns going if I ever try 
-that crowdfunding thing again. Another note... If many of your friends are 
-exclusively in the not-yet-funded startup husstle they will scrambling for 
-cents themselves.
-</blockquote>
+so now I know how it would have worked out. What I also learned is that I
+should reserve a fair amount of energy to get campaigns going if I ever try
+that crowdfunding thing again. Another note... If many of your friends are
+exclusively in the not-yet-funded startup hustle they will scrambling for cents
+themselves.
+</div>
 
 
 <div class="element">
@@ -104,19 +105,18 @@ fun, losing money, giving
 200% percent and some other things that may become hallmark moments during
 anyone&rsquo;s venture through the tough jungle of entrepreneurship.
 
-I have been riding this rollercoaster for a few years now 
-{{ ":roller_coaster:" | emojify }}.
+I have been riding this rollercoaster for a few years now :roller_coaster:.
 
 It seems fun to get in touch with other entrepreneurs to share my experiences.
 
-###Connecting
+### Connecting
 Some of the great cats I have had the pleasure of connecting
 with in the past year stem from my [startupbus][startupbus] adventure last year.
 I relate to the misfits, the goons, those buffoons with crazy ideas looming, 
 with radical dreams blooming and a unhealthy dose of energy to tackle the 
 challenges head-on. You usually meet these nut-jobs on these trips :grin:.
 
-###Recharging
+### Recharging
 Sleep deprivation may be one of the culprits for exhaustion, yet during this 
 very adventure it will not obstruct the experience from rejuvenating my mind --
 it didn&rsquo;t last year when I coasted through Europe.
@@ -157,7 +157,7 @@ pledges come at different costs obviously.
  :notes:. I will spice things up with technology of course.
  My trusty computer will be on-stage composing music along with me during the
  performance (you have to see this :wink:).
- - a {{ ":video_camera:" | emojify }} documentary chronicalling the experiences during my trip
+ - a :video_camera: documentary chronicalling the experiences during my trip
  - monthly video summaries for the year after the trip to report on my 
  activities and share the progress I have been making in the projects I am 
  involved in
@@ -184,7 +184,7 @@ some early input if possible.
 {% endif %}
 
 In the year I was minted someone had a similar idea. Was only headed in the 
-wrong direction {{ ":stuck_out_tongue_winking_eye:" | emojify }}. I was 
+wrong direction :stuck_out_tongue_winking_eye:. I was 
 actually born a few months later to set the balance straight. For those who 
 don&rsquo;t remember what went down that year, a reminder&hellip;
 <div class="element video">
@@ -196,7 +196,7 @@ don&rsquo;t remember what went down that year, a reminder&hellip;
 I code (software), I hack (hardware) and I jam (music). Because I feel that 
 I am in need of a fresh batch of inspiration, I will be more than grateful to 
 enjoy the opportunity to travel to the largest, and currently rapidly changing
-(in terms of entrepreneurship), continent on our beloved planet {{ ":earth_africa:" | emojify }}.
+(in terms of entrepreneurship), continent on our beloved planet :earth_africa:.
 
 <div class="element instagram">
   <iframe src="//instagram.com/p/rHkkNiS0BQ/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>

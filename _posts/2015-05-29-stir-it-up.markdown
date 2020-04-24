@@ -16,7 +16,10 @@ tags:
  - opinion
  - psychology
 mathjax: true
-description: "Just an opinion (my opinion) on the efforts out there to organize events for minority members."
+description: |
+  Just an opinion (my opinion) on the efforts out there to organize events for
+  minority members.
+emojify: true
 ---
 I've been thinking about something lately. Nowadays, I read more about ideas to 
 organize events that cater to minority audiences like women in certain branches 
@@ -85,7 +88,7 @@ stage could be executed more effectively.
 
 <blockquote>
 Ran into this video online which is quite nice to listen to, just give it a 
-try and if you're into gaming {{ ":video_game:" | emojify }}, you'll have 
+try and if you're into gaming :video_game:, you'll have 
 something to watch as well.
 <div class="element video">
   <iframe width="420" height="315" src="https://www.youtube.com/embed/9RZ13rgCcww" frameborder="0" allowfullscreen></iframe>

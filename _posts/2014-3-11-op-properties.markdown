@@ -13,6 +13,7 @@ redirect_from:
   - /2014/03/11/op-properties.html
   - /op-properties/
 description: A quick glance at some of the properties of operators as commonly encoutered in my ventures through the world of computer science and mathematics.
+emojify: true
 ---
 
 ## Associativity
@@ -65,7 +66,7 @@ when the operands are not equal to each other.
  - notice that $1^{2} = 1$ while $2^{1} = 2$
  - $2^3 = 8$ while $3^{2} = 9$
  - when the operands are similar (both $2$) swapping the order has no effect because $2^{2} = 4$ either ways :wink:
- - but in some cases swapping different operands may still return the same result as $4^2 = 16$ and $2^4 = 16$ as well {{ ":speak_no_evil:" | emojify }}
+ - but in some cases swapping different operands may still return the same result as $4^2 = 16$ and $2^4 = 16$ as well :speak_no_evil:
 
 Cross-products are also non-commutative, but I suppose the concept of
 commutativity is clear with the given example, so no need to spend more

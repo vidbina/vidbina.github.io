@@ -8,10 +8,12 @@ tags:
  - reflection
  - milestone
  - talk
-description: "In order to deal with the growing pains I'm suffering from at the 
-moment of the 27th New Year's eve I'm experiencing, I've decided to type 
-myself into the new year whilst reflecting and looking ahead. Somewhat of a 
-\"Dear Diary\" kind of moment"
+description: |
+  In order to deal with the growing pains I'm suffering from at the moment of
+  the 27th New Year's eve I'm experiencing, I've decided to type myself into
+  the new year whilst reflecting and looking ahead. Somewhat of a "Dear Diary"
+  kind of moment.
+emojify: true
 ---
 It's about twelve now and everyone is going crazy outside.
 I just woke up, reasonably well rested and ready to tackle a new year. Well, 
@@ -28,7 +30,7 @@ call them :wink: and I woudn't know what I would have been
 without them.
 
 I'm set for another lesson-filled journey, but this time a bit less painful 
-hopefully {{ ":stuck_out_tongue:" | emojify }}. The wonderful part of
+hopefully :stuck_out_tongue:. The wonderful part of
 it all is that the last three years helped my bury some of the naive notions I
 vehemently believed in. I'm getting much better at observing the world in a 
 manner more reminiscent of its true nature. And honestly my new view of the 
