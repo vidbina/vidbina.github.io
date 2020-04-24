@@ -31,7 +31,7 @@ instead.
 
 <div class="element note">
 **DISCLAIMER**: I don't believe that any system will ever be bulletproof.
-We'll just keep designing stronger, faster and more destructive bullets... or 
+We'll just keep designing stronger, faster and more destructive bullets... or
 bigger guns. I do, however; believe that securing yourself is infinitely less
 stupid than ignoring it altogether and just logging on to every damn network
 you can find.
@@ -80,7 +80,7 @@ usage: pfctl [-AdeghmNnOqRrvz] [-a anchor] [-D macro=value] [-F modifier]
 ```
 
 ## The Seven
-Just for a full understanding there are 7 types of statements in 
+Just for a full understanding there are 7 types of statements in
 
  - macros: user defined variables
  - tables: collections of addresses and/or networks

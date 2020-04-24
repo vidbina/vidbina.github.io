@@ -17,7 +17,7 @@ tags:
  - xserver
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -421,6 +421,6 @@ systemd.user.services.ibus-daemon = {
 };
 ```
 
-[escape-nix]:https://nixos.org/nix/manual/#idm140737318136176 
+[escape-nix]:https://nixos.org/nix/manual/#idm140737318136176
 
 [^escape-nix]: Since `${` and `''` have special meaning in indented strings, you need a way to quote them. `${` can be escaped by prefixing it with `''` (that is, two single quotes), i.e., `''${`. `''` can be escaped by prefixing it with `'`, i.e., `'''`. Finally, linefeed, carriage-return and tab characters can be written as `''\n`, `''\r`, `''\t`.

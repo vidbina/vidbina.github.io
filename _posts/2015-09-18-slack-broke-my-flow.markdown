@@ -33,7 +33,7 @@ alerting me out of my flow."
 ---
 I'm getting stuff done again. Concocting possible next steps to be able to
 present a well thought-through battleplan to the team. Yes, I'm awaiting that
-moment the metrics demonstrate that we are set to move forward; that moment 
+moment the metrics demonstrate that we are set to move forward; that moment
 when we have discovered the wave we are to ride :surfer:. Suddenly I'm jolted
 out of the zone by this one sound that I have come to dislike intensely :rage:.
 Crap :shit:, that's what you get for forgetting to kill Slack before getting
@@ -52,15 +52,15 @@ significant deal of effort after such a interruption.
 
 Task switching is hard and humans don't shine at performing this trick (neither
 do computers by the way[^1]). The
-[great Joel Spolsky][joel] wrote about it multiple times (read 
+[great Joel Spolsky][joel] wrote about it multiple times (read
 [_Human Task Switches Considered Harmful_][joel-task-switching],
-[_Where do These People Get Their (Unoriginal) Ideas?_][joel-in-the-zone] and 
-[The Multi-Tasking Myth][joel-multitasking-myth]) and a 
+[_Where do These People Get Their (Unoriginal) Ideas?_][joel-in-the-zone] and
+[The Multi-Tasking Myth][joel-multitasking-myth]) and a
 [lot of brilliant researchers][ama-multitasking] have empirically studied the
 costs of task switching. Task switching is not unrelated to interruptions and
 everyone who has ever written code with a non coder nearby knows how
-frustrating it is to lose a train of thought to hear about 
-[another oh-so-funny cat meme](http://knowyourmeme.com/search?q=cat). 
+frustrating it is to lose a train of thought to hear about
+[another oh-so-funny cat meme](http://knowyourmeme.com/search?q=cat).
 
 [^1]: Multitasking in computing requires a context switch which is a rather expensive operation. Registers, stack pointers and program counters are modified as the context is altered for the one task to be properly suspended and another task to be initiated or resumed. Just running a single task is generally more efficient as there is no switching overhead. A processor with multiple cores isn't multitasking if every core is handling another task (it is in fact multiprocessing) and humans aren't multitasking if every member in the team is doing one thing at a time from start to finish. It's that simple and there is more to read on this matter by [the Crazy Programmer][multi].
 
@@ -96,11 +96,11 @@ The cool thing about the headphones, however; is that most people seem to
 understand that one is not to be bothered for small matters whenever the
 headphone wall has to be broken.
 
-[^emre]: Speaking about papers, I just stumbled upon [Emre Karagozler's](https://www.andrew.cmu.edu/user/mkaragoz/) work (whom I just learned about through the [Google Soli](https://www.google.com/atap/project-soli/) project). I read his [_Harnessing Capacitance for Inter-Robot Latching, Communication, and Power Transfer_](http://www.cs.cmu.edu/~claytronics/papers/karagozler-msreport07.pdf) paper and would recommend it to anyone who tinkers with electronics. It's pretty remarkable material and just being aware of this method of latching modular robots is worthwhile. 
+[^emre]: Speaking about papers, I just stumbled upon [Emre Karagozler's](https://www.andrew.cmu.edu/user/mkaragoz/) work (whom I just learned about through the [Google Soli](https://www.google.com/atap/project-soli/) project). I read his [_Harnessing Capacitance for Inter-Robot Latching, Communication, and Power Transfer_](http://www.cs.cmu.edu/~claytronics/papers/karagozler-msreport07.pdf) paper and would recommend it to anyone who tinkers with electronics. It's pretty remarkable material and just being aware of this method of latching modular robots is worthwhile.
 
 ## Noise
 
-Whenever a workspace gets really noisy, I often crank up the 
+Whenever a workspace gets really noisy, I often crank up the
 [white noise](https://www.youtube.com/watch?v=wzjWIxXBs_s) which works well in
 drowning out the noises of pingpong, the laughs of meme watching folk and the
 funky beats of the one person who just has to play that through his Sonos.

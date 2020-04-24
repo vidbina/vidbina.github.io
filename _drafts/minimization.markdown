@@ -50,7 +50,7 @@ Simply put, the matrix pertains to an expression that involves two
 variables, which we'll call $x_1$ and $x_2$. The vector containing these
 variables would be expressed as
 $$\bigl(\begin{smallmatrix}x_1\\ x_2\end{smallmatrix}\bigr)$$. In order
-to determine whether the matrix $$K$$ is a positive definite matrix we will need 
+to determine whether the matrix $$K$$ is a positive definite matrix we will need
 to determine $$\mathbf{x}^TK\mathbf{x}$$.
 
 $$\begin{pmatrix}x_1&x_2\end{pmatrix}\begin{pmatrix}a&b\\c&d\end{pmatrix}\begin{pmatrix}x_1\\x_2\end{pmatrix}$$
@@ -60,7 +60,7 @@ $$\begin{pmatrix}ax_1+cx_2&bx_1+dx_2\end{pmatrix}\begin{pmatrix}x_1\\x_2\end{pma
 $$\begin{pmatrix}ax_1^2+(b+c)x_1x_2+dx_2^2\end{pmatrix}$$
 
 
-With the information given, 
+With the information given,
 $$\bigl(\begin{smallmatrix}4&-2\\-2&3\end{smallmatrix}\bigr)$$ may be expressed
 as $$4x_1^2-4x_1x_2+3x_2^2$$.
 
@@ -80,7 +80,7 @@ $$\begin{array}{c|c|c|}
 
 $$(2x_1-x_2)(2x_1-x_2) = 4x_1^2 -4x_1x_2 + x_2^2$$
 
-# Reading 
+# Reading
 
  - [Olver's Numerical Analysis Lecture Notes](http://www.math.umn.edu/~olver/num.html)
  - [Olver's Numerical Analysis Lecture Notes covering Minimization](http://www.math.umn.edu/~olver/num_/lnz.pdf)

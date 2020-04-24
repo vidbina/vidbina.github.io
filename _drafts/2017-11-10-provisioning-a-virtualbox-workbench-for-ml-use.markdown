@@ -18,7 +18,7 @@ tags:
  - virtualbox
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -173,7 +173,7 @@ d-i pkgsel/include string openssh-server build-essential ubuntu-desktop
 ```
 
 happened everytime an attempt was made to install `ubuntu-dekstop` in a script
-using `tasksel` such as 
+using `tasksel` such as
 
 ```bash
 #!/bin/bash
@@ -223,7 +223,7 @@ So `pkgsel/include` instead of `tasksel`.
 
 With the image ready, users still need a convenient method of exchanging
 information between the environment and their host system. Explaining the
-process of mounting shared volumes should not be a big problem, but 
+process of mounting shared volumes should not be a big problem, but
 
 ## Links
 

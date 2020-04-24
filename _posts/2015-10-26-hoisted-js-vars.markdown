@@ -22,7 +22,7 @@ description: A very basic post on the subleties of variable hoisting in Javascri
 ---
 Just a little post on variable hoisting in Javascript. It's nothing new, just
 a simple reminder whenever I context-switch from whichever of the gazillion
-languages I write in back to ES6. There are a few subtleties regarding `var` 
+languages I write in back to ES6. There are a few subtleties regarding `var`
 and `let`/`const` declarations that everyone writing Javascript should be
 aware of. :warning:
 
@@ -174,7 +174,7 @@ function hi () {
 // the answer ss undefined
 ```
 
-**With `let` and `const` declarations the hoisting boundary is defined by the 
+**With `let` and `const` declarations the hoisting boundary is defined by the
 containing block**.
 
 ```javascript

@@ -15,15 +15,15 @@ description: |
   right?!?
 emojify: true
 ---
-Yesterday I spent the better half of the day designing and testing running 
+Yesterday I spent the better half of the day designing and testing running
 variance and SMA functions for a project I happen to be working on. As with all
-things in embedded systems, memory is scarce. Therefore we abstain from 
-remembering sets of information as much as possible. 
+things in embedded systems, memory is scarce. Therefore we abstain from
+remembering sets of information as much as possible.
 
-For the running variance problem, I stumbled upon Welford's method for 
+For the running variance problem, I stumbled upon Welford's method for
 computing variance, but that is another story :bulb:.
 
-Anyways... While refreshing some of the basic math skills whilst working on the 
+Anyways... While refreshing some of the basic math skills whilst working on the
 problem I [rediscovered some amazing properties that one should exploit whenever
 performing summation operations on series][sigma-notation].
 

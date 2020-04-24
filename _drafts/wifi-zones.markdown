@@ -24,7 +24,7 @@ description: |
   radio-congested areas many of us call home.
 ---
 
-I have spend the better part of the last months hanging around different 
+I have spend the better part of the last months hanging around different
 neighborhoods in Berlin (mostly Kreuzberg) and have been suffering from a lot
 of network related problems.
 

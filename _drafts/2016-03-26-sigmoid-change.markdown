@@ -15,7 +15,7 @@ tags:
  - step function
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -69,7 +69,7 @@ Go the extra mile to separate the expression into two separate terms
 $$\frac{(1+e^{-x})}{(1+e^{-x})^2} - \frac{1}{(1+e^{-x})^2}$$
 
 We can simplify the first term since there is a $(1+e^{-x})$ in both
-the numerator and denominator. The second term can be simplified by 
+the numerator and denominator. The second term can be simplified by
 squaring the numerator; an operation which doesn't change a darn thing since
 the square of one remains one, yet this operation paves the way to squaring
 the entire term (numerator and denominator) which offers another

@@ -20,7 +20,7 @@ og:
     author: https://www.facebook.com/david.asabina
 description: My experience with the German police and how I can understand the hatred that some people have against police forces.
 ---
-It is Thursday the 22nd of October 2015 and I boarded a bus towards Munich in 
+It is Thursday the 22nd of October 2015 and I boarded a bus towards Munich in
 Amsterdam a night ago. I planned to visit two prospective clients to discover
 to which extent I could aid in their efforts by offering my hardware and
 software engineering services. There is really nothing special about such trips
@@ -55,7 +55,7 @@ determined to make a bust :confused:. While packing up my belongings to exit
 the bus, the female officer rummages through my belongings and accidentally
 drops my Macbook Air, picks it up and tells me it is alright. For a split
 second my mind races to the hell I'll have to venture through if the laptop
-ends up defective and I would have to setup a new laptop with all of my build 
+ends up defective and I would have to setup a new laptop with all of my build
 environments and rewrite all the uncommitted code on my trusty old pal. I would
 end up losing days installing all of my tools -- Jeez! Obviously I take her
 word for it because she must be an expert in assessing the state of electronic
@@ -81,7 +81,7 @@ neuroscience so I abstain from further comments.
 </div>
 
 The funny thing is that I haven't once been involved in any offense but at
-this moment it sure doesn't feel like I'm a law-abiding citizen. That probably 
+this moment it sure doesn't feel like I'm a law-abiding citizen. That probably
 isn't the intent of such operations, but it does reflect the result. Every
 corner of my luggage is scrutinized and hardly a word is uttered towards me as
 I undergo this ordeal. I don't feel like a respected citizen of the European
@@ -155,7 +155,7 @@ have been. The friendly bus drivers who are coincidentally driving me back to
 Amsterdam at night mentioned that the police was probably tipped off which could
 mean that I just became a victim of an anonymous tip. When I inquired to the
 reason or motivation for taking me to the station the female officer basically
-responded with a lousy "I smelled weed on the bus". So much for 
+responded with a lousy "I smelled weed on the bus". So much for
 _probable cause_ because it is so rare to pick up a remote hint of cannabis on a
 bus from Amsterdam. No canines were present but her olfactoric finesse was
 sufficient to raise red flags about the presence of weed in the present or

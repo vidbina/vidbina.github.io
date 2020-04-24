@@ -18,7 +18,7 @@ tags:
  - gender
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -57,7 +57,7 @@ types of machine learning models. Always remember that, self.
 </div>
 
 I know our mind generalizes and intuitively deduces things to offload
-some work from our active though processes. By not overanalyzing every 
+some work from our active though processes. By not overanalyzing every
 detail, we reserve some cognitive capacity for other things which eventually
 allow us to do the cool things us humans do, but everything has a flip
 side.

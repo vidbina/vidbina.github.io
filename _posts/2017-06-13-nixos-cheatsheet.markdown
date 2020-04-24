@@ -18,7 +18,7 @@ tags:
  - linux
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -376,7 +376,7 @@ where it is important to note that the lambda is enclosed between parenthesis
 to indicate to the language how to tokenize the expression.
 
 A function call in Nix looks like `fn arg` and without the parenthesis, the
-expression 
+expression
 
 ```nix
 x: x*2 24
@@ -427,7 +427,7 @@ is a much cleaner way to deal with bindings.
 
 ### Builtins
 
-[Learn x in y][learnxiny-nix] provides an excellent 
+[Learn x in y][learnxiny-nix] provides an excellent
 
 
 ### Demystifying the Firefox package
@@ -436,7 +436,7 @@ The `firefox` attribute in [all-packages.nix][gh-nixpkgs-all-firefox]
 is bound to the output of `wrapFirefox firefox-unwrapped { }`.
 
 In this case, the [wrapFirefox binding][gh-nixpkgs-all-wrapFirefox] has the
-output of 
+output of
 
 ```nix
 callPackage ../applications/networking/browsers/firefox/wrapper.nix { }
@@ -506,7 +506,7 @@ browser:
 wrapFirefox { stdenv ? stdenv, meta = {}  } {} {}
 ```
 
-and returns a lambda that 
+and returns a lambda that
 
 ```nix
 :l nixpkgs # ignore if <nixpkgs> is already loaded

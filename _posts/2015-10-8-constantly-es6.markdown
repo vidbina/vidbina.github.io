@@ -6,9 +6,9 @@ type: tools
 category: tools
 tags:
  - software
- - programming 
+ - programming
  - es6
- - ECMAscript 
+ - ECMAscript
  - javascript
 image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/twitter-cards/es6const_thumb.png
 twitter:
@@ -71,7 +71,7 @@ thing['name'] = 'Spaceship'; // ok
 thing = { 'name': 'Paperplane' } // fails, don't reassign
 ```
 
-Upon first glance it isn't far fetched to assume that somewhere in the 
+Upon first glance it isn't far fetched to assume that somewhere in the
 life cycle of a codebase, someone will mistake a constant for an item of
 immutable state. :warning:. Here is how I maintain sanity:
 

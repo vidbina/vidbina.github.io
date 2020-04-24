@@ -38,7 +38,7 @@ track.
   <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 </div>
 
-Using <em>muxy</em>, I can simply describe my setups for different 
+Using <em>muxy</em>, I can simply describe my setups for different
 [projects](https://github.com/vidbina/muxy-projects) and basically load a
 project by typing `load`[^load].
 
@@ -93,14 +93,14 @@ tmux attach-session -t $SESSION
 ## Leveraging Indexes
 
 Note how `$SESSION:N` is used to create a window at the given index.
-Generally one may use just the session name as the target as in 
+Generally one may use just the session name as the target as in
 
 ```bash
 tmux new-window -t $SESSION -n blah
 ```
 
 where tmux will automatically increment the index number for you, however;
-there may be situations where you predict you may need to add new windows 
+there may be situations where you predict you may need to add new windows
 on the fly while at work, but want to maintain order to some extent.
 
 Imagine starting a project with the following panes
@@ -135,9 +135,9 @@ Sometimes it may be convenient to create
 ## Different Environment Variables for Projects
 
 In order to properly deal with environment variables in tmux sessions, I would
-highly recommend the use of the `tmux set-environment` and 
+highly recommend the use of the `tmux set-environment` and
 `tmux update-environment` commands. The set and update environment commands
-could for instance be used in the up-files for a project to set the 
+could for instance be used in the up-files for a project to set the
 `$AWS_DEFAULT_PROFILE` variable for a devops user. That way one could just use
 the `aws` cli from any tmux session whilst knowing that the correct profile has
 been selected :wink:.

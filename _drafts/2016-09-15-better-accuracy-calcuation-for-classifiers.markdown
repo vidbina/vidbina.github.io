@@ -11,7 +11,7 @@ tags:
  - TAGB
 og:
   type: OG:TYPE # http://ogp.me/#types
-  og:type: # 
+  og:type: #
    - og:value: value
      og:attr: foo
    - og:value: value
@@ -96,7 +96,7 @@ $$accuracy = \frac{TP+TN}{TP+TN+FP+FN} = \frac{99950+40}{99950+40+10+0} = \frac{
 
 $$accuracy = \frac{TP}{k_N(TP+FP)} + \frac{TN}{k_N(TN+FN)} = \frac{99950}{2(99990)} + \frac{10}{2(10)}$$
 
-## 
+##
 How about expression accuracy on a per-class basis
 $$accuracy = \frac{TP}{k_N(TP+FP)} + \frac{TN}{k_N(TN+FN)} = \frac{99950}{2(99950)} + \frac{1}{2}$$
 

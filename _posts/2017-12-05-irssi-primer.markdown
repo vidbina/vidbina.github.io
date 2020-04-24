@@ -181,8 +181,8 @@ bash
 
     /window new split
 
-## Change Window 
-Ctl-p Ctl-n Atl-ARROW 
+## Change Window
+Ctl-p Ctl-n Atl-ARROW
 
     /window next
     /window prev

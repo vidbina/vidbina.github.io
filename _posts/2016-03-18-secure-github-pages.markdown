@@ -16,19 +16,19 @@ tags:
  - cloud
 #og:
 #  type: article # http://ogp.me/#types
-#  article: # 
+#  article: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
 
-#image: 
+#image:
 #twitter:
 #  card: summary_large_image
 #  image: http://example.com
 ---
 This morning I learned about Kloudsec, a service that offers a CDN, HTTPS
 encryption and shadowing in case Github pages are unavailable[^1]
-:stuck_out_tongue:. 
+:stuck_out_tongue:.
 
 <div class="element note">
 **UPDATE (September 22, 2016)**: Kloudsec is down :sob:, but Steve left [a few
@@ -43,7 +43,7 @@ on.
 
 In order to setup Kloudsec the user is required to update `A` and `TXT`
 DNS records for the domain of interest. The `A` record in my case points the
-domain `vid.bina.me` to a Kloudsec proxy. Quang Huynh discusses in 
+domain `vid.bina.me` to a Kloudsec proxy. Quang Huynh discusses in
 [this post][kloudsec-proxy] how one may configure a Nginx proxy server with
 a certificate obtained from [Let's Encrypt CA](https://letsencrypt.org/) to
 provide a similar self-managed solution.
@@ -168,7 +168,7 @@ but are hardly indistinguishable from the resources you intended to provide.
 
 In short, if there would be anything somewhere in the middle, it could be them.
 To be fair, if Github were to offer HTTPS pages for custom domains, they
-would have that power too, so what am I really bitching about here?!? 
+would have that power too, so what am I really bitching about here?!?
 :stuck_out_tongue_closed_eyes: It's just a trust issue, but I felt I needed to
 point it out clearly.
 

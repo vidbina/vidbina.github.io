@@ -17,7 +17,7 @@ tags:
  - operating system
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -98,7 +98,7 @@ NewDealDesign](https://newdealdesign.com/studio) (one of the bright minds behind
    - a couple of professors working on some cool interactive work-out setups backed by the
    Max-Planck Institute and
    - a plethora of AI-heads working on a number of different problems.
-   
+
 Meanwhile I'm dealing with my little machine fuck-up :rage:
 
 <div class="element video">

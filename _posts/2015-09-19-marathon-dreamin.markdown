@@ -49,7 +49,7 @@ computer at this level. Nothing fancy yet.
 <iframe src="//giphy.com/embed/WhaiKgvZvsypW" width="480" height="235" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 Computer is on. I'm plugged in (sorry for the Matrix reference, don't want to
-confuse). 
+confuse).
 
 ## Level 2
 <div class="element giphy">

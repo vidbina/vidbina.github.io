@@ -26,7 +26,7 @@ dig @SERVER_TO_ASK DOMAIN_TO_LOOKUP [options]
 
 The following snippet displays the `dig` request I issued in order to discover
 what Amazon's Route 53 was serving right after I edited some records. Yes, it
-will take some time for this information to propagate, but you can always ask 
+will take some time for this information to propagate, but you can always ask
 the authoritative DNS servers directly, which saves the wait.
 
 ```bash

@@ -15,7 +15,7 @@ tags:
  - audio
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -89,7 +89,7 @@ function keys ranging from `F1` through `F12`.
 
 <div class="element note">
 Note that NixOS reserves the seventh virtual terminal for the window manager
-and the [eight terminal for its manual][nixos-altf8]. 
+and the [eight terminal for its manual][nixos-altf8].
 </div>
 
 

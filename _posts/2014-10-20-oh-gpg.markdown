@@ -27,7 +27,7 @@ description: "Some GPG tricks everyone should know and master, because crypting 
 To encrypt and decrypt my secret messages on my box I use GPG. This post is
 hopefully going to jog the memory of senile future me (or just future me on a
 day on which I happen to be hammered and need to perform this trick). Perhaps
-there is something here that may be of any use to other folks as well 
+there is something here that may be of any use to other folks as well
 :beer:.
 
 <div class="element gif">
@@ -61,7 +61,7 @@ is and depending on the type of key it may take them some time.
 ## Encrypting
 
 In order to lock up a certain piece of information we can simply pipe it into
-the `gpg` tool and instruct it how to encrypt it and where to store the 
+the `gpg` tool and instruct it how to encrypt it and where to store the
 ciphertext. To get started a file is created with the following shell command
 that contains the text `launch codes` :rocket:.
 
@@ -70,8 +70,8 @@ echo "launch codes" > code.in.txt
 ```
 
 The following command basically encrypts the string in the message file and
-stores the ciphertext into the file `cipher.gpg`. The recipient 
-`vid@bina.me` has been specified in order to instruct whom is to be able 
+stores the ciphertext into the file `cipher.gpg`. The recipient
+`vid@bina.me` has been specified in order to instruct whom is to be able
 to decrypt the ciphertext. For the encrypted launch codes the given recipient
 will be the only person who needs to know so&hellip; yeah&hellip; secrets
 should be encrypted not just `chown`ed :closed_lock_with_key:.
@@ -82,7 +82,7 @@ cat code.in.txt | gpg -e -r vid@bina.me -o cipher.gpg
 
 Provided that the document needs to be sent to a few third parties of which we
 happen to have the public key one can include them as recipients. The
-following example 
+following example
 
 ```sh
 cat code.in.txt | gpg -e \
@@ -199,8 +199,8 @@ Pretty sweet :smile:.
 
 The entire agent business works in the following manner:
 
-  - invoke the agent daemon (which runs in the background, presents the 
-  passphrases for keys it has stored in cache and prompting you for the 
+  - invoke the agent daemon (which runs in the background, presents the
+  passphrases for keys it has stored in cache and prompting you for the
   passphrase it hasn't yet stored)
   - set up a terminal to act as the front-end
 
@@ -209,12 +209,12 @@ The entire agent business works in the following manner:
 In order to simplify this entire process I have written a small shell script
 to handle all of the daemon summoning and front-end spawning work.
 
-Running `start-gpg-agent` checks if the info file doesn't yet exist and 
+Running `start-gpg-agent` checks if the info file doesn't yet exist and
 then spawns the daemon.
 
 Basically I use the helper `make-gpg-tty` to configure my current terminal
-as the GPG-Agent front-end. Mind you that you should only configure one 
-terminal as the front-end in order to avoid weird :shit:. 
+as the GPG-Agent front-end. Mind you that you should only configure one
+terminal as the front-end in order to avoid weird :shit:.
 That is why `make-gpg-tty` stores the agent terminal number to a file and
 only links the current terminal as the front-end if there has not already been
 another terminal linked for this chore.

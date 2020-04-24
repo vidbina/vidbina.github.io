@@ -37,18 +37,18 @@ succeeded?). So here goes... I need something that:
 
 ## Machinery
 I have ignored [Wordpress][wordpress] and quickly glanced over [Ghost][ghost],
-because I am already partial to a solution that generates static content, which 
-is not going to change anytime soon. I do not see the need for tending 
-databases, maintaining a CMS, setting up authentication chains between 
-applications and datasources, and scrolling through logs containing the 
-addresses of the numerous bots which waste my resources in an effort to 
+because I am already partial to a solution that generates static content, which
+is not going to change anytime soon. I do not see the need for tending
+databases, maintaining a CMS, setting up authentication chains between
+applications and datasources, and scrolling through logs containing the
+addresses of the numerous bots which waste my resources in an effort to
 find their way in.
 
 I write much in Ruby, Python, Javascript and C family languages, so I guess
-any solution friendly to these languages will work for me. Jekyll was too 
+any solution friendly to these languages will work for me. Jekyll was too
 easy to warrant moving on to test other solutions, but nanoc (Ruby), DocPad
 (CoffeeScript), Hyde (Python), Hugo (Go) or Hexo (Javascript) would probably
-suffice as well[^1]. All basically do the same thing (generate 
+suffice as well[^1]. All basically do the same thing (generate
 static websites) but the approach in getting things done are obviously
 different. I chose Jekyll[^2], a popular static site generator written in Ruby
 and allows me to enter posts in Markdown :wink:.
@@ -61,7 +61,7 @@ I'm not a designer and therefore resorted to articles and papers to find a
 layout that would work well.
 
 ### Text
-For reading I generally prefer _serif_ fonts. The font used in LaTeX or something 
+For reading I generally prefer _serif_ fonts. The font used in LaTeX or something
 like [Iowan][iowan], which I first encountered in iBooks, read exceptionally
 well.
 
@@ -72,22 +72,22 @@ Multiple sources mention _sans serif_ fonts having higher legiblity factors to
 their _serif_ counterparts whilst _serif_ fonts are generally known to have a
 higher readability factor.
 I&rsquo;m thinking &ldquo;readability is what I really want, should I go for
-serifs?&rdquo; I hardly care for readers finding one character understandable or 
-recognizable as I expect the significance of each and every character to drown 
-in the context of the word. The problem with _serif_&rsquo;s, however; is that they 
-are quite detailed and the many low-res devices still in use today will render 
+serifs?&rdquo; I hardly care for readers finding one character understandable or
+recognizable as I expect the significance of each and every character to drown
+in the context of the word. The problem with _serif_&rsquo;s, however; is that they
+are quite detailed and the many low-res devices still in use today will render
 _serif_ fonts very unpleasant to read as put in [a TNW article][font-choice-tnw].
 The low-res screen story happens to provide the historical prologue to the
 pretense that _sans-serif_ types work best on screens.
 
-So for the sake of those ol&rsquo; skool devices let us stick with 
+So for the sake of those ol&rsquo; skool devices let us stick with
 _sans serif_&rsquo;s.
 
-Luckily for me, not all  _sans serif_ fonts score low in readability. David 
-Jury happened to be so friendly to explain that relatively high 
-[x-heights][x-height] of _sans-serif_ types (in comparison to their _serif_ 
-counterparts) render words less readable as word shapes become less obvious. 
-If I focus on finding _sans-serif_ fonts where the types have long ascenders 
+Luckily for me, not all  _sans serif_ fonts score low in readability. David
+Jury happened to be so friendly to explain that relatively high
+[x-heights][x-height] of _sans-serif_ types (in comparison to their _serif_
+counterparts) render words less readable as word shapes become less obvious.
+If I focus on finding _sans-serif_ fonts where the types have long ascenders
 and descenders I&rsquo;ll be fine.
 
 <div class="element image light">
@@ -95,13 +95,13 @@ and descenders I&rsquo;ll be fine.
 </div>
 
 So&hellip; word shapes play significant roles in the comprehension speed of
-written text. What else matters? According to David Jury type sizes between 9pt 
-to 12pt are generally considered equally readible to observers above 10 years 
-of age. I suppose my audience fits in the &ldquo;10 years and riper&rdquo; 
+written text. What else matters? According to David Jury type sizes between 9pt
+to 12pt are generally considered equally readible to observers above 10 years
+of age. I suppose my audience fits in the &ldquo;10 years and riper&rdquo;
 category which hands us a winner&hellip; 11pts at which we should attempt to
-keep our lines limited to 60 characters ([David Jury, About Face page 74][about-face-size-serif]). 
+keep our lines limited to 60 characters ([David Jury, About Face page 74][about-face-size-serif]).
 
-[Montserrat][montserrat] by [Julieta Ulanovsky][julieta] has a interesting 
+[Montserrat][montserrat] by [Julieta Ulanovsky][julieta] has a interesting
 [history][montserrat-kickstarter], looks incredible and seems like it will fit
 the bill&hellip; until people start complaining I will assume that it works well
 in the readability department.
@@ -114,7 +114,7 @@ in the readability department.
 Another matter I had not yet discussed is the presentation of mathematical
 formulae. My go-to solution for web-math is [MathJax][mathjax]. What can I say
 I'm a \\(\TeX\\) guy :wink:. Anyways the quadratic formula
-looks as slick as it looks in \\(\LaTeX\\) documents if printed like 
+looks as slick as it looks in \\(\LaTeX\\) documents if printed like
 $$\large x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}$$.
 
 
@@ -124,7 +124,7 @@ very comfortable looking at dark screens. I tried white text on a black
 background first.
 
 
-It seems that the object of our focus determines a lot in terms of vocal comfort. 
+It seems that the object of our focus determines a lot in terms of vocal comfort.
 Reading white text on a dark background will have one fixated on
 white content, which happens to stimulate all three types of [cones][cones-wiki] in the
 retina. White on black is therefore quite strenuous on the human eye. Anthony
@@ -132,12 +132,12 @@ recommended the use of black text on a light, somewhat gray-ish, background in
 his [post][darklight-text-ux]. All to reduce the amount of light reflected
 back at your delicate eyes. It makes sense.
 
-<blockquote>As for color, as long as there is sufficient contrast between the text and the background, many color combinations are 
-possible. However, most studies have shown that dark characters on a light background are superior to light characters 
-on a dark background (when the refresh rate is fairly high). For example, Bauer and Cavonius (1980) found that 
-participants were 26% more accurate in reading text when they read it with dark characters on a light background. 
-Moreover, a survey by Scharff, et al. (1996) revealed that the color combination perceived as being most readable is the 
-traditional black text on white background. However, it is common for websites (such as this one) to have an off-white 
+<blockquote>As for color, as long as there is sufficient contrast between the text and the background, many color combinations are
+possible. However, most studies have shown that dark characters on a light background are superior to light characters
+on a dark background (when the refresh rate is fairly high). For example, Bauer and Cavonius (1980) found that
+participants were 26% more accurate in reading text when they read it with dark characters on a light background.
+Moreover, a survey by Scharff, et al. (1996) revealed that the color combination perceived as being most readable is the
+traditional black text on white background. However, it is common for websites (such as this one) to have an off-white
 background in order to reduce the flicker and glare associated with white backgrounds.
   <footer>Michael Bernard</footer>
 </blockquote>
@@ -145,7 +145,7 @@ The fragment cited above is from the Michael's paper [Criteria for optimal web d
 
 ### Layout
 I haven&rsquo;t put too much thought into the layout. I wanted it simple. Long
-sentences, being [difficult to track][long-sentences-codinghorror] have been 
+sentences, being [difficult to track][long-sentences-codinghorror] have been
 listed as _no-go_&rsquo;s. A usability paper by J. Ryan Baker, titled [Is Multiple-Column Online Text Better? It Depends!][usability-columns-wichita]
 does a great job at establishing which alignment and column strategies work
 well for online content. I have taken the liberty of assuming that some of
@@ -153,7 +153,7 @@ the penalties for one-column texts are to be attributed the the lenght of the
 lines. Especially in the full-justified single-column text I had a hard time in
 keeping track of my position when finding my way from the end of a line to the
 beginning of its successor. A fully justified two-column section, in which each
-column contains somewhere between 35 to 50 characters is a option I can now 
+column contains somewhere between 35 to 50 characters is a option I can now
 back with common-sense and hard numbers.
 
 
@@ -162,11 +162,11 @@ Personally I hate scrolling through pages of only text. Somewhere along the
 line I will need to embed content into posts just to spice things up and
 provide relevant content within the same page.
 
-Nowadays any decent online service provider offers a quick way of embedding 
+Nowadays any decent online service provider offers a quick way of embedding
 content into webpages.
 
 Twitter, Youtube, Spotify and Instagram, among others, offer the ability to
-embed content using iframes. My sample of nicely styled content (as in proper 
+embed content using iframes. My sample of nicely styled content (as in proper
 width and corresponding heights) is demonstrated beneath&hellip;
 
 <div class="element tweet">
@@ -191,18 +191,18 @@ width and corresponding heights) is demonstrated beneath&hellip;
 </div>
 
 The embedded content from the different providers above is styled using a
-smart solution [documented by Marc Hinse][marchinse] which in fact is a 
-variation to the [padded box][paddedbox]. Hinse&rsquo;s method uses paddings 
+smart solution [documented by Marc Hinse][marchinse] which in fact is a
+variation to the [padded box][paddedbox]. Hinse&rsquo;s method uses paddings
 in a pseudo block element (the `before`) to force containing divs to
-certain sizes. The contents of the containing div are then absolutely 
+certain sizes. The contents of the containing div are then absolutely
 positioned to ensure all containing elements start on top of each other and
 share point (0, 0) as their origin within the cathesian coordinate system. With
-all the elements lying on top of each other we simply have to render the 
+all the elements lying on top of each other we simply have to render the
 `before` element invisible by setting its `opacity`, `z-index` or
 `background` and _inflate_ the `before` div to force its container to
-the right size in terms of width and height. 
+the right size in terms of width and height.
 
-This solution is most interesting because of the aspect-ratios and other 
+This solution is most interesting because of the aspect-ratios and other
 dimensional properties you will be able to assign to page elements but I will
 get to that in a short bit.
 
@@ -246,21 +246,21 @@ fills up its container.
 </div>
 ```
 
-The iframe does not support much styling unless you are willing to try your 
+The iframe does not support much styling unless you are willing to try your
 hands at setting element-level styles on the ugly ducklings using javascript.
 I felt that a pure-CSS solution would be the cleanest way out for this specific
 problem.
 
 The dimensions for several embedded elements are coded into the css using the
 `padding-top` and `padding-bottom` properties. Spotify for instance
-displays a square record cover with a 80px control bar on top. The 
+displays a square record cover with a 80px control bar on top. The
 width-to-height ratio for the image is 1:1 resulting to the `padding-top: 100%`
 line. I want to reserve space that is at least as high as it is wide. The
 remaining 80 pixels are dealt with by the `padding-bottom` property.
-padding. Instagram pretty much has the same story but requires 98 pixes in 
+padding. Instagram pretty much has the same story but requires 98 pixes in
 additional padding for the information above and beneath the square image.
-Videos will be displayed in a 5:3 aspect ratio which coincides with Native 
-Super 16mm film as listed on [wikipedia][aspectratio] and only deviates from 
+Videos will be displayed in a 5:3 aspect ratio which coincides with Native
+Super 16mm film as listed on [wikipedia][aspectratio] and only deviates from
 the golden ratio by a percent :wink:.
 
 ```css
@@ -284,7 +284,7 @@ the golden ratio by a percent :wink:.
 ### Images
 If there is a place for embedded content, images need to be convered as well.
 Due to the small width of my page layout, I had to consider alternatives for
-presenting larger images. I came up with an approach that may be both intrusive 
+presenting larger images. I came up with an approach that may be both intrusive
 and helpful. Since I will feature a lot of screenshots on this page, I need a
 bit more than 500 to 600 pixels in width. However, I don't need my readers to
 gaze at large pictures at all times and therefore considered zooming an image
@@ -330,7 +330,7 @@ the classes `element` and `img`,
         var sx = this.width/img.width;
         var sy = this.height/img.height;
         // build style for this specific image
-        var styleText = '#img_' + id + 
+        var styleText = '#img_' + id +
           ':hover { transform: ' +
           'scale3d(' + sx + ', ' + sy + ', 1);' +
           '}';

@@ -16,8 +16,8 @@ projects clean and devs happy."
 redirect_from:
   - /path-to-go.html
 ---
-In order to work with Go packages, one will need to setup a `GOPATH` 
-environment variable which contains the path to the directory one intents to 
+In order to work with Go packages, one will need to setup a `GOPATH`
+environment variable which contains the path to the directory one intents to
 use with Go.
 
 <div class="element note">
@@ -27,13 +27,13 @@ Installing go packages is done through the `go get` command.
 After specifying the `GOPATH` variable, don't forget to append `$GOPATH/bin`
 to `PATH`.
 
-For my different go projects, I often specify a `GOPATH` directory within my 
+For my different go projects, I often specify a `GOPATH` directory within my
 project's working directory. This way I can keep my `GOPATH`'s for different
 projects separated.
 
 Imagine the project _spaceship-api_ stored at `/path/spaceship`.
 I tend to setup a gopath directory at `/path/spaceship/gopath`, while I park
-the api repository in `/path/spaceship/api`. Before getting started, I 
+the api repository in `/path/spaceship/api`. Before getting started, I
 basically do the following:
 
 ```bash
@@ -42,12 +42,12 @@ export PATH=$PATH:$GOPATH/bin
 ```
 
 Now I can access all binaries within the `$GOPATH/bin` directory, and perform
-`go get` commands without putting much thought into other projects that I may 
+`go get` commands without putting much thought into other projects that I may
 be screwing up.
 
 <div class="element note">
 `Godeps` makes dependency management much easier by providing a manifest that
-will allow all developers to build a similar environment dependency-wise. 
+will allow all developers to build a similar environment dependency-wise.
 Think... `package.json` or `Gemfile` :wink:.
 </div>
 

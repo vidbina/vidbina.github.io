@@ -6,7 +6,7 @@ type: tools
 category: tools
 tags:
  - software
- - programming 
+ - programming
  - Erlang
  - list cons
  - immutable
@@ -20,7 +20,7 @@ og:
     author: https://www.facebook.com/david.asabina
     tags:
        - software
-       - programming 
+       - programming
        - Erlang
        - list cons
        - immutable
@@ -171,7 +171,7 @@ of the `++` operator which I attached below for your convenience :wink:.
 In order to use the `++` list operator without having to step through an
 entire list which could very well be comprised of a million misbehaving
 critters it would be more sensible to have the list on the right-hand side of
-the operator. 
+the operator.
 
 <div class="element image">
 <img src="https://s3.eu-central-1.amazonaws.com/vid.bina.me/gif/erl_single_add_list.gif" alt="Demonstrating how cheap [Item]++List is in Erlang">

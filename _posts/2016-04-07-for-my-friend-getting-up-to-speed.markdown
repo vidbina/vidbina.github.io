@@ -4,7 +4,7 @@ title: For my Friend Getting up to Speed
 description: |
   After a while of project management work, a friend is yearning to in on the
   action again. Things change fast so as of April 2016 I'll try to list a few
-  things that I deem instrumental in understanding and building modern system 
+  things that I deem instrumental in understanding and building modern system
   for the web.
 date:  2016-04-07 16:14:42 -0400
 type: web # for icon
@@ -18,7 +18,7 @@ tags:
  - engineering
 #og:
 #  type: OG:TYPE # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -83,7 +83,7 @@ video decoding/encoding services that just translate video from one format to
 another, authentication services that just look at user credentials and
 determine if they get permission for a certain action yes or no, cataloging
 services that simply look at a user and figure out which items should be
-available. 
+available.
 
 
 [Learn Rails from Hartl's tutorial](https://www.railstutorial.org) which will
@@ -110,7 +110,7 @@ Until you've validated or invalidated them and are serving people to the point
 that you get phone calls of overjoyed clients, you have no reason to worry too
 much about _where_ your application is running and _how_ it is deployed.
 
-However; if you want to understand what the big fuss is about in application 
+However; if you want to understand what the big fuss is about in application
 development, lately you need to familiarize yourself with the following...
 configuration management ([ansible][ansible], [puppet][puppet], [chef][chef]),
 containerization ([docker][docker], [rkt][rkt]), orchestration

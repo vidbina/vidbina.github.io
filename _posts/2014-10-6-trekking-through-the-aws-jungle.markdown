@@ -19,23 +19,23 @@ description: AWS rocks but because of the many services being offered it may fee
 Because I am somewhat of a term hermit, I prefer to have CLI's to do everything
 because it makes scripting so much easier.
 
-Amazon offers control over AWS :cloud: through their 
+Amazon offers control over AWS :cloud: through their
 [CLI][installing-awscli] that is what this post is all about.
 
 ## Setup
 This section will cover some of the steps I took to get the AWS CLI running on
-my box. I also motivate some of the decisions in the general housekeeping 
+my box. I also motivate some of the decisions in the general housekeeping
 regiment that I enforce.
 
-I use `virtualenv` to contain my python environments so with the target 
-environment created `virtualenv ~/env/aws-first-encounter`and selected using 
+I use `virtualenv` to contain my python environments so with the target
+environment created `virtualenv ~/env/aws-first-encounter`and selected using
 `source ~/env/aws-first-encounter/bin/activate` I can proceed to install the
 CLI `pip install awscli`.
 
 Mind you that AWS&rsquo;s CLI expects the ``LANG`` and ``LC_ALL`` env vars to
 be set you can basically take care of that by manually exporting the necessary
 variables or adding the following snippet to whatever loads whenever you start
-your session (.bashrc, .zshrc, .bash_profile or something else&hellip; you 
+your session (.bashrc, .zshrc, .bash_profile or something else&hellip; you
 should know).
 
 ```bash
@@ -44,7 +44,7 @@ export LANG=en_US.UTF-8
 ```
 
 After installing the CLI you could confirm that the executable is present
-`which aws` and check which version you are rocking with 
+`which aws` and check which version you are rocking with
 `aws --version`.
 
 ### Virtualenv
@@ -55,9 +55,9 @@ level.
 
 <blockquote>
 Note that these solutions are quite different to package managers like bundler,
-pip or npm. Package managers usually take care of installing the right 
-dependencies, based on a manifest (Gemfile, package.json, etc), into whatever 
-may be the default installation path. Determining that default installation 
+pip or npm. Package managers usually take care of installing the right
+dependencies, based on a manifest (Gemfile, package.json, etc), into whatever
+may be the default installation path. Determining that default installation
 path and the version of the runtime is generally managed by a run-time
 enviroment management tool like rvm, rbenv, virtualenv or nodeenv.
 </blockquote>
@@ -73,15 +73,15 @@ encounter. Good luck!
 Prior to configuring the CLI you will need your user credentials to access AWS.
 In case you already have created a user with the proper privileges you could
 use the credentials belonging to that user. You could choose to skip step 2 and
-3 in the sequence below as long as your do realize that a user without 
-permissions is basically a ghost in that it can not do anything, really. Make 
+3 in the sequence below as long as your do realize that a user without
+permissions is basically a ghost in that it can not do anything, really. Make
 sure to set some permissions for the user you want to sign in to AWS as.
 
  1. create user in IAM (remember the credentials presented after creation of the
  user as these cannot be presented to you by AWS again)
  2. create an admin group in IAM
  3. add your user to the admin group in IAM
- 4. configure your CLI with the user credentials you have received by running 
+ 4. configure your CLI with the user credentials you have received by running
  `aws configure`
  5. export your access keys to your env. The AWS CLI tool expects to find the
  `AWS_ACCESS_KEY` and `AWS_SECRET_KEY` variables.
@@ -154,7 +154,7 @@ aws route53 change-resource-record-sets --hosted-zone-id X --change-batch file:/
 ```
 
 <a name="dns.mx"></a>
-Just to give an example of the structure of the JSON files fed to the CLI I 
+Just to give an example of the structure of the JSON files fed to the CLI I
 have published a version of the files I have used on [Github][route53-json-gist]
 {% gist vidbina/8322c299faab15477e1c dns.mx.json %}
 

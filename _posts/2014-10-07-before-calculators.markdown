@@ -39,7 +39,7 @@ logarithm by leveraging the aforementioned property.
  - $\log_2(x) = \frac{\log_e(x)}{\log_e(2)}$ which may be described as `l(x)/l(2)`
 
 ## Change of base
-The expression $\lfloor \log\_{b}(q) \rfloor + 1$ is the answer to all _How 
+The expression $\lfloor \log\_{b}(q) \rfloor + 1$ is the answer to all _How
 many digits in base $b$ are used to represent the value $q$_ questions.
 
 I pipe some statements to `bc` in the following manner to solve how many bits

@@ -24,7 +24,7 @@ tags:
  - scale
 og:
   type: article # http://ogp.me/#types
-#  og:type: # 
+#  og:type: #
 #   - og:value: value
 #     og:attr: foo
 #   - og:value: value
@@ -59,7 +59,7 @@ forgive me where I inadvertently lose any of his focal points in translation:
 > the differences between the startup ecosystems that allow for America to
 > perform this exceptionally.
 
-[^question]: Het ondernemers klimaat in Europa: We hebben gezien dat Europa niet zo succesvol is geweest als America in het produceren van de grote technologische bedrijven van de afgelopen decenia.  Kijk bijvoorbeeld naar Google, Apple, Amazon, Facebook, Microsoft dat zijn allemaal Americaanse bedrijven. Jij hebt zowel in Nederland als Duitsland de start-up wereld van dichtbij meegemaakt en je hebt ook ervaring met de international start-up wereld. Wat zou jij zeggen dat 1 van de grote oorzaken is die hieraan ten grondslag ligt. Welke andere dingen liggen hieraan ten grondslag. Is er een groot verschil in het ondernemers klimaat van Nederland en Duitsland m.b.t. het bovenstaande?  
+[^question]: Het ondernemers klimaat in Europa: We hebben gezien dat Europa niet zo succesvol is geweest als America in het produceren van de grote technologische bedrijven van de afgelopen decenia.  Kijk bijvoorbeeld naar Google, Apple, Amazon, Facebook, Microsoft dat zijn allemaal Americaanse bedrijven. Jij hebt zowel in Nederland als Duitsland de start-up wereld van dichtbij meegemaakt en je hebt ook ervaring met de international start-up wereld. Wat zou jij zeggen dat 1 van de grote oorzaken is die hieraan ten grondslag ligt. Welke andere dingen liggen hieraan ten grondslag. Is er een groot verschil in het ondernemers klimaat van Nederland en Duitsland m.b.t. het bovenstaande?
 -->
 
 <!-- Eli says stop the downselling -->
@@ -276,7 +276,7 @@ in a manner that is less exploitative in order to remain in business. I
 wouldn't consider that a big problem but then again... I'm just an engineer.
 
 <!--
-### 
+###
 
 I served a startup around the beginning of 2018 which brought me to the valley
 and New York on several occasions. My impression of the organization was that
