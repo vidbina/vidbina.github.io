@@ -3,8 +3,8 @@ layout: default
 title: Blurt 
 mathjax: true
 head: mugshot
+emojify: true
 ---
-
 <div id="home">
   <ul class="posts">
     {% for post in paginator.posts %}
@@ -12,12 +12,20 @@ head: mugshot
     <li>
       <a href="{{ post.url }}">
         <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
-        <h2>
+        <h2 id="posts-title-{{ forloop.index }}">
           {% include icons-entypo.html type=post.type icon=post.icon %}
           <strong>{{ post.title }}</strong>
         </h2>
-        <p>{{ post.description }}</p>
+        <p id="posts-description-{{ forloop.index }}">{{ post.description }}</p>
       </a>
+      {% if post.emojify %}
+      <script>
+        // TODO: Refactor such that setConfig is only called once per page
+        emojify.setConfig({ img_dir: "/images/emoji" });
+        emojify.run(document.getElementById("posts-title-{{ forloop.index }}"));
+        emojify.run(document.getElementById("posts-description-{{ forloop.index }}"));
+      </script>
+      {% endif %}
     </li>
     {% endunless %}
     {% endfor %}
