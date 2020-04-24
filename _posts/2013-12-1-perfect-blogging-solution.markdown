@@ -193,13 +193,13 @@ width and corresponding heights) is demonstrated beneath&hellip;
 The embedded content from the different providers above is styled using a
 smart solution [documented by Marc Hinse][marchinse] which in fact is a 
 variation to the [padded box][paddedbox]. Hinse&rsquo;s method uses paddings 
-in a pseudo block element (the ```before```) to force containing divs to
+in a pseudo block element (the `before`) to force containing divs to
 certain sizes. The contents of the containing div are then absolutely 
 positioned to ensure all containing elements start on top of each other and
 share point (0, 0) as their origin within the cathesian coordinate system. With
 all the elements lying on top of each other we simply have to render the 
-```before``` element invisible by setting its ```opacity```, ```z-index``` or
-```background``` and _inflate_ the ```before``` div to force its container to 
+`before` element invisible by setting its `opacity`, `z-index` or
+`background` and _inflate_ the `before` div to force its container to
 the right size in terms of width and height. 
 
 This solution is most interesting because of the aspect-ratios and other 
@@ -234,9 +234,9 @@ get to that in a short bit.
 }
 {% endhighlight %}
 
-Adding a embedded item to my page simply requires the addition of the ```iframe```&rsquo;s
-in divs of the ```.element``` class. Even with the ```width``` or ```height```
-attributes set on the ```iframe``` the styles will still ensure that the iframe
+Adding a embedded item to my page simply requires the addition of the `iframe`&rsquo;s
+in divs of the `.element` class. Even with the `width` or `height`
+attributes set on the `iframe` the styles will still ensure that the iframe
 fills up its container.
 
 {% highlight html %}
@@ -252,11 +252,11 @@ I felt that a pure-CSS solution would be the cleanest way out for this specific
 problem.
 
 The dimensions for several embedded elements are coded into the css using the
-```padding-top``` and ```padding-bottom``` properties. Spotify for instance
+`padding-top` and `padding-bottom` properties. Spotify for instance
 displays a square record cover with a 80px control bar on top. The 
-width-to-height ratio for the image is 1:1 resulting to the ```padding-top: 100%```
+width-to-height ratio for the image is 1:1 resulting to the `padding-top: 100%`
 line. I want to reserve space that is at least as high as it is wide. The
-remaining 80 pixels are dealt with by the ```padding-bottom``` property.
+remaining 80 pixels are dealt with by the `padding-bottom` property.
 padding. Instagram pretty much has the same story but requires 98 pixes in 
 additional padding for the information above and beneath the square image.
 Videos will be displayed in a 5:3 aspect ratio which coincides with Native 

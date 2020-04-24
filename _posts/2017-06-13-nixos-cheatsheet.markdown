@@ -259,7 +259,7 @@ nixos.go_1_6        go-1.6.4
 nixos.go            go-1.7.4
 ```
 
-After running ```nix-channel --list```, I realised that I had added a non-stable channel under
+After running `nix-channel --list`, I realised that I had added a non-stable channel under
 the `nixos` name and wondered if perhaps the nixos name for a channel is already used by
 Nix* internals and therefore collides.
 
@@ -268,14 +268,14 @@ of a channel under an already "reserved" name, being `nixos`, prompted the idea 
 the channel to observe whether it resolved the issue.
 
 The former execution of
-```nix-channel --add https://nixos.org/channels/nixos-17.03-small nixos```.
+`nix-channel --add https://nixos.org/channels/nixos-17.03-small nixos`.
 pparently confused my setup which already contained a (root) channel named
 `nixos`.
 
 After removing the recently added user channel named nixos
-```nix-channel --remove nixos``` and re-adding it without specifying the
+`nix-channel --remove nixos` and re-adding it without specifying the
 optional name
-```nix-channel --add https://nixos.org/channels/nixos-17.03-small```,
+`nix-channel --add https://nixos.org/channels/nixos-17.03-small`,
 the channel was added with the name `nixos-17.03-small`.
 
 > NOTE: Adding channels without providing the name simply names the channel in
@@ -283,7 +283,7 @@ accordance to the last phrase of the channel URL with the suffix `-stable` or
 `-unstable` removed from the name such that `nixos-17.03-small` remains
 `nixos-17.03-small` and `nixos-unstable-small` becomes `nixos-small` :wink:.
 
-An update through ```nix-channel --update```
+An update through `nix-channel --update`
 was required to enforce the changes after which a query actually presented the
 results from the different channels. :victory:
 

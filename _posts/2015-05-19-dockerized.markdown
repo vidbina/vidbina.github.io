@@ -123,7 +123,7 @@ without my intervention. Introspecting the `etcd` store left me clueless but
 some [basic sleuthing][fleet-units-etcd] uncovered that fleet actually keeps 
 track of this information in hidden etcd keys. There is actually a world of 
 CoreOS-related `etcd` secrets to behold if you run 
-```etcdctl ls --recursive _coreos.com`)```.
+`etcdctl ls --recursive _coreos.com`).
 
 [fleet-arch]: https://github.com/coreos/fleet/blob/master/Documentation/architecture.md
 [fleet-units-etcd]: https://serverfault.com/questions/646053/where-coreoses-fleet-stores-submited-unit-files/646058#646058?newreg=82d76b94973c44df9ab17e3a195f51c2
@@ -151,7 +151,7 @@ Somewhere along the line a unit/service breaks and needs to be debugged.
 
 <iframe src="//giphy.com/embed/achBohanYCPPG?html5=true" width="480" height="464" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
-CoreOS logs everything into ```/var/log/journal/*``` and `journalctl` allows
+CoreOS logs everything into `/var/log/journal/*` and `journalctl` allows
 one to view the content of these binary logs.
 
 ```bash
@@ -159,10 +159,10 @@ sudo journalctl --file=/var/log/journal/REF/FILE.log
 ```
 
 I ran into the `"Failed units: 1"` notification which is presented at login. 
-After reviewing which services were up with ```sudo systemctl list-units```, I
-discovered that the ```gce-coreos-cloudinit.service``` had failed. Running 
-```journalctl``` and filtering for the logs regarding a specific service using
-the ```-u SERVICENAME``` parameters makes for much easier reading:
+After reviewing which services were up with `sudo systemctl list-units`, I
+discovered that the `gce-coreos-cloudinit.service` had failed. Running 
+`journalctl` and filtering for the logs regarding a specific service using
+the `-u SERVICENAME` parameters makes for much easier reading:
 
 ```bash
 sudo journalctl -u gce-coreos-cloudinit.service --file=JOURNAL_FILE.log

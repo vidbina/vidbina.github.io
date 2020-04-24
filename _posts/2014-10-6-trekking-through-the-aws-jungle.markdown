@@ -27,7 +27,7 @@ This section will cover some of the steps I took to get the AWS CLI running on
 my box. I also motivate some of the decisions in the general housekeeping 
 regiment that I enforce.
 
-I use ```virtualenv``` to contain my python environments so with the target 
+I use `virtualenv` to contain my python environments so with the target 
 environment created `virtualenv ~/env/aws-first-encounter`and selected using 
 `source ~/env/aws-first-encounter/bin/activate` I can proceed to install the
 CLI `pip install awscli`.
@@ -44,8 +44,8 @@ export LANG=en_US.UTF-8
 {% endhighlight %}
 
 After installing the CLI you could confirm that the executable is present
-```which aws``` and check which version you are rocking with 
-```aws --version```.
+`which aws` and check which version you are rocking with 
+`aws --version`.
 
 ### Virtualenv
 In order to keep my experiments and project tools contained I use solutions as
@@ -82,9 +82,9 @@ sure to set some permissions for the user you want to sign in to AWS as.
  2. create an admin group in IAM
  3. add your user to the admin group in IAM
  4. configure your CLI with the user credentials you have received by running 
- ```aws configure```
+ `aws configure`
  5. export your access keys to your env. The AWS CLI tool expects to find the
- ```AWS_ACCESS_KEY``` and ```AWS_SECRET_KEY``` variables.
+ `AWS_ACCESS_KEY` and `AWS_SECRET_KEY` variables.
 
 ## Usage
 After configuring the AWS CLI you are set to configure the services. It makes

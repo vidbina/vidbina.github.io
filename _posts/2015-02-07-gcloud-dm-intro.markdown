@@ -32,11 +32,17 @@ Deployment Manager is still in alpha, as of Jebruari 2015, one will need to
 explicitly install the `preview` component.
 
 Get a proper overview of all components by listing them:
-```gcloud components list```
+
+```
+gcloud components list
+```
 
 Install the developer preview by running the following command and following
 the instructions.
-```gcloud components update preview```
+
+```
+gcloud components update preview
+````
 
 ## The Basics
 The API of the Deployment Manager is currently at version 2 as of the 27th of 
@@ -64,7 +70,7 @@ will be executed.
 [conf-file]: https://cloud.google.com/deployment-manager/configuration-files
 
 ### Configuration
-Imagine the ```example-conf.yaml``` file looking like this:
+Imagine the `example-conf.yaml` file looking like this:
 
 {%highlight yaml %}
 resources:
@@ -91,10 +97,12 @@ Basically we have a file containing two resources, a `f1-micro` VM instance and
 a storage bucket. As a result we can spawn this setup by simply submitting the
 configuration description to the deployment manager:
 
-```gcloud preview dm-v2 deployments list \
+```
+gcloud preview dm-v2 deployments list \
   --config example-conf.yaml \
   --deployment blog_post_demo \
-  --project bina```
+  --project bina
+```
 
 ### Templates
 The former example may already simplify workflows enough as is, but somehow 
@@ -102,7 +110,7 @@ complex infrastructures would be quite an exercise in repeating oneself unless
 there is a way to reuse predefined components.
 
 The former resource set could be extracted into a template which will be named
-```simple_vm.jinja``` for the sake of demonstration. This file will simply 
+`simple_vm.jinja` for the sake of demonstration. This file will simply 
 describe a VM instance with pretty much the same properties as the `genesis`
 machine demonstrated in our previous example.
 

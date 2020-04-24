@@ -93,7 +93,7 @@ tmux attach-session -t $SESSION
 
 ## Leveraging Indexes
 
-Note how ```$SESSION:N```` is used to create a window at the given index.
+Note how `$SESSION:N` is used to create a window at the given index.
 Generally one may use just the session name as the target as in 
 
 ```bash

@@ -44,8 +44,8 @@ Division and multiplication are also left-associative operations.
 Exponentiation is a right-associative operation, so we evaluate everything to
 the right of the operator prior to executing the current operation leading to 
 \\(a^{b^{c}}\\) being evaluated as \\(a^{(b^c)}\\). In many computer languages
-the exponentiation operation is represented by the (caret) ```^``` expressing
-$a^b$ as ```a^b```. Mistakingly dealing with exponents as left-associative
+the exponentiation operation is represented by the (caret) `^` expressing
+$a^b$ as `a^b`. Mistakingly dealing with exponents as left-associative
 would cause one to evaluate $a^{b^{c}}$ as $(a^b)^c$ which would cause
 erronous results in most cases (in the cases where $a=b=c$ you could have many
 fooled when applying the operation with a blatant disregard for associativity 
@@ -57,8 +57,8 @@ influence of the order of the operands connected by the operator. In the
 case of addition we could say that the operator is commutative because
 $a+b$ and $b+a$ evaluate to the same result. 
 
-In many computer languages the ```^``` operator is often used to represent
-exponentiation where ```a^2``` represents $a^{2}$. That the ```^``` operator
+In many computer languages the `^` operator is often used to represent
+exponentiation where `a^2` represents $a^{2}$. That the `^` operator
 is not commutative becomes quite evident when you realize that interchanging
 the operands causes entirely different results in some cases especially
 when the operands are not equal to each other.

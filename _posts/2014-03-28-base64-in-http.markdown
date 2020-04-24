@@ -30,9 +30,9 @@ one full knowledge of the originating string. Encoding is *not encryption*.
 ## What if?
 If the HTTP standard did not require the encoding of the credentials and 
 specified them to be formatted in the authorization header as 
-```handle:secret``` we could get unpredicted results.
+`handle:secret` we could get unpredicted results.
 
-In the case of the ```spock:livelongandprosper``` handle/secret combo, we 
+In the case of the `spock:livelongandprosper` handle/secret combo, we
 would not encounter any peculiarities, but whenever supplied credentials that
 include characters that serve as delimiters to the HTTP standard we could hit
 crapfest paydirt. Some of the characters that would trigger such disasters are
@@ -49,7 +49,7 @@ password containing a newline character.
 
 If the standard was designed to place the username password combination in the
 header unaltered we could get the following result for a user named 
-```polly```.
+`polly`.
 
     GET /resource HTTP/1.1
     Host: example.com
@@ -57,8 +57,8 @@ header unaltered we could get the following result for a user named
     Barbosa: 0
 
 How the hell would this work? First of all spaces, colons and new-lines are 
-delimiters. Is ```Barbosa``` a header with the value ```0```? How would I know 
-```Barbosa``` is still part of the password? As a human I am having a hard time making sense of this string 
+delimiters. Is `Barbosa` a header with the value `0`? How would I know
+`Barbosa` is still part of the password? As a human I am having a hard time making sense of this string
 and humans are generally believed to be great at pattern recognition.
 
 Base64 encoding translates the handle and secret into a string that would not
