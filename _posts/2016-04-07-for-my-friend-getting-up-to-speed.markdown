@@ -39,7 +39,8 @@ software to Linux servers, and how to maintain them). I think you already used
 Linux a lot. Let's just assume from this point on that you do everything I
 recommend in the points below in Linux or OSX (any nix-based OS will work).
 
-> It may even make sense to stick to command line tools like vim for text
+<div class="element note">
+It may even make sense to stick to command line tools like vim for text
 editing, tmux or screen for terminal multiplexing -- basically all non-GUI
 tools. Why?!? Well, mostly servers don't run elaborate GUI's. Most of the work
 is done from the command line so you better get comfortable. Whenever I log
@@ -48,6 +49,7 @@ there. I browse the web with Chrome and Safari, but every line of code written
 happens in vim, every time I need to jump between windows or interfaces I do
 that within or between my tmux session. When someone drops me on a server, I
 know how to find my way around :wink:.
+</div>
 
 ### Git Started! :checkered_flag:
 

@@ -84,10 +84,12 @@ sda                    8:0    0 476.9G  0 disk
 └─sda2                 8:2    0 176.9G  0 part  /run/media/b
 ```
 
-> Note that both volumes in the lsblk listing are mounted. In order to arrive
-at a scenario that is somewhat similar to the one presented in the listing
-above, I'll mention how to format unencrypted and encrypted volumes and mount
-these in the sections that follow :point_down:.
+<div class="element note">
+Note that both volumes in the lsblk listing are mounted. In order to arrive at
+a scenario that is somewhat similar to the one presented in the listing above,
+I'll mention how to format unencrypted and encrypted volumes and mount these in
+the sections that follow :point_down:.
+</div>
 
 ### Basic (Unencrypted)
 
@@ -121,8 +123,10 @@ or by running
 where `-b` indicates that the token that follows represents the reference to
 the block device we intend to unmount.
 
-> :bulb: Note how `udisksctl` works without `sudo`. If at all possible, I avoid
+<div class="element note">
+:bulb: Note how `udisksctl` works without `sudo`. If at all possible, I avoid
 using `sudo` as much as I can :wink:[^sudo].
+</div>
 
 [^sudo]: Using `sudo` and fainting a few seconds later effectively leaves a terminal that will probably allow unfettered sudo foolery for the next 50-odd seconds or so exposed to the next person walking by. :boom: This is bad, M'kay?!?
 
@@ -172,16 +176,18 @@ where the alias is provided that the volume was opened as, or
 
 which is hopefully self-explantory at this stage.
 
-> :bulb: Learning how to use `udisksctl` makes life slightly easier since you
-can use the same tool for unlocking, mount, unmounting and ejecting medium
-which basically covers your entire day-to-day disk usage workflow. Without
-`udisksctl` one would otherwise have to remember how to use
-`cryptsetup luksOpen`, `mount` , `umount` along with a method for safely
-unplugging the storage device and the worst part is that one would need to
-elevate itself to sudo privileges to run these commands whereas `udisksctl`
-just works without any special privileges :wink:. The biggest downside to
-udisksctl is that I haven't figured out how to explicitly provide custom
-mountpoints while invoking the command.
+<div class="element note">
+:bulb: Learning how to use `udisksctl` makes life slightly easier since you can
+use the same tool for unlocking, mount, unmounting and ejecting medium which
+basically covers your entire day-to-day disk usage workflow. Without
+`udisksctl` one would otherwise have to remember how to use `cryptsetup
+luksOpen`, `mount` , `umount` along with a method for safely unplugging the
+storage device and the worst part is that one would need to elevate itself to
+sudo privileges to run these commands whereas `udisksctl` just works without
+any special privileges :wink:. The biggest downside to udisksctl is that I
+haven't figured out how to explicitly provide custom mountpoints while invoking
+the command.
+</div>
 
 A great feature of udisksctl is that it makes it pretty easy to safely
 disconnect or eject a medium from a system. Running
@@ -208,11 +214,13 @@ represents the date at which the archive was created.
 
     tar cjf - ~ | gpg --ciper-algo AES -c - > /tmp/mountpoint/backup_`date +"%Y%m%d%H%M"`.tbz2.gpg
 
-> NOTE: In my case, this produces a tarball over 100G in size, which I would
-have to unpack in its entirety and decrypt in order to do anything useful with
-it. So, it's a rather sluggish way to handle backups. On the flipside, you have
-a single file that captures the entire state of your home directory which is
+<div class="element note">
+NOTE: In my case, this produces a tarball over 100G in size, which I would have
+to unpack in its entirety and decrypt in order to do anything useful with it.
+So, it's a rather sluggish way to handle backups. On the flipside, you have a
+single file that captures the entire state of your home directory which is
 pretty easy to handle.
+</div>
 
 Read the archive, pipe it through gpg which pipes the plaintext to stdout where
 we decompress `-d` the bzip2 `-j` archive all with the following command:
@@ -294,8 +302,10 @@ on `/dev/sda1`, for example, one could execute
 
 and enter the passphrase for the key in any other slot :wink:.
 
-> The machine will not allow you to remove a key with the key to be removed.
+<div class="element note">
+The machine will not allow you to remove a key with the key to be removed.
 That's how people get locked out. :sob:
+</div>
 
 Adding a key into slot 1 could easily be accomplished by running the following
 command
@@ -322,8 +332,11 @@ but bundling in as follows
 to form the `--master-key-file` argument which can be used with every
 `cryptsetup` command that requires a key.
 
-> :bulb: The `<(COMMAND)` syntax is an instance of [process substitution][tldp-proc-sub],
-where a `/dev/fd/*` file is used to send stdout as a file to another process.
+<div class="element note">
+:bulb: The `<(COMMAND)` syntax is an instance of [process
+substitution][tldp-proc-sub], where a `/dev/fd/*` file is used to send stdout
+as a file to another process.
+</div>
 
 # Links
 

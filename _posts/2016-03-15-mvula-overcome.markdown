@@ -40,7 +40,8 @@ of otherwise limiting circumstances with simple phrases as
 
 We're all urged to get going and overcome.
 
-> 'Round the mountain, all God's children run -- All God's children run 'round the mountain run
+> 'Round the mountain, all God's children run -- All God's children run 'round
+> the mountain run
 
 <div class="element video">
   <iframe width="420" height="315" src="https://www.youtube.com/embed/L7u9FpJJtEQ" frameborder="0" allowfullscreen></iframe>

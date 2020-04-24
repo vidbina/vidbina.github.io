@@ -98,7 +98,10 @@ that list items only know who their successors are.
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/vidbina">@vidbina</a> <a href="https://twitter.com/mononcqc">@mononcqc</a> SL ++ [H] is O(n) whereas [H|SL] is O(1). Lists are singly linked.</p>&mdash; Jesper L. Andersen (@jlouis666) <a href="https://twitter.com/jlouis666/status/679667193894858753">December 23, 2015</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
-> A node in a doubly linked-list knows predecessor and successor (previous and next) nodes.
+<div class="element note">
+A node in a doubly linked-list knows predecessor and successor (previous and
+next) nodes.
+</div>
 
 In the case of the `NoFlyList` the monkey only sees the mole and the mole
 doesn't see jack--it's practically blind anyways :eyes:.

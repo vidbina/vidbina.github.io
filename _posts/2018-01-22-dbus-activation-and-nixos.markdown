@@ -132,7 +132,11 @@ Time to take a closer look...
 It's Saturday and the [D-Bus][dbus] homepage, under the section __What is D-Bus__,
 reads:
 
-> D-Bus is a message bus system, a simple way for applications to talk to one another. In addition to interprocess communication, D-Bus helps coordinate process lifecycle; it makes it simple and reliable to code a "single instance" application or daemon, and to **launch applications and daemons on demand** when their services are needed.
+> D-Bus is a message bus system, a simple way for applications to talk to one
+> another. In addition to interprocess communication, D-Bus helps coordinate
+> process lifecycle; it makes it simple and reliable to code a "single
+> instance" application or daemon, and to **launch applications and daemons on
+> demand** when their services are needed.
 
 The D-Bus (Desktop bus) ecosystem introduces the concept of busses,
 connections, objects, interfaces and members.
@@ -181,9 +185,11 @@ need a reply printed, hence the `--print-reply`. The object we are interacting
 with and the member of that object or the message name are the next two
 arguments respectively.
 
-> :bulb: Installing `dbus-map` and executing the command `dbus-map --session --dump-methods`
-gives an overview of all methods for the different connections on the session
-bus.
+<div class="element note">
+:bulb: Installing `dbus-map` and executing the command `dbus-map --session
+--dump-methods` gives an overview of all methods for the different connections
+on the session bus.
+</div>
 
 A quick read of the [Introduction to D-Bus][dbus-intro] article, mentions
 [activations][dbus-activation] as a mechanism for triggering an executable.
@@ -221,9 +227,17 @@ The remaining question is now, where the .service is defined. As far as I can
 tell from the documentation this should be recorded in a file somewhere on my
 filesystem.
 
-> :book: On Unix systems, the system bus should default to searching for .service files in `/usr/local/share/dbus-1/system-services`, `/usr/share/dbus-1/system-services` and `/lib/dbus-1/system-services`, with that order of precedence. It may also search other implementation-specific locations, but should not vary these locations based on environment variables.
+> :book: On Unix systems, the system bus should default to searching for
+> .service files in `/usr/local/share/dbus-1/system-services`,
+> `/usr/share/dbus-1/system-services` and `/lib/dbus-1/system-services`, with
+> that order of precedence. It may also search other implementation-specific
+> locations, but should not vary these locations based on environment
+> variables.
 
-> :book: On Unix systems, the session bus should search for .service files in `$XDG_DATA_DIRS/dbus-1/services` as defined by the XDG Base Directory Specification. Implementations may also search additional locations, with a higher or lower priority than the XDG directories.
+> :book: On Unix systems, the session bus should search for .service files in
+> `$XDG_DATA_DIRS/dbus-1/services` as defined by the XDG Base Directory
+> Specification. Implementations may also search additional locations, with a
+> higher or lower priority than the XDG directories.
 
 Since I haven't yet found it, I'm afraid that perhaps D-Bus allows an
 application to register for service activation on first boot, but haven't

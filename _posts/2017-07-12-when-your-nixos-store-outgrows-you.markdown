@@ -66,10 +66,12 @@ nix-shell -p gparted
 gparted
 ```
 
-> In case you are out of luck in enlarging the existing partition due to
-lack of a consecutive partition, you could consider stitching two partitions
-together in LVM and using them as a larger logical volume, but that is beyond
-the scope of this little note-to-self.
+<div class="element note">
+In case you are out of luck in enlarging the existing partition due to lack of
+a consecutive partition, you could consider stitching two partitions together
+in LVM and using them as a larger logical volume, but that is beyond the scope
+of this little note-to-self.
+</div>
 
 It's my LVM and LUKS setup that required a bit more thought. I had formerly
 created a volume group with two logical volumes -- a 40 gig btrfs volume and
@@ -149,7 +151,10 @@ So I'll `sudo systemctl hibernate` and continue this busy work later... Well bus
 for the machine... I basically just read papers, chat with cool people including my
 Startupbus family and of course... chill :grin:
 
-> The day after the build [failed](https://github.com/NixOS/nixpkgs/issues/26299). :shit:
+<div class="element note">
+The day after the build
+[failed](https://github.com/NixOS/nixpkgs/issues/26299). :shit:
+</div>
 Debugging :frown:
 
 <div class="element tweet">
@@ -157,9 +162,11 @@ Debugging :frown:
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
-> The [Nix manual](https://nixos.org/nixos/manual/index.html#sec-nix-gc) mentions the use of the
-`nix-store --optimise` command which, also in my case cleaned up 20 gigs of 50 so yeah... do
-yourself a favor. :wink:
+<div class="element note">
+The [Nix manual](https://nixos.org/nixos/manual/index.html#sec-nix-gc) mentions
+the use of the `nix-store --optimise` command which, also in my case cleaned up
+20 gigs of 50 so yeah... do yourself a favor. :wink:
+</div>
 
 ## Learnings
 

@@ -33,7 +33,7 @@ Meanwhile these companies get subsidized and bailed out with whatever bit
 of money was collected in the tax pot; that very same tax pot that the
 companies actively tried to keep their money from.
 
-[^capitalism]: I'm a fan of the mix of capitalism and socialism that we serve in the Netherlands. It strikes me as a healthy balance of two systems that both offer sufficient pros and cons. However, I attribute the tax evasion problem to the capitalistic ideals that some swear by which seem to be focused on profit, whatever that may mean. This attribution may be wrong, but it's just a product of my limited view and understanding of the world and its driving factors.
+[^capitalism]: I'm a fan of the mix of capitalist and social ideals that we serve in the Netherlands. It strikes me as a healthy balance of two systems that both offer sufficient pros and cons. However, I attribute the tax evasion problem to the capitalistic ideals that some swear by which seem to be focused on profit, whatever that may mean. This attribution may be wrong, but it's just a product of my limited view and understanding of the world and its driving factors.
 
 They <span class="strike">fooled</span> tricked us again. 
 
@@ -51,10 +51,11 @@ incentive for large scale deception, has better transparency as a side effect.
 Point is: Seemingly corrupt or unethical dealings spread the gamut in terms of
 class.
 
-> I believe corruption may be the wrong word. Maybe they're just heartlessly
+<div class="element note">
+I believe corruption may be the wrong word. Maybe they're just heartlessly
 clever -- the tricksters of modern society.
->
-> I grew up on tales of [Anansi][anansi] who was always praised as the
+
+I grew up on tales of [Anansi][anansi] who was always praised as the
 wise one, despite of once tricking his own children into giving him
 significant portions of their food. If a father does that nowadays, the
 neighbors would probably call social security services to take control; social
@@ -64,8 +65,9 @@ two about [Reinaard de Vos][reynard], a cunning fox and undiscriminating
 trickster. In the United States I recall Jerry often being the triumphant one,
 even when he was obviously at fault for provoking Tom. Sometimes Tom just
 didn't deserve that treatment.
->
-> Sometimes we just reward trickery with gifts or praise, I guess. :gift:
+
+Sometimes we just reward trickery with gifts or praise, I guess. :gift:
+</div>
 
 Whatever we do in the _developed_ parts of the world is deceptive, sly and
 probably more dangerous because many citizens of _developed_ countries

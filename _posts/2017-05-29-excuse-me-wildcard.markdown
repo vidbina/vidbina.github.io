@@ -45,15 +45,16 @@ my efforts to be "nice" inflicted some harm after all. Understandably she
 was visibly annoyed by this and despite the fact that I apologised, I
 probably contributed to one of the multiple dreaded episodes of her day.
 
-> This encounter served as a reminder that the problems we are analysing or
-modelling have a real impact on human lives. It's comfortable to hide
-behind data and models and keep the entire ordeal an intellectual exercise,
-but it isn't limited to simply a puzzle. Economic models impact families,
-those classifiers that identify health risks will impact lives and our
-deduction will too. Somewhere a doctor will eventually deliver good or
-bad news to someone after analysing the suggestions we generated through our
-classifiers or other types of machine learning models. Always remember that,
-self.
+<div class="element note">
+This encounter served as a reminder that the problems we are analysing or
+modelling have a real impact on human lives. It's comfortable to hide behind
+data and models and keep the entire ordeal an intellectual exercise, but it
+isn't limited to simply a puzzle. Economic models impact families, those
+classifiers that identify health risks will impact lives and our deduction will
+too. Somewhere a doctor will eventually deliver good or bad news to someone
+after analysing the suggestions we generated through our classifiers or other
+types of machine learning models. Always remember that, self.
+</div>
 
 I know our mind generalizes and intuitively deduces things to offload
 some work from our active though processes. By not overanalyzing every 
@@ -78,16 +79,18 @@ Then again you could ask... why should the recipient of the title usage
 be sensitive about the title they are addressed by?!? There are many
 sides to this.
 
-> I for one, remember being offended when I was constantly addressed as a
-lady before my voice broke simply because I wanted to be associated to
-masculinity and the title was a big part of it. I was a little nerdy and
-very insecure little boy. Insecurity not being a rare trait for anyone in
-the sensitive pre-teen and teen years. I wanted so many things as a child.
-Wanted to be older, wanted to be bigger, wanted to be independent, wanted
-no-one to tell me which vegetables to eat, wanted to be able to go to the
-supermarket and buy whatever the fuck I wanted... now things are slightly
-different. Got all of those things, lost some of the carefreeness. Pros
-and cons, right?!? :stuck_out_tongue_winking_eye:
+<div class="element note">
+I for one, remember being offended when I was constantly addressed as a lady
+before my voice broke simply because I wanted to be associated to masculinity
+and the title was a big part of it. I was a little nerdy and very insecure
+little boy. Insecurity not being a rare trait for anyone in the sensitive
+pre-teen and teen years. I wanted so many things as a child.  Wanted to be
+older, wanted to be bigger, wanted to be independent, wanted no-one to tell me
+which vegetables to eat, wanted to be able to go to the supermarket and buy
+whatever the fuck I wanted... now things are slightly different. Got all of
+those things, lost some of the carefreeness. Pros and cons, right?!?
+:stuck_out_tongue_winking_eye:
+</div>
 
 Mind you, I'm not saying the social construct is out of place. It is there
 for a reason, I suppose, however; in light of our recent understanding of

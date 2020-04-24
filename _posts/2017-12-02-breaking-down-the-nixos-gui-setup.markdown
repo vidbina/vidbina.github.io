@@ -114,13 +114,15 @@ login credentials and selecting a valid window or desktop manager, X server
 is fired up. The [`xsession`](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L31-L174) function provides some insights into the steps taken in setting up
 this X server session.
 
-> For simplicity's sake, the creative license is taken to display bash snippets
+<div class="element">
+For simplicity's sake, the creative license is taken to display bash snippets
 instead of the nix snippets wherever "sensible"[^sensible]. The `xsession`
 function discussed, basically produces a bash script by means of the
 `writeScript` function. In several cases, wherever the nix code is crucial to
 the understanding of the snippet, the entire nix snippet is presented but in
 any case the octocat :octocat: emoji's are links to the original nix code for
 reference's sake :wink:.
+</div>
 
 [^sensible]: Just a personal call. Since the xsession script happens to be a bash script it felt reasonable to focus on the bash code to understand the purpose and behavior rather than tunnel-visioning on the nix part, however enticing :stuck_out_tongue_closed_eyes:.
 
@@ -158,12 +160,15 @@ an argument
 if [ "${1:0:1}" = "/" ]; then eval exec "$1" "$2" ; fi
 ```
 
-> :snowflake: Note when looking at the Nix code
+<div class="element note">
+:snowflake: Note when looking at the Nix code
 ([:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L35-L57)),
 that `${` is a special sequence in Nix and has to be escaped by prefixing it
-with `''` to become `''${` as pointed out in
-[the thread to the commit that introduced this change](https://github.com/NixOS/nixpkgs/commit/1273f414a784af87363ac440af2ce948b6a656b1)
+with `''` to become `''${` as pointed out in [the thread to the commit that
+introduced this
+change](https://github.com/NixOS/nixpkgs/commit/1273f414a784af87363ac440af2ce948b6a656b1)
 and the [documentation][escape-nix][^escape-nix].
+</div>
 
 :point_right: Optionally log to journal using `systemd-cat` provided that
 `displayManager.logToJournal` is set
@@ -304,8 +309,10 @@ fi
 $SYSTEMD_PATH/bin/systemctl --user start graphical-session.target
 ```
 
-> Note that `$SYSTEMD_PATH` is just a substitution for the real `systemd.package` path which is
-expanded into this string by Nix :wink:.
+<div class="element note">
+Note that `$SYSTEMD_PATH` is just a substitution for the real `systemd.package`
+path which is expanded into this string by Nix :wink:.
+</div>
 
 :point_right: Honor `~/.xsession`
 [:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L128-L135).

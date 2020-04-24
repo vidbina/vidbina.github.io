@@ -30,7 +30,12 @@ This morning I learned about Kloudsec, a service that offers a CDN, HTTPS
 encryption and shadowing in case Github pages are unavailable[^1]
 :stuck_out_tongue:. 
 
-> **UPDATE (September 22, 2016)**: Kloudsec is down :sob:, but Steve left [a few notes](https://www.reddit.com/r/webdev/comments/4s3kmf/got_an_email_saying_that_kloudsec_will_be/) for his follower and clients. Do yourself a favor and ignore this post from now up.
+<div class="element note">
+**UPDATE (September 22, 2016)**: Kloudsec is down :sob:, but Steve left [a few
+notes](https://www.reddit.com/r/webdev/comments/4s3kmf/got_an_email_saying_that_kloudsec_will_be/)
+for his follower and clients. Do yourself a favor and ignore this post from now
+on.
+</div>
 
 [^1]: Hell does freeze over [occasionally](https://news.ycombinator.com/item?id=7130624), so don't think you would never need it :wink:
 
@@ -77,11 +82,13 @@ reflect that in my CORS policy.
 </CORSConfiguration>
 ```
 
-> If you choose a wildcard `*` as the allowed origin, be aware that anyone out
+<div class="element note">
+If you choose a wildcard `*` as the allowed origin, be aware that anyone out
 there will be allowed to embed resources from your bucket into their pages.
 If you want to keep your S3 bills to a minimum, perhaps anyone who needs some
 resources that you serve should consider mirroring them instead of serving them
 directly from your bucket :wink:.
+</div>
 
 ## Update URL's
 
@@ -175,7 +182,11 @@ throughout my repository :stuck_out_tongue:. It's pretty dope :metal:.
 
 For now I've got some work to do :sweat:
 
-> **UPDATE (September 22, 2016)**: You could setup [Cloudflare](https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/) if you still want serve secured github pages.
+<div class="element note">
+**UPDATE (September 22, 2016)**: You could setup
+[Cloudflare](https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/)
+if you still want serve secured github pages.
+</div>
 
 [kloudsec-proxy]: https://blog.kloudsec.com/how-to-setup-github-custom-domain-with-https/
 [kloudsec-anycast]: https://blog.kloudsec.com/building-an-anycast-network/

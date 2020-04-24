@@ -120,14 +120,16 @@ arduino --verify Blink.cpp
 
 to build the sketch.
 
-> :exclamation: Normal users generally don't have unrestricted access to
-devices. In NixOS this rings true for the TTY devices. Just run
-`ls -la /dev/tty*` to observe for yourself. The `root` user is most likely
-owner of all of the listed devices, however; the serial TTY's seem to
-owned by the `dialout` group. By adding the `dialout` group to your user's
-`extraGroups` (see the [NixOS Manual][nixos-user-mgmt] for an example on
-configuring `extraGroups`) and logging back into your system, you will now have
-access to any resource that owned by the `dialout` group :wink:.
+<div class="element note">
+:exclamation: Normal users generally don't have unrestricted access to devices.
+In NixOS this rings true for the TTY devices. Just run `ls -la /dev/tty*` to
+observe for yourself. The `root` user is most likely owner of all of the listed
+devices, however; the serial TTY's seem to owned by the `dialout` group. By
+adding the `dialout` group to your user's `extraGroups` (see the [NixOS
+Manual][nixos-user-mgmt] for an example on configuring `extraGroups`) and
+logging back into your system, you will now have access to any resource that
+owned by the `dialout` group :wink:.
+</div>
 
 In order to compile and upload the sketch in one go, one may run
 
@@ -144,12 +146,14 @@ hardware, please explore the boards.txt file located in the
 `$ARDUINO_PATH/share/arduino/hardware/arduino/avr` directory and adjust the
 parameters accordingly.
 
-> <a name="which-port">:bulb:</a> Determining the port could be as simple as observing the output of
-`ls -la /dev/tty*` or just watching the output of `dmesg -wH` or
-`journalctl -f` for USB-related messages while resetting or connecting the board
-:wink:. The extract of my dmesg buffer below indicates that there is a device
-connected as `ttyACM0` right after a new USB device has been detected that
-fits the description.
+<div class="element note">
+<a name="which-port">:bulb:</a> Determining the port could be as simple as
+observing the output of `ls -la /dev/tty*` or just watching the output of
+`dmesg -wH` or `journalctl -f` for USB-related messages while resetting or
+connecting the board :wink:. The extract of my dmesg buffer below indicates
+that there is a device connected as `ttyACM0` right after a new USB device has
+been detected that fits the description.
+
 ```
 [  +8.258105] usb 1-2: USB disconnect, device number 34
 [  +0.798493] usb 1-2: new full-speed USB device number 35 using xhci_hcd
@@ -159,6 +163,7 @@ fits the description.
 [  +0.000002] usb 1-2: Manufacturer: Arduino LLC
 [  +0.001795] cdc_acm 1-2:1.0: ttyACM0: USB ACM device
 ```
+</div>
 
 Usage of the `--verbose-build` and `--verbose-upload` arguments
 
@@ -214,9 +219,11 @@ parameters specified, to produce a collection of build artifacts in the
 `arduino` approach. If you like studying the machine code [like these guys](http://www.avrfreaks.net/forum/understanding-hex-file) you'll have something to study and play with
 when using `arduino-builder` :wink:.
 
-> :smirk: Of course you didn't have to run the command with the
-`-debug-level 10`, `-verbose` and `-warning all` arguments but in many cases it
-is convenient to have plenty of information available in case things fail.
+<div class="element note">
+:smirk: Of course you didn't have to run the command with the `-debug-level
+10`, `-verbose` and `-warning all` arguments but in many cases it is convenient
+to have plenty of information available in case things fail.
+</div>
 
 After building one would still need to flash the Arduino. This could be done
 by using the `avrdude` [:books:][avrdude-doc] tool. Since this wasn't installed
@@ -245,9 +252,11 @@ stdenv.mkDerivation rec {
 }
 ```
 
-> A change to the nix files is only honored once we restart the shell, so do
+<div class="element note">
+A change to the nix files is only honored once we restart the shell, so do
 yourself a favor, exit the running nix-shell and start the nix-shell again
 after `avrdude` is added to the `buildInputs`.
+</div>
 
 At this stage, one may run
 
@@ -282,19 +291,23 @@ errors please
 
 which would generally lead to resolution.
 
-> :bulb: For the Leonardo board known as device `ttyACM0`, the
-[Arduino Leonardo documentation :book:][arduino-leonardo] mentions that one may
-set the board into bootloader mode by opening and closing a serial connection
-at 1200 baud. One may accomplish this in Linux by executing
-```o
+<div class="element note">
+:bulb: For the Leonardo board known as device `ttyACM0`, the [Arduino Leonardo
+documentation :book:][arduino-leonardo] mentions that one may set the board
+into bootloader mode by opening and closing a serial connection at 1200 baud.
+One may accomplish this in Linux by executing
+
+```bash
 stty -F /dev/ttyACM0 ispeed 1200 ospeed 1200
 ```
+
 after which the led fades in and out to indicate that it is in bootloader mode
 and good to go. For other board types, one would have to figure out what the
 procedure is to get into bootmode. The Mega board, for instance doesn't require
 any sorcery to make things work. Simply using the correct port and calling
 avrdude with the appropriate arguments will result to a successful flash unless
 the board and processor are defective.
+</div>
 
 For demonstrative purposes you can have a glance at [a Makefile][mkfile-neopixel]
 which I wrote to simplify the build and flash process with arduino-builder for a
