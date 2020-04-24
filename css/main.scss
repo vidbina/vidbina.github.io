@@ -555,13 +555,43 @@ html, body { height: 100%; }
   .impress-supported .fallback-message {
       display: none;
   }
-  body.impress-supported {
+
+  body#classic.impress-supported {
     background-color: #111;
     color: #ddd;
   }
 
   div#impress {
     display: table;
+
+    div.slide {
+      background-color: #111;
+      color: #ddd;
+    }
+
+    p, q, h1, h2, h3 {
+      color: #ddd;
+    }
+
+    p {
+      font-size: 1em;
+    }
+
+    q, h1 {
+      font-size: 2em;
+    }
+
+    h2 {
+      font-size: 1.5em;
+    }
+
+    q, h1, h2 {
+      font-weight: 800;
+    }
+
+    code {
+      font-family: Monaco, "Courier New", monospace;
+    }
   }
   .slide, #title, .title-slide {
     height: 500px;
