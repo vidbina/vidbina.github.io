@@ -86,28 +86,33 @@ intend to use. Remember that versions of nix packages are pinned to the nixpkgs
 that you are using, so in order to keep your nix use reproducible, always
 mention which nixpkgs you build against.
 
-> Please don't be and forget to specficy the `-I` command line argument when
-> using nix-shell. I spent a good amount of time feeling like a proper noob
-> until DigitalKiwi in the #nixos freenode chan pointed this out. Long live IRC
-> rooms :bow:
+> Please don't be me and forget to specficy the `-I` command line argument when
+> using nix-shell. :facepalm: I spent a good amount of time feeling like a
+> proper noob until [DigitalKiwi][kiwi] in the #nixos freenode chan pointed
+> this out. Long live IRC rooms! :bow:
 
+This environment will provide you the Qt Creator (accessible through the
+`qtcreator` command), Qt Designer (accessible through the `designer` command)
+as well as the `pyrcc5` and `pyuic5` command line utils that you'll use for
+generating resource and ui code respectively.
 
 I tend to design containers for the projects that I develop (even for
 buildchains for firmware development) but when dealing with GUI projects,
-containers become a bit of a hassle[^hassle]. This is where I turn to **nix**
+containers become a bit of a hassle[^hassle]. This is why I turn to **nix**
 which allows for [nifty developer environments][adhocdev]. Since I really hate
-fiddling with tooling, the ability of nix to declaratively define your
-environments is a real joy with regards to portability (I can move between
-machines with confidence) and reproducibility (I can onboard new folks with
-ease with less "well it worked for me" problems :shrug:).
+fiddling with tooling, the ability of nix to declaratively define environments
+is a real joy with regards to portability (you can move between machines with
+confidence) and reproducibility (you can onboard new folks to a project with
+relative ease and considerably less "well it worked for me" problems :shrug:).
 
 [^hassle]: In order to get GUI to work in containers, you will have to mount
   X11 sockets into your containers and some other jazz.
 
 The good folks at tweag.io have already provided a better [write-up on
-poetry2nix][tweag] than I can which provides some additional perspectives on
+poetry2nix][tweag] than I can, which provides some additional perspectives on
 the whole Poetry on NixOS stuff, so please go read that if you'd like to know
 more.
 
 [tweag]: https://www.tweag.io/blog/2020-08-12-poetry2nix/
 [adhocdev]: https://nixos.org/guides/ad-hoc-developer-environments.html
+[kiwi]: https://mostlyabsurd.github.io/about/
