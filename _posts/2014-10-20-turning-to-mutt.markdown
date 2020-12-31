@@ -319,7 +319,7 @@ will choose to archive, perhaps you just want to delete, or maybe even forward.
 Mutt can do it all :email:
 
 #### Tagging messages older than 60days
-The _tag-pattern_ command (default `T`) allows us to tag multiple
+The [_tag-pattern_][pattern] command (default `T`) allows us to tag multiple
 messages using a pattern in comparison to _tag-entry_ command (default `t`)
 that only allows us to tag the message at the cursor.
 
@@ -362,6 +362,36 @@ Pressing the `<Esc>e` combination triggers the `resend-message`
 command. There is probably a better way to do this, but it works well enough in
 my situation.
 
+## mbox to Maildir conversion
+
+One can use the [`mb2md` tool][mb2md] to convert mbox files to Maildir files in
+case this is necessary. Upon tagging multiple messages and writing them to a
+given directory that didn't exist e.g.: `;s=Archive.2016`, I happened to find
+all tagged emails written to a single mbox file with the name "Archive.2016".
+In this case, I had to convert mbox files back into a maildir in order to allow
+offlineimap to properly sync them.
+
+```bash
+mb2md -s /tmp/new/Archive.2016 -d /tmp/newmail/
+```
+
+> Remember to use full paths for source file in order to avoid running into
+> `Fatal: Source is not an mbox file or a directory!` errors as documented in
+> this [thread][mb2md-err]
+
+## Maildir basics
+
+A **Maildir**[^1] contains:
+ - `new` for messages not yet seen by the mail client
+ - `cur` for messages already seen by the mail client (messages are moved here
+   from "new")
+ - `tmp` for temporary messages (that are being drafted, for example)
+
+[^1]: [Maildir][muttmua-maildir] and [MaildirFormat][MaildirFormat]
+
+**Subfolders** in Mailbox terminology are the organizational structures within
+a respective mailbox such as "Drafts" and "Sent".
+
 ## Links
 
 - [neomuttrc][neomuttrc]
@@ -384,10 +414,21 @@ my situation.
 [andrews-ssl]: http://www.andrews-corner.org/mutt.html#ssl
 [gnugpg]: https://wiki.archlinux.org/index.php/GPG#gpg-agent
 [gnu-agent-start]: https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
-[mutt-patterns]: http://www.mutt.org/doc/manual/manual.html#toc4.2
+[mutt-patterns]: http://www.mutt.org/doc/manual/manual.html#patterns
 [mutt-actions-faq]: http://dev.mutt.org/trac/wiki/MuttFaq/Action
 [stevelosh]: https://stevelosh.com/blog/2012/10/the-homely-mutt/#getting-email
 [mcgrof]: https://people.kernel.org/mcgrof/replacing-offlineimap-with-mbsync
 [neomuttrc]: https://neomutt.org/man/neomuttrc
 [srobb]: http://srobb.net/mutt.html
 [msmtp-mutt]: https://marlam.de/msmtp/msmtp.html#Using-msmtp-with-Mutt
+[gideon-wolfe]: https://gideonwolfe.com/posts/workflow/neomutt/intro/
+[bascht]: https://bascht.com/blog/2014/05/28/einstieg-in-mutt-notmuch-offlineimap/
+[webgefrickel]: https://www.webgefrickel.de/blog/a-modern-mutt-setup-part-two
+[mb2md]: http://batleth.sapienti-sat.org/projects/mb2md/
+[mb2md-err]: https://www.linuxquestions.org/questions/linux-server-73/mb2md-problem-891502/
+[elho-mutt-md]: http://www.elho.net/mutt/maildir/
+[muttmua-maildir]: https://gitlab.com/muttmua/mutt/-/wikis/MuttFaq/Maildir
+[muttmua-maildirformat]: https://gitlab.com/muttmua/mutt/-/wikis/MaildirFormat
+[maildir]: https://cr.yp.to/proto/maildir.html
+[mutt-action]: https://gitlab.com/muttmua/mutt/-/wikis/MuttFaq/Action
+[pattern]: https://neomutt.org/guide/advancedusage#3-1-%C2%A0pattern-modifier
