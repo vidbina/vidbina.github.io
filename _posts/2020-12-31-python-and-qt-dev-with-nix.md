@@ -2,10 +2,10 @@
 layout: post
 title: Python and Qt Development in Nix
 description: |
-  This post is a 15mins write-up because I just fucked up and overwrote a draft
-  post that I had thoughtfully put together. So here is a sloppy quick
-  note-to-self for my future stoopid self in the "done is better than perfect"
-  spirit.
+  This post is a 15 mins write-up because I just fucked up :bomb: and overwrote
+  a draft post that I had thoughtfully put together. So here is a sloppy quick
+  note-to-self for my future stoopid :facepalm: self in the "done is better
+  than perfect" spirit.
 date:  2020-12-31 16:57:50 +0000
 type: tooling # for icon
 category: tooling # for url
@@ -30,6 +30,8 @@ og:
 #  card: summary
 #  image: https://s3.eu-central-1.amazonaws.com/vid.bina.me/img/brexit.png
 head: mugshot
+mugshot: y2019
+emojify: true
 ---
 
 > :bomb: I just spend a good amount of time drafting what I considered was a
