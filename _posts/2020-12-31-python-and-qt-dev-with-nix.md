@@ -3,7 +3,9 @@ layout: post
 title: Python and Qt Development in Nix
 description: |
   This post is a 15mins write-up because I just fucked up and overwrote a draft
-  post that I had thoughtfully put together. Done is better than perfect.
+  post that I had thoughtfully put together. So here is a sloppy quick
+  note-to-self for my future stoopid self in the "done is better than perfect"
+  spirit.
 date:  2020-12-31 16:57:50 +0000
 type: tooling # for icon
 category: tooling # for url
