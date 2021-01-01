@@ -32,7 +32,9 @@ layout: default
     </li>
     {% endfor %}
   </ul>
+  {% if page.disqus %}
   <div id="disqus_thread"> </div>
   <script type="text/javascript" src="https://disqus.com/forums/{{ site.disqus_shortname }}/embed.js"> </script>
   <noscript><a href="https://{{ site.disqus_shortname }}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+  {% endif %}
 </article>
