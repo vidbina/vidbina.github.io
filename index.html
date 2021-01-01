@@ -14,7 +14,7 @@ emojify: true
         <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
         <h2 id="posts-title-{{ forloop.index }}">
           {% include icons-entypo.html type=post.type icon=post.icon %}
-          <strong>{{ post.title }}</strong>
+          {{ post.title }}
         </h2>
         <p id="posts-description-{{ forloop.index }}">{{ post.description }}</p>
       </a>
