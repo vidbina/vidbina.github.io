@@ -16,7 +16,7 @@ emojify: true
         <time datetime="{{ talk.date | date: "%Y-%m-%d" }}">{{ talk.date | date_to_string }}</time>
         <h2>
           {% include icons-entypo.html type=talk.type %}
-          <strong>{{ talk.title }}</strong>
+          {{ talk.title }}
         </h2>
         <p>{{ talk.description }}</p>
       </a>

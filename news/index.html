@@ -10,7 +10,7 @@ head: mugshot
       <a href="{{news.url}}">
         <h2>
           {% include icons-entypo.html type=news.type icon=news.icon %}
-          <strong>{{ news.title }}</strong>
+          {{ news.title }}
         </h2>
         <p>{{ news.description }}</p>
         {{ news.embed }}
