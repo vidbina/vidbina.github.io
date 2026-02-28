@@ -1,34 +1,27 @@
-#require 'dotenv/tasks'
+require 'fileutils'
 
 namespace :site do
   desc 'Clean up the site directory'
   task :clean do
-	  `rm -r _site`
+    FileUtils.rm_rf('_site')
   end
 
   desc 'Build the Jekyll site'
   task :build do
-    `jekyll build`
+    sh 'bundle exec jekyll build'
   end
 
-  desc 'Upload'
-  #task :upload => :dotenv do
-	#  exec "rsync -avz --copy-links --del _site/ #{ENV['WEBSITE_USER']}:#{ENV['WEBSITE_PATH']}"
-  #end
+  desc 'Clean and build'
+  task reload: %i[clean build]
 
-  desc 'reload'
-  task :reload => [ :clean, :build, :upload ] do
-    puts "uploading site changes"
-  end
-
-  desc 'review'
+  desc 'Serve drafts locally'
   task :serve do
-    exec "jekyll serve -H 0.0.0.0 -wD "
+    sh 'bundle exec jekyll serve -H 0.0.0.0 -wD'
   end
 
-  desc 'server'
+  desc 'Serve site locally'
   task :server do
-    exec "jekyll serve -H 0.0.0.0 -w"
+    sh 'bundle exec jekyll serve -H 0.0.0.0 -w'
   end
 
   desc 'generate new post as `rake site:new "Title" "category"`'
@@ -41,26 +34,26 @@ namespace :site do
     time = Time.now
     _, title, category = args
 
-    if title and category
+    if title && category
       puts "\tTitle: #{title}\n\tCategory: #{category}\n\tTime: #{time}"
 
       front_matter = File.open('_includes/front.template.jekyll', 'r') do |f|
         template = f.read
         template = template.gsub '{{DATE}}', time.to_s
-        (template = template.gsub '{{TITLE}}', title) if title
-        (template = template.gsub '{{CATEGORY}}', category) if category
+        template = template.gsub '{{TITLE}}', title
+        template = template.gsub '{{CATEGORY}}', category
         template
       end
 
-      filename = "#{time.strftime '%Y-%m-%d'}-#{title.downcase}".gsub ' ', '-'
+      filename = "#{time.strftime '%Y-%m-%d'}-#{title.downcase}".gsub(' ', '-')
       file = "_drafts/#{filename}.markdown"
-      File.open(file, "w") do |f|
+      File.open(file, 'w') do |f|
         f.puts front_matter
       end
 
-      exec "git add #{file}"
+      sh "git add #{file}"
     else
-      puts "Usage: rake site:new ${TITLE} ${CATEGORY}"
+      puts 'Usage: rake site:new ${TITLE} ${CATEGORY}'
     end
   end
 end
