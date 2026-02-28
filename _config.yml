@@ -1,14 +1,14 @@
 name: Blurt
 markdown: kramdown
 highlighter: rouge
-gems:
-  - jekyll-redirect-from
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
 paginate: 50
 disqus_shortname: vidbina
 permalink: /:categories/:title/
 url: https://vid.bina.me
 plugins:
   - jemoji
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-sitemap
