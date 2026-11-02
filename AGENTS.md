@@ -18,12 +18,10 @@ There is no Linear project for this repo. Work is tracked in [`docs/TODO.md`](do
 
 ## Setup Commands
 
-The toolchain is being modernized (see [`docs/TODO.md`](docs/TODO.md)), and the `Dockerfile`, `Makefile` and `README.md` still describe the 2021 setup on Ruby 2.4.
-
-- Install dependencies: `bundle install`
-- Start development server: `bundle exec jekyll serve --drafts`
+- Install dependencies: none; `make preview` runs everything in Docker
+- Start development server: `make preview`
 - Run tests: none yet
-- Build: `bundle exec jekyll build`
+- Build: `make preview` builds with the same `github-pages` version as the live site
 
 ## Environment Verification
 
@@ -38,7 +36,7 @@ Run these verification commands (detailed instructions in README.md):
 git config --list --local | grep -E "(user\.|commit\.|gpg\.)"
 
 # 2. Development Environment Check
-ruby --version && bundle --version
+docker version --format '{{.Server.Version}}'
 ```
 
 **If any verification fails:**
@@ -50,8 +48,8 @@ ruby --version && bundle --version
 
 ## Development Environment
 
-- Ruby gems through Bundler (`Gemfile`, `Gemfile.lock`)
-- `js/MathJax` is a git submodule: `git submodule update --init` if a page needs it locally
+- Docker for local builds; the repo has no `Gemfile`, because legacy GitHub Pages does not read one
+- `js/MathJax` is a git submodule: `make mathjax` if a page needs it locally
 
 ## Development Workflow
 
@@ -115,7 +113,7 @@ Sections marked `<!-- PROJECT-SPECIFIC -->` must be authored per project (brand 
 Execute these commands (detailed explanations in README.md):
 
 ```bash
-bundle exec jekyll build --strict_front_matter
+make preview
 ```
 
 **Critical Rules:**

@@ -8,17 +8,12 @@
 Audit of 2026-11-02. The items in each list can run in parallel unless they say `after:`.
 
 - [ ] Mixed content: Move the 18 `http://` asset references to https in posts and talks, including the `http://vid.bina.me` PDF embeds in `_posts/2014-1-19-flight-routes.markdown` (Impact: Availability, Effort: S)
+- [ ] Embeds: Gate third-party embeds behind consent, so a page names what would load and contacts the provider only after the visitor agrees, with a way to load or reload afterwards. These pages run no framework, so this needs a small script and include. Then update the notice in `imprint/index.html` (Impact: Legal, Effort: M)
 - [ ] `vendor/emojify/0.9.5/emojify.min.css`: Test whether this 5.4 MB render-blocking stylesheet can go, since fixing TLS brings it back on 56 pages (Impact: Performance, Effort: S)
-- [ ] YouTube embeds: Move the 12 pages to `youtube-nocookie.com` or click-to-load, as `youtube.com/embed` set 6 cookies in a `curl` test and the nocookie host set none (Impact: Privacy, Effort: S)
-- [ ] Other embeds: Decide which of Spotify, gists, Instagram and X stay embedded, become click-to-load, or become plain links (Impact: Privacy, Effort: M, Owner: operator)
 
 ## Next
 
 - [ ] GitHub settings: Protect `master` with required status checks, which `.github-settings.yaml` declares but the live branch lacks (Impact: DevEx, Effort: S, Owner: needs operator approval)
-- [ ] `docs/decisions/0001-select-pages-build-path.md`: Decide between the legacy build and an Actions deploy of Jekyll 4.4 (Impact: Security/DevEx, Effort: S, Owner: operator)
-- [ ] `Gemfile`, `_config.yml`, `_plugins/`, `.github/workflows/`: Modernize the toolchain as decided, including `submodules: true` for MathJax (Impact: Security/DevEx, Effort: M, after: decision)
-- [ ] `README.md`, `AGENTS.md`, `Makefile`, `Rakefile`, `Dockerfile`: Replace the Ruby 2.4, Docker and rsync instructions, adopting `.envrc` and devenv if they fit (Impact: DevEx, Effort: S, after: toolchain)
-- [ ] GitHub PRs: Close [#14](https://github.com/vidbina/vidbina.github.io/pull/14), [#6](https://github.com/vidbina/vidbina.github.io/pull/6), [#11](https://github.com/vidbina/vidbina.github.io/pull/11), [#12](https://github.com/vidbina/vidbina.github.io/pull/12) and [#13](https://github.com/vidbina/vidbina.github.io/pull/13), then resume paused Dependabot security fixes (Impact: Security, Effort: S, after: toolchain, Owner: needs operator approval)
 - [ ] `_config.yml`: Exclude `Makefile`, `Dockerfile`, `Rakefile`, `README.md`, `blank.html` and MathJax docs and tests from the site and sitemap (Impact: Security, Effort: S)
 - [ ] `_layouts/default.html`: Restore footer social icons, which appear to have no webfont or glyph CSS (Impact: UX, Effort: S)
 - [ ] `_includes/function_plot.html`: Replace the dead `wzrd.in` bundle, which breaks the graphs on `/math/sigmoid-change/` (Impact: Content, Effort: S)
@@ -26,12 +21,13 @@ Audit of 2026-11-02. The items in each list can run in parallel unless they say 
 
 ## Later
 
+- [ ] `_config.yml`, `_plugins/`, `.github/workflows/`: Move to Jekyll 4 on Actions, including `submodules: true` for MathJax, as set out in `docs/decisions/0001-select-pages-build-path.md` (Impact: Security/DevEx, Effort: M)
 - [ ] S3 assets: Recover or replace 21 references on 6 pages and the og/twitter images on 11 pages, as the bucket returns 403 `AllAccessDisabled` and sampled assets are not in git (Impact: Content, Effort: L, Owner: operator knows if originals exist)
 - [ ] Giphy embeds: Replace or remove the 14 of 19 that return 404 (Impact: Content, Effort: M)
 - [ ] Other dead images: Replace the Wikimedia, Pandora's Cluster and cinemablend images (Impact: Content, Effort: S)
 - [ ] External links: Sweep the 356 unique links, where 5 of a 32-link sample were dead (Impact: Content, Effort: L)
 - [ ] `_data/news.yml`, `_posts/`: Fix SEO metadata: duplicate twitter tags, missing canonicals, the `example.com` image in `hello-trickster`, raw `:emoji:` in descriptions (Impact: SEO, Effort: S)
-- [ ] Feed: Add one, as `/feed.xml` is a 404 and readers have no way to subscribe (Impact: UX, Effort: S, after: toolchain)
+- [ ] Feed: Add one, as `/feed.xml` is a 404 and readers have no way to subscribe (Impact: UX, Effort: S)
 - [ ] Emoji: Add the missing `:facepalm:` and `:thinking:` images (Impact: UX, Effort: S)
 - [ ] `images/`, `fonts/`: Trim about 746 unused emoji PNGs, unused Montserrat Alternates fonts and `fonts/entypo.zip` (Impact: Performance, Effort: S)
 - [ ] `vendor/`, `js/`: Audit browser-side code that Dependabot cannot see: emojify 0.9.5, `impress.js`, the 66 MB MathJax 2.7.1 submodule (Impact: Security, Effort: M)
@@ -54,6 +50,9 @@ Each asset needs a keep or remove decision from the operator. Removing one from 
 
 ## Completed
 
+- [x] `docs/decisions/0001-select-pages-build-path.md`: Decide on the build path (Impact: DevEx, Effort: S, Completed: 2026-11-02)
+- [x] `README.md`, `AGENTS.md`, `Makefile`, `Rakefile`: Replace the Ruby 2.4, Docker and rsync instructions (Impact: DevEx, Effort: S, Completed: 2026-11-02)
+- [x] GitHub PRs: Close the stale Dependabot PRs (Impact: Security, Effort: S, Completed: 2026-11-02)
 - [x] `imprint/index.html`: Add an imprint and privacy notice linked from every page (Impact: Legal, Effort: S, Completed: 2026-11-02)
 - [x] `_layouts/default.html`, `_includes/emojify.html`, `css/main.scss`: Drop hardcoded asset URLs (Impact: Availability, Effort: S, Completed: 2026-11-02)
 - [x] `index.html:38`: Fix the Previous link (Impact: UX, Effort: S, Completed: 2026-11-02)
