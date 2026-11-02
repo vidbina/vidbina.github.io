@@ -1,0 +1,32 @@
+# Declares intended GitHub repo settings so the /pr skill can detect drift.
+# Reconciled from the KB's templates/github-settings.yaml; validated in CI by
+# .github/workflows/lint-settings.yaml. Norm levels are explained in the KB
+# template. REQUIRED values must not be changed in this repo.
+
+merge:
+  # PREFERENCE: squash-only keeps master readable; the repo has always been
+  # a single-author blog with a linear history.
+  allowed_methods:
+    - squash
+
+  # PREFERENCE
+  default_method: squash
+
+  # REQUIRED
+  squash_title: pr_title
+
+  # REQUIRED
+  squash_message: commit_messages
+
+  # PREFERENCE
+  delete_branch_on_merge: true
+
+branch_protection:
+  # PREFERENCE: this repo predates the KB's `main` default.
+  default_branch: master
+
+  # PREFERENCE: solo repo; GitHub does not let an author approve their own PR.
+  require_pr_reviews: false
+
+  # PREFERENCE
+  require_status_checks: true

@@ -12,3 +12,23 @@ permalink: /:categories/:title/
 url: https://vid.bina.me
 plugins:
   - jemoji
+# Setting exclude replaces the defaults, so they are listed here as well.
+exclude:
+  - .jekyll-cache
+  - .sass-cache
+  - AGENTS.md
+  - CHANGELOG.md
+  - CLAUDE.md
+  - CNAME
+  - CONTRIBUTING.md
+  - GEMINI.md
+  - Gemfile
+  - Gemfile.lock
+  - docs
+  - gemfiles
+  - node_modules
+  - schemas
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

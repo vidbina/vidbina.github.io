@@ -1,2 +1,13 @@
 _site
 *.swp
+
+# Local secrets and overrides (never committed)
+.envrc.local
+.env
+.env.local
+.env.*.local
+
+# Devenv / direnv
+.devenv*
+devenv.local.nix
+.direnv
