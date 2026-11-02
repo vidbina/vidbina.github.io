@@ -7,10 +7,10 @@
 
 Audit of 2026-11-02. The items in each list can run in parallel unless they say `after:`.
 
-- [ ] `_layouts/default.html`, new `imprint` page: Add an imprint (Impressum) linked from every page, as required for sites run from Germany (Impact: Legal, Effort: S, Owner: operator supplies the details)
-- [ ] `_layouts/default.html`, `_includes/emojify.html`, `css/main.scss`: Drop hardcoded `https://vid.bina.me` asset URLs, which tie every page to one scheme and host (Impact: Availability, Effort: S)
-- [ ] `index.html:38`: Fix the Previous link, whose `replace` renders `https:/vid.bina.me/` and will 404 once on HTTPS (Impact: UX, Effort: S)
 - [ ] Mixed content: Move the 18 `http://` asset references to https in posts and talks, including the `http://vid.bina.me` PDF embeds in `_posts/2014-1-19-flight-routes.markdown` (Impact: Availability, Effort: S)
+- [ ] `vendor/emojify/0.9.5/emojify.min.css`: Test whether this 5.4 MB render-blocking stylesheet can go, since fixing TLS brings it back on 56 pages (Impact: Performance, Effort: S)
+- [ ] YouTube embeds: Move the 12 pages to `youtube-nocookie.com` or click-to-load, as `youtube.com/embed` set 6 cookies in a `curl` test and the nocookie host set none (Impact: Privacy, Effort: S)
+- [ ] Other embeds: Decide which of Spotify, gists, Instagram and X stay embedded, become click-to-load, or become plain links (Impact: Privacy, Effort: M, Owner: operator)
 
 ## Next
 
@@ -20,7 +20,6 @@ Audit of 2026-11-02. The items in each list can run in parallel unless they say 
 - [ ] `README.md`, `AGENTS.md`, `Makefile`, `Rakefile`, `Dockerfile`: Replace the Ruby 2.4, Docker and rsync instructions, adopting `.envrc` and devenv if they fit (Impact: DevEx, Effort: S, after: toolchain)
 - [ ] GitHub PRs: Close [#14](https://github.com/vidbina/vidbina.github.io/pull/14), [#6](https://github.com/vidbina/vidbina.github.io/pull/6), [#11](https://github.com/vidbina/vidbina.github.io/pull/11), [#12](https://github.com/vidbina/vidbina.github.io/pull/12) and [#13](https://github.com/vidbina/vidbina.github.io/pull/13), then resume paused Dependabot security fixes (Impact: Security, Effort: S, after: toolchain, Owner: needs operator approval)
 - [ ] `_config.yml`: Exclude `Makefile`, `Dockerfile`, `Rakefile`, `README.md`, `blank.html` and MathJax docs and tests from the site and sitemap (Impact: Security, Effort: S)
-- [ ] `vendor/emojify/0.9.5/emojify.min.css`: Test whether this 5.4 MB render-blocking stylesheet can go, since fixing TLS brings it back on 56 pages (Impact: Performance, Effort: S, after: asset URLs)
 - [ ] `_layouts/default.html`: Restore footer social icons, which appear to have no webfont or glyph CSS (Impact: UX, Effort: S)
 - [ ] `_includes/function_plot.html`: Replace the dead `wzrd.in` bundle, which breaks the graphs on `/math/sigmoid-change/` (Impact: Content, Effort: S)
 - [ ] Local links: Fix the scheme-less links in the laundr and coming-to-africa posts, `_data/news.yml:36`, the talks favicons and `/svg/head.svg` (Impact: UX, Effort: S)
@@ -55,6 +54,9 @@ Each asset needs a keep or remove decision from the operator. Removing one from 
 
 ## Completed
 
+- [x] `imprint/index.html`: Add an imprint and privacy notice linked from every page (Impact: Legal, Effort: S, Completed: 2026-11-02)
+- [x] `_layouts/default.html`, `_includes/emojify.html`, `css/main.scss`: Drop hardcoded asset URLs (Impact: Availability, Effort: S, Completed: 2026-11-02)
+- [x] `index.html:38`: Fix the Previous link (Impact: UX, Effort: S, Completed: 2026-11-02)
 - [x] Site: Audit outage, toolchain, content and CI (Impact: Availability, Effort: S, Completed: 2026-11-02)
 - [x] Namecheap DNS: Delete the two A records on `vid.bina.me` and keep the CNAME (Impact: Availability, Effort: S, Completed: 2026-11-02)
 - [x] GitHub Pages: Issue the certificate and enforce HTTPS (Impact: Availability, Effort: S, Completed: 2026-11-02)
