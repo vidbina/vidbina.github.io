@@ -7,7 +7,7 @@
 
 Audit of 2026-11-02. The items in each list can run in parallel unless they say `after:`.
 
-- [ ] GitHub Pages: Tick Enforce HTTPS now that the certificate is live (Impact: Availability, Effort: S, Owner: operator)
+- [ ] `_layouts/default.html`, new `imprint` page: Add an imprint (Impressum) linked from every page, as required for sites run from Germany (Impact: Legal, Effort: S, Owner: operator supplies the details)
 - [ ] `_layouts/default.html`, `_includes/emojify.html`, `css/main.scss`: Drop hardcoded `https://vid.bina.me` asset URLs, which tie every page to one scheme and host (Impact: Availability, Effort: S)
 - [ ] `index.html:38`: Fix the Previous link, whose `replace` renders `https:/vid.bina.me/` and will 404 once on HTTPS (Impact: UX, Effort: S)
 - [ ] Mixed content: Move the 18 `http://` asset references to https in posts and talks, including the `http://vid.bina.me` PDF embeds in `_posts/2014-1-19-flight-routes.markdown` (Impact: Availability, Effort: S)
@@ -57,6 +57,7 @@ Each asset needs a keep or remove decision from the operator. Removing one from 
 
 - [x] Site: Audit outage, toolchain, content and CI (Impact: Availability, Effort: S, Completed: 2026-11-02)
 - [x] Namecheap DNS: Delete the two A records on `vid.bina.me` and keep the CNAME (Impact: Availability, Effort: S, Completed: 2026-11-02)
+- [x] GitHub Pages: Issue the certificate and enforce HTTPS (Impact: Availability, Effort: S, Completed: 2026-11-02)
 - [x] GitHub settings: Apply the squash-only merge settings from `.github-settings.yaml` (Impact: DevEx, Effort: S, Completed: 2026-11-02)
 
 ## Never
