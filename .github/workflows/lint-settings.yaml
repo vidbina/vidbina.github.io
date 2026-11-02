@@ -27,7 +27,7 @@ on:
       - 'schemas/fixtures/**'
       - '.github/workflows/lint-settings.yaml'
   push:
-    branches: [main]
+    branches: [master]
     paths:
       - '.github-settings.yaml'
       - 'templates/github-settings.yaml'
