@@ -76,7 +76,7 @@ left turn after take-off and the waypoints we have to cross on our way to
 GORLO.
 
 <div class="element document portrait-a4">
-  <embed class="a4" src="http://vid.bina.me/resources/aviation/departure_charts/eham_aip_rwy09_20130919.pdf">
+  <embed class="a4" src="/resources/aviation/departure_charts/eham_aip_rwy09_20130919.pdf">
 </div>
 
 ## VOR
@@ -124,21 +124,21 @@ execute a VOR-DME approach, which has been nicely explained in a FlightGear
 tutorial I found on [youtube][flightgear-vordme].
 
 <div class="element video">
-  <iframe src="http://www.youtube.com/embed/aIJHn3iSipE" frameborder="0" allowfullscreen> </iframe>
+  <iframe src="https://www.youtube.com/embed/aIJHn3iSipE" frameborder="0" allowfullscreen> </iframe>
 </div>
 
 On the map we have our frequencies, approach patterns and corresponding
 airspeeds and altitudes, which should be enough to keep the process
 moving forward.
 <div class="element document portrait-a4">
-  <embed class="a4" src="http://vid.bina.me/resources/aviation/approach_plates/smjp_jeppesen_20120817.pdf">
+  <embed class="a4" src="/resources/aviation/approach_plates/smjp_jeppesen_20120817.pdf">
 </div>
 
 Yet again, a FlightGear How-to video comes to the rescue by quickly explaining
 some of the concepts encountered in this map.
 
 <div class="element video">
-  <iframe src="http://www.youtube.com/embed/z8yEHyKs_JE" frameborder="0" allowfullscreen> </iframe>
+  <iframe src="https://www.youtube.com/embed/z8yEHyKs_JE" frameborder="0" allowfullscreen> </iframe>
 </div>
 
 My summary of the ILS approach,

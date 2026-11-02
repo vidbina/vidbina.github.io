@@ -64,7 +64,7 @@ experience new highs on a magical bus ride :bus:. So I'm
 going to mix things up.
 
 <div class="element instagram">
-  <iframe src="http://instagram.com/p/gjk1-CKgOt/embed/" width="612" height="692" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+  <iframe src="https://instagram.com/p/gjk1-CKgOt/embed/" width="612" height="692" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
 </div>
 
 How about I go on that bus ride to get inspired to compose new tunes for your
@@ -124,7 +124,7 @@ very adventure it will not obstruct the experience from rejuvenating my mind --
 it didn't last year when I coasted through Europe.
 
 <div class="element instagram">
-  <iframe src="http://instagram.com/p/gLF4PDMFCa/embed/" width="612" height="692" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+  <iframe src="https://instagram.com/p/gLF4PDMFCa/embed/" width="612" height="692" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
 </div>
 
 You see new places, meet new people, hear new ideas, smell new scents, hear new

@@ -23,7 +23,7 @@
         el.src = this.src;
       };
       var path = getUriComponents(el.src)['pathname'].replace('/images', '');
-      image.src = 'http://www.tortue.me' + path;
+      image.src = 'https://www.tortue.me' + path;
     })(els[i], i);
   }
 })();
