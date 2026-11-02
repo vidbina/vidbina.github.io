@@ -1,9 +1,9 @@
 ---
 title: "Select the GitHub Pages build path"
 tags: [site, deps, hosting]
-status: exploring
-decision: ""
-review_date: 2026-12-01
+status: decided
+decision: "Stay on the legacy Pages build for now and move to Jekyll 4 on Actions when the toolchain next needs work"
+review_date: 2027-11-01
 related_to: []
 supersedes: ""
 ---
@@ -15,6 +15,7 @@ supersedes: ""
 | Status    | Date       | Author         | Related Tickets | Notes                        |
 | :-------- | :--------- | :------------- | :-------------- | :--------------------------- |
 | exploring | 2026-11-02 | Claude (audit) | none            | Recommendation awaits review |
+| decided   | 2026-11-02 | David Asabina  | none            | A now, B eventually          |
 
 ## Context
 
@@ -42,12 +43,16 @@ Findings from a local build of B on `ruby:3.3`:
 
 ## Decision
 
-Not decided. The audit recommends B: A costs less today, but it stays on a frozen Jekyll line GitHub no longer recommends. A with the Gemfile and lock deleted is the no-CI fallback, at the cost of local build parity.
+Stay on the legacy Pages build for now and move to Jekyll 4 on Actions when the toolchain next needs work.
+
+The operator chose A over the audit's recommendation of B because of B's maintenance load, and expects to get to B eventually. Hugo was also discussed: any generator other than Jekyll needs an Actions workflow too, and it would mean rewriting every template.
 
 ## Consequences
 
-To be filled in once decided. B adds a workflow to maintain, and gem code then runs in a job that leads to deployment, so keep the lock committed.
+- The site stays on a frozen Jekyll line, with no build workflow to maintain.
+- The repo drops `Gemfile`, `Gemfile.lock` and the `Dockerfile`, because legacy Pages does not appear to read them (inferred from [the builder's pinned Gemfile](https://github.com/actions/jekyll-build-pages/blob/main/Gemfile)). Local builds use `make preview`.
+- Dependency bumps wait for the move to B, which needs a new `Gemfile` and the steps listed under Exploration.
 
 ## Confirmation
 
-To be filled in once decided. For B: a deployed Actions run serves the custom domain over HTTPS, and pages using MathJax still render.
+[`pages.github.com/versions.json`](https://pages.github.com/versions.json) names the `github-pages` version the `Makefile` should match. No check enforces this.

@@ -45,6 +45,9 @@ Tag manual-only steps with **(manual)** so readers know an agent can't automate 
 ### Added
 - **KB conventions** — `AGENTS.md`, `CONTRIBUTING.md`, this changelog, `docs/TODO.md`, `docs/decisions/`, `.github-settings.yaml`, and the `lint-pr` and `lint-settings` CI bundles. Non-site files are excluded from the published site through `_config.yml`.
 
+### Removed
+- **`Gemfile`, `Gemfile.lock`, `Dockerfile`** — legacy GitHub Pages does not appear to read them, and the stale lock carried all of the repo's Dependabot alerts. `make preview` replaces them. See `docs/decisions/0001-select-pages-build-path.md`.
+
 <!-- Template entry — copy and fill in:
 
 ## [YYYY-MM-DD]

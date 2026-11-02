@@ -1,45 +1,33 @@
 # Blurt
 
-[emojifyjs]: https://www.npmjs.com/package/emojify.js
+Personal blog of David Asabina, published at <https://vid.bina.me>.
 
-I have made things easy for myself. By running `rake reload` I can now have
-my website updated and running.
+The site is built by GitHub Pages from `master` with its legacy Jekyll build, so pushing to `master` deploys it. See [the build path decision](docs/decisions/0001-select-pages-build-path.md) for why.
 
-In order to make things work I have set up a `.env` file in my blog
-directory which contains my username, the server I sign in to and the path
-of my website.
+## Preview locally
+
+With Docker running:
 
 ```bash
-export WEBSITE_USER=spock@enterprise.org
-export WEBSITE_PATH=/www/spock/
+make preview
 ```
 
-With the above information in a `.env` file an attempt would be made to
-update the `/www/spock` path as user `spock` on server
-`enterprise.org`. Change your setup to your liking and have fun.
+This builds the site with the same `github-pages` version as the [GitHub Pages dependency list](https://pages.github.com/versions.json) and serves it on <http://localhost:4000>. Restart it to pick up changes. Update `GITHUB_PAGES` in the `Makefile` if that list moves on.
 
-## Setup
-Get your ruby environment ready by running `bundle install`. This will
-ensure that Jekyll and dotenv are installed on your box.
+Pages that use math need the MathJax submodule locally:
 
-Run `rake -T` to get an impression of all the tasks I have already
-automated.
+```bash
+make mathjax
+```
 
-## Usage
-At the moment jekyll allows you to build your site into the `_site`
-directory. User `rake site:build` to build your site into your `_site`
-directory.
+## New posts
 
-In order to clean your `_site` directory for a rebuild or simply because
-you don't want it anymore run `rake site:clean`.
+```bash
+rake site:new "Title" "category"
+```
 
-In order to upload your site run `rake site:upload`.
+This creates a draft in `_drafts/`. Move it to `_posts/` to publish it.
 
-In order to make life easier just run `rake site:reload` which cleans your
-local `_site` directory, rebuilds your website into and uploads it
-afterwards.
+## Contributing
 
-There are some tasks setup to help you in getting a local server up and running
-generally `rake site:serve` should fire up your site as it should appear
-to your audience after an update. The `rake site:review` task should do
-the same thing and reveal your draft articles as well.
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`docs/TODO.md`](docs/TODO.md).
