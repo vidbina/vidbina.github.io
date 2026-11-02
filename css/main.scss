@@ -325,22 +325,6 @@ html, body { height: 100%; }
     padding: 0;
   }
 
-  .title > a {
-    background: url("/svg/head.svg") no-repeat center;
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    display: inline-block;
-    text-align: center;
-    line-height: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-indent: 200px;
-    display: none;
-  }
-
-
-
   .logo {
     display: inline;
     text-align: center;
