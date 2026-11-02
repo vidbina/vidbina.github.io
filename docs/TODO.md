@@ -7,8 +7,8 @@
 
 Audit of 2026-11-02. The items in each list can run in parallel unless they say `after:`.
 
-- [ ] GitHub Pages: Confirm a certificate is issued, re-saving the custom domain if it is not, then enforce HTTPS (Impact: Availability, Effort: S, Owner: operator)
-- [ ] `_layouts/default.html`, `_includes/emojify.html`, `css/main.scss`: Drop hardcoded `https://vid.bina.me` asset URLs, which break CSS, emoji and the header image on HTTP today (Impact: Availability, Effort: S)
+- [ ] GitHub Pages: Tick Enforce HTTPS now that the certificate is live (Impact: Availability, Effort: S, Owner: operator)
+- [ ] `_layouts/default.html`, `_includes/emojify.html`, `css/main.scss`: Drop hardcoded `https://vid.bina.me` asset URLs, which tie every page to one scheme and host (Impact: Availability, Effort: S)
 - [ ] `index.html:38`: Fix the Previous link, whose `replace` renders `https:/vid.bina.me/` and will 404 once on HTTPS (Impact: UX, Effort: S)
 - [ ] Mixed content: Move the 18 `http://` asset references to https in posts and talks, including the `http://vid.bina.me` PDF embeds in `_posts/2014-1-19-flight-routes.markdown` (Impact: Availability, Effort: S)
 
