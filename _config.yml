@@ -22,10 +22,17 @@ exclude:
   - CNAME
   - CONTRIBUTING.md
   - GEMINI.md
+  - Makefile
   - Gemfile
   - Gemfile.lock
+  - README.md
+  - Rakefile
+  - blank.html
   - docs
   - gemfiles
+  - js/MathJax/docs
+  - js/MathJax/test
+  - js/MathJax/unpacked
   - node_modules
   - schemas
   - vendor/bundle/
