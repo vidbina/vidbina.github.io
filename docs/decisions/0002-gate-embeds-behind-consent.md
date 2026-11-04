@@ -1,8 +1,8 @@
 ---
 title: "Gate third-party embeds behind consent"
 tags: [site, privacy, legal]
-status: exploring
-decision: ""
+status: decided
+decision: "Gate embeds in templates, remember the choice per provider in localStorage, and keep no server-side consent log"
 review_date: 2027-11-01
 related_to: ["0001-select-pages-build-path"]
 supersedes: ""
@@ -15,6 +15,7 @@ supersedes: ""
 | Status    | Date       | Author         | Related Tickets | Notes                                      |
 | :-------- | :--------- | :------------- | :-------------- | :----------------------------------------- |
 | exploring | 2026-11-04 | Claude (draft) | none            | Prototype on one post; rollout not started |
+| decided   | 2026-11-04 | David Asabina  | none            | Option B: gate, remember, no consent log   |
 
 ## Context
 
@@ -65,12 +66,13 @@ The built site has 108 third-party loads on 34 pages:
 
 - **Without JavaScript**, the visitor gets the link and nothing loads.
 - **With JavaScript**, a notice names the provider and links its privacy policy, with a Load button.
-- **After loading**, the visitor can Reload or Remove the embed.
+- **Load once** stores nothing. The visitor can then Reload or Remove the embed.
+- **Always load** keeps the provider's name and version in `localStorage`, loads that provider's embeds and offers Forget. Bumping the version asks again, because a changed third party needs new consent.
+- **Withdrawal** is on the embed and in a list at `/imprint/#eingebettete-inhalte`.
 - **Quoted posts** stay readable before consent: a blockquote in the template is shown as a plain copy, without its images.
-- **Nothing is stored**, so there is no state to disclose or revoke, and refreshing the page unloads everything.
 - **The script** is only requested on pages that have a gate.
 
-**Checked in desktop Chrome on a local Pages-toolchain build:** no third-party requests before a click; one click loaded only that tweet; Reload, Remove and page refresh worked; dark mode and a 390 px frame displayed correctly.
+**Checked in desktop Chrome on a local Pages-toolchain build:** no third-party requests before a click; one click loaded only that tweet; Reload, Remove and page refresh worked; dark mode and a 390 px frame displayed correctly. Always load survived a revisit for that provider only; Forget worked on the embed and on the imprint page; a stale version and corrupted storage both asked again.
 
 **Not yet checked:** other browsers, a real phone, screen readers, and every provider other than YouTube and X.
 
@@ -85,8 +87,6 @@ The built site has 108 third-party loads on 34 pages:
 ## Open Questions
 
 1. How should the 32 hot-linked images and PDFs be handled: gated, self-hosted or removed? Self-hosting raises the copyright question for each image.
-2. Should the site offer "always allow this provider"? The prototype leaves this out, because remembering the choice adds stored state and needs a way to withdraw it.
-3. Should visitors get a "load all on this page" control? `_posts/2015-09-18-slack-broke-my-flow.markdown` has 5 tweets to click through.
 
 ## Rollout
 
@@ -97,4 +97,16 @@ The built site has 108 third-party loads on 34 pages:
 
 ## Decision
 
-Pending.
+Gate embeds, remember the choice per provider on the visitor's device, and keep no server-side consent log.
+
+**Why no log.** Art. 7(1) GDPR requires a controller to be able to demonstrate consent, but regulators differ on what that takes for an anonymous visitor:
+
+- [DSK OH Digitale Dienste](https://datenschutzkonferenz-online.de/media/oh/OH_Digitale_Dienste.pdf) para. 84-85 (November 2024) says long-lived IDs are not needed. It is usually enough to show the process and store the result without an ID, keeping old notice texts and configurations.
+- [DSK Kurzpapier 20](https://www.datenschutzkonferenz-online.de/media/kp/dsk_kpnr_20.pdf) (September 2026) says pointing to a correct site is not enough and each declaration must be documented. It also says a stored IP address with a claim of consent is not enough.
+- [EDPB Guidelines 05/2020](https://www.edpb.europa.eu/system/files/documents/files/file1/edpb_guidelines_202005_consent_en.pdf) para. 106-108 asks for enough data to show the link and no more, and also says a correct configuration alone is not sufficient.
+
+The site holds no data about visitors and has no way to identify them. A log of IP addresses and user agents would add personal data without proving who clicked, so this choice follows data minimisation (Art. 5(1)(c)) and para. 84-85. The git history records each notice text and workflow by date.
+
+**Remaining risk.** The Kurzpapier is newer and points the other way. A regulator could hold that this falls short. This reasoning has not been reviewed by a lawyer.
+
+**Rejected.** Linking out instead of embedding would remove the question altogether, but loses inline players; it remains the choice for embeds not worth keeping. Hosted consent platforms add a third party to every page, and a self-run log needs an endpoint beyond GitHub Pages.
