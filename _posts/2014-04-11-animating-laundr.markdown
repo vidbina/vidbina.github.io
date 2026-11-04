@@ -226,8 +226,8 @@ consider playing around with new tools and toys.
 
 
 [kilimanjaro]: http://thesummit.co/kilimanjaro/nominees-alpha#entry-199
-[laundr]: www.laundr.co
+[laundr]: https://www.laundr.co
 [port]: http://startupfoundation.co/rotterdam-startup-port/
-[saddl]: www.saddl.nl
+[saddl]: https://www.saddl.nl
 [ionic]: http://ionicframework.com
 [washee]: http://familyguy.wikia.com/wiki/Mr._Washee_Washee

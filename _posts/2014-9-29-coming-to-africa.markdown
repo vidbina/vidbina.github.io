@@ -230,5 +230,5 @@ Let's go!
   <iframe width="420" height="315" src="//www.youtube.com/embed/wBC86idJFj4" frameborder="0" allowfullscreen> </iframe>
 </div>
 
-[startupbus]: www.startupbus.com
-[ampion]: www.ampion.org
+[startupbus]: https://startupbus.com
+[ampion]: https://www.ampion.org
