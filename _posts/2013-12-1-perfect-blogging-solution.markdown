@@ -92,7 +92,7 @@ If I focus on finding _sans-serif_ fonts where the types have long ascenders
 and descenders I&rsquo;ll be fine.
 
 <div class="element image light">
-  <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Typography_Line_Terms.svg/500px-Typography_Line_Terms.svg.png" alt="typography terms">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Typography_Line_Terms.svg/500px-Typography_Line_Terms.svg.png" alt="typography terms">
 </div>
 
 So&hellip; word shapes play significant roles in the comprehension speed of
@@ -108,7 +108,7 @@ the bill&hellip; until people start complaining I will assume that it works well
 in the readability department.
 
 <div class="element video">
-<iframe src="http://www.kickstarter.com/projects/julietaulanovsky/the-montserrat-typeface/widget/video.html" frameborder="0" scrolling="no"> </iframe>
+<iframe src="https://www.kickstarter.com/projects/julietaulanovsky/the-montserrat-typeface/widget/video.html" frameborder="0" scrolling="no"> </iframe>
 </div>
 
 ### Math

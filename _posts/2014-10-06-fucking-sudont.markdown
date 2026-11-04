@@ -34,7 +34,7 @@ systems because someone disrespectfully smacked a `sudo` in front of a command
 that was not doing what the user expected.
 
 <div class="element image">
-  <img src="http://imgs.xkcd.com/comics/sandwich.png" alt="Sudo make me a sandwich">
+  <img src="https://imgs.xkcd.com/comics/sandwich.png" alt="Sudo make me a sandwich">
 </div>
 
 The problem with this approach is that many do not have a freaking clue what

@@ -165,7 +165,7 @@ do yourself a favor and pick a mech that has more guts then the `f1-micro`
 mech. Be creative with `CLUSTER`. I called mine [Abell 2744][abell2744].
 
 <div class="element image">
-  <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Pandora%27s_Cluster_%E2%80%93_Abell_2744.jpg/600px-Pandora%27s_Cluster_%E2%80%93_Abell_2744.jpg" alt="A picture of Pandora's cluster (cataloged in the Abell index as number 2744) as captured by the Hubble Space Telescope">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Pandora%27s_Cluster_%E2%80%93_Abell_2744.jpg/600px-Pandora%27s_Cluster_%E2%80%93_Abell_2744.jpg" alt="A picture of Pandora's cluster (cataloged in the Abell index as number 2744) as captured by the Hubble Space Telescope">
 </div>
 
 If all is well the previous command should spawn a Kubernetes master. Confirm
