@@ -205,6 +205,14 @@ html, body { height: 100%; }
     }
   }
 
+  .consent-choices button {
+    padding: 0.6em 1em;
+    color: inherit;
+    background: transparent;
+    border: 1px solid;
+    cursor: pointer;
+  }
+
   .consent {
     margin: 1em 0;
     padding: 0.75em 1em;
