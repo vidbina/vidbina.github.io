@@ -402,6 +402,13 @@ html, body { height: 100%; }
     color: #8085C1;
   }
 
+  .footer .contact a svg {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    vertical-align: -0.1em;
+  }
+
   .footer .rss {
     margin-top: 1.1em;
     margin-right: -.2em;
