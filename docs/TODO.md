@@ -7,24 +7,19 @@
 
 Audit of 2026-11-02. The items in each list can run in parallel unless they say `after:`.
 
-- [ ] Mixed content: Move the 18 `http://` asset references to https in posts and talks, including the `http://vid.bina.me` PDF embeds in `_posts/2014-1-19-flight-routes.markdown` (Impact: Availability, Effort: S)
 - [ ] Embeds: Gate third-party embeds behind consent, so a page names what would load and contacts the provider only after the visitor agrees, with a way to load or reload afterwards. These pages run no framework, so this needs a small script and include. Then update the notice in `imprint/index.html` (Impact: Legal, Effort: M)
-- [ ] `vendor/emojify/0.9.5/emojify.min.css`: Test whether this 5.4 MB render-blocking stylesheet can go, since fixing TLS brings it back on 56 pages (Impact: Performance, Effort: S)
 
 ## Next
 
 - [ ] GitHub settings: Protect `master` with required status checks, which `.github-settings.yaml` declares but the live branch lacks (Impact: DevEx, Effort: S, Owner: needs operator approval)
-- [ ] `_config.yml`: Exclude `Makefile`, `Dockerfile`, `Rakefile`, `README.md`, `blank.html` and MathJax docs and tests from the site and sitemap (Impact: Security, Effort: S)
-- [ ] `_layouts/default.html`: Restore footer social icons, which appear to have no webfont or glyph CSS (Impact: UX, Effort: S)
-- [ ] `_includes/function_plot.html`: Replace the dead `wzrd.in` bundle, which breaks the graphs on `/math/sigmoid-change/` (Impact: Content, Effort: S)
-- [ ] Local links: Fix the scheme-less links in the laundr and coming-to-africa posts, `_data/news.yml:36`, the talks favicons and `/svg/head.svg` (Impact: UX, Effort: S)
 
 ## Later
 
 - [ ] `_config.yml`, `_plugins/`, `.github/workflows/`: Move to Jekyll 4 on Actions, including `submodules: true` for MathJax, as set out in `docs/decisions/0001-select-pages-build-path.md` (Impact: Security/DevEx, Effort: M)
 - [ ] S3 assets: Recover or replace 21 references on 6 pages and the og/twitter images on 11 pages, as the bucket returns 403 `AllAccessDisabled` and sampled assets are not in git (Impact: Content, Effort: L, Owner: operator knows if originals exist)
 - [ ] Giphy embeds: Replace or remove the 14 of 19 that return 404 (Impact: Content, Effort: M)
-- [ ] Other dead images: Replace the Wikimedia, Pandora's Cluster and cinemablend images (Impact: Content, Effort: S)
+- [ ] Other dead images: Replace the Wikimedia, Pandora's Cluster and cinemablend images, including the `IBM_3277` image (404) and the Abell 2744 600px thumbnail (400, where 500px works) (Impact: Content, Effort: S)
+- [ ] `js/emoji-cdn.js`: Drop the script from `talks/nyc-hack-tnw/slides.html:163` or point it elsewhere, as its host `www.tortue.me` is dead (Impact: Content, Effort: S)
 - [ ] External links: Sweep the 356 unique links, where 5 of a 32-link sample were dead (Impact: Content, Effort: L)
 - [ ] `_data/news.yml`, `_posts/`: Fix SEO metadata: duplicate twitter tags, missing canonicals, the `example.com` image in `hello-trickster`, raw `:emoji:` in descriptions (Impact: SEO, Effort: S)
 - [ ] Feed: Add one, as `/feed.xml` is a 404 and readers have no way to subscribe (Impact: UX, Effort: S)
@@ -50,6 +45,12 @@ Each asset needs a keep or remove decision from the operator. Removing one from 
 
 ## Completed
 
+- [x] Mixed content: Move the `http://` asset references to https in posts and talks (Impact: Availability, Effort: S, Completed: 2026-11-04)
+- [x] `_includes/emojify.html`: Drop the 5.4 MB emoji sprite stylesheets, which no rendered emoji used (Impact: Performance, Effort: S, Completed: 2026-11-04)
+- [x] `_config.yml`: Exclude repo tooling and MathJax docs and tests from the site and sitemap (Impact: Security, Effort: S, Completed: 2026-11-04)
+- [x] `_layouts/default.html`: Restore footer social icons as inline SVG (Impact: UX, Effort: S, Completed: 2026-11-04)
+- [x] `_includes/function_plot.html`: Vendor function-plot to replace the dead `wzrd.in` bundle (Impact: Content, Effort: S, Completed: 2026-11-04)
+- [x] Local links: Fix the scheme-less links, `_data/news.yml`, the talks favicons and `/svg/head.svg` (Impact: UX, Effort: S, Completed: 2026-11-04)
 - [x] `docs/decisions/0001-select-pages-build-path.md`: Decide on the build path (Impact: DevEx, Effort: S, Completed: 2026-11-02)
 - [x] `README.md`, `AGENTS.md`, `Makefile`, `Rakefile`: Replace the Ruby 2.4, Docker and rsync instructions (Impact: DevEx, Effort: S, Completed: 2026-11-02)
 - [x] GitHub PRs: Close the stale Dependabot PRs (Impact: Security, Effort: S, Completed: 2026-11-02)
