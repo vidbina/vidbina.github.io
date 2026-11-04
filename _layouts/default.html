@@ -70,6 +70,10 @@
     {% if page.function_plot %}
     {% include function_plot.html %}
     {% endif %}
+
+    {% if content contains 'class="consent' %}
+    <script src="/js/embed-consent.js" defer></script>
+    {% endif %}
     <!-- end includes -->
   </head>
   <body class="light">

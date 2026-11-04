@@ -33,9 +33,14 @@ It all started with me being in the process of installing all of the tooling
 necessary to deal with the Estonian digital bureaucracy from my NixOS :snowflake:
 machine...
 
-<div class="element tweet">
-  <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Psyched! 😝😆 That moment you decide light may be a good idea and find out the lamps 🛋️ have no bulbs💡<a href="https://twitter.com/TOABerlin">@TOABerlin</a> <a href="https://twitter.com/99chairs">@99chairs</a> <a href="https://twitter.com/hashtag/TOA17?src=hash">#TOA17</a> <a href="https://t.co/sTXs5O81cJ">pic.twitter.com/sTXs5O81cJ</a></p>&mdash; David Asabina (@vidbina) <a href="https://twitter.com/vidbina/status/885517003947036672">July 13, 2017</a></blockquote>
-  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="consent" data-provider="twitter">
+  <a href="https://twitter.com/vidbina/status/885517003947036672">Open on X</a>
+  <template>
+  <div class="element tweet">
+    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Psyched! 😝😆 That moment you decide light may be a good idea and find out the lamps 🛋️ have no bulbs💡<a href="https://twitter.com/TOABerlin">@TOABerlin</a> <a href="https://twitter.com/99chairs">@99chairs</a> <a href="https://twitter.com/hashtag/TOA17?src=hash">#TOA17</a> <a href="https://t.co/sTXs5O81cJ">pic.twitter.com/sTXs5O81cJ</a></p>&mdash; David Asabina (@vidbina) <a href="https://twitter.com/vidbina/status/885517003947036672">July 13, 2017</a></blockquote>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+  </template>
 </div>
 
 After noticing that I could build chrome with WideVine support, which I needed
@@ -102,13 +107,23 @@ NewDealDesign](https://newdealdesign.com/studio) (one of the bright minds behind
 
 Meanwhile I'm dealing with my little machine fuck-up :rage:
 
-<div class="element video">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/OazFiIhwAEs" frameborder="0" allowfullscreen></iframe>
+<div class="consent" data-provider="youtube">
+  <a href="https://www.youtube.com/watch?v=OazFiIhwAEs">Watch on YouTube</a>
+  <template>
+  <div class="element video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/OazFiIhwAEs" frameborder="0" allowfullscreen></iframe>
+  </div>
+  </template>
 </div>
 
-<div class="element tweet">
-  <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Great talks from the makers of Fitbit and Beats by Dre, cool art experiences, chats about politics, AI and an army of cool folks. 🤘 <a href="https://twitter.com/hashtag/TOA17?src=hash">#TOA17</a> <a href="https://t.co/ALWkjZNQbh">pic.twitter.com/ALWkjZNQbh</a></p>&mdash; David Asabina (@vidbina) <a href="https://twitter.com/vidbina/status/885496635219955713">July 13, 2017</a></blockquote>
-  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="consent" data-provider="twitter">
+  <a href="https://twitter.com/vidbina/status/885496635219955713">Open on X</a>
+  <template>
+  <div class="element tweet">
+    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Great talks from the makers of Fitbit and Beats by Dre, cool art experiences, chats about politics, AI and an army of cool folks. 🤘 <a href="https://twitter.com/hashtag/TOA17?src=hash">#TOA17</a> <a href="https://t.co/ALWkjZNQbh">pic.twitter.com/ALWkjZNQbh</a></p>&mdash; David Asabina (@vidbina) <a href="https://twitter.com/vidbina/status/885496635219955713">July 13, 2017</a></blockquote>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+  </template>
 </div>
 
 Basically /etc/nixos/hardware-configuration.nix contains a listing of the disk
@@ -158,9 +173,14 @@ The day after the build
 </div>
 Debugging :frown:
 
-<div class="element tweet">
-  <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">🛳<a href="https://twitter.com/TOABerlin">@TOABerlin</a> in a 🌰shell : <a href="https://twitter.com/hashtag/deeplearning?src=hash">#deeplearning</a> for <a href="https://twitter.com/hashtag/bots?src=hash">#bots</a>, <a href="https://twitter.com/Google">@Google</a> <a href="https://twitter.com/hashtag/coffee?src=hash">#coffee</a> <a href="https://twitter.com/ClubMate_UK">@ClubMate_UK</a> <a href="https://twitter.com/hashtag/tech?src=hash">#tech</a> <a href="https://twitter.com/hashtag/android?src=hash">#android</a> 👓<a href="https://twitter.com/hashtag/AI?src=hash">#AI</a> <a href="https://twitter.com/hashtag/building?src=hash">#building</a> <a href="https://twitter.com/Crowdcube">@Crowdcube</a> <a href="https://twitter.com/hashtag/product?src=hash">#product</a> ON A BOAT <a href="https://t.co/a9j9dSRYzQ">pic.twitter.com/a9j9dSRYzQ</a></p>&mdash; mahoney turnbull 马甜甜 (@mahoneyjkt) <a href="https://twitter.com/mahoneyjkt/status/885435818445332482">July 13, 2017</a></blockquote>
-  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="consent" data-provider="twitter">
+  <a href="https://twitter.com/mahoneyjkt/status/885435818445332482">Open on X</a>
+  <template>
+  <div class="element tweet">
+    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">🛳<a href="https://twitter.com/TOABerlin">@TOABerlin</a> in a 🌰shell : <a href="https://twitter.com/hashtag/deeplearning?src=hash">#deeplearning</a> for <a href="https://twitter.com/hashtag/bots?src=hash">#bots</a>, <a href="https://twitter.com/Google">@Google</a> <a href="https://twitter.com/hashtag/coffee?src=hash">#coffee</a> <a href="https://twitter.com/ClubMate_UK">@ClubMate_UK</a> <a href="https://twitter.com/hashtag/tech?src=hash">#tech</a> <a href="https://twitter.com/hashtag/android?src=hash">#android</a> 👓<a href="https://twitter.com/hashtag/AI?src=hash">#AI</a> <a href="https://twitter.com/hashtag/building?src=hash">#building</a> <a href="https://twitter.com/Crowdcube">@Crowdcube</a> <a href="https://twitter.com/hashtag/product?src=hash">#product</a> ON A BOAT <a href="https://t.co/a9j9dSRYzQ">pic.twitter.com/a9j9dSRYzQ</a></p>&mdash; mahoney turnbull 马甜甜 (@mahoneyjkt) <a href="https://twitter.com/mahoneyjkt/status/885435818445332482">July 13, 2017</a></blockquote>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+  </template>
 </div>
 
 <div class="element note">
