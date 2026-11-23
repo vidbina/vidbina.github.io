@@ -55,7 +55,7 @@
     <!-- syntax highlighting CSS -->
     <link rel="stylesheet" href="/css/syntax.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css?v={{ site.time | date: '%s' }}">
     <link rel="stylesheet" href="/css/print.css" media="print">
 
     <!-- head includes -->
@@ -72,7 +72,7 @@
     {% endif %}
 
     {% if content contains 'class="consent' %}
-    <script src="/js/embed-consent.js" defer></script>
+    <script src="/js/embed-consent.js?v={{ site.time | date: '%s' }}" defer></script>
     {% endif %}
     <!-- end includes -->
   </head>
