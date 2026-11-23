@@ -67,6 +67,7 @@ The built site has 108 third-party loads on 34 pages:
 - **Without JavaScript**, the visitor gets the link and nothing loads.
 - **With JavaScript**, a notice names the provider and links its privacy policy, with a Load button.
 - **Load once** stores nothing. The visitor can then Reload or Remove the embed.
+- **Load all N once** appears when a page has several embeds from one provider. It loads all of them and stores nothing, since the notice and the recipient are the same for each.
 - **Always load** keeps the provider's name and version in `localStorage`, loads that provider's embeds and offers Forget. Bumping the version asks again, because a changed third party needs new consent.
 - **Withdrawal** is on the embed and in a list at `/imprint/#eingebettete-inhalte`.
 - **Quoted posts** stay readable before consent: a blockquote in the template is shown as a plain copy, without its images.

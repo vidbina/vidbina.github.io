@@ -18,6 +18,7 @@
     }
   };
   var boxes = [];
+  var counts = {};
 
   function stored() {
     try {
@@ -106,6 +107,7 @@
       var actions = [details];
       details.href = '/imprint/#eingebettete-inhalte';
       details.textContent = 'Details and withdrawal';
+      box.loaded = false;
       slot.textContent = '';
       if (quote) slot.appendChild(quote);
       bar.textContent = 'Loading this contacts ' + provider.name + '. ' +
@@ -123,6 +125,14 @@
         box.load();
         bar.querySelector('button').focus();
       }));
+      if (counts[key] > 1) {
+        actions.push(button('Load all ' + counts[key] + ' once', function () {
+          forProvider(key, function (other) {
+            if (!other.loaded) other.load();
+          });
+          bar.querySelector('button').focus();
+        }));
+      }
       if (providers[key]) {
         actions.push(button('Always load from ' + provider.name, function () {
           allow(key);
@@ -134,6 +144,7 @@
 
     box.load = function () {
       var allowed = isAllowed(key);
+      box.loaded = true;
       slot.textContent = '';
       slot.appendChild(document.importNode(template.content, true));
       // widgets.js only scans the page once, when it first runs.
@@ -184,6 +195,11 @@
     });
   }
 
-  Array.prototype.forEach.call(document.querySelectorAll('.consent'), setUp);
+  var gates = document.querySelectorAll('.consent');
+  Array.prototype.forEach.call(gates, function (el) {
+    var key = el.getAttribute('data-provider');
+    counts[key] = (counts[key] || 0) + 1;
+  });
+  Array.prototype.forEach.call(gates, setUp);
   Array.prototype.forEach.call(document.querySelectorAll('.consent-choices'), listChoices);
 })();
