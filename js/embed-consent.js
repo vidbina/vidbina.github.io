@@ -68,10 +68,41 @@
     return el;
   }
 
-  function appendAll(parent, items) {
-    items.forEach(function (item) {
-      parent.appendChild(item);
-      parent.appendChild(document.createTextNode(' '));
+  // Links leave for another site, so they open in a new tab and say so.
+  function external(a) {
+    var icon = document.createElement('span');
+    var hint = document.createElement('span');
+    a.target = '_blank';
+    a.rel = 'noopener';
+    icon.className = 'consent-icon';
+    icon.setAttribute('aria-hidden', 'true');
+    icon.textContent = '\u2197';
+    hint.className = 'consent-hint';
+    hint.textContent = ' (opens in a new tab)';
+    a.appendChild(icon);
+    a.appendChild(hint);
+    return a;
+  }
+
+  function linkTo(href, label) {
+    var a = document.createElement('a');
+    a.href = href;
+    a.textContent = label;
+    return a;
+  }
+
+  // The notice, then a row of actions and a row of links.
+  function fill(bar, text, rows) {
+    var note = document.createElement('p');
+    note.textContent = text;
+    bar.textContent = '';
+    bar.appendChild(note);
+    rows.forEach(function (items) {
+      if (!items.length) return;
+      var row = document.createElement('div');
+      row.className = 'consent-actions';
+      items.forEach(function (item) { row.appendChild(item); });
+      bar.appendChild(row);
     });
   }
 
@@ -94,33 +125,20 @@
     var key = el.getAttribute('data-provider');
     var provider = providers[key] || { name: key, operator: key };
     var slot = document.createElement('div');
-    var bar = document.createElement('p');
+    var bar = document.createElement('div');
     var box = { key: key };
     slot.className = 'consent-slot';
     bar.className = 'consent-bar';
     el.insertBefore(slot, template);
     el.insertBefore(bar, template);
+    if (link) external(link);
 
     box.unload = function () {
       var quote = preview(template);
-      var details = document.createElement('a');
-      var actions = [details];
-      details.href = '/imprint/#eingebettete-inhalte';
-      details.textContent = 'Details and withdrawal';
+      var actions = [];
       box.loaded = false;
       slot.textContent = '';
       if (quote) slot.appendChild(quote);
-      bar.textContent = 'Loading this contacts ' + provider.name + '. ' +
-        provider.operator + ' receives your IP address, may set cookies and ' +
-        'may process your data outside the EU, where protection can be weaker. ' +
-        'You can withdraw at any time, but that does not undo what was already sent. ';
-      if (provider.policy) {
-        var policy = document.createElement('a');
-        policy.href = provider.policy;
-        policy.textContent = 'Privacy policy';
-        actions.push(policy);
-      }
-      if (link) actions.push(link);
       actions.push(button('Load once', function () {
         box.load();
         bar.querySelector('button').focus();
@@ -139,7 +157,14 @@
           bar.querySelector('button').focus();
         }));
       }
-      appendAll(bar, actions);
+      var links = [linkTo('/imprint/#eingebettete-inhalte', 'Details and withdrawal')];
+      if (provider.policy) links.push(external(linkTo(provider.policy, 'Privacy policy')));
+      if (link) links.push(link);
+      fill(bar, 'Loading this contacts ' + provider.name + '. ' +
+        provider.operator + ' receives your IP address, may set cookies and ' +
+        'may process your data outside the EU, where protection can be weaker. ' +
+        'You can withdraw at any time, but that does not undo what was already sent.',
+        [actions, links]);
     };
 
     box.load = function () {
@@ -149,10 +174,9 @@
       slot.appendChild(document.importNode(template.content, true));
       // widgets.js only scans the page once, when it first runs.
       if (window.twttr && window.twttr.widgets) window.twttr.widgets.load(slot);
-      bar.textContent = allowed ?
-        'Loaded from ' + provider.name + ' because you chose to always allow it. ' :
-        'Loaded from ' + provider.name + '. ';
-      appendAll(bar, [
+      fill(bar, allowed ?
+        'Loaded from ' + provider.name + ' because you chose to always allow it.' :
+        'Loaded from ' + provider.name + '.', [[
         button('Reload', function () {
           box.load();
           bar.querySelector('button').focus();
@@ -166,7 +190,7 @@
             box.unload();
             bar.querySelector('button').focus();
           })
-      ]);
+      ]]);
     };
 
     boxes.push(box);
