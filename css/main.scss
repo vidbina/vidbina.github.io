@@ -102,6 +102,7 @@ html, body { height: 100%; }
     stroke: #ddd!important;
   }
   .dark .labels span { border-color: #ddd; }
+  body.dark .consent { background-color: rgba(255,255,255,0.1); }
 
   .light, .light a, .light a:hover, .light a:visited, .light .logo path, .light svg.logo path, .light .swap {
     fill: #111!important;
@@ -213,14 +214,16 @@ html, body { height: 100%; }
     cursor: pointer;
   }
 
+  // Same panel as .element.note, so a gate reads as part of the post.
   .consent {
     margin: 1em 0;
     padding: 0.75em 1em;
-    border: 1px solid;
+    background-color: rgba(255,255,255,0.5);
 
     .consent-bar {
       margin: 0;
       font-size: 0.8em;
+      text-align: left;
     }
 
     .consent-slot:not(:empty) {
