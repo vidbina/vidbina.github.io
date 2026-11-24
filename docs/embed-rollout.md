@@ -43,7 +43,7 @@ Every provider PR goes through all of these, on a local Pages build in Chrome wi
 - [x] Kickstarter: the one video still plays and is gated
 - [x] Images: Wikimedia (3), GitHub (3, the renamed `landing-page-templates` repo) and xkcd (1) gated; the dead cinemablend image became a link and the Abell 2744 thumbnail moved to the 500px size that still exists; `js/emoji-cdn.js` is gone. Still blocked, by decision pending: 21 dead S3 references (see `docs/TODO.md`) and the talk deck's 3 Wikimedia images
 - [x] Build check in CI: `.github/workflows/check-embeds.yaml` fails when a page could load a third party before consent
-- [ ] Final imprint text, once nothing is left ungated
+- [x] Final imprint text, once nothing is left ungated
 
 ## Inventory
 
