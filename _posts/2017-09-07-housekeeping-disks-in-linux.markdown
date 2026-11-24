@@ -50,8 +50,13 @@ Figure out sizes of directories, only recursing to a depth of 1 levels deep
 One may create partition tables on a disk using `fdisk` as demonstrated in the
 screencast below.
 
+<div class="consent" data-provider="asciinema">
+<a href="https://asciinema.org/a/ubDxMlMqWFOq7UtalLFFPhF7P">Watch on asciinema</a>
+<template>
 <div class="element screencast">
   <script src="https://asciinema.org/a/ubDxMlMqWFOq7UtalLFFPhF7P.js" id="asciicast-ubDxMlMqWFOq7UtalLFFPhF7P" async></script>
+</div>
+</template>
 </div>
 
 An unencrypted partition is easily accessible by mounting the block device.

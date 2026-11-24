@@ -196,8 +196,13 @@ nix-env -f nixpkgs=my_nixpkgs -i terraform_0_11
 which may be done in the current shell, or even better a seperate nix-shell
 just to keep things isolated :wink:.
 
+<div class="consent" data-provider="asciinema">
+<a href="https://asciinema.org/a/FRrvhg1eqRHf2wh9nnxsTDYPG">Watch on asciinema</a>
+<template>
 <div class="element screencast">
 <script type="text/javascript" src="https://asciinema.org/a/FRrvhg1eqRHf2wh9nnxsTDYPG.js" id="asciicast-FRrvhg1eqRHf2wh9nnxsTDYPG" async></script>
+</div>
+</template>
 </div>
 
 ## Install a package only for the duration of a session

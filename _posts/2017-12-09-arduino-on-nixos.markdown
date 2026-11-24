@@ -183,9 +183,14 @@ To conclude this section, observe how I change into a directory which contains
 the default.nix and shell.nix, spawn a nix-shell and shoot an application to an
 Arduino Leonardo :wink:.
 
+<div class="consent" data-provider="asciinema">
+<a href="https://asciinema.org/a/HDzd2kE1cy91Z8qoKsjBuJ5oK">Watch on asciinema</a>
+<template>
 <div class="element screencast">
 <!--<script type="text/javascript" src="https://asciinema.org/a/151930.js" id="asciicast-151930" async></script>-->
 <script type="text/javascript" src="https://asciinema.org/a/HDzd2kE1cy91Z8qoKsjBuJ5oK.js" id="asciicast-HDzd2kE1cy91Z8qoKsjBuJ5oK" async></script>
+</div>
+</template>
 </div>
 
 ## <span id="2"> 2
