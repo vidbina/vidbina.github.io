@@ -161,7 +161,7 @@ an argument
 if [ "${1:0:1}" = "/" ]; then eval exec "$1" "$2" ; fi
 ```
 
-<div class="element note">
+<div class="element note" markdown="1">
 :snowflake: Note when looking at the Nix code
 ([:octocat:](https://github.com/NixOS/nixpkgs/blob/17.09/nixos/modules/services/x11/display-managers/default.nix#L35-L57)),
 that `${` is a special sequence in Nix and has to be escaped by prefixing it
@@ -310,7 +310,7 @@ fi
 $SYSTEMD_PATH/bin/systemctl --user start graphical-session.target
 ```
 
-<div class="element note">
+<div class="element note" markdown="1">
 Note that `$SYSTEMD_PATH` is just a substitution for the real `systemd.package`
 path which is expanded into this string by Nix :wink:.
 </div>

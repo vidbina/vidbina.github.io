@@ -187,6 +187,10 @@ html, body { height: 100%; }
       padding-top: 1em;
       text-align: left;
       width: 90%;
+
+      // The padding already spaces the note, so its paragraphs add none at the edges.
+      > :first-child { margin-top: 0; }
+      > :last-child { margin-bottom: 0; }
     }
 
     &.image {

@@ -37,7 +37,7 @@ Deli, API and IPA are palindromes to each other, a few minutes ago I thought
 about useless API's in the shower :shower:... guess what, it's friday and I'm
 just connecting the dots here in a useless expenditure of time.
 
-<div class="element note">
+<div class="element note" markdown="1">
 **DISCLAIMER:** You definitely have something better to do. If you read this
 post it's all on you :stuck_out_tongue_closed_eyes:. I take resposibility for
 writing this hunk of junk :shit: but you better take responsibility for reading
@@ -164,7 +164,7 @@ around the room and take sips of everyone's beer to everyone's dismay and
 every warm unfinished one on the tables. Not saying it's good for you, but it's
 possible.
 
-<div class="element note">
+<div class="element note" markdown="1">
 NOTE: Grabbed beers don't show up in the fridge anymore. So `GET /brews` will
 not display the grabbed beers, however; you could still take a gulp of any
 grabbed beer provided that there is something in it.

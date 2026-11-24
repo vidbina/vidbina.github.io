@@ -22,7 +22,7 @@ tags:
 emojify: true
 ---
 
-<div class="element note">
+<div class="element note" markdown="1">
 I didn't make it. Didn't even get close. So yeah. That was a real bummer (which
 is the only word I can think of and still abstain from profanities). I did try
 so now I know how it would have worked out. What I also learned is that I

@@ -121,7 +121,7 @@ arduino --verify Blink.cpp
 
 to build the sketch.
 
-<div class="element note">
+<div class="element note" markdown="1">
 :exclamation: Normal users generally don't have unrestricted access to devices.
 In NixOS this rings true for the TTY devices. Just run `ls -la /dev/tty*` to
 observe for yourself. The `root` user is most likely owner of all of the listed
@@ -147,7 +147,7 @@ hardware, please explore the boards.txt file located in the
 `$ARDUINO_PATH/share/arduino/hardware/arduino/avr` directory and adjust the
 parameters accordingly.
 
-<div class="element note">
+<div class="element note" markdown="1">
 <a name="which-port">:bulb:</a> Determining the port could be as simple as
 observing the output of `ls -la /dev/tty*` or just watching the output of
 `dmesg -wH` or `journalctl -f` for USB-related messages while resetting or
@@ -220,7 +220,7 @@ parameters specified, to produce a collection of build artifacts in the
 `arduino` approach. If you like studying the machine code [like these guys](http://www.avrfreaks.net/forum/understanding-hex-file) you'll have something to study and play with
 when using `arduino-builder` :wink:.
 
-<div class="element note">
+<div class="element note" markdown="1">
 :smirk: Of course you didn't have to run the command with the `-debug-level
 10`, `-verbose` and `-warning all` arguments but in many cases it is convenient
 to have plenty of information available in case things fail.
@@ -253,7 +253,7 @@ stdenv.mkDerivation rec {
 }
 ```
 
-<div class="element note">
+<div class="element note" markdown="1">
 A change to the nix files is only honored once we restart the shell, so do
 yourself a favor, exit the running nix-shell and start the nix-shell again
 after `avrdude` is added to the `buildInputs`.
@@ -292,7 +292,7 @@ errors please
 
 which would generally lead to resolution.
 
-<div class="element note">
+<div class="element note" markdown="1">
 :bulb: For the Leonardo board known as device `ttyACM0`, the [Arduino Leonardo
 documentation :book:][arduino-leonardo] mentions that one may set the board
 into bootloader mode by opening and closing a serial connection at 1200 baud.

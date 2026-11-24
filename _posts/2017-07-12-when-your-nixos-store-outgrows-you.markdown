@@ -67,7 +67,7 @@ nix-shell -p gparted
 gparted
 ```
 
-<div class="element note">
+<div class="element note" markdown="1">
 In case you are out of luck in enlarging the existing partition due to lack of
 a consecutive partition, you could consider stitching two partitions together
 in LVM and using them as a larger logical volume, but that is beyond the scope
@@ -152,7 +152,7 @@ So I'll `sudo systemctl hibernate` and continue this busy work later... Well bus
 for the machine... I basically just read papers, chat with cool people including my
 Startupbus family and of course... chill :grin:
 
-<div class="element note">
+<div class="element note" markdown="1">
 The day after the build
 [failed](https://github.com/NixOS/nixpkgs/issues/26299). :shit:
 </div>
@@ -163,7 +163,7 @@ Debugging :frown:
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
-<div class="element note">
+<div class="element note" markdown="1">
 The [Nix manual](https://nixos.org/nixos/manual/index.html#sec-nix-gc) mentions
 the use of the `nix-store --optimise` command which, also in my case cleaned up
 20 gigs of 50 so yeah... do yourself a favor. :wink:
