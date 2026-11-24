@@ -34,7 +34,7 @@ Every provider PR goes through all of these, on a local Pages build in Chrome wi
 - [x] Giphy: all 19 gated as plain GIFs from `media.giphy.com`, which still serves the 14 whose embed pages return 404
 - [x] YouTube: 12 more embeds gated (13 with the NixOS post); 4 videos that are gone or private replaced with a note
 - [x] Instagram: 7 posts on 5 pages gated, with a re-scan after load like X; 2 removed posts (3 embeds) replaced with a note
-- [ ] Spotify: `embed.spotify.com` is the legacy host; check where it redirects now
+- [x] Spotify: 8 players on 7 posts gated, moved from the legacy `embed.spotify.com` to `open.spotify.com/embed`
 - [ ] X (Twitter): five more pages, including `/news/`
 - [ ] asciinema: its script inserts the player next to itself; check that this works after a click
 - [ ] GitHub Gist: the operator's own gists; inline the code, which removes the provider
