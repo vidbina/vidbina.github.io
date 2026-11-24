@@ -37,7 +37,12 @@ the luxury demand yet that makes long-distance travel by bus unbearable
 :stuck_out_tongue:.
 
 <div class="element gif">
-<iframe src="//giphy.com/embed/YF5XMZt3Hxw1W" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/hateplow-city-hateplow-germany-YF5XMZt3Hxw1W">via GIPHY</a></p>
+<div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/YF5XMZt3Hxw1W/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/YF5XMZt3Hxw1W/giphy.gif" width="480" height="269" alt="Animated GIF">
+</template>
+</div><p><a href="http://giphy.com/gifs/hateplow-city-hateplow-germany-YF5XMZt3Hxw1W">via GIPHY</a></p>
 </div>
 
 In Munich :de:, around 10 o'clock :clock10:, the police boarded the bus for
@@ -172,7 +177,12 @@ experiences are as negative as the one I've had and probably often even worse
 [^1]?
 
 <div class="element gif">
-<iframe src="//giphy.com/embed/m9rMVyKactNK" width="480" height="348" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/police-cartoon-violence-m9rMVyKactNK">via GIPHY</a></p>
+<div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/m9rMVyKactNK/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/m9rMVyKactNK/giphy.gif" width="480" height="348" alt="Animated GIF">
+</template>
+</div><p><a href="http://giphy.com/gifs/police-cartoon-violence-m9rMVyKactNK">via GIPHY</a></p>
 </div>
 
 I often marginalized the impact of discrimination and treatment by the police,
@@ -224,7 +234,12 @@ Understanding is the name of the game. Just live and let live.
 [zp]: https://en.wikipedia.org/wiki/Zwarte_Piet
 
 <div class="element gif">
-  <iframe src="//giphy.com/embed/60AbXN4D8NgBO" width="480" height="384" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/vrt-facepalm-beschaamd-dagsinterklaas-60AbXN4D8NgBO">via GIPHY</a></p>
+  <div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/60AbXN4D8NgBO/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/60AbXN4D8NgBO/giphy.gif" width="480" height="384" alt="Animated GIF">
+</template>
+</div><p><a href="http://giphy.com/gifs/vrt-facepalm-beschaamd-dagsinterklaas-60AbXN4D8NgBO">via GIPHY</a></p>
 </div>
 
 I would like to remind everyone to seriously consider the impact of one's

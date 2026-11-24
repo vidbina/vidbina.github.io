@@ -22,7 +22,12 @@ Distraught and drenched in sweat -- it is the second time I woke to a
 nightmarish dream.
 
 <div class="element giphy">
-  <iframe src="//giphy.com/embed/UARCRoXjkfeHS" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  <div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/UARCRoXjkfeHS/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/UARCRoXjkfeHS/giphy.gif" width="480" height="360" alt="Animated GIF">
+</template>
+</div>
 </div>
 
 It was due to a landing gear failure that the aircraft with my brother on board
@@ -38,7 +43,12 @@ engineering puzzles after writing this "Dear Diary"-type entry, not sure if this
 will work as an outlet so I'll find out soon enough.
 
 <div class="element giphy">
-  <iframe src="//giphy.com/embed/TgMPGmJ79RPRm" width="480" height="198" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  <div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/TgMPGmJ79RPRm/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/TgMPGmJ79RPRm/giphy.gif" width="480" height="198" alt="Animated GIF">
+</template>
+</div>
 </div>
 
 I've told the young feller plenty of times that he's a remarkable element in my
@@ -101,7 +111,12 @@ that I remember it to this day. I had to tap out or get my neck snapped off.
 You're pretty f:collision:ing strong.
 
 <div class="element giphy">
-<iframe src="//giphy.com/embed/4Mnx16O3BJR0A" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/4Mnx16O3BJR0A/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/4Mnx16O3BJR0A/giphy.gif" width="480" height="270" alt="Animated GIF">
+</template>
+</div>
 </div>
 
 I enjoy chatting with you about matters pertaining to live and it's intricacies.
@@ -129,7 +144,12 @@ a matching gif with that... :stuck_out_tongue:
 [^mario]: Would you be Mario or Luigi in that case?
 
 <div class="element giphy">
-<iframe src="//giphy.com/embed/cYTpkixJhWNKU" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/cYTpkixJhWNKU/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/cYTpkixJhWNKU/giphy.gif" width="480" height="480" alt="Animated GIF">
+</template>
+</div>
 </div>
 
 I just called my brother who's 8050 kilometers away... cooking dinner with

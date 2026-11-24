@@ -37,7 +37,12 @@ software developers like myself so I'm writing this post especially to
 help me remember :bulb:... because I need to be careful for the seemingly immutable, yet capable of change.
 
 <div class="element giphy">
-<iframe src="//giphy.com/embed/zxxXYJqTlpBnO" width="480" height="259" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/zxxXYJqTlpBnO/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/zxxXYJqTlpBnO/giphy.gif" width="480" height="259" alt="Animated GIF">
+</template>
+</div>
 </div>
 
 Non-primitives such as arrays and objects are

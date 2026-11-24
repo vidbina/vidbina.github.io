@@ -22,7 +22,12 @@ CoreOS, but as ashamed as I am I should mention that I often end up scratching
 my head and wondering what the hell that command was again
 :pensive:?!? Hope this helps me recall.
 
-<iframe src="//giphy.com/embed/OP7kIfBat5sGY?html5=true" width="480" height="270" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/OP7kIfBat5sGY/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/OP7kIfBat5sGY/giphy.gif" width="480" height="270" alt="Animated GIF">
+</template>
+</div>
 
 <!--
 ```bash
@@ -149,7 +154,12 @@ one of the popular solutions for making this happen.
 # Debugging
 Somewhere along the line a unit/service breaks and needs to be debugged.
 
-<iframe src="//giphy.com/embed/achBohanYCPPG?html5=true" width="480" height="464" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/achBohanYCPPG/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/achBohanYCPPG/giphy.gif" width="480" height="464" alt="Animated GIF">
+</template>
+</div>
 
 CoreOS logs everything into `/var/log/journal/*` and `journalctl` allows
 one to view the content of these binary logs.

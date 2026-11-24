@@ -235,6 +235,11 @@ html, body { height: 100%; }
       margin-bottom: 0.75em;
     }
 
+    .consent-slot img {
+      max-width: 100%;
+      height: auto;
+    }
+
     // Every action is a button in one row, links included, so none of them
     // reads as part of the notice text.
     .consent-actions {

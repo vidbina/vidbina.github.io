@@ -32,7 +32,12 @@ there is something here that may be of any use to other folks as well
 :beer:.
 
 <div class="element gif">
-  <iframe src="//giphy.com/embed/Gz1Ebo1yJmC9q" width="480" height="288" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  <div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/Gz1Ebo1yJmC9q/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/Gz1Ebo1yJmC9q/giphy.gif" width="480" height="288" alt="Animated GIF">
+</template>
+</div>
 </div>
 
 ## Get Started
@@ -104,7 +109,12 @@ Now the launch codes are known and available in `code.out.txt`. API keys are
 launch codes anyways :wink:.
 
 <div class="element gif">
-  <iframe src="//giphy.com/embed/LjQmZzYuARJF6" width="480" height="217" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  <div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/LjQmZzYuARJF6/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/LjQmZzYuARJF6/giphy.gif" width="480" height="217" alt="Animated GIF">
+</template>
+</div>
 </div>
 
 ## Signing
