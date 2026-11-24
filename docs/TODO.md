@@ -7,7 +7,7 @@
 
 Audit of 2026-11-02. The items in each list can run in parallel unless they say `after:`.
 
-- [ ] Embeds: Gate third-party embeds behind consent, so a page names what would load and contacts the provider only after the visitor agrees, with a way to load or reload afterwards. These pages run no framework, so this needs a small script and include. Then update the notice in `imprint/index.html` (Impact: Legal, Effort: M)
+- [ ] Embeds: Gate third-party embeds behind consent, so a page names what would load and contacts the provider only after the visitor agrees, with a way to load or reload afterwards. These pages run no framework, so this needs a small script and include. Then update the notice in `imprint/index.html` (Impact: Legal, Effort: M). The gate is live on one post (YouTube and X), with the rollout steps in `docs/decisions/0002-gate-embeds-behind-consent.md`: remove dead Giphy embeds, inline the gists, convert the other providers, and add a build check for ungated loads
 
 ## Next
 
