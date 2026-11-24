@@ -184,8 +184,8 @@ width and corresponding heights) is demonstrated beneath&hellip;
 </template>
 </div>
 
-<div class="element instagram">
-  <iframe src="//instagram.com/p/gICEH_Kc6b/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"> </iframe>
+<div class="element note" markdown="1">
+The Instagram post that was embedded here is no longer available.
 </div>
 
 <div class="element spotify">

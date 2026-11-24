@@ -68,15 +68,15 @@ speak about my music with twinkling :star2: eyes
 experience new highs on a magical bus ride :bus:. So I'm
 going to mix things up.
 
-<div class="element instagram">
-  <iframe src="https://instagram.com/p/gjk1-CKgOt/embed/" width="612" height="692" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+<div class="element note" markdown="1">
+The Instagram post that was embedded here is no longer available.
 </div>
 
 How about I go on that bus ride to get inspired to compose new tunes for your
 enjoyment instead?!? :bulb:.
 
-<div class="element instagram">
-  <iframe src="//instagram.com/p/gICEH_Kc6b/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"> </iframe>
+<div class="element note" markdown="1">
+The Instagram post that was embedded here is no longer available.
 </div>
 
 I want to join one of the four [Ampion][ampion] buses that are set to start
@@ -128,8 +128,13 @@ Sleep deprivation may be one of the culprits for exhaustion, yet during this
 very adventure it will not obstruct the experience from rejuvenating my mind --
 it didn't last year when I coasted through Europe.
 
+<div class="consent" data-provider="instagram">
+<a href="https://www.instagram.com/p/gLF4PDMFCa/">View on Instagram</a>
+<template>
 <div class="element instagram">
-  <iframe src="https://instagram.com/p/gLF4PDMFCa/embed/" width="612" height="692" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+  <iframe src="https://www.instagram.com/p/gLF4PDMFCa/embed/" width="612" height="692" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+</div>
+</template>
 </div>
 
 You see new places, meet new people, hear new ideas, smell new scents, hear new
@@ -205,14 +210,24 @@ I am in need of a fresh batch of inspiration, I will be more than grateful to
 enjoy the opportunity to travel to the largest, and currently rapidly changing
 (in terms of entrepreneurship), continent on our beloved planet :earth_africa:.
 
+<div class="consent" data-provider="instagram">
+<a href="https://www.instagram.com/p/rHkkNiS0BQ/">View on Instagram</a>
+<template>
 <div class="element instagram">
-  <iframe src="//instagram.com/p/rHkkNiS0BQ/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+  <iframe src="https://www.instagram.com/p/rHkkNiS0BQ/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+</div>
+</template>
 </div>
 
 It should be no surprise that I will be joining one of the buses as a coder.
 
+<div class="consent" data-provider="instagram">
+<a href="https://www.instagram.com/p/ookjPAy0Ev/">View on Instagram</a>
+<template>
 <div class="element instagram">
-  <iframe src="//instagram.com/p/ookjPAy0Ev/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+  <iframe src="https://www.instagram.com/p/ookjPAy0Ev/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+</div>
+</template>
 </div>
 
 Just to make things a bit easier I have sketched somewhat of a doodle of
