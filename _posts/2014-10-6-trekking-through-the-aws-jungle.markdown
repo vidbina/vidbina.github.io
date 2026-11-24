@@ -157,14 +157,60 @@ aws route53 change-resource-record-sets --hosted-zone-id X --change-batch file:/
 <a name="dns.mx"></a>
 Just to give an example of the structure of the JSON files fed to the CLI I
 have published a version of the files I have used on [Github][route53-json-gist]
-{% gist vidbina/8322c299faab15477e1c dns.mx.json %}
+
+```json
+{
+  "Comment": "Setting up my mailserver records for Google Mail",
+  "Changes": [
+    {
+      "Action": "CREATE",
+      "ResourceRecordSet": {
+        "Name": "example.com.",
+        "Type": "MX",
+        "TTL": 300,
+        "ResourceRecords": [
+          { "Value": "10 aspmx.l.google.com." },
+          { "Value": "20 alt1.aspmx.l.google.com." },
+          { "Value": "20 alt2.aspmx.l.google.com." },
+          { "Value": "30 aspmx2.googlemail.com." },
+          { "Value": "30 aspmx3.googlemail.com." }
+        ]
+      }
+    }
+  ]
+}
+```
+
+[dns.mx.json on GitHub](https://gist.github.com/vidbina/8322c299faab15477e1c#file-dns-mx-json)
+
 
 <a name="dns.txt"></a>
 In case you need to verify the ownership of a domain at Google you might want
 to setup a text record. AWS Route53 happens to be very picky about the syntax
 of the `TXT` strings (the string received by AWS itself needs to be enclosed in
 double quotes).
-{% gist vidbina/8322c299faab15477e1c dns.txt.json %}
+
+```json
+{
+  "Comment": "Setting up the TXT records for Google to verify my domain",
+  "Changes": [
+    {
+      "Action": "CREATE",
+      "ResourceRecordSet": {
+        "Name": "example.com.",
+        "Type": "TXT",
+        "TTL": 300,
+        "ResourceRecords": [
+          { "Value": "\"google-site-verification=Supercalifragilisticexpialidocious\"" }
+        ]
+      }
+    }
+  ]
+}
+```
+
+[dns.txt.json on GitHub](https://gist.github.com/vidbina/8322c299faab15477e1c#file-dns-txt-json)
+
 
 <a name="users"></a>
 ### IAM

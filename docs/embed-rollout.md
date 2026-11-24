@@ -37,7 +37,7 @@ Every provider PR goes through all of these, on a local Pages build in Chrome wi
 - [x] Spotify: 8 players on 7 posts gated, moved from the legacy `embed.spotify.com` to `open.spotify.com/embed`
 - [x] X (Twitter): 5 more tweets on 4 posts and 2 on `/news/` gated; 4 deleted tweets on the Slack post kept as plain quotes
 - [x] asciinema: 4 recordings on 4 posts gated; the player script works when the gate inserts it
-- [ ] GitHub Gist: the operator's own gists; inline the code, which removes the provider
+- [x] GitHub Gist: 3 files from 2 of the operator's gists inlined as code blocks, so the provider is gone
 - [ ] GitHub cards (jsDelivr): check the widget still works; gate it or replace it with a link
 - [ ] CodePen
 - [ ] Kickstarter: check the video still exists
