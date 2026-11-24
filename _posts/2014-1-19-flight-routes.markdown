@@ -123,8 +123,13 @@ same tarmac runway, only approached from the other side) we will need to
 execute a VOR-DME approach, which has been nicely explained in a FlightGear
 tutorial I found on [youtube][flightgear-vordme].
 
+<div class="consent" data-provider="youtube">
+<a href="https://www.youtube.com/watch?v=aIJHn3iSipE">Watch on YouTube</a>
+<template>
 <div class="element video">
   <iframe src="https://www.youtube.com/embed/aIJHn3iSipE" frameborder="0" allowfullscreen> </iframe>
+</div>
+</template>
 </div>
 
 On the map we have our frequencies, approach patterns and corresponding
@@ -137,8 +142,13 @@ moving forward.
 Yet again, a FlightGear How-to video comes to the rescue by quickly explaining
 some of the concepts encountered in this map.
 
+<div class="consent" data-provider="youtube">
+<a href="https://www.youtube.com/watch?v=z8yEHyKs_JE">Watch on YouTube</a>
+<template>
 <div class="element video">
   <iframe src="https://www.youtube.com/embed/z8yEHyKs_JE" frameborder="0" allowfullscreen> </iframe>
+</div>
+</template>
 </div>
 
 My summary of the ILS approach,

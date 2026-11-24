@@ -90,9 +90,14 @@ served as a good tool to aid in putting things into perspective. I know I'm
 ranting about this, but I guess a rant or two a year is permitted, right?!?
 :stuck_out_tongue_closed_eyes:
 
+<div class="consent" data-provider="youtube">
+<a href="https://www.youtube.com/watch?v=d4o13isDdfY">Watch on YouTube</a>
+<template>
 <div class="element video">
 <iframe height="315" src="https://www.youtube.com/embed/d4o13isDdfY" frameborder="0" allowfullscreen></iframe>
 <!--<iframe src="https://www.youtube.com/embed/d4o13isDdfY" frameborder="0" allowfullscreen></iframe>-->
+</div>
+</template>
 </div>
 
 Just remember... trickery is everywhere and there is no better flavor of it.

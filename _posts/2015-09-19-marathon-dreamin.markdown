@@ -175,8 +175,13 @@ Have a good one :tropical_drink:
   </a>
 </div>
 
+<div class="consent" data-provider="youtube">
+<a href="https://www.youtube.com/watch?v=ginQNMiRu2w">Watch on YouTube</a>
+<template>
 <div class="element video">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/ginQNMiRu2w" frameborder="0" allowfullscreen></iframe>
+</div>
+</template>
 </div>
 
 <!--<div class="element giphy">

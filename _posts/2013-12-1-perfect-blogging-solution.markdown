@@ -175,8 +175,13 @@ width and corresponding heights) is demonstrated beneath&hellip;
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"> </script>
 </div>
 
+<div class="consent" data-provider="youtube">
+<a href="https://www.youtube.com/watch?v=MJ6IcYwVxV0">Watch on YouTube</a>
+<template>
 <div class="element video">
-  <iframe width="420" height="315" src="//www.youtube.com/embed/MJ6IcYwVxV0" frameborder="0" allowfullscreen> </iframe>
+  <iframe width="420" height="315" src="https://www.youtube.com/embed/MJ6IcYwVxV0" frameborder="0" allowfullscreen> </iframe>
+</div>
+</template>
 </div>
 
 <div class="element instagram">

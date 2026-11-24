@@ -193,8 +193,8 @@ learn these lessons, so I owe the wonderful experience to Max, George and
 Orgeon. We are a long way from somewhere which means that this quest continues,
 and the gates of Mordor are still a few challenges and orc encounters away.
 
-<div class="element video">
-  <iframe width="420" height="315" src="//www.youtube.com/embed/NJCupS7bDbQ" frameborder="0" allowfullscreen></iframe>
+<div class="element note" markdown="1">
+The video that was embedded here is no longer available on YouTube.
 </div>
 
 Lessons learnt, moving on a bit smarter and wiser.

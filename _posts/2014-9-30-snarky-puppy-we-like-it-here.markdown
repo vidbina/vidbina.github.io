@@ -32,8 +32,13 @@ stuff . Whilst hacking away on another Rails application I
 couldn't resist the urge to view a few videos online and now I just have to
 share some of this dope :notes:.
 
+<div class="consent" data-provider="youtube">
+<a href="https://www.youtube.com/watch?v=L_XJ_s5IsQc">Watch on YouTube</a>
+<template>
 <div class="element video">
   <iframe width="420" height="315" src="https://www.youtube.com/embed/L_XJ_s5IsQc" frameborder="0" allowfullscreen> </iframe>
+</div>
+</template>
 </div>
 If there is something you should watch tonight let it be this awesome performance
 by the [puppies](http://en.wikipedia.org/wiki/Snarky_Puppy). Cory Henry absolutely kills this one
