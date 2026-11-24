@@ -1,0 +1,24 @@
+{% comment %}
+  Lets the browser fetch only from this site, plus the providers this page
+  gates in a .consent block, so an embed that is not gated never loads.
+  It must stay ahead of anything else the head fetches. Inline and eval'd
+  scripts stay allowed: posts use both, and this policy only keeps third
+  parties out.
+{% endcomment %}
+{%- assign directives = "script-src,style-src,img-src,font-src,frame-src,connect-src,media-src" | split: "," -%}
+{%- capture policy -%}
+default-src 'self'; object-src 'none'; base-uri 'self'
+{%- for directive in directives -%}
+  ; {{ directive }} 'self'
+  {%- case directive -%}
+    {%- when "script-src" %} 'unsafe-inline' 'unsafe-eval'
+    {%- when "style-src" %} 'unsafe-inline'
+    {%- when "img-src" or "font-src" %} data:
+  {%- endcase -%}
+  {%- for provider in site.data.embeds -%}
+    {%- capture marker %}data-provider="{{ provider[0] }}"{% endcapture -%}
+    {%- if content contains marker and provider[1].csp[directive] %} {{ provider[1].csp[directive] }}{% endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+{%- endcapture -%}
+<meta http-equiv="Content-Security-Policy" content="{{ policy }}">
