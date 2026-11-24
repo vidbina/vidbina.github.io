@@ -1,0 +1,8 @@
+# The gate in js/embed-consent.js reads name, operator, policy and version.
+# _includes/csp.html adds the csp sources to pages that gate this provider.
+name: Wikimedia Commons
+operator: The Wikimedia Foundation
+policy: https://foundation.wikimedia.org/wiki/Policy:Privacy_policy
+version: 1
+csp:
+  img-src: https://upload.wikimedia.org

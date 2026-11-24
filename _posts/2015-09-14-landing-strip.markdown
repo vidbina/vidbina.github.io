@@ -40,8 +40,13 @@ stuff), but because I needed another landing page I just had to hack something
 together in a manner that may save me some time the next time I need to perform
 this dance again.
 
+<div class="consent" data-provider="github">
+<a href="https://github.com/vidbina/landing-page-templates/blob/master/enchanted/preview-large.png">View on GitHub</a>
+<template>
 <div class="element image">
-  <img alt="Enchanted, the Magic (st)rip" src="https://github.com/vidbina/landing-strip/raw/master/enchanted/preview-large.png">
+  <img alt="Enchanted, the Magic (st)rip" src="https://raw.githubusercontent.com/vidbina/landing-page-templates/master/enchanted/preview-large.png">
+</div>
+</template>
 </div>
 
 The project is called [LandingStrip](http://github.com/vidbina/landing-strip)
@@ -56,8 +61,13 @@ because
 Apart from the wordplay in the use of the term strip, it also employs a
 colorful double entendre.
 
+<div class="consent" data-provider="wikimedia">
+<a href="https://commons.wikimedia.org/wiki/File:Msembe_airstrip.jpg">View on Wikimedia Commons</a>
+<template>
 <div class="element image">
   <img alt="Airstrip in Africa" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Msembe_airstrip.jpg">
+</div>
+</template>
 </div>
 
 [Landing strip](https://en.wikipedia.org/wiki/Runway)
@@ -80,16 +90,26 @@ to make the big difference in pushing your company into the list of winners
 I have stripped Magic, the old Buffer page and also Assist which has a nice
 split pane layout.
 
+<div class="consent" data-provider="github">
+<a href="https://github.com/vidbina/landing-page-templates/blob/master/pipeline/preview-large.png">View on GitHub</a>
+<template>
 <div class="element image">
-  <img alt="Joinsupport, the Assist (st)rip" src="https://github.com/vidbina/landing-strip/raw/master/pipeline/preview-large.png">
+  <img alt="Joinsupport, the Assist (st)rip" src="https://raw.githubusercontent.com/vidbina/landing-page-templates/master/pipeline/preview-large.png">
+</div>
+</template>
 </div>
 
 Bear with me. In order to avoid copyright infringement or abuse of trademarks
 I have given all the strips alternative names. A listing of the strips is
 available on the [project page](https://github.com/vidbina/landing-strip).
 
+<div class="consent" data-provider="github">
+<a href="https://github.com/vidbina/landing-page-templates/blob/master/joinsupport/preview-large.png">View on GitHub</a>
+<template>
 <div class="element image">
-  <img alt="Joinsupport, the Assist (st)rip" src="https://github.com/vidbina/landing-strip/raw/master/joinsupport/preview-large.png">
+  <img alt="Joinsupport, the Assist (st)rip" src="https://raw.githubusercontent.com/vidbina/landing-page-templates/master/joinsupport/preview-large.png">
+</div>
+</template>
 </div>
 
 Speaking about making that difference, I'm working on getting up there too and

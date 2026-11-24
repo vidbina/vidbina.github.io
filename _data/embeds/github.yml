@@ -1,0 +1,8 @@
+# The gate in js/embed-consent.js reads name, operator, policy and version.
+# _includes/csp.html adds the csp sources to pages that gate this provider.
+name: GitHub
+operator: GitHub
+policy: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
+version: 1
+csp:
+  img-src: https://raw.githubusercontent.com

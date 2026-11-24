@@ -174,11 +174,7 @@ All I wanted to say is: Mesos rocks, Marathon rocks and life is good.
 For now... more [Inception junk][inception-info] for the weekend.
 Have a good one :tropical_drink:
 
-<div class="element image">
-  <a href="https://www.cinemablend.com/new/An-Illustrated-Guide-To-The-5-Levels-Of-Inception-19643.html">
-    <img src="https://www.cinemablend.com/images/news/19643/_1280109452.jpg" alt="Illustrated guide to the 5 levels of inception">
-  </a>
-</div>
+[Illustrated guide to the 5 levels of Inception](https://www.cinemablend.com/new/An-Illustrated-Guide-To-The-5-Levels-Of-Inception-19643.html)
 
 <div class="consent" data-provider="youtube">
 <a href="https://www.youtube.com/watch?v=ginQNMiRu2w">Watch on YouTube</a>
