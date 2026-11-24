@@ -102,6 +102,7 @@ html, body { height: 100%; }
     stroke: #ddd!important;
   }
   .dark .labels span { border-color: #ddd; }
+  body.dark .consent { background-color: rgba(255,255,255,0.1); }
 
   .light, .light a, .light a:hover, .light a:visited, .light .logo path, .light svg.logo path, .light .swap {
     fill: #111!important;
@@ -206,6 +207,71 @@ html, body { height: 100%; }
   .element.graph {
     //width: 100%;
     div {
+    }
+  }
+
+  .consent-choices button {
+    padding: 0.6em 1em;
+    color: inherit;
+    background: transparent;
+    border: 1px solid;
+    cursor: pointer;
+  }
+
+  // Same panel as .element.note, so a gate reads as part of the post.
+  .consent {
+    margin: 1em 0;
+    padding: 0.75em 1em;
+    background-color: rgba(255,255,255,0.5);
+
+    .consent-bar {
+      font-size: 0.8em;
+      text-align: left;
+
+      p { margin: 0; }
+    }
+
+    .consent-slot:not(:empty) {
+      margin-bottom: 0.75em;
+    }
+
+    // Every action is a button in one row, links included, so none of them
+    // reads as part of the notice text.
+    .consent-actions {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(11em, 1fr));
+      gap: 0.4em;
+      margin-top: 0.6em;
+
+      button, a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0.6em 1em;
+        font: inherit;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1.2;
+        color: inherit;
+        text-decoration: none;
+        background: transparent;
+        border: 1px solid;
+        cursor: pointer;
+      }
+    }
+
+    .consent-icon {
+      margin-left: 0.35em;
+    }
+
+    .consent-hint {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
     }
   }
 
