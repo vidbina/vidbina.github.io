@@ -44,8 +44,13 @@ We're all urged to get going and overcome.
 > 'Round the mountain, all God's children run -- All God's children run 'round
 > the mountain run
 
+<div class="consent" data-provider="youtube">
+<a href="https://www.youtube.com/watch?v=L7u9FpJJtEQ">Watch on YouTube</a>
+<template>
 <div class="element video">
   <iframe width="420" height="315" src="https://www.youtube.com/embed/L7u9FpJJtEQ" frameborder="0" allowfullscreen></iframe>
+</div>
+</template>
 </div>
 
 New Mvula goodness has found its way to my _worksongs_ playlist.

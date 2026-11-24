@@ -106,8 +106,13 @@ Whenever a workspace gets really noisy, I often crank up the
 drowning out the noises of pingpong, the laughs of meme watching folk and the
 funky beats of the one person who just has to play that through his Sonos.
 
+<div class="consent" data-provider="youtube">
+<a href="https://www.youtube.com/watch?v=wzjWIxXBs_s">Watch on YouTube</a>
+<template>
 <div class="element video">
   <iframe width="420" height="315" src="https://www.youtube.com/embed/wzjWIxXBs_s" frameborder="0" allowfullscreen></iframe>
+</div>
+</template>
 </div>
 
 In the spirit of _live and let live_ I don't bug Mr. S about his music,

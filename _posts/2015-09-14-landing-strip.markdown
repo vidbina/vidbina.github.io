@@ -67,8 +67,13 @@ colorful double entendre.
 as a colloquialism for runway or a euphemism for the minimalistic pubic hairdo
 works quite well in that regard.
 
+<div class="consent" data-provider="youtube">
+<a href="https://www.youtube.com/watch?v=5uzhxQAj_PM">Watch on YouTube</a>
+<template>
 <div class="element video">
-  <iframe width="420" height="315" src="//www.youtube.com/embed/5uzhxQAj_PM" frameborder="0" allowfullscreen> </iframe>
+  <iframe width="420" height="315" src="https://www.youtube.com/embed/5uzhxQAj_PM" frameborder="0" allowfullscreen> </iframe>
+</div>
+</template>
 </div>
 
 Next time you're polishing pixels again, ask yourself if that is really going

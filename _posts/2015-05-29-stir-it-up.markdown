@@ -44,8 +44,13 @@ Creating separate events is only reinforcing that sense of segregation that
 some may feel there is because people already do quite well in [developing a
 postive bias for members of their group][race] (whatever that may be) and this
 is commonly referred to as _in-group/out-group bias_.
+<div class="consent" data-provider="youtube">
+<a href="https://www.youtube.com/watch?v=6QGNxRGgBwM">Watch on YouTube</a>
+<template>
 <div class="element video">
   <iframe width="420" height="315" src="https://www.youtube.com/embed/6QGNxRGgBwM" frameborder="0" allowfullscreen></iframe>
+</div>
+</template>
 </div>
 [Even babies may naturally discriminate][baby], and I'm not saying it's a bad
 thing. Sticking with the folks you relate to may been the reason the human
@@ -65,8 +70,8 @@ integrated into the group until both parties start to learn how to understand
 and appreciate another, and generally you don't accomplish them by having
 organizing a rally for the girls. No, just have them work together and discuss
 the intricacies of their interactions.
-<div class="element video">
-  <iframe width="420" height="315" src="https://www.youtube.com/embed/ga4Zr7P25o0" frameborder="0" allowfullscreen></iframe>
+<div class="element note" markdown="1">
+The video that was embedded here is no longer available on YouTube.
 </div>
 </blockquote>
 
@@ -90,8 +95,13 @@ stage could be executed more effectively.
 Ran into this video online which is quite nice to listen to, just give it a
 try and if you're into gaming :video_game:, you'll have
 something to watch as well.
+<div class="consent" data-provider="youtube">
+<a href="https://www.youtube.com/watch?v=9RZ13rgCcww">Watch on YouTube</a>
+<template>
 <div class="element video">
   <iframe width="420" height="315" src="https://www.youtube.com/embed/9RZ13rgCcww" frameborder="0" allowfullscreen></iframe>
+</div>
+</template>
 </div>
 </blockquote>
 

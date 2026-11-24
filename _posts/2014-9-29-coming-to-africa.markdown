@@ -45,8 +45,13 @@ physically exhausted but mentally empowered to the extend that it helped me drag
 through the whirlwind of gorgeous and horrendous experiences that I ventured
 through in the year that passed.
 
+<div class="consent" data-provider="youtube">
+<a href="https://www.youtube.com/watch?v=MJ6IcYwVxV0">Watch on YouTube</a>
+<template>
 <div class="element video">
-  <iframe width="420" height="315" src="//www.youtube.com/embed/MJ6IcYwVxV0" frameborder="0" allowfullscreen> </iframe>
+  <iframe width="420" height="315" src="https://www.youtube.com/embed/MJ6IcYwVxV0" frameborder="0" allowfullscreen> </iframe>
+</div>
+</template>
 </div>
 
 This year I am up to the challenge again and am looking for funding just to
@@ -189,8 +194,8 @@ In the year I was minted someone had a similar idea. Was only headed in the
 wrong direction :stuck_out_tongue_winking_eye:. I was actually born a few
 months later to set the balance straight. For those who don't remember what
 went down that year, a reminder...
-<div class="element video">
-  <iframe width="560" height="315" src="//www.youtube.com/embed/6l9pG_XL8yc" frameborder="0" allowfullscreen></iframe>
+<div class="element note" markdown="1">
+The video that was embedded here is no longer available on YouTube.
 </div>
 
 <a name="who"></a>
@@ -226,8 +231,8 @@ Let's go!
 </div>
 {% endif %}
 
-<div class="element video">
-  <iframe width="420" height="315" src="//www.youtube.com/embed/wBC86idJFj4" frameborder="0" allowfullscreen> </iframe>
+<div class="element note" markdown="1">
+The video that was embedded here is no longer available on YouTube.
 </div>
 
 [startupbus]: https://startupbus.com
