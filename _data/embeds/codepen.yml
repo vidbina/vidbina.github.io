@@ -1,0 +1,9 @@
+# The gate in js/embed-consent.js reads name, operator, policy and version.
+# _includes/csp.html adds the csp sources to pages that gate this provider.
+name: CodePen
+operator: CodePen
+policy: https://blog.codepen.io/legal/privacy-policy/
+version: 1
+csp:
+  script-src: https://public.codepenassets.com
+  frame-src: https://codepen.io
