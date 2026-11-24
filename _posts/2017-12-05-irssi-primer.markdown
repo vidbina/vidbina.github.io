@@ -56,8 +56,13 @@ user.
 explanation on window handling and the mechanics of splitting windows and
 window stickiness.
 
+<div class="consent" data-provider="asciinema">
+<a href="https://asciinema.org/a/GeTFKrw008VoF8IZxqJQXItsw">Watch on asciinema</a>
+<template>
 <div class="element screencast">
 <script type="text/javascript" src="https://asciinema.org/a/GeTFKrw008VoF8IZxqJQXItsw.js" id="asciicast-GeTFKrw008VoF8IZxqJQXItsw" async></script>
+</div>
+</template>
 </div>
 
 Basically sticky windows are limited in mobility. This is a convenient feature

@@ -1,0 +1,9 @@
+# The gate in js/embed-consent.js reads name, operator, policy and version.
+# _includes/csp.html adds the csp sources to pages that gate this provider.
+name: asciinema
+operator: asciinema
+policy: https://asciinema.org/privacy
+version: 1
+csp:
+  script-src: https://asciinema.org
+  frame-src: https://asciinema.org
