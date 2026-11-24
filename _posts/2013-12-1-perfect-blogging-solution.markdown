@@ -107,8 +107,13 @@ keep our lines limited to 60 characters ([David Jury, About Face page 74][about-
 the bill&hellip; until people start complaining I will assume that it works well
 in the readability department.
 
+<div class="consent" data-provider="kickstarter">
+<a href="https://www.kickstarter.com/projects/julietaulanovsky/the-montserrat-typeface">Watch on Kickstarter</a>
+<template>
 <div class="element video">
 <iframe src="https://www.kickstarter.com/projects/julietaulanovsky/the-montserrat-typeface/widget/video.html" frameborder="0" scrolling="no"> </iframe>
+</div>
+</template>
 </div>
 
 ### Math
