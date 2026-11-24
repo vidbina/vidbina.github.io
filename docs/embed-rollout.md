@@ -41,7 +41,7 @@ Every provider PR goes through all of these, on a local Pages build in Chrome wi
 - [x] GitHub cards (jsDelivr): the 3 cards, which loaded from jsDelivr and called GitHub's API, became plain links to the repos and profile
 - [x] CodePen: the one pen gated, loading CodePen's current embed script directly
 - [x] Kickstarter: the one video still plays and is gated
-- [ ] Images: S3 is dead (403) and stays blocked until the originals are found; Wikimedia, GitHub, xkcd and cinemablend need a decision to host locally, link out or remove. `js/emoji-cdn.js` on the NYC talk deck points at a dead host and goes too
+- [x] Images: Wikimedia (3), GitHub (3, the renamed `landing-page-templates` repo) and xkcd (1) gated; the dead cinemablend image became a link and the Abell 2744 thumbnail moved to the 500px size that still exists; `js/emoji-cdn.js` is gone. Still blocked, by decision pending: 21 dead S3 references (see `docs/TODO.md`) and the talk deck's 3 Wikimedia images
 - [ ] Build check in CI: fail when a page loads a third party outside a `<template>`
 - [ ] Final imprint text, once nothing is left ungated
 

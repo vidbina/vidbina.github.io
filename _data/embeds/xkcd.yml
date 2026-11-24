@@ -1,0 +1,8 @@
+# The gate in js/embed-consent.js reads name, operator, policy and version.
+# _includes/csp.html adds the csp sources to pages that gate this provider.
+# xkcd publishes no privacy policy, so the notice links none.
+name: xkcd
+operator: xkcd
+version: 1
+csp:
+  img-src: https://imgs.xkcd.com

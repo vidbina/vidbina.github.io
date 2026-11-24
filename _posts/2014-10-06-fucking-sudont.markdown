@@ -33,8 +33,13 @@ unix-based OS-es I&rsquo;ve had too much encounters with seriously screwed up
 systems because someone disrespectfully smacked a `sudo` in front of a command
 that was not doing what the user expected.
 
+<div class="consent" data-provider="xkcd">
+<a href="https://xkcd.com/149/">View on xkcd</a>
+<template>
 <div class="element image">
   <img src="https://imgs.xkcd.com/comics/sandwich.png" alt="Sudo make me a sandwich">
+</div>
+</template>
 </div>
 
 The problem with this approach is that many do not have a freaking clue what
