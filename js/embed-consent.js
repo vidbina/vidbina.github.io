@@ -162,8 +162,10 @@
       box.loaded = true;
       slot.textContent = '';
       slot.appendChild(document.importNode(template.content, true));
-      // widgets.js only scans the page once, when it first runs.
+      // X's widgets.js and Instagram's embed.js only scan the page once, when
+      // they first run, so embeds loaded after that need another scan.
       if (window.twttr && window.twttr.widgets) window.twttr.widgets.load(slot);
+      if (window.instgrm) window.instgrm.Embeds.process();
       fill(bar, allowed ?
         'Loaded from ' + provider.name + ' because you chose to always allow it.' :
         'Loaded from ' + provider.name + '.', [[
