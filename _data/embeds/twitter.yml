@@ -1,0 +1,9 @@
+# The gate in js/embed-consent.js reads name, operator, policy and version.
+# _includes/csp.html adds the csp sources to pages that gate this provider.
+name: X (Twitter)
+operator: X
+policy: https://x.com/privacy
+version: 1
+csp:
+  script-src: https://platform.twitter.com
+  frame-src: https://platform.twitter.com https://syndication.twitter.com

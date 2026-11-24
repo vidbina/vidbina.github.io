@@ -1,22 +1,12 @@
+---
+---
 // Third-party embeds sit inert in a <template> until the visitor asks for them.
 // "Always load" keeps the provider's name and version in localStorage, nothing else.
 // Bump a provider's version when what it receives changes, so visitors are asked again.
 (function () {
   var storageKey = 'embed-consent';
-  var providers = {
-    twitter: {
-      name: 'X (Twitter)',
-      operator: 'X',
-      policy: 'https://x.com/privacy',
-      version: 1
-    },
-    youtube: {
-      name: 'YouTube',
-      operator: 'Google',
-      policy: 'https://policies.google.com/privacy',
-      version: 1
-    }
-  };
+  // One file per provider in _data/embeds/.
+  var providers = {{ site.data.embeds | jsonify }};
   var boxes = [];
   var counts = {};
 
