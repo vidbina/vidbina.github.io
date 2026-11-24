@@ -32,7 +32,7 @@ I'm a XMonad user, so I ended up relying on a solution that
 
 ## Trying actkbd
 
-<div class="element note">
+<div class="element note" markdown="1">
 **TL;DR** Skip the actkbd part and head directly to the [XMonad part](#xmonad) :down:.
 </div>
 
@@ -75,7 +75,7 @@ and exits after 10 seconds without input. In my case the keycodes for mute,
 volume down and volume up represented the keycodes 113, 114 and 115
 respectively.
 
-<div class="element note">
+<div class="element note" markdown="1">
 Be careful whenever you end up with keycodes 59, 60 and 61 for the mute, volume
 down and volume up keys as these are actually the keycodes for the function
 keys `F1`, `F2` and `F3`. If you end up with these keycodes, you may have to
@@ -88,7 +88,7 @@ behave as function keys instead of multimedia keys, I can switch between
 virtual terminals by simultaneously pressing `Ctrl`, `Alt` and any of my
 function keys ranging from `F1` through `F12`.
 
-<div class="element note">
+<div class="element note" markdown="1">
 Note that NixOS reserves the seventh virtual terminal for the window manager
 and the [eight terminal for its manual][nixos-altf8].
 </div>
@@ -99,7 +99,7 @@ up on the `F1` key, will require me to simultaneously press `Fn` and `F1`. Note
 that `Fn` indicates to the system that I intent to trigger the alternate
 behavior for the given key.
 
-<div class="element note">
+<div class="element note" markdown="1">
 When the BIOS is configured to treat function keys as multimedia keys, one will
 have to prefix the function key with the `Fn` key within the keystroke sequence
 necessary to switch to the virtual terminals. Switching to virtual terminal 1

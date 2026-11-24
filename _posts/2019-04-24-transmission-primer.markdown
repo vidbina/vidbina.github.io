@@ -111,7 +111,7 @@ transmission-remote -l
 transmission-remote --list
 ```
 
-<div class="element note">
+<div class="element note" markdown="1">
 Note that torrents are listed with an ID column which provides the identifier
 to use in referencing a particular torrent in commands.
 </div>

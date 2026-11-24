@@ -23,7 +23,7 @@ an acceptable timeframe.
 
 ## Basic Shortcuts
 
-<div class="element note">
+<div class="element note" markdown="1">
 `Meta` is generally configured to the `Alt` key :wink:.
 </div>
 
@@ -78,7 +78,7 @@ should create a new container with a blank window stuck to it, and then run
 `/window stick #` which will unstick the window from its former container and
 subsequently stick it to the focussed container :wink:.
 
-<div class="element note">
+<div class="element note" markdown="1">
 To avoid stickiness confusion, I would recommend creating splits with `window
 split new` and manually sticking windows to the new container using `window
 stick #` until one is comfortable with the concept of stickiness in Irssi.

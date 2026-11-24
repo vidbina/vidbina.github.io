@@ -46,7 +46,7 @@ my efforts to be "nice" inflicted some harm after all. Understandably she
 was visibly annoyed by this and despite the fact that I apologised, I
 probably contributed to one of the multiple dreaded episodes of her day.
 
-<div class="element note">
+<div class="element note" markdown="1">
 This encounter served as a reminder that the problems we are analysing or
 modelling have a real impact on human lives. It's comfortable to hide behind
 data and models and keep the entire ordeal an intellectual exercise, but it
@@ -80,7 +80,7 @@ Then again you could ask... why should the recipient of the title usage
 be sensitive about the title they are addressed by?!? There are many
 sides to this.
 
-<div class="element note">
+<div class="element note" markdown="1">
 I for one, remember being offended when I was constantly addressed as a lady
 before my voice broke simply because I wanted to be associated to masculinity
 and the title was a big part of it. I was a little nerdy and very insecure

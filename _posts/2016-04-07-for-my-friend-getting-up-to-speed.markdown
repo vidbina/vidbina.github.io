@@ -40,7 +40,7 @@ software to Linux servers, and how to maintain them). I think you already used
 Linux a lot. Let's just assume from this point on that you do everything I
 recommend in the points below in Linux or OSX (any nix-based OS will work).
 
-<div class="element note">
+<div class="element note" markdown="1">
 It may even make sense to stick to command line tools like vim for text
 editing, tmux or screen for terminal multiplexing -- basically all non-GUI
 tools. Why?!? Well, mostly servers don't run elaborate GUI's. Most of the work

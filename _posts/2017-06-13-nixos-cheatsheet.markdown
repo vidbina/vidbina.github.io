@@ -33,7 +33,7 @@ emojify: true
 Learning Nix, I felt the need to take notes. My future self will thank me
 for the reminders :wink:.
 
-<div class="element note">
+<div class="element note" markdown="1">
 :bomb: I'm a total noob with Nix, I'm just writing just because my stupid brain
 forgets shit all the time. Don't use this as a source of truth. I will update
 things as I learn more, but I have already seen a few talks that suggest that
@@ -97,7 +97,7 @@ multiple profile directories containing their own `bin` directories, one can
 switch environments by simply rerouting symlinks. This is the where NixOS gets
 to boast atomic profile switches or updates.
 
-<div class="element note">
+<div class="element note" markdown="1">
 Note that `$HOME/.nix-profile` is symlinked to
 `/nix/var/nix/profiles/per-user/vid/profile` in my case, which happens to be
 symlinked to `/nix/var/nix/profiles/per-user/vid/profile-NN-link` (where NN is
@@ -155,7 +155,7 @@ nix-env -qaP firefox
 
 Which, for debian-based distro users, is more analogous to `apt-cache search firefox`.
 
-<div class="element note">
+<div class="element note" markdown="1">
 Running `nix-env -qaP pasystray` provides me with the output
 
 ```
@@ -249,7 +249,7 @@ which indicates that the system is set up with a path for the root channel
 (which are shared among all users of the system) and private channels which
 as user specific.
 
-<div class="element note">
+<div class="element note" markdown="1">
 NOTE: that running `sudo nix-channel --list` will provide a listing of the
 channels as known to the user root, which may differ from the regular user
 who's channel listing you may review through `nix-channel --list`.
@@ -287,7 +287,7 @@ optional name
 `nix-channel --add https://nixos.org/channels/nixos-17.03-small`,
 the channel was added with the name `nixos-17.03-small`.
 
-<div class="element note">
+<div class="element note" markdown="1">
 NOTE: Adding channels without providing the name simply names the channel in
 accordance to the last phrase of the channel URL with the suffix `-stable` or
 `-unstable` removed from the name such that `nixos-17.03-small` remains
@@ -348,7 +348,7 @@ a set of arguments and returns a set of options, which in Nix syntax looks a
 bit like `inputs: outputs` but is explained in detail in the
 [Nix documentation on writing Nix expressions][nix-expr].
 
-<div class="element note">
+<div class="element note" markdown="1">
 Tip :bulb: Feel free to enter all of the expressions displayed in the text as
 
 ```nix

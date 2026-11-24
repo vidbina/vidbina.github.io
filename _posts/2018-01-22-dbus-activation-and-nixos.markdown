@@ -186,7 +186,7 @@ need a reply printed, hence the `--print-reply`. The object we are interacting
 with and the member of that object or the message name are the next two
 arguments respectively.
 
-<div class="element note">
+<div class="element note" markdown="1">
 :bulb: Installing `dbus-map` and executing the command `dbus-map --session
 --dump-methods` gives an overview of all methods for the different connections
 on the session bus.

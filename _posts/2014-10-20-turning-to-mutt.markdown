@@ -204,7 +204,7 @@ unresponsive until retrieval is completed. Tools such as offlineimap allow for
 the retrieval of e-mail through cronjobs or manual terminal runs that have no
 impact on the responsiveness of Mutt.
 
-<div class="element note">
+<div class="element note" markdown="1">
 For Linux distros, one should refer to the relevant package indexes to
 determine how to retrieve and install offlineimap for their distribution of
 choice. On OSX, one can run `brew install offlineimap` in order to install

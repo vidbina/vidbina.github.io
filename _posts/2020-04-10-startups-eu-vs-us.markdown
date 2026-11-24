@@ -78,7 +78,7 @@ factors to entrepreneurship anywhere. The differences in culture and capital
 access may provide some clues as to why America performs differently to Europe
 in the startup arena.
 
-<div class="element note">
+<div class="element note" markdown="1">
 An interesting idea to entertain is that an ecosystem with smaller startups
 instead of the behemoths that we witness hailing from the US comes with its own
 set of benefits. Due to competition, such "smaller firms" would be obligated to

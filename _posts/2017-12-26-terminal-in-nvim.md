@@ -28,7 +28,7 @@ og:
 head: mugshot
 emojify: true
 ---
-<div class="element note">
+<div class="element note" markdown="1">
 :bulb: See `:help terminal-emulator` in neovim for more info
 </div>
 
@@ -58,7 +58,7 @@ prefixed by the `term://` to be executed in the terminal as in
  - `:split term://htop` spawning htop in a terminal and
  - `:edit term://bash` spawning a bash shell :shell:.
 
-<div class="element note">
+<div class="element note" markdown="1">
 Note that navigating between neovim windows is only possible in normal mode.
 Which should make sense when you think about it. It isn't much different when
 editing text in vim-ish editors. The terminal-emulator help page documents how

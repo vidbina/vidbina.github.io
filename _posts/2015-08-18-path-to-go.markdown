@@ -21,7 +21,7 @@ In order to work with Go packages, one will need to setup a `GOPATH`
 environment variable which contains the path to the directory one intents to
 use with Go.
 
-<div class="element note">
+<div class="element note" markdown="1">
 Installing go packages is done through the `go get` command.
 </div>
 
@@ -46,7 +46,7 @@ Now I can access all binaries within the `$GOPATH/bin` directory, and perform
 `go get` commands without putting much thought into other projects that I may
 be screwing up.
 
-<div class="element note">
+<div class="element note" markdown="1">
 `Godeps` makes dependency management much easier by providing a manifest that
 will allow all developers to build a similar environment dependency-wise.
 Think... `package.json` or `Gemfile` :wink:.

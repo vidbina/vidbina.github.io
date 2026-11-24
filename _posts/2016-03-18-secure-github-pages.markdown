@@ -31,7 +31,7 @@ This morning I learned about Kloudsec, a service that offers a CDN, HTTPS
 encryption and shadowing in case Github pages are unavailable[^1]
 :stuck_out_tongue:.
 
-<div class="element note">
+<div class="element note" markdown="1">
 **UPDATE (September 22, 2016)**: Kloudsec is down :sob:, but Steve left [a few
 notes](https://www.reddit.com/r/webdev/comments/4s3kmf/got_an_email_saying_that_kloudsec_will_be/)
 for his follower and clients. Do yourself a favor and ignore this post from now
@@ -83,7 +83,7 @@ reflect that in my CORS policy.
 </CORSConfiguration>
 ```
 
-<div class="element note">
+<div class="element note" markdown="1">
 If you choose a wildcard `*` as the allowed origin, be aware that anyone out
 there will be allowed to embed resources from your bucket into their pages.
 If you want to keep your S3 bills to a minimum, perhaps anyone who needs some
@@ -183,7 +183,7 @@ throughout my repository :stuck_out_tongue:. It's pretty dope :metal:.
 
 For now I've got some work to do :sweat:
 
-<div class="element note">
+<div class="element note" markdown="1">
 **UPDATE (September 22, 2016)**: You could setup
 [Cloudflare](https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/)
 if you still want serve secured github pages.

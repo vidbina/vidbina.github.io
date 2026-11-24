@@ -38,7 +38,7 @@ head: mugshot
 emojify: true
 ---
 
-<div class="element note">
+<div class="element note" markdown="1">
 :bow: Special thanks to [@Profpatsch][profpatsch] for making sure that I keep
 my terminology in line with the rest of the community. I erronously referred to
 attrsets as "sets", but saw the confusion therein as attrsets are more akin to
@@ -173,7 +173,7 @@ we end up with the result
 
 which leads me to the following take-away:
 
-<div class="element note">
+<div class="element note" markdown="1">
 Exercise care when using recursive attrsets in overrides and understand when
 used on the left-hand side, referenced attributes will be evaluated prior to
 the merge.  If anything, it makes some sense to avoid the use of recursive

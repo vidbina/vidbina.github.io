@@ -52,7 +52,7 @@ incentive for large scale deception, has better transparency as a side effect.
 Point is: Seemingly corrupt or unethical dealings spread the gamut in terms of
 class.
 
-<div class="element note">
+<div class="element note" markdown="1">
 I believe corruption may be the wrong word. Maybe they're just heartlessly
 clever -- the tricksters of modern society.
 
