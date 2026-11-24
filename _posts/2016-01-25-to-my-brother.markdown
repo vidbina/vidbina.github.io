@@ -170,6 +170,11 @@ Look at that...
 _Life is good, life is good, no matter what... life is good_ as Nas said in
 _Cherry Wine_.
 
+<div class="consent" data-provider="spotify">
+<a href="https://open.spotify.com/track/4K7jd5Wm09iF9xum3gfExb">Listen on Spotify</a>
+<template>
 <div class="element spotify">
-<iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A4K7jd5Wm09iF9xum3gfExb" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+<iframe src="https://open.spotify.com/embed/track/4K7jd5Wm09iF9xum3gfExb" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+</div>
+</template>
 </div>

@@ -55,7 +55,12 @@ We're all urged to get going and overcome.
 
 New Mvula goodness has found its way to my _worksongs_ playlist.
 
+<div class="consent" data-provider="spotify">
+<a href="https://open.spotify.com/track/1U6EZRkaJy3II3ElJlpzMl">Listen on Spotify</a>
+<template>
 <div class="element spotify">
-  <iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A1U6EZRkaJy3II3ElJlpzMl" frameborder="0" allowtransparency="true"></iframe>
-  <!--<iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A2pWUaZL2gqwmhi94dDt7Hd" frameborder="0" allowtransparency="true"></iframe>-->
+  <iframe src="https://open.spotify.com/embed/track/1U6EZRkaJy3II3ElJlpzMl" frameborder="0" allowtransparency="true"></iframe>
+  <!--<iframe src="https://open.spotify.com/embed/track/2pWUaZL2gqwmhi94dDt7Hd" frameborder="0" allowtransparency="true"></iframe>-->
+</div>
+</template>
 </div>

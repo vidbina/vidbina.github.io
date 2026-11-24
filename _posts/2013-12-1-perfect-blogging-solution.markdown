@@ -188,12 +188,22 @@ width and corresponding heights) is demonstrated beneath&hellip;
 The Instagram post that was embedded here is no longer available.
 </div>
 
+<div class="consent" data-provider="spotify">
+<a href="https://open.spotify.com/track/32W1K50AaXGXoRBn3Zyax4">Listen on Spotify</a>
+<template>
 <div class="element spotify">
-  <iframe src="https://embed.spotify.com/?uri=spotify:track:32W1K50AaXGXoRBn3Zyax4" frameborder="0" allowtransparency="true"> </iframe>
+  <iframe src="https://open.spotify.com/embed/track/32W1K50AaXGXoRBn3Zyax4" frameborder="0" allowtransparency="true"> </iframe>
+</div>
+</template>
 </div>
 
+<div class="consent" data-provider="spotify">
+<a href="https://open.spotify.com/track/3KsatAMRt1a7iryhWt5I8U">Listen on Spotify</a>
+<template>
 <div class="element spotify small">
-  <iframe src="https://embed.spotify.com/?uri=spotify:track:3KsatAMRt1a7iryhWt5I8U" width="300" height="380" frameborder="0" allowtransparency="true"> </iframe>
+  <iframe src="https://open.spotify.com/embed/track/3KsatAMRt1a7iryhWt5I8U" width="300" height="380" frameborder="0" allowtransparency="true"> </iframe>
+</div>
+</template>
 </div>
 
 The embedded content from the different providers above is styled using a

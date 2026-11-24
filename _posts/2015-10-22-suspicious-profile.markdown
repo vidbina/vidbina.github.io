@@ -249,8 +249,13 @@ lot more love and understanding -- especially if you have been appointed to
 serve in a public office and therefore represent something bigger than any one
 person.
 
+<div class="consent" data-provider="spotify">
+<a href="https://open.spotify.com/track/2u2udGmop1z67EPpr91km7">Listen on Spotify</a>
+<template>
 <div class="element spotify">
-  <iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A2u2udGmop1z67EPpr91km7" frameborder="0" allowtransparency="true"></iframe>
+  <iframe src="https://open.spotify.com/embed/track/2u2udGmop1z67EPpr91km7" frameborder="0" allowtransparency="true"></iframe>
+</div>
+</template>
 </div>
 
 Think about that.

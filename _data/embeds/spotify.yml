@@ -1,0 +1,8 @@
+# The gate in js/embed-consent.js reads name, operator, policy and version.
+# _includes/csp.html adds the csp sources to pages that gate this provider.
+name: Spotify
+operator: Spotify
+policy: https://www.spotify.com/legal/privacy-policy/
+version: 1
+csp:
+  frame-src: https://open.spotify.com
