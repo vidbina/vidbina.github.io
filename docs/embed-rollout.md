@@ -39,7 +39,7 @@ Every provider PR goes through all of these, on a local Pages build in Chrome wi
 - [x] asciinema: 4 recordings on 4 posts gated; the player script works when the gate inserts it
 - [x] GitHub Gist: 3 files from 2 of the operator's gists inlined as code blocks, so the provider is gone
 - [x] GitHub cards (jsDelivr): the 3 cards, which loaded from jsDelivr and called GitHub's API, became plain links to the repos and profile
-- [ ] CodePen
+- [x] CodePen: the one pen gated, loading CodePen's current embed script directly
 - [ ] Kickstarter: check the video still exists
 - [ ] Images: S3 is dead (403) and stays blocked until the originals are found; Wikimedia, GitHub, xkcd and cinemablend need a decision to host locally, link out or remove. `js/emoji-cdn.js` on the NYC talk deck points at a dead host and goes too
 - [ ] Build check in CI: fail when a page loads a third party outside a `<template>`

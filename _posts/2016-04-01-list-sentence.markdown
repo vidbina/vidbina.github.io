@@ -116,7 +116,12 @@ If you really must you can prefix the entire `.authors` block or the first
 
 I can hear you thinking... don't be a lazy fart. Demo this sucker! Well here
 goes...
+<div class="consent" data-provider="codepen">
+<a href="https://codepen.io/vidbina/pen/EKwZja">Open on CodePen</a>
+<template>
 <div class="element">
 <p data-height="268" data-theme-id="0" data-slug-hash="EKwZja" data-default-tab="result" data-user="vidbina" class="codepen">See the Pen <a href="http://codepen.io/vidbina/pen/EKwZja/">List Sentence</a> by David Asabina (<a href="http://codepen.io/vidbina">@vidbina</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+</div>
+</template>
 </div>
