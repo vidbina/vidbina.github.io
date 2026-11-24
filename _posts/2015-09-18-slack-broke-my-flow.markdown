@@ -129,23 +129,29 @@ jumped on the rant bandwagon.
 Since last year, some users have been begging for this feature.
 
 <div class="element tweet">
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/SlackHQ">@SlackHQ</a> Is there a ‘do not disturb’ mode in slack, like in Skype or HipChat? Notifications off + a signal to others that I won’t read ASAP…</p>&mdash; Niko Felger (@nfelger) <a href="https://twitter.com/nfelger/status/447024163677822976">March 21, 2014</a></blockquote>
+<blockquote><p lang="en" dir="ltr"><a href="https://twitter.com/SlackHQ">@SlackHQ</a> Is there a ‘do not disturb’ mode in slack, like in Skype or HipChat? Notifications off + a signal to others that I won’t read ASAP…</p>&mdash; Niko Felger (@nfelger) <a href="https://twitter.com/nfelger/status/447024163677822976">March 21, 2014</a></blockquote>
 </div>
 
 <div class="element tweet">
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/SlackHQ">@SlackHQ</a> Any chance you&#39;re going to add a &quot;do not disturb&quot; mode to the away/available drop down?</p>&mdash; Josh (@Geesu) <a href="https://twitter.com/Geesu/status/494498682625347584">July 30, 2014</a></blockquote>
+<blockquote><p lang="en" dir="ltr"><a href="https://twitter.com/SlackHQ">@SlackHQ</a> Any chance you&#39;re going to add a &quot;do not disturb&quot; mode to the away/available drop down?</p>&mdash; Josh (@Geesu) <a href="https://twitter.com/Geesu/status/494498682625347584">July 30, 2014</a></blockquote>
 </div>
 
 <div class="element tweet">
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Hey <a href="https://twitter.com/SlackHQ">@SlackHQ</a> please add an away message or &quot;do not disturb&quot; option. Away doesn&#39;t seem to mean anything - I still get notifications.</p>&mdash; Chris Winn (@mrcwinn) <a href="https://twitter.com/mrcwinn/status/590977048618913795">April 22, 2015</a></blockquote>
+<blockquote><p lang="en" dir="ltr">Hey <a href="https://twitter.com/SlackHQ">@SlackHQ</a> please add an away message or &quot;do not disturb&quot; option. Away doesn&#39;t seem to mean anything - I still get notifications.</p>&mdash; Chris Winn (@mrcwinn) <a href="https://twitter.com/mrcwinn/status/590977048618913795">April 22, 2015</a></blockquote>
 </div>
 
 <div class="element tweet">
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/SlackHQ">@SlackHQ</a> idea #2: put a pause button in your app so I can stop all alerts temporarily while I focus on a task w/out closing the app</p>&mdash; Ray Gillenwater (@RayGWater) <a href="https://twitter.com/RayGWater/status/459412542100480000">April 24, 2014</a></blockquote>
+<blockquote><p lang="en" dir="ltr"><a href="https://twitter.com/SlackHQ">@SlackHQ</a> idea #2: put a pause button in your app so I can stop all alerts temporarily while I focus on a task w/out closing the app</p>&mdash; Ray Gillenwater (@RayGWater) <a href="https://twitter.com/RayGWater/status/459412542100480000">April 24, 2014</a></blockquote>
 </div>
 
+<div class="consent" data-provider="twitter">
+<a href="https://twitter.com/SlackHQ/status/641439960701210625">Open on X</a>
+<template>
 <div class="element tweet">
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/vfonic">@vfonic</a> <a href="https://twitter.com/paulagillpdx">@paulagillpdx</a> We don&#39;t have an ETA at the moment (sorry) but we are working on it so stay tuned 📻</p>&mdash; Slack (@SlackHQ) <a href="https://twitter.com/SlackHQ/status/641439960701210625">September 9, 2015</a></blockquote>
+</div>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</template>
 </div>
 
 Apparently we haven't begged loudly enough, so I'm giving it a try as well
@@ -155,8 +161,6 @@ people at Slack don't be slackers (couldn't resist using the demonym pun),
 
 
 Time to get back to work...
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 [how-to-handle-itr]: http://productivity.stackexchange.com/questions/2986/how-to-handle-interruptions-in-developer-work-without-losing-concentration
 [joel]: http://www.joelonsoftware.com/AboutMe.html

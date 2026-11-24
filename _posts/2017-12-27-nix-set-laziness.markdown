@@ -46,10 +46,15 @@ hashmap than sets as they are formally known in [CS :computer:][set-cs] and
 [mathmathics (Set Theory)][set-math].
 </div>
 
+<div class="consent" data-provider="twitter">
+<a href="https://twitter.com/Profpatsch/status/947462980568059905">Open on X</a>
+<template>
 <div class="element tweet">
   <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Great article, minor nitpick: We usually call them attribute sets (or attrsets), to differentiate from normal (multi-)sets (collections of values with no identifiers except maybe equality). They are more akin to (hash)maps (and internally probably implemented as such).</p>&mdash; Patschisupercalifragilisticexpialidociousdöner (@Profpatsch) <a href="https://twitter.com/Profpatsch/status/947462980568059905?ref_src=twsrc%5Etfw">December 31, 2017</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+</div>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</template>
 </div>
 An erronous statement such as
 

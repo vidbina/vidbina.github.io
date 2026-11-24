@@ -74,9 +74,14 @@ My lack of understanding the implications of immutability required me to do 1
 hour worth of reading and thinking, after having proposed inefficient code,
 before finally appreciating the design.
 
+<div class="consent" data-provider="twitter">
+<a href="https://twitter.com/vidbina/status/679659666817859584">Open on X</a>
+<template>
 <div class="element twitter">
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/mononcqc">@mononcqc</a> thx for the <a href="https://twitter.com/hashtag/Erlang?src=hash">#Erlang</a> bible 🙌🏿 Why didn’t you avoid `reverse` by `Sublist++[H]` instead of `[H|Sublist]`? <a href="https://t.co/6DkoaTASs4">https://t.co/6DkoaTASs4</a></p>&mdash; David Asabina (@vidbina) <a href="https://twitter.com/vidbina/status/679659666817859584">December 23, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</template>
 </div>
 
 Basically, we should keep in mind that we need to construct new data if we need
@@ -95,8 +100,14 @@ burrowed his way into a fluffy cushion:seat:... really, that isn't the point; of
 importance is realizing that Erlang `List`s are singly linked-lists meaning
 that list items only know who their successors are.
 
+<div class="consent" data-provider="twitter">
+<a href="https://twitter.com/jlouis666/status/679667193894858753">Open on X</a>
+<template>
 <div class="element twitter">
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/vidbina">@vidbina</a> <a href="https://twitter.com/mononcqc">@mononcqc</a> SL ++ [H] is O(n) whereas [H|SL] is O(1). Lists are singly linked.</p>&mdash; Jesper L. Andersen (@jlouis666) <a href="https://twitter.com/jlouis666/status/679667193894858753">December 23, 2015</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/vidbina">@vidbina</a> <a href="https://twitter.com/mononcqc">@mononcqc</a> SL ++ [H] is O(n) whereas [H|SL] is O(1). Lists are singly linked.</p>&mdash; Jesper L. Andersen (@jlouis666) <a href="https://twitter.com/jlouis666/status/679667193894858753">December 23, 2015</a></blockquote>
+</div>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</template>
 </div>
 
 <div class="element note" markdown="1">
