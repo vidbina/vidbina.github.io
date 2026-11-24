@@ -18,7 +18,7 @@ Every provider PR goes through all of these, on a local Pages build in Chrome wi
 - [ ] Each embed URL checked: dead ones removed, not gated
 - [ ] `_data/embeds/<provider>.yml` with name, operator, privacy policy, version and CSP sources
 - [ ] Each live embed wrapped in `.consent` with a fallback link and a `<template>`, using `https://` URLs
-- [ ] The build inventory shows no ungated load from this provider
+- [ ] The build inventory shows no ungated load from this provider, and the Check embeds workflow passes
 - [ ] Page load: no request to the provider and no policy violation
 - [ ] Load once: the embed renders, no policy violation, nothing stored
 - [ ] Load all N once, on pages with several embeds from the provider
@@ -42,7 +42,7 @@ Every provider PR goes through all of these, on a local Pages build in Chrome wi
 - [x] CodePen: the one pen gated, loading CodePen's current embed script directly
 - [x] Kickstarter: the one video still plays and is gated
 - [x] Images: Wikimedia (3), GitHub (3, the renamed `landing-page-templates` repo) and xkcd (1) gated; the dead cinemablend image became a link and the Abell 2744 thumbnail moved to the 500px size that still exists; `js/emoji-cdn.js` is gone. Still blocked, by decision pending: 21 dead S3 references (see `docs/TODO.md`) and the talk deck's 3 Wikimedia images
-- [ ] Build check in CI: fail when a page loads a third party outside a `<template>`
+- [x] Build check in CI: `.github/workflows/check-embeds.yaml` fails when a page could load a third party before consent
 - [ ] Final imprint text, once nothing is left ungated
 
 ## Inventory

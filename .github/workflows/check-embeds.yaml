@@ -1,0 +1,58 @@
+name: Check embeds
+
+# Builds the site the way legacy GitHub Pages does and fails when a page
+# could load a third party before the visitor agrees: an embed outside a
+# consent gate that the page's Content-Security-Policy allows, a page with
+# third-party loads and no policy, or a gate whose provider has no
+# _data/embeds/ file. See docs/embed-rollout.md.
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: read
+
+jobs:
+  check-embeds:
+    name: No third party loads before consent
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+
+      # Same github-pages version as `make preview`, read from the Makefile
+      # so the two cannot drift.
+      - name: Build the site
+        env:
+          PAGES_REPO_NWO: ${{ github.repository }}
+          JEKYLL_GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          gem install github-pages -v "$(sed -n 's/^GITHUB_PAGES=//p' Makefile)" --no-document --silent
+          github-pages build --destination _site
+
+      - name: Check every page
+        run: python3 .github/scripts/check-embeds.py _site _data/embeds
+
+  red-case:
+    name: Red case — embed check rejects leaks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Passes a gated page and fails each kind of leak
+        run: |
+          set -u
+          f=.github/fixtures/embeds
+          python3 .github/scripts/check-embeds.py "$f/pass" "$f/data"
+          for case in fail-no-policy fail-allowed fail-unknown-provider; do
+            if python3 .github/scripts/check-embeds.py "$f/$case" "$f/data"; then
+              echo "::error::$case passed but should fail"
+              exit 1
+            fi
+          done
