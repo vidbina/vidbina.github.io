@@ -7,7 +7,6 @@
 
 Audit of 2026-11-02. The items in each list can run in parallel unless they say `after:`.
 
-- [ ] Embeds: Gate third-party embeds behind consent, so a page names what would load and contacts the provider only after the visitor agrees, with a way to load or reload afterwards. These pages run no framework, so this needs a small script and include. Then update the notice in `imprint/index.html` (Impact: Legal, Effort: M). The gate is live on one post (YouTube and X), and a Content-Security-Policy blocks every embed that is not gated yet. The per-provider plan and checklist are in `docs/embed-rollout.md`
 
 ## Next
 
@@ -43,6 +42,7 @@ Each asset needs a keep or remove decision from the operator. Removing one from 
 
 ## Completed
 
+- [x] Embeds: Gate every third-party embed behind consent, block the rest with a Content-Security-Policy, check it in CI and update the notice in `imprint/index.html`, per `docs/embed-rollout.md` (Impact: Legal, Effort: M, Completed: 2026-11-24)
 - [x] `js/emoji-cdn.js`: Drop the script that pointed the NYC deck's emoji at the dead `www.tortue.me` (Impact: Content, Effort: S, Completed: 2026-11-24)
 - [x] Other dead images: Use the 500px Abell 2744 thumbnail and replace the dead cinemablend image with a link (Impact: Content, Effort: S, Completed: 2026-11-24)
 - [x] Giphy embeds: Restore the 14 of 19 whose embed pages return 404, as gated GIFs (Impact: Content, Effort: M, Completed: 2026-11-24)

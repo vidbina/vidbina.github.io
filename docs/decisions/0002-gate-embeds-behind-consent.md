@@ -16,6 +16,7 @@ supersedes: ""
 | :-------- | :--------- | :------------- | :-------------- | :----------------------------------------- |
 | exploring | 2026-11-04 | Claude (draft) | none            | Prototype on one post; rollout not started |
 | decided   | 2026-11-04 | David Asabina  | none            | Option B: gate, remember, no consent log   |
+| decided   | 2026-11-24 | Claude         | none            | Rolled out to every provider, see rollout  |
 
 ## Context
 
