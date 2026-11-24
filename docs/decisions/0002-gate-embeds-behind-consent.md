@@ -91,10 +91,7 @@ The built site has 108 third-party loads on 34 pages:
 
 ## Rollout
 
-1. Decide the open questions.
-2. Remove dead embeds and inline the gists.
-3. Convert the remaining embeds, provider by provider, with the build check.
-4. Update `imprint/index.html` in the same change that gates the last embed. Its current text says embeds load when a post opens, which stays true until then.
+Gating one post at a time leaves every other page loading its embeds on open. So a Content-Security-Policy in each page's `<head>` first blocks every third party that the page does not gate, and the providers are then converted one PR at a time, each one allowing its own sources only on pages that gate it. Plan, checklist and inventory: [`docs/embed-rollout.md`](../embed-rollout.md).
 
 ## Decision
 
