@@ -37,8 +37,13 @@ moment. The music should get you in the mood while reading :wink:.
 
 [^1]: Before 2010 (premiere of Inception) it happened to be The Matrix :sunglasses:
 
+<div class="consent" data-provider="spotify">
+<a href="https://open.spotify.com/track/6s543KncTsc2rJtMd6kJ8v">Listen on Spotify</a>
+<template>
 <div class="element spotify">
-<iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A6s543KncTsc2rJtMd6kJ8v" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+<iframe src="https://open.spotify.com/embed/track/6s543KncTsc2rJtMd6kJ8v" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+</div>
+</template>
 </div>
 
 ## Level 0

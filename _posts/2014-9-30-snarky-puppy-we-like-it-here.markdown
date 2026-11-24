@@ -23,8 +23,13 @@ months of getting high on this joint I now could keep it to myself any longer.
 Any of my musician friends that do not own this album are missing out and quite
 frankly I wouldn't know why we are still talking :rage:.
 
+<div class="consent" data-provider="spotify">
+<a href="https://open.spotify.com/album/2645Cr5cAa3eV7jj80Kkd6">Listen on Spotify</a>
+<template>
 <div class="element spotify">
-  <iframe src="https://embed.spotify.com/?uri=spotify:album:2645Cr5cAa3eV7jj80Kkd6" frameborder="0" allowtransparency="true"> </iframe>
+  <iframe src="https://open.spotify.com/embed/album/2645Cr5cAa3eV7jj80Kkd6" frameborder="0" allowtransparency="true"> </iframe>
+</div>
+</template>
 </div>
 
 Anyways... I just visited my barber and got him hooked on Snarky's latest

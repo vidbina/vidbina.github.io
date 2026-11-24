@@ -182,7 +182,7 @@
             box.unload();
             bar.querySelector('button').focus();
           })
-      ]]);
+      ], link ? [link] : []]);
     };
 
     boxes.push(box);
