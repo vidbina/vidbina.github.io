@@ -233,7 +233,94 @@ another terminal linked for this chore.
 In order to disconnect my current terminal I can use `unmake-gpg-tty` and
 if I want to stop the GPG-Agent I could run `stop-gpg-agent`.
 
-<script src="https://gist.github.com/vidbina/bde1495a6d2a047ada09.js"></script>
+```sh
+#!/bin/sh
+
+# The current agent term is managed through the TTY_SET_FILE which only 
+# contains the name of the term currently responsible for handling all gpg
+# UI stuff.
+
+# Prior to setting up a term to function as the front-end to GPG-Agent one 
+# needs to get the agent started first
+
+# The tty currently active as GPG-Agent front-end
+TTY_SET_FILE=/tmp/.gpg-tty-set
+
+# The GPG-Agent info file
+AGENT_INFO_FILE=/tmp/.gpg-agent-info
+
+# Make the current terminal the agent terminal if the GPG-Agent is running and
+# there is no terminal currently configured as the agent front-end
+make-gpg-tty() {
+  if [ -f "$AGENT_INFO_FILE" ]; then
+    if [ -f "$TTY_SET_FILE" ]; then
+      if [[ $(tty) == $(cat $TTY_SET_FILE) ]]; then
+        echo "I already am: $(cat $TTY_SET_FILE)"
+      else
+        echo "there already is a tty set to handle gpg interactions: $(cat $TTY_SET_FILE)"
+      fi
+    else
+      GPG_TTY=$(tty);
+      export GPG_TTY
+      echo "tty is currenty $(tty)"
+
+      . "$AGENT_INFO_FILE"
+      export GPG_AGENT_INFO
+      export SSH_AUTH_SOCK
+      echo $(tty) > "$TTY_SET_FILE"
+    fi
+  else
+    echo "No gpg agent info file found. Run start-gpg-agent first.";
+  fi
+}
+
+# Unmake the current terminal the agent term
+unmake-gpg-tty() {
+  unset GPG_AGENT_INFO
+  unset SSH_AUTH_SOCK
+  unset SSH_AGENT_PID
+  unset GPG_TTY
+  if [ -f "$TTY_SET_FILE" ]; then
+    if [[ $(tty) == $(cat $TTY_SET_FILE) ]]; then
+      rm $TTY_SET_FILE
+      echo "this tty is no longer the gpg term"
+    fi
+  fi
+}
+
+# Display some interesting information. Especially if executed in the GPG-Agent
+# frontend term
+view-gpg-tty() {
+  echo "info: $GPG_AGENT_INFO"
+  echo "sock: $SSH_AUTH_SOCK"
+  echo "pid: $SSH_AGENT_PID"
+  echo "tty: $GPG_TTY"
+}
+
+# Start the GPG-Agent and keep track of the agent details in a publically 
+# accessible file
+start-gpg-agent() {
+  if [ -f "$AGENT_INFO_FILE" ]; then
+    echo "agent info already exist";
+  else
+    echo "agent info does not exist";
+    gpg-agent --daemon --enable-ssh-support --write-env-file "$AGENT_INFO_FILE"
+  fi
+}
+
+# Stop the GPG-Agent
+stop-gpg-agent() {
+  if [ -f "$AGENT_INFO_FILE" ]; then
+    source $AGENT_INFO_FILE
+    echo "agent is $SSH_AGENT_PID"
+    kill -9 $SSH_AGENT_PID
+    rm $AGENT_INFO_FILE
+  else
+  fi
+}
+```
+
+[gpg-helpers.sh on GitHub](https://gist.github.com/vidbina/bde1495a6d2a047ada09)
 
 <div class="consent" data-provider="spotify">
 <a href="https://open.spotify.com/track/06Tu5JVLhHqDJzth5w4BSB">Listen on Spotify</a>
