@@ -170,9 +170,14 @@ Twitter, Youtube, Spotify and Instagram, among others, offer the ability to
 embed content using iframes. My sample of nicely styled content (as in proper
 width and corresponding heights) is demonstrated beneath&hellip;
 
+<div class="consent" data-provider="twitter">
+<a href="https://twitter.com/vidbina/statuses/417369790718959616">Open on X</a>
+<template>
 <div class="element tweet">
   <blockquote class="twitter-tweet" lang="en"><p>Those days when nothing seems to work :P… that’s when I abandon the code and turn to the piano <a href="https://twitter.com/search?q=%23coders&amp;src=hash">#coders</a> <a href="https://twitter.com/search?q=%23block&amp;src=hash">#block</a></p>&mdash; David Asabina (@vidbina) <a href="https://twitter.com/vidbina/statuses/417369790718959616">December 29, 2013</a></blockquote>
-  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"> </script>
+</div>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</template>
 </div>
 
 <div class="consent" data-provider="youtube">
