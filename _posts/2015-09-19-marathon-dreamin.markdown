@@ -27,7 +27,12 @@ Inception adventure[^1].
 moment. The music should get you in the mood while reading :wink:.
 
 <div class="element giphy">
-<iframe src="//giphy.com/embed/jJlxbQAAe52YU" width="480" height="172" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/jJlxbQAAe52YU/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/jJlxbQAAe52YU/giphy.gif" width="480" height="172" alt="Animated GIF">
+</template>
+</div>
 </div>
 
 [^1]: Before 2010 (premiere of Inception) it happened to be The Matrix :sunglasses:
@@ -38,7 +43,12 @@ moment. The music should get you in the mood while reading :wink:.
 
 ## Level 0
 <div class="element giphy">
-<iframe src="//giphy.com/embed/oVgysSNiyJhFm" width="480" height="172" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/oVgysSNiyJhFm/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/oVgysSNiyJhFm/giphy.gif" width="480" height="172" alt="Animated GIF">
+</template>
+</div>
 </div>
 
 Some call this reality. Some believe this is also just dream. If that were
@@ -47,14 +57,24 @@ computer at this level. Nothing fancy yet.
 
 ## Level 1
 <div class="element giphy">
-<iframe src="//giphy.com/embed/WhaiKgvZvsypW" width="480" height="235" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/WhaiKgvZvsypW/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/WhaiKgvZvsypW/giphy.gif" width="480" height="235" alt="Animated GIF">
+</template>
+</div>
 </div>
 Computer is on. I'm plugged in (sorry for the Matrix reference, don't want to
 confuse).
 
 ## Level 2
 <div class="element giphy">
-<iframe src="//giphy.com/embed/P8kSizJGuPwfm" width="480" height="235" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/P8kSizJGuPwfm/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/P8kSizJGuPwfm/giphy.gif" width="480" height="235" alt="Animated GIF">
+</template>
+</div>
 </div>
 <!--<iframe src="//giphy.com/embed/Ad6e8Zt89thq8" width="480" height="172" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>-->
 At this level, I enter my VM, being an instance in the cloud or the kitten
@@ -63,7 +83,12 @@ purring in Virtualbox (`vagrant up; vagrant ssh`).
 ## Level 3
 <div class="element giphy">
 <!--<iframe src="//giphy.com/embed/ufNsKPi0a8b60" width="480" height="172" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>-->
-<iframe src="//giphy.com/embed/n2hJQFhZZ7RTy" width="480" height="235" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/n2hJQFhZZ7RTy/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/n2hJQFhZZ7RTy/giphy.gif" width="480" height="235" alt="Animated GIF">
+</template>
+</div>
 </div>
 
 Mesos, the place where the frameworks are fired up, drops us one notch deeper
@@ -124,7 +149,12 @@ Mesos, we run jobs in Marathon (which is a framework)... that simple.
 
 ## Limbo
 <div class="element giphy">
-<iframe src="//giphy.com/embed/ZAv0VrzFL29k4" width="480" height="235" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/ZAv0VrzFL29k4/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/ZAv0VrzFL29k4/giphy.gif" width="480" height="235" alt="Animated GIF">
+</template>
+</div>
 <!--<iframe src="//giphy.com/embed/FQJVySekdnR4s" width="480" height="172" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>-->
 </div>
 If you made it this far, thank you so much for your time.

@@ -31,7 +31,7 @@ Every provider PR goes through all of these, on a local Pages build in Chrome wi
 ## Order and status
 
 - [x] Stopgap: block everything not gated
-- [ ] Giphy: 14 of 19 embeds return 404; remove those, gate the rest
+- [x] Giphy: all 19 gated as plain GIFs from `media.giphy.com`, which still serves the 14 whose embed pages return 404
 - [ ] YouTube
 - [ ] Instagram: iframes plus `embeds.js` blockquotes; may need a re-scan like X
 - [ ] Spotify: `embed.spotify.com` is the legacy host; check where it redirects now

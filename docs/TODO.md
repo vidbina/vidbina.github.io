@@ -17,7 +17,6 @@ Audit of 2026-11-02. The items in each list can run in parallel unless they say 
 
 - [ ] `_config.yml`, `_plugins/`, `.github/workflows/`: Move to Jekyll 4 on Actions, including `submodules: true` for MathJax, as set out in `docs/decisions/0001-select-pages-build-path.md` (Impact: Security/DevEx, Effort: M)
 - [ ] S3 assets: Recover or replace 21 references on 6 pages and the og/twitter images on 11 pages, as the bucket returns 403 `AllAccessDisabled` and sampled assets are not in git (Impact: Content, Effort: L, Owner: operator knows if originals exist)
-- [ ] Giphy embeds: Replace or remove the 14 of 19 that return 404 (Impact: Content, Effort: M)
 - [ ] Other dead images: Replace the Wikimedia, Pandora's Cluster and cinemablend images, including the `IBM_3277` image (404) and the Abell 2744 600px thumbnail (400, where 500px works) (Impact: Content, Effort: S)
 - [ ] `js/emoji-cdn.js`: Drop the script from `talks/nyc-hack-tnw/slides.html:163` or point it elsewhere, as its host `www.tortue.me` is dead (Impact: Content, Effort: S)
 - [ ] External links: Sweep the 356 unique links, where 5 of a 32-link sample were dead (Impact: Content, Effort: L)
@@ -45,6 +44,7 @@ Each asset needs a keep or remove decision from the operator. Removing one from 
 
 ## Completed
 
+- [x] Giphy embeds: Restore the 14 of 19 whose embed pages return 404, as gated GIFs (Impact: Content, Effort: M, Completed: 2026-11-24)
 - [x] `_posts/`: Render Markdown inside the 51 note blocks, 32 of which showed raw links and code (Impact: Content, Effort: S, Completed: 2026-11-24)
 - [x] Mixed content: Move the `http://` asset references to https in posts and talks (Impact: Availability, Effort: S, Completed: 2026-11-04)
 - [x] `_includes/emojify.html`: Drop the 5.4 MB emoji sprite stylesheets, which no rendered emoji used (Impact: Performance, Effort: S, Completed: 2026-11-04)

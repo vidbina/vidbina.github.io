@@ -28,7 +28,12 @@ and `let`/`const` declarations that everyone writing Javascript should be
 aware of. :warning:
 
 <div class="element gif">
-  <iframe src="//giphy.com/embed/6NvROVDmhI3QI" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  <div class="consent" data-provider="giphy">
+<a href="https://media.giphy.com/media/6NvROVDmhI3QI/giphy.gif">View the GIF on GIPHY</a>
+<template>
+<img src="https://media.giphy.com/media/6NvROVDmhI3QI/giphy.gif" width="480" height="270" alt="Animated GIF">
+</template>
+</div>
 </div>
 
 ## Hoist or Throw Up
