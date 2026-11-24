@@ -64,10 +64,7 @@ that matters is on [Github][github] and many developers are sharing code there
 and collaborating on projects. Chances are that you will have to get an account
 just to get cracking. Get one now :octocat:.
 
-<div class="element">
-  <div class="github-card" data-github="vidbina" data-width="400" data-height="150" data-theme="default"></div>
-  <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-</div>
+[vidbina on GitHub](https://github.com/vidbina)
 
 
 ## Monoliths and Microservices
