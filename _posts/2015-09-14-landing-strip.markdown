@@ -51,10 +51,7 @@ because
     the web and seem to be working and
  2. a place of landing for airplanes is sometimes referred to as a _strip_.
 
-<div class="element">
-  <div class="github-card" data-github="vidbina/landing-strip" data-width="400" data-height="153" data-theme="default"></div>
-  <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-</div>
+[vidbina/landing-strip on GitHub](https://github.com/vidbina/landing-strip)
 
 Apart from the wordplay in the use of the term strip, it also employs a
 colorful double entendre.

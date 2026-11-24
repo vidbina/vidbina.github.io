@@ -34,10 +34,7 @@ which I do with tmux. Basically I create different tmux sessions for every
 project and spawn the necessary windows in order to quickly get me back on
 track.
 
-<div class="element">
-  <div class="github-card" data-github="vidbina/muxy" data-width="400" data-height="153" data-theme="default"></div>
-  <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-</div>
+[vidbina/muxy on GitHub](https://github.com/vidbina/muxy)
 
 Using <em>muxy</em>, I can simply describe my setups for different
 [projects](https://github.com/vidbina/muxy-projects) and basically load a
