@@ -45,6 +45,7 @@ Each asset needs a keep or remove decision from the operator. Removing one from 
 
 ## Completed
 
+- [x] `_posts/`: Render Markdown inside the 51 note blocks, 32 of which showed raw links and code (Impact: Content, Effort: S, Completed: 2026-11-24)
 - [x] Mixed content: Move the `http://` asset references to https in posts and talks (Impact: Availability, Effort: S, Completed: 2026-11-04)
 - [x] `_includes/emojify.html`: Drop the 5.4 MB emoji sprite stylesheets, which no rendered emoji used (Impact: Performance, Effort: S, Completed: 2026-11-04)
 - [x] `_config.yml`: Exclude repo tooling and MathJax docs and tests from the site and sitemap (Impact: Security, Effort: S, Completed: 2026-11-04)
