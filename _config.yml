@@ -1,4 +1,7 @@
 name: Blurt
+title: Blurt
+description: Engineer, dreamer, observer, musician
+author: David Asabina
 markdown: kramdown
 highlighter: rouge
 gems:
@@ -6,12 +9,17 @@ gems:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-feed
 paginate: 50
 disqus_shortname: vidbina
 permalink: /:categories/:title/
 url: https://vid.bina.me
 plugins:
   - jemoji
+# Feed readers do not run js/embed-consent.js, so full post HTML could load
+# third parties without consent. The feed carries excerpts only.
+feed:
+  excerpt_only: true
 # Setting exclude replaces the defaults, so they are listed here as well.
 exclude:
   - .jekyll-cache
