@@ -19,7 +19,6 @@ Audit of 2026-11-02. The items in each list can run in parallel unless they say 
 - [ ] `talks/devops/dont-pee-in-my-sandbox/`: Replace the deck's three hot-linked Wikimedia images, one of them gone (`IBM_3277`, 404); the deck's policy blocks all three until they are hosted here or removed (Impact: Content, Effort: S)
 - [ ] External links: Sweep the 356 unique links, where 5 of a 32-link sample were dead (Impact: Content, Effort: L)
 - [ ] `_data/news.yml`, `_posts/`: Fix SEO metadata: duplicate twitter tags, missing canonicals, the `example.com` image in `hello-trickster`, raw `:emoji:` in descriptions (Impact: SEO, Effort: S)
-- [ ] Feed: Add one, as `/feed.xml` is a 404 and readers have no way to subscribe (Impact: UX, Effort: S)
 - [ ] Emoji: Add the missing `:facepalm:` and `:thinking:` images (Impact: UX, Effort: S)
 - [ ] `images/`, `fonts/`: Trim about 746 unused emoji PNGs, unused Montserrat Alternates fonts and `fonts/entypo.zip` (Impact: Performance, Effort: S)
 - [ ] `vendor/`, `js/`: Audit browser-side code that Dependabot cannot see: emojify 0.9.5, `impress.js`, the 66 MB MathJax 2.7.1 submodule (Impact: Security, Effort: M)
@@ -42,6 +41,7 @@ Each asset needs a keep or remove decision from the operator. Removing one from 
 
 ## Completed
 
+- [x] Feed: Serve `/feed.xml` with excerpts only, so feed readers never get gated embeds (Impact: UX, Effort: S, Completed: 2026-11-25)
 - [x] Embeds: Gate every third-party embed behind consent, block the rest with a Content-Security-Policy, check it in CI and update the notice in `imprint/index.html`, per `docs/embed-rollout.md` (Impact: Legal, Effort: M, Completed: 2026-11-24)
 - [x] `js/emoji-cdn.js`: Drop the script that pointed the NYC deck's emoji at the dead `www.tortue.me` (Impact: Content, Effort: S, Completed: 2026-11-24)
 - [x] Other dead images: Use the 500px Abell 2744 thumbnail and replace the dead cinemablend image with a link (Impact: Content, Effort: S, Completed: 2026-11-24)
