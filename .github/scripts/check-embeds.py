@@ -8,9 +8,10 @@ by the page's own Content-Security-Policy, and every gate names a provider
 that has a data file. Loads inside a <template> only happen after a click.
 
 The feed (SITE_DIR/feed.xml, when present) passes when no entry carries
-<content> and every <summary> is plain text: no markup and no URL to
-another host. Feed readers never run the consent script, so the feed
-must not carry anything a reader could load.
+<content>, every <summary> is plain text with no markup and no URL to
+another host, and no url/href/src attribute (such as media:thumbnail) or
+<icon>/<logo> points at another host. Feed readers never run the consent
+script, so the feed must not carry anything a reader could load.
 
 .github/scripts/domcheck runs the same checks against the local preview.
 """
@@ -43,6 +44,11 @@ LINK_RELS = {'stylesheet': 'style-src', 'icon': 'img-src', 'preload': 'default-s
 ATOM = '{http://www.w3.org/2005/Atom}'
 MARKUP = re.compile(r'<\s*[/!?]?\s*[A-Za-z]')
 URL = re.compile(r'(?:https?:)?//[^\s"\'<>()]+', re.I)
+# Attributes a feed reader may fetch, such as media:thumbnail url= and
+# media:content url=, which jekyll-feed writes for a post's image:.
+FEED_URL_ATTRS = ('url', 'href', 'src')
+# Elements whose text is an image URL that readers show.
+FEED_URL_TEXT = (f'{ATOM}icon', f'{ATOM}logo')
 
 
 class Page(HTMLParser):
@@ -144,9 +150,23 @@ def check_feed(rel, text):
     own = {third_party(link.get('href') or '').hostname
            for link in root.findall(f'{ATOM}link') if third_party(link.get('href') or '')}
     problems = []
+
+    def foreign_urls(where, elements):
+        for el in elements:
+            raws = [el.get(a) for a in FEED_URL_ATTRS if el.get(a)]
+            if el.tag in FEED_URL_TEXT and el.text:
+                raws.append(el.text.strip())
+            for raw in raws:
+                url = third_party(raw)
+                if url and url.hostname not in own:
+                    tag = el.tag.split('}')[-1]
+                    problems.append(f'{rel}: {where} has <{tag}> pointing at {raw}, which a reader can load')
+
     entries = root.findall(f'{ATOM}entry')
+    foreign_urls('the feed', [el for child in root if child.tag != f'{ATOM}entry' for el in child.iter()])
     for entry in entries:
         name = (entry.findtext(f'{ATOM}id') or entry.findtext(f'{ATOM}title') or '?').strip()
+        foreign_urls(f'entry {name}', entry.iter())
         if entry.find(f'{ATOM}content') is not None:
             problems.append(f'{rel}: entry {name} carries <content>, which can hold embeds')
         for summary in entry.findall(f'{ATOM}summary'):

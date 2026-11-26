@@ -64,7 +64,7 @@ jobs:
           set -u
           f=.github/fixtures/feed
           python3 .github/scripts/check-embeds.py "$f/pass"
-          for case in fail-content fail-markup fail-url; do
+          for case in fail-content fail-markup fail-url fail-media; do
             if python3 .github/scripts/check-embeds.py "$f/$case"; then
               echo "::error::feed $case passed but should fail"
               exit 1
