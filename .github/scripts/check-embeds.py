@@ -1,15 +1,23 @@
 #!/usr/bin/env python3
-"""Fail when a built page can load a third party without the visitor's consent.
+"""Fail when a built page or the feed can load a third party without the visitor's consent.
 
 Usage: check-embeds.py SITE_DIR [EMBEDS_DATA_DIR]
 
 A page passes when every third-party load outside a <template> is blocked
 by the page's own Content-Security-Policy, and every gate names a provider
 that has a data file. Loads inside a <template> only happen after a click.
+
+The feed (SITE_DIR/feed.xml, when present) passes when no entry carries
+<content> and every <summary> is plain text: no markup and no URL to
+another host. Feed readers never run the consent script, so the feed
+must not carry anything a reader could load.
+
+.github/scripts/domcheck runs the same checks against the local preview.
 """
 import os
 import re
 import sys
+import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from urllib.parse import urlparse
 
@@ -31,6 +39,10 @@ LOADS = {
 }
 LINK_RELS = {'stylesheet': 'style-src', 'icon': 'img-src', 'preload': 'default-src',
              'prefetch': 'default-src', 'modulepreload': 'script-src', 'manifest': 'manifest-src'}
+
+ATOM = '{http://www.w3.org/2005/Atom}'
+MARKUP = re.compile(r'<\s*[/!?]?\s*[A-Za-z]')
+URL = re.compile(r'(?:https?:)?//[^\s"\'<>()]+', re.I)
 
 
 class Page(HTMLParser):
@@ -99,8 +111,57 @@ def allowed(policy, directive, url):
     return False
 
 
+def known_providers(data_dir):
+    return {f[:-4] for f in os.listdir(data_dir) if f.endswith('.yml')} if data_dir else None
+
+
+def check_page(rel, html, known):
+    """Return (problems, blocked) for one page's HTML."""
+    page = Page()
+    page.feed(html)
+    problems, blocked = [], 0
+    for provider in sorted(page.providers - known if known is not None else set()):
+        problems.append(f'{rel}: gate for "{provider}" has no _data/embeds/{provider}.yml')
+    for directive, raw, line in page.loads:
+        url = third_party(raw)
+        if not url:
+            continue
+        if page.policy is None:
+            problems.append(f'{rel}:{line}: no Content-Security-Policy, so {raw} loads on open')
+        elif allowed(page.policy, directive, url):
+            problems.append(f'{rel}:{line}: {raw} is outside a gate and {directive} allows it')
+        else:
+            blocked += 1
+    return problems, blocked
+
+
+def check_feed(rel, text):
+    """Return (problems, entries) for an Atom feed's XML."""
+    try:
+        root = ET.fromstring(text)
+    except ET.ParseError as e:
+        return [f'{rel}: not well-formed XML ({e})'], 0
+    own = {third_party(link.get('href') or '').hostname
+           for link in root.findall(f'{ATOM}link') if third_party(link.get('href') or '')}
+    problems = []
+    entries = root.findall(f'{ATOM}entry')
+    for entry in entries:
+        name = (entry.findtext(f'{ATOM}id') or entry.findtext(f'{ATOM}title') or '?').strip()
+        if entry.find(f'{ATOM}content') is not None:
+            problems.append(f'{rel}: entry {name} carries <content>, which can hold embeds')
+        for summary in entry.findall(f'{ATOM}summary'):
+            text = ''.join(summary.itertext())
+            if MARKUP.search(text):
+                problems.append(f'{rel}: entry {name} has markup in its <summary>')
+            for raw in URL.findall(text):
+                url = third_party(raw)
+                if url and url.hostname not in own:
+                    problems.append(f'{rel}: entry {name} links {raw} in its <summary>')
+    return problems, len(entries)
+
+
 def check(site, data_dir):
-    known = {f[:-4] for f in os.listdir(data_dir) if f.endswith('.yml')} if data_dir else None
+    known = known_providers(data_dir)
     problems, blocked, pages = [], 0, 0
     for root, dirs, files in os.walk(site):
         dirs[:] = [d for d in dirs if os.path.relpath(os.path.join(root, d), site) != os.path.join('js', 'MathJax')]
@@ -109,24 +170,20 @@ def check(site, data_dir):
                 continue
             path = os.path.join(root, name)
             rel = os.path.relpath(path, site)
-            page = Page()
-            page.feed(open(path, encoding='utf-8', errors='replace').read())
+            found, n = check_page(rel, open(path, encoding='utf-8', errors='replace').read(), known)
+            problems += found
+            blocked += n
             pages += 1
-            for provider in sorted(page.providers - known if known is not None else set()):
-                problems.append(f'{rel}: gate for "{provider}" has no _data/embeds/{provider}.yml')
-            for directive, raw, line in page.loads:
-                url = third_party(raw)
-                if not url:
-                    continue
-                if page.policy is None:
-                    problems.append(f'{rel}:{line}: no Content-Security-Policy, so {raw} loads on open')
-                elif allowed(page.policy, directive, url):
-                    problems.append(f'{rel}:{line}: {raw} is outside a gate and {directive} allows it')
-                else:
-                    blocked += 1
+    feed_note = 'no feed.xml'
+    feed = os.path.join(site, 'feed.xml')
+    if os.path.isfile(feed):
+        found, entries = check_feed('feed.xml', open(feed, encoding='utf-8', errors='replace').read())
+        problems += found
+        feed_note = f'{entries} feed entries checked'
     for p in problems:
         print(p)
-    print(f'{pages} pages checked, {blocked} ungated third-party loads blocked by policy, {len(problems)} problems')
+    print(f'{pages} pages checked, {blocked} ungated third-party loads blocked by policy, '
+          f'{feed_note}, {len(problems)} problems')
     return not problems
 
 

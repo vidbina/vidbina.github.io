@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <link href="https://blog.example/feed.xml" rel="self" type="application/atom+xml" />
+  <id>https://blog.example/feed.xml</id>
+  <title type="html">Fixture</title>
+  <updated>2026-11-26T00:00:00+00:00</updated>
+  <entry>
+    <title type="html">Third-party URL in the summary</title>
+    <id>https://blog.example/link</id>
+    <updated>2026-11-26T00:00:00+00:00</updated>
+    <summary type="html"><![CDATA[See the clip at https://www.youtube.com/watch?v=abc for more.]]></summary>
+  </entry>
+</feed>

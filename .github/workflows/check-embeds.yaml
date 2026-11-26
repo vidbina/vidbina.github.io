@@ -4,7 +4,9 @@ name: Check embeds
 # could load a third party before the visitor agrees: an embed outside a
 # consent gate that the page's Content-Security-Policy allows, a page with
 # third-party loads and no policy, or a gate whose provider has no
-# _data/embeds/ file. See docs/embed-rollout.md.
+# _data/embeds/ file. It also fails when feed.xml carries <content>, or a
+# <summary> holds markup or a URL to another host, since feed readers never
+# run the consent script. See docs/embed-rollout.md.
 
 on:
   pull_request:
@@ -53,6 +55,18 @@ jobs:
           for case in fail-no-policy fail-allowed fail-unknown-provider; do
             if python3 .github/scripts/check-embeds.py "$f/$case" "$f/data"; then
               echo "::error::$case passed but should fail"
+              exit 1
+            fi
+          done
+
+      - name: Passes a plain feed and fails each kind of feed leak
+        run: |
+          set -u
+          f=.github/fixtures/feed
+          python3 .github/scripts/check-embeds.py "$f/pass"
+          for case in fail-content fail-markup fail-url; do
+            if python3 .github/scripts/check-embeds.py "$f/$case"; then
+              echo "::error::feed $case passed but should fail"
               exit 1
             fi
           done
