@@ -12,7 +12,7 @@ With Docker running:
 make preview
 ```
 
-This builds the site with the same `github-pages` version as the [GitHub Pages dependency list](https://pages.github.com/versions.json) and serves it on <http://localhost:4000>. Restart it to pick up changes. Update `GITHUB_PAGES` in the `Makefile` if that list moves on.
+This builds the site with the same `github-pages` version as the [GitHub Pages dependency list](https://pages.github.com/versions.json) and serves it on <http://localhost:4000>, reachable only from this machine. Restart it to pick up changes. Update `GITHUB_PAGES` in the `Makefile` if that list moves on.
 
 Pages that use math need the MathJax submodule locally:
 
