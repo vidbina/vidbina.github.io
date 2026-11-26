@@ -14,6 +14,8 @@ make preview
 
 This builds the site with the same `github-pages` version as the [GitHub Pages dependency list](https://pages.github.com/versions.json) and serves it on <http://localhost:4000>. Restart it to pick up changes. Update `GITHUB_PAGES` in the `Makefile` if that list moves on.
 
+With the preview running, `.github/scripts/domcheck` runs the CI embed and feed checks against the pages in its sitemap and `/feed.xml`. Pass a URL on `localhost:4000` to check one page, or a built site directory to check every page as CI does. It is read-only and talks only to `localhost:4000`.
+
 Pages that use math need the MathJax submodule locally:
 
 ```bash

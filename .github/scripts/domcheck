@@ -1,0 +1,120 @@
+#!/usr/bin/env python3
+"""Run the CI embed and feed checks against the local preview or a built site.
+
+Usage: .github/scripts/domcheck [TARGET ...]
+
+TARGET is one of:
+  http://localhost:4000      every page in the preview's sitemap.xml, plus feed.xml (the default)
+  http://localhost:4000/...  one page, or one feed when the path ends in .xml
+  a directory                a built site, checked exactly as CI checks it
+
+Read-only: it writes no files and talks to nothing but localhost:4000.
+The checks come from check-embeds.py, which CI runs on every pull request.
+Exits 0 when everything passes, 1 on a problem, 2 on a bad target.
+"""
+import importlib.util
+import os
+import sys
+import urllib.request
+import xml.etree.ElementTree as ET
+from urllib.parse import urlparse, urlunparse
+
+sys.dont_write_bytecode = True  # importing check-embeds.py must not leave a __pycache__
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(HERE, '..', '..', '_data', 'embeds')
+HOSTS = {'localhost', '127.0.0.1'}
+PORT = 4000
+SITEMAP = '{http://www.sitemaps.org/schemas/sitemap/0.9}'
+
+spec = importlib.util.spec_from_file_location('check_embeds', os.path.join(HERE, 'check-embeds.py'))
+checks = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(checks)
+
+
+class Refused(Exception):
+    pass
+
+
+def local(url):
+    """Return the parsed URL when it points at the preview, else raise Refused."""
+    p = urlparse(url)
+    if p.scheme != 'http' or p.hostname not in HOSTS or p.port != PORT:
+        raise Refused(f'{url}: only http://localhost:{PORT} is allowed')
+    return p
+
+
+class StayLocal(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        local(newurl)
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
+# No proxy handler from the environment, and redirects may not leave the preview.
+opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), StayLocal)
+
+
+def fetch(url):
+    local(url)
+    with opener.open(url, timeout=10) as r:
+        return r.read().decode('utf-8', errors='replace')
+
+
+def sitemap_pages(base):
+    """Map every <loc> in the preview's sitemap onto the preview's own host."""
+    root = ET.fromstring(fetch(base + '/sitemap.xml'))
+    pages = []
+    for loc in root.iter(f'{SITEMAP}loc'):
+        p = urlparse(loc.text.strip())
+        pages.append(urlunparse(('http', f'localhost:{PORT}', p.path or '/', '', p.query, '')))
+    return pages
+
+
+def check_url(target, known):
+    p = local(target)
+    base = f'http://localhost:{PORT}'
+    if p.path in ('', '/'):
+        pages, feeds = sitemap_pages(base), [base + '/feed.xml']
+    elif p.path.endswith('.xml'):
+        pages, feeds = [], [target]
+    else:
+        pages, feeds = [target], []
+    problems, blocked, entries = [], 0, 0
+    for url in pages:
+        found, n = checks.check_page(urlparse(url).path, fetch(url), known)
+        problems += found
+        blocked += n
+    for url in feeds:
+        found, n = checks.check_feed(urlparse(url).path, fetch(url))
+        problems += found
+        entries += n
+    for line in problems:
+        print(line)
+    print(f'{target}: {len(pages)} pages checked, {blocked} ungated third-party loads blocked by policy, '
+          f'{entries} feed entries checked, {len(problems)} problems')
+    return not problems
+
+
+def main(targets):
+    known = checks.known_providers(DATA_DIR)
+    ok = True
+    for target in targets or [f'http://localhost:{PORT}']:
+        if os.path.isdir(target):
+            ok = checks.check(target, DATA_DIR) and ok
+        else:
+            ok = check_url(target, known) and ok
+    return ok
+
+
+if __name__ == '__main__':
+    if any(a in ('-h', '--help') for a in sys.argv[1:]):
+        print(__doc__)
+        sys.exit(0)
+    try:
+        sys.exit(0 if main(sys.argv[1:]) else 1)
+    except Refused as e:
+        print(f'domcheck: {e}', file=sys.stderr)
+        sys.exit(2)
+    except OSError as e:
+        print(f'domcheck: cannot reach the preview ({e}); is make preview running?', file=sys.stderr)
+        sys.exit(2)
