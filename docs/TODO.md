@@ -24,7 +24,7 @@ Audit of 2026-11-02. The items in each list can run in parallel unless they say 
 - [ ] `vendor/`, `js/`: Audit browser-side code that Dependabot cannot see: emojify 0.9.5, `impress.js`, the 66 MB MathJax 2.7.1 submodule (Impact: Security, Effort: M)
 - [ ] `_posts/`: Turn the YAML lists under the singular `category:` key into real categories in the 8 posts that have them (`terminal-in-nvim`, `arduino-on-nixos`, `nixos-cheatsheet`, `nix-set-laziness`, `stylistic-variants-in-inkscape`, `function-composition`, `breaking-down-the-nixos-gui-setup`, `irssi-primer`). The feed shows each list as one term like `["tools", "nix"]`. The list builds URLs through `permalink: /:categories/:title/`, so the fix must keep every published URL and check the built paths (Impact: SEO, Effort: S)
 - [ ] `_config.yml`: Remove `jemoji` from `plugins:`, where it is ignored because `gems:` is also set. Enabling it instead would hot-link emoji images from GitHub's CDN outside the consent gate (Impact: DevEx, Effort: S)
-- [ ] domcheck: Add a read-only page and feed check script on the devenv PATH, so agent sessions can allow-list it instead of `python3` (Impact: Security/DevEx, Effort: S, Owner: plan with the operator first)
+- [ ] domcheck: Add a read-only page and feed check script in this repo (for example under `.github/scripts/`), so agent seats can allow-list it instead of `python3` (Impact: Security/DevEx, Effort: S)
 
 ## Review for copyright or privacy
 
