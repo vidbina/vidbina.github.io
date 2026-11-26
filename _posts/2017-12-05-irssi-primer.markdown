@@ -4,7 +4,7 @@ title: Irssi Primer
 since: 2015-02-28 13:43
 date: 2017-12-05 16:22
 type: tools
-category:
+categories:
  - tools
  - irc
 tags:
