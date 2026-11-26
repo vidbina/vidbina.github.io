@@ -9,7 +9,7 @@ description: |
 since:  2017-12-09 11:45:36 +0000
 date:  2017-12-26 15:37:53 +0100
 type: tools # for icon
-category:
+categories:
  - tools
  - arduino
 tags:

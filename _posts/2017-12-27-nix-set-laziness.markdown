@@ -8,7 +8,7 @@ description: |
 date:  2017-12-27 21:02:07 +0000
 updated: 2018-01-26 14:02:29 +0200
 type: tools # for icon
-category: # for url
+categories: # for url
  - tools
  - nix
 tags:

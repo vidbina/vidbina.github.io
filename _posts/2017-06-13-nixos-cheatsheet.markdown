@@ -6,7 +6,7 @@ description: |
   :snowflake: usage.
 date:  2017-06-13 00:00:49 +0000
 type: tools # for icon
-category:
+categories:
  - tools
  - nixos
 tags:

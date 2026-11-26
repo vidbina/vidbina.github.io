@@ -6,7 +6,7 @@ description: |
   <code>(.)</code> operator akin to $f\circ g$.
 date:  2017-12-20 11:04:23 +0000
 type: math # for icon
-category: # for url
+categories: # for url
  - fp
 tags:
  - fp
