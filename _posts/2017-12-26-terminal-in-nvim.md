@@ -5,7 +5,7 @@ description: |
   A short guide :clipboard: on dropping in and out of terminals :fax: in neovim.
 date:  2017-12-26 09:39:19 +0000
 type: tools # for icon
-category:
+categories:
  - tools
  - nvim
 tags:

@@ -6,7 +6,7 @@ description: |
   font :black_nib: feature settings.
 date:  2017-09-22 20:47:00 +0000
 type: typography
-category: # for url
+categories: # for url
  - typography
 tags:
  - typography

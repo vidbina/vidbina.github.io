@@ -7,7 +7,7 @@ description: |
   commentary on the NixOS :snowflake: xsession setup.
 date:  2017-12-02 05:05:20 +0000
 type: tools
-category:
+categories:
  - tools
  - nixos
 tags:
