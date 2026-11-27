@@ -22,8 +22,6 @@ Audit of 2026-11-02. The items in each list can run in parallel unless they say 
 - [ ] Emoji: Add the missing `:facepalm:` and `:thinking:` images (Impact: UX, Effort: S)
 - [ ] `images/`, `fonts/`: Trim about 746 unused emoji PNGs, unused Montserrat Alternates fonts and `fonts/entypo.zip` (Impact: Performance, Effort: S)
 - [ ] `vendor/`, `js/`: Audit browser-side code that Dependabot cannot see: emojify 0.9.5, `impress.js`, the 66 MB MathJax 2.7.1 submodule (Impact: Security, Effort: M)
-- [ ] `_posts/`: Turn the YAML lists under the singular `category:` key into real categories in the 8 posts that have them (`terminal-in-nvim`, `arduino-on-nixos`, `nixos-cheatsheet`, `nix-set-laziness`, `stylistic-variants-in-inkscape`, `function-composition`, `breaking-down-the-nixos-gui-setup`, `irssi-primer`). The feed shows each list as one term like `["tools", "nix"]`. The list builds URLs through `permalink: /:categories/:title/`, so the fix must keep every published URL and check the built paths (Impact: SEO, Effort: S)
-- [ ] `_config.yml`: Remove `jemoji` from `plugins:`, where it is ignored because `gems:` is also set. Enabling it instead would hot-link emoji images from GitHub's CDN outside the consent gate (Impact: DevEx, Effort: S)
 - [ ] domcheck: Add a read-only page and feed check script in this repo (for example under `.github/scripts/`), so agent seats can allow-list it instead of `python3` (Impact: Security/DevEx, Effort: S)
 
 ## Review for copyright or privacy
@@ -44,6 +42,8 @@ Each asset needs a keep or remove decision from the operator. Removing one from 
 
 ## Completed
 
+- [x] `_config.yml`: Remove the `jemoji` entry, which Jekyll never loaded because `gems:` is also set (Impact: DevEx, Effort: S, Completed: 2026-11-26)
+- [x] `_posts/`: List the categories of 8 posts under `categories:`, so the feed shows one term per category and every URL stays the same (Impact: SEO, Effort: S, Completed: 2026-11-26)
 - [x] Feed: Serve `/feed.xml` with excerpts only, so feed readers never get gated embeds (Impact: UX, Effort: S, Completed: 2026-11-25)
 - [x] Embeds: Gate every third-party embed behind consent, block the rest with a Content-Security-Policy, check it in CI and update the notice in `imprint/index.html`, per `docs/embed-rollout.md` (Impact: Legal, Effort: M, Completed: 2026-11-24)
 - [x] `js/emoji-cdn.js`: Drop the script that pointed the NYC deck's emoji at the dead `www.tortue.me` (Impact: Content, Effort: S, Completed: 2026-11-24)
