@@ -14,8 +14,6 @@ paginate: 50
 disqus_shortname: vidbina
 permalink: /:categories/:title/
 url: https://vid.bina.me
-plugins:
-  - jemoji
 # Feed readers do not run js/embed-consent.js, so full post HTML could load
 # third parties without consent. The feed carries excerpts only.
 feed:
@@ -26,6 +24,7 @@ exclude:
   - .sass-cache
   - AGENTS.md
   - CHANGELOG.md
+  - CLAUDE.local.md
   - CLAUDE.md
   - CNAME
   - CONTRIBUTING.md
