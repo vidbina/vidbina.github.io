@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <link href="https://blog.example/feed.xml" rel="self" type="application/atom+xml" />
+  <id>https://blog.example/feed.xml</id>
+  <title type="html">Fixture</title>
+  <updated>2026-11-26T00:00:00+00:00</updated>
+  <entry>
+    <title type="html">Image on another host</title>
+    <link href="https://blog.example/image/" rel="alternate" type="text/html" />
+    <id>https://blog.example/image</id>
+    <updated>2026-11-26T00:00:00+00:00</updated>
+    <summary type="html"><![CDATA[A plain summary.]]></summary>
+    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://images.example.net/cover.png" />
+  </entry>
+</feed>

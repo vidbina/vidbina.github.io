@@ -22,7 +22,6 @@ Audit of 2026-11-02. The items in each list can run in parallel unless they say 
 - [ ] Emoji: Add the missing `:facepalm:` and `:thinking:` images (Impact: UX, Effort: S)
 - [ ] `images/`, `fonts/`: Trim about 746 unused emoji PNGs, unused Montserrat Alternates fonts and `fonts/entypo.zip` (Impact: Performance, Effort: S)
 - [ ] `vendor/`, `js/`: Audit browser-side code that Dependabot cannot see: emojify 0.9.5, `impress.js`, the 66 MB MathJax 2.7.1 submodule (Impact: Security, Effort: M)
-- [ ] domcheck: Add a read-only page and feed check script in this repo (for example under `.github/scripts/`), so agent seats can allow-list it instead of `python3` (Impact: Security/DevEx, Effort: S)
 
 ## Review for copyright or privacy
 
@@ -42,6 +41,7 @@ Each asset needs a keep or remove decision from the operator. Removing one from 
 
 ## Completed
 
+- [x] domcheck: Check the feed in CI with `check-embeds.py`, and add `.github/scripts/domcheck`, a read-only wrapper that agent seats can allow-list instead of `python3` (Impact: Security/DevEx, Effort: S, Completed: 2026-11-26)
 - [x] `_config.yml`: Remove the `jemoji` entry, which Jekyll never loaded because `gems:` is also set (Impact: DevEx, Effort: S, Completed: 2026-11-26)
 - [x] `_posts/`: List the categories of 8 posts under `categories:`, so the feed shows one term per category and every URL stays the same (Impact: SEO, Effort: S, Completed: 2026-11-26)
 - [x] Feed: Serve `/feed.xml` with excerpts only, so feed readers never get gated embeds (Impact: UX, Effort: S, Completed: 2026-11-25)
