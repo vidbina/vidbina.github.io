@@ -26,6 +26,7 @@ exclude:
   - .sass-cache
   - AGENTS.md
   - CHANGELOG.md
+  - CLAUDE.local.md
   - CLAUDE.md
   - CNAME
   - CONTRIBUTING.md
